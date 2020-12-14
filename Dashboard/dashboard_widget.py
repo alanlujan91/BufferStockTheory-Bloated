@@ -181,14 +181,14 @@ def makeConvergencePlot(DiscFac, CRRA, Rfree, PermShkStd):
     baseAgent_Fin.unpack('cFunc')
     
     # figure limits
-    mMax = 6 # 11
+    mMax = 6 #11 
     mMin = 0
     cMin = 0
-    cMax = 4 # 7
+    cMax = 7
     
     mPlotMin  = 0
     mLocCLabels = 5.6 # 9.6 # Defines horizontal limit of figure
-    mPlotTop = 3.5 # 6.5    # Defines maximum m value where functions are plotted
+    mPlotTop = 200 # 3.5 # 6.5    # Defines maximum m value where functions are plotted
     mPts  = 1000      # Number of points at which functions are evaluated
 
     plt.figure(figsize=(12, 8))
@@ -265,22 +265,26 @@ def makeGICFailExample(DiscFac, PermShkStd, UnempPrb):
     GICFailsExample.unpack('cFunc')  # Make the consumption function easily accessible for plotting
 
     mPlotMin = 0
+    mPlotMax = 200
+    cPlotMin = 0
+    cPlotMax = 1.1 * GICFailsExample.cFunc[0](mPlotMax)
+    
     mPts  = 1000
-    m = np.linspace(mPlotMin,5,mPts)
+    m = np.linspace(mPlotMin,mPlotMax,mPts)
     c_Limt = GICFailsExample.cFunc[0](m)
     c_Sstn = EmDelEq0(m) # "sustainable" consumption
 
     plt.figure(figsize=(12, 8))
     plt.plot(m, c_Limt, label="$c(m_{t})$")
     plt.plot(m, c_Sstn, label="$\mathsf{E}_{t}[\Delta m_{t+1}] = 0$")
-    plt.xlim(0, 5.5)
-    plt.ylim(0, 1.6)
+    plt.xlim(mPlotMin, mPlotMax)
+    plt.ylim(cPlotMin, cPlotMax)
     plt.tick_params(
         labelbottom=False,
         labelleft=False,
         left="off",
         right="off",
-        bottom="off",
+#        bottom="off",
         top="off",
     )
     plt.legend(fontsize='x-large')
@@ -296,12 +300,18 @@ def makeGrowthplot(PermGroFac, DiscFac):
     baseAgent_Inf.DiscFac = DiscFac
     baseAgent_Inf.updateIncomeProcess()
     baseAgent_Inf.checkConditions()
+    mPlotMin = 0
+    mPlotMax = 3500.5
+    baseAgent_Inf.mPlotMax = 3500.5
+    baseAgent_Inf.aXtraMax = mPlotMax
+    baseAgent_Inf.tolerance = 1e-09
     baseAgent_Inf.solve()
     baseAgent_Inf.unpack('cFunc')
+    numPts   = 500
     if (baseAgent_Inf.GPFInd >= 1):
         baseAgent_Inf.checkGICInd(verbose=3)
-    elif baseAgent_Inf.solution[0].mNrmSS > 3.5:
-        print('Solution exists but is outside the plot range.')
+    elif baseAgent_Inf.solution[0].mNrmSS > mPlotMax:
+        print('Target exists but is outside the plot range.')
     else:
         def EcLev_tp1_Over_p_t(a):
             '''
@@ -342,13 +352,15 @@ def makeGrowthplot(PermGroFac, DiscFac):
         # Calculate the expected consumption growth factor
         # mBelwTrg defines the plot range on the left of target m value (e.g. m <= target m)
         mNrmTrg=baseAgent_Inf.solution[0].mNrmSS
-        mBelwTrg = np.linspace(1,mNrmTrg,50) 
+        mPlotMin = 0
+        mPlotMax = 200
+        mBelwTrg = np.linspace(mPlotMin,mNrmTrg,numPts) 
         c_For_mBelwTrg = baseAgent_Inf.cFunc[0](mBelwTrg)
         a_For_mBelwTrg = mBelwTrg-c_For_mBelwTrg
         EcLev_tp1_Over_p_t_For_mBelwTrg = [EcLev_tp1_Over_p_t(i) for i in a_For_mBelwTrg]
 
         # mAbveTrg defines the plot range on the right of target m value (e.g. m >= target m)
-        mAbveTrg = np.linspace(mNrmTrg,3.5,50)
+        mAbveTrg = np.linspace(mNrmTrg,mPlotMax,numPts)
 
         # EcGro_For_mAbveTrg: E [consumption growth factor] when m_{t} is below target m
         EcGro_For_mBelwTrg = np.array(EcLev_tp1_Over_p_t_For_mBelwTrg)/c_For_mBelwTrg
@@ -367,17 +379,15 @@ def makeGrowthplot(PermGroFac, DiscFac):
         # Calculate Absolute Patience Factor Phi = lower bound of consumption growth factor
         APF = (Rfree*DiscFac)**(1.0/CRRA)
 
-
-
         plt.figure(figsize=(12, 8))
         # Plot the Absolute Patience Factor line
         plt.plot(
-            [0, 3.5], [APF, APF], label="\u03A6 = [(\u03B2 R)^(1/ \u03C1)]/R"
+            [mPlotMin, mPlotMax], [APF, APF], label="\u03A6 = [(\u03B2 R)^(1/ \u03C1)]/R"
         )
 
         # Plot the Permanent Income Growth Factor line
         plt.plot(
-            [0, 3.5], [EPermGroFac, EPermGroFac], label="\u0393"
+            [mPlotMin, mPlotMax], [EPermGroFac, EPermGroFac], label="\u0393"
         )
 
         # Plot the expected consumption growth factor on the left side of target m
@@ -389,12 +399,12 @@ def makeGrowthplot(PermGroFac, DiscFac):
         # Plot the target m
         plt.plot(
             [mNrmTrg, mNrmTrg],
-            [0, 3.5],
+            [mPlotMin, mPlotMax],
             color="black",
             linestyle="--",
             label="",
         )
-        plt.xlim(1, 3.5)
+        plt.xlim(1, mPlotMax)
         plt.ylim(0.94, 1.10)
         plt.text(2.105, 0.930, "$m_{t}$", fontsize=26, fontweight="bold")
         plt.text(
@@ -426,9 +436,15 @@ def makeBoundsFigure(UnempPrb, PermShkStd, TranShkStd, DiscFac ,CRRA):
     baseAgent_Inf.CRRA       = CRRA
     baseAgent_Inf.updateIncomeProcess()
     baseAgent_Inf.checkConditions()
-    baseAgent_Inf.solve()
+    mPlotMin = 0
+    mPlotMax = 2500
+    baseAgent_Inf.tolerance = 1e-09
+    baseAgent_Inf.aXtraMax = mPlotMax
+    baseAgent_Inf.solve(verbose=0)
     baseAgent_Inf.unpack('cFunc')
-    # Retrieve parameters (makes code readable)
+    cPlotMin = 0
+    cPlotMax = 1.2 * baseAgent_Inf.cFunc[0](mPlotMax)
+    # Retrieve parameters (makes code more readable)
     Rfree      = baseAgent_Inf.Rfree
     CRRA       = baseAgent_Inf.CRRA
     EPermGroFac= baseAgent_Inf.PermGroFac[0]
@@ -445,8 +461,6 @@ def makeBoundsFigure(UnempPrb, PermShkStd, TranShkStd, DiscFac ,CRRA):
     cMaxLabel = r"c̅$(m) = (m-1+h)κ̲$"  # Use unicode kludge
     cMinLabel = r"c̲$(m)= (1-\Phi_{R})m = κ̲ m$"
     
-    mPlotMax = 25
-    mPlotMin = 0
     # mKnk is point where the two upper bounds meet
     mKnk = ((h_inf-1)* κ_Min)/((1 - UnempPrb**(1.0/CRRA)*(Rfree*DiscFac)**(1.0/CRRA)/Rfree)-κ_Min)
     mBelwKnkPts = 300
@@ -481,43 +495,48 @@ def makeTargetMfig(Rfree, DiscFac, CRRA, PermShkStd, TranShkStd):
     baseAgent_Inf.TranShkStd = [TranShkStd]
     baseAgent_Inf.updateIncomeProcess()
     baseAgent_Inf.checkConditions()
+    mPlotMin = 0
+    mPlotMax = 250
+    baseAgent_Inf.aXtraMax = mPlotMax
     baseAgent_Inf.solve()
     baseAgent_Inf.unpack('cFunc')
-
+    cPlotMin = 0
+    cPlotMax = baseAgent_Inf.cFunc[0](mPlotMax)
+    
     if (baseAgent_Inf.GPFInd >= 1):
         baseAgent_Inf.checkGICInd(verbose=3)
-    else:
-        mBelwTrg = np.linspace(0,4,1000)
-        EPermGroFac = baseAgent_Inf.PermGroFac[0]
-        EmDelEq0 = lambda m:(EPermGroFac/Rfree)+(1.0-EPermGroFac/Rfree)*m
-        cBelwTrg_Best = baseAgent_Inf.cFunc[0](mBelwTrg) # "best" = optimal c
-        cBelwTrg_Sstn = EmDelEq0(mBelwTrg)               # "sustainable" c
-        mNrmTrg    = baseAgent_Inf.solution[0].mNrmSS
+        
+    mBelwTrg = np.linspace(mPlotMin,mPlotMax,1000)
+    EPermGroFac = baseAgent_Inf.PermGroFac[0]
+    EmDelEq0 = lambda m:(EPermGroFac/Rfree)+(1.0-EPermGroFac/Rfree)*m
+    cBelwTrg_Best = baseAgent_Inf.cFunc[0](mBelwTrg) # "best" = optimal c
+    cBelwTrg_Sstn = EmDelEq0(mBelwTrg)               # "sustainable" c
+    mNrmTrg    = baseAgent_Inf.solution[0].mNrmSS
 
-        plt.figure(figsize=(12, 8))
-        plt.plot(mBelwTrg, cBelwTrg_Best, label="$c(m_{t})$")
-        plt.plot(mBelwTrg, cBelwTrg_Sstn, label="$\mathsf{E}_{t}[\Delta m_{t+1}] = 0$")
-        plt.xlim(0, 3)
-        plt.ylim(0, 1.45)
-        plt.plot(
-            [mNrmTrg, mNrmTrg],
-            [0, 2.5],
-            color="black",
-            linestyle="--",
-        )
-        plt.tick_params(
-            labelbottom=False,
-            labelleft=False,
-            left="off",
-            right="off",
-            bottom="off",
-            top="off",
-        )
-        plt.text(0, 1.47, r"$c$", fontsize=26)
-        plt.text(3.02, 0, r"$m$", fontsize=26)
-        plt.text(mNrmTrg - 0.05, -0.1, "m̌", fontsize=26)
-        plt.legend(fontsize='x-large')
-        plt.show()
+    plt.figure(figsize=(12, 8))
+    plt.plot(mBelwTrg, cBelwTrg_Best, label="$c(m_{t})$")
+    plt.plot(mBelwTrg, cBelwTrg_Sstn, label="$\mathsf{E}_{t}[\Delta m_{t+1}] = 0$")
+    plt.xlim(mPlotMin, mPlotMax)
+    plt.ylim(cPlotMin, cPlotMax)
+    plt.plot(
+        [mNrmTrg, mNrmTrg],
+        [0, 2.5],
+        color="black",
+        linestyle="--",
+    )
+    plt.tick_params(
+#        labelbottom=False,
+#        labelleft=False,
+#        left="off",
+        right="off",
+#        bottom="off",
+        top="off",
+    )
+    plt.text(0, 1.47, r"$c$", fontsize=26)
+    plt.text(3.02, 0, r"$m$", fontsize=26)
+    plt.text(mNrmTrg - 0.05, -0.1, "m̌", fontsize=26)
+    plt.legend(fontsize='x-large')
+    plt.show()
     return None
 
 # def makeBoundsfig(UnempPrb, PermShkStd):

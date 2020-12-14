@@ -87,7 +87,7 @@ cFuncsConverge_widget
 # \mathbb{E}\left[\frac{\Phi}{\Gamma\psi}\right] & < & 1
 # \end{eqnarray}
 #
-# (see [Calibrated Parameters](https://llorracc.github.io/BufferStockTheory/#Calibration) and [Definitions and Characteristics Calculated from Parameters](https://llorracc.github.io/BufferStockTheory/#Symbols)
+# (see [Calibrated Parameters](https://llorracc.github.io/BufferStockTheory/#Calibration) and [Definitions and Characteristics Calculated from Parameters](https://llorracc.github.io/BufferStockTheory/#Symbols))
 #
 # Under the default parameter values, $\mathbb{E}[\psi^{-1}]=0.99$, $\Phi = 0.999$.  Use the slider to see what happens as you move $\Gamma$ from below to above its "cusp" value.  
 #
