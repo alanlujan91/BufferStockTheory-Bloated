@@ -6,7 +6,7 @@
 %\node (strix) [left of = gamma, xshift = 4.35cm, yshift = -0.6cm] {};
 %\node (striy) [left of = gamma, xshift = 2.78cm, yshift = -0.9cm] {};
 %\draw[-] (strix) to (striy); 
-\draw[->] (thorn) to node{\PFGIC $(\equiv \Pat < \PGro)$} (gamma);
-%\draw[->] (gamma) to [out = 200, in=-10] node[below]{\PFGIC} (thorn); %\st{\textrm{PF-GIC};
+\draw[->] (thorn) to node{\GICAbs $(\equiv \Pat < \PGro)$} (gamma);
+%\draw[->] (gamma) to [out = 200, in=-10] node[below]{\GICAbs} (thorn); %\st{\textrm{PF-GIC};
 \draw[->] (thorn) to node [swap] {$(\Pat < \Rfree \equiv)~~\mathrm{\RIC}$} (rfree);
 \draw[->] (gamma) to node {$\mathrm{\FHWC}~~(\equiv \PGro < \Rfree) $} (rfree);
