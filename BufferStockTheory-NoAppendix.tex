@@ -116,8 +116,7 @@ The final section discusses conditions under which, even with a fixed aggregate 
 \hypertarget{The-Problem}{}
 \section{The Problem}
 
-\subsection{Setup}
-\label{subsec:Setup}
+\subsection{Setup}\label{subsec:Setup}\label{subsec:setup}
 
 The infinite horizon solution is the limiting first-period solution to a sequence of finite-horizon problems as the horizon (the last period of life) becomes arbitrarily distant.
 
@@ -480,7 +479,7 @@ the consumer would consume $\cRat=\mRat$.  Using the $\constr{\bullet}$ accent t
 
 \textit{{\GICAbs} and {\RIC}.}  More useful is the case where the return impatience and {\GIC} conditions both hold.  In this case appendix \ref{sec:ApndxLiqConstr} shows that the limiting constrained consumption function is piecewise linear, with $\constr{\cFunc}(\mRat)=\mRat$ up to a first `kink point' at $\mRat_{\#}^{1}>1$, and with discrete declines in the MPC at a set of kink points $\{\mRat_{\#}^{1},\mRat_{\#}^{2},...\}$.  As $\mRat \uparrow \infty$ the constrained consumption function $\constr{\cFunc}(\mRat)$ becomes arbitrarily close to the unconstrained $\bar{\cFunc}(\mRat)$, and the marginal propensity to consume function $\constr{\MPCFunc}(\mRat) \equiv \constr{\cFunc}^{\prime}(\mRat)$ limits to $\MinMPC$.  Similarly, the value function $\constr{\vFunc}(\mRat)$ is nondegenerate and limits into the value function of the unconstrained consumer.
 
-This logic holds even when the finite human wealth condition fails (\cncl{\FHWC}), because the constraint prevents the consumer from borrowing against infinite human wealth to finance infinite current consumption.  Under these circumstances, the consumer who starts with any amount of resources $\bRat_{t} > 1$ will, over time, run those resources down so that by some finite number of periods $n$ in the future the consumer will reach $\bRat_{t+n} = 0$, and thereafter will set $\cLevBF = \pLevBF$ for eternity (which the {\PFFVAC} says yields finite value).  Using the same steps as for equation \eqref{eq:ValuePFAnalytical}, value of the interim program is also finite: \hypertarget{PFFVAC}{} \hypertarget{PFVAF}{}
+This logic holds even when the finite human wealth condition fails (\cncl{\FHWC}), because the constraint prevents the consumer from borrowing against infinite human wealth to finance infinite current consumption.  Under these circumstances, the consumer who starts with any amount of resources $\bRat_{t} > 1$ will, over time, run those resources down so that by some finite number of periods $n$ in the future the consumer will reach $\bRat_{t+n} = 0$, and thereafter will set $\cLevBF = \pLevBF$ for eternity (which the {\PFFVAC} says yields finite value).  Using the same steps as for equation \eqref{eq:ValuePFAnalyticalAutarky}, value of the interim program is also finite: \hypertarget{PFFVAC}{} \hypertarget{PFVAF}{}
 \begin{align*}
   \vLevBF_{t+n} % & = \uFunc(\pLevBF_{t+n})\left(1+\DiscFac \PGro^{1-\CRRA}+(\DiscFac \PGro^{1-\CRRA})^{2}+...\right) 
  & = \PGro^{n(1-\CRRA)} \uFunc(\pLevBF_{t})\left(\frac{1-(\DiscFac
@@ -491,7 +490,7 @@ So, if \cncl{\FHWC}, value for any finite $\mRat$ will be the sum of two finite 
   
 \hypertarget{RICandFHWCFail}{}
 \textit{{\GICAbs} and {\cncl{\RIC}}}.  
-The most peculiar possibility occurs when the \RIC~fails.  Under these circumstances the \FHWC~must also fail (Appendix~\ref{sec:ApndxLiqConstr}), and the constrained consumption function is nondegenerate.  (See appendix Figure~\ref{fig:GICAbsHoldsFHWCFailsRICFails} for a numerical example).  While it is true that $\lim_{m \uparrow \infty}
+The most peculiar possibility occurs when the \RIC~fails.  Under these circumstances the \FHWC~must also fail (Appendix~\ref{sec:ApndxLiqConstr}), and the constrained consumption function is nondegenerate.  (See appendix Figure~\ref{fig:PFGICHoldsFHWCFailsRICFails} for a numerical example).  While it is true that $\lim_{m \uparrow \infty}
 \constr{\MPCFunc}(\mRat) = 0$, nevertheless the limiting constrained
 consumption function $\constr{\cFunc}(\mRat)$ is strictly positive
 and strictly increasing in $\mRat$.  This result interestingly
@@ -554,7 +553,7 @@ which is stronger than the perfect foresight version \eqref{eq:GICAbs} because
 
 \hypertarget{Autarky-Value}{}
 \subsubsection{Autarky Value}
-Analogously to \eqref{eq:ValuePFAnalytical}, value for a consumer who spent exactly their permanent income every period would reflect the product of the expectation of the (independent) future shocks to permanent income:\hypertarget{uInvEpShkuInv}{}
+Analogously to \eqref{eq:ValuePFAnalyticalAutarky}, value for a consumer who spent exactly their permanent income every period would reflect the product of the expectation of the (independent) future shocks to permanent income:\hypertarget{uInvEpShkuInv}{}
 \begin{align*}
   \vLevBF_{t}  & = \Ex_{t}\left[\uFunc(\pLevBF_{t}) + \DiscFac \uFunc(\pLevBF_{t}\PGro_{t+1}) + ... + \DiscFac^{T-t}\uFunc(\pLevBF_{t}\PGro_{t+1}...\PGro_{T})\right] \\
 %               & = \uFunc(\pLevBF_{t})\left(1+ \DiscFac \Ex_{t}[\PGro_{t+1}^{1-\CRRA}] +  ... + \DiscFac^{T-t}\Ex_{t}[\PGro_{t+1}^{1-\CRRA}]...\Ex_{t}[\PGro_{T}^{1-\CRRA}]\right) \\
@@ -932,7 +931,7 @@ As in the perfect foresight constrained problem, unbounded limiting human wealth
    & \overbrace{\Pat < (\Rfree/\PGro)^{1/\CRRA}\PGro}^{\PFFVAC}
       \\ & \Pat < \PGro
 \end{align*}
-where the transition from the first to the second lines is justified because $\cncl{\FHWC} \Rightarrow (\Rfree/\PGro)^{1/\CRRA}<1.$  So, \{\RIC, \cncl{\FHWC}\} implies the {\GICAbs} holds.  However, we are not entitled to conclude that the {\GICNrm} holds: $\Pat < \PGro$ does not imply $\Pat < \InvEpShkInv \PGro$ where $\InvEpShkInv<1$.  See further discussion of this interesting case in section~\ref{subsubsection:FVACnotGIC}.
+where the transition from the first to the second lines is justified because $\cncl{\FHWC} \Rightarrow (\Rfree/\PGro)^{1/\CRRA}<1.$  So, \{\RIC, \cncl{\FHWC}\} implies the {\GICAbs} holds.  However, we are not entitled to conclude that the {\GICNrm} holds: $\Pat < \PGro$ does not imply $\Pat < \InvEpShkInv \PGro$ where $\InvEpShkInv<1$.  See further discussion of this illuminating case in section~\ref{subsubsec:FVACnotGIC}.
 
 \begin{comment}
   
@@ -1224,7 +1223,7 @@ The most obvious definition of a `stable' point is a value $\mTarg$ such that if
  \end{theorem}
 
  \hypertarget{mTargImplicit}{}
- The full proof is in Appendix~\ref{}, but the key points can be made informally here.  Defining $\bar{\Rnorm}=(\Rfree/\PGroAdj)$, since $\Ex_{t}[\mRat_{t+1}]=\bar{\Rnorm}(\mRat_{t}-\cRat_{t})+1$, the implicit equation for $\mTarg$ is 
+ The full proof is in Appendix~\ref{sec:MTargetIsStable}, but the key points can be made informally here.  Defining $\bar{\Rnorm}=(\Rfree/\PGroAdj)$, since $\Ex_{t}[\mRat_{t+1}]=\bar{\Rnorm}(\mRat_{t}-\cRat_{t})+1$, the implicit equation for $\mTarg$ is 
  \begin{align}
    \bar{\Rnorm}(\mTarg-\mathring{\cFunc}(\mTarg))+1 & = \mTarg \label{eq:mTargImplicit}
  \end{align}
@@ -1246,7 +1245,7 @@ which is the {\GICNrm}; thus, if a stable point exists, it must satisfy the {\GI
  \subsubsection{The `Individual Steady-State'}\label{subsubsec:mSteadyState}
  
 Heterogeneous agents in a small open economy are often represented by models of this kind.  A traditional question in such models is whether there is a `balanced growth' equilibrium in which aggregate variables (income, consumption, market resources) all grow at the same rate. 
-As an input to our more focused small-open-economy analysis (in section~\ref{}) it will be useful to derive here the conditions under which an $\mRat$ will exist at which an individual consumer expects `balanced growth' in their own individual market resources and permanent income:
+As an input to our more focused small-open-economy analysis (in section~\ref{subsec:cGroEqPGroQ}) it will be useful to derive here the conditions under which an $\mRat$ will exist at which an individual consumer expects `balanced growth' in their own individual market resources and permanent income:
   \begin{align}
   \Ex_{t}[\mLevBF_{t+1}]/\mLevBF_{t} & =\Ex_{t}[\pLevBF_{t+1}]/\pLevBF_{t} \notag
     \\  \Ex_{t}[\mRat_{t+1}\PGro\pShk_{t+1}\pLevBF_{t}]/(\mRat_{t}\pLevBF_{t}) & =\Ex_{t}[\pLevBF_{t}\PGro\pShk_{t+1}]/\pLevBF_{t} \notag
@@ -1261,14 +1260,14 @@ If some value $\mRat_{t}=\hat{\mRat}$ exists for which equation~\eqref{eq:balgro
 \end{align}
 and derivations parallel to those after \eqref{eq:mTargImplicit} yield the conclusion that existence of an individual steady-state implies the {\GIC}, $1 > \Pat/\PGro$.  Note that since $\PGroAdj < \PGro$, $\mathring{\cFunc}^{\prime}(\mTarg) > \mathring{\cFunc}^{\prime}(\mBal)$ which implies that $\mTarg < \mBal$.
 
-If $\mBal$ exists, a weak sense in which it is a point of stability is that for an economy that started in period $t$ with all consumers at $\mRat_{t}=\mBal$, the ratio of the aggregate value $\MLevBF_{t+1}= \int \mLevBF_{t+1}$ to aggregate $\PLevBF_{t+1}= \int \pLevBF_{t+1}$ would be $\MLevBF_{t+1}/\PLevBF_{t+1}=\mBal$ so that, at least between those two periods, the aggregate economy would exhibit balanced growth and stability of the $\MLevBF/\PLevBF$ ratio.\footnote{This does not require all consumers to have the same $\pLevBF.$  The unlimited size of the population means that the expectation in \eqref{eq:balgrostable} holds for the set of consumers at each value of $\pLevBF$ represented in the population, and so holds for the entire population.}  After that, however, the nondegenerate distributon across values of $\mRat_{t+1}$ and $\pLevBF_{t+1}$ would almost certainly lead to some drift in the aggregate ratio.
+If $\mBal$ exists, a weak sense in which it is a point of stability is that for an economy that started in period $t$ with all consumers at $\mRat_{t}=\mBal$, the ratio of the aggregate value $\MLevBF_{t+1}= \int \mLevBF_{t+1}$ to aggregate $\PLevBF_{t+1}= \int \pLevBF_{t+1}$ would be $\MLevBF_{t+1}/\PLevBF_{t+1}=\mBal$ so that, at least between those two periods, the aggregate economy would exhibit balanced growth and stability of the $\MLevBF/\PLevBF$ ratio.\footnote{This does not require all consumers to have the same $\pLevBF.$  The unlimited size of the population means that the expectation in \eqref{eq:balgrostable} holds for the set of consumers at each value of $\pLevBF$ represented in the population, and so holds for the entire population.}  After that, however, the nondegenerate distribution across values of $\mRat_{t+1}$ and $\pLevBF_{t+1}$ would almost certainly lead to some drift in the aggregate ratio.
 
 There is one circumstance in which $\mBal$ would constitute a perpetually stable steady state, at both the micro and aggregate levels:  if after the date $t$ at which all consumers had $\mLev_{t}=\mBal$, all consumers always drew exactly the expected values of the idiosyncratic shocks ($\pShk_{i,t+n}=\tShk_{j,t+n}=1~\forall~i,j$ and for all $n>0$).  Such an economy would exhibit perpetual `balanced growth': $\MLevBF_{t+n}/\PLevBF_{t+n} = \mBal$ for all $n>0$.  
 
 Theorem~\ref{thm:balance}~formally states the relevant propositions.
 
 \begin{theorem}
-  \label{thm:balance} For a nondegenerate solution to the problem defined in section~\ref{subsec:setup}, if the {\GIC} \eqref{eq:GICAbs} holds, 
+  \label{thm:balance} For a nondegenerate solution to the problem defined in section~\ref{subsec:Setup}, if the {\GIC} \eqref{eq:GICAbs} holds, 
   there exists a unique `individual steady state' $\mBal>0$ such that
   \begin{equation}  
     \Ex_t [\pShk_{t+1}{\mRat}_{t+1}/\mRat_t] = 1 \mbox{~if~} \mRat_t = \mBal. 
@@ -1370,7 +1369,7 @@ A large (infinite) collection of small (infinitesimal) buffer-stock consumers wi
 
 Until now for convenience we have assumed infinite horizons, with the implicit understanding that Poisson mortality should be handled by adjusting the effective discount factor for mortality.  On that basis, section~\ref{subsec:cGroEqPGroIndQ} continues to omit mortality.  But a reason for explicitly introducing mortality will appear at the end of section~\ref{subsec:cGroEqPGroQ}, so implications of alternative assumptions about mortality are briefly examined in Section~\ref{sec:Mortality-And-Redistribution}.
 
-Formally, we assume a continuum of \textit{ex ante} identical households on the unit interval, with constant total mass normalized to one and indexed by $i \in [0,1]$, all behaving according to the model specified above.  Szeidl~\citeyearpar{szeidlInvariant} proves that whenever the {\GIC} holds such a population will be characterized by invariant distributions of $\mRat$, $\cRat$, and $\aRat$;\footnote{\cite{szidlInvariant}'s equation (9), in our notation, is:
+Formally, we assume a continuum of \textit{ex ante} identical households on the unit interval, with constant total mass normalized to one and indexed by $i \in [0,1]$, all behaving according to the model specified above.  Szeidl~\citeyearpar{szeidlInvariant} proves that whenever the {\GIC} holds such a population will be characterized by invariant distributions of $\mRat$, $\cRat$, and $\aRat$;\footnote{\cite{szeidlInvariant}'s equation (9), in our notation, is:
   \begin{align*}
     \Ex \log \Rfree (1-\MPC) < \Ex \log \PGro \pShk
     \\  \Ex \log \Rfree \PatR    < \Ex \log \PGro \pShk
