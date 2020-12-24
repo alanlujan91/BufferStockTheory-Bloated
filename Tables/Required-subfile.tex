@@ -1,7 +1,7 @@
 % -*- enable-local-variables: :all; -*-
 \input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
 \input{./econtexRoot}\input{\LaTeXInputs/econtex_onlyinsubfile}
-\onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+\onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} 
 
 \begin{document}
 % This needed to be a subfile to tweak the use of the makecell \thead commands
@@ -22,32 +22,43 @@
 \caption{Sufficient Conditions for Nondegenerate$^{\ddagger}$ Solution} \label{table:Required}
 \sbox{\Required}{
 \begin{tabular}{|l|l|l|} \hline
-%                                            & \multicolumn{1}{c|}{Required}   & \multicolumn{1}{c|}{}  \\
-\multicolumn{1}{|c|}{Model}              & \multicolumn{1}{c|}{Conditions} & \multicolumn{1}{c|}{Comments/Logic}
-\\ \hline
-   \multicolumn{1}{|l|}{PF Unconstrained}   & \RIC, \FHWC$^{\circ}$                       & \RIC~$\Rightarrow |\vFunc(\mRat)|< \infty$; \FHWC~$\Rightarrow 0 < |\vFunc(\mRat)|$
-\\ \href{https://\owner.github.io/BufferStockTheory\#PF-Constrained-Solution}{~~Section~\ref{subsec:PFUncon}}                                         &                                 & \RIC~prevents $\bar{\cFunc}(\mRat)=0$
-  \\                                          &                                 & \FHWC~prevents $\bar{\cFunc}(\mRat)=\infty$
-\\                                          &                                 & {\RIC}+{\FHWC} $\Rightarrow$ {\PFFVAC}         
-%\\                                          &                                 & See \href{https://\owner.github.io/BufferStockTheory\#PF-Constrained-Solution}{Section~\ref{subsec:PFUncon}}
-  \\ \hline\hline \multicolumn{1}{|l|}{PF Constrained}     & \cncl{\PFGIC}, \RIC & {\FHWC} holds $(\PGro < \Pat < \Rfree \Rightarrow \PGro < \Rfree)$
-                                                                                    \\ & & Identical to solution to PF Unconstrained for
-% \\                               &                                  & See \href{https://\owner.github.io/BufferStockTheory\#PF-Constrained-Solution}{Section~\ref{subsec:PFCon}, Appendix~\ref{sec:ApndxLiqConstr}}
-  \\                                                                 \href{https://\owner.github.io/BufferStockTheory\#PF-Constrained-Solution}{~~Section~\ref{subsec:PFCon}}                                                                         & & $  \mRat > \mRat_{\#}$ for some $0 < \mRat_{\#} < 1$; $\cFunc(\mRat)=\mRat$ for $\mRat \leq \mRat_{\#}$
-\\ & & (\cncl{\RIC} would yield $\mRat_{\#}=0$ so degenerate $\cFunc(\mRat)=0$)
-  \\ \cline{2-3} \href{https://\owner.github.io/BufferStockTheory\#ApndxLiqConstr}{~~Appendix~\ref{sec:ApndxLiqConstr}} & \PFGIC,\RIC & $\lim_{\mRat \rightarrow \infty} \mathring{\cRat}(\mRat)=\bar{\cRat}(\mRat), \lim_{\mRat \rightarrow \infty} \mathring{\MPCFunc}(\mRat)=\MinMPC$ 
-\\                                          &                                 & kinks at points where horizon to $b=0$ changes$^{\ast}$
-% \\                               &                                  & See \href{https://\owner.github.io/BufferStockTheory\#PF-Constrained-Solution}{~~Section~\ref{subsec:PFCon}, Appendix~\ref{sec:ApndxLiqConstr}}
-  \\ \cline{2-3}                              &   \PFGIC,\cncl{\RIC}    & $\lim_{\mRat \rightarrow \infty} \mathring{\MPCFunc}(\mRat)=0$
-\\                                          &                                 & kinks at points where horizon to $b=0$ changes$^{\ast}$
-%\\                               &                                 & See \href{https://\owner.github.io/BufferStockTheory\#PF-Constrained-Solution}{Section~\ref{subsec:PFCon}, Appendix~\ref{sec:ApndxLiqConstr}}
-\\ \hline\hline \multicolumn{1}{|l|}{Buffer Stock Model} & \FVAC, \WRIC~                     & \FHWC~$\Rightarrow$ $\lim_{\mRat \rightarrow \infty} \mathring{\cRat}(\mRat)=\bar{\cRat}(\mRat), \lim_{\mRat \rightarrow \infty} \mathring{\MPCFunc}(\mRat)=\MinMPC$
-  \\ \href{https://\owner.github.io/BufferStockTheory\#Uncertainty-Modified-Conditions}{~~Section~\ref{subsec:UncertaintyModifiedConditions}}
-                                            &                                 & \cncl{\FHWC}+RIC~$\Rightarrow \lim_{\mRat \rightarrow \infty} \mathring{\MPCFunc}(\mRat)=\MinMPC$
-\\                                          &                                 & \cncl{\FHWC}+\cncl{\RIC} $\Rightarrow \lim_{\mRat \rightarrow \infty} \mathring{\MPCFunc}(\mRat)=0$
-\\                                          &                                 & \GIC~guarantees finite target wealth ratio
-\\                                          &                                 & \FVAC~is stronger than \PFFVAC~
-\\                                          &                                 & \WRIC~is weaker than \RIC~
+  \multicolumn{1}{|l|}{$\cFunc(m)$: Model}              & \multicolumn{1}{c|}{Conditions} & \multicolumn{1}{c|}{Comments or }
+\\\multicolumn{1}{|l|}{~~~~Reference            }  & & \multicolumn{1}{c|}{or Logic}
+  \\ \hline
+   \multicolumn{1}{|l|}{$\bar{\cFunc}(m)$: PF Unconstrained}   & \RIC, \FHWC$^{\circ}$                       & \RIC~$\Rightarrow |\vFunc(\mRat)|< \infty$; \FHWC~$\Rightarrow 0 < |\vFunc(\mRat)|$
+  \\ {$\underline{\cFunc}(m)=\MinMPC \mRat$: PF $\hRat=0$}     &                                 & PF model with no human wealth
+\\   \href{https://\owner.github.io/BufferStockTheory\#PF-Constrained-Solution}{~~~~Section~\ref{subsec:PFUncon}}                                                                                &                                 & \RIC~prevents $\bar{\cFunc}(\mRat)=\underline{\cFunc}(\mRat)=0$                                                                                                   
+  \\ \href{https://\owner.github.io/BufferStockTheory\#PF-Constrained-Solution}{~~~~Section~\ref{subsec:PFUncon}} &                                 & \FHWC~prevents $\bar{\cFunc}(\mRat)=\infty$
+\\ {~~~~Eq~\eqref{eq:FHWCandPFFVACimplyRIC}}       &                                 & {\PFFVAC}+{\FHWC} $\Rightarrow$ {\RIC}         
+\\ {~~~~Eq~\eqref{eq:GICandFHWCimplyPFFVAC}}       &                                 & {\GIC}+{\FHWC} $\Rightarrow$ {\PFFVAC}         
+  \\ \hline\hline \multicolumn{1}{|l|}{$\constr{\cFunc}(m)$: PF Constrained}     & \cncl{\GICAbs}, \RIC & {\FHWC} holds $(\PGro < \Pat < \Rfree \Rightarrow \PGro < \Rfree)$
+  \\
+\href{https://\owner.github.io/BufferStockTheory\#PF-Constrained-Solution}{~~~~Section~\ref{subsec:PFCon}}                                             & & $\constr{\cFunc}(\mRat)=\bar{\cFunc}(\mRat)$ for $\mRat > \mRat_{\#} < 1$
+\\  & & (\cncl{\RIC} would yield $\mRat_{\#}=0$ so $\constr{\cFunc}(\mRat)=0$)
+  \\ \cline{2-3} \href{https://\owner.github.io/BufferStockTheory\#ApndxLiqConstr}{~~~~Appendix~\ref{sec:ApndxLiqConstr}} & \GICAbs,\RIC & $\lim_{\mRat \rightarrow \infty} \constr{\cRat}(\mRat)=\bar{\cRat}(\mRat), \lim_{\mRat \rightarrow \infty} \constr{\MPCFunc}(\mRat)=\MinMPC$ 
+\\                                           &                                 & kinks at pts where horizon to $b=0$ changes$^{\ast}$
+  \\ \cline{2-3}\href{https://\owner.github.io/BufferStockTheory\#ApndxLiqConstr}{~~~~Appendix~\ref{sec:ApndxLiqConstr}}                              &   \GICAbs,\cncl{\RIC}    & $\lim_{\mRat \rightarrow \infty}  \constr{\MPCFunc}(\mRat)=0$
+\\                                          &                                 & kinks at pts where horizon to $b=0$ changes$^{\ast}$
+  \\ \hline\hline \multicolumn{1}{|l|}{$\mathring{\cFunc}(\mRat)$:  \href{https://\owner.github.io/BufferStockTheory\#Uncertainty-Modified-Conditions}{Friedman/Muth}
+  } & Section~\ref{subsec:LimitsAsmtToInfty},                     & $\underline{\cFunc}(\mRat) < \mathring{\cFunc}(\mRat) < \bar{\cFunc}(\mRat)$ %\phantom{\RIC, \FHWC$^{\ast\ast}$~ }
+  \\  & Section~\ref{subsec:LimitsAsmtToZero}              & $\underline{\vFunc}(\mRat) < \mathring{\vFunc}(\mRat) < \bar{\vFunc}(\mRat)$ %
+  % \\ \hline\hline \multicolumn{1}{|l|}{$\mathring{\cFunc}(\mRat)$: Friedman/Muth} & \FVAC, \WRIC~                     & \WRIC~is weaker than \RIC~
+%  \\ {~~~~``Buffer Stock'' Subset}                                         &                                 & \GICNrm~$\Rightarrow \exists $ `individual target' $\mTarg$
+%\\ {~~~~~~~~~Section~\ref{subsec:onetarget}}                                         &                                 & \GIC~$\Rightarrow \exists $ `individual steady-state' $\mBal$
+                                                                                  
+  \\ \cline{2-3} {~~~~Section~\ref{subsec:contraction}}                            & \FVAC, \WRIC~                     & Sufficient for Contraction
+ \\ {~~~~Section~\ref{subsubsec:WRICdiscuss}}                               &                      & \WRIC~is weaker than \RIC~
+\\  {~~~~Figure~\ref{fig:Inequalities}}                                        &                                 & \FVAC~is stronger than \PFFVAC~
+  \\ {~~~~Section~\ref{subsubsec:WhenTheRICHolds}}
+                                            &                                 & \cncl{\FHWC}+RIC~$\Rightarrow $\GIC$, \lim_{\mRat \rightarrow \infty} \mathring{\MPCFunc}(\mRat)=\MinMPC$
+  \\  ~~~~Section~\ref{subsubsec:WhenTheRICFails}                                        &                                 & \cncl{\RIC}  $\Rightarrow $\cncl{\FHWC}$, \lim_{\mRat \rightarrow \infty} \mathring{\MPCFunc}(\mRat)=0$
+  \\ \cline{3-3}{~~~~Section~\ref{subsec:onetarget}}                                        &                                 & ``Buffer Stock Saving'' Conditions
+  \\ {~~~~Section~\ref{subsubsec:mSteadyState}}                                        &                                 & \phantom{-Nrm}{\GIC} $\Rightarrow \exists~~~~ 0 < \mBal < \infty$ : Steady-State
+  \\ {~~~~Section~\ref{subsubsec:mTarget}}                                        &                                 & {\GICNrm} $\Rightarrow \exists~~~~ 0 < \mTarg < \infty$ : Target
+%  \\ \hline\hline \multicolumn{1}{|l|}{$\mathring{\cFunc}(\mRat)$: Friedman/Muth} & \RIC, \FHWC~                     & $\underline{\cFunc}(\mRat) < \mathring{\cFunc}(\mRat) < \bar{\cFunc}(\mRat)$
+%  \\ {~~~~``Buffer Stock'' Subset}                                         &                                 & \GICNrm~$\Rightarrow \exists $ `individual target' $\mTarg$
+%\\ {~~~~~~~~~Section~\ref{subsec:onetarget}}                                         &                                 & \GIC~$\Rightarrow \exists $ `individual steady-state' $\mBal$
+                                                                                  
 \\ \hline \multicolumn{3}{c}{}
 \end{tabular}
 } % End \sbox
@@ -55,12 +66,15 @@
 \settowidth\TableWidth{\usebox{\Required}}
 \usebox{\Required}
 
-\parbox{\TableWidth}{\footnotesize         $^{\ddagger}$For feasible $\mRat$ satisfying $0 < \mRat < \infty$, a nondegenerate limiting consumption function defines the unique value of $\cRat$ satisfying $0 < \cRat(m) < \infty$; a nondegenerate limiting value function defines a corresponding unique value of $-\infty < \vFunc(\mRat) < 0$ .~~$^{\circ}$RIC, \FHWC~are necessary as well as sufficient.~~$^{\ast}$That is, the first kink point in $\cRat(\mRat)$ is $\mRat_{\#}$ s.t. for $\mRat < \mRat_{\#}$ the constraint will bind now, while for $\mRat > \mRat_{\#}$ the constraint will bind one period in the future.  The second kink point corresponds to the $\mRat$ where the constraint will bind two periods in the future, etc.} %~~$^{\ast}$Solution also exists for \cncl{\PFGIC} and \RIC, but is identical to the unconstrained model's solution for feasible $\mRat \geq 1$.
+\parbox{\TableWidth}{\footnotesize         $^{\ddagger}$For feasible $\mRat$ satisfying $0 < \mRat < \infty$, a nondegenerate limiting consumption function defines a unique optimal value of $\cRat$ satisfying $0 < \cRat(m) < \infty$; a nondegenerate limiting value function defines a corresponding unique value of $-\infty < \vFunc(\mRat) < 0$ .~~$^{\circ}$RIC, \FHWC~are necessary as well as sufficient for the perfect foresight case.~~$^{\ast}$That is, the first kink point in $\cRat(\mRat)$ is $\mRat_{\#}$ s.t. for $\mRat < \mRat_{\#}$ the constraint will bind now, while for $\mRat > \mRat_{\#}$ the constraint will bind one period in the future.  The second kink point corresponds to the $\mRat$ where the constraint will bind two periods in the future, etc.~~$^{\ast\ast}$In the Friedman/Muth model, the {\RIC}+{\FHWC} are sufficient, but \textit{not} necessary for nondegeneracy} 
 \end{table}
     
 \end{verbatimwrite}
 \clearpage
 \input{\TableDir/Required}
+
+
+
 
 \end{document}
 % Delete up to four existing variants of BibTeX 

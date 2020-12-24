@@ -441,15 +441,77 @@ plt.close()
 #
 
 # %% [markdown]
-# ## [If the GIC Holds, $\exists$ a finite 'target' $m$](https://llorracc.github.io/BufferStockTheory/#onetarget)
+# ## [If the GIC-Nrm Holds, $\exists$ a finite 'target' $m$](https://llorracc.github.io/BufferStockTheory/#onetarget)
 #
-# Section [There Is Exactly One Target $m$ Ratio, Which Is Stable](https://llorracc.github.io/BufferStockTheory/#onetarget) shows that, under parameter values for which the limiting consumption function exists, if the GIC holds then there will be a value $\Target{m}$ such that:
+# Section [There Is Exactly One Target $m$ Ratio, Which Is Stable](https://llorracc.github.io/BufferStockTheory/#onetarget) shows that, under parameter values for which the limiting consumption function exists, if the GIC-Nrm holds then there will be a value $\Target{m}$ such that:
 #
 # \begin{eqnarray*}
 # \Ex[m_{t+1}] & > & m_{t}~\text{if $m_{t} < \Target{m}$} \\
 # \Ex[m_{t+1}] & < & m_{t}~\text{if $m_{t} > \Target{m}$} \\
 # \Ex[m_{t+1}] & = & m_{t}~\text{if $m_{t} = \Target{m}$}
 # \end{eqnarray*}
+#
+# Define 
+#
+# \begin{align*}
+# \tilde{\psi} & = (\Ex_{t}[\psi_{t+1}^{-1}])^{-1}
+# \\ \tilde{\Gamma} & = \Gamma \tilde{\psi}
+# \end{align*}
+#
+# and note that $\tilde{\psi} < 1$
+#
+# We can solve for this value implicitly:
+# \begin{align*}
+# \Ex[m_{t+1}] & = (\Rfree/\tilde{\Gamma}) (m_{t}-c(m_{t}))+1
+# \\ \Target{m} & = (\Rfree/\tilde{\Gamma}) (\Target{m}-c(\Target{m}))+1
+# \\ \Target{m} - 1 & = (\Rfree/\tilde{\Gamma}) (\Target{m}-c(\Target{m}))
+# \\ (\Target{m} - 1)(\tilde{\Gamma}/\Rfree)  & = \Target{m}-c(\Target{m})
+# \\  c(\Target{m}) & = \Target{m}-(\Target{m} - 1)(\tilde{\Gamma}/\Rfree)
+# \\  c(\Target{m}) & = \Target{m}(1-(\tilde{\Gamma}/\Rfree)) +(\tilde{\Gamma}/\Rfree)
+# \end{align*}
+# or find it more simply using the fact that the slope is monotonic and continuous so we can differentiate:
+# \begin{align*}
+# \\  c^{\prime}(\Target{m}) & = (1-(\tilde{\Gamma}/\Rfree))
+# \end{align*}
+#
+#
+# Expression in `addSSmNrm` code:
+# \begin{align*}
+#   = (1 - \Gamma/\Rfree) m + (\Gamma/R)
+# \end{align*}
+#
+
+# %% [markdown]
+# ## Unique and Stable `Target` Ratios
+#
+# (first part is same as before)
+#
+# The paper examines a second special value of $m$ that defines a somewhat different kind of target.
+#
+# $\hat{m}$ is defined as a value of $m$ at which the consumer expects `balanced growth` in their market resources and their permanent income:
+#
+# \begin{align}
+# \Ex_{t}[\mathbf{m}_{t+1}]/\mathbf{m}_{t} & = \Ex_{t}[\mathbf{p}_{t+1}/\mathbf{p}_{t}]
+# \\ \Ex_{t}[{m}_{t+1}\mathbf{p}_{t+1}]/m_{t}\mathbf{p}_{t} & = \Ex_{t}[\Gamma\mathbf{p}_{t}\psi_{t+1}/\mathbf{p}_{t}]
+# \\ \Ex_{t}[{m}_{t+1}\Gamma \psi_{t+1}]/m_{t} & = \Gamma
+# \\ \Ex_{t}[{m}_{t+1} \psi_{t+1}] & = m_{t}
+# \end{align}
+#
+# But
+# \begin{align}
+# \Ex[m_{t+1}] & =\Ex\left[\psi_{t+1}\left((\Rfree/\Gamma \psi_{t+1}) (m_{t}-c(m_{t}))+\theta_{t+1}\right)\right]
+# \\ & =\Ex\left[\left((\Rfree/\Gamma) (m_{t}-c(m_{t}))+\psi_{t+1}\theta_{t+1}\right)\right]
+# \\ & =(\Rfree/\Gamma) (m_{t}-c(m_{t}))+1
+# \end{align}
+#
+# And the target will be
+# \begin{align}
+# \hat{m} & =(\Rfree/\Gamma) (\hat{m}-c(\hat{m}))+1
+# \\ \hat{m}-1 & =(\Rfree/\Gamma) (\hat{m}-c(\hat{m}))
+# \\ (\Gamma/\Rfree)(\hat{m}-1) & =\hat{m}-c(\hat{m})
+# \\ c(\hat{m}) & = \hat{m}(1-(\Gamma/\Rfree)) +(\Gamma/\Rfree)
+# \end{align}
+#
 
 # %% [markdown]
 # ## [If the GIC Fails, Target Wealth is Infinite ](https://llorracc.github.io/BufferStockTheory/#The-GIC)
@@ -548,6 +610,9 @@ make('FVACnotGIC') # Save figures (if appropriate/possible)
 
 # %% [markdown]
 # In the [interactive dashboard](#interactive-dashboard), see what happens as changes in the time preference rate (or changes in risk $\PermShkStd$) change the consumer from _growth-patient_ $(\APF > \tilde{\PermGroFac})$ to _growth-impatient_ ($\APF < \tilde{\PermGroFac}$)
+
+# %%
+GICFailsExample.PermGroFac
 
 # %%
 # Conditions can also be checked without solving the model

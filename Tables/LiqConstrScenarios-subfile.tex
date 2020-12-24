@@ -21,10 +21,10 @@
 Main Condition     &\multicolumn{3}{c|}{~}         & \\ % & Example \\
 ~~~~Subcondition   & \multicolumn{3}{c|}{Math}             & \multicolumn{1}{c|}{ Outcome, Comments or Results} % & Example 
 \\ \hline
-\cncl{\PFGIC}      & $\phantom{\Pat/\Rfree}$ & $\phantom{~<~}1        {~<~}$ & $        {\Pat/\PGro}$  & Constraint never binds for $\mRat \geq 1$ %& %$\{\Pat,\PGro\}=\{1,0.98\}$
+\cncl{\GICAbs}      & $\phantom{\Pat/\Rfree}$ & $\phantom{~<~}1        {~<~}$ & $        {\Pat/\PGro}$  & Constraint never binds for $\mRat \geq 1$ %& %$\{\Pat,\PGro\}=\{1,0.98\}$
 \\ ~~~~ and \RIC~          & $        {\Pat/\Rfree}$ & $        {~<~}1\phantom{~<~}$ & $\phantom{\Pat/\PGro}$  & ~~~\FHWC~holds ($\Rfree > \PGro$); $\constr{\cFunc}(\mRat) = \bar{\cFunc}(\mRat)$ for $\mRat \geq 1$ % & $\{\Rfree,\Discount, \PGro \} = $
 \\ ~~~~ and \cncl{\RIC}   & $\phantom{\Pat/\Rfree}$ & $\phantom{~<~}1        {~<~}$ & $        {\Pat/\Rfree}$ & ~~~~$\constr{\cFunc}(\mRat)$ is degenerate: $\constr{\cFunc}(\mRat)=0$  %&
-\\ \PFGIC~            & $        {\Pat/\PGro}$ & $        {~<~}1\phantom{~<~}$ & $\phantom{\Pat/\Rfree}$  & Constraint binds in finite time for any $\mRat$ % &
+\\ \GICAbs~            & $        {\Pat/\PGro}$ & $        {~<~}1\phantom{~<~}$ & $\phantom{\Pat/\Rfree}$  & Constraint binds in finite time for any $\mRat$ % &
 \\ ~~~~ and \RIC~           & $        {\Pat/\Rfree}$  & $      {~<~}1\phantom{~<~}$ & $\phantom{\Pat/\PGro}$   & ~~~~\FHWC~may or may not hold
 \\ ~~~~               &                          &                             &                          & ~~~~~~~$\lim_{m \uparrow \infty}\bar{\cFunc}(\mRat) - \constr{\cFunc}(\mRat) = 0$ % & ~~$\{1.02,1.02^{-1},1.02\}$
 \\ ~~~~               &                          &                             &                          & ~~~~~~~$\lim_{m \uparrow \infty}\constr{\MPCFunc}(\mRat) = \MinMPC$ % & ~~$\{1.02,1.02^{-1},1.02\}$
@@ -37,7 +37,7 @@ Main Condition     &\multicolumn{3}{c|}{~}         & \\ % & Example \\
 \settowidth\TableWidth{\usebox{\LiqConstrScenarios}}
 \usebox{\LiqConstrScenarios}
 
-\parbox{\TableWidth}{\footnotesize Conditions are applied from left to right; for example, the second row indicates conclusions in the case where \cncl{\PFGIC} and \RIC~both hold, while the third row indicates that when the \PFGIC~and the \RIC~both fail, the consumption function is degenerate; the next row indicates that whenever the \PFGIC~holds, the constraint will bind in finite time.}
+\parbox{\TableWidth}{\footnotesize Conditions are applied from left to right; for example, the second row indicates conclusions in the case where \cncl{\GICAbs} and \RIC~both hold, while the third row indicates that when the \GICAbs~and the \RIC~both fail, the consumption function is degenerate; the next row indicates that whenever the \GICAbs~holds, the constraint will bind in finite time.}
 
 \end{table}
 
@@ -101,10 +101,10 @@ $\Pat/\Rfree < 1$                                          & $\pZero^{1/\CRRA}\P
 $\cFunc^{\prime}(m) = 1-\Pat/\Rfree < 1$              & $\cFunc^{\prime}(m) < 1-\pZero^{1/\CRRA}\Pat/\Rfree < 1$ \\
 & \\ \hline
 \multicolumn{2}{|c|}{Growth Impatience Conditions} \\ \hline
-\multicolumn{1}{|c|}{\PFGIC} & \multicolumn{1}{c|}{\GIC} \\ \hline
+\multicolumn{1}{|c|}{\GICAbs} & \multicolumn{1}{c|}{\GICNrm} \\ \hline
 $\Pat/\PGro < 1$                                         & $\Pat\Ex[\pShk^{-1}]/\PGro < 1 $ \\
 \multirow{4}{75mm}{\thead{Guarantees that for an unconstrained \\ consumer, the ratio of consumption to \\ permanent income will fall over time.  For ~~~\\ a constrained consumer, guarantees the \\ constraint will eventually be binding.}} &
-\multirow{4}{75mm}{\thead{By Jensen's inequality, stronger than \\the \PFGIC. \\  Ensures consumers will not \\ expect to accumulate $\mRat$ unboundedly.}} \\
+\multirow{4}{75mm}{\thead{By Jensen's inequality, stronger than \\the \GICAbs. \\  Ensures consumers will not \\ expect to accumulate $\mRat$ unboundedly.}} \\
 & \\
 & \\
 & \\
