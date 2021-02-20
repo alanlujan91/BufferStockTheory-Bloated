@@ -2,8 +2,6 @@
 \usepackage{datetime2}
 \usepackage{refcount}
 \usepackage{xr-hyper}
-%\usepackage{tikz}
-%\usepackage{pgfkeys}\usepackage{tikz-dependency}
 \usepackage{hhline}
 \newcommand{\onlyinsubfile}[1]{#1}\newcommand{\notinsubfile}[1]{}
 
@@ -15,8 +13,6 @@
   \fi #1%
 }
 
-%\AtBeginEnvironment{thebibliography}{\renewcommand{\baselinestretch}{0.5}\small}
-
 % Other tools
 \newcommand{\BoydT}{\mathsf{T}} % Contraction mapping operator
 \newcommand{\Shrinker}{\alpha}  % Contraction mapping shrinker
@@ -26,7 +22,7 @@
 
 % Implement a standard setup and shortcuts, e.g. for the \CRRA
 \usepackage{\econtexSetup}
-\usepackage{\econtexShortcuts}
+\usepackage{econtexShortcuts}
 \usepackage{makecell} 
 
 \usepackage{rotating}\usepackage{subfigure}
@@ -42,3 +38,8 @@
 \newtheorem{defn}{Definition}
 \newtheorem{theorem}{Theorem}
 
+\newcommand{\GICAbs}{{\mbox{GIC}}}
+\newcommand{\GICNrm}{{\mbox{GIC-Nrm}}}
+\newcommand{\GICNrmAgg}{{\mbox{GICNrmAgg}}}
+\newcommand{\PFGPNew}{{\mbox{GPF}}}
+\newcommand{\mBal}{\hat{\mRat}}

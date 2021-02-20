@@ -15,11 +15,11 @@ consumption function $\constr{\cFunc}(\mRat)$ that arise under various parametri
 
 \input{\TableDir/LiqConstrScenarios}
 
-\subsection{If \PFGIC~Fails}
+\subsection{If \GICAbs~Fails}
 
 A consumer is `growth patient' if the perfect foresight growth
-impatience condition fails (\cncl{\PFGIC}, $1 < \Pat/\PGro$).  Under
-\cncl{\PFGIC} the constraint does not bind at the lowest feasible value of $\mRat_{t}=1$ because
+impatience condition fails (\cncl{\GICAbs}, $1 < \Pat/\PGro$).  Under
+\cncl{\GICAbs} the constraint does not bind at the lowest feasible value of $\mRat_{t}=1$ because
 $1 < (\Rfree\Discount)^{1/\CRRA}/\PGro$ implies that spending
 everything today (setting $\cRat_{t}=\mRat_{t}=1$) produces lower
 marginal utility than is obtainable by reallocating a marginal unit of
@@ -32,9 +32,9 @@ resources to the next period at return $\Rfree$:\footnote{The point at
   $\constr{\cFunc}(\mRat)=\min[\mRat,\cRat_{\#}+(\mRat-\cRat_{\#})\MinMPC
   ]$.}
 \begin{equation}\begin{gathered}\begin{aligned}
-  1  & < (\Rfree \Discount)^{1/\CRRA}\PGro^{-1}     
-  \\ 1  & < \Rfree \Discount \PGro^{-\CRRA}  
-  \\  \uFunc^{\prime}(1)  & < \Rfree \Discount \uFunc^{\prime}(\PGro)   \label{eq:EulerPFGICFailsEnd}.
+  1  & < (\Rfree \Discount)^{1/\CRRA}\PGro^{-1}    \notag
+  \\ 1  & < \Rfree \Discount \PGro^{-\CRRA} \notag
+  \\  \uFunc^{\prime}(1)  & < \Rfree \Discount \uFunc^{\prime}(\PGro)   \label{eq:EulerGICAbsFailsEnd}.
 \end{aligned}\end{gathered}\end{equation}
 
 Similar logic shows that under these circumstances the constraint will
@@ -42,7 +42,7 @@ never bind at $\mRat=1$ for a constrained consumer with a finite horizon of $n$
 periods, so for $\mRat \geq 1$ such a consumer's consumption function will be the same as for the
 unconstrained case examined in the main text.
 
-\hypertarget{cnclPFGICcnclRICFHWC}{}
+\hypertarget{cnclGICAbscnclRICFHWC}{}
 \textit{{\RIC} fails, {\FHWC} holds.} If the \RIC~fails ($1 < \PatR$) while the finite human wealth condition
 holds, the limiting value of this consumption function as $n \uparrow
 \infty$ is the degenerate function
@@ -51,7 +51,7 @@ holds, the limiting value of this consumption function as $n \uparrow
 \end{aligned}\end{gathered}\end{equation}
 (that is, consumption is zero for any level of human or nonhuman wealth).
 
-\hypertarget{cnclPFGICcnclRICcnclFHWC}{}
+\hypertarget{cnclGICAbscnclRICcnclFHWC}{}
 \textit{{\RIC}~fails, {\FHWC}~fails}. {\cncl{\FHWC}} implies that human wealth limits to $\hRat =
 \infty$ so the consumption function limits to either
 $\constr{\cFunc}_{T-n}(\mRat) = 0$ or
@@ -65,8 +65,8 @@ $\infty$.\footnote{The knife-edge case is where $\Pat = \PGro$, in
 \newlength\TableWidth
 
 Thus, the requirement that the consumption function be nondegenerate
-implies that for a consumer satisfying \cncl{\PFGIC} we must impose
-the \RIC~(and the \FHWC~can be shown to be a consequence of \cncl{\PFGIC} and \RIC).  In
+implies that for a consumer satisfying \cncl{\GICAbs} we must impose
+the \RIC~(and the \FHWC~can be shown to be a consequence of \cncl{\GICAbs} and \RIC).  In
 this case, the consumer's optimal behavior is easy to describe.  We
 can calculate the point at which the unconstrained consumer would
 choose $\cRat = \mRat$ from equation \eqref{\localorexternallabel{eq:cFuncPFUnc}}:
@@ -75,7 +75,7 @@ choose $\cRat = \mRat$ from equation \eqref{\localorexternallabel{eq:cFuncPFUnc}
   \\ \mRat_{\#}(1-\MinMPC)  & = (\hRat - 1)\MinMPC
   \\ \mRat_{\#}  & = (\hRat - 1)\left(\frac{\MinMPC}{1-\MinMPC}\right)
 \end{aligned}\end{gathered}\end{equation}
-which (under these assumptions) satisfies $0 < \mRat_{\#} < 1$.\footnote{Note that $0 < \mRat_{\#}$ is implied by \RIC~and $ \mRat_{\#}<1$ is implied by \cncl{\PFGIC}.}  For
+which (under these assumptions) satisfies $0 < \mRat_{\#} < 1$.\footnote{Note that $0 < \mRat_{\#}$ is implied by \RIC~and $ \mRat_{\#}<1$ is implied by \cncl{\GICAbs}.}  For
 $\mRat < \mRat_{\#}$ the unconstrained consumer would choose to
 consume more than $\mRat$; for such $\mRat$, the constrained consumer
 is obliged to choose $\constr{\cFunc}(\mRat) = \mRat$.\footnote{As an
@@ -91,10 +91,11 @@ consumer, $\bar{\cFunc}(\mRat)$.
 
 (\cite{StachurskiToda2019JET} obtain a similar lower bound on consumption and use it to study the tail behavior of the wealth distribution.)
 
-\subsection{If \PFGIC~Holds}
 
-Imposition of the \PFGIC~reverses the inequality in
-\eqref{\localorexternallabel{eq:EulerPFGICFailsEnd}}, and thus
+\subsection{If \GICAbs~Holds}
+
+Imposition of the \GICAbs~reverses the inequality in
+\eqref{\localorexternallabel{eq:EulerGICAbsFailsEnd}}, and thus
 reverses the conclusion: A consumer who starts with $\mRat_{t}=1$ will
 desire to consume more than 1.  Such a consumer will be constrained,
 not only in period $t$, but perpetually thereafter.
@@ -104,7 +105,7 @@ an unconstrained consumer holding $\bRat_{t}=\bRat_{\#}^{n}$ would behave so as 
 $t-1$: Had $b_{t-1}$ been infinitesimally smaller, the constraint
 would have been binding (because the consumer would have desired, but
 been unable, to enter period $t$ with negative, not zero, $b$).  Given
-the \PFGIC, the constraint certainly binds in period $t$ (and
+the \GICAbs, the constraint certainly binds in period $t$ (and
 thereafter) with resources of
 $\mRat_{t}=\mRat_{\#}^{0}=1+\bRat_{\#}^{0}=1$: The consumer cannot
 spend more (because constrained), and will not choose to spend less
@@ -119,9 +120,9 @@ $\cRat$ must have been growing according to $\PatPGro$, so consumption $n$ perio
 
 The PDV of consumption from $t-n$ until $t$ can thus be computed as
 \begin{equation}\begin{gathered}\begin{aligned}
-  \mathbb{C}_{t-n}^{t}  & = \cRat_{t-n}(1+\Pat/\Rfree+ ... + (\Pat/\Rfree)^{n})  
-  % \\   \mathbb{C}_{t-n}^{t}  & = \cRat_{t-n}(1+\PatPGro/\Rnorm+ ... + (\PatPGro/\Rnorm)^{n})  
-  \\  & = \cRat_{\#}^{n}(1+\PatR+ ... + \PatR^{n})  
+  \mathbb{C}_{t-n}^{t}  & = \cRat_{t-n}(1+\Pat/\Rfree+ ... + (\Pat/\Rfree)^{n}) \notag
+  % \\   \mathbb{C}_{t-n}^{t}  & = \cRat_{t-n}(1+\PatPGro/\Rnorm+ ... + (\PatPGro/\Rnorm)^{n}) \notag
+  \\  & = \cRat_{\#}^{n}(1+\PatR+ ... + \PatR^{n}) \notag
   \\  & = \PatPGro^{-n}\left(\frac{1-\PatR^{n+1}}{1-\PatR}\right) \label{PDVc}
   \\  & = \left(\frac{\PatPGro^{-n}-\PatR}{1-\PatR}\right) 
 \end{aligned}\end{gathered}\end{equation}
@@ -171,7 +172,7 @@ The \FHWC~requires $\Rnorm^{-1} < 1$, in which case the second term in \eqref{\l
   \\  \lim_{n \rightarrow \infty} \left(\frac{\PatPGro^{-n}-\Rnorm^{-n}\PatR}{1-\PatR}\right)  & = \infty
   \\  \lim_{n \rightarrow \infty} \left(\frac{\PatPGro^{-n}}{1-\PatR}\right)  & = \infty.
 \end{eqnarray*}
-Given the \PFGIC~$\PatPGro^{-1}>1$, this will hold iff the \RIC~holds, $\PatR < 1$.  But given that the \FHWC~$\Rfree > \PGro$ holds, the \PFGIC~is stronger (harder to satisfy) than the \RIC; thus, the~\FHWC~and the \PFGIC~together imply the \RIC, and so a well-defined
+Given the \GICAbs~$\PatPGro^{-1}>1$, this will hold iff the \RIC~holds, $\PatR < 1$.  But given that the \FHWC~$\Rfree > \PGro$ holds, the \GICAbs~is stronger (harder to satisfy) than the \RIC; thus, the~\FHWC~and the \GICAbs~together imply the \RIC, and so a well-defined
 solution exists.  Furthermore, in the limit as $n$ approaches
 infinity, the difference between the limiting constrained consumption
 function and the unconstrained consumption function becomes
@@ -182,7 +183,7 @@ behavior shrinks to nothing.  That is,
   \lim_{m \rightarrow \infty}\constr{\cFunc}(m) - \bar{\cFunc}(m) = 0.
 \end{aligned}\end{gathered}\end{equation}
 
-% Finally, the main text shows that the \PFGIC~is a stronger condition than the PF-FVR; that is, \PFGIC~$\Rightarrow$ PF-FVR.
+% Finally, the main text shows that the \GICAbs~is a stronger condition than the PF-FVR; that is, \GICAbs~$\Rightarrow$ PF-FVR.
 
 \subsubsection{If \FHWC~Fails}
 If the \FHWC~fails, matters are a bit more complex.
@@ -195,15 +196,15 @@ If the \FHWC~fails, matters are a bit more complex.
     the parametric combinations required for this are somewhat peculiar
     (including both $\Rfree < 1$ and $\PGro < 1$); but we restrict our attention
     to the more useful and plausible cases with finite value.} which is stronger (holds
-  in strictly fewer circumstances) than the \PFGIC~condition $\PatPGro < 1$.
-  Thus, the \PFGIC~is an implication of $\cncl{\FHWC}$.
+  in strictly fewer circumstances) than the \GICAbs~condition $\PatPGro < 1$.
+  Thus, the \GICAbs~is an implication of $\cncl{\FHWC}$.
 \end{comment}
 
 Given failure of \FHWC, \eqref{\localorexternallabel{eq:bToInfty}} requires
 
 \begin{equation}\begin{gathered}\begin{aligned}
   % \lim_{n \rightarrow \infty} \left(\frac{\PatPGro^{-n}-\Rnorm^{-n}\PatR}{1-\PatR}\right) + \left(\frac{1-\Rnorm^{-(n+1)}}{\Rnorm^{-1}-1}\right)  & = \infty \\
-  \lim_{n \rightarrow \infty} \left(\frac{\Rnorm^{-n}\PatR-\PatPGro^{-n}}{\PatR-1}\right) + \left(\frac{1-\Rnorm^{-(n+1)}}{\Rnorm^{-1}-1}\right)  & = \infty  
+  \lim_{n \rightarrow \infty} \left(\frac{\Rnorm^{-n}\PatR-\PatPGro^{-n}}{\PatR-1}\right) + \left(\frac{1-\Rnorm^{-(n+1)}}{\Rnorm^{-1}-1}\right)  & = \infty \notag
   \\   \lim_{n \rightarrow \infty} \left(\frac{\PatR}{\PatR-1}-\frac{\Rnorm^{-1}}{\Rnorm^{-1}-1}\right)\Rnorm^{-n}-\left(\frac{\PatPGro^{-n}}{\PatR-1}\right)  & = \infty \label{eq:FHWCfails} 
   % \\   \lim_{n \rightarrow \infty} \left(\frac{\PatR(\Rnorm^{-1}-1)}{(\Rnorm^{-1}-1)(\PatR-1)}-\frac{\Rnorm^{-1}(\Rnorm^{-1}-1)}{(\Rnorm^{-1}-1)(\PatR-1)}\right)\Rnorm^{-n}-\left(\frac{\PatPGro^{-n}}{\PatR-1}\right)  & = \infty. 
 \end{aligned}\end{gathered}\end{equation}
@@ -244,7 +245,7 @@ $\Rnorm^{-n}$ in \eqref{\localorexternallabel{eq:FHWCfails}} will be positive if
   \\ \Rnorm^{-1}  & > & \PatR
   \\ \PGro  & > & \Pat
 \end{eqnarray*}
-which is merely the \PFGIC~which we are maintaining.  So the first term's limit is $+\infty$.  The
+which is merely the \GICAbs~which we are maintaining.  So the first term's limit is $+\infty$.  The
 combined limit will be $+\infty$ if the term involving $\Rnorm^{-n}$
 goes to $+\infty$ faster than the term involving $-\PatPGro^{-n}$ goes to
 $-\infty$; that is, if
@@ -272,7 +273,9 @@ but that limit is approached gradually, starting from a positive
 value, and consequently the consumption function is {\it not} the
 degenerate $\constr{\cFunc}(\mRat)=0$.  (Figure~\ref{fig:PFGICHoldsFHWCFailsRICFails} presents an example for $\CRRA=2$, $\Rfree=0.98$, $\Discount = 1.00$, $\PGro = 0.99$; note that the horizontal axis is bank balances $\bRat = \mRat-1$; the part of the consumption function below the depicted points is uninteresting -- $\cRat = \mRat$ -- so not worth plotting).
 
+
 \input{\FigDir/PFGICHoldsFHWCFailsRICFails}
+
 
 \begin{comment}
   We can rewrite the expression for $\mathbb{C}$ from \eqref{\localorexternallabel{PDVc}} as:
@@ -316,12 +319,14 @@ degenerate $\constr{\cFunc}(\mRat)=0$.  (Figure~\ref{fig:PFGICHoldsFHWCFailsRICF
   \end{aligned}\end{gathered}\end{equation}
   from which we can obtain the difference between the approximate and the exact $\mathbb{C}_{t-n}^{t}$ as $\Rnorm^{-n}\nabla(n)$ and
 
+
   For this $n$ and
   $\bRat$ we can obtain the corresponding
   $\cRat=\PatPGro^{-\nFunc(\bRat)}$.  Note, however, that this is {\it not}
   the level of $\cRat$ directly associated with $\bRat$ on the true
   consumption function, because we used only a limiting approximation to
   the correct $n$ rather than the correct $n$.
+
 
   The limiting difference can be obtained by realizing that
   \begin{equation}\begin{gathered}\begin{aligned}
@@ -331,7 +336,7 @@ degenerate $\constr{\cFunc}(\mRat)=0$.  (Figure~\ref{fig:PFGICHoldsFHWCFailsRICF
 
 \end{comment}
 
-We can summarize as follows.  Given that the \PFGIC~holds, the
+We can summarize as follows.  Given that the \GICAbs~holds, the
 interesting question is whether the \FHWC~holds.  If so, the
 RIC~automatically holds, and the solution limits
 into the solution to the unconstrained problem as $\mRat \uparrow

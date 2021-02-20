@@ -21,7 +21,7 @@ $\Pat < 1$                                        &  $\Pat < 1$ \\
 & \\
 & \\
 & \\
-$\cLev_{t+1} < \cLev_{t}$ & $\lim_{m_{t} \rightarrow \infty} \Ex_{t} [\cLev_{t+1}] < \cLev_{t}$ \\
+$\cLevBF_{t+1} < \cLevBF_{t}$ & $\lim_{m_{t} \rightarrow \infty} \Ex_{t} [\cLevBF_{t+1}] < \cLevBF_{t}$ \\
 & \\ \hline
 \multicolumn{2}{|c|}{Return Impatience Conditions} \\ \hline
 \multicolumn{1}{|c|}{Return Impatience Condition (\RIC)} & \multicolumn{1}{c|}{Weak \RIC~(\WRIC)} \\ \hline
@@ -35,20 +35,20 @@ $\Pat/\Rfree < 1$                                          & $\pZero^{1/\CRRA}\P
 $\cFunc^{\prime}(m) = 1-\Pat/\Rfree < 1$              & $\cFunc^{\prime}(m) < 1-\pZero^{1/\CRRA}\Pat/\Rfree < 1$ \\
 & \\ \hline
 \multicolumn{2}{|c|}{Growth Impatience Conditions} \\ \hline
-\multicolumn{1}{|c|}{\PFGIC} & \multicolumn{1}{c|}{\GIC} \\ \hline
+\multicolumn{1}{|c|}{\GICAbs} & \multicolumn{1}{c|}{\GICNrm} \\ \hline
 $\Pat/\PGro < 1$                                         & $\Pat\Ex[\pShk^{-1}]/\PGro < 1 $ \\
-\multirow{4}{75mm}{\thead{Guarantees that for an unconstrained \\ consumer, the ratio of consumption to \\ permanent income will fall over time.  For ~~~\\ a constrained consumer, guarantees the \\ constraint will eventually be binding.}} &
-\multirow{4}{75mm}{\thead{By Jensen's inequality, stronger than \\the \PFGIC. \\  Ensures consumers will not \\ expect to accumulate $\mRat$ unboundedly.}} \\
+\multirow{4}{75mm}{\thead{For an unconstrained PF consumer, the \\ ratio of $\cLevBF$ to $\pLevBF$ will fall over time.  For \\ constrained, guarantees the constraint \\ eventually binds. Guarantees \\ ~~~~~~$\lim_{\mRat_{t}\uparrow\infty} \Ex_{t}[\pShk_{t+1}\mRat_{t+1}/\mRat_{t}] = \PatPGro$}} &
+\multirow{4}{75mm}{\thead{By Jensen's inequality stronger than \GICAbs \\  Ensures consumers will not expect to \\ accumulate $\mRat$ unboundedly.}} \\
 & \\
 & \\
 & \\
 & $\lim_{\mRat_{t} \rightarrow \infty} \Ex_{t}[\mRat_{t+1}/\mRat_{t}] = \PatPGroAdj $
  \\
-& \\ \hline
+&  \\ \hline
 \multicolumn{2}{|c|}{Finite Value of Autarky Conditions} \\ \hline
 \multicolumn{1}{|c|}{\PFFVAC} & \multicolumn{1}{c|}{\FVAC} \\ \hline
 $\beta \PGro^{1-\CRRA} < 1$                                                 & $\beta \PGro^{1-\CRRA}\Ex[\pshk^{1-\CRRA}] < 1$  \\
-equivalently $\Pat/\PGro  < (\Rfree/\PGro)^{1/\CRRA}$ & \\
+equivalently $\Pat  < \Rfree^{1/\CRRA}\PGro^{1-1/\CRRA}$ & \\
 \multirow{3}{75mm}{\thead{The discounted utility of constrained \\ consumers who spend their permanent \\ income each period should be finite.}} &
 \multirow{3}{75mm}{\thead{By Jensen's inequality, stronger than the \\ \PFFVAC~because for $\CRRA>1$ and \\ nondegenerate $\pShk$, $\Ex[\pShk^{1-\CRRA}] > 1$.} } \\
 & \\

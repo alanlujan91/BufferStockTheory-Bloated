@@ -1,0 +1,247 @@
+% -*- enable-local-variables: :all; -*-
+\input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
+\input{./econtexRoot}\input{\LaTeXInputs/econtex_onlyinsubfile}
+\onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+
+\begin{document}
+
+\hypertarget{ApndxMTargetIsStable}{}
+\section{Unique And Stable Target and Steady State Points}\label{sec:MTargetIsStable}
+
+\begin{theorem}
+  \label{thm:target} For a nondegenerate solution to the problem defined in section~\ref{subsec:Setup}, if the $\GICNrm$ \eqref{eq:GICNrm} holds, 
+  there exists a unique cash-on-hand-to-income ratio $\mTarg>0$ such that
+  \begin{equation}  
+    \Ex_t [{\mRat}_{t+1}/\mRat_t] = 1 \mbox{~if~} \mRat_t = \mTarg. 
+    \label{eq:mTarget}
+  \end{equation}
+  Moreover, $\mTarg$ is a point of stablity in the sense that
+  \begin{align}\label{eq:stability}
+    \forall {\mRat}_t\in(0,\mTarg),      \,\,& \Ex_t [{\mRat}_{t+1}] > {\mRat}_t  \\
+    \forall {\mRat}_t\in(\mTarg,\infty), \,\,& \Ex_t [{\mRat}_{t+1}] < {\mRat}_t. \notag
+  \end{align}
+
+\end{theorem}
+
+The elements of the proof are:
+\begin{itemize}
+\item Existence and continuity of $\Ex_t [{\mRat}_{t+1}/\mRat_t]$
+\item Existence of a point where $\Ex_t [{\mRat}_{t+1}/\mRat_t] = 1$
+\item $\Ex_t [{\mRat}_{t+1}]-\mRat_{t}$ is monotonically decreasing
+\end{itemize}
+
+\subsubsection{Existence and Continuity of $\Ex_t [{\mRat}_{t+1}/\mRat_t]$.}
+The consumption function exists because we have imposed the sufficient conditions (the $\WRIC$ and $\FVAC$; theorem~\ref{thm:contmap}).  (Indeed, Appendix~\ref{sec:CIsTwiceDifferentiable} shows that $\cFunc(\mRat)$ is not just continuous, but twice continuously differentiable.)
+
+Section~\ref{sec:cExists} shows that for all $t$, $\aRat_{t-1} = {\mRat}_{t-1} -  \cRat_{t-1} > 0$.  Since ${\mRat}_{t}= {\aRat}_{t-1} \Rnorm_{t} + \tShkAll_{t}$, even if $\tShkAll_{t}$ takes on its minimum value of 0, $\aRat_{t-1} \Rnorm_{t} > 0$, since both $\aRat_{t-1}$ and $\Rnorm_{t}$ are strictly positive.  With $\mRat_{t} > 0$, the ratio $\Ex_t [{\mRat}_{t+1}/\mRat_t]$ inherits continuity (and, for that matter, continuous differentiability) from the consumption function.
+
+
+\subsubsection{Existence of a point where $\Ex_t [{\mRat}_{t+1}/\mRat_t]=1$.}
+Paralleling the logic for $\cRat$ in section~\ref{subsec:LimitsAsmtToZero}: the ratio of $\Ex_{t}[\mRat_{t+1}]$ to $\mRat_{t}$ is unbounded as $\mRat_{t} \downarrow 0$ because $\lim_{\mRat_{t}\downarrow 0} \Ex_{t}[\mRat_{t+1}] > 0$.
+
+The limit as $\mRat_{t}$ goes to infinity is
+\begin{align}
+  \lim_{\mRat_{t} \uparrow \infty} \Ex_{t}[{\mRat}_{t+1}/\mRat_{t}]  & =   
+                                                                       \lim_{\mRat_{t} \uparrow \infty} 
+                                                                       \Ex_{t}\left[\frac{{\mathcal{\mathcal{R}}}_{t+1}\aFunc(\mRat_{t})+{\tShkAll}_{t+1}}{\mRat_{t}}\right] \notag 
+  \\  & = \Ex_{t}[(\Rfree/{\PGro}_{t+1})\PatR] \label{eq:emgro}
+  \\  & = \Ex_{t}[{\Pat}/{\PGro}_{t+1}] \notag
+  \\  & < 1 \notag
+\end{align}
+where the last two lines are merely a restatement of the \GICNrm~\eqref{eq:GICNrm}.
+
+
+
+The Intermediate Value Theorem says that if $\Ex_t [{\mRat}_{t+1}/\mRat_t]$ is continuous, and takes on values above and below 1, there must be at least one point at which it is equal to one.
+
+\subsubsection{$\Ex_t [{\mRat}_{t+1}] -\mRat_t$ is monotonically decreasing.}
+
+Now define \providecommand{\difFunc}{\pmb{\zeta}} $\difFunc(\mRat_t) \equiv 
+\Ex_t[\mRat_{t+1}] - \mRat_t$ and note that
+\begin{align}\label{eq:difRatioEquiv}
+  \difFunc(\mRat_t) < 0 &\leftrightarrow \Ex_t[{\mRat}_{t+1}/\mRat_t] < 1 
+                          \nonumber\\
+  \difFunc(\mRat_t) = 0 &\leftrightarrow \Ex_t[{\mRat}_{t+1}/\mRat_t] = 1\\
+  \difFunc(\mRat_t) > 0 &\leftrightarrow \Ex_t[{\mRat}_{t+1}/\mRat_t] > 
+                          1,\nonumber
+\end{align}
+so that $\difFunc(\mTarg)=0$. Our goal is to prove that $\difFunc(\bullet)$ is strictly 
+decreasing on $(0,\infty)$ using the fact that
+\begin{align}
+  \difFunc^{\prime}(\mRat_{t}) \equiv  \left( \frac{d}{d\mRat_{t}}\right) \difFunc(\mRat_t)  & = \Ex_{t}\left[
+                                                                                               \left( \frac{d}{d\mRat_{t}}\right) \left( 
+                                                                                               {\Rnorm}_{t+1}(\mRat_{t}-\cFunc(\mRat_{t}))+%
+                                                                                               {\tShkAll}_{t+1} - {\mRat}_t\right) \right] \label{eq:difFuncDecreases} \\
+                                                                                             & = \bar{\Rnorm}\left(1-\cFunc^{\prime}({\mRat}_t)\right) - 1.  \notag
+\end{align}
+
+Note that the statement of theorem~\ref{thm:target} did not require the {\RIC} to hold.  Now, we show that (given our other assumptions) $\difFunc^{\prime}(\mRat)$ is decreasing (but for different reasons) whether the {\RIC} holds or fails (\cncl{\RIC}).
+
+\textbf{If {\RIC} holds}. Equation~\eqref{eq:MinMPCDef} indicates that if the {\RIC} holds, then $\MinMPC >0$.  We show at the bottom of Section~\ref{sec:WRIC} that if the {\RIC} holds then $0 < \MinMPC < \cFunc^{\prime}(\mRat_{t}) < 1$ so that 
+\begin{align*}
+  \bar{\Rnorm}\left(1-\cFunc^{\prime}({\mRat}_t)\right) - 1 & <  \bar{\Rnorm}(1-\underbrace{(1-\PatR)}_{\MinMPC}) - 1  \\
+                                                            & = \bar{\Rnorm}\PatR - 1 \\
+                                                            & = \Ex_{t}\left[\frac{\Rfree}{\PGro \pShk}\frac{\Pat}{\Rfree}\right] - 1 \\
+                                                            & = \underbrace{\Ex_{t}\left[\frac{\Pat}{\PGro \pShk}\right]}_{= \PatPGroAdj} - 1 
+\end{align*}
+which is negative because the {\GICNrm} says $\PatPGroAdj < 1$.  
+
+\textbf{If {\RIC} fails.}
+Under \cncl{\RIC}, recall that $\lim_{\mRat \uparrow \infty} \cFunc^{\prime}(\mRat) = 0$.  Concavity of the consumption function means that $\cFunc^{\prime}$ is a decreasing function, so everywhere 
+\begin{align*}
+  \bar{\Rnorm}\left(1-\cFunc^{\prime}({\mRat}_t)\right) & < \bar{\Rnorm}
+\end{align*}
+which means that $\difFunc^{\prime}(\mRat_{t})$ from \eqref{eq:difFuncDecreases} is guaranteed to be negative if
+\begin{align}
+  \bar{\Rnorm} \equiv \Ex_{t}\left[\frac{\Rfree}{\PGro \pShk}\right] & < 1  \label{eq:RbarBelowOne}
+\end{align}
+But the combination of the {\GICNrm} holding and the {\RIC} failing can be written:
+\begin{align*}
+  \overbrace{\Ex_{t}\left[\frac{\Pat}{\PGro \pShk}\right]}^{\PatPGroAdj} & < 1 < \overbrace{\frac{\Pat}{\Rfree}}^{{\PatR}},
+\end{align*}
+and multiplying all three elements by $\Rfree/\Pat$ gives 
+\begin{align*}
+  \Ex_{t}\left[\frac{\Rfree}{\PGro \pShk}\right] & < \Rfree/\Pat < 1
+\end{align*}
+which satisfies our requirement in \eqref{eq:RbarBelowOne}.
+
+\begin{comment}
+\begin{align*}
+  \mBal_{t+1} & = \Ex_{t}[\mRat_{t+1}\pShk_{t+1}]
+                \\ & = (\Rfree/\PGro)\aFunc(\mRat_{t})+1
+\\   \mBal-(\Rfree/\PGro)\aFunc(\mBal) & = 1
+\\   \PGro/\Rfree & = \aFunc^{\prime}(\mBal)
+\end{align*}
+\end{comment}
+
+\begin{theorem}
+  \label{thm:balance} For a nondegenerate solution to the problem defined in section~\ref{subsec:Setup}, if the $\GICAbs$ \eqref{eq:GICNrm} holds, 
+  there exists a unique cash-on-hand-to-income ratio $\mBal>0$ such that
+  \begin{equation}  
+    \mBal_{t+1}/\mRat_{t} = 1 \mbox{~if~} \mRat_t = \mTarg. 
+    \label{eq:mBalance}
+  \end{equation}
+  Moreover, $\mBal$ satisfies
+  \begin{align}\label{eq:stabilityBal}
+    \forall \mRat_t\in(0,\mBal),      \,\,& \mBal_{t+1} > {\mRat}_t  \\
+    \forall \mRat_t\in(\mBal,\infty), \,\,& \mBal_{t+1} < {\mRat}_t. \notag
+  \end{align}
+
+\end{theorem}
+
+\begin{comment}
+\begin{align}
+  \Ex_{t}\left[\frac{\PGro_{t+1}\left((\Rfree/\PGro_{t+1})\aFunc(\mRat_{t})+{\tShkAll}_{t+1}\right)/\PGro}{\mRat_{t}}\right] & =\Ex_{t}\left[\frac{\left((\Rfree/\PGro)\aFunc(\mRat_{t})+\pShk_{t+1}{\tShkAll}_{t+1}\right)}{\mRat_{t}}\right]
+  \\ & =\left[\frac{\left((\Rfree/\PGro)\aFunc(\mRat_{t})+1\right)}{\mRat_{t}}\right]
+\end{align}
+\end{comment}
+
+The elements of the proof are:
+\begin{itemize}
+\item Existence and continuity of $\mBal_{t+1}/\mRat_t$
+\item Existence of a point where $\mBal_{t+1}/\mRat_t = 1$
+\item $\mBal_{t+1}-\mRat_{t}$ is monotonically decreasing
+\end{itemize}
+
+\subsubsection{Existence and Continuity of The Ratio}% of $\hat{\mRat}_{t+1}/\mRat_{t}$.}
+
+The consumption function exists because we have imposed the sufficient conditions (the $\WRIC$ and $\FVAC$; theorem~\ref{thm:contmap}).  %(Indeed, Appendix~\ref{sec:CIsTwiceDifferentiable} shows that $\cFunc(\mRat)$ is not just continuous, but twice continuously differentiable.)
+
+Section~\ref{sec:cExists} shows that for all $t$, $\aRat_{t-1} = {\mRat}_{t-1} -  \cRat_{t-1} > 0$.  Since ${\mRat}_{t}= {\aRat}_{t-1} \Rnorm_{t} + \tShkAll_{t}$, even if $\tShkAll_{t}$ takes on its minimum value of 0, $\aRat_{t-1} \Rnorm_{t} > 0$, since both $\aRat_{t-1}$ and $\Rnorm_{t}$ are strictly positive.  With $\mRat_{t} > 0$, the ratio $\hat{\mRat}_{t+1}/\mRat_t$ inherits continuity (and, for that matter, continuous differentiability) from the consumption function.
+
+
+\subsubsection{Existence of a stable point}
+
+Paralleling the logic for $\cRat$ in section~\ref{subsec:LimitsAsmtToZero}: the ratio of $\Ex_{t}[\mRat_{t+1}\pShk_{t+1}]$ to $\mRat_{t}$ is unbounded as $\mRat_{t} \downarrow 0$ because $\lim_{\mRat_{t}\downarrow 0} \Ex_{t}[\mRat_{t+1}\pShk_{t+1}] > 0$.
+
+The limit as $\mRat_{t}$ goes to infinity is
+\begin{align}
+  \lim_{\mRat_{t} \uparrow \infty} \hat{\mRat}_{t+1}/\mRat_{t}  & =   
+                                                                       \lim_{\mRat_{t} \uparrow \infty} 
+                                                                       \Ex_{t}\left[\frac{\PGro_{t+1}\left((\Rfree/\PGro_{t+1})\aFunc(\mRat_{t})+{\tShkAll}_{t+1}\right)/\PGro}{\mRat_{t}}\right] \notag 
+  \\   & =   \lim_{\mRat_{t} \uparrow \infty} \Ex_{t}\left[
+         \frac{(\Rfree/\PGro)\aFunc(\mRat_{t})+\pShk_{t+1}{\tShkAll}_{t+1}}{\mRat_{t}}
+         \right] \notag 
+  \\   & =   \lim_{\mRat_{t} \uparrow \infty} \left[
+         \frac{(\Rfree/\PGro)\aFunc(\mRat_{t})+1}{\mRat_{t}}
+         \right] \notag 
+  \\  & = (\Rfree/\PGro)\PatR \label{eq:emgro2}
+  \\  & = \PatPGro \notag
+  \\  & < 1 \notag
+\end{align}
+where the last two lines are merely a restatement of the \GICAbs~\eqref{eq:GICAbs}.
+
+The Intermediate Value Theorem says that if $\hat{\mRat}_{t+1}/\mRat_t$ is continuous, and takes on values above and below 1, there must be at least one point at which it is equal to one.
+
+\subsubsection{$\Ex_{t}[\mRat_{t+1}\pShk_{t+1}] -\mRat_t$ is monotonically decreasing.}
+
+Now define \providecommand{\difFunc}{\pmb{\zeta}} $\difFunc(\mRat_t) \equiv 
+\Ex_t[\mRat_{t+1}\pShk_{t+1}] - \mRat_t$ and note that
+\begin{align}\label{eq:difRatioEquiv}
+  \difFunc(\mRat_t) < 0 &\leftrightarrow \hat{\mRat}_{t+1}/\mRat_t < 1 
+                          \nonumber\\
+  \difFunc(\mRat_t) = 0 &\leftrightarrow \hat{\mRat}_{t+1}/\mRat_t = 1\\
+  \difFunc(\mRat_t) > 0 &\leftrightarrow \hat{\mRat}_{t+1}/\mRat_t > 
+                          1,\nonumber
+\end{align}
+so that $\difFunc(\mTarg)=0$. Our goal is to prove that $\difFunc(\bullet)$ is strictly 
+decreasing on $(0,\infty)$ using the fact that
+\begin{align}
+  \difFunc^{\prime}(\mRat_{t}) \equiv  \left( \frac{d}{d\mRat_{t}}\right) \difFunc(\mRat_t)  & = \Ex_{t}\left[
+                                                                                               \left( \frac{d}{d\mRat_{t}}\right) \left( 
+                                                                                               {\Rnorm}(\mRat_{t}-\cFunc(\mRat_{t}))+%
+                                                                                               {\pShk}_{t+1}{\tShkAll}_{t+1} - {\mRat}_t\right) \right] \label{eq:difFuncDecreases} \\
+                                                                                             & = (\Rfree/\PGro)\left(1-\cFunc^{\prime}({\mRat}_t)\right) - 1.  \notag
+\end{align}
+
+Note that the statement of theorem~\ref{thm:balance} did not require the {\RIC} to hold.  Now, we show that (given our other assumptions) $\difFunc^{\prime}(\mRat)$ is decreasing (but for different reasons) whether the {\RIC} holds or fails (\cncl{\RIC}).
+
+\textbf{If {\RIC} holds}. Equation~\eqref{eq:MinMPCDef} indicates that if the {\RIC} holds, then $\MinMPC >0$.  We show at the bottom of Section~\ref{sec:WRIC} that if the {\RIC} holds then $0 < \MinMPC < \cFunc^{\prime}(\mRat_{t}) < 1$ so that 
+\begin{align*}
+  \Rnorm\left(1-\cFunc^{\prime}({\mRat}_t)\right) - 1 & <  \Rnorm(1-\underbrace{(1-\PatR)}_{\MinMPC}) - 1  \\
+                                                            & = (\Rfree/\PGro)\PatR - 1 
+\end{align*}
+which is negative because the {\GICAbs} says $\PatPGro < 1$.  
+
+\textbf{If {\RIC} fails.}
+Under \cncl{\RIC}, recall that $\lim_{\mRat \uparrow \infty} \cFunc^{\prime}(\mRat) = 0$.  Concavity of the consumption function means that $\cFunc^{\prime}$ is a decreasing function, so everywhere 
+\begin{align*}
+  \Rnorm\left(1-\cFunc^{\prime}({\mRat}_t)\right) & < \Rnorm
+\end{align*}
+which means that $\difFunc^{\prime}(\mRat_{t})$ from \eqref{eq:difFuncDecreases} is guaranteed to be negative if
+\begin{align}
+  \Rnorm \equiv (\Rfree/\PGro) & < 1  \label{eq:FHWCFails}
+\end{align}
+
+But we showed in section~\ref{sec:} that the only circumstances under which the problem has a nondegenerate solution while the {\RIC} fails were ones where the {\FHWC} also fails (that is, \eqref{eq:FHWCFails} holds).
+
+
+Figure~\ref{fig:cGroTargetFig} plots $\Ex_{t}[\cLevBF_{t+1}/\cLevBF_{t}]$ rather than $\Ex_{t}[\cLevBF_{t+1}/\cLevBF_{t}]$, and due to the model's nonlinearities the values of $\mRat$ at which the expected growth rate of $\cLevBF$ matches $\PGro$ is very slightly different from the $\mRat$ at which the growth rate at which expected growth of $\mLevBF$ is $\PGro$.  But to first order they are the same:
+  \begin{align*}
+ \Ex_{t}[\cRat_{t+1}\pShk_{t+1}] & = \cRat_{t} \label{eq:balgrostableC}.
+\\ \Ex_{t}[\cFunc(\mRat_{t+1})\pShk_{t+1}] & = \cRat_{t} 
+    \\ \Ex_{t}[\left(\cFunc(\mRat_{t})+\cFunc^{\prime}(\mRat_{t})(\mRat_{t+1}-\mRat_{t})\right)\pShk_{t+1}] & = \cFunc(\mRat_{t})
+    \\ \Ex_{t}[\left(\cFunc^{\prime}(\mRat_{t})(\mRat_{t+1}-\mRat_{t})\right)\pShk_{t+1}] & = 0
+    \\ \Ex_{t}[\mRat_{t+1}\pShk_{t+1}] & = \mRat_{t}
+\end{align*}
+
+
+\end{document}
+
+% Local Variables:
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "Biber"  TeX-command-list)) TeX-command-list))
+% eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex ../LaTeX/%s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") t)
+% eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex ../LaTeX/%s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") t)
+% TeX-PDF-mode: t
+% TeX-file-line-error: t
+% TeX-debug-warnings: t
+% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=../LaTeX %S%(PDFout)"))
+% TeX-source-correlate-mode: t
+% TeX-parse-self: t
+% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n ../LaTeX/%o %b"))))))
+% TeX-parse-all-errors: t
+% End:
