@@ -206,18 +206,20 @@ But we showed in section~\ref{subsec:UncertaintyModifiedConditions} that the onl
 
 \subsection{Proof of Lemma}
 
+\begin{comment}
 \subsection{Comment}
 
 
-Figure~\ref{fig:cGroTargetFig} plots $\Ex_{t}[\cLevBF_{t+1}/\cLevBF_{t}]$ rather than $\Ex_{t}[\cLevBF_{t+1}/\cLevBF_{t}]$, and due to the model's nonlinearities the values of $\mRat$ at which the expected growth rate of $\cLevBF$ matches $\PGro$ is very slightly different from the $\mRat$ at which the growth rate at which expected growth of $\mLevBF$ is $\PGro$.  But to first order they are the same:
+Due to the model's nonlinearities the values of $\mRat$ at which the expected growth rate of $\cLevBF$ matches $\PGro$ is very slightly different from the $\mRat$ at which the growth rate at which expected growth of $\mLevBF$ is $\PGro$.  Defining $\grave{\mRat}$ as the $\mRat$ at which $\Ex_{t}[\cRatBF_{t+1}/\cRatBF_{t}]=\PGro$, we can show that to first order $\grave{\mRat} \approx \check{\mRat}.$
 \begin{align*}
-  \Ex_{t}[\cRat_{t+1}\pShk_{t+1}] & = \cRat_{t} \label{eq:balgrostableC}.
-  \\ \Ex_{t}[\cFunc(\mRat_{t+1})\pShk_{t+1}] & = \cRat_{t} 
-  \\ \Ex_{t}[\left(\cFunc(\mRat_{t})+\cFunc^{\prime}(\mRat_{t})(\mRat_{t+1}-\mRat_{t})\right)\pShk_{t+1}] & = \cFunc(\mRat_{t})
-  \\ \Ex_{t}[\left(\cFunc^{\prime}(\mRat_{t})(\mRat_{t+1}-\mRat_{t})\right)\pShk_{t+1}] & = 0
-  \\ \Ex_{t}[\mRat_{t+1}\pShk_{t+1}] & = \mRat_{t}
+  \Ex_{t}[\cFunc(\mRat_{t+1})\pShk_{t+1}] & = \cFunc(\mRat_{t}) \label{eq:balgrostableC}.
+%  \\ \Ex_{t}[\cFunc(\mRat_{t+1})\pShk_{t+1}] & = \cFunc(\mRat_{t}) 
+  \\ \Ex_{t}[\left(\cFunc(\grave{\mRat})+\cFunc^{\prime}(\grave{\mRat})(\mRat_{t+1}-\grave{\mRat})\right)\pShk_{t+1}] & \approx \cFunc(\grave{\mRat})
+  \\ \Ex_{t}[\left(\cFunc^{\prime}(\grave{\mRat})(\mRat_{t+1}-\grave{\mRat})\right)\pShk_{t+1}] & \approx 0
+  \\ \Ex_{t}[\mRat_{t+1}] & \approx \grave{\mRat} 
 \end{align*}
-
+but at $\mRat=\check{\mRat}$, $\Ex_{t}[\mRat_{t+1}]=\check{\mRat}\approx\grave{\mRat}$.
+\end{comment}
 
 \end{document}
 
