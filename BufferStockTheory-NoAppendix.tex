@@ -1344,6 +1344,12 @@ Because the equations defining target and pseudo-steady-state $\mRat$, ~\eqref{e
 
 An illuminating exception is exhibited in figure~\ref{fig:GICNrmFailsButGICRawHolds}, which modifies the baseline parameter values by quadrupling the variance of the permanent shocks, enough to cause failure of the \GICNrm; now there is no target wealth level $\Trg{\mRat}$ (consumption remains everywhere below the level that would keep expected $\mRat$ constant).  
 
+
+\renewcommand{\figFile}{GICNrmFailsButGICRawHolds}
+\hypertarget{\figFile}{}
+\input{\FigDir/GICNrmFailsButGICRawHolds}
+
+
 The pseudo-steady-state can exist because it turns off realizations of the permanent shock.  But an aggregate balanced growth equilibrim can exist even when realizations of the permanent shock are implemented exactly as specified in the model.  The key insight can be understood by considering the evolution of an economy that starts, at date $t$, with the entire population at $\mRat_{t}=\StE{\mRat}$, but then evolves according to the model's correct assumed dynamics between $t$ and $t+1$.  Equation~\eqref{eq:balgrostable} will still hold for this economy, so for this first period, at least, the economy will exhibit balanced growth: the growth factor for aggregate $\mRatBF$ will match the growth factor for permanent income $\PGro$.  It is true that there will be people for whom $\bRat_{t+1}=\aRat_{t}\Rfree/(\PGro\pShk_{t+1})$ is boosted by a small draw of $\pShk_{t+1}$.  But their contribution to the aggregate variable is given by $\bRatBF_{t+1}=\bRat_{t+1}\pShk_{t+1}$, so their $\bRatBF_{t+1}$ reweighted by an amount that exactly undoes the boosting caused by earlier normalization.
 
 The surprising consequence is that, if the \GICAbs holds but the \GICNrm fails, it is possible to construct an aggregate economy composed of consumers all of whom have target wealth of $\Trg{\mRat}=\infty$, but in which nevertheless the aggregate economy exhibits balanced growth with a finite ratio of aggregate wealth to income.
