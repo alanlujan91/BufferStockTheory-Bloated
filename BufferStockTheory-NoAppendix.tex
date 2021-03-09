@@ -1013,13 +1013,12 @@ main properties of the converged consumption rule when the \RIC, \GICNrm,
 and \FHWC~all hold.\footnote{These figures reflect the converged rule
   corresponding to the parameter values indicated in
   Table~\ref{table:Calibration}.}  Figure~\ref{fig:cGroTargetFig}
-shows the expected consumption growth factor
-$\Ex_{t}[\cLevBF_{t+1}/\cLevBF_{t}]$ for a consumer behaving according to
-the converged consumption rule, while Figures~\ref{fig:mpclimits}a,b
-illustrate theoretical bounds for the consumption function and the
+shows the expected growth factors for the levels of consumption and market resources,
+$\Ex_{t}[\cLevBF_{t+1}/\cLevBF_{t}]$ and $\Ex_{t}[\mLevBF_{t+1}/\mLevBF_{t}]$, for a consumer behaving according to the converged consumption rule, while Figures~\ref{fig:mpclimits} and ~\ref{fig:cFuncBounds} illustrate theoretical bounds for the consumption function and the
 marginal propensity to consume.
 
-Five features of behavior are captured, or suggested, by the
+%%% Five
+Three features of behavior are captured, or suggested, by the
 figures. First, as $\mRat_{t} \uparrow \infty$ the expected
 consumption growth factor goes to ${\Pat}$, indicated by the lower
 bound in Figure \ref{fig:cGroTargetFig}, and the marginal propensity
@@ -1027,12 +1026,12 @@ to consume approaches $\MinMPC=(1-\PatR)$
 (Figure~\ref{fig:mpclimits}), the same as the perfect foresight MPC.  Second, as $\mRat_t \downarrow 0$ the consumption
 growth factor approaches $\infty$ (Figure~\ref{fig:cGroTargetFig}) and
 the MPC approaches $\MaxMPC=(1-\pZero^{1/\CRRA}\PatR)$ (Figure~\ref{fig:mpclimits}).  Third,
-while there is a value $\mRat = \hat{\mRat}$ at which the expected growth rate of $\mLevBF$ matches the expected growth rate of permanent income $\PGro$, the expected growth rate of consumption at $\mRat = \hat{\mRat}$ is lower than $\PGro$.  Thus, at the individual level, this model does not have a `balanced growth' equilibrium in which all model variables are expected to grow at the same rate.  
+there is a value $\mRat = \hat{\mRat}$ at which the expected growth rate of $\mLevBF$ matches the expected growth rate of permanent income $\PGro$, and a different (lower) value where the expected growth rate of consumption at $\mRat = \hat{\mRat}$ is lower than $\PGro$.  Thus, at the individual level, this model does not have a `balanced growth' equilibrium in which all model variables are expected to grow at the same rate.  
 \begin{comment}
 Third (Figure \ref{fig:cGroTargetFig}), there are two special values of $\mRat$, which
 we will call the `individual balanced growth' point $\mBal$ because it is the point where expected consumption growth and expected permanent income growth are balanced, and the `individual target' $\mTarg$  such that if $\mRat_t = \mTarg$ then $\Ex_t [{\mRat}_{t+1}] = \mRat_t$.  %As indicated by the arrows of motion on the $\Ex_{t}[\cLevBF_{t+1}/\cLevBF_{t}]$ curve, the model's dynamics are `stable' around this target in the sense that if $\mRat_{t} < \mTarg$ then $\mRat$ will rise (in expectation), while if $\mRat_{t} > \mTarg$, it will fall (in expectation).Fourth (Figure \ref{fig:cGroTargetFig}), at the market resources target $\mTarg$, the expected rate of growth of consumption is slightly less than the expected growth rate
 of permanent noncapital income.  (The individual consumer does not expect `balanced growth' at $\mTarg$).  
-\end{comment}
+
 The final proposition suggested by
 Figure~\ref{fig:cGroTargetFig} is that the expected consumption growth
 factor is declining in the level of the cash-on-hand ratio
@@ -1046,6 +1045,7 @@ present.\footnote{Throughout the remaining analysis I make a final
   $\mathring{\cFunc}(\mRat)$.  It does not strictly follow that the limiting
   function $\mathring{\cFunc}(\mRat)$ is twice continuously differentiable, but I
   will assume that it is.}
+\end{comment}
 
 \renewcommand{\figFile}{cGroTargetFig}
 \hypertarget{\figFile}{}
@@ -1201,7 +1201,7 @@ where the second-to-last line follows because  $\lim_{\mRat_{t} \downarrow 0} \E
 
 \subsection{Unique `Stable' Points}
 
-Two theorems, whose proofs are sketched here and detailed in an appendix, articulate alternative (but closely related) definitions of points of stability for the model.
+Two theorems, whose proofs are sketched here and detailed in an appendix, articulate alternative (but closely related) stability criteria for the model.
 
 \label{subsec:onetarget}
 \hypertarget{TheoremTarget}{}
@@ -1209,11 +1209,11 @@ Two theorems, whose proofs are sketched here and detailed in an appendix, articu
 % We now prove the existence of a target cash-on-hand-to-income ratio $\mTarg$ towards which $\mRat$ be expected to move.
 
 \subsubsection{`Individual Target Wealth'} \label{subsubsec:mTarget}
-The most obvious definition of a `stable' point is a value of the state variable $\mTarg$ such that if $\mRat_{t}=\mTarg$, then $\Ex_{t}[\mRat_{t+1}]=\mRat_{t}$.  Existence of such a target turns out to require the {\GICNrm} condition.
+One definition of a `stable' point is an $\mTarg$ such that if $\mRat_{t}=\mTarg$, then $\Ex_{t}[\mRat_{t+1}]=\mRat_{t}$.  Existence of such a target turns out to require the {\GICNrm} condition.
 
 \begin{verbatimwrite}{\EqDir/TheoremMTargetIsStable}
 \begin{theorem}\label{thm:target}
-  For the nondegenerate solution to the problem defined in section~\ref{subsec:Setup} when {\FVAC}, {\WRIC}, and {\GICNrm} all hold, there exists a unique cash-on-hand-to-income ratio $\mTarg>0$ such that
+  For the nondegenerate solution to the problem defined in section~\ref{subsec:Setup} when {\FVAC}, {\WRIC}, and {\GICNrm} all hold, there exists a unique cash-on-hand-to-permanent-income ratio $\mTarg>0$ such that
   \begin{equation}  
     \Ex_t [{\mRat}_{t+1}/\mRat_t] = 1 \mbox{~if~} \mRat_t = \mTarg. 
     \label{eq:mTarget}
@@ -1232,7 +1232,7 @@ The most obvious definition of a `stable' point is a value of the state variable
  Since $\mRat_{t+1}=(\mRat_{t}-\cFunc(\mRat_{t}))\Rnorm_{t+1}+\tShk_{t+1}$, the implicit equation for $\mTarg$ is
  \begin{align}
   \Ex_{t}[(\mTarg-\cFunc(\mTarg))\Rnorm_{t+1}+\tShk_{t+1}] & = \mTarg \label{eq:mTargImplicit}
-\\   (\mTarg-\cFunc(\mTarg))\underbrace{\Rnorm\Ex_{t}[\pShk^{-1}]}_{\equiv \bar{\Rnorm}}+1 & = \mTarg \notag
+\\   (\mTarg-\cFunc(\mTarg))\underbrace{\Rnorm\Ex_{t}[\pShk^{-1}]}_{\equiv \bar{\Rnorm}}+1 & = \mTarg \notag.
  \end{align}
  
 
@@ -1258,9 +1258,15 @@ The most obvious definition of a `stable' point is a value of the state variable
  which is the {\GICNrm}; thus, if a stable point exists, it must satisfy the {\GICNrm}.  (The appendix proves that if the {\GICNrm} is satisfied, such a point must exist, and be globally stable).
 \end{comment}
 
- \hypertarget{The-Individual-Steady-State}{}
- \subsubsection{The `Individual Pseudo-Steady-State'}\label{subsubsec:mSteadyState}
-A traditional question in macroeconomic growth models is whether there is a `balanced growth' equilibrium in which aggregate variables (income, consumption, market resources) all grow forever at the same rate.  As an input to our small-open-economy analysis below (in section~\ref{subsec:cGroEqPGroQ}) it will be useful to derive here the conditions under which an $\mRat$ will exist at which an individual consumer expects their own individual market resources to grow at the same rate as their permanent income: 
+ \hypertarget{Collective-Stability}{}
+ \subsubsection{Collective Stability and the Pseudo-Steady-State}\label{subsubsec:mSteadyState}
+ A traditional question in macroeconomic models is whether there is a `balanced growth' equilibrium in which aggregate variables (income, consumption, market resources) all grow forever at the same rate.  For the model here, we have already seen in Figure~\ref{fig:cGroTargetFig} that there is no single $\mRat$ for which $\Ex_{t}[\Delta \mRatBF_{t+1}]/\mRatBF_{t} = \Ex_{t}[\Delta \cLevBF_{t+1}]/\cLevBF_{t} = \PGro$ for an individual consumer.  Nevertheless, analysis below will show that economies populated by collections of such consumers can exhibit balanced growth in the aggregate.
+
+ As an input to that analysis, we show here that if the {\GIC} holds, the problem will have a point of what we call `collective stability,' by which we mean that there is some $\hat{\mRat}$ such that, for all $\mRat_{t}>\hat{\mRat}$, $\Ex_{t}[\Delta \mRatBF_{t+1}/\mRatBF_{t}] < \PGro$.  (`Collective' is meant to capture the fact that calculating the expectation of the levels of future $\mLevBF$ and $\pLevBF$ before dividing $\mLevBF$ by $\pLevBF$ is akin to examining aggregate values in a population).
+
+ \hypertarget{balgrostable}{}
+
+ The critical $\hat{\mRat}$ will be the value at which $\mRatBF$ growth matches $\PGro$:
   \begin{align}
   \Ex_{t}[\mLevBF_{t+1}]/\mLevBF_{t} & =\Ex_{t}[\pLevBF_{t+1}]/\pLevBF_{t} \notag
     \\  \Ex_{t}[\mRat_{t+1}\PGro\pShk_{t+1}\pLevBF_{t}]/(\mRat_{t}\pLevBF_{t}) & =\Ex_{t}[\pLevBF_{t}\PGro\pShk_{t+1}]/\pLevBF_{t} \notag
@@ -1268,7 +1274,8 @@ A traditional question in macroeconomic growth models is whether there is a `bal
   \end{align}
 
 \hypertarget{balgrostableSolve}{}
-If some value $\mRat_{t}=\hat{\mRat}$ exists for which equation~\eqref{eq:balgrostable} holds, for reasons articulated below we will call that point the `individual pseudo-steady-state' (alternatively the `$\mRatBF$-balanced-growth' point):
+
+
 \begin{align}
   \Ex_{t}\left[(\mBal-\mathring{\cFunc}(\mBal))\overbrace{\Rfree/\PGro}^{\Rnorm}+\pShk_{t+1}\tShk_{t+1}\right] & = \mBal \notag
 \\  (\mBal-\mathring{\cFunc}(\mBal))\Rnorm+ 1 & = \mBal \label{eq:balgrostableSolve}.  
@@ -1279,19 +1286,25 @@ If some value $\mRat_{t}=\hat{\mRat}$ exists for which equation~\eqref{eq:balgro
 % \\   \frac{\nu\aFunc(\hat{\mRat})}{\left(1-\aFunc^{\prime}(\Rnorm+\nu)\right)} & \approx \epsilon
 \end{align}
 
-The only difference between \eqref{eq:balgrostableSolve} and \eqref{eq:mTargImplicit} is the substitution of $\Rnorm$ for $\bar{\Rnorm}$.  
+The only difference between \eqref{eq:balgrostableSolve} and \eqref{eq:mTargImplicit} is the substitution of $\Rnorm$ for $\bar{\Rnorm}$.
+
+  We will refer to $\hat{\mRat}$ as the problem's Pseudo-Steady-State, a term motivated by the fact that an economy composed of consumers all of whom had $\mRat_{t}=\hat{\mRat}$, \textit{would} exhibit balanced growth if all consumers happened to continually draw permanent and transitory shocks equal to their expected values of 1.0 forever.\footnote{    \begin{align*}
+      \Ex_{t}[\mRat_{t+1}/\mRat_{t}|\pShk_{t+1}=\tShk_{t+1}=1] = \PGro \left(\hat{\mRat}-\cFunc(\hat{\mRat})\Rnorm + 1 \right)/\mRat = \PGro
+    \end{align*}
+}
+
 
 %Note that since $\PGroAdj < \PGro$, $\mathring{\cFunc}^{\prime}(\mTarg) > \mathring{\cFunc}^{\prime}(\mBal)$ which implies that $\mTarg < \mBal$.
 
 Theorem~\ref{thm:balance}~formally states the relevant proposition.
   \begin{verbatimwrite}{\EqDir/TheoremMSSBalExists}
 \begin{theorem}  \label{thm:balance} \label{thm:MSSBalExists}
- For the nondegenerate solution to the problem defined in section~\ref{subsec:Setup} when {\FVAC}, {\WRIC}, and {\GIC} all hold, there exists a unique `$\mRat$-balanced-growth' cash-on-hand-to-income ratio $\mBal>0$ such that
+ For the nondegenerate solution to the problem defined in section~\ref{subsec:Setup} when {\FVAC}, {\WRIC}, and {\GIC} all hold, there exists a unique pseudo-steady-state cash-on-hand-to-income ratio $\mBal>0$ such that
   \begin{equation}  
     \Ex_t [\pShk_{t+1}{\mRat}_{t+1}/\mRat_t] = 1 \mbox{~if~} \mRat_t = \mBal. 
     \label{eq:mTarget}
   \end{equation}
-  Moreover, $\mBal$ is a point of `$\mRatBF$-growth stablity' in the sense that
+  Moreover, $\mBal$ is a point of stability in the sense that
   \begin{align}\label{eq:stability}
     \forall {\mRat}_t\in(0,\mBal),      \,\,& \Ex_{t}[\mLevBF_{t+1}]/\mLevBF_{t} > \PGro \\
     \forall {\mRat}_t\in(\mBal,\infty), \,\,& \Ex_{t}[\mLevBF_{t+1}]/\mLevBF_{t} < \PGro. \notag
@@ -1322,10 +1335,24 @@ The proofs of the two theorems are almost completely parallel; to save space, th
 %\footnote{The theorems' arguments rely on the continuous differentiability of $\mathring{\cFunc}(\mRat)$, so they do not directly go through for a problem in which the existence of liquidity constraints can lead to discrete changes in the slope $\mathring{\cFunc}^{\prime}(\mRat)$ at particular values of $\mRat$. But we can use the fact that the constrained model is the limit of the baseline model as $\pZero \downarrow 0$ to derive the unique target cash level even in the constrained model.}
 
 
-If $\mBal$ exists, a weak sense in which it is a point of stability is that for an economy that started in period $t$ with all consumers exactly at $\mRat_{t}=\mBal$, the ratio of aggregate market assets $\MLevBF_{t+1}= \int \mLevBF_{t+1}$ to aggregate permanent income $\PLevBF_{t+1}= \int \pLevBF_{t+1}$ would be $\MLevBF_{t+1}/\PLevBF_{t+1}=\mBal$ so that, between those two periods, the aggregate economy would exhibit balanced growth (stability of the $\MLevBF/\PLevBF$ ratio).\footnote{This does not require all consumers to have the same $\pLevBF.$  The unlimited size of the population means that the expectation in \eqref{eq:balgrostable} holds for the set of consumers at each value of $\pLevBF$ represented in the population, and so holds for the entire population.}  After that, however, the nondegenerate distribution across values of $\mRatBF_{t+1}$ and $\pLevBF_{t+1}$ would lead the aggregate ratio to drift away from $\mBal.$
+%If $\mBal$ exists, a weak sense in which it is a point of stability is that for an economy that started in period $t$ with all consumers exactly at $\mRat_{t}=\mBal$, the ratio of aggregate market assets $\MLevBF_{t+1}= \int \mLevBF_{t+1}$ to aggregate permanent income $\PLevBF_{t+1}= \int \pLevBF_{t+1}$ would be $\MLevBF_{t+1}/\PLevBF_{t+1}=\mBal$ so that, between those two periods, the aggregate economy would exhibit balanced growth (stability of the $\MLevBF/\PLevBF$ ratio).\footnote{This does not require all consumers to have the same $\pLevBF.$  The unlimited size of the population means that the expectation in \eqref{eq:balgrostable} holds for the set of consumers at each value of $\pLevBF$ represented in the population, and so holds for the entire population.}  After that, however, the nondegenerate distribution across values of $\mRatBF_{t+1}$ and $\pLevBF_{t+1}$ would lead the aggregate ratio to drift away from $\mBal.$
 
-A glance at figure~\ref{fig:cGroTargetFig} will confirm that another $\mRat$ will be the point of `$\cRatBF$-balanced-growth.'  And yet another point would result in an expected growth rate $\PGro$ for assets $\aRatBF$ or bank balances $\bRatBF$.  But the $\mRatBF$-balanced-growth point is special in one important sense, which justifies highlighting it as at least a `pseudo' steady state:  If after the date $t$ at which all consumers had $\mLev_{t}=\mBal$, all consumers always drew exactly the expected values of the idiosyncratic shocks ($\pShk_{i,t+n}=\tShk_{j,t+n}=1~\forall~i,j$ and for all $n>0$), such an economy \textit{would} exhibit perpetual `balanced growth': $\MLevBF_{t+n}/\PLevBF_{t+n} = \mBal$ for all $n>0$.  (See below for a discussion of balanced growth in an aggregate economy).
+%A glance at figure~\ref{fig:cGroTargetFig} will confirm that another $\mRat$ will be the point of `$\cRatBF$-balanced-growth.'  And yet another point would result in an expected growth rate $\PGro$ for assets $\aRatBF$ or bank balances $\bRatBF$.  But the $\mRatBF$-balanced-growth point is special in one important sense, which justifies highlighting it as at least a `pseudo' steady state:  If after the date $t$ at which all consumers had $\mLev_{t}=\mBal$, all consumers always drew exactly the expected values of the idiosyncratic shocks ($\pShk_{i,t+n}=\tShk_{j,t+n}=1~\forall~i,j$ and for all $n>0$), such an economy \textit{would} exhibit perpetual `balanced growth': $\MLevBF_{t+n}/\PLevBF_{t+n} = \mBal$ for all $n>0$.  (See below for a discussion of balanced growth in an aggregate economy).
 
+\subsubsection{Example Where There Is A Pseudo-Steady-State But No Target}
+
+Because the equations defining target and pseudo-steady-state $\mRat$, ~\eqref{eq:mTargImplicit} and ~\eqref{eq:balgrostable}, differ only by substitution of $\Rnorm$ for $\bar{\Rnorm}=\Rnorm \Ex[\pShk^{-1}]$, if there are no permanent shocks ($\pShk \equiv 1$), the conditions are identical.  For many parameterizations (e.g., under the baseline parameter values used for constructing~\ref{fig:cGroTarget}), $\Trg{\mRat}$ and $\StE{\mRat}$ will not differ much.
+
+An illuminating exception is exhibited in figure~\ref{fig:GICNrmFailsButGICRawHolds}, which modifies the baseline parameter values by quadrupling the variance of the permanent shocks, enough to cause failure of the \GICNrm; now there is no target wealth level $\Trg{\mRat}$ (consumption remains everywhere below the level that would keep expected $\mRat$ constant).  
+
+The pseudo-steady-state can exist because it turns off realizations of the permanent shock.  But an aggregate balanced growth equilibrim can exist even when realizations of the permanent shock are implemented exactly as specified in the model.  The key insight can be understood by considering the evolution of an economy that starts, at date $t$, with the entire population at $\mRat_{t}=\StE{\mRat}$, but then evolves according to the model's correct assumed dynamics between $t$ and $t+1$.  Equation~\eqref{eq:balgrostable} will still hold for this economy, so for this first period, at least, the economy will exhibit balanced growth: the growth factor for aggregate $\mRatBF$ will match the growth factor for permanent income $\PGro$.  It is true that there will be people for whom $\bRat_{t+1}=\aRat_{t}\Rfree/(\PGro\pShk_{t+1})$ is boosted by a small draw of $\pShk_{t+1}$.  But their contribution to the aggregate variable is given by $\bRatBF_{t+1}=\bRat_{t+1}\pShk_{t+1}$, so their $\bRatBF_{t+1}$ reweighted by an amount that exactly undoes the boosting caused by earlier normalization.
+
+The surprising consequence is that, if the \GICAbs holds but the \GICNrm fails, it is possible to construct an aggregate economy composed of consumers all of whom have target wealth of $\Trg{\mRat}=\infty$, but in which nevertheless the aggregate economy exhibits balanced growth with a finite ratio of aggregate wealth to income.
+
+We turn now to a more explicit examination of aggregation.
+
+
+\begin{comment}
 \subsubsection{Example Where There Is A Solution Without A Target}\label{subsubsec:FVACnotGIC}
 
 To build intuition, it is useful to describe an example in which a nondegenerate solution exists but a target $\mTarg$ does not.  An example that satisfies the combination \FVAC~and~\cncl{\GICNrm} is depicted in Figure \ref{fig:FVACnotGIC}.  The consumption function is shown along with the $\Ex_{t}[\Delta \mRat_{t+1}]=0$ locus that identifies the `sustainable' level of spending at which $\mRat$ is expected to remain unchanged.  The diagram suggests a fact that is confirmed by deeper analysis: Under the depicted configuration of parameter values (see the code for details), the consumption function never reaches the $\Ex_{t}[\Delta \mRat_{t+1}]=0$ locus; indeed, when the \RIC~holds but the \GICNrm~does not, the consumption function's limiting slope $(1-\Pat/\Rfree)$ is shallower than that of the sustainable consumption locus $(1-\PGroAdj/\Rfree)$,\footnote{This is because $\Ex_{t}[\mRat_{t+1}]=\Ex_{t}[\Rnorm_{t+1}(\mRat_{t}-\cRat_{t})]+1$; solve $\mRat = (\mRat - \cRat)\Rnorm \InvEpShkInv^{-1}+1$ for $\cRat$ and differentiate.}  so the gap between the two \textit{increases} with $\mRat$ in the limit.  Although a nondegenerate consumption function exists, a target level of $\mRat$ does not (or, rather, the target is $\mRat=\infty$), because no matter how wealthy a consumer becomes, the consumer will always spend less than the amount that would keep $\mRat$ stable (in expectation).
@@ -1336,7 +1363,8 @@ To build intuition, it is useful to describe an example in which a nondegenerate
 
 \hypertarget{cGroLTpGro}{}
 % \subsection{Expected Consumption Growth at $\hat{m}$ Is Less than  Expected Permanent Income Growth}
-\subsection{There Is No Balanced Growth Equilibrium At the Individual Level}
+
+
 
 \label{subsec:expcgrowth} Figure~\ref{fig:cGroTargetFig} shows that at the value of $\mRat=\mBal$ where expected growth in market resources $\Ex_{t}[\mLevBF_{t+1}/\mLevBF_{t}]$ matches expected growth in permanent income $\PGro$, the expected growth rate of consumption $\Ex_{t}[\cLevBF_{t+1}/\cLevBF_{t}]$ is lower than $\PGro.$  
 
@@ -1355,6 +1383,7 @@ Expected consumption growth is therefore
 \end{align}
 
 In fact, the $\mRat_{t}$ for which $Ex_{t}[\aRatBF_{t+1}/\aRatBF_{t}] = \PGro$ is yet another slightly different value of $\mRat.$  
+\end{comment}
 
 \begin{comment}
 \begin{align}
@@ -1406,7 +1435,6 @@ $\aFunc(\mTarg)>0$ it is clear that
 cov$_{t}({\PGro}_{t+1},{\mRat}_{t+1})<0$ which implies that
 the entire term added to $\PGro$ in \eqref{eq:covcgrow} is negative, as
 required.
-\end{comment}
 
 \hypertarget{dcgdxneg}{}
 \subsection{Is Expected Consumption Growth a Declining Function of $\mRat_{t}$?}
@@ -1428,6 +1456,8 @@ or differentiating through the expectations operator, what we want is
 \end{align}
 
 Appendix~\ref{sec:ApndxCGrowthDeclines} shows that the proposition holds true if there are only transitory (and no permanent) shocks.  The software archive associated with this paper contains an example in which exotic interactions between permanent shocks and extreme curvature that occurs with very small $\pZero$ generate a (small) region where the proposition does not hold.  In practice, for plausible parametric choices (and in models without an artificial liquidity constraint), $\Ex_{t}[\pmb{\Upsilon}_{t+1}^{\prime}]<0$ should generally hold.
+
+\end{comment}
 
 \hypertarget{The-Aggregate-and-Idiosyncratic-Relationship-Between-Consumption-Growth-and-Income-Growth}{}
 \section{The Aggregate and Idiosyncratic Relationship Between
@@ -1478,6 +1508,17 @@ Using boldface capital letters for aggregates, the growth factor for aggregate i
 \end{align*}
 because of the independence assumptions we have made about $\tShkAll$ and $\pShk$.
 
+\begin{comment}
+From the perspective of period $t$, %current aggregate assets are nonstochastic, $\BLevBF_{t}=\Mean[b_{t} \pLevBF_{t}]$, but next period's assets are stochastic,   
+\begin{align*}
+  \BLevBF_{t+1} & = \Mean[b_{t+1} \pLevBF_{t+1}]
+  \\              & = \PGro \Mean[a_{t}(\Rfree/(\PGro\pShk_{t+1}))\pShk_{t+1}\pLevBF_{t}]
+  \\              & = \PGro \Mean[a_{t}\Rnorm\pLevBF_{t}]
+  \\              & = \PGro \Mean[(\mRat_{t}-\cFunc(\mRat_{t}))\Rnorm\pLevBF_{t}]
+  \\              & = \PGro \Mean[(\bRat_{t}+\tShk_{t}-\cFunc(\bRat_{t}+\tShk_{t}))\Rnorm\pLevBF_{t}]
+\end{align*}
+\end{comment}
+
 From the perspective of period $t$, %current aggregate assets are nonstochastic, $\ALevBF_{t}=\Mean[a_{t} \pLevBF_{t}]$, but next period's assets are stochastic,   
 \begin{align*}
   \ALevBF_{t+1} & = \Mean[a_{t+1} \pLevBF_{t+1}]
@@ -1494,7 +1535,7 @@ Unfortunately, the covariance term in the numerator, while generally small, will
 \end{comment}
 Matters are simpler if there are no permanent shocks; see Appendix~\ref{sec:ApndxCGroIsPGro} for a proof that in that case the growth rate of assets (and other variables) does eventually converge to the growth rate of aggregate permanent income.
 
-One way of thinking about the problem here is that it may reflect the fact that, under our assumptions, the $\pLevBF$ variable does not have an ergodic distribution; the distribution of permanent income becomes forever wider over time, because our consumers never die and each immortal person is perpetually subject to symmetric shocks to their $\log \pLevBF$.
+One way of thinking about the problem here is that it may reflect the fact that, under our assumptions, permanent income $\pLevBF$ does not have an ergodic distribution; its distribution of becomes forever wider over time, because our consumers never die and each immortal person is perpetually subject to symmetric shocks to their $\log \pLevBF$.
 
 This is why we need to introduce mortality.
 
@@ -1502,19 +1543,19 @@ This is why we need to introduce mortality.
 \hypertarget{Mortality-And-Redistribution}{}
 \subsection{Mortality and Redistribution}\label{sec:Mortality-And-Redistribution}
 
-Most heterogeneous agent models incorporate a constant positive probability of death, following \cite{blanchardFinite}.  In a model that mostly follows~\cite{blanchardFinite}, for probabilities of death that exceed a threshold that depends on the size of the permanent shocks, \cite{cstwMPC} show that the limiting distribution of permanent income has a finite variance, which is a useful step in the direction of taming the problems caused by an unbounded distribution of $\pLev$.  Numerical results in that paper confirm the intuition that, under appropriate impatience conditions, balanced growth arises (though a formal proof remains elusive).
+Most heterogeneous agent models incorporate a constant positive probability of death, following \cite{blanchardFinite}.  In a model that mostly follows~\cite{blanchardFinite}, for probabilities of death that exceed a threshold that depends on the size of the permanent shocks, \cite{cstwMPC} show that the limiting distribution of permanent income has a finite variance, which is a useful step in the direction of taming the problems caused by an unbounded distribution of $\pLevBF$.  Numerical results in that paper confirm the intuition that, under appropriate impatience conditions, balanced growth arises (though a formal proof remains elusive).
 
-Even with those (numerical) results in hand, the centrality of the mortality assumptions to the existence and nature of steady states requires a brief discussion here.
+Even with those (numerical) results in hand, the centrality of mortality assumptions to the existence and nature of steady states requires them to be discussed briefly here.
 
 \hypertarget{Blanchard-Lives}{}
 \subsubsection{Blanchard Lives}
 
-\cite{blanchardFinite}'s model assumes the existence of an annuitization scheme in which estates of dying consumers are redistributed to survivors in proportion to survivors' wealth, giving the recipients a higher effective rate of return. This treatment has several analytical advantages, the most notable of which is that the effect of mortality on the time preference factor is the exact inverse of its effect on the (effective) interest factor:  If the probability of remaining alive is $\Alive$, then assuming that no utility accrues after death makes the effective discount factor $\hat{\DiscFac}=\DiscFac\Alive$, while the enhancement to the rate of return from the annuity scheme yields an effective interest rate of $\hat{\Rfree}/\Alive$ (recall that because of Poisson mortality, the average wealth of the two groups is identical).  Combining these, the effective patience factor in the new economy $\hat{\Pat}$ is unchanged from its value in the infinite horizon model:
+\cite{blanchardFinite}'s model assumes the existence of an annuitization scheme in which estates of dying consumers are redistributed to survivors in proportion to survivors' wealth, giving the recipients a higher effective rate of return. This treatment has several analytical advantages, most notably that the effect of mortality on the time preference factor is the exact inverse of its effect on the (effective) interest factor:  If the probability of remaining alive is $\Alive$, then assuming that no utility accrues after death makes the effective discount factor $\hat{\DiscFac}=\DiscFac\Alive$, while the enhancement to the rate of return from the annuity scheme yields an effective interest rate of $\hat{\Rfree}/\Alive$ (recall that because of Poisson mortality, the average wealth of the two groups is identical).  Combining these, the effective patience factor in the new economy $\hat{\Pat}$ is unchanged from its value in the infinite horizon model:
 \begin{equation}
   \hat{\Pat} \equiv \left(\DiscFac \Alive \Rfree / \Alive\right)^{1/\CRRA} = \left(\Rfree \DiscFac\right)^{1/\CRRA} \equiv \Pat.
 \end{equation}
 
-The only adjustments this requires to the analysis from prior parts of this paper are therefore to the few elements that involve a role for $\Rfree$ distinct from its contribution to $\Pat$ (principally, the {\RIC}).  These would need to be adjusted to incorporate in interest factor with a higher rate of return.  %For example, the {\RIC}~($\Pat/(\Rfree /\Alive) < 1$) will be somewhat easier to satisfy because $\Rfree/\Alive > \Rfree$.
+The only adjustments this requires to the analysis from prior parts of this paper are therefore to the few elements that involve a role for $\Rfree$ distinct from its contribution to $\Pat$ (principally, the {\RIC}).  %These would need to be adjusted to incorporate in interest factor with a higher rate of return.  %For example, the {\RIC}~($\Pat/(\Rfree /\Alive) < 1$) will be somewhat easier to satisfy because $\Rfree/\Alive > \Rfree$.
 
 The numerical finding that the covariance term above is approximately zero allows us to conclude again that the key requirement for aggregate balanced growth is presumably the {\GICAbs}.
 

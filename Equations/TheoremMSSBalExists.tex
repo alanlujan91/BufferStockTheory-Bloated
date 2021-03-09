@@ -1,10 +1,10 @@
 \begin{theorem}  \label{thm:balance} \label{thm:MSSBalExists}
- For the nondegenerate solution to the problem defined in section~\ref{subsec:Setup} when {\FVAC}, {\WRIC}, and {\GIC} all hold, there exists a unique `$\mRat$-balanced-growth' cash-on-hand-to-income ratio $\mBal>0$ such that
+ For the nondegenerate solution to the problem defined in section~\ref{subsec:Setup} when {\FVAC}, {\WRIC}, and {\GIC} all hold, there exists a unique pseudo-steady-state cash-on-hand-to-income ratio $\mBal>0$ such that
   \begin{equation}
     \Ex_t [\pShk_{t+1}{\mRat}_{t+1}/\mRat_t] = 1 \mbox{~if~} \mRat_t = \mBal.
     \label{eq:mTarget}
   \end{equation}
-  Moreover, $\mBal$ is a point of `$\mRatBF$-growth stablity' in the sense that
+  Moreover, $\mBal$ is a point of stability in the sense that
   \begin{align}\label{eq:stability}
     \forall {\mRat}_t\in(0,\mBal),      \,\,& \Ex_{t}[\mLevBF_{t+1}]/\mLevBF_{t} > \PGro \\
     \forall {\mRat}_t\in(\mBal,\infty), \,\,& \Ex_{t}[\mLevBF_{t+1}]/\mLevBF_{t} < \PGro. \notag

@@ -101,7 +101,7 @@ SolveInfHorizToToleranceAtTarget[mTargetTolerance_] := Block[{},
 
 FindTargets[DesiredAccuracy_,Horizon_] := Block[{},
   If[Horizon == 0, Return[{aTarget=0.,mTarget=1.,cTarget=1.,\[Kappa]Target=1.,bTarget=0.}]];
-  If[\[CapitalThorn]\[CapitalGamma] > 1,Print["Growth Impatience Condition does not hold; no target exists."];Abort[]];
+(*  If[\[CapitalThorn]\[CapitalGamma] > 1,Print["Growth Impatience Condition does not hold; no target exists."];Abort[]];*)
 
   (* Suppress some unimportant error messages *) Off[InterpolatingFunction::dmval];
   (* %%% *) On[InterpolatingFunction::dmval]; (* Keep the messages on for CDCPrivate version *)
