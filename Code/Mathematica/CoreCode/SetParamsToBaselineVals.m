@@ -30,3 +30,6 @@ aSmallMax = 3;  (* Small number defines the gridpoint below which aGridVecExcBot
 
 SetParamsBaseline;
 
+
+
+CDFatFuncList[[LastPeriod]][0.4]
