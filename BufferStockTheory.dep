@@ -192,11 +192,10 @@
   *{file}   {./Equations/supfn.tex}{0000/00/00 v0.0}
   *{file}   {./Equations/DBCparts.tex}{0000/00/00 v0.0}
   *{file}   {./Equations/tShkDef.tex}{0000/00/00 v0.0}
-  *{file}   {./Equations/PFGIC.tex}{0000/00/00 v0.0}
   *{file}   {./Figures/RelatePFGICFHWCRICPFFVAC.tex}{0000/00/00 v0.0}
-  *{file}   {./Equations/PGroAdj.tex}{0000/00/00 v0.0}
+  *{file}   {./Equations/GICAbs.tex}{0000/00/00 v0.0}
   *{file}   {./Equations/PatPGroAdj.tex}{0000/00/00 v0.0}
-  *{file}   {./Equations/GIC.tex}{0000/00/00 v0.0}
+  *{file}   {./Equations/GICNrm.tex}{0000/00/00 v0.0}
   *{file}   {./Equations/FVAC.tex}{0000/00/00 v0.0}
   *{file}   {./Tables/Parameters.tex}{0000/00/00 v0.0}
   *{file}   {./Tables/Calibration.tex}{0000/00/00 v0.0}
@@ -204,12 +203,14 @@
   *{file}   {ueus.fd}     {2013/01/14 v3.01}
   *{file}   {ueus.fd}     {2013/01/14 v3.01}
   *{file}   {./Figures/Inequalities.tex}{0000/00/00 v0.0}
-  *{file}   {./Figures/FVACnotGIC.tex}{0000/00/00 v0.0}
   *{file}   {./Tables/Comparison.tex}{0000/00/00 v0.0}
   *{file}   {./Tables/Required.tex}{0000/00/00 v0.0}
   *{file}   {./Figures/cGroTargetFig.tex}{0000/00/00 v0.0}
   *{file}   {./Figures/MPCLimits.tex}{0000/00/00 v0.0}
   *{file}   {./Figures/cFuncBounds.tex}{0000/00/00 v0.0}
+  *{file}   {./Equations/TheoremMTargetIsStable.tex}{0000/00/00 v0.0}
+  *{file}   {./Equations/TheoremMSSBalExists.tex}{0000/00/00 v0.0}
+  *{file}   {./Figures/GICNrmFailsButGICRawHolds.tex}{0000/00/00 v0.0}
   *{file}   {./Appendices/ApndxLiqConstr.tex}{0000/00/00 v0.0}
   *{file}   {./econtexRoot.tex}{0000/00/00 v0.0}
   *{file}   {../Resources/econtexPaths.tex}{0000/00/00 v0.0}
@@ -274,5 +275,13 @@
   *{file}   {./econtexRoot.tex}{0000/00/00 v0.0}
   *{file}   {../Resources/econtexPaths.tex}{0000/00/00 v0.0}
   *{file}   {../Resources/LaTeXInputs/econtex_onlyinsubfile.tex}{0000/00/00 v0.0}
+  *{file}   {./Appendices/ApndxMTargetIsStable.tex}{0000/00/00 v0.0}
+  *{file}   {./econtexRoot.tex}{0000/00/00 v0.0}
+  *{file}   {../Resources/econtexPaths.tex}{0000/00/00 v0.0}
+  *{file}   {./econtexRoot.tex}{0000/00/00 v0.0}
+  *{file}   {../Resources/econtexPaths.tex}{0000/00/00 v0.0}
+  *{file}   {../Resources/LaTeXInputs/econtex_onlyinsubfile.tex}{0000/00/00 v0.0}
+  *{file}   {../Equations/TheoremMTargetIsStable.tex}{0000/00/00 v0.0}
+  *{file}   {../Equations/TheoremMSSBalExists.tex}{0000/00/00 v0.0}
   *{file}   {BufferStockTheory.bbl}{0000/00/00 v0.0}
 }

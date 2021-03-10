@@ -1,0 +1,85 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi 
+\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-10001}{QQ2-1-1}{The Problem}}{5}\relax 
+\doTocEntry\tocsubsection{1.1}{\csname a:TocLink\endcsname{1}{x1-20001.1}{QQ2-1-2}{Setup}}{5}\relax 
+\doTocEntry\tocsubsection{1.2}{\csname a:TocLink\endcsname{1}{x1-30001.2}{QQ2-1-3}{The Problem Can Be Normalized By Permanent Income}}{9}\relax 
+\doTocEntry\tocsubsection{1.3}{\csname a:TocLink\endcsname{1}{x1-40001.3}{QQ2-1-4}{Definition of a Nondegenerate Solution}}{11}\relax 
+\doTocEntry\tocsubsection{1.4}{\csname a:TocLink\endcsname{1}{x1-50001.4}{QQ2-1-5}{Perfect Foresight Benchmarks}}{12}\relax 
+\doTocEntry\tocsubsubsection{1.4.1}{\csname a:TocLink\endcsname{1}{x1-60001.4.1}{QQ2-1-6}{Human Wealth}}{12}\relax 
+\doTocEntry\tocsubsubsection{1.4.2}{\csname a:TocLink\endcsname{1}{x1-70001.4.2}{QQ2-1-7}{When Does the Perfect Foresight Unconstrained Solution Exist?}}{14}\relax 
+\doTocEntry\toclof{1}{\csname a:TocLink\endcsname{1}{x1-70181}{}{\ignorespaces Relation of \mbox  {GIC}, {\mbox  {FHWC}}, {\mbox  {RIC}}, and {\mbox  {PF-FVAC}}}}{figure}\relax 
+\doTocEntry\tocsubsubsection{1.4.3}{\csname a:TocLink\endcsname{1}{x1-80001.4.3}{QQ2-1-9}{PF Constrained Solution Exists Under {{\mbox  {RIC}}} or Under \{\ensuremath  {\cancel  {{\mbox  {RIC}}}},\mbox  {GIC}\}}}{23}\relax 
+\doTocEntry\tocsubsection{1.5}{\csname a:TocLink\endcsname{1}{x1-90001.5}{QQ2-1-10}{Uncertainty-Modified Conditions}}{26}\relax 
+\doTocEntry\tocsubsubsection{1.5.1}{\csname a:TocLink\endcsname{1}{x1-100001.5.1}{QQ2-1-11}{Impatience}}{26}\relax 
+\doTocEntry\tocsubsubsection{1.5.2}{\csname a:TocLink\endcsname{1}{x1-110001.5.2}{QQ2-1-12}{Autarky Value}}{28}\relax 
+\doTocEntry\tocsubsection{1.6}{\csname a:TocLink\endcsname{1}{x1-120001.6}{QQ2-1-13}{The Baseline Numerical Solution}}{30}\relax 
+\doTocEntry\toclot{1}{\csname a:TocLink\endcsname{1}{x1-120011}{}{\ignorespaces Microeconomic Model Calibration}}{table}\relax 
+\doTocEntry\toclot{2}{\csname a:TocLink\endcsname{1}{x1-120022}{}{\ignorespaces Model Characteristics Calculated from Parameters}}{table}\relax 
+\doTocEntry\toclof{2}{\csname a:TocLink\endcsname{1}{x1-120032}{}{\ignorespaces Convergence of the Consumption Rules}}{figure}\relax 
+\doTocEntry\tocsubsection{1.7}{\csname a:TocLink\endcsname{1}{x1-130001.7}{QQ2-1-17}{Concave Consumption Function Characteristics}}{39}\relax 
+\doTocEntry\tocsubsection{1.8}{\csname a:TocLink\endcsname{1}{x1-140001.8}{QQ2-1-18}{Bounds for the Consumption Functions}}{39}\relax 
+\doTocEntry\tocsubsubsection{1.8.1}{\csname a:TocLink\endcsname{1}{x1-150001.8.1}{QQ2-1-19}{Weak RIC Conditions}}{40}\relax 
+\doTocEntry\tocsubsection{1.9}{\csname a:TocLink\endcsname{1}{x1-160001.9}{QQ2-1-20}{Conditions Under Which the Problem Defines a Contraction Mapping}}{42}\relax 
+\doTocEntry\tocsubsection{1.10}{\csname a:TocLink\endcsname{1}{x1-170001.10}{QQ2-1-21}{The Liquidity Constrained Solution as a Limit}}{45}\relax 
+\doTocEntry\tocsubsection{1.11}{\csname a:TocLink\endcsname{1}{x1-180001.11}{QQ2-1-22}{Discussion of Parametric Restrictions}}{46}\relax 
+\doTocEntry\toclof{3}{\csname a:TocLink\endcsname{1}{x1-180013}{}{\ignorespaces Relation of All Inequality Conditions}}{figure}\relax 
+\doTocEntry\tocsubsubsection{1.11.1}{\csname a:TocLink\endcsname{1}{x1-190001.11.1}{QQ2-1-24}{The {\mbox  {WRIC}}}}{49}\relax 
+\doTocEntry\tocsubsubsection{1.11.2}{\csname a:TocLink\endcsname{1}{x1-200001.11.2}{QQ2-1-25}{When the {\mbox  {RIC}}~Fails}}{50}\relax 
+\doTocEntry\tocsubsubsection{1.11.3}{\csname a:TocLink\endcsname{1}{x1-210001.11.3}{QQ2-1-26}{When the {{\mbox  {RIC}}} Holds}}{51}\relax 
+\doTocEntry\toclot{3}{\csname a:TocLink\endcsname{1}{x1-210013}{}{\ignorespaces Definitions and Comparisons of Conditions}}{table}\relax 
+\doTocEntry\toclot{4}{\csname a:TocLink\endcsname{1}{x1-210024}{}{\ignorespaces Sufficient Conditions for Nondegenerate$^{\ddagger }$ Solution}}{table}\relax 
+\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-220002}{QQ2-1-29}{Analysis of the Converged Consumption Function}}{59}\relax 
+\doTocEntry\toclof{4}{\csname a:TocLink\endcsname{1}{x1-220034}{}{\ignorespaces `Stable' $\ensuremath  {m}$ Values and Expected Growth Rates}}{figure}\relax 
+\doTocEntry\tocsubsection{2.1}{\csname a:TocLink\endcsname{1}{x1-230002.1}{QQ2-1-31}{Limits as $\ensuremath  {m}$ approaches Infinity}}{62}\relax 
+\doTocEntry\toclof{5}{\csname a:TocLink\endcsname{1}{x1-230025}{}{\ignorespaces Limiting MPC's}}{figure}\relax 
+\doTocEntry\toclof{6}{\csname a:TocLink\endcsname{1}{x1-230036}{}{\ignorespaces Upper and Lower Bounds on The Consumption Function}}{figure}\relax 
+\doTocEntry\tocsubsection{2.2}{\csname a:TocLink\endcsname{1}{x1-240002.2}{QQ2-1-34}{Limits as $\ensuremath  {m}$ Approaches Zero}}{70}\relax 
+\doTocEntry\tocsubsection{2.3}{\csname a:TocLink\endcsname{1}{x1-250002.3}{QQ2-1-35}{Unique `Stable' Points}}{71}\relax 
+\doTocEntry\tocsubsubsection{2.3.1}{\csname a:TocLink\endcsname{1}{x1-260002.3.1}{QQ2-1-36}{`Individual Target Wealth'}}{72}\relax 
+\doTocEntry\tocsubsubsection{2.3.2}{\csname a:TocLink\endcsname{1}{x1-270002.3.2}{QQ2-1-37}{Collective Stability and the Pseudo-Steady-State}}{73}\relax 
+\doTocEntry\tocsubsubsection{2.3.3}{\csname a:TocLink\endcsname{1}{x1-280002.3.3}{QQ2-1-38}{Example Where There Is A Pseudo-Steady-State But No Target}}{76}\relax 
+\doTocEntry\toclof{7}{\csname a:TocLink\endcsname{1}{x1-280017}{}{\ignorespaces \{{\mbox  {FVAC}},\mbox  {GIC},\ensuremath  {\cancel  {\mbox  {GIC-Nrm}}}\}: No $\cc@accent {"705E}{\ensuremath  {m}}$ Exists But $\cc@accent {"7014}{\ensuremath  {m}}$ Does}}{figure}\relax 
+\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-290003}{QQ2-1-40}{The Aggregate and Idiosyncratic Relationship Between Consumption Growth and Income Growth}}{79}\relax 
+\doTocEntry\tocsubsection{3.1}{\csname a:TocLink\endcsname{1}{x1-300003.1}{QQ2-1-41}{Consumption and Income Growth at the Household Level}}{80}\relax 
+\doTocEntry\tocsubsection{3.2}{\csname a:TocLink\endcsname{1}{x1-310003.2}{QQ2-1-42}{Balanced Growth of Aggregate Income, Consumption, and Wealth}}{81}\relax 
+\doTocEntry\tocsubsection{3.3}{\csname a:TocLink\endcsname{1}{x1-320003.3}{QQ2-1-43}{Mortality and Redistribution}}{81}\relax 
+\doTocEntry\tocsubsubsection{3.3.1}{\csname a:TocLink\endcsname{1}{x1-330003.3.1}{QQ2-1-44}{Blanchard Lives}}{82}\relax 
+\doTocEntry\tocsubsubsection{3.3.2}{\csname a:TocLink\endcsname{1}{x1-340003.3.2}{QQ2-1-45}{Modigliani Lives}}{83}\relax 
+\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-350004}{QQ2-1-46}{Conclusions}}{84}\relax 
+\doTocEntry\tocsection{A}{\csname a:TocLink\endcsname{1}{x1-36000A}{QQ2-1-47}{Perfect Foresight Liquidity Constrained Solution}}{86}\relax 
+\doTocEntry\toclot{5}{\csname a:TocLink\endcsname{1}{x1-360015}{}{\ignorespaces Taxonomy of Perfect Foresight Liquidity Constrained Model Outcomes}}{table}\relax 
+\doTocEntry\tocsubsection{A.1}{\csname a:TocLink\endcsname{1}{x1-37000A.1}{QQ2-1-49}{If \mbox  {GIC}~Fails}}{89}\relax 
+\doTocEntry\tocsubsection{A.2}{\csname a:TocLink\endcsname{1}{x1-38000A.2}{QQ2-1-50}{If \mbox  {GIC}~Holds}}{91}\relax 
+\doTocEntry\tocsubsubsection{A.2.1}{\csname a:TocLink\endcsname{1}{x1-39000A.2.1}{QQ2-1-51}{If {\mbox  {FHWC}}~Holds}}{94}\relax 
+\doTocEntry\tocsubsubsection{A.2.2}{\csname a:TocLink\endcsname{1}{x1-40000A.2.2}{QQ2-1-52}{If {\mbox  {FHWC}}~Fails}}{95}\relax 
+\doTocEntry\toclof{8}{\csname a:TocLink\endcsname{1}{x1-400148}{}{\ignorespaces Nondegenerate Consumption Function with $\ensuremath  {\cancel  {{\mbox  {FHWC}}}}$ and \ensuremath  {\cancel  {{\mbox  {RIC}}}}}}{figure}\relax 
+\doTocEntry\tocsection{B}{\csname a:TocLink\endcsname{1}{x1-41000B}{QQ2-1-54}{Existence of a Concave Consumption Function}}{102}\relax 
+\doTocEntry\tocsection{C}{\csname a:TocLink\endcsname{1}{x1-42000C}{QQ2-1-55}{$\ensuremath  {\mathrm@@ {c}}_{t}(\ensuremath  {m})$ is Twice Continuously Differentiable}}{105}\relax 
+\doTocEntry\tocsection{D}{\csname a:TocLink\endcsname{1}{x1-43000D}{QQ2-1-56}{Proof that $\EuScript  {T}$ Is a Contraction Mapping}}{107}\relax 
+\doTocEntry\tocsubsection{D.1}{\csname a:TocLink\endcsname{1}{x1-44000D.1}{QQ2-1-57}{$\EuScript  {T}$ and $\ensuremath  {\mathrm@@ {v}}$}}{110}\relax 
+\doTocEntry\tocsection{E}{\csname a:TocLink\endcsname{1}{x1-45000E}{QQ2-1-58}{Convergence in Euclidian Space}}{111}\relax 
+\doTocEntry\tocsubsection{E.1}{\csname a:TocLink\endcsname{1}{x1-46000E.1}{QQ2-1-59}{Convergence of $\ensuremath  {\mathrm@@ {v}}_{t}$}}{112}\relax 
+\doTocEntry\tocsubsection{E.2}{\csname a:TocLink\endcsname{1}{x1-47000E.2}{QQ2-1-60}{Convergence of $\ensuremath  {\mathrm@@ {c}}_{t}$}}{113}\relax 
+\doTocEntry\tocsection{F}{\csname a:TocLink\endcsname{1}{x1-48000F}{QQ2-1-61}{Equality of Aggregate Consumption Growth and Income Growth with Transitory Shocks}}{114}\relax 
+\doTocEntry\tocsection{G}{\csname a:TocLink\endcsname{1}{x1-49000G}{QQ2-1-62}{The Limiting MPC's}}{116}\relax 
+\doTocEntry\tocsection{H}{\csname a:TocLink\endcsname{1}{x1-50000H}{QQ2-1-63}{The Perfect Foresight Liquidity Constrained Solution as a Limit}}{121}\relax 
+\doTocEntry\tocsection{I}{\csname a:TocLink\endcsname{1}{x1-51000I}{QQ2-1-64}{Endogenous Gridpoints Solution Method}}{125}\relax 
+\doTocEntry\tocsection{J}{\csname a:TocLink\endcsname{1}{x1-52000J}{QQ2-1-65}{The Terminal/Limiting Consumption Function}}{127}\relax 
+\doTocEntry\tocsection{K}{\csname a:TocLink\endcsname{1}{x1-53000K}{QQ2-1-66}{Relational Diagrams for the Inequality Conditions}}{131}\relax 
+\doTocEntry\toclof{9}{\csname a:TocLink\endcsname{1}{x1-530019}{}{\ignorespaces Inequality Conditions for Perfect Foresight Model}}{figure}\relax 
+\doTocEntry\tocsubsection{K.1}{\csname a:TocLink\endcsname{1}{x1-54000K.1}{QQ2-1-68}{The Unconstrained Perfect Foresight Model}}{134}\relax 
+\doTocEntry\toclof{10}{\csname a:TocLink\endcsname{1}{x1-5400610}{}{\ignorespaces Relation of \href  {{https://llorracc.github.io/BufferStockTheory}#GICAbs}{\textrm  {PF-GICNrm}}, \href  {{https://llorracc.github.io/BufferStockTheory}#FHWC}{\textrm  {FHWC}}, \href  {{https://llorracc.github.io/BufferStockTheory}#RIC}{\textrm  {RIC}}, and \href  {{https://llorracc.github.io/BufferStockTheory}#PFFVAC}{\textrm  {PF-FVAC}}}}{figure}\relax 
+\doTocEntry\toclof{11}{\csname a:TocLink\endcsname{1}{x1-5401011}{}{\ignorespaces Relation of All Inequality Conditions}}{figure}\relax 
+\doTocEntry\toclof{12}{\csname a:TocLink\endcsname{1}{x1-5401112}{}{\ignorespaces Numerical Relation of All Inequality Conditions}}{figure}\relax 
+\doTocEntry\tocsection{L}{\csname a:TocLink\endcsname{1}{x1-55000L}{QQ2-1-72}{When Is Consumption Growth Declining in $m$?}}{145}\relax 
+\doTocEntry\tocsection{M}{\csname a:TocLink\endcsname{1}{x1-56000M}{QQ2-1-73}{Unique And Stable Target and Steady State Points}}{147}\relax 
+\doTocEntry\tocsubsection{M.1}{\csname a:TocLink\endcsname{1}{x1-57000M.1}{QQ2-1-74}{Proof of Theorem \o:ref {thm:target}}}{149}\relax 
+\doTocEntry\tocsubsubsection{M.1.1}{\csname a:TocLink\endcsname{1}{x1-58000M.1.1}{QQ2-1-75}{Existence and Continuity of $\Ex  _t [{\ensuremath  {m}}_{t+1}/\ensuremath  {m}_t]$.}}{149}\relax 
+\doTocEntry\tocsubsubsection{M.1.2}{\csname a:TocLink\endcsname{1}{x1-59000M.1.2}{QQ2-1-76}{Existence of a point where $\Ex  _t [{\ensuremath  {m}}_{t+1}/\ensuremath  {m}_t]=1$.}}{150}\relax 
+\doTocEntry\tocsubsubsection{M.1.3}{\csname a:TocLink\endcsname{1}{x1-60000M.1.3}{QQ2-1-77}{$\Ex  _t [{\ensuremath  {m}}_{t+1}] -\ensuremath  {m}_t$ is monotonically decreasing.}}{151}\relax 
+\doTocEntry\tocsubsection{M.2}{\csname a:TocLink\endcsname{1}{x1-61000M.2}{QQ2-1-78}{Proof of Theorem~\o:ref {thm:balance}}}{153}\relax 
+\doTocEntry\tocsubsubsection{M.2.1}{\csname a:TocLink\endcsname{1}{x1-62000M.2.1}{QQ2-1-79}{Existence and Continuity of The Ratio}}{153}\relax 
+\doTocEntry\tocsubsubsection{M.2.2}{\csname a:TocLink\endcsname{1}{x1-63000M.2.2}{QQ2-1-80}{Existence of a stable point}}{153}\relax 
+\doTocEntry\tocsubsubsection{M.2.3}{\csname a:TocLink\endcsname{1}{x1-64000M.2.3}{QQ2-1-81}{$\Ex  _{t}[\psi _{t+1}\ensuremath  {m}_{t+1}] -\ensuremath  {m}_t$ is monotonically decreasing.}}{154}\relax 
+\doTocEntry\tocsubsection{M.3}{\csname a:TocLink\endcsname{1}{x1-65000M.3}{QQ2-1-82}{Proof of Lemma}}{156}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-66000M.3}{QQ2-1-83}{References}}{157}\relax 
+\par 

@@ -1,0 +1,1767 @@
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: eccc1000 font-variant: small-caps;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: cmss   font-family: sans-serif;
+htfcss: cmssbx  font-family: sans-serif; font-weight: bold;
+htfcss: cmssbxo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: cmssdc  font-family: sans-serif;
+htfcss: cmssi  font-family: sans-serif; font-style: oblique;
+htfcss: cmss   font-family: sans-serif;
+htfcss: cmssbx  font-family: sans-serif; font-weight: bold;
+htfcss: cmssbxo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: cmssdc  font-family: sans-serif;
+htfcss: cmssi  font-family: sans-serif; font-style: oblique;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: cmss   font-family: sans-serif;
+htfcss: cmssbx  font-family: sans-serif; font-weight: bold;
+htfcss: cmssbxo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: cmssdc  font-family: sans-serif;
+htfcss: cmssi  font-family: sans-serif; font-style: oblique;
+htfcss: cmss   font-family: sans-serif;
+htfcss: cmssbx  font-family: sans-serif; font-weight: bold;
+htfcss: cmssbxo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: cmssdc  font-family: sans-serif;
+htfcss: cmssi  font-family: sans-serif; font-style: oblique;
+htfcss: cmss   font-family: sans-serif;
+htfcss: cmssbx  font-family: sans-serif; font-weight: bold;
+htfcss: cmssbxo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: cmssdc  font-family: sans-serif;
+htfcss: cmssi  font-family: sans-serif; font-style: oblique;
+htfcss: cmbx  font-weight: bold;
+htfcss: cmbxsl  font-weight: bold; font-style: oblique;
+htfcss: cmbx  font-weight: bold;
+htfcss: cmbxsl  font-weight: bold; font-style: oblique;
+htfcss: cmbx  font-weight: bold;
+htfcss: cmbxsl  font-weight: bold; font-style: oblique;
+htfcss: wasyb font-weight: bold;
+htfcss: cmmi font-style: italic;
+htfcss: cmmib font-style: italic; font-weight: bold;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+File: BufferStockTheory.html
+File: BufferStockTheory.css
+File: BufferStockTheory.tmp
+File: BufferStockTheory2.html
+File: BufferStockTheory3.html
+File: BufferStockTheory4.html
+File: BufferStockTheory5.html
+File: BufferStockTheory.tmp
+File: BufferStockTheory6.html
+File: BufferStockTheory7.html
+File: BufferStockTheory8.html
+File: BufferStockTheory9.html
+File: BufferStockTheory10.html
+File: BufferStockTheory11.html
+File: BufferStockTheory12.html
+File: BufferStockTheory13.html
+File: BufferStockTheory14.html
+File: BufferStockTheory15.html
+File: BufferStockTheory16.html
+File: BufferStockTheory17.html
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory18.html
+File: BufferStockTheory19.html
+File: BufferStockTheory20.html
+File: BufferStockTheory21.html
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory22.html
+File: BufferStockTheory23.html
+File: BufferStockTheory.tmp
+File: BufferStockTheory24.html
+File: BufferStockTheory25.html
+File: BufferStockTheory26.html
+File: BufferStockTheory27.html
+File: BufferStockTheory28.html
+File: BufferStockTheory29.html
+File: BufferStockTheory30.html
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory31.html
+File: BufferStockTheory32.html
+File: BufferStockTheory33.html
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory34.html
+File: BufferStockTheory.tmp
+File: BufferStockTheory35.html
+File: BufferStockTheory36.html
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory37.html
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory38.html
+File: BufferStockTheory39.html
+File: BufferStockTheory.tmp
+File: BufferStockTheory40.html
+File: BufferStockTheory41.html
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory42.html
+File: BufferStockTheory43.html
+File: BufferStockTheory44.html
+File: BufferStockTheory45.html
+File: BufferStockTheory46.html
+File: BufferStockTheory47.html
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory48.html
+File: BufferStockTheory49.html
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory50.html
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory51.html
+File: BufferStockTheory.tmp
+File: BufferStockTheory52.html
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory53.html
+File: BufferStockTheory54.html
+File: BufferStockTheory55.html
+File: BufferStockTheory56.html
+File: BufferStockTheory57.html
+File: BufferStockTheory58.html
+File: BufferStockTheory59.html
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+File: BufferStockTheory.tmp
+Font_Class(4,"4"): <span  class="small-caps"></span>
+Css: p{margin-top:0;margin-bottom:0}
+Css: p.indent{text-indent:0;}
+Css: p + p{margin-top:1em;}
+Css: p + div, p + pre {margin-top:1em;}
+Css: div + p, pre + p {margin-top:1em;}
+Css: @media print {div.crosslinks {visibility:hidden;}}
+Css: a img { border-top: 0; border-left: 0; border-right: 0; }
+Font_Css("4"): .small-caps{font-variant: small-caps; }
+Font_Css("10"): .htf-cmbx {font-weight: bold; font-style:normal;}
+Font_Css("12"): .htf-calligraphy {font-family:cursive}
+Font_Css("14"): .htf-italic {font-style: italic;}
+Font_Css("16"): .htf-bold {font-weight: bold;}
+Font_Css("12"): .htf-calligraphy-bold {font-family:cursive ; font-weight: bold; }
+Css: center { margin-top:1em; margin-bottom:1em; }
+Css: td center { margin-top:0em; margin-bottom:0em; }
+Css: .Canvas { position:relative; }
+Css: img.math{vertical-align:middle;}
+Css: li p.indent { text-indent: 0em }
+Css: li p:first-child{ margin-top:0em; }
+Css: li p:last-child, li div:last-child { margin-bottom:0.5em; }
+Css: li p~ul:last-child, li p~ol:last-child{ margin-bottom:0.5em; }
+Css: .enumerate1 {list-style-type:decimal;}
+Css: .enumerate2 {list-style-type:lower-alpha;}
+Css: .enumerate3 {list-style-type:lower-roman;}
+Css: .enumerate4 {list-style-type:upper-alpha;}
+Css: div.newtheorem { margin-bottom: 2em; margin-top: 2em;}
+Css: .obeylines-h,.obeylines-v {white-space: nowrap; }
+Css: div.obeylines-v p { margin-top:0; margin-bottom:0; }
+Css: .overline{ text-decoration:overline; }
+Css: .overline img{ border-top: 1px solid black; }
+Css: td.displaylines {text-align:center; white-space:nowrap;}
+Css: .centerline {text-align:center;}
+Css: .rightline {text-align:right;}
+Css: div.pic-tabular {text-align:center;}
+Css: div.verbatim {font-family: monospace,monospace; white-space: nowrap; text-align:left; clear:both; }
+Css: .fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.fbox {display:table}
+Css: div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.minipage{width:100%;}
+Css: div.center, div.center div.center {text-align: center; margin-left:1em; margin-right:1em;}
+Css: div.center div {text-align: left;}
+Css: div.flushright, div.flushright div.flushright {text-align: right;}
+Css: div.flushright div {text-align: left;}
+Css: div.flushleft {text-align: left;}
+Css: .underline{ text-decoration:underline; }
+Css: .underline img{ border-bottom: 1px solid black; margin-bottom:1pt; }
+Css: .framebox-c, .framebox-l, .framebox-r { padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: .framebox-c {text-align:center;}
+Css: .framebox-l {text-align:left;}
+Css: .framebox-r {text-align:right;}
+Css: span.thank-mark{ vertical-align: super }
+Css: span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+Css: td p:first-child{ margin-top:0em; }
+Css: td p:last-child{ margin-bottom:0em; }
+Css: div.td00{ margin-left:0pt; margin-right:0pt; }
+Css: div.td01{ margin-left:0pt; margin-right:5pt; }
+Css: div.td10{ margin-left:5pt; margin-right:0pt; }
+Css: div.td11{ margin-left:5pt; margin-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: td.td00{ padding-left:0pt; padding-right:0pt; }
+Css: td.td01{ padding-left:0pt; padding-right:5pt; }
+Css: td.td10{ padding-left:5pt; padding-right:0pt; }
+Css: td.td11{ padding-left:5pt; padding-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: .hline hr, .cline hr{ height : 0px; margin:0px; }
+Css: .hline td, .cline td{ padding: 0; }
+Css: .hline hr, .cline hr{border:none;border-top:1px solid black;}
+Css: .tabbing-right {text-align:right;}
+Css: div.float, div.figure {margin-left: auto; margin-right: auto;}
+Css: div.float img {text-align:center;}
+Css: div.figure img {text-align:center;}
+Css: .marginpar,.reversemarginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+Css: .marginpar p,.reversemarginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+Css: .reversemarginpar{float:left;}
+Css: table.equation {width:100%;}
+Css: .equation td{text-align:center; }
+Css: td.equation { margin-top:1em; margin-bottom:1em; } 
+Css: td.equation-label { width:5%; text-align:center; }
+Css: td.eqnarray4 { width:5%; white-space: normal; }
+Css: td.eqnarray2 { width:5%; }
+Css: table.eqnarray-star, table.eqnarray {width:100%;}
+Css: div.eqnarray{text-align:center;}
+Css: div.array {text-align:center;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.pmatrix img{vertical-align:middle;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.bar-css {text-decoration:overline;}
+Css: table.tabular{border-collapse: collapse; border-spacing: 0;}
+Css: img.cdots{vertical-align:middle;}
+Css: .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
+Css: .index-item, .index-subitem, .index-subsubitem {display:block}
+Css: div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}
+Css: div.caption span.id{font-weight: bold; white-space: nowrap; }
+Css: h1.partHead{text-align: center}
+Css: p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: .paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
+Css: .subparagraphHead, .likesubparagraphHead { font-weight: bold;}
+Css: .quote {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; margin-right:1em; text-align:justify;}
+Css: .verse{white-space:nowrap; margin-left:2em}
+Css: div.maketitle {text-align:center;}
+Css: h2.titleHead{text-align:center;}
+Css: div.maketitle{ margin-bottom: 2em; }
+Css: div.author, div.date {text-align:center;}
+Css: div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
+Css: div.author{white-space: nowrap;}
+Font_Size: 12
+Css: .quotation {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; }
+Css: .abstract p {margin-left:5%; margin-right:5%;}
+Css: div.abstract {width:100%;}
+Css: figure.float, div.figure {margin-left: auto; margin-right: auto;}
+Css: figure.float img {text-align:center;}
+Css: figure.figure img {text-align:center;}
+Css: figure.figure > p {text-align:center;}
+Css: figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:center;}
+Css: figcaption.caption span.id{font-weight: bold; white-space: nowrap; }
+Css: span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+Css: figure.float, div.figure {margin-left: auto; margin-right: auto;}
+Css: figure.float img {text-align:center;}
+Css: figure.figure img {text-align:center;}
+Css: figure.figure > p {text-align:center;}
+Css: figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:center;}
+Css: figcaption.caption span.id{font-weight: bold; white-space: nowrap; }
+Css: div.verbatiminput {font-family: monospace,monospace; white-space: nowrap; }
+Css: .equation td{text-align:center; }
+Css: .equation-star td{text-align:center; }
+Css: table.equation-star { width:100%; }
+Css: table.equation { width:100%; }
+Css: div.align {text-align: center;}
+Css: table.multline, table.multline-star {width:100%;}
+Css: td.gather {text-align:center; }
+Css: table.gather {width:100%;}
+Css: div.gather-star {text-align:center;}
+Css: td p:first-child{ margin-top:0em; }
+Css: td p:last-child{ margin-bottom:0em; }
+Css: div.td00{ margin-left:0pt; margin-right:0pt; }
+Css: div.td01{ margin-left:0pt; margin-right:5pt; }
+Css: div.td10{ margin-left:5pt; margin-right:0pt; }
+Css: div.td11{ margin-left:5pt; margin-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: td.td00{ padding-left:0pt; padding-right:0pt; }
+Css: td.td01{ padding-left:0pt; padding-right:5pt; }
+Css: td.td10{ padding-left:5pt; padding-right:0pt; }
+Css: td.td11{ padding-left:5pt; padding-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: .hline hr, .cline hr{ height : 0px; margin:0px; }
+Css: .hline td, .cline td{ padding: 0; }
+Css: .hline hr, .cline hr{border:none;border-top:1px solid black;}
+Css: div.array {text-align:center;}
+Css: table.boxedverbatim {width:100%;}
+Css:  pre.boxedverbatim{border:solid 1px; padding-right:1em;} 
+Css: table.boxedverbatim {text-align:center;}
+Css: .listinginput p{ margin-bottom:0em; margin-top:0em; }
+Css: span.accentset span.accent{font-size:80%; position:relative; top:-1.7ex; left:-0.6em;}
+Css: span.underaccent span.accent{font-size:80%; position:relative; top:1.6ex; left:-0.6em;}
+Css: .uline{ text-decoration:underline; }
+Css: .uuline{ text-decoration:underline; }
+Css: span.sout {text-decoration: line-through }
+Css: span.xout {text-decoration: line-through }
+Css: span.uwave {text-decoration:underline }
+Css: .underline-d{ border-bottom: 3px double black; margin-bottom:1pt; }
+Css: .rotatebox{display: inline-block;}
+Css: .figure img.graphics {margin-left:10%;}
+Css: .subfigcaption {margin-top:1em; margin-left:1em; text-align:center;}
+Css: div.subfigure {text-align:center;display:inline-block;}
+Css: div.caption {text-align:left;font-size:83%;text-indent:0em; margin-left:2em; margin-right:2em; }
+Css: div.caption span.id{font-variant: small-caps; white-space: nowrap; }
+Css: .figure div.caption{text-align: center;}
+Css: .table div.caption{text-align: center;}
+Css: .table div.pic-tabular{text-align:center;clear:both;overflow:auto;width:100%;margin-bottom:1em;margin-left:auto;margin-right:auto}
+Css: div.figure{text-align:center;clear:both;overflow:auto;width:100%;margin-bottom:1em;margin-left:auto;margin-right:auto}
+Css: div.table{text-align:center;clear:both;overflow:auto;width:100%;margin-bottom:1em;margin-left:auto;margin-right:auto}
+Css: div.float{text-align:center;clear:both;overflow:auto;width:100%;margin-bottom:1em;margin-left:auto;margin-right:auto}
+Css: .subfigure img{display:block; margin-left:auto; margin-right:auto}
+Css: .equation td{text-align:center; }
+Css: td.equation { margin-top:5em; margin-bottom:5em; }
+File: ./Resources/PoweredByEconARK.svg
+--- needs --- BufferStockTheory.idv[2] ==> BufferStockTheory0x.svg ---
+--- needs --- BufferStockTheory.idv[4] ==> BufferStockTheory1x.svg ---
+--- needs --- BufferStockTheory.idv[5] ==> BufferStockTheory2x.svg ---
+--- needs --- BufferStockTheory.idv[6] ==> BufferStockTheory3x.svg ---
+--- needs --- BufferStockTheory.idv[7] ==> BufferStockTheory4x.svg ---
+--- needs --- BufferStockTheory.idv[8] ==> BufferStockTheory5x.svg ---
+--- needs --- BufferStockTheory.idv[9] ==> BufferStockTheory6x.svg ---
+--- needs --- BufferStockTheory.idv[10] ==> BufferStockTheory7x.svg ---
+--- needs --- BufferStockTheory.idv[11] ==> BufferStockTheory8x.svg ---
+--- needs --- BufferStockTheory.idv[12] ==> BufferStockTheory9x.svg ---
+--- needs --- BufferStockTheory.idv[13] ==> BufferStockTheory10x.svg ---
+--- needs --- BufferStockTheory.idv[14] ==> BufferStockTheory11x.svg ---
+--- needs --- BufferStockTheory.idv[15] ==> BufferStockTheory12x.svg ---
+--- needs --- BufferStockTheory.idv[17] ==> BufferStockTheory13x.svg ---
+--- needs --- BufferStockTheory.idv[18] ==> BufferStockTheory14x.svg ---
+--- needs --- BufferStockTheory.idv[19] ==> BufferStockTheory15x.svg ---
+--- needs --- BufferStockTheory.idv[20] ==> BufferStockTheory16x.svg ---
+--- needs --- BufferStockTheory.idv[21] ==> BufferStockTheory17x.svg ---
+--- needs --- BufferStockTheory.idv[23] ==> BufferStockTheory18x.svg ---
+--- needs --- BufferStockTheory.idv[25] ==> BufferStockTheory19x.svg ---
+--- needs --- BufferStockTheory.idv[27] ==> BufferStockTheory20x.svg ---
+--- needs --- BufferStockTheory.idv[28] ==> BufferStockTheory21x.svg ---
+--- needs --- BufferStockTheory.idv[29] ==> BufferStockTheory22x.svg ---
+--- needs --- BufferStockTheory.idv[30] ==> BufferStockTheory23x.svg ---
+--- needs --- BufferStockTheory.idv[31] ==> BufferStockTheory24x.svg ---
+--- needs --- BufferStockTheory.idv[33] ==> BufferStockTheory25x.svg ---
+--- needs --- BufferStockTheory.idv[34] ==> BufferStockTheory26x.svg ---
+--- needs --- BufferStockTheory.idv[35] ==> BufferStockTheory27x.svg ---
+--- needs --- BufferStockTheory.idv[36] ==> BufferStockTheory28x.svg ---
+--- needs --- BufferStockTheory.idv[37] ==> BufferStockTheory29x.svg ---
+--- needs --- BufferStockTheory.idv[38] ==> BufferStockTheory30x.svg ---
+--- needs --- BufferStockTheory.idv[39] ==> BufferStockTheory31x.svg ---
+--- needs --- BufferStockTheory.idv[40] ==> BufferStockTheory32x.svg ---
+--- needs --- BufferStockTheory.idv[41] ==> BufferStockTheory33x.svg ---
+--- needs --- BufferStockTheory.idv[42] ==> BufferStockTheory34x.svg ---
+--- needs --- BufferStockTheory.idv[43] ==> BufferStockTheory35x.svg ---
+--- needs --- BufferStockTheory.idv[44] ==> BufferStockTheory36x.svg ---
+--- needs --- BufferStockTheory.idv[45] ==> BufferStockTheory37x.svg ---
+--- needs --- BufferStockTheory.idv[47] ==> BufferStockTheory38x.svg ---
+--- needs --- BufferStockTheory.idv[48] ==> BufferStockTheory39x.svg ---
+--- needs --- BufferStockTheory.idv[50] ==> BufferStockTheory40x.svg ---
+--- needs --- BufferStockTheory.idv[52] ==> BufferStockTheory41x.svg ---
+--- needs --- BufferStockTheory.idv[53] ==> BufferStockTheory42x.svg ---
+--- needs --- BufferStockTheory.idv[54] ==> BufferStockTheory43x.svg ---
+--- needs --- BufferStockTheory.idv[55] ==> BufferStockTheory44x.svg ---
+--- needs --- BufferStockTheory.idv[57] ==> BufferStockTheory45x.svg ---
+--- needs --- BufferStockTheory.idv[58] ==> BufferStockTheory46x.svg ---
+--- needs --- BufferStockTheory.idv[59] ==> BufferStockTheory47x.svg ---
+--- needs --- BufferStockTheory.idv[60] ==> BufferStockTheory48x.svg ---
+--- needs --- BufferStockTheory.idv[62] ==> BufferStockTheory49x.svg ---
+--- needs --- BufferStockTheory.idv[63] ==> BufferStockTheory50x.svg ---
+--- needs --- BufferStockTheory.idv[65] ==> BufferStockTheory51x.svg ---
+--- needs --- BufferStockTheory.idv[66] ==> BufferStockTheory52x.svg ---
+--- needs --- BufferStockTheory.idv[68] ==> BufferStockTheory53x.svg ---
+--- needs --- BufferStockTheory.idv[70] ==> BufferStockTheory54x.svg ---
+--- needs --- BufferStockTheory.idv[71] ==> BufferStockTheory55x.svg ---
+--- needs --- BufferStockTheory.idv[73] ==> BufferStockTheory56x.svg ---
+--- needs --- BufferStockTheory.idv[74] ==> BufferStockTheory57x.svg ---
+--- needs --- BufferStockTheory.idv[75] ==> BufferStockTheory58x.svg ---
+--- needs --- BufferStockTheory.idv[76] ==> BufferStockTheory59x.svg ---
+--- needs --- BufferStockTheory.idv[77] ==> BufferStockTheory60x.svg ---
+--- needs --- BufferStockTheory.idv[79] ==> BufferStockTheory61x.svg ---
+--- needs --- BufferStockTheory.idv[80] ==> BufferStockTheory62x.svg ---
+--- needs --- BufferStockTheory.idv[81] ==> BufferStockTheory63x.svg ---
+--- needs --- BufferStockTheory.idv[82] ==> BufferStockTheory64x.svg ---
+--- needs --- BufferStockTheory.idv[83] ==> BufferStockTheory65x.svg ---
+--- needs --- BufferStockTheory.idv[84] ==> BufferStockTheory66x.svg ---
+--- needs --- BufferStockTheory.idv[85] ==> BufferStockTheory67x.svg ---
+--- needs --- BufferStockTheory.idv[87] ==> BufferStockTheory68x.svg ---
+--- needs --- BufferStockTheory.idv[88] ==> BufferStockTheory69x.svg ---
+--- needs --- BufferStockTheory.idv[89] ==> BufferStockTheory70x.svg ---
+--- needs --- BufferStockTheory.idv[90] ==> BufferStockTheory71x.svg ---
+--- needs --- BufferStockTheory.idv[91] ==> BufferStockTheory72x.svg ---
+--- needs --- BufferStockTheory.idv[93] ==> BufferStockTheory73x.svg ---
+--- needs --- BufferStockTheory.idv[94] ==> BufferStockTheory74x.svg ---
+--- needs --- BufferStockTheory.idv[95] ==> BufferStockTheory75x.svg ---
+--- needs --- BufferStockTheory.idv[96] ==> BufferStockTheory76x.svg ---
+--- needs --- BufferStockTheory.idv[97] ==> BufferStockTheory77x.svg ---
+--- needs --- BufferStockTheory.idv[99] ==> BufferStockTheory78x.svg ---
+--- needs --- BufferStockTheory.idv[100] ==> BufferStockTheory79x.svg ---
+--- needs --- BufferStockTheory.idv[101] ==> BufferStockTheory80x.svg ---
+--- needs --- BufferStockTheory.idv[103] ==> BufferStockTheory81x.svg ---
+--- needs --- BufferStockTheory.idv[105] ==> BufferStockTheory82x.svg ---
+--- needs --- BufferStockTheory.idv[107] ==> BufferStockTheory83x.svg ---
+--- needs --- BufferStockTheory.idv[109] ==> BufferStockTheory84x.svg ---
+--- needs --- BufferStockTheory.idv[110] ==> BufferStockTheory85x.svg ---
+--- needs --- BufferStockTheory.idv[112] ==> BufferStockTheory86x.svg ---
+--- needs --- BufferStockTheory.idv[114] ==> BufferStockTheory87x.svg ---
+--- needs --- BufferStockTheory.idv[115] ==> BufferStockTheory88x.svg ---
+--- needs --- BufferStockTheory.idv[116] ==> BufferStockTheory89x.svg ---
+--- needs --- BufferStockTheory.idv[117] ==> BufferStockTheory90x.svg ---
+--- needs --- BufferStockTheory.idv[118] ==> BufferStockTheory91x.svg ---
+--- needs --- BufferStockTheory.idv[120] ==> BufferStockTheory92x.svg ---
+--- needs --- BufferStockTheory.idv[121] ==> BufferStockTheory93x.svg ---
+--- needs --- BufferStockTheory.idv[123] ==> BufferStockTheory94x.svg ---
+--- needs --- BufferStockTheory.idv[125] ==> BufferStockTheory95x.svg ---
+--- needs --- BufferStockTheory.idv[127] ==> BufferStockTheory96x.svg ---
+--- needs --- BufferStockTheory.idv[129] ==> BufferStockTheory97x.svg ---
+--- needs --- BufferStockTheory.idv[131] ==> BufferStockTheory98x.svg ---
+--- needs --- BufferStockTheory.idv[132] ==> BufferStockTheory99x.svg ---
+--- needs --- BufferStockTheory.idv[134] ==> BufferStockTheory100x.svg ---
+--- needs --- BufferStockTheory.idv[136] ==> BufferStockTheory101x.svg ---
+--- needs --- BufferStockTheory.idv[138] ==> BufferStockTheory102x.svg ---
+--- needs --- BufferStockTheory.idv[140] ==> BufferStockTheory103x.svg ---
+--- needs --- BufferStockTheory.idv[141] ==> BufferStockTheory104x.svg ---
+--- needs --- BufferStockTheory.idv[142] ==> BufferStockTheory105x.svg ---
+--- needs --- BufferStockTheory.idv[144] ==> BufferStockTheory106x.svg ---
+--- needs --- BufferStockTheory.idv[145] ==> BufferStockTheory107x.svg ---
+--- needs --- BufferStockTheory.idv[146] ==> BufferStockTheory108x.svg ---
+--- needs --- BufferStockTheory.idv[147] ==> BufferStockTheory109x.svg ---
+--- needs --- BufferStockTheory.idv[149] ==> BufferStockTheory110x.svg ---
+--- needs --- BufferStockTheory.idv[151] ==> BufferStockTheory111x.svg ---
+--- needs --- BufferStockTheory.idv[153] ==> BufferStockTheory112x.svg ---
+--- needs --- BufferStockTheory.idv[155] ==> BufferStockTheory113x.svg ---
+--- needs --- BufferStockTheory.idv[156] ==> BufferStockTheory114x.svg ---
+--- needs --- BufferStockTheory.idv[157] ==> BufferStockTheory115x.svg ---
+--- needs --- BufferStockTheory.idv[158] ==> BufferStockTheory116x.svg ---
+--- needs --- BufferStockTheory.idv[159] ==> BufferStockTheory117x.svg ---
+--- needs --- BufferStockTheory.idv[160] ==> BufferStockTheory118x.svg ---
+--- needs --- BufferStockTheory.idv[161] ==> BufferStockTheory119x.svg ---
+--- needs --- BufferStockTheory.idv[162] ==> BufferStockTheory120x.svg ---
+--- needs --- BufferStockTheory.idv[164] ==> BufferStockTheory121x.svg ---
+--- needs --- BufferStockTheory.idv[165] ==> BufferStockTheory122x.svg ---
+--- needs --- BufferStockTheory.idv[167] ==> BufferStockTheory123x.svg ---
+--- needs --- BufferStockTheory.idv[168] ==> BufferStockTheory124x.svg ---
+--- needs --- BufferStockTheory.idv[170] ==> BufferStockTheory125x.svg ---
+--- needs --- BufferStockTheory.idv[171] ==> BufferStockTheory126x.svg ---
+--- needs --- BufferStockTheory.idv[172] ==> BufferStockTheory127x.svg ---
+--- needs --- BufferStockTheory.idv[173] ==> BufferStockTheory128x.svg ---
+--- needs --- BufferStockTheory.idv[175] ==> BufferStockTheory129x.svg ---
+--- needs --- BufferStockTheory.idv[176] ==> BufferStockTheory130x.svg ---
+--- needs --- BufferStockTheory.idv[177] ==> BufferStockTheory131x.svg ---
+--- needs --- BufferStockTheory.idv[178] ==> BufferStockTheory132x.svg ---
+--- needs --- BufferStockTheory.idv[179] ==> BufferStockTheory133x.svg ---
+--- needs --- BufferStockTheory.idv[180] ==> BufferStockTheory134x.svg ---
+--- needs --- BufferStockTheory.idv[181] ==> BufferStockTheory135x.svg ---
+--- needs --- BufferStockTheory.idv[182] ==> BufferStockTheory136x.svg ---
+--- needs --- BufferStockTheory.idv[183] ==> BufferStockTheory137x.svg ---
+--- needs --- BufferStockTheory.idv[184] ==> BufferStockTheory138x.svg ---
+--- needs --- BufferStockTheory.idv[185] ==> BufferStockTheory139x.svg ---
+--- needs --- BufferStockTheory.idv[186] ==> BufferStockTheory140x.svg ---
+--- needs --- BufferStockTheory.idv[187] ==> BufferStockTheory141x.svg ---
+--- needs --- BufferStockTheory.idv[188] ==> BufferStockTheory142x.svg ---
+--- needs --- BufferStockTheory.idv[189] ==> BufferStockTheory143x.svg ---
+--- needs --- BufferStockTheory.idv[190] ==> BufferStockTheory144x.svg ---
+File: ./Figures/RelatePFGICFHWCRICPFFVAC.svg
+--- needs --- BufferStockTheory.idv[192] ==> BufferStockTheory145x.svg ---
+--- needs --- BufferStockTheory.idv[194] ==> BufferStockTheory146x.svg ---
+--- needs --- BufferStockTheory.idv[195] ==> BufferStockTheory147x.svg ---
+--- needs --- BufferStockTheory.idv[196] ==> BufferStockTheory148x.svg ---
+--- needs --- BufferStockTheory.idv[197] ==> BufferStockTheory149x.svg ---
+--- needs --- BufferStockTheory.idv[198] ==> BufferStockTheory150x.svg ---
+--- needs --- BufferStockTheory.idv[199] ==> BufferStockTheory151x.svg ---
+--- needs --- BufferStockTheory.idv[200] ==> BufferStockTheory152x.svg ---
+--- needs --- BufferStockTheory.idv[201] ==> BufferStockTheory153x.svg ---
+--- needs --- BufferStockTheory.idv[203] ==> BufferStockTheory154x.svg ---
+--- needs --- BufferStockTheory.idv[205] ==> BufferStockTheory155x.svg ---
+--- needs --- BufferStockTheory.idv[207] ==> BufferStockTheory156x.svg ---
+--- needs --- BufferStockTheory.idv[208] ==> BufferStockTheory157x.svg ---
+--- needs --- BufferStockTheory.idv[209] ==> BufferStockTheory158x.svg ---
+--- needs --- BufferStockTheory.idv[210] ==> BufferStockTheory159x.svg ---
+--- needs --- BufferStockTheory.idv[211] ==> BufferStockTheory160x.svg ---
+--- needs --- BufferStockTheory.idv[212] ==> BufferStockTheory161x.svg ---
+--- needs --- BufferStockTheory.idv[213] ==> BufferStockTheory162x.svg ---
+--- needs --- BufferStockTheory.idv[214] ==> BufferStockTheory163x.svg ---
+--- needs --- BufferStockTheory.idv[215] ==> BufferStockTheory164x.svg ---
+--- needs --- BufferStockTheory.idv[216] ==> BufferStockTheory165x.svg ---
+--- needs --- BufferStockTheory.idv[217] ==> BufferStockTheory166x.svg ---
+--- needs --- BufferStockTheory.idv[218] ==> BufferStockTheory167x.svg ---
+--- needs --- BufferStockTheory.idv[219] ==> BufferStockTheory168x.svg ---
+--- needs --- BufferStockTheory.idv[220] ==> BufferStockTheory169x.svg ---
+--- needs --- BufferStockTheory.idv[221] ==> BufferStockTheory170x.svg ---
+--- needs --- BufferStockTheory.idv[223] ==> BufferStockTheory171x.svg ---
+--- needs --- BufferStockTheory.idv[224] ==> BufferStockTheory172x.svg ---
+--- needs --- BufferStockTheory.idv[225] ==> BufferStockTheory173x.svg ---
+--- needs --- BufferStockTheory.idv[226] ==> BufferStockTheory174x.svg ---
+--- needs --- BufferStockTheory.idv[227] ==> BufferStockTheory175x.svg ---
+--- needs --- BufferStockTheory.idv[228] ==> BufferStockTheory176x.svg ---
+--- needs --- BufferStockTheory.idv[229] ==> BufferStockTheory177x.svg ---
+--- needs --- BufferStockTheory.idv[230] ==> BufferStockTheory178x.svg ---
+--- needs --- BufferStockTheory.idv[231] ==> BufferStockTheory179x.svg ---
+--- needs --- BufferStockTheory.idv[232] ==> BufferStockTheory180x.svg ---
+--- needs --- BufferStockTheory.idv[233] ==> BufferStockTheory181x.svg ---
+--- needs --- BufferStockTheory.idv[234] ==> BufferStockTheory182x.svg ---
+--- needs --- BufferStockTheory.idv[235] ==> BufferStockTheory183x.svg ---
+--- needs --- BufferStockTheory.idv[236] ==> BufferStockTheory184x.svg ---
+--- needs --- BufferStockTheory.idv[237] ==> BufferStockTheory185x.svg ---
+--- needs --- BufferStockTheory.idv[238] ==> BufferStockTheory186x.svg ---
+--- needs --- BufferStockTheory.idv[239] ==> BufferStockTheory187x.svg ---
+--- needs --- BufferStockTheory.idv[240] ==> BufferStockTheory188x.svg ---
+--- needs --- BufferStockTheory.idv[241] ==> BufferStockTheory189x.svg ---
+--- needs --- BufferStockTheory.idv[242] ==> BufferStockTheory190x.svg ---
+--- needs --- BufferStockTheory.idv[243] ==> BufferStockTheory191x.svg ---
+--- needs --- BufferStockTheory.idv[244] ==> BufferStockTheory192x.svg ---
+--- needs --- BufferStockTheory.idv[245] ==> BufferStockTheory193x.svg ---
+--- needs --- BufferStockTheory.idv[246] ==> BufferStockTheory194x.svg ---
+--- needs --- BufferStockTheory.idv[247] ==> BufferStockTheory195x.svg ---
+--- needs --- BufferStockTheory.idv[248] ==> BufferStockTheory196x.svg ---
+--- needs --- BufferStockTheory.idv[249] ==> BufferStockTheory197x.svg ---
+--- needs --- BufferStockTheory.idv[251] ==> BufferStockTheory198x.svg ---
+--- needs --- BufferStockTheory.idv[252] ==> BufferStockTheory199x.svg ---
+--- needs --- BufferStockTheory.idv[254] ==> BufferStockTheory200x.svg ---
+--- needs --- BufferStockTheory.idv[256] ==> BufferStockTheory201x.svg ---
+--- needs --- BufferStockTheory.idv[258] ==> BufferStockTheory202x.svg ---
+--- needs --- BufferStockTheory.idv[260] ==> BufferStockTheory203x.svg ---
+--- needs --- BufferStockTheory.idv[262] ==> BufferStockTheory204x.svg ---
+--- needs --- BufferStockTheory.idv[264] ==> BufferStockTheory205x.svg ---
+--- needs --- BufferStockTheory.idv[266] ==> BufferStockTheory206x.svg ---
+--- needs --- BufferStockTheory.idv[267] ==> BufferStockTheory207x.svg ---
+--- needs --- BufferStockTheory.idv[269] ==> BufferStockTheory208x.svg ---
+--- needs --- BufferStockTheory.idv[270] ==> BufferStockTheory209x.svg ---
+--- needs --- BufferStockTheory.idv[271] ==> BufferStockTheory210x.svg ---
+--- needs --- BufferStockTheory.idv[273] ==> BufferStockTheory211x.svg ---
+--- needs --- BufferStockTheory.idv[275] ==> BufferStockTheory212x.svg ---
+--- needs --- BufferStockTheory.idv[276] ==> BufferStockTheory213x.svg ---
+--- needs --- BufferStockTheory.idv[277] ==> BufferStockTheory214x.svg ---
+--- needs --- BufferStockTheory.idv[278] ==> BufferStockTheory215x.svg ---
+--- needs --- BufferStockTheory.idv[279] ==> BufferStockTheory216x.svg ---
+--- needs --- BufferStockTheory.idv[280] ==> BufferStockTheory217x.svg ---
+--- needs --- BufferStockTheory.idv[282] ==> BufferStockTheory218x.svg ---
+--- needs --- BufferStockTheory.idv[283] ==> BufferStockTheory219x.svg ---
+--- needs --- BufferStockTheory.idv[284] ==> BufferStockTheory220x.svg ---
+--- needs --- BufferStockTheory.idv[285] ==> BufferStockTheory221x.svg ---
+--- needs --- BufferStockTheory.idv[286] ==> BufferStockTheory222x.svg ---
+--- needs --- BufferStockTheory.idv[288] ==> BufferStockTheory223x.svg ---
+--- needs --- BufferStockTheory.idv[289] ==> BufferStockTheory224x.svg ---
+--- needs --- BufferStockTheory.idv[291] ==> BufferStockTheory225x.svg ---
+--- needs --- BufferStockTheory.idv[293] ==> BufferStockTheory226x.svg ---
+File: ./Figures/cFuncsConverge.svg
+--- needs --- BufferStockTheory.idv[295] ==> BufferStockTheory227x.svg ---
+--- needs --- BufferStockTheory.idv[297] ==> BufferStockTheory228x.svg ---
+--- needs --- BufferStockTheory.idv[298] ==> BufferStockTheory229x.svg ---
+--- needs --- BufferStockTheory.idv[300] ==> BufferStockTheory230x.svg ---
+--- needs --- BufferStockTheory.idv[301] ==> BufferStockTheory231x.svg ---
+--- needs --- BufferStockTheory.idv[302] ==> BufferStockTheory232x.svg ---
+--- needs --- BufferStockTheory.idv[303] ==> BufferStockTheory233x.svg ---
+--- needs --- BufferStockTheory.idv[305] ==> BufferStockTheory234x.svg ---
+--- needs --- BufferStockTheory.idv[306] ==> BufferStockTheory235x.svg ---
+--- needs --- BufferStockTheory.idv[308] ==> BufferStockTheory236x.svg ---
+--- needs --- BufferStockTheory.idv[309] ==> BufferStockTheory237x.svg ---
+--- needs --- BufferStockTheory.idv[310] ==> BufferStockTheory238x.svg ---
+--- needs --- BufferStockTheory.idv[311] ==> BufferStockTheory239x.svg ---
+--- needs --- BufferStockTheory.idv[312] ==> BufferStockTheory240x.svg ---
+--- needs --- BufferStockTheory.idv[313] ==> BufferStockTheory241x.svg ---
+--- needs --- BufferStockTheory.idv[314] ==> BufferStockTheory242x.svg ---
+--- needs --- BufferStockTheory.idv[316] ==> BufferStockTheory243x.svg ---
+--- needs --- BufferStockTheory.idv[318] ==> BufferStockTheory244x.svg ---
+--- needs --- BufferStockTheory.idv[320] ==> BufferStockTheory245x.svg ---
+--- needs --- BufferStockTheory.idv[321] ==> BufferStockTheory246x.svg ---
+--- needs --- BufferStockTheory.idv[322] ==> BufferStockTheory247x.svg ---
+--- needs --- BufferStockTheory.idv[324] ==> BufferStockTheory248x.svg ---
+--- needs --- BufferStockTheory.idv[325] ==> BufferStockTheory249x.svg ---
+--- needs --- BufferStockTheory.idv[326] ==> BufferStockTheory250x.svg ---
+--- needs --- BufferStockTheory.idv[327] ==> BufferStockTheory251x.svg ---
+--- needs --- BufferStockTheory.idv[329] ==> BufferStockTheory252x.svg ---
+--- needs --- BufferStockTheory.idv[330] ==> BufferStockTheory253x.svg ---
+--- needs --- BufferStockTheory.idv[332] ==> BufferStockTheory254x.svg ---
+--- needs --- BufferStockTheory.idv[333] ==> BufferStockTheory255x.svg ---
+--- needs --- BufferStockTheory.idv[335] ==> BufferStockTheory256x.svg ---
+--- needs --- BufferStockTheory.idv[336] ==> BufferStockTheory257x.svg ---
+--- needs --- BufferStockTheory.idv[337] ==> BufferStockTheory258x.svg ---
+--- needs --- BufferStockTheory.idv[338] ==> BufferStockTheory259x.svg ---
+--- needs --- BufferStockTheory.idv[339] ==> BufferStockTheory260x.svg ---
+--- needs --- BufferStockTheory.idv[340] ==> BufferStockTheory261x.svg ---
+--- needs --- BufferStockTheory.idv[341] ==> BufferStockTheory262x.svg ---
+--- needs --- BufferStockTheory.idv[342] ==> BufferStockTheory263x.svg ---
+--- needs --- BufferStockTheory.idv[343] ==> BufferStockTheory264x.svg ---
+--- needs --- BufferStockTheory.idv[344] ==> BufferStockTheory265x.svg ---
+--- needs --- BufferStockTheory.idv[345] ==> BufferStockTheory266x.svg ---
+--- needs --- BufferStockTheory.idv[347] ==> BufferStockTheory267x.svg ---
+--- needs --- BufferStockTheory.idv[349] ==> BufferStockTheory268x.svg ---
+--- needs --- BufferStockTheory.idv[350] ==> BufferStockTheory269x.svg ---
+--- needs --- BufferStockTheory.idv[351] ==> BufferStockTheory270x.svg ---
+--- needs --- BufferStockTheory.idv[352] ==> BufferStockTheory271x.svg ---
+--- needs --- BufferStockTheory.idv[353] ==> BufferStockTheory272x.svg ---
+--- needs --- BufferStockTheory.idv[354] ==> BufferStockTheory273x.svg ---
+--- needs --- BufferStockTheory.idv[355] ==> BufferStockTheory274x.svg ---
+--- needs --- BufferStockTheory.idv[356] ==> BufferStockTheory275x.svg ---
+--- needs --- BufferStockTheory.idv[357] ==> BufferStockTheory276x.svg ---
+--- needs --- BufferStockTheory.idv[359] ==> BufferStockTheory277x.svg ---
+--- needs --- BufferStockTheory.idv[360] ==> BufferStockTheory278x.svg ---
+--- needs --- BufferStockTheory.idv[361] ==> BufferStockTheory279x.svg ---
+--- needs --- BufferStockTheory.idv[362] ==> BufferStockTheory280x.svg ---
+--- needs --- BufferStockTheory.idv[363] ==> BufferStockTheory281x.svg ---
+--- needs --- BufferStockTheory.idv[364] ==> BufferStockTheory282x.svg ---
+--- needs --- BufferStockTheory.idv[365] ==> BufferStockTheory283x.svg ---
+--- needs --- BufferStockTheory.idv[366] ==> BufferStockTheory284x.svg ---
+--- needs --- BufferStockTheory.idv[367] ==> BufferStockTheory285x.svg ---
+--- needs --- BufferStockTheory.idv[368] ==> BufferStockTheory286x.svg ---
+--- needs --- BufferStockTheory.idv[369] ==> BufferStockTheory287x.svg ---
+--- needs --- BufferStockTheory.idv[370] ==> BufferStockTheory288x.svg ---
+--- needs --- BufferStockTheory.idv[371] ==> BufferStockTheory289x.svg ---
+--- needs --- BufferStockTheory.idv[372] ==> BufferStockTheory290x.svg ---
+--- needs --- BufferStockTheory.idv[373] ==> BufferStockTheory291x.svg ---
+--- needs --- BufferStockTheory.idv[374] ==> BufferStockTheory292x.svg ---
+--- needs --- BufferStockTheory.idv[375] ==> BufferStockTheory293x.svg ---
+--- needs --- BufferStockTheory.idv[376] ==> BufferStockTheory294x.svg ---
+--- needs --- BufferStockTheory.idv[377] ==> BufferStockTheory295x.svg ---
+--- needs --- BufferStockTheory.idv[378] ==> BufferStockTheory296x.svg ---
+--- needs --- BufferStockTheory.idv[379] ==> BufferStockTheory297x.svg ---
+--- needs --- BufferStockTheory.idv[381] ==> BufferStockTheory298x.svg ---
+--- needs --- BufferStockTheory.idv[383] ==> BufferStockTheory299x.svg ---
+--- needs --- BufferStockTheory.idv[384] ==> BufferStockTheory300x.svg ---
+--- needs --- BufferStockTheory.idv[385] ==> BufferStockTheory301x.svg ---
+--- needs --- BufferStockTheory.idv[386] ==> BufferStockTheory302x.svg ---
+--- needs --- BufferStockTheory.idv[387] ==> BufferStockTheory303x.svg ---
+--- needs --- BufferStockTheory.idv[388] ==> BufferStockTheory304x.svg ---
+--- needs --- BufferStockTheory.idv[389] ==> BufferStockTheory305x.svg ---
+--- needs --- BufferStockTheory.idv[390] ==> BufferStockTheory306x.svg ---
+--- needs --- BufferStockTheory.idv[392] ==> BufferStockTheory307x.svg ---
+--- needs --- BufferStockTheory.idv[394] ==> BufferStockTheory308x.svg ---
+--- needs --- BufferStockTheory.idv[395] ==> BufferStockTheory309x.svg ---
+--- needs --- BufferStockTheory.idv[396] ==> BufferStockTheory310x.svg ---
+--- needs --- BufferStockTheory.idv[397] ==> BufferStockTheory311x.svg ---
+--- needs --- BufferStockTheory.idv[398] ==> BufferStockTheory312x.svg ---
+--- needs --- BufferStockTheory.idv[399] ==> BufferStockTheory313x.svg ---
+File: ./Figures/Inequalities.svg
+--- needs --- BufferStockTheory.idv[401] ==> BufferStockTheory314x.svg ---
+--- needs --- BufferStockTheory.idv[403] ==> BufferStockTheory315x.svg ---
+--- needs --- BufferStockTheory.idv[404] ==> BufferStockTheory316x.svg ---
+--- needs --- BufferStockTheory.idv[405] ==> BufferStockTheory317x.svg ---
+--- needs --- BufferStockTheory.idv[406] ==> BufferStockTheory318x.svg ---
+--- needs --- BufferStockTheory.idv[407] ==> BufferStockTheory319x.svg ---
+--- needs --- BufferStockTheory.idv[408] ==> BufferStockTheory320x.svg ---
+--- needs --- BufferStockTheory.idv[409] ==> BufferStockTheory321x.svg ---
+--- needs --- BufferStockTheory.idv[410] ==> BufferStockTheory322x.svg ---
+--- needs --- BufferStockTheory.idv[411] ==> BufferStockTheory323x.svg ---
+--- needs --- BufferStockTheory.idv[412] ==> BufferStockTheory324x.svg ---
+--- needs --- BufferStockTheory.idv[413] ==> BufferStockTheory325x.svg ---
+--- needs --- BufferStockTheory.idv[414] ==> BufferStockTheory326x.svg ---
+--- needs --- BufferStockTheory.idv[415] ==> BufferStockTheory327x.svg ---
+--- needs --- BufferStockTheory.idv[416] ==> BufferStockTheory328x.svg ---
+--- needs --- BufferStockTheory.idv[417] ==> BufferStockTheory329x.svg ---
+--- needs --- BufferStockTheory.idv[418] ==> BufferStockTheory330x.svg ---
+--- needs --- BufferStockTheory.idv[420] ==> BufferStockTheory331x.svg ---
+--- needs --- BufferStockTheory.idv[421] ==> BufferStockTheory332x.svg ---
+--- needs --- BufferStockTheory.idv[422] ==> BufferStockTheory333x.svg ---
+--- needs --- BufferStockTheory.idv[424] ==> BufferStockTheory334x.svg ---
+--- needs --- BufferStockTheory.idv[425] ==> BufferStockTheory335x.svg ---
+--- needs --- BufferStockTheory.idv[426] ==> BufferStockTheory336x.svg ---
+--- needs --- BufferStockTheory.idv[427] ==> BufferStockTheory337x.svg ---
+--- needs --- BufferStockTheory.idv[428] ==> BufferStockTheory338x.svg ---
+--- needs --- BufferStockTheory.idv[429] ==> BufferStockTheory339x.svg ---
+--- needs --- BufferStockTheory.idv[430] ==> BufferStockTheory340x.svg ---
+--- needs --- BufferStockTheory.idv[431] ==> BufferStockTheory341x.svg ---
+--- needs --- BufferStockTheory.idv[433] ==> BufferStockTheory342x.svg ---
+--- needs --- BufferStockTheory.idv[434] ==> BufferStockTheory343x.svg ---
+--- needs --- BufferStockTheory.idv[435] ==> BufferStockTheory344x.svg ---
+--- needs --- BufferStockTheory.idv[436] ==> BufferStockTheory345x.svg ---
+--- needs --- BufferStockTheory.idv[437] ==> BufferStockTheory346x.svg ---
+--- needs --- BufferStockTheory.idv[438] ==> BufferStockTheory347x.svg ---
+--- needs --- BufferStockTheory.idv[439] ==> BufferStockTheory348x.svg ---
+--- needs --- BufferStockTheory.idv[440] ==> BufferStockTheory349x.svg ---
+--- needs --- BufferStockTheory.idv[441] ==> BufferStockTheory350x.svg ---
+--- needs --- BufferStockTheory.idv[442] ==> BufferStockTheory351x.svg ---
+--- needs --- BufferStockTheory.idv[443] ==> BufferStockTheory352x.svg ---
+--- needs --- BufferStockTheory.idv[445] ==> BufferStockTheory353x.svg ---
+--- needs --- BufferStockTheory.idv[446] ==> BufferStockTheory354x.svg ---
+--- needs --- BufferStockTheory.idv[447] ==> BufferStockTheory355x.svg ---
+--- needs --- BufferStockTheory.idv[448] ==> BufferStockTheory356x.svg ---
+--- needs --- BufferStockTheory.idv[449] ==> BufferStockTheory357x.svg ---
+--- needs --- BufferStockTheory.idv[450] ==> BufferStockTheory358x.svg ---
+--- needs --- BufferStockTheory.idv[451] ==> BufferStockTheory359x.svg ---
+--- needs --- BufferStockTheory.idv[452] ==> BufferStockTheory360x.svg ---
+--- needs --- BufferStockTheory.idv[453] ==> BufferStockTheory361x.svg ---
+--- needs --- BufferStockTheory.idv[454] ==> BufferStockTheory362x.svg ---
+--- needs --- BufferStockTheory.idv[456] ==> BufferStockTheory363x.svg ---
+--- needs --- BufferStockTheory.idv[457] ==> BufferStockTheory364x.svg ---
+--- needs --- BufferStockTheory.idv[458] ==> BufferStockTheory365x.svg ---
+--- needs --- BufferStockTheory.idv[460] ==> BufferStockTheory366x.svg ---
+--- needs --- BufferStockTheory.idv[462] ==> BufferStockTheory367x.svg ---
+--- needs --- BufferStockTheory.idv[463] ==> BufferStockTheory368x.svg ---
+--- needs --- BufferStockTheory.idv[464] ==> BufferStockTheory369x.svg ---
+--- needs --- BufferStockTheory.idv[465] ==> BufferStockTheory370x.svg ---
+--- needs --- BufferStockTheory.idv[466] ==> BufferStockTheory371x.svg ---
+--- needs --- BufferStockTheory.idv[467] ==> BufferStockTheory372x.svg ---
+--- needs --- BufferStockTheory.idv[468] ==> BufferStockTheory373x.svg ---
+--- needs --- BufferStockTheory.idv[469] ==> BufferStockTheory374x.svg ---
+--- needs --- BufferStockTheory.idv[470] ==> BufferStockTheory375x.svg ---
+--- needs --- BufferStockTheory.idv[471] ==> BufferStockTheory376x.svg ---
+--- needs --- BufferStockTheory.idv[472] ==> BufferStockTheory377x.svg ---
+--- needs --- BufferStockTheory.idv[473] ==> BufferStockTheory378x.svg ---
+--- needs --- BufferStockTheory.idv[474] ==> BufferStockTheory379x.svg ---
+--- needs --- BufferStockTheory.idv[475] ==> BufferStockTheory380x.svg ---
+--- needs --- BufferStockTheory.idv[476] ==> BufferStockTheory381x.svg ---
+--- needs --- BufferStockTheory.idv[477] ==> BufferStockTheory382x.svg ---
+--- needs --- BufferStockTheory.idv[479] ==> BufferStockTheory383x.svg ---
+--- needs --- BufferStockTheory.idv[480] ==> BufferStockTheory384x.svg ---
+--- needs --- BufferStockTheory.idv[481] ==> BufferStockTheory385x.svg ---
+--- needs --- BufferStockTheory.idv[482] ==> BufferStockTheory386x.svg ---
+--- needs --- BufferStockTheory.idv[483] ==> BufferStockTheory387x.svg ---
+--- needs --- BufferStockTheory.idv[484] ==> BufferStockTheory388x.svg ---
+--- needs --- BufferStockTheory.idv[485] ==> BufferStockTheory389x.svg ---
+--- needs --- BufferStockTheory.idv[486] ==> BufferStockTheory390x.svg ---
+--- needs --- BufferStockTheory.idv[487] ==> BufferStockTheory391x.svg ---
+--- needs --- BufferStockTheory.idv[488] ==> BufferStockTheory392x.svg ---
+--- needs --- BufferStockTheory.idv[489] ==> BufferStockTheory393x.svg ---
+--- needs --- BufferStockTheory.idv[490] ==> BufferStockTheory394x.svg ---
+--- needs --- BufferStockTheory.idv[491] ==> BufferStockTheory395x.svg ---
+--- needs --- BufferStockTheory.idv[492] ==> BufferStockTheory396x.svg ---
+File: ./Figures/cGroTargetFig.png
+--- needs --- BufferStockTheory.idv[494] ==> BufferStockTheory397x.svg ---
+--- needs --- BufferStockTheory.idv[496] ==> BufferStockTheory398x.svg ---
+--- needs --- BufferStockTheory.idv[497] ==> BufferStockTheory399x.svg ---
+--- needs --- BufferStockTheory.idv[498] ==> BufferStockTheory400x.svg ---
+--- needs --- BufferStockTheory.idv[499] ==> BufferStockTheory401x.svg ---
+--- needs --- BufferStockTheory.idv[500] ==> BufferStockTheory402x.svg ---
+--- needs --- BufferStockTheory.idv[501] ==> BufferStockTheory403x.svg ---
+--- needs --- BufferStockTheory.idv[503] ==> BufferStockTheory404x.svg ---
+--- needs --- BufferStockTheory.idv[504] ==> BufferStockTheory405x.svg ---
+--- needs --- BufferStockTheory.idv[506] ==> BufferStockTheory406x.svg ---
+--- needs --- BufferStockTheory.idv[507] ==> BufferStockTheory407x.svg ---
+--- needs --- BufferStockTheory.idv[508] ==> BufferStockTheory408x.svg ---
+--- needs --- BufferStockTheory.idv[509] ==> BufferStockTheory409x.svg ---
+--- needs --- BufferStockTheory.idv[510] ==> BufferStockTheory410x.svg ---
+File: ./Figures/MPCLimits.svg
+File: ./Figures/cFuncBounds.svg
+--- needs --- BufferStockTheory.idv[512] ==> BufferStockTheory411x.svg ---
+--- needs --- BufferStockTheory.idv[513] ==> BufferStockTheory412x.svg ---
+--- needs --- BufferStockTheory.idv[514] ==> BufferStockTheory413x.svg ---
+--- needs --- BufferStockTheory.idv[515] ==> BufferStockTheory414x.svg ---
+--- needs --- BufferStockTheory.idv[516] ==> BufferStockTheory415x.svg ---
+--- needs --- BufferStockTheory.idv[517] ==> BufferStockTheory416x.svg ---
+--- needs --- BufferStockTheory.idv[519] ==> BufferStockTheory417x.svg ---
+--- needs --- BufferStockTheory.idv[520] ==> BufferStockTheory418x.svg ---
+--- needs --- BufferStockTheory.idv[521] ==> BufferStockTheory419x.svg ---
+--- needs --- BufferStockTheory.idv[522] ==> BufferStockTheory420x.svg ---
+--- needs --- BufferStockTheory.idv[523] ==> BufferStockTheory421x.svg ---
+--- needs --- BufferStockTheory.idv[524] ==> BufferStockTheory422x.svg ---
+--- needs --- BufferStockTheory.idv[526] ==> BufferStockTheory423x.svg ---
+--- needs --- BufferStockTheory.idv[527] ==> BufferStockTheory424x.svg ---
+--- needs --- BufferStockTheory.idv[528] ==> BufferStockTheory425x.svg ---
+--- needs --- BufferStockTheory.idv[529] ==> BufferStockTheory426x.svg ---
+--- needs --- BufferStockTheory.idv[530] ==> BufferStockTheory427x.svg ---
+--- needs --- BufferStockTheory.idv[532] ==> BufferStockTheory428x.svg ---
+--- needs --- BufferStockTheory.idv[533] ==> BufferStockTheory429x.svg ---
+--- needs --- BufferStockTheory.idv[534] ==> BufferStockTheory430x.svg ---
+--- needs --- BufferStockTheory.idv[535] ==> BufferStockTheory431x.svg ---
+--- needs --- BufferStockTheory.idv[536] ==> BufferStockTheory432x.svg ---
+--- needs --- BufferStockTheory.idv[537] ==> BufferStockTheory433x.svg ---
+--- needs --- BufferStockTheory.idv[538] ==> BufferStockTheory434x.svg ---
+--- needs --- BufferStockTheory.idv[540] ==> BufferStockTheory435x.svg ---
+--- needs --- BufferStockTheory.idv[541] ==> BufferStockTheory436x.svg ---
+--- needs --- BufferStockTheory.idv[542] ==> BufferStockTheory437x.svg ---
+--- needs --- BufferStockTheory.idv[543] ==> BufferStockTheory438x.svg ---
+--- needs --- BufferStockTheory.idv[544] ==> BufferStockTheory439x.svg ---
+--- needs --- BufferStockTheory.idv[546] ==> BufferStockTheory440x.svg ---
+--- needs --- BufferStockTheory.idv[547] ==> BufferStockTheory441x.svg ---
+--- needs --- BufferStockTheory.idv[549] ==> BufferStockTheory442x.svg ---
+--- needs --- BufferStockTheory.idv[550] ==> BufferStockTheory443x.svg ---
+--- needs --- BufferStockTheory.idv[551] ==> BufferStockTheory444x.svg ---
+--- needs --- BufferStockTheory.idv[553] ==> BufferStockTheory445x.svg ---
+--- needs --- BufferStockTheory.idv[554] ==> BufferStockTheory446x.svg ---
+--- needs --- BufferStockTheory.idv[555] ==> BufferStockTheory447x.svg ---
+--- needs --- BufferStockTheory.idv[556] ==> BufferStockTheory448x.svg ---
+--- needs --- BufferStockTheory.idv[557] ==> BufferStockTheory449x.svg ---
+--- needs --- BufferStockTheory.idv[558] ==> BufferStockTheory450x.svg ---
+--- needs --- BufferStockTheory.idv[559] ==> BufferStockTheory451x.svg ---
+--- needs --- BufferStockTheory.idv[560] ==> BufferStockTheory452x.svg ---
+--- needs --- BufferStockTheory.idv[561] ==> BufferStockTheory453x.svg ---
+--- needs --- BufferStockTheory.idv[562] ==> BufferStockTheory454x.svg ---
+--- needs --- BufferStockTheory.idv[563] ==> BufferStockTheory455x.svg ---
+--- needs --- BufferStockTheory.idv[564] ==> BufferStockTheory456x.svg ---
+--- needs --- BufferStockTheory.idv[565] ==> BufferStockTheory457x.svg ---
+--- needs --- BufferStockTheory.idv[567] ==> BufferStockTheory458x.svg ---
+--- needs --- BufferStockTheory.idv[568] ==> BufferStockTheory459x.svg ---
+--- needs --- BufferStockTheory.idv[569] ==> BufferStockTheory460x.svg ---
+--- needs --- BufferStockTheory.idv[570] ==> BufferStockTheory461x.svg ---
+--- needs --- BufferStockTheory.idv[571] ==> BufferStockTheory462x.svg ---
+--- needs --- BufferStockTheory.idv[572] ==> BufferStockTheory463x.svg ---
+--- needs --- BufferStockTheory.idv[573] ==> BufferStockTheory464x.svg ---
+--- needs --- BufferStockTheory.idv[575] ==> BufferStockTheory465x.svg ---
+--- needs --- BufferStockTheory.idv[576] ==> BufferStockTheory466x.svg ---
+--- needs --- BufferStockTheory.idv[578] ==> BufferStockTheory467x.svg ---
+--- needs --- BufferStockTheory.idv[579] ==> BufferStockTheory468x.svg ---
+--- needs --- BufferStockTheory.idv[580] ==> BufferStockTheory469x.svg ---
+--- needs --- BufferStockTheory.idv[581] ==> BufferStockTheory470x.svg ---
+--- needs --- BufferStockTheory.idv[583] ==> BufferStockTheory471x.svg ---
+--- needs --- BufferStockTheory.idv[584] ==> BufferStockTheory472x.svg ---
+--- needs --- BufferStockTheory.idv[586] ==> BufferStockTheory473x.svg ---
+--- needs --- BufferStockTheory.idv[587] ==> BufferStockTheory474x.svg ---
+--- needs --- BufferStockTheory.idv[588] ==> BufferStockTheory475x.svg ---
+--- needs --- BufferStockTheory.idv[589] ==> BufferStockTheory476x.svg ---
+--- needs --- BufferStockTheory.idv[590] ==> BufferStockTheory477x.svg ---
+--- needs --- BufferStockTheory.idv[591] ==> BufferStockTheory478x.svg ---
+--- needs --- BufferStockTheory.idv[592] ==> BufferStockTheory479x.svg ---
+--- needs --- BufferStockTheory.idv[593] ==> BufferStockTheory480x.svg ---
+File: ./Figures/GICNrmFailsButGICRawHolds.svg
+--- needs --- BufferStockTheory.idv[595] ==> BufferStockTheory481x.svg ---
+--- needs --- BufferStockTheory.idv[596] ==> BufferStockTheory482x.svg ---
+--- needs --- BufferStockTheory.idv[597] ==> BufferStockTheory483x.svg ---
+--- needs --- BufferStockTheory.idv[599] ==> BufferStockTheory484x.svg ---
+--- needs --- BufferStockTheory.idv[600] ==> BufferStockTheory485x.svg ---
+--- needs --- BufferStockTheory.idv[601] ==> BufferStockTheory486x.svg ---
+--- needs --- BufferStockTheory.idv[602] ==> BufferStockTheory487x.svg ---
+--- needs --- BufferStockTheory.idv[603] ==> BufferStockTheory488x.svg ---
+--- needs --- BufferStockTheory.idv[604] ==> BufferStockTheory489x.svg ---
+--- needs --- BufferStockTheory.idv[605] ==> BufferStockTheory490x.svg ---
+--- needs --- BufferStockTheory.idv[606] ==> BufferStockTheory491x.svg ---
+--- needs --- BufferStockTheory.idv[607] ==> BufferStockTheory492x.svg ---
+--- needs --- BufferStockTheory.idv[608] ==> BufferStockTheory493x.svg ---
+--- needs --- BufferStockTheory.idv[609] ==> BufferStockTheory494x.svg ---
+--- needs --- BufferStockTheory.idv[611] ==> BufferStockTheory495x.svg ---
+--- needs --- BufferStockTheory.idv[613] ==> BufferStockTheory496x.svg ---
+--- needs --- BufferStockTheory.idv[614] ==> BufferStockTheory497x.svg ---
+--- needs --- BufferStockTheory.idv[616] ==> BufferStockTheory498x.svg ---
+--- needs --- BufferStockTheory.idv[618] ==> BufferStockTheory499x.svg ---
+--- needs --- BufferStockTheory.idv[619] ==> BufferStockTheory500x.svg ---
+--- needs --- BufferStockTheory.idv[620] ==> BufferStockTheory501x.svg ---
+--- needs --- BufferStockTheory.idv[621] ==> BufferStockTheory502x.svg ---
+--- needs --- BufferStockTheory.idv[622] ==> BufferStockTheory503x.svg ---
+--- needs --- BufferStockTheory.idv[623] ==> BufferStockTheory504x.svg ---
+--- needs --- BufferStockTheory.idv[625] ==> BufferStockTheory505x.svg ---
+--- needs --- BufferStockTheory.idv[626] ==> BufferStockTheory506x.svg ---
+--- needs --- BufferStockTheory.idv[627] ==> BufferStockTheory507x.svg ---
+--- needs --- BufferStockTheory.idv[628] ==> BufferStockTheory508x.svg ---
+--- needs --- BufferStockTheory.idv[629] ==> BufferStockTheory509x.svg ---
+--- needs --- BufferStockTheory.idv[630] ==> BufferStockTheory510x.svg ---
+--- needs --- BufferStockTheory.idv[632] ==> BufferStockTheory511x.svg ---
+--- needs --- BufferStockTheory.idv[633] ==> BufferStockTheory512x.svg ---
+--- needs --- BufferStockTheory.idv[635] ==> BufferStockTheory513x.svg ---
+--- needs --- BufferStockTheory.idv[636] ==> BufferStockTheory514x.svg ---
+--- needs --- BufferStockTheory.idv[637] ==> BufferStockTheory515x.svg ---
+--- needs --- BufferStockTheory.idv[638] ==> BufferStockTheory516x.svg ---
+--- needs --- BufferStockTheory.idv[639] ==> BufferStockTheory517x.svg ---
+--- needs --- BufferStockTheory.idv[640] ==> BufferStockTheory518x.svg ---
+--- needs --- BufferStockTheory.idv[641] ==> BufferStockTheory519x.svg ---
+--- needs --- BufferStockTheory.idv[642] ==> BufferStockTheory520x.svg ---
+--- needs --- BufferStockTheory.idv[643] ==> BufferStockTheory521x.svg ---
+--- needs --- BufferStockTheory.idv[645] ==> BufferStockTheory522x.svg ---
+--- needs --- BufferStockTheory.idv[647] ==> BufferStockTheory523x.svg ---
+--- needs --- BufferStockTheory.idv[648] ==> BufferStockTheory524x.svg ---
+--- needs --- BufferStockTheory.idv[649] ==> BufferStockTheory525x.svg ---
+--- needs --- BufferStockTheory.idv[650] ==> BufferStockTheory526x.svg ---
+--- needs --- BufferStockTheory.idv[651] ==> BufferStockTheory527x.svg ---
+--- needs --- BufferStockTheory.idv[653] ==> BufferStockTheory528x.svg ---
+--- needs --- BufferStockTheory.idv[654] ==> BufferStockTheory529x.svg ---
+--- needs --- BufferStockTheory.idv[656] ==> BufferStockTheory530x.svg ---
+--- needs --- BufferStockTheory.idv[657] ==> BufferStockTheory531x.svg ---
+--- needs --- BufferStockTheory.idv[659] ==> BufferStockTheory532x.svg ---
+--- empty picture --- BufferStockTheory.idv[659] ---
+--- needs --- BufferStockTheory.idv[661] ==> BufferStockTheory533x.svg ---
+--- needs --- BufferStockTheory.idv[662] ==> BufferStockTheory534x.svg ---
+--- needs --- BufferStockTheory.idv[664] ==> BufferStockTheory535x.svg ---
+--- needs --- BufferStockTheory.idv[665] ==> BufferStockTheory536x.svg ---
+--- needs --- BufferStockTheory.idv[667] ==> BufferStockTheory537x.svg ---
+--- needs --- BufferStockTheory.idv[668] ==> BufferStockTheory538x.svg ---
+--- needs --- BufferStockTheory.idv[669] ==> BufferStockTheory539x.svg ---
+--- needs --- BufferStockTheory.idv[670] ==> BufferStockTheory540x.svg ---
+--- needs --- BufferStockTheory.idv[671] ==> BufferStockTheory541x.svg ---
+--- needs --- BufferStockTheory.idv[672] ==> BufferStockTheory542x.svg ---
+--- needs --- BufferStockTheory.idv[673] ==> BufferStockTheory543x.svg ---
+--- needs --- BufferStockTheory.idv[674] ==> BufferStockTheory544x.svg ---
+--- needs --- BufferStockTheory.idv[675] ==> BufferStockTheory545x.svg ---
+--- needs --- BufferStockTheory.idv[676] ==> BufferStockTheory546x.svg ---
+--- needs --- BufferStockTheory.idv[677] ==> BufferStockTheory547x.svg ---
+--- needs --- BufferStockTheory.idv[678] ==> BufferStockTheory548x.svg ---
+--- needs --- BufferStockTheory.idv[679] ==> BufferStockTheory549x.svg ---
+--- needs --- BufferStockTheory.idv[680] ==> BufferStockTheory550x.svg ---
+--- needs --- BufferStockTheory.idv[681] ==> BufferStockTheory551x.svg ---
+--- needs --- BufferStockTheory.idv[682] ==> BufferStockTheory552x.svg ---
+--- needs --- BufferStockTheory.idv[683] ==> BufferStockTheory553x.svg ---
+--- needs --- BufferStockTheory.idv[685] ==> BufferStockTheory554x.svg ---
+--- needs --- BufferStockTheory.idv[687] ==> BufferStockTheory555x.svg ---
+--- needs --- BufferStockTheory.idv[688] ==> BufferStockTheory556x.svg ---
+--- needs --- BufferStockTheory.idv[689] ==> BufferStockTheory557x.svg ---
+--- needs --- BufferStockTheory.idv[690] ==> BufferStockTheory558x.svg ---
+--- needs --- BufferStockTheory.idv[691] ==> BufferStockTheory559x.svg ---
+--- needs --- BufferStockTheory.idv[692] ==> BufferStockTheory560x.svg ---
+--- needs --- BufferStockTheory.idv[693] ==> BufferStockTheory561x.svg ---
+--- needs --- BufferStockTheory.idv[694] ==> BufferStockTheory562x.svg ---
+--- needs --- BufferStockTheory.idv[695] ==> BufferStockTheory563x.svg ---
+--- needs --- BufferStockTheory.idv[696] ==> BufferStockTheory564x.svg ---
+--- needs --- BufferStockTheory.idv[697] ==> BufferStockTheory565x.svg ---
+--- needs --- BufferStockTheory.idv[699] ==> BufferStockTheory566x.svg ---
+--- needs --- BufferStockTheory.idv[700] ==> BufferStockTheory567x.svg ---
+--- needs --- BufferStockTheory.idv[701] ==> BufferStockTheory568x.svg ---
+--- needs --- BufferStockTheory.idv[702] ==> BufferStockTheory569x.svg ---
+--- needs --- BufferStockTheory.idv[704] ==> BufferStockTheory570x.svg ---
+--- needs --- BufferStockTheory.idv[705] ==> BufferStockTheory571x.svg ---
+--- needs --- BufferStockTheory.idv[706] ==> BufferStockTheory572x.svg ---
+--- needs --- BufferStockTheory.idv[707] ==> BufferStockTheory573x.svg ---
+--- needs --- BufferStockTheory.idv[708] ==> BufferStockTheory574x.svg ---
+--- needs --- BufferStockTheory.idv[709] ==> BufferStockTheory575x.svg ---
+--- needs --- BufferStockTheory.idv[710] ==> BufferStockTheory576x.svg ---
+--- needs --- BufferStockTheory.idv[711] ==> BufferStockTheory577x.svg ---
+--- needs --- BufferStockTheory.idv[712] ==> BufferStockTheory578x.svg ---
+--- needs --- BufferStockTheory.idv[713] ==> BufferStockTheory579x.svg ---
+--- needs --- BufferStockTheory.idv[715] ==> BufferStockTheory580x.svg ---
+--- needs --- BufferStockTheory.idv[716] ==> BufferStockTheory581x.svg ---
+--- needs --- BufferStockTheory.idv[717] ==> BufferStockTheory582x.svg ---
+--- needs --- BufferStockTheory.idv[718] ==> BufferStockTheory583x.svg ---
+--- needs --- BufferStockTheory.idv[719] ==> BufferStockTheory584x.svg ---
+--- needs --- BufferStockTheory.idv[720] ==> BufferStockTheory585x.svg ---
+--- needs --- BufferStockTheory.idv[721] ==> BufferStockTheory586x.svg ---
+--- needs --- BufferStockTheory.idv[722] ==> BufferStockTheory587x.svg ---
+--- needs --- BufferStockTheory.idv[723] ==> BufferStockTheory588x.svg ---
+--- needs --- BufferStockTheory.idv[724] ==> BufferStockTheory589x.svg ---
+--- needs --- BufferStockTheory.idv[725] ==> BufferStockTheory590x.svg ---
+--- needs --- BufferStockTheory.idv[726] ==> BufferStockTheory591x.svg ---
+--- needs --- BufferStockTheory.idv[727] ==> BufferStockTheory592x.svg ---
+--- needs --- BufferStockTheory.idv[728] ==> BufferStockTheory593x.svg ---
+--- needs --- BufferStockTheory.idv[729] ==> BufferStockTheory594x.svg ---
+--- needs --- BufferStockTheory.idv[730] ==> BufferStockTheory595x.svg ---
+--- needs --- BufferStockTheory.idv[731] ==> BufferStockTheory596x.svg ---
+--- needs --- BufferStockTheory.idv[732] ==> BufferStockTheory597x.svg ---
+--- needs --- BufferStockTheory.idv[733] ==> BufferStockTheory598x.svg ---
+--- needs --- BufferStockTheory.idv[734] ==> BufferStockTheory599x.svg ---
+--- needs --- BufferStockTheory.idv[735] ==> BufferStockTheory600x.svg ---
+--- needs --- BufferStockTheory.idv[737] ==> BufferStockTheory601x.svg ---
+--- needs --- BufferStockTheory.idv[738] ==> BufferStockTheory602x.svg ---
+--- needs --- BufferStockTheory.idv[739] ==> BufferStockTheory603x.svg ---
+--- needs --- BufferStockTheory.idv[740] ==> BufferStockTheory604x.svg ---
+--- needs --- BufferStockTheory.idv[741] ==> BufferStockTheory605x.svg ---
+--- needs --- BufferStockTheory.idv[742] ==> BufferStockTheory606x.svg ---
+--- needs --- BufferStockTheory.idv[743] ==> BufferStockTheory607x.svg ---
+--- needs --- BufferStockTheory.idv[744] ==> BufferStockTheory608x.svg ---
+--- needs --- BufferStockTheory.idv[746] ==> BufferStockTheory609x.svg ---
+--- needs --- BufferStockTheory.idv[747] ==> BufferStockTheory610x.svg ---
+--- needs --- BufferStockTheory.idv[748] ==> BufferStockTheory611x.svg ---
+--- needs --- BufferStockTheory.idv[749] ==> BufferStockTheory612x.svg ---
+--- needs --- BufferStockTheory.idv[750] ==> BufferStockTheory613x.svg ---
+--- needs --- BufferStockTheory.idv[751] ==> BufferStockTheory614x.svg ---
+--- needs --- BufferStockTheory.idv[752] ==> BufferStockTheory615x.svg ---
+--- needs --- BufferStockTheory.idv[754] ==> BufferStockTheory616x.svg ---
+--- needs --- BufferStockTheory.idv[755] ==> BufferStockTheory617x.svg ---
+--- needs --- BufferStockTheory.idv[756] ==> BufferStockTheory618x.svg ---
+--- needs --- BufferStockTheory.idv[757] ==> BufferStockTheory619x.svg ---
+--- needs --- BufferStockTheory.idv[758] ==> BufferStockTheory620x.svg ---
+--- needs --- BufferStockTheory.idv[759] ==> BufferStockTheory621x.svg ---
+--- needs --- BufferStockTheory.idv[760] ==> BufferStockTheory622x.svg ---
+--- needs --- BufferStockTheory.idv[761] ==> BufferStockTheory623x.svg ---
+--- needs --- BufferStockTheory.idv[762] ==> BufferStockTheory624x.svg ---
+--- needs --- BufferStockTheory.idv[763] ==> BufferStockTheory625x.svg ---
+--- needs --- BufferStockTheory.idv[764] ==> BufferStockTheory626x.svg ---
+--- needs --- BufferStockTheory.idv[765] ==> BufferStockTheory627x.svg ---
+--- needs --- BufferStockTheory.idv[766] ==> BufferStockTheory628x.svg ---
+--- needs --- BufferStockTheory.idv[767] ==> BufferStockTheory629x.svg ---
+--- needs --- BufferStockTheory.idv[769] ==> BufferStockTheory630x.svg ---
+--- needs --- BufferStockTheory.idv[771] ==> BufferStockTheory631x.svg ---
+--- needs --- BufferStockTheory.idv[772] ==> BufferStockTheory632x.svg ---
+--- needs --- BufferStockTheory.idv[773] ==> BufferStockTheory633x.svg ---
+--- needs --- BufferStockTheory.idv[774] ==> BufferStockTheory634x.svg ---
+--- needs --- BufferStockTheory.idv[775] ==> BufferStockTheory635x.svg ---
+--- needs --- BufferStockTheory.idv[776] ==> BufferStockTheory636x.svg ---
+--- needs --- BufferStockTheory.idv[777] ==> BufferStockTheory637x.svg ---
+--- needs --- BufferStockTheory.idv[779] ==> BufferStockTheory638x.svg ---
+--- needs --- BufferStockTheory.idv[781] ==> BufferStockTheory639x.svg ---
+--- needs --- BufferStockTheory.idv[783] ==> BufferStockTheory640x.svg ---
+--- needs --- BufferStockTheory.idv[784] ==> BufferStockTheory641x.svg ---
+--- needs --- BufferStockTheory.idv[785] ==> BufferStockTheory642x.svg ---
+--- needs --- BufferStockTheory.idv[787] ==> BufferStockTheory643x.svg ---
+--- needs --- BufferStockTheory.idv[789] ==> BufferStockTheory644x.svg ---
+--- needs --- BufferStockTheory.idv[791] ==> BufferStockTheory645x.svg ---
+--- needs --- BufferStockTheory.idv[792] ==> BufferStockTheory646x.svg ---
+--- needs --- BufferStockTheory.idv[794] ==> BufferStockTheory647x.svg ---
+--- needs --- BufferStockTheory.idv[795] ==> BufferStockTheory648x.svg ---
+--- needs --- BufferStockTheory.idv[796] ==> BufferStockTheory649x.svg ---
+--- needs --- BufferStockTheory.idv[797] ==> BufferStockTheory650x.svg ---
+--- needs --- BufferStockTheory.idv[798] ==> BufferStockTheory651x.svg ---
+--- needs --- BufferStockTheory.idv[799] ==> BufferStockTheory652x.svg ---
+--- needs --- BufferStockTheory.idv[800] ==> BufferStockTheory653x.svg ---
+--- needs --- BufferStockTheory.idv[801] ==> BufferStockTheory654x.svg ---
+--- needs --- BufferStockTheory.idv[802] ==> BufferStockTheory655x.svg ---
+--- needs --- BufferStockTheory.idv[803] ==> BufferStockTheory656x.svg ---
+--- needs --- BufferStockTheory.idv[804] ==> BufferStockTheory657x.svg ---
+--- needs --- BufferStockTheory.idv[805] ==> BufferStockTheory658x.svg ---
+--- needs --- BufferStockTheory.idv[806] ==> BufferStockTheory659x.svg ---
+--- needs --- BufferStockTheory.idv[807] ==> BufferStockTheory660x.svg ---
+--- needs --- BufferStockTheory.idv[808] ==> BufferStockTheory661x.svg ---
+--- needs --- BufferStockTheory.idv[809] ==> BufferStockTheory662x.svg ---
+--- needs --- BufferStockTheory.idv[810] ==> BufferStockTheory663x.svg ---
+--- needs --- BufferStockTheory.idv[812] ==> BufferStockTheory664x.svg ---
+--- needs --- BufferStockTheory.idv[813] ==> BufferStockTheory665x.svg ---
+--- needs --- BufferStockTheory.idv[814] ==> BufferStockTheory666x.svg ---
+--- needs --- BufferStockTheory.idv[815] ==> BufferStockTheory667x.svg ---
+--- needs --- BufferStockTheory.idv[816] ==> BufferStockTheory668x.svg ---
+--- needs --- BufferStockTheory.idv[817] ==> BufferStockTheory669x.svg ---
+--- needs --- BufferStockTheory.idv[819] ==> BufferStockTheory670x.svg ---
+--- needs --- BufferStockTheory.idv[820] ==> BufferStockTheory671x.svg ---
+--- needs --- BufferStockTheory.idv[821] ==> BufferStockTheory672x.svg ---
+--- needs --- BufferStockTheory.idv[822] ==> BufferStockTheory673x.svg ---
+--- needs --- BufferStockTheory.idv[823] ==> BufferStockTheory674x.svg ---
+--- needs --- BufferStockTheory.idv[824] ==> BufferStockTheory675x.svg ---
+--- needs --- BufferStockTheory.idv[825] ==> BufferStockTheory676x.svg ---
+File: ./Appendices/../Figures/PFGICHoldsFHWCFailsRICFails.svg
+--- needs --- BufferStockTheory.idv[827] ==> BufferStockTheory677x.svg ---
+--- needs --- BufferStockTheory.idv[828] ==> BufferStockTheory678x.svg ---
+--- needs --- BufferStockTheory.idv[830] ==> BufferStockTheory679x.svg ---
+--- needs --- BufferStockTheory.idv[831] ==> BufferStockTheory680x.svg ---
+--- needs --- BufferStockTheory.idv[833] ==> BufferStockTheory681x.svg ---
+--- needs --- BufferStockTheory.idv[834] ==> BufferStockTheory682x.svg ---
+--- needs --- BufferStockTheory.idv[835] ==> BufferStockTheory683x.svg ---
+--- needs --- BufferStockTheory.idv[836] ==> BufferStockTheory684x.svg ---
+--- needs --- BufferStockTheory.idv[837] ==> BufferStockTheory685x.svg ---
+--- needs --- BufferStockTheory.idv[838] ==> BufferStockTheory686x.svg ---
+--- needs --- BufferStockTheory.idv[839] ==> BufferStockTheory687x.svg ---
+--- needs --- BufferStockTheory.idv[840] ==> BufferStockTheory688x.svg ---
+--- needs --- BufferStockTheory.idv[841] ==> BufferStockTheory689x.svg ---
+--- needs --- BufferStockTheory.idv[842] ==> BufferStockTheory690x.svg ---
+--- needs --- BufferStockTheory.idv[844] ==> BufferStockTheory691x.svg ---
+--- needs --- BufferStockTheory.idv[845] ==> BufferStockTheory692x.svg ---
+--- needs --- BufferStockTheory.idv[846] ==> BufferStockTheory693x.svg ---
+--- needs --- BufferStockTheory.idv[847] ==> BufferStockTheory694x.svg ---
+--- needs --- BufferStockTheory.idv[848] ==> BufferStockTheory695x.svg ---
+--- needs --- BufferStockTheory.idv[849] ==> BufferStockTheory696x.svg ---
+--- needs --- BufferStockTheory.idv[850] ==> BufferStockTheory697x.svg ---
+--- needs --- BufferStockTheory.idv[851] ==> BufferStockTheory698x.svg ---
+--- needs --- BufferStockTheory.idv[852] ==> BufferStockTheory699x.svg ---
+--- needs --- BufferStockTheory.idv[854] ==> BufferStockTheory700x.svg ---
+--- needs --- BufferStockTheory.idv[855] ==> BufferStockTheory701x.svg ---
+--- needs --- BufferStockTheory.idv[856] ==> BufferStockTheory702x.svg ---
+--- needs --- BufferStockTheory.idv[857] ==> BufferStockTheory703x.svg ---
+--- needs --- BufferStockTheory.idv[858] ==> BufferStockTheory704x.svg ---
+--- needs --- BufferStockTheory.idv[859] ==> BufferStockTheory705x.svg ---
+--- needs --- BufferStockTheory.idv[860] ==> BufferStockTheory706x.svg ---
+--- needs --- BufferStockTheory.idv[862] ==> BufferStockTheory707x.svg ---
+--- needs --- BufferStockTheory.idv[863] ==> BufferStockTheory708x.svg ---
+--- needs --- BufferStockTheory.idv[865] ==> BufferStockTheory709x.svg ---
+--- needs --- BufferStockTheory.idv[866] ==> BufferStockTheory710x.svg ---
+--- needs --- BufferStockTheory.idv[867] ==> BufferStockTheory711x.svg ---
+--- needs --- BufferStockTheory.idv[868] ==> BufferStockTheory712x.svg ---
+--- needs --- BufferStockTheory.idv[870] ==> BufferStockTheory713x.svg ---
+--- needs --- BufferStockTheory.idv[872] ==> BufferStockTheory714x.svg ---
+--- needs --- BufferStockTheory.idv[873] ==> BufferStockTheory715x.svg ---
+--- needs --- BufferStockTheory.idv[874] ==> BufferStockTheory716x.svg ---
+--- needs --- BufferStockTheory.idv[875] ==> BufferStockTheory717x.svg ---
+--- needs --- BufferStockTheory.idv[876] ==> BufferStockTheory718x.svg ---
+--- needs --- BufferStockTheory.idv[877] ==> BufferStockTheory719x.svg ---
+--- needs --- BufferStockTheory.idv[878] ==> BufferStockTheory720x.svg ---
+--- needs --- BufferStockTheory.idv[879] ==> BufferStockTheory721x.svg ---
+--- needs --- BufferStockTheory.idv[881] ==> BufferStockTheory722x.svg ---
+--- needs --- BufferStockTheory.idv[883] ==> BufferStockTheory723x.svg ---
+--- needs --- BufferStockTheory.idv[884] ==> BufferStockTheory724x.svg ---
+--- needs --- BufferStockTheory.idv[885] ==> BufferStockTheory725x.svg ---
+--- needs --- BufferStockTheory.idv[886] ==> BufferStockTheory726x.svg ---
+--- needs --- BufferStockTheory.idv[887] ==> BufferStockTheory727x.svg ---
+--- needs --- BufferStockTheory.idv[888] ==> BufferStockTheory728x.svg ---
+--- needs --- BufferStockTheory.idv[889] ==> BufferStockTheory729x.svg ---
+--- needs --- BufferStockTheory.idv[890] ==> BufferStockTheory730x.svg ---
+--- needs --- BufferStockTheory.idv[892] ==> BufferStockTheory731x.svg ---
+--- needs --- BufferStockTheory.idv[893] ==> BufferStockTheory732x.svg ---
+--- needs --- BufferStockTheory.idv[894] ==> BufferStockTheory733x.svg ---
+--- needs --- BufferStockTheory.idv[895] ==> BufferStockTheory734x.svg ---
+--- needs --- BufferStockTheory.idv[897] ==> BufferStockTheory735x.svg ---
+--- needs --- BufferStockTheory.idv[898] ==> BufferStockTheory736x.svg ---
+--- needs --- BufferStockTheory.idv[899] ==> BufferStockTheory737x.svg ---
+--- needs --- BufferStockTheory.idv[900] ==> BufferStockTheory738x.svg ---
+--- needs --- BufferStockTheory.idv[901] ==> BufferStockTheory739x.svg ---
+--- needs --- BufferStockTheory.idv[902] ==> BufferStockTheory740x.svg ---
+--- needs --- BufferStockTheory.idv[903] ==> BufferStockTheory741x.svg ---
+--- needs --- BufferStockTheory.idv[904] ==> BufferStockTheory742x.svg ---
+--- needs --- BufferStockTheory.idv[905] ==> BufferStockTheory743x.svg ---
+--- needs --- BufferStockTheory.idv[906] ==> BufferStockTheory744x.svg ---
+--- needs --- BufferStockTheory.idv[907] ==> BufferStockTheory745x.svg ---
+--- needs --- BufferStockTheory.idv[908] ==> BufferStockTheory746x.svg ---
+--- needs --- BufferStockTheory.idv[909] ==> BufferStockTheory747x.svg ---
+--- needs --- BufferStockTheory.idv[910] ==> BufferStockTheory748x.svg ---
+--- needs --- BufferStockTheory.idv[912] ==> BufferStockTheory749x.svg ---
+--- needs --- BufferStockTheory.idv[913] ==> BufferStockTheory750x.svg ---
+--- needs --- BufferStockTheory.idv[914] ==> BufferStockTheory751x.svg ---
+--- needs --- BufferStockTheory.idv[915] ==> BufferStockTheory752x.svg ---
+--- needs --- BufferStockTheory.idv[916] ==> BufferStockTheory753x.svg ---
+--- needs --- BufferStockTheory.idv[917] ==> BufferStockTheory754x.svg ---
+--- needs --- BufferStockTheory.idv[918] ==> BufferStockTheory755x.svg ---
+--- needs --- BufferStockTheory.idv[919] ==> BufferStockTheory756x.svg ---
+--- needs --- BufferStockTheory.idv[920] ==> BufferStockTheory757x.svg ---
+--- needs --- BufferStockTheory.idv[921] ==> BufferStockTheory758x.svg ---
+--- needs --- BufferStockTheory.idv[922] ==> BufferStockTheory759x.svg ---
+--- needs --- BufferStockTheory.idv[923] ==> BufferStockTheory760x.svg ---
+--- needs --- BufferStockTheory.idv[924] ==> BufferStockTheory761x.svg ---
+--- needs --- BufferStockTheory.idv[925] ==> BufferStockTheory762x.svg ---
+--- needs --- BufferStockTheory.idv[926] ==> BufferStockTheory763x.svg ---
+--- needs --- BufferStockTheory.idv[927] ==> BufferStockTheory764x.svg ---
+--- needs --- BufferStockTheory.idv[929] ==> BufferStockTheory765x.svg ---
+--- needs --- BufferStockTheory.idv[930] ==> BufferStockTheory766x.svg ---
+--- needs --- BufferStockTheory.idv[932] ==> BufferStockTheory767x.svg ---
+--- needs --- BufferStockTheory.idv[933] ==> BufferStockTheory768x.svg ---
+--- needs --- BufferStockTheory.idv[934] ==> BufferStockTheory769x.svg ---
+--- needs --- BufferStockTheory.idv[935] ==> BufferStockTheory770x.svg ---
+--- needs --- BufferStockTheory.idv[936] ==> BufferStockTheory771x.svg ---
+--- needs --- BufferStockTheory.idv[937] ==> BufferStockTheory772x.svg ---
+--- needs --- BufferStockTheory.idv[938] ==> BufferStockTheory773x.svg ---
+--- needs --- BufferStockTheory.idv[939] ==> BufferStockTheory774x.svg ---
+--- needs --- BufferStockTheory.idv[940] ==> BufferStockTheory775x.svg ---
+--- needs --- BufferStockTheory.idv[942] ==> BufferStockTheory776x.svg ---
+--- needs --- BufferStockTheory.idv[943] ==> BufferStockTheory777x.svg ---
+--- needs --- BufferStockTheory.idv[944] ==> BufferStockTheory778x.svg ---
+--- needs --- BufferStockTheory.idv[945] ==> BufferStockTheory779x.svg ---
+--- needs --- BufferStockTheory.idv[946] ==> BufferStockTheory780x.svg ---
+--- needs --- BufferStockTheory.idv[947] ==> BufferStockTheory781x.svg ---
+--- needs --- BufferStockTheory.idv[948] ==> BufferStockTheory782x.svg ---
+--- needs --- BufferStockTheory.idv[949] ==> BufferStockTheory783x.svg ---
+--- needs --- BufferStockTheory.idv[950] ==> BufferStockTheory784x.svg ---
+--- needs --- BufferStockTheory.idv[951] ==> BufferStockTheory785x.svg ---
+--- needs --- BufferStockTheory.idv[952] ==> BufferStockTheory786x.svg ---
+--- needs --- BufferStockTheory.idv[954] ==> BufferStockTheory787x.svg ---
+--- needs --- BufferStockTheory.idv[956] ==> BufferStockTheory788x.svg ---
+--- needs --- BufferStockTheory.idv[957] ==> BufferStockTheory789x.svg ---
+--- needs --- BufferStockTheory.idv[958] ==> BufferStockTheory790x.svg ---
+--- needs --- BufferStockTheory.idv[959] ==> BufferStockTheory791x.svg ---
+--- needs --- BufferStockTheory.idv[960] ==> BufferStockTheory792x.svg ---
+--- needs --- BufferStockTheory.idv[961] ==> BufferStockTheory793x.svg ---
+--- needs --- BufferStockTheory.idv[962] ==> BufferStockTheory794x.svg ---
+--- needs --- BufferStockTheory.idv[963] ==> BufferStockTheory795x.svg ---
+--- needs --- BufferStockTheory.idv[964] ==> BufferStockTheory796x.svg ---
+--- needs --- BufferStockTheory.idv[965] ==> BufferStockTheory797x.svg ---
+--- needs --- BufferStockTheory.idv[966] ==> BufferStockTheory798x.svg ---
+--- needs --- BufferStockTheory.idv[967] ==> BufferStockTheory799x.svg ---
+--- needs --- BufferStockTheory.idv[968] ==> BufferStockTheory800x.svg ---
+--- needs --- BufferStockTheory.idv[969] ==> BufferStockTheory801x.svg ---
+--- needs --- BufferStockTheory.idv[970] ==> BufferStockTheory802x.svg ---
+--- needs --- BufferStockTheory.idv[971] ==> BufferStockTheory803x.svg ---
+--- needs --- BufferStockTheory.idv[972] ==> BufferStockTheory804x.svg ---
+--- needs --- BufferStockTheory.idv[973] ==> BufferStockTheory805x.svg ---
+--- needs --- BufferStockTheory.idv[975] ==> BufferStockTheory806x.svg ---
+--- needs --- BufferStockTheory.idv[976] ==> BufferStockTheory807x.svg ---
+--- needs --- BufferStockTheory.idv[977] ==> BufferStockTheory808x.svg ---
+--- needs --- BufferStockTheory.idv[978] ==> BufferStockTheory809x.svg ---
+--- needs --- BufferStockTheory.idv[979] ==> BufferStockTheory810x.svg ---
+--- needs --- BufferStockTheory.idv[981] ==> BufferStockTheory811x.svg ---
+--- needs --- BufferStockTheory.idv[983] ==> BufferStockTheory812x.svg ---
+--- needs --- BufferStockTheory.idv[984] ==> BufferStockTheory813x.svg ---
+--- needs --- BufferStockTheory.idv[986] ==> BufferStockTheory814x.svg ---
+--- needs --- BufferStockTheory.idv[988] ==> BufferStockTheory815x.svg ---
+--- needs --- BufferStockTheory.idv[989] ==> BufferStockTheory816x.svg ---
+--- needs --- BufferStockTheory.idv[990] ==> BufferStockTheory817x.svg ---
+--- needs --- BufferStockTheory.idv[991] ==> BufferStockTheory818x.svg ---
+--- needs --- BufferStockTheory.idv[992] ==> BufferStockTheory819x.svg ---
+--- needs --- BufferStockTheory.idv[993] ==> BufferStockTheory820x.svg ---
+--- needs --- BufferStockTheory.idv[994] ==> BufferStockTheory821x.svg ---
+--- needs --- BufferStockTheory.idv[996] ==> BufferStockTheory822x.svg ---
+--- needs --- BufferStockTheory.idv[997] ==> BufferStockTheory823x.svg ---
+--- needs --- BufferStockTheory.idv[998] ==> BufferStockTheory824x.svg ---
+--- needs --- BufferStockTheory.idv[999] ==> BufferStockTheory825x.svg ---
+--- needs --- BufferStockTheory.idv[1000] ==> BufferStockTheory826x.svg ---
+--- needs --- BufferStockTheory.idv[1001] ==> BufferStockTheory827x.svg ---
+--- needs --- BufferStockTheory.idv[1002] ==> BufferStockTheory828x.svg ---
+--- needs --- BufferStockTheory.idv[1003] ==> BufferStockTheory829x.svg ---
+--- needs --- BufferStockTheory.idv[1004] ==> BufferStockTheory830x.svg ---
+--- needs --- BufferStockTheory.idv[1005] ==> BufferStockTheory831x.svg ---
+--- needs --- BufferStockTheory.idv[1006] ==> BufferStockTheory832x.svg ---
+--- needs --- BufferStockTheory.idv[1007] ==> BufferStockTheory833x.svg ---
+--- needs --- BufferStockTheory.idv[1008] ==> BufferStockTheory834x.svg ---
+--- needs --- BufferStockTheory.idv[1009] ==> BufferStockTheory835x.svg ---
+--- needs --- BufferStockTheory.idv[1010] ==> BufferStockTheory836x.svg ---
+--- needs --- BufferStockTheory.idv[1011] ==> BufferStockTheory837x.svg ---
+--- needs --- BufferStockTheory.idv[1012] ==> BufferStockTheory838x.svg ---
+--- needs --- BufferStockTheory.idv[1013] ==> BufferStockTheory839x.svg ---
+--- needs --- BufferStockTheory.idv[1014] ==> BufferStockTheory840x.svg ---
+--- needs --- BufferStockTheory.idv[1015] ==> BufferStockTheory841x.svg ---
+--- needs --- BufferStockTheory.idv[1016] ==> BufferStockTheory842x.svg ---
+--- needs --- BufferStockTheory.idv[1018] ==> BufferStockTheory843x.svg ---
+--- needs --- BufferStockTheory.idv[1019] ==> BufferStockTheory844x.svg ---
+--- needs --- BufferStockTheory.idv[1020] ==> BufferStockTheory845x.svg ---
+--- needs --- BufferStockTheory.idv[1021] ==> BufferStockTheory846x.svg ---
+--- needs --- BufferStockTheory.idv[1022] ==> BufferStockTheory847x.svg ---
+--- needs --- BufferStockTheory.idv[1023] ==> BufferStockTheory848x.svg ---
+--- needs --- BufferStockTheory.idv[1024] ==> BufferStockTheory849x.svg ---
+--- needs --- BufferStockTheory.idv[1025] ==> BufferStockTheory850x.svg ---
+--- needs --- BufferStockTheory.idv[1027] ==> BufferStockTheory851x.svg ---
+--- needs --- BufferStockTheory.idv[1028] ==> BufferStockTheory852x.svg ---
+--- needs --- BufferStockTheory.idv[1029] ==> BufferStockTheory853x.svg ---
+--- needs --- BufferStockTheory.idv[1030] ==> BufferStockTheory854x.svg ---
+--- needs --- BufferStockTheory.idv[1031] ==> BufferStockTheory855x.svg ---
+--- needs --- BufferStockTheory.idv[1032] ==> BufferStockTheory856x.svg ---
+--- needs --- BufferStockTheory.idv[1034] ==> BufferStockTheory857x.svg ---
+--- needs --- BufferStockTheory.idv[1036] ==> BufferStockTheory858x.svg ---
+--- needs --- BufferStockTheory.idv[1037] ==> BufferStockTheory859x.svg ---
+--- needs --- BufferStockTheory.idv[1038] ==> BufferStockTheory860x.svg ---
+--- needs --- BufferStockTheory.idv[1039] ==> BufferStockTheory861x.svg ---
+--- needs --- BufferStockTheory.idv[1040] ==> BufferStockTheory862x.svg ---
+--- needs --- BufferStockTheory.idv[1041] ==> BufferStockTheory863x.svg ---
+--- needs --- BufferStockTheory.idv[1042] ==> BufferStockTheory864x.svg ---
+--- needs --- BufferStockTheory.idv[1043] ==> BufferStockTheory865x.svg ---
+--- needs --- BufferStockTheory.idv[1045] ==> BufferStockTheory866x.svg ---
+--- needs --- BufferStockTheory.idv[1046] ==> BufferStockTheory867x.svg ---
+--- needs --- BufferStockTheory.idv[1047] ==> BufferStockTheory868x.svg ---
+--- needs --- BufferStockTheory.idv[1048] ==> BufferStockTheory869x.svg ---
+--- needs --- BufferStockTheory.idv[1049] ==> BufferStockTheory870x.svg ---
+--- needs --- BufferStockTheory.idv[1050] ==> BufferStockTheory871x.svg ---
+--- needs --- BufferStockTheory.idv[1051] ==> BufferStockTheory872x.svg ---
+--- needs --- BufferStockTheory.idv[1053] ==> BufferStockTheory873x.svg ---
+--- needs --- BufferStockTheory.idv[1054] ==> BufferStockTheory874x.svg ---
+--- needs --- BufferStockTheory.idv[1055] ==> BufferStockTheory875x.svg ---
+--- needs --- BufferStockTheory.idv[1056] ==> BufferStockTheory876x.svg ---
+--- needs --- BufferStockTheory.idv[1057] ==> BufferStockTheory877x.svg ---
+--- needs --- BufferStockTheory.idv[1059] ==> BufferStockTheory878x.svg ---
+--- needs --- BufferStockTheory.idv[1061] ==> BufferStockTheory879x.svg ---
+--- needs --- BufferStockTheory.idv[1062] ==> BufferStockTheory880x.svg ---
+--- needs --- BufferStockTheory.idv[1063] ==> BufferStockTheory881x.svg ---
+--- needs --- BufferStockTheory.idv[1065] ==> BufferStockTheory882x.svg ---
+--- needs --- BufferStockTheory.idv[1066] ==> BufferStockTheory883x.svg ---
+--- needs --- BufferStockTheory.idv[1067] ==> BufferStockTheory884x.svg ---
+--- needs --- BufferStockTheory.idv[1068] ==> BufferStockTheory885x.svg ---
+--- needs --- BufferStockTheory.idv[1069] ==> BufferStockTheory886x.svg ---
+--- needs --- BufferStockTheory.idv[1070] ==> BufferStockTheory887x.svg ---
+--- needs --- BufferStockTheory.idv[1071] ==> BufferStockTheory888x.svg ---
+--- needs --- BufferStockTheory.idv[1072] ==> BufferStockTheory889x.svg ---
+--- needs --- BufferStockTheory.idv[1073] ==> BufferStockTheory890x.svg ---
+--- needs --- BufferStockTheory.idv[1074] ==> BufferStockTheory891x.svg ---
+--- needs --- BufferStockTheory.idv[1075] ==> BufferStockTheory892x.svg ---
+--- needs --- BufferStockTheory.idv[1076] ==> BufferStockTheory893x.svg ---
+--- needs --- BufferStockTheory.idv[1077] ==> BufferStockTheory894x.svg ---
+--- needs --- BufferStockTheory.idv[1078] ==> BufferStockTheory895x.svg ---
+--- needs --- BufferStockTheory.idv[1079] ==> BufferStockTheory896x.svg ---
+--- needs --- BufferStockTheory.idv[1081] ==> BufferStockTheory897x.svg ---
+--- needs --- BufferStockTheory.idv[1082] ==> BufferStockTheory898x.svg ---
+--- needs --- BufferStockTheory.idv[1083] ==> BufferStockTheory899x.svg ---
+--- needs --- BufferStockTheory.idv[1084] ==> BufferStockTheory900x.svg ---
+--- needs --- BufferStockTheory.idv[1085] ==> BufferStockTheory901x.svg ---
+--- needs --- BufferStockTheory.idv[1086] ==> BufferStockTheory902x.svg ---
+--- needs --- BufferStockTheory.idv[1088] ==> BufferStockTheory903x.svg ---
+--- needs --- BufferStockTheory.idv[1089] ==> BufferStockTheory904x.svg ---
+--- needs --- BufferStockTheory.idv[1090] ==> BufferStockTheory905x.svg ---
+--- needs --- BufferStockTheory.idv[1091] ==> BufferStockTheory906x.svg ---
+--- needs --- BufferStockTheory.idv[1092] ==> BufferStockTheory907x.svg ---
+--- needs --- BufferStockTheory.idv[1093] ==> BufferStockTheory908x.svg ---
+--- needs --- BufferStockTheory.idv[1094] ==> BufferStockTheory909x.svg ---
+--- needs --- BufferStockTheory.idv[1095] ==> BufferStockTheory910x.svg ---
+--- needs --- BufferStockTheory.idv[1096] ==> BufferStockTheory911x.svg ---
+--- needs --- BufferStockTheory.idv[1097] ==> BufferStockTheory912x.svg ---
+--- needs --- BufferStockTheory.idv[1098] ==> BufferStockTheory913x.svg ---
+--- needs --- BufferStockTheory.idv[1099] ==> BufferStockTheory914x.svg ---
+--- needs --- BufferStockTheory.idv[1100] ==> BufferStockTheory915x.svg ---
+--- needs --- BufferStockTheory.idv[1101] ==> BufferStockTheory916x.svg ---
+--- needs --- BufferStockTheory.idv[1103] ==> BufferStockTheory917x.svg ---
+--- needs --- BufferStockTheory.idv[1104] ==> BufferStockTheory918x.svg ---
+--- needs --- BufferStockTheory.idv[1105] ==> BufferStockTheory919x.svg ---
+--- needs --- BufferStockTheory.idv[1107] ==> BufferStockTheory920x.svg ---
+--- needs --- BufferStockTheory.idv[1108] ==> BufferStockTheory921x.svg ---
+--- needs --- BufferStockTheory.idv[1109] ==> BufferStockTheory922x.svg ---
+--- needs --- BufferStockTheory.idv[1110] ==> BufferStockTheory923x.svg ---
+--- needs --- BufferStockTheory.idv[1111] ==> BufferStockTheory924x.svg ---
+--- needs --- BufferStockTheory.idv[1112] ==> BufferStockTheory925x.svg ---
+--- needs --- BufferStockTheory.idv[1113] ==> BufferStockTheory926x.svg ---
+--- needs --- BufferStockTheory.idv[1114] ==> BufferStockTheory927x.svg ---
+--- needs --- BufferStockTheory.idv[1115] ==> BufferStockTheory928x.svg ---
+--- needs --- BufferStockTheory.idv[1116] ==> BufferStockTheory929x.svg ---
+--- needs --- BufferStockTheory.idv[1117] ==> BufferStockTheory930x.svg ---
+--- needs --- BufferStockTheory.idv[1118] ==> BufferStockTheory931x.svg ---
+--- needs --- BufferStockTheory.idv[1119] ==> BufferStockTheory932x.svg ---
+--- needs --- BufferStockTheory.idv[1120] ==> BufferStockTheory933x.svg ---
+--- needs --- BufferStockTheory.idv[1121] ==> BufferStockTheory934x.svg ---
+--- needs --- BufferStockTheory.idv[1123] ==> BufferStockTheory935x.svg ---
+--- needs --- BufferStockTheory.idv[1124] ==> BufferStockTheory936x.svg ---
+--- needs --- BufferStockTheory.idv[1126] ==> BufferStockTheory937x.svg ---
+--- needs --- BufferStockTheory.idv[1127] ==> BufferStockTheory938x.svg ---
+--- needs --- BufferStockTheory.idv[1129] ==> BufferStockTheory939x.svg ---
+--- needs --- BufferStockTheory.idv[1131] ==> BufferStockTheory940x.svg ---
+--- needs --- BufferStockTheory.idv[1132] ==> BufferStockTheory941x.svg ---
+--- needs --- BufferStockTheory.idv[1133] ==> BufferStockTheory942x.svg ---
+--- needs --- BufferStockTheory.idv[1134] ==> BufferStockTheory943x.svg ---
+--- needs --- BufferStockTheory.idv[1135] ==> BufferStockTheory944x.svg ---
+--- needs --- BufferStockTheory.idv[1136] ==> BufferStockTheory945x.svg ---
+--- needs --- BufferStockTheory.idv[1137] ==> BufferStockTheory946x.svg ---
+--- needs --- BufferStockTheory.idv[1138] ==> BufferStockTheory947x.svg ---
+--- needs --- BufferStockTheory.idv[1139] ==> BufferStockTheory948x.svg ---
+--- needs --- BufferStockTheory.idv[1141] ==> BufferStockTheory949x.svg ---
+--- needs --- BufferStockTheory.idv[1142] ==> BufferStockTheory950x.svg ---
+--- needs --- BufferStockTheory.idv[1144] ==> BufferStockTheory951x.svg ---
+--- needs --- BufferStockTheory.idv[1145] ==> BufferStockTheory952x.svg ---
+--- needs --- BufferStockTheory.idv[1146] ==> BufferStockTheory953x.svg ---
+--- needs --- BufferStockTheory.idv[1148] ==> BufferStockTheory954x.svg ---
+--- needs --- BufferStockTheory.idv[1150] ==> BufferStockTheory955x.svg ---
+--- needs --- BufferStockTheory.idv[1151] ==> BufferStockTheory956x.svg ---
+--- needs --- BufferStockTheory.idv[1152] ==> BufferStockTheory957x.svg ---
+--- needs --- BufferStockTheory.idv[1153] ==> BufferStockTheory958x.svg ---
+--- needs --- BufferStockTheory.idv[1154] ==> BufferStockTheory959x.svg ---
+--- needs --- BufferStockTheory.idv[1155] ==> BufferStockTheory960x.svg ---
+--- needs --- BufferStockTheory.idv[1157] ==> BufferStockTheory961x.svg ---
+--- needs --- BufferStockTheory.idv[1159] ==> BufferStockTheory962x.svg ---
+--- needs --- BufferStockTheory.idv[1160] ==> BufferStockTheory963x.svg ---
+--- needs --- BufferStockTheory.idv[1161] ==> BufferStockTheory964x.svg ---
+--- needs --- BufferStockTheory.idv[1162] ==> BufferStockTheory965x.svg ---
+--- needs --- BufferStockTheory.idv[1163] ==> BufferStockTheory966x.svg ---
+--- needs --- BufferStockTheory.idv[1164] ==> BufferStockTheory967x.svg ---
+--- needs --- BufferStockTheory.idv[1165] ==> BufferStockTheory968x.svg ---
+--- needs --- BufferStockTheory.idv[1167] ==> BufferStockTheory969x.svg ---
+--- needs --- BufferStockTheory.idv[1168] ==> BufferStockTheory970x.svg ---
+--- needs --- BufferStockTheory.idv[1169] ==> BufferStockTheory971x.svg ---
+--- needs --- BufferStockTheory.idv[1170] ==> BufferStockTheory972x.svg ---
+--- needs --- BufferStockTheory.idv[1172] ==> BufferStockTheory973x.svg ---
+--- needs --- BufferStockTheory.idv[1174] ==> BufferStockTheory974x.svg ---
+--- needs --- BufferStockTheory.idv[1175] ==> BufferStockTheory975x.svg ---
+--- needs --- BufferStockTheory.idv[1176] ==> BufferStockTheory976x.svg ---
+--- needs --- BufferStockTheory.idv[1177] ==> BufferStockTheory977x.svg ---
+--- needs --- BufferStockTheory.idv[1178] ==> BufferStockTheory978x.svg ---
+--- needs --- BufferStockTheory.idv[1180] ==> BufferStockTheory979x.svg ---
+--- needs --- BufferStockTheory.idv[1181] ==> BufferStockTheory980x.svg ---
+--- needs --- BufferStockTheory.idv[1182] ==> BufferStockTheory981x.svg ---
+--- needs --- BufferStockTheory.idv[1183] ==> BufferStockTheory982x.svg ---
+--- needs --- BufferStockTheory.idv[1185] ==> BufferStockTheory983x.svg ---
+--- needs --- BufferStockTheory.idv[1187] ==> BufferStockTheory984x.svg ---
+--- needs --- BufferStockTheory.idv[1188] ==> BufferStockTheory985x.svg ---
+--- needs --- BufferStockTheory.idv[1189] ==> BufferStockTheory986x.svg ---
+--- needs --- BufferStockTheory.idv[1190] ==> BufferStockTheory987x.svg ---
+--- needs --- BufferStockTheory.idv[1191] ==> BufferStockTheory988x.svg ---
+--- needs --- BufferStockTheory.idv[1192] ==> BufferStockTheory989x.svg ---
+--- needs --- BufferStockTheory.idv[1193] ==> BufferStockTheory990x.svg ---
+--- needs --- BufferStockTheory.idv[1194] ==> BufferStockTheory991x.svg ---
+--- needs --- BufferStockTheory.idv[1195] ==> BufferStockTheory992x.svg ---
+--- needs --- BufferStockTheory.idv[1197] ==> BufferStockTheory993x.svg ---
+--- needs --- BufferStockTheory.idv[1198] ==> BufferStockTheory994x.svg ---
+--- needs --- BufferStockTheory.idv[1199] ==> BufferStockTheory995x.svg ---
+--- needs --- BufferStockTheory.idv[1200] ==> BufferStockTheory996x.svg ---
+--- needs --- BufferStockTheory.idv[1201] ==> BufferStockTheory997x.svg ---
+--- needs --- BufferStockTheory.idv[1202] ==> BufferStockTheory998x.svg ---
+--- needs --- BufferStockTheory.idv[1203] ==> BufferStockTheory999x.svg ---
+--- needs --- BufferStockTheory.idv[1204] ==> BufferStockTheory1000x.svg ---
+--- needs --- BufferStockTheory.idv[1205] ==> BufferStockTheory1001x.svg ---
+--- needs --- BufferStockTheory.idv[1206] ==> BufferStockTheory1002x.svg ---
+--- needs --- BufferStockTheory.idv[1207] ==> BufferStockTheory1003x.svg ---
+--- needs --- BufferStockTheory.idv[1208] ==> BufferStockTheory1004x.svg ---
+--- needs --- BufferStockTheory.idv[1209] ==> BufferStockTheory1005x.svg ---
+--- needs --- BufferStockTheory.idv[1210] ==> BufferStockTheory1006x.svg ---
+--- needs --- BufferStockTheory.idv[1211] ==> BufferStockTheory1007x.svg ---
+--- needs --- BufferStockTheory.idv[1212] ==> BufferStockTheory1008x.svg ---
+--- needs --- BufferStockTheory.idv[1213] ==> BufferStockTheory1009x.svg ---
+--- needs --- BufferStockTheory.idv[1214] ==> BufferStockTheory1010x.svg ---
+--- needs --- BufferStockTheory.idv[1215] ==> BufferStockTheory1011x.svg ---
+--- needs --- BufferStockTheory.idv[1216] ==> BufferStockTheory1012x.svg ---
+--- needs --- BufferStockTheory.idv[1218] ==> BufferStockTheory1013x.svg ---
+--- needs --- BufferStockTheory.idv[1219] ==> BufferStockTheory1014x.svg ---
+--- needs --- BufferStockTheory.idv[1221] ==> BufferStockTheory1015x.svg ---
+--- needs --- BufferStockTheory.idv[1222] ==> BufferStockTheory1016x.svg ---
+--- needs --- BufferStockTheory.idv[1223] ==> BufferStockTheory1017x.svg ---
+--- needs --- BufferStockTheory.idv[1224] ==> BufferStockTheory1018x.svg ---
+--- needs --- BufferStockTheory.idv[1225] ==> BufferStockTheory1019x.svg ---
+--- needs --- BufferStockTheory.idv[1226] ==> BufferStockTheory1020x.svg ---
+--- needs --- BufferStockTheory.idv[1228] ==> BufferStockTheory1021x.svg ---
+--- needs --- BufferStockTheory.idv[1229] ==> BufferStockTheory1022x.svg ---
+--- needs --- BufferStockTheory.idv[1230] ==> BufferStockTheory1023x.svg ---
+--- needs --- BufferStockTheory.idv[1231] ==> BufferStockTheory1024x.svg ---
+--- needs --- BufferStockTheory.idv[1232] ==> BufferStockTheory1025x.svg ---
+--- needs --- BufferStockTheory.idv[1233] ==> BufferStockTheory1026x.svg ---
+--- needs --- BufferStockTheory.idv[1234] ==> BufferStockTheory1027x.svg ---
+--- needs --- BufferStockTheory.idv[1236] ==> BufferStockTheory1028x.svg ---
+--- needs --- BufferStockTheory.idv[1237] ==> BufferStockTheory1029x.svg ---
+--- needs --- BufferStockTheory.idv[1238] ==> BufferStockTheory1030x.svg ---
+--- needs --- BufferStockTheory.idv[1239] ==> BufferStockTheory1031x.svg ---
+--- needs --- BufferStockTheory.idv[1240] ==> BufferStockTheory1032x.svg ---
+--- needs --- BufferStockTheory.idv[1241] ==> BufferStockTheory1033x.svg ---
+--- needs --- BufferStockTheory.idv[1243] ==> BufferStockTheory1034x.svg ---
+--- needs --- BufferStockTheory.idv[1244] ==> BufferStockTheory1035x.svg ---
+--- needs --- BufferStockTheory.idv[1245] ==> BufferStockTheory1036x.svg ---
+--- needs --- BufferStockTheory.idv[1246] ==> BufferStockTheory1037x.svg ---
+--- needs --- BufferStockTheory.idv[1247] ==> BufferStockTheory1038x.svg ---
+--- needs --- BufferStockTheory.idv[1248] ==> BufferStockTheory1039x.svg ---
+--- needs --- BufferStockTheory.idv[1249] ==> BufferStockTheory1040x.svg ---
+--- needs --- BufferStockTheory.idv[1250] ==> BufferStockTheory1041x.svg ---
+--- needs --- BufferStockTheory.idv[1251] ==> BufferStockTheory1042x.svg ---
+--- needs --- BufferStockTheory.idv[1252] ==> BufferStockTheory1043x.svg ---
+--- needs --- BufferStockTheory.idv[1253] ==> BufferStockTheory1044x.svg ---
+--- needs --- BufferStockTheory.idv[1254] ==> BufferStockTheory1045x.svg ---
+--- needs --- BufferStockTheory.idv[1255] ==> BufferStockTheory1046x.svg ---
+--- needs --- BufferStockTheory.idv[1256] ==> BufferStockTheory1047x.svg ---
+--- needs --- BufferStockTheory.idv[1257] ==> BufferStockTheory1048x.svg ---
+--- needs --- BufferStockTheory.idv[1258] ==> BufferStockTheory1049x.svg ---
+--- needs --- BufferStockTheory.idv[1259] ==> BufferStockTheory1050x.svg ---
+--- needs --- BufferStockTheory.idv[1260] ==> BufferStockTheory1051x.svg ---
+--- needs --- BufferStockTheory.idv[1261] ==> BufferStockTheory1052x.svg ---
+--- needs --- BufferStockTheory.idv[1262] ==> BufferStockTheory1053x.svg ---
+--- needs --- BufferStockTheory.idv[1263] ==> BufferStockTheory1054x.svg ---
+--- needs --- BufferStockTheory.idv[1264] ==> BufferStockTheory1055x.svg ---
+--- needs --- BufferStockTheory.idv[1265] ==> BufferStockTheory1056x.svg ---
+--- needs --- BufferStockTheory.idv[1266] ==> BufferStockTheory1057x.svg ---
+--- needs --- BufferStockTheory.idv[1267] ==> BufferStockTheory1058x.svg ---
+--- needs --- BufferStockTheory.idv[1268] ==> BufferStockTheory1059x.svg ---
+--- needs --- BufferStockTheory.idv[1269] ==> BufferStockTheory1060x.svg ---
+--- needs --- BufferStockTheory.idv[1270] ==> BufferStockTheory1061x.svg ---
+--- needs --- BufferStockTheory.idv[1271] ==> BufferStockTheory1062x.svg ---
+--- needs --- BufferStockTheory.idv[1273] ==> BufferStockTheory1063x.svg ---
+--- needs --- BufferStockTheory.idv[1275] ==> BufferStockTheory1064x.svg ---
+--- needs --- BufferStockTheory.idv[1276] ==> BufferStockTheory1065x.svg ---
+--- needs --- BufferStockTheory.idv[1277] ==> BufferStockTheory1066x.svg ---
+--- needs --- BufferStockTheory.idv[1278] ==> BufferStockTheory1067x.svg ---
+--- needs --- BufferStockTheory.idv[1280] ==> BufferStockTheory1068x.svg ---
+--- needs --- BufferStockTheory.idv[1281] ==> BufferStockTheory1069x.svg ---
+--- needs --- BufferStockTheory.idv[1282] ==> BufferStockTheory1070x.svg ---
+--- needs --- BufferStockTheory.idv[1283] ==> BufferStockTheory1071x.svg ---
+--- needs --- BufferStockTheory.idv[1284] ==> BufferStockTheory1072x.svg ---
+--- needs --- BufferStockTheory.idv[1285] ==> BufferStockTheory1073x.svg ---
+--- needs --- BufferStockTheory.idv[1286] ==> BufferStockTheory1074x.svg ---
+--- needs --- BufferStockTheory.idv[1287] ==> BufferStockTheory1075x.svg ---
+--- needs --- BufferStockTheory.idv[1288] ==> BufferStockTheory1076x.svg ---
+--- needs --- BufferStockTheory.idv[1290] ==> BufferStockTheory1077x.svg ---
+--- needs --- BufferStockTheory.idv[1292] ==> BufferStockTheory1078x.svg ---
+--- needs --- BufferStockTheory.idv[1294] ==> BufferStockTheory1079x.svg ---
+--- needs --- BufferStockTheory.idv[1296] ==> BufferStockTheory1080x.svg ---
+--- needs --- BufferStockTheory.idv[1297] ==> BufferStockTheory1081x.svg ---
+File: ./Appendices/../Figures/InequalityPFGICFHWCRIC.svg
+--- needs --- BufferStockTheory.idv[1299] ==> BufferStockTheory1082x.svg ---
+--- needs --- BufferStockTheory.idv[1300] ==> BufferStockTheory1083x.svg ---
+--- needs --- BufferStockTheory.idv[1301] ==> BufferStockTheory1084x.svg ---
+--- needs --- BufferStockTheory.idv[1302] ==> BufferStockTheory1085x.svg ---
+--- needs --- BufferStockTheory.idv[1303] ==> BufferStockTheory1086x.svg ---
+--- needs --- BufferStockTheory.idv[1305] ==> BufferStockTheory1087x.svg ---
+--- needs --- BufferStockTheory.idv[1306] ==> BufferStockTheory1088x.svg ---
+--- needs --- BufferStockTheory.idv[1307] ==> BufferStockTheory1089x.svg ---
+--- needs --- BufferStockTheory.idv[1308] ==> BufferStockTheory1090x.svg ---
+--- needs --- BufferStockTheory.idv[1309] ==> BufferStockTheory1091x.svg ---
+--- needs --- BufferStockTheory.idv[1310] ==> BufferStockTheory1092x.svg ---
+--- needs --- BufferStockTheory.idv[1311] ==> BufferStockTheory1093x.svg ---
+--- needs --- BufferStockTheory.idv[1313] ==> BufferStockTheory1094x.svg ---
+--- needs --- BufferStockTheory.idv[1314] ==> BufferStockTheory1095x.svg ---
+--- needs --- BufferStockTheory.idv[1315] ==> BufferStockTheory1096x.svg ---
+--- needs --- BufferStockTheory.idv[1316] ==> BufferStockTheory1097x.svg ---
+--- needs --- BufferStockTheory.idv[1317] ==> BufferStockTheory1098x.svg ---
+--- needs --- BufferStockTheory.idv[1318] ==> BufferStockTheory1099x.svg ---
+--- needs --- BufferStockTheory.idv[1319] ==> BufferStockTheory1100x.svg ---
+--- needs --- BufferStockTheory.idv[1321] ==> BufferStockTheory1101x.svg ---
+--- needs --- BufferStockTheory.idv[1322] ==> BufferStockTheory1102x.svg ---
+--- needs --- BufferStockTheory.idv[1323] ==> BufferStockTheory1103x.svg ---
+--- needs --- BufferStockTheory.idv[1324] ==> BufferStockTheory1104x.svg ---
+--- needs --- BufferStockTheory.idv[1325] ==> BufferStockTheory1105x.svg ---
+--- needs --- BufferStockTheory.idv[1326] ==> BufferStockTheory1106x.svg ---
+--- needs --- BufferStockTheory.idv[1327] ==> BufferStockTheory1107x.svg ---
+--- needs --- BufferStockTheory.idv[1328] ==> BufferStockTheory1108x.svg ---
+--- needs --- BufferStockTheory.idv[1329] ==> BufferStockTheory1109x.svg ---
+--- needs --- BufferStockTheory.idv[1331] ==> BufferStockTheory1110x.svg ---
+--- needs --- BufferStockTheory.idv[1332] ==> BufferStockTheory1111x.svg ---
+--- needs --- BufferStockTheory.idv[1333] ==> BufferStockTheory1112x.svg ---
+--- needs --- BufferStockTheory.idv[1334] ==> BufferStockTheory1113x.svg ---
+--- needs --- BufferStockTheory.idv[1335] ==> BufferStockTheory1114x.svg ---
+--- needs --- BufferStockTheory.idv[1336] ==> BufferStockTheory1115x.svg ---
+--- needs --- BufferStockTheory.idv[1337] ==> BufferStockTheory1116x.svg ---
+--- needs --- BufferStockTheory.idv[1338] ==> BufferStockTheory1117x.svg ---
+--- needs --- BufferStockTheory.idv[1339] ==> BufferStockTheory1118x.svg ---
+File: ./Appendices/../Figures/RelatePFGICFHWCRICPFFVAC.svg
+--- needs --- BufferStockTheory.idv[1341] ==> BufferStockTheory1119x.svg ---
+--- needs --- BufferStockTheory.idv[1343] ==> BufferStockTheory1120x.svg ---
+--- needs --- BufferStockTheory.idv[1344] ==> BufferStockTheory1121x.svg ---
+--- needs --- BufferStockTheory.idv[1345] ==> BufferStockTheory1122x.svg ---
+--- needs --- BufferStockTheory.idv[1347] ==> BufferStockTheory1123x.svg ---
+--- needs --- BufferStockTheory.idv[1348] ==> BufferStockTheory1124x.svg ---
+--- needs --- BufferStockTheory.idv[1350] ==> BufferStockTheory1125x.svg ---
+--- needs --- BufferStockTheory.idv[1351] ==> BufferStockTheory1126x.svg ---
+--- needs --- BufferStockTheory.idv[1352] ==> BufferStockTheory1127x.svg ---
+--- needs --- BufferStockTheory.idv[1353] ==> BufferStockTheory1128x.svg ---
+--- needs --- BufferStockTheory.idv[1355] ==> BufferStockTheory1129x.svg ---
+--- needs --- BufferStockTheory.idv[1356] ==> BufferStockTheory1130x.svg ---
+--- needs --- BufferStockTheory.idv[1357] ==> BufferStockTheory1131x.svg ---
+--- needs --- BufferStockTheory.idv[1358] ==> BufferStockTheory1132x.svg ---
+--- needs --- BufferStockTheory.idv[1359] ==> BufferStockTheory1133x.svg ---
+--- needs --- BufferStockTheory.idv[1360] ==> BufferStockTheory1134x.svg ---
+--- needs --- BufferStockTheory.idv[1361] ==> BufferStockTheory1135x.svg ---
+--- needs --- BufferStockTheory.idv[1363] ==> BufferStockTheory1136x.svg ---
+--- needs --- BufferStockTheory.idv[1364] ==> BufferStockTheory1137x.svg ---
+--- needs --- BufferStockTheory.idv[1366] ==> BufferStockTheory1138x.svg ---
+--- needs --- BufferStockTheory.idv[1367] ==> BufferStockTheory1139x.svg ---
+File: ./Appendices/../Figures/Inequalities.svg
+File: ./Appendices/../Figures/Inequalities-numer.svg
+--- needs --- BufferStockTheory.idv[1369] ==> BufferStockTheory1140x.svg ---
+--- needs --- BufferStockTheory.idv[1370] ==> BufferStockTheory1141x.svg ---
+--- needs --- BufferStockTheory.idv[1371] ==> BufferStockTheory1142x.svg ---
+--- needs --- BufferStockTheory.idv[1372] ==> BufferStockTheory1143x.svg ---
+--- needs --- BufferStockTheory.idv[1373] ==> BufferStockTheory1144x.svg ---
+--- needs --- BufferStockTheory.idv[1374] ==> BufferStockTheory1145x.svg ---
+--- needs --- BufferStockTheory.idv[1375] ==> BufferStockTheory1146x.svg ---
+--- needs --- BufferStockTheory.idv[1377] ==> BufferStockTheory1147x.svg ---
+--- needs --- BufferStockTheory.idv[1378] ==> BufferStockTheory1148x.svg ---
+--- needs --- BufferStockTheory.idv[1379] ==> BufferStockTheory1149x.svg ---
+--- needs --- BufferStockTheory.idv[1380] ==> BufferStockTheory1150x.svg ---
+--- needs --- BufferStockTheory.idv[1381] ==> BufferStockTheory1151x.svg ---
+--- needs --- BufferStockTheory.idv[1383] ==> BufferStockTheory1152x.svg ---
+--- needs --- BufferStockTheory.idv[1384] ==> BufferStockTheory1153x.svg ---
+--- needs --- BufferStockTheory.idv[1385] ==> BufferStockTheory1154x.svg ---
+--- needs --- BufferStockTheory.idv[1386] ==> BufferStockTheory1155x.svg ---
+--- needs --- BufferStockTheory.idv[1387] ==> BufferStockTheory1156x.svg ---
+--- needs --- BufferStockTheory.idv[1388] ==> BufferStockTheory1157x.svg ---
+--- needs --- BufferStockTheory.idv[1389] ==> BufferStockTheory1158x.svg ---
+--- needs --- BufferStockTheory.idv[1390] ==> BufferStockTheory1159x.svg ---
+--- needs --- BufferStockTheory.idv[1391] ==> BufferStockTheory1160x.svg ---
+--- needs --- BufferStockTheory.idv[1392] ==> BufferStockTheory1161x.svg ---
+--- needs --- BufferStockTheory.idv[1393] ==> BufferStockTheory1162x.svg ---
+--- needs --- BufferStockTheory.idv[1394] ==> BufferStockTheory1163x.svg ---
+--- needs --- BufferStockTheory.idv[1395] ==> BufferStockTheory1164x.svg ---
+--- needs --- BufferStockTheory.idv[1397] ==> BufferStockTheory1165x.svg ---
+--- needs --- BufferStockTheory.idv[1398] ==> BufferStockTheory1166x.svg ---
+--- needs --- BufferStockTheory.idv[1400] ==> BufferStockTheory1167x.svg ---
+--- needs --- BufferStockTheory.idv[1402] ==> BufferStockTheory1168x.svg ---
+--- needs --- BufferStockTheory.idv[1403] ==> BufferStockTheory1169x.svg ---
+--- needs --- BufferStockTheory.idv[1404] ==> BufferStockTheory1170x.svg ---
+--- needs --- BufferStockTheory.idv[1406] ==> BufferStockTheory1171x.svg ---
+--- needs --- BufferStockTheory.idv[1408] ==> BufferStockTheory1172x.svg ---
+--- needs --- BufferStockTheory.idv[1409] ==> BufferStockTheory1173x.svg ---
+--- needs --- BufferStockTheory.idv[1410] ==> BufferStockTheory1174x.svg ---
+--- needs --- BufferStockTheory.idv[1411] ==> BufferStockTheory1175x.svg ---
+--- needs --- BufferStockTheory.idv[1413] ==> BufferStockTheory1176x.svg ---
+--- needs --- BufferStockTheory.idv[1414] ==> BufferStockTheory1177x.svg ---
+--- needs --- BufferStockTheory.idv[1415] ==> BufferStockTheory1178x.svg ---
+--- needs --- BufferStockTheory.idv[1417] ==> BufferStockTheory1179x.svg ---
+--- needs --- BufferStockTheory.idv[1418] ==> BufferStockTheory1180x.svg ---
+--- needs --- BufferStockTheory.idv[1419] ==> BufferStockTheory1181x.svg ---
+--- needs --- BufferStockTheory.idv[1420] ==> BufferStockTheory1182x.svg ---
+--- needs --- BufferStockTheory.idv[1421] ==> BufferStockTheory1183x.svg ---
+--- needs --- BufferStockTheory.idv[1422] ==> BufferStockTheory1184x.svg ---
+--- needs --- BufferStockTheory.idv[1423] ==> BufferStockTheory1185x.svg ---
+--- needs --- BufferStockTheory.idv[1424] ==> BufferStockTheory1186x.svg ---
+--- needs --- BufferStockTheory.idv[1425] ==> BufferStockTheory1187x.svg ---
+--- needs --- BufferStockTheory.idv[1426] ==> BufferStockTheory1188x.svg ---
+--- needs --- BufferStockTheory.idv[1427] ==> BufferStockTheory1189x.svg ---
+--- needs --- BufferStockTheory.idv[1428] ==> BufferStockTheory1190x.svg ---
+--- needs --- BufferStockTheory.idv[1429] ==> BufferStockTheory1191x.svg ---
+--- needs --- BufferStockTheory.idv[1430] ==> BufferStockTheory1192x.svg ---
+--- needs --- BufferStockTheory.idv[1432] ==> BufferStockTheory1193x.svg ---
+--- needs --- BufferStockTheory.idv[1433] ==> BufferStockTheory1194x.svg ---
+--- needs --- BufferStockTheory.idv[1434] ==> BufferStockTheory1195x.svg ---
+--- needs --- BufferStockTheory.idv[1435] ==> BufferStockTheory1196x.svg ---
+--- needs --- BufferStockTheory.idv[1436] ==> BufferStockTheory1197x.svg ---
+--- needs --- BufferStockTheory.idv[1437] ==> BufferStockTheory1198x.svg ---
+--- needs --- BufferStockTheory.idv[1438] ==> BufferStockTheory1199x.svg ---
+--- needs --- BufferStockTheory.idv[1439] ==> BufferStockTheory1200x.svg ---
+--- needs --- BufferStockTheory.idv[1440] ==> BufferStockTheory1201x.svg ---
+--- needs --- BufferStockTheory.idv[1441] ==> BufferStockTheory1202x.svg ---
+--- needs --- BufferStockTheory.idv[1442] ==> BufferStockTheory1203x.svg ---
+--- needs --- BufferStockTheory.idv[1443] ==> BufferStockTheory1204x.svg ---
+--- needs --- BufferStockTheory.idv[1444] ==> BufferStockTheory1205x.svg ---
+--- needs --- BufferStockTheory.idv[1445] ==> BufferStockTheory1206x.svg ---
+--- needs --- BufferStockTheory.idv[1446] ==> BufferStockTheory1207x.svg ---
+--- needs --- BufferStockTheory.idv[1448] ==> BufferStockTheory1208x.svg ---
+--- needs --- BufferStockTheory.idv[1449] ==> BufferStockTheory1209x.svg ---
+--- needs --- BufferStockTheory.idv[1450] ==> BufferStockTheory1210x.svg ---
+--- needs --- BufferStockTheory.idv[1451] ==> BufferStockTheory1211x.svg ---
+--- needs --- BufferStockTheory.idv[1452] ==> BufferStockTheory1212x.svg ---
+--- needs --- BufferStockTheory.idv[1453] ==> BufferStockTheory1213x.svg ---
+--- needs --- BufferStockTheory.idv[1455] ==> BufferStockTheory1214x.svg ---
+--- needs --- BufferStockTheory.idv[1456] ==> BufferStockTheory1215x.svg ---
+--- needs --- BufferStockTheory.idv[1457] ==> BufferStockTheory1216x.svg ---
+--- needs --- BufferStockTheory.idv[1458] ==> BufferStockTheory1217x.svg ---
+--- needs --- BufferStockTheory.idv[1459] ==> BufferStockTheory1218x.svg ---
+--- needs --- BufferStockTheory.idv[1460] ==> BufferStockTheory1219x.svg ---
+--- needs --- BufferStockTheory.idv[1461] ==> BufferStockTheory1220x.svg ---
+--- needs --- BufferStockTheory.idv[1463] ==> BufferStockTheory1221x.svg ---
+--- needs --- BufferStockTheory.idv[1464] ==> BufferStockTheory1222x.svg ---
+--- needs --- BufferStockTheory.idv[1465] ==> BufferStockTheory1223x.svg ---
+--- needs --- BufferStockTheory.idv[1466] ==> BufferStockTheory1224x.svg ---
+--- needs --- BufferStockTheory.idv[1467] ==> BufferStockTheory1225x.svg ---
+--- needs --- BufferStockTheory.idv[1468] ==> BufferStockTheory1226x.svg ---
+--- needs --- BufferStockTheory.idv[1469] ==> BufferStockTheory1227x.svg ---
+--- needs --- BufferStockTheory.idv[1470] ==> BufferStockTheory1228x.svg ---
+--- needs --- BufferStockTheory.idv[1471] ==> BufferStockTheory1229x.svg ---
+--- needs --- BufferStockTheory.idv[1472] ==> BufferStockTheory1230x.svg ---
+--- needs --- BufferStockTheory.idv[1473] ==> BufferStockTheory1231x.svg ---
+--- needs --- BufferStockTheory.idv[1475] ==> BufferStockTheory1232x.svg ---
+--- needs --- BufferStockTheory.idv[1476] ==> BufferStockTheory1233x.svg ---
+--- needs --- BufferStockTheory.idv[1477] ==> BufferStockTheory1234x.svg ---
+--- needs --- BufferStockTheory.idv[1479] ==> BufferStockTheory1235x.svg ---
+--- needs --- BufferStockTheory.idv[1480] ==> BufferStockTheory1236x.svg ---
+--- needs --- BufferStockTheory.idv[1481] ==> BufferStockTheory1237x.svg ---
+--- needs --- BufferStockTheory.idv[1483] ==> BufferStockTheory1238x.svg ---
+--- needs --- BufferStockTheory.idv[1484] ==> BufferStockTheory1239x.svg ---
+--- needs --- BufferStockTheory.idv[1485] ==> BufferStockTheory1240x.svg ---
+--- needs --- BufferStockTheory.idv[1487] ==> BufferStockTheory1241x.svg ---
+--- needs --- BufferStockTheory.idv[1488] ==> BufferStockTheory1242x.svg ---
+--- needs --- BufferStockTheory.idv[1489] ==> BufferStockTheory1243x.svg ---
+--- needs --- BufferStockTheory.idv[1490] ==> BufferStockTheory1244x.svg ---
+--- needs --- BufferStockTheory.idv[1491] ==> BufferStockTheory1245x.svg ---
+--- needs --- BufferStockTheory.idv[1492] ==> BufferStockTheory1246x.svg ---
+--- needs --- BufferStockTheory.idv[1493] ==> BufferStockTheory1247x.svg ---
+--- needs --- BufferStockTheory.idv[1495] ==> BufferStockTheory1248x.svg ---
+--- needs --- BufferStockTheory.idv[1496] ==> BufferStockTheory1249x.svg ---
+--- needs --- BufferStockTheory.idv[1497] ==> BufferStockTheory1250x.svg ---
+--- needs --- BufferStockTheory.idv[1499] ==> BufferStockTheory1251x.svg ---
+--- needs --- BufferStockTheory.idv[1500] ==> BufferStockTheory1252x.svg ---
+--- needs --- BufferStockTheory.idv[1502] ==> BufferStockTheory1253x.svg ---
+--- needs --- BufferStockTheory.idv[1503] ==> BufferStockTheory1254x.svg ---
+--- needs --- BufferStockTheory.idv[1504] ==> BufferStockTheory1255x.svg ---
+--- needs --- BufferStockTheory.idv[1505] ==> BufferStockTheory1256x.svg ---
+--- needs --- BufferStockTheory.idv[1506] ==> BufferStockTheory1257x.svg ---
+--- needs --- BufferStockTheory.idv[1507] ==> BufferStockTheory1258x.svg ---
+--- needs --- BufferStockTheory.idv[1508] ==> BufferStockTheory1259x.svg ---
+--- needs --- BufferStockTheory.idv[1509] ==> BufferStockTheory1260x.svg ---
+--- needs --- BufferStockTheory.idv[1510] ==> BufferStockTheory1261x.svg ---
+--- needs --- BufferStockTheory.idv[1511] ==> BufferStockTheory1262x.svg ---
+--- needs --- BufferStockTheory.idv[1512] ==> BufferStockTheory1263x.svg ---
+--- needs --- BufferStockTheory.idv[1513] ==> BufferStockTheory1264x.svg ---
+--- needs --- BufferStockTheory.idv[1514] ==> BufferStockTheory1265x.svg ---
+--- needs --- BufferStockTheory.idv[1515] ==> BufferStockTheory1266x.svg ---
+--- needs --- BufferStockTheory.idv[1516] ==> BufferStockTheory1267x.svg ---
+--- needs --- BufferStockTheory.idv[1518] ==> BufferStockTheory1268x.svg ---
+--- needs --- BufferStockTheory.idv[1519] ==> BufferStockTheory1269x.svg ---
+--- characters ---
+Font("cmex","10","10","100")
+Font("line","10","10","100")
+Font("cmr","7","7","100")
+Font("cmr","10","10","100")
+Font("cmmi","5","5","100")
+Font("cmmi","7","7","100")
+Font("cmmi","10","10","100")
+Font("cmsy","7","7","100")
+Font("cmsy","10","10","100")
+Font("cmr","12","12","100")
+Font("ecrm","1200","12","100")
+Font("ecti","1200","12","100")
+Font("ecbx","1200","12","100")
+Font("ecrm","0600","6","100")
+Font("ecrm","2074","20","100")
+Font("ecbx","2074","20","100")
+Font("ecrm","1440","14","100")
+Font("msbm","10","10","100")
+Font("wasy","10","10","100")
+Font("ecrm","1095","10","100")
+Font("ecrm","1000","10","100")
+Font("ectt","1000","10","100")
+Font("cmr","8","8","100")
+Font("cmr","6","6","100")
+Font("cmmi","12","12","100")
+Font("cmmi","8","8","100")
+Font("cmmi","6","6","100")
+Font("cmsy","10","10","120")
+Font("cmsy","8","8","100")
+Font("cmsy","6","6","100")
+Font("cmex","10","10","120")
+Font("msbm","10","10","120")
+Font("msbm","10","10","80")
+Font("wasy","10","10","120")
+Font("wasy","8","8","100")
+Font("cmbx","12","12","100")
+Font("cmbx","8","8","100")
+Font("cmbx","10","10","100")
+Font("cmss","12","12","100")
+Font("cmss","8","8","100")
+Font("cmss","8","8","75")
+Font("ecrm","0800","8","100")
+Font("cmss","10","10","100")
+Font("cmss","8","8","87")
+Font("ecti","1000","10","100")
+Font("eusm","10","10","120")
+Font("eusm","10","10","100")
+Font("eufm","10","10","120")
+Font("eufm","10","10","80")
+Font("ectt","1095","10","100")
+Font("eccc1095","","10","100")
+Font("ecti","1095","10","100")

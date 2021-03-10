@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: BufferStockTheory.aux
+The style file: ./Resources/texmf-local/bibtex/bst/econtex.bst
+Database file #1: BufferStockTheory.bib
+Database file #2: ./Resources/texmf-local/bibtex/bib/economics.bib
+Done.
+You've used 49 entries,
+            2309 wiz_defined-function locations,
+            922 strings with 12163 characters,
+and the built_in function-call counts, 22911 in all, are:
+= -- 2338
+> -- 1111
+< -- 0
++ -- 382
+- -- 320
+* -- 2035
+:= -- 4438
+add.period$ -- 54
+call.type$ -- 49
+change.case$ -- 277
+chr.to.int$ -- 49
+cite$ -- 49
+duplicate$ -- 822
+empty$ -- 1478
+format.name$ -- 384
+if$ -- 4401
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 53
+newline$ -- 154
+num.names$ -- 294
+pop$ -- 205
+preamble$ -- 2
+purify$ -- 276
+quote$ -- 0
+skip$ -- 756
+stack$ -- 0
+substring$ -- 1436
+swap$ -- 141
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 524
+warning$ -- 0
+while$ -- 289
+width$ -- 0
+write$ -- 592

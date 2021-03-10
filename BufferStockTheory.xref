@@ -1,0 +1,818 @@
+\:CrossWord{)F1F-}{BufferStockTheory.html}{1}%
+\:CrossWord{TITLE+}{Theoretical Foundations of \\ Buffer Stock Saving}{1}%
+\:CrossWord{)M1x0}{;}{1}%
+\:CrossWord{)Qabstract}{1}{1}%
+\:CrossWord{)Qlinks}{1}{2}%
+\:CrossWord{)tb1}{ 91 0 0 91 0 0 91 0 0 91 0 0 91 0 0 91 0 0 91 0 0 0}{2}%
+\:CrossWord{)tb1.}{}{2}%
+\:CrossWord{fn0x0}{}{2}%
+\:CrossWord{)QIntroduction}{1}{3}%
+\:CrossWord{)Qx1-1doc}{1}{3}%
+\:CrossWord{fn1x0}{}{3}%
+\:CrossWord{)Qx1-2f1}{1}{3}%
+\:CrossWord{)BBufferStockTheory2.html(L }{BufferStockTheory.html}{3}%
+\:CrossWord{)F2F-}{BufferStockTheory2.html}{3}%
+\:CrossWord{BufferStockTheory2.html(L }{BufferStockTheory2.html}{3}%
+\:CrossWord{)Qfn1x0}{2}{3}%
+\:CrossWord{fn2x0}{}{3}%
+\:CrossWord{)Qx1-3f2}{1}{3}%
+\:CrossWord{)BBufferStockTheory3.html(L }{BufferStockTheory.html}{3}%
+\:CrossWord{)F3F-}{BufferStockTheory3.html}{3}%
+\:CrossWord{BufferStockTheory3.html(L }{BufferStockTheory3.html}{3}%
+\:CrossWord{)Qfn2x0}{3}{3}%
+\:CrossWord{fn3x0}{}{3}%
+\:CrossWord{)Qx1-4f3}{1}{3}%
+\:CrossWord{)BBufferStockTheory4.html(L }{BufferStockTheory.html}{3}%
+\:CrossWord{)F4F-}{BufferStockTheory4.html}{3}%
+\:CrossWord{BufferStockTheory4.html(L }{BufferStockTheory4.html}{3}%
+\:CrossWord{)Qfn3x0}{4}{3}%
+\:CrossWord{fn4x0}{}{3}%
+\:CrossWord{)Qx1-5f4}{1}{3}%
+\:CrossWord{)BBufferStockTheory5.html(L }{BufferStockTheory.html}{3}%
+\:CrossWord{)F5F-}{BufferStockTheory5.html}{3}%
+\:CrossWord{BufferStockTheory5.html(L }{BufferStockTheory5.html}{3}%
+\:CrossWord{)Qfn4x0}{5}{3}%
+\:CrossWord{)QKMP}{1}{3}%
+\:CrossWord{)QThe-Problem}{1}{5}%
+\:CrossWord{)Qx1-10001}{1}{5}%
+\:CrossWord{)Qx1-20001.1}{1}{5}%
+\:CrossWord{)Qx1-2001r1}{1}{5}%
+\:CrossWord{fn5x0}{}{6}%
+\:CrossWord{)Qx1-2002f5}{1}{6}%
+\:CrossWord{)BBufferStockTheory6.html(L }{BufferStockTheory.html}{6}%
+\:CrossWord{)F6F-}{BufferStockTheory6.html}{6}%
+\:CrossWord{BufferStockTheory6.html(L }{BufferStockTheory6.html}{6}%
+\:CrossWord{)Qfn5x0}{6}{6}%
+\:CrossWord{)Qx1-2003r2}{1}{6}%
+\:CrossWord{)Qx1-2004r3}{1}{6}%
+\:CrossWord{)QDBCParts}{1}{6}%
+\:CrossWord{)Qx1-2005r4}{1}{6}%
+\:CrossWord{)Qx1-2005r3}{1}{7}%
+\:CrossWord{fn6x0}{}{7}%
+\:CrossWord{)Qx1-2006f6}{1}{7}%
+\:CrossWord{)BBufferStockTheory7.html(L }{BufferStockTheory.html}{7}%
+\:CrossWord{)F7F-}{BufferStockTheory7.html}{7}%
+\:CrossWord{BufferStockTheory7.html(L }{BufferStockTheory7.html}{7}%
+\:CrossWord{)Qfn6x0}{7}{7}%
+\:CrossWord{)Qx1-2007r4}{1}{7}%
+\:CrossWord{fn7x0}{}{8}%
+\:CrossWord{)Qx1-2008f7}{1}{8}%
+\:CrossWord{)BBufferStockTheory8.html(L }{BufferStockTheory.html}{8}%
+\:CrossWord{)F8F-}{BufferStockTheory8.html}{8}%
+\:CrossWord{BufferStockTheory8.html(L }{BufferStockTheory8.html}{8}%
+\:CrossWord{)Qfn7x0}{8}{8}%
+\:CrossWord{)QPDV}{1}{8}%
+\:CrossWord{fn8x0}{}{8}%
+\:CrossWord{)Qx1-2009f8}{1}{8}%
+\:CrossWord{)BBufferStockTheory9.html(L }{BufferStockTheory.html}{8}%
+\:CrossWord{)F9F-}{BufferStockTheory9.html}{8}%
+\:CrossWord{BufferStockTheory9.html(L }{BufferStockTheory9.html}{8}%
+\:CrossWord{)Qfn8x0}{9}{8}%
+\:CrossWord{fn9x0}{}{8}%
+\:CrossWord{)Qx1-2010f9}{1}{8}%
+\:CrossWord{)BBufferStockTheory10.html(L }{BufferStockTheory.html}{8}%
+\:CrossWord{)F10F-}{BufferStockTheory10.html}{8}%
+\:CrossWord{BufferStockTheory10.html(L }{BufferStockTheory10.html}{8}%
+\:CrossWord{)Qfn9x0}{10}{8}%
+\:CrossWord{fn10x0}{}{8}%
+\:CrossWord{)Qx1-2011f10}{1}{8}%
+\:CrossWord{)BBufferStockTheory11.html(L }{BufferStockTheory.html}{8}%
+\:CrossWord{)F11F-}{BufferStockTheory11.html}{8}%
+\:CrossWord{BufferStockTheory11.html(L }{BufferStockTheory11.html}{8}%
+\:CrossWord{)Qfn10x0}{11}{8}%
+\:CrossWord{)QDiffFromLit}{1}{8}%
+\:CrossWord{fn11x0}{}{9}%
+\:CrossWord{)Qx1-2012f11}{1}{9}%
+\:CrossWord{)BBufferStockTheory12.html(L }{BufferStockTheory.html}{9}%
+\:CrossWord{)F12F-}{BufferStockTheory12.html}{9}%
+\:CrossWord{BufferStockTheory12.html(L }{BufferStockTheory12.html}{9}%
+\:CrossWord{)Qfn11x0}{12}{9}%
+\:CrossWord{fn12x0}{}{9}%
+\:CrossWord{)Qx1-2013f12}{1}{9}%
+\:CrossWord{)BBufferStockTheory13.html(L }{BufferStockTheory.html}{9}%
+\:CrossWord{)F13F-}{BufferStockTheory13.html}{9}%
+\:CrossWord{BufferStockTheory13.html(L }{BufferStockTheory13.html}{9}%
+\:CrossWord{)Qfn12x0}{13}{9}%
+\:CrossWord{fn13x0}{}{9}%
+\:CrossWord{)Qx1-2014f13}{1}{9}%
+\:CrossWord{)BBufferStockTheory14.html(L }{BufferStockTheory.html}{9}%
+\:CrossWord{)F14F-}{BufferStockTheory14.html}{9}%
+\:CrossWord{BufferStockTheory14.html(L }{BufferStockTheory14.html}{9}%
+\:CrossWord{)Qfn13x0}{14}{9}%
+\:CrossWord{fn14x0}{}{9}%
+\:CrossWord{)Qx1-2015f14}{1}{9}%
+\:CrossWord{)BBufferStockTheory15.html(L }{BufferStockTheory.html}{9}%
+\:CrossWord{)F15F-}{BufferStockTheory15.html}{9}%
+\:CrossWord{BufferStockTheory15.html(L }{BufferStockTheory15.html}{9}%
+\:CrossWord{)Qfn14x0}{15}{9}%
+\:CrossWord{fn15x0}{}{9}%
+\:CrossWord{)Qx1-2016f15}{1}{9}%
+\:CrossWord{)BBufferStockTheory16.html(L }{BufferStockTheory.html}{9}%
+\:CrossWord{)F16F-}{BufferStockTheory16.html}{9}%
+\:CrossWord{BufferStockTheory16.html(L }{BufferStockTheory16.html}{9}%
+\:CrossWord{)Qfn15x0}{16}{9}%
+\:CrossWord{)QThe-Problem-Can-Be-Rewritten-in-Ratio-Form}{1}{9}%
+\:CrossWord{)QThe-Problem-Can-Be-Normalized-By-Permanent-Income}{1}{9}%
+\:CrossWord{)Qx1-30001.2}{1}{9}%
+\:CrossWord{)Qx1-3001r5}{1}{10}%
+\:CrossWord{)Qx1-3001r4}{1}{10}%
+\:CrossWord{)QThe-Related-Problem}{1}{10}%
+\:CrossWord{)Qx1-3002r5}{1}{10}%
+\:CrossWord{)Qx1-3002r4}{1}{10}%
+\:CrossWord{fn16x0}{}{11}%
+\:CrossWord{)Qx1-3003f16}{1}{11}%
+\:CrossWord{)BBufferStockTheory17.html(L }{BufferStockTheory.html}{11}%
+\:CrossWord{)F17F-}{BufferStockTheory17.html}{11}%
+\:CrossWord{BufferStockTheory17.html(L }{BufferStockTheory17.html}{11}%
+\:CrossWord{)Qfn16x0}{17}{11}%
+\:CrossWord{)Qx1-3004r5}{1}{11}%
+\:CrossWord{)QDefinition-of-a-Nondegenerate-Solution}{1}{11}%
+\:CrossWord{)Qx1-40001.3}{1}{11}%
+\:CrossWord{)Qx1-4001r6}{1}{12}%
+\:CrossWord{)Qx1-4002r7}{1}{12}%
+\:CrossWord{)QPerfect-Foresight-Benchmarks}{1}{12}%
+\:CrossWord{)Qx1-50001.4}{1}{12}%
+\:CrossWord{)QHuman-Wealth}{1}{12}%
+\:CrossWord{)Qx1-60001.4.1}{1}{12}%
+\:CrossWord{)Qx1-6001r8}{1}{12}%
+\:CrossWord{)QFHWF}{1}{13}%
+\:CrossWord{)Qx1-6002r9}{1}{13}%
+\:CrossWord{)Qx1-6002r8}{1}{13}%
+\:CrossWord{)QFHWC}{1}{13}%
+\:CrossWord{)Qx1-6003r9}{1}{13}%
+\:CrossWord{)QUnconstrained-Solution}{1}{14}%
+\:CrossWord{)QPF-Unconstrained-Solution}{1}{14}%
+\:CrossWord{)Qx1-70001.4.2}{1}{14}%
+\:CrossWord{)QAPF}{1}{14}%
+\:CrossWord{)QAIC}{1}{14}%
+\:CrossWord{)QPat}{1}{14}%
+\:CrossWord{)Qx1-7001r10}{1}{14}%
+\:CrossWord{)Qx1-7002r11}{1}{14}%
+\:CrossWord{fn17x0}{}{15}%
+\:CrossWord{)Qx1-7003f17}{1}{15}%
+\:CrossWord{)BBufferStockTheory18.html(L }{BufferStockTheory.html}{15}%
+\:CrossWord{)F18F-}{BufferStockTheory18.html}{15}%
+\:CrossWord{BufferStockTheory18.html(L }{BufferStockTheory18.html}{15}%
+\:CrossWord{)Qfn17x0}{18}{15}%
+\:CrossWord{)Qx1-7004r12}{1}{15}%
+\:CrossWord{)QRPF}{1}{15}%
+\:CrossWord{)Qx1-7005r13}{1}{15}%
+\:CrossWord{)Qx1-7006r14}{1}{15}%
+\:CrossWord{)Qx1-7007r15}{1}{16}%
+\:CrossWord{)Qx1-7008r16}{1}{16}%
+\:CrossWord{)QRIC}{1}{16}%
+\:CrossWord{)Qx1-7009r17}{1}{17}%
+\:CrossWord{)Qx1-7010r18}{1}{17}%
+\:CrossWord{)Qx1-7011r19}{1}{17}%
+\:CrossWord{)QValuePFAnalytical}{1}{18}%
+\:CrossWord{)QAutarky-Value-PF}{1}{18}%
+\:CrossWord{)Qx1-7012r20}{1}{18}%
+\:CrossWord{)Qx1-7012r19}{1}{18}%
+\:CrossWord{)Qx1-7013r20}{1}{18}%
+\:CrossWord{)Qx1-7013r19}{1}{19}%
+\:CrossWord{fn18x0}{}{19}%
+\:CrossWord{)Qx1-7014f18}{1}{19}%
+\:CrossWord{)BBufferStockTheory19.html(L }{BufferStockTheory.html}{19}%
+\:CrossWord{)F19F-}{BufferStockTheory19.html}{19}%
+\:CrossWord{BufferStockTheory19.html(L }{BufferStockTheory19.html}{19}%
+\:CrossWord{)Qfn18x0}{19}{19}%
+\:CrossWord{fn19x0}{}{19}%
+\:CrossWord{)Qx1-7015f19}{1}{19}%
+\:CrossWord{)BBufferStockTheory20.html(L }{BufferStockTheory.html}{19}%
+\:CrossWord{)F20F-}{BufferStockTheory20.html}{19}%
+\:CrossWord{BufferStockTheory20.html(L }{BufferStockTheory20.html}{19}%
+\:CrossWord{)Qfn19x0}{20}{19}%
+\:CrossWord{)Qx1-7016r20}{1}{19}%
+\:CrossWord{)Qx1-7017r21}{1}{19}%
+\:CrossWord{)Qx1-7017r20}{1}{20}%
+\:CrossWord{)QRelatePFGICFHWCRICPFFVAC}{1}{20}%
+\:CrossWord{)Qx1-70181}{1}{21}%
+\:CrossWord{1cAp0}{x1-70181}{22}%
+\:CrossWord{)QPF-Constrained-Solution}{1}{23}%
+\:CrossWord{)QConstrained-Solution}{1}{23}%
+\:CrossWord{)Qx1-80001.4.3}{1}{23}%
+\:CrossWord{)Qx1-8001r21}{1}{23}%
+\:CrossWord{)QPFGPNew}{1}{23}%
+\:CrossWord{)QGICAbs}{1}{23}%
+\:CrossWord{)Qx1-8002r22}{1}{23}%
+\:CrossWord{)Qx1-8003r23}{1}{24}%
+\:CrossWord{fn20x0}{}{24}%
+\:CrossWord{)Qx1-8004f20}{1}{24}%
+\:CrossWord{)BBufferStockTheory21.html(L }{BufferStockTheory.html}{24}%
+\:CrossWord{)F21F-}{BufferStockTheory21.html}{24}%
+\:CrossWord{BufferStockTheory21.html(L }{BufferStockTheory21.html}{24}%
+\:CrossWord{)Qfn20x0}{21}{24}%
+\:CrossWord{)Qx1-8005r24}{1}{24}%
+\:CrossWord{)QPFFVAC}{1}{25}%
+\:CrossWord{)QPFVAF}{1}{25}%
+\:CrossWord{)QRICandFHWCFail}{1}{25}%
+\:CrossWord{)QRelatePFGICFHWCRICPFFVACText}{1}{25}%
+\:CrossWord{)QUncertainty-Modified-Conditions}{1}{25}%
+\:CrossWord{)Qx1-90001.5}{1}{26}%
+\:CrossWord{)Qx1-100001.5.1}{1}{26}%
+\:CrossWord{)Qx1-10001r25}{1}{26}%
+\:CrossWord{)QInvEpShkInv}{1}{26}%
+\:CrossWord{)Qx1-10002r26}{1}{26}%
+\:CrossWord{)Qx1-10003r27}{1}{26}%
+\:CrossWord{)QGICNrm}{1}{27}%
+\:CrossWord{)QGICNrmI}{1}{27}%
+\:CrossWord{)QPGroAdj}{1}{27}%
+\:CrossWord{)Qx1-10004r28}{1}{27}%
+\:CrossWord{)Qx1-10005r29}{1}{27}%
+\:CrossWord{)QAutarky-Value}{1}{28}%
+\:CrossWord{)Qx1-110001.5.2}{1}{28}%
+\:CrossWord{)QuInvEpShkuInv}{1}{28}%
+\:CrossWord{)QPGrouAdj}{1}{28}%
+\:CrossWord{)Qx1-11001r30}{1}{28}%
+\:CrossWord{)QDiscAltuAdj}{1}{28}%
+\:CrossWord{)Qx1-11002r31}{1}{28}%
+\:CrossWord{)QFVAC}{1}{29}%
+\:CrossWord{)Qx1-11003r32}{1}{29}%
+\:CrossWord{)Qx1-11003r31}{1}{29}%
+\:CrossWord{)QFVAC}{1}{29}%
+\:CrossWord{fn21x0}{}{29}%
+\:CrossWord{)Qx1-11004f21}{1}{29}%
+\:CrossWord{)BBufferStockTheory22.html(L }{BufferStockTheory.html}{29}%
+\:CrossWord{)F22F-}{BufferStockTheory22.html}{29}%
+\:CrossWord{BufferStockTheory22.html(L }{BufferStockTheory22.html}{29}%
+\:CrossWord{)Qfn21x0}{22}{29}%
+\:CrossWord{fn22x0}{}{29}%
+\:CrossWord{)Qx1-11005f22}{1}{29}%
+\:CrossWord{)BBufferStockTheory23.html(L }{BufferStockTheory.html}{29}%
+\:CrossWord{)F23F-}{BufferStockTheory23.html}{29}%
+\:CrossWord{BufferStockTheory23.html(L }{BufferStockTheory23.html}{29}%
+\:CrossWord{)Qfn22x0}{23}{29}%
+\:CrossWord{)QBaseline-Numerical-Solution}{1}{29}%
+\:CrossWord{)Qx1-120001.6}{1}{30}%
+\:CrossWord{)QCalibration}{1}{30}%
+\:CrossWord{)Qx1-120011}{1}{31}%
+\:CrossWord{2cAp0}{x1-120011}{32}%
+\:CrossWord{)QSymbols}{1}{33}%
+\:CrossWord{)Qx1-120022}{1}{34}%
+\:CrossWord{3cAp0}{x1-120022}{35}%
+\:CrossWord{)QRelatePFGICFHWCRICPFFVAC}{1}{36}%
+\:CrossWord{)QRelatePFGICFHWCRICPFFVAC}{1}{36}%
+\:CrossWord{)QcFuncsConverge}{1}{36}%
+\:CrossWord{)Qx1-120032}{1}{37}%
+\:CrossWord{4cAp0}{x1-120032}{38}%
+\:CrossWord{)QConcave-Consumption-Function-Characteristics}{1}{39}%
+\:CrossWord{)Qx1-130001.7}{1}{39}%
+\:CrossWord{fn23x0}{}{39}%
+\:CrossWord{)Qx1-13001f23}{1}{39}%
+\:CrossWord{)BBufferStockTheory24.html(L }{BufferStockTheory.html}{39}%
+\:CrossWord{)F24F-}{BufferStockTheory24.html}{39}%
+\:CrossWord{BufferStockTheory24.html(L }{BufferStockTheory24.html}{39}%
+\:CrossWord{)Qfn23x0}{24}{39}%
+\:CrossWord{fn24x0}{}{39}%
+\:CrossWord{)Qx1-13002f24}{1}{39}%
+\:CrossWord{)BBufferStockTheory25.html(L }{BufferStockTheory.html}{39}%
+\:CrossWord{)F25F-}{BufferStockTheory25.html}{39}%
+\:CrossWord{BufferStockTheory25.html(L }{BufferStockTheory25.html}{39}%
+\:CrossWord{)Qfn24x0}{25}{39}%
+\:CrossWord{)QBounds-for-the-Consumption-Functions}{1}{39}%
+\:CrossWord{)Qx1-140001.8}{1}{39}%
+\:CrossWord{fn25x0}{}{40}%
+\:CrossWord{)Qx1-14001f25}{1}{40}%
+\:CrossWord{)BBufferStockTheory26.html(L }{BufferStockTheory.html}{40}%
+\:CrossWord{)F26F-}{BufferStockTheory26.html}{40}%
+\:CrossWord{BufferStockTheory26.html(L }{BufferStockTheory26.html}{40}%
+\:CrossWord{)Qfn25x0}{26}{40}%
+\:CrossWord{)QMPCnvrsLower}{1}{40}%
+\:CrossWord{)QWRICCond}{1}{40}%
+\:CrossWord{)Qx1-14002r32}{1}{40}%
+\:CrossWord{)Qx1-150001.8.1}{1}{40}%
+\:CrossWord{)QMPCnvrsUpper}{1}{40}%
+\:CrossWord{)QWRIC}{1}{40}%
+\:CrossWord{)Qx1-15001r33}{1}{40}%
+\:CrossWord{)QWRPF}{1}{41}%
+\:CrossWord{)Qx1-15002r34}{1}{41}%
+\:CrossWord{)QcBounds}{1}{41}%
+\:CrossWord{)Qx1-15003r35}{1}{41}%
+\:CrossWord{fn26x0}{}{42}%
+\:CrossWord{)Qx1-15004f26}{1}{42}%
+\:CrossWord{)BBufferStockTheory27.html(L }{BufferStockTheory.html}{42}%
+\:CrossWord{)F27F-}{BufferStockTheory27.html}{42}%
+\:CrossWord{BufferStockTheory27.html(L }{BufferStockTheory27.html}{42}%
+\:CrossWord{)Qfn26x0}{27}{42}%
+\:CrossWord{)QConditions-Under-Which-the-Problem-Defines-a-Contraction-Mapping}{1}{42}%
+\:CrossWord{)Qx1-160001.9}{1}{42}%
+\:CrossWord{fn27x0}{}{42}%
+\:CrossWord{)Qx1-16001f27}{1}{42}%
+\:CrossWord{)BBufferStockTheory28.html(L }{BufferStockTheory.html}{42}%
+\:CrossWord{)F28F-}{BufferStockTheory28.html}{42}%
+\:CrossWord{BufferStockTheory28.html(L }{BufferStockTheory28.html}{42}%
+\:CrossWord{)Qfn27x0}{28}{42}%
+\:CrossWord{)Qx1-16002r1}{1}{42}%
+\:CrossWord{)Qx1-16003r36}{1}{42}%
+\:CrossWord{fn28x0}{}{43}%
+\:CrossWord{)Qx1-16004f28}{1}{43}%
+\:CrossWord{)BBufferStockTheory29.html(L }{BufferStockTheory.html}{43}%
+\:CrossWord{)F29F-}{BufferStockTheory29.html}{43}%
+\:CrossWord{BufferStockTheory29.html(L }{BufferStockTheory29.html}{43}%
+\:CrossWord{)Qfn28x0}{29}{43}%
+\:CrossWord{fn29x0}{}{43}%
+\:CrossWord{)Qx1-16005f29}{1}{43}%
+\:CrossWord{)BBufferStockTheory30.html(L }{BufferStockTheory.html}{43}%
+\:CrossWord{)F30F-}{BufferStockTheory30.html}{43}%
+\:CrossWord{BufferStockTheory30.html(L }{BufferStockTheory30.html}{43}%
+\:CrossWord{)Qfn29x0}{30}{43}%
+\:CrossWord{fn30x0}{}{43}%
+\:CrossWord{)Qx1-16006f30}{1}{43}%
+\:CrossWord{)BBufferStockTheory31.html(L }{BufferStockTheory.html}{43}%
+\:CrossWord{)F31F-}{BufferStockTheory31.html}{43}%
+\:CrossWord{BufferStockTheory31.html(L }{BufferStockTheory31.html}{43}%
+\:CrossWord{)Qfn30x0}{31}{43}%
+\:CrossWord{)Qx1-16007r37}{1}{44}%
+\:CrossWord{)QContraction-Conditions}{1}{44}%
+\:CrossWord{)QMainTheorem}{1}{44}%
+\:CrossWord{)Qx1-16008r1}{1}{44}%
+\:CrossWord{fn31x0}{}{45}%
+\:CrossWord{)Qx1-16009f31}{1}{45}%
+\:CrossWord{)BBufferStockTheory32.html(L }{BufferStockTheory.html}{45}%
+\:CrossWord{)F32F-}{BufferStockTheory32.html}{45}%
+\:CrossWord{BufferStockTheory32.html(L }{BufferStockTheory32.html}{45}%
+\:CrossWord{)Qfn31x0}{32}{45}%
+\:CrossWord{)QThe-Liquidity-Constrained-Solution-as-a-Limit}{1}{45}%
+\:CrossWord{)Qx1-170001.10}{1}{45}%
+\:CrossWord{)Qx1-17002x1}{1}{45}%
+\:CrossWord{)Qx1-17004x2}{1}{45}%
+\:CrossWord{fn32x0}{}{45}%
+\:CrossWord{)Qx1-17005f32}{1}{45}%
+\:CrossWord{)BBufferStockTheory33.html(L }{BufferStockTheory.html}{45}%
+\:CrossWord{)F33F-}{BufferStockTheory33.html}{45}%
+\:CrossWord{BufferStockTheory33.html(L }{BufferStockTheory33.html}{45}%
+\:CrossWord{)Qfn32x0}{33}{45}%
+\:CrossWord{)QDiscussion-of-Parametric-Restrictions}{1}{46}%
+\:CrossWord{)Qx1-180001.11}{1}{46}%
+\:CrossWord{)QInequalities}{1}{46}%
+\:CrossWord{)QInequalities}{1}{46}%
+\:CrossWord{)Qx1-180013}{1}{47}%
+\:CrossWord{5cAp0}{x1-180013}{48}%
+\:CrossWord{)Qx1-190001.11.1}{1}{49}%
+\:CrossWord{)Qx1-19001r38}{1}{49}%
+\:CrossWord{)QIntuitionRIC}{1}{50}%
+\:CrossWord{)Qx1-200001.11.2}{1}{50}%
+\:CrossWord{)Qx1-20001r39}{1}{50}%
+\:CrossWord{)Qx1-20001r38}{1}{50}%
+\:CrossWord{fn33x0}{}{51}%
+\:CrossWord{)Qx1-20002f33}{1}{51}%
+\:CrossWord{)BBufferStockTheory34.html(L }{BufferStockTheory.html}{51}%
+\:CrossWord{)F34F-}{BufferStockTheory34.html}{51}%
+\:CrossWord{BufferStockTheory34.html(L }{BufferStockTheory34.html}{51}%
+\:CrossWord{)Qfn33x0}{34}{51}%
+\:CrossWord{)QWhen-the-RIC-Holds}{1}{51}%
+\:CrossWord{)Qx1-210001.11.3}{1}{51}%
+\:CrossWord{)QFactors-Defined-And-Compared}{1}{52}%
+\:CrossWord{)Qx1-210013}{1}{53}%
+\:CrossWord{6cAp0}{x1-210013}{54}%
+\:CrossWord{)QSufficient-Conditions}{1}{56}%
+\:CrossWord{)QSufficient-Conditions-For-Nondegenerate-Solution}{1}{56}%
+\:CrossWord{)Qx1-210024}{1}{57}%
+\:CrossWord{7cAp0}{x1-210024}{58}%
+\:CrossWord{)QAnalysisoftheConvergedConsumptionFunction}{1}{59}%
+\:CrossWord{)Qx1-220002}{1}{59}%
+\:CrossWord{fn34x0}{}{59}%
+\:CrossWord{)Qx1-22001f34}{1}{59}%
+\:CrossWord{)BBufferStockTheory35.html(L }{BufferStockTheory.html}{59}%
+\:CrossWord{)F35F-}{BufferStockTheory35.html}{59}%
+\:CrossWord{BufferStockTheory35.html(L }{BufferStockTheory35.html}{59}%
+\:CrossWord{)Qfn34x0}{35}{59}%
+\:CrossWord{fn35x0}{}{59}%
+\:CrossWord{)Qx1-22002f35}{1}{59}%
+\:CrossWord{)BBufferStockTheory36.html(L }{BufferStockTheory.html}{59}%
+\:CrossWord{)F36F-}{BufferStockTheory36.html}{59}%
+\:CrossWord{BufferStockTheory36.html(L }{BufferStockTheory36.html}{59}%
+\:CrossWord{)Qfn35x0}{36}{59}%
+\:CrossWord{)QcGroTargetFig}{1}{59}%
+\:CrossWord{)QcGroTargetFig}{1}{59}%
+\:CrossWord{)Qx1-220034}{1}{60}%
+\:CrossWord{8cAp0}{x1-220034}{61}%
+\:CrossWord{)QLimitsAsmtToInfty}{1}{62}%
+\:CrossWord{)Qx1-230002.1}{1}{62}%
+\:CrossWord{)Qx1-23001r39}{1}{62}%
+\:CrossWord{)Qx1-23001r38}{1}{62}%
+\:CrossWord{)Qx1-230002.1}{1}{63}%
+\:CrossWord{)Qmpclimits}{1}{63}%
+\:CrossWord{)QMPCLimits}{1}{63}%
+\:CrossWord{)Qx1-230025}{1}{64}%
+\:CrossWord{9cAp0}{x1-230025}{65}%
+\:CrossWord{)QcFuncBounds}{1}{66}%
+\:CrossWord{)QcFuncBounds}{1}{66}%
+\:CrossWord{)Qx1-230036}{1}{67}%
+\:CrossWord{10cAp0}{x1-230036}{68}%
+\:CrossWord{)Qxtp1toinfty}{1}{69}%
+\:CrossWord{)Qx1-23004r39}{1}{69}%
+\:CrossWord{)Qx1-23004r38}{1}{69}%
+\:CrossWord{fn36x0}{}{70}%
+\:CrossWord{)Qx1-23005f36}{1}{70}%
+\:CrossWord{)BBufferStockTheory37.html(L }{BufferStockTheory.html}{70}%
+\:CrossWord{)F37F-}{BufferStockTheory37.html}{70}%
+\:CrossWord{BufferStockTheory37.html(L }{BufferStockTheory37.html}{70}%
+\:CrossWord{)Qfn36x0}{37}{70}%
+\:CrossWord{)QLimitsAsmtToZero}{1}{70}%
+\:CrossWord{)Qx1-240002.2}{1}{70}%
+\:CrossWord{fn37x0}{}{71}%
+\:CrossWord{)Qx1-24001f37}{1}{71}%
+\:CrossWord{)BBufferStockTheory38.html(L }{BufferStockTheory.html}{71}%
+\:CrossWord{)F38F-}{BufferStockTheory38.html}{71}%
+\:CrossWord{BufferStockTheory38.html(L }{BufferStockTheory38.html}{71}%
+\:CrossWord{)Qfn37x0}{38}{71}%
+\:CrossWord{)Qonetarget}{1}{71}%
+\:CrossWord{)QUnique-Stable-Points}{1}{71}%
+\:CrossWord{)Qx1-250002.3}{1}{71}%
+\:CrossWord{)QTheoremTarget}{1}{71}%
+\:CrossWord{)Qx1-260002.3.1}{1}{72}%
+\:CrossWord{)Qx1-26001r2}{1}{72}%
+\:CrossWord{)Qx1-26002r39}{1}{72}%
+\:CrossWord{)Qx1-26003r40}{1}{72}%
+\:CrossWord{)Qx1-26003r39}{1}{72}%
+\:CrossWord{)QmTargImplicit}{1}{73}%
+\:CrossWord{)Qx1-26004r40}{1}{73}%
+\:CrossWord{)QCollective-Stability}{1}{73}%
+\:CrossWord{)Qx1-270002.3.2}{1}{73}%
+\:CrossWord{)Qbalgrostable}{1}{73}%
+\:CrossWord{)Qx1-27001r41}{1}{73}%
+\:CrossWord{)Qx1-27001r40}{1}{74}%
+\:CrossWord{)QbalgrostableSolve}{1}{74}%
+\:CrossWord{)Qx1-27002r41}{1}{74}%
+\:CrossWord{)Qx1-27002r40}{1}{74}%
+\:CrossWord{fn38x0}{}{74}%
+\:CrossWord{)Qx1-27003f38}{1}{74}%
+\:CrossWord{)BBufferStockTheory39.html(L }{BufferStockTheory.html}{74}%
+\:CrossWord{)F39F-}{BufferStockTheory39.html}{74}%
+\:CrossWord{BufferStockTheory39.html(L }{BufferStockTheory39.html}{74}%
+\:CrossWord{)Qfn38x0}{39}{74}%
+\:CrossWord{)Qx1-27004r3}{1}{75}%
+\:CrossWord{)Qx1-27005r41}{1}{75}%
+\:CrossWord{)Qx1-27006r42}{1}{75}%
+\:CrossWord{)Qx1-27006r41}{1}{75}%
+\:CrossWord{)Qx1-27008x1}{1}{75}%
+\:CrossWord{)Qx1-27010x2}{1}{76}%
+\:CrossWord{)Qx1-27012x3}{1}{76}%
+\:CrossWord{)Qx1-280002.3.3}{1}{76}%
+\:CrossWord{)QGICNrmFailsButGICRawHolds}{1}{76}%
+\:CrossWord{)QGICNrmFailsButGICRawHolds}{1}{76}%
+\:CrossWord{)Qx1-280017}{1}{77}%
+\:CrossWord{11cAp0}{x1-280017}{78}%
+\:CrossWord{)QThe-Aggregate-and-Idiosyncratic-Relationship-Between-Consumption-Growth-and-Income-Growth}{1}{79}%
+\:CrossWord{)Qx1-290003}{1}{79}%
+\:CrossWord{fn39x0}{}{79}%
+\:CrossWord{)Qx1-29001f39}{1}{79}%
+\:CrossWord{)BBufferStockTheory40.html(L }{BufferStockTheory.html}{79}%
+\:CrossWord{)F40F-}{BufferStockTheory40.html}{79}%
+\:CrossWord{BufferStockTheory40.html(L }{BufferStockTheory40.html}{79}%
+\:CrossWord{)Qfn39x0}{40}{79}%
+\:CrossWord{fn40x0}{}{80}%
+\:CrossWord{)Qx1-29002f40}{1}{80}%
+\:CrossWord{)BBufferStockTheory41.html(L }{BufferStockTheory.html}{80}%
+\:CrossWord{)F41F-}{BufferStockTheory41.html}{80}%
+\:CrossWord{BufferStockTheory41.html(L }{BufferStockTheory41.html}{80}%
+\:CrossWord{)Qfn40x0}{41}{80}%
+\:CrossWord{)QConsumption-and-Income-Growth-at-the-Household-Level}{1}{80}%
+\:CrossWord{)Qx1-300003.1}{1}{80}%
+\:CrossWord{)QGrowth-Rates-of-Aggregate-Income-and-Consumption}{1}{80}%
+\:CrossWord{)Qx1-310003.2}{1}{81}%
+\:CrossWord{)QMortality-And-Redistribution}{1}{81}%
+\:CrossWord{)Qx1-320003.3}{1}{81}%
+\:CrossWord{)QBlanchard-Lives}{1}{82}%
+\:CrossWord{)Qx1-330003.3.1}{1}{82}%
+\:CrossWord{)Qx1-33001r42}{1}{82}%
+\:CrossWord{)QModigliani-Lives}{1}{82}%
+\:CrossWord{)Qx1-340003.3.2}{1}{83}%
+\:CrossWord{)QGICMrt}{1}{83}%
+\:CrossWord{)Qx1-34001r43}{1}{83}%
+\:CrossWord{)QConclusions}{1}{84}%
+\:CrossWord{)Qx1-350004}{1}{84}%
+\:CrossWord{)Qx1-350004}{1}{85}%
+\:CrossWord{)QAppendices}{1}{86}%
+\:CrossWord{)Qx1-36000A}{1}{86}%
+\:CrossWord{)Qx1-360015}{1}{87}%
+\:CrossWord{12cAp0}{x1-360015}{88}%
+\:CrossWord{)Qx1-37000A.1}{1}{89}%
+\:CrossWord{fn41x0}{}{89}%
+\:CrossWord{)Qx1-37001f41}{1}{89}%
+\:CrossWord{)BBufferStockTheory42.html(L }{BufferStockTheory.html}{89}%
+\:CrossWord{)F42F-}{BufferStockTheory42.html}{89}%
+\:CrossWord{BufferStockTheory42.html(L }{BufferStockTheory42.html}{89}%
+\:CrossWord{)Qfn41x0}{42}{89}%
+\:CrossWord{)Qx1-37002r44}{1}{89}%
+\:CrossWord{)Qx1-37002r43}{1}{89}%
+\:CrossWord{)QcnclGICAbscnclRICFHWC}{1}{89}%
+\:CrossWord{)Qx1-37003r44}{1}{89}%
+\:CrossWord{)QcnclGICAbscnclRICcnclFHWC}{1}{90}%
+\:CrossWord{fn42x0}{}{90}%
+\:CrossWord{)Qx1-37004f42}{1}{90}%
+\:CrossWord{)BBufferStockTheory43.html(L }{BufferStockTheory.html}{90}%
+\:CrossWord{)F43F-}{BufferStockTheory43.html}{90}%
+\:CrossWord{BufferStockTheory43.html(L }{BufferStockTheory43.html}{90}%
+\:CrossWord{)Qfn42x0}{43}{90}%
+\:CrossWord{)Qx1-37005r45}{1}{90}%
+\:CrossWord{fn43x0}{}{90}%
+\:CrossWord{)Qx1-37006f43}{1}{90}%
+\:CrossWord{)BBufferStockTheory44.html(L }{BufferStockTheory.html}{90}%
+\:CrossWord{)F44F-}{BufferStockTheory44.html}{90}%
+\:CrossWord{BufferStockTheory44.html(L }{BufferStockTheory44.html}{90}%
+\:CrossWord{)Qfn43x0}{44}{90}%
+\:CrossWord{fn44x0}{}{91}%
+\:CrossWord{)Qx1-37007f44}{1}{91}%
+\:CrossWord{)BBufferStockTheory45.html(L }{BufferStockTheory.html}{91}%
+\:CrossWord{)F45F-}{BufferStockTheory45.html}{91}%
+\:CrossWord{BufferStockTheory45.html(L }{BufferStockTheory45.html}{91}%
+\:CrossWord{)Qfn44x0}{45}{91}%
+\:CrossWord{)Qx1-38000A.2}{1}{91}%
+\:CrossWord{)Qx1-38001r46}{1}{91}%
+\:CrossWord{)Qx1-38002r47}{1}{92}%
+\:CrossWord{)Qx1-38002r46}{1}{92}%
+\:CrossWord{)Qx1-38003r47}{1}{92}%
+\:CrossWord{)Qx1-38005r48}{1}{93}%
+\:CrossWord{)Qx1-38006r49}{1}{93}%
+\:CrossWord{)Qx1-39000A.2.1}{1}{94}%
+\:CrossWord{)Qx1-39002r50}{1}{94}%
+\:CrossWord{)Qx1-40000A.2.2}{1}{95}%
+\:CrossWord{)Qx1-40001r51}{1}{95}%
+\:CrossWord{)Qx1-40001r50}{1}{95}%
+\:CrossWord{)QPFGICHoldsFHWCFailsRICFailsDiscuss}{1}{95}%
+\:CrossWord{)Qx1-40004r51}{1}{96}%
+\:CrossWord{fn45x0}{}{97}%
+\:CrossWord{)Qx1-40005f45}{1}{97}%
+\:CrossWord{)BBufferStockTheory46.html(L }{BufferStockTheory.html}{97}%
+\:CrossWord{)F46F-}{BufferStockTheory46.html}{97}%
+\:CrossWord{BufferStockTheory46.html(L }{BufferStockTheory46.html}{97}%
+\:CrossWord{)Qfn45x0}{46}{97}%
+\:CrossWord{)Qx46-40006r52}{46}{97}%
+\:CrossWord{fn46x0}{}{97}%
+\:CrossWord{)Qx1-40007f46}{1}{97}%
+\:CrossWord{)BBufferStockTheory47.html(L }{BufferStockTheory.html}{97}%
+\:CrossWord{)F47F-}{BufferStockTheory47.html}{97}%
+\:CrossWord{BufferStockTheory47.html(L }{BufferStockTheory47.html}{97}%
+\:CrossWord{)Qfn46x0}{47}{97}%
+\:CrossWord{)Qx1-40008r53}{1}{97}%
+\:CrossWord{)Qx1-40013r56}{1}{99}%
+\:CrossWord{)QPFGICHoldsFHWCFailsRICFails}{1}{99}%
+\:CrossWord{)Qx1-400148}{1}{100}%
+\:CrossWord{13cAp0}{x1-400148}{101}%
+\:CrossWord{)Qx1-41000B}{1}{102}%
+\:CrossWord{)Qx1-41002x1}{1}{102}%
+\:CrossWord{)Qx1-41004x2}{1}{102}%
+\:CrossWord{)Qx1-41006x3}{1}{102}%
+\:CrossWord{)Qx1-41008x4}{1}{102}%
+\:CrossWord{)Qx1-41010x5}{1}{102}%
+\:CrossWord{)Qx1-41012x6}{1}{102}%
+\:CrossWord{)Qx1-41013r57}{1}{103}%
+\:CrossWord{)Qx1-41014r58}{1}{103}%
+\:CrossWord{)Qx1-41015r59}{1}{103}%
+\:CrossWord{)Qx1-41016r60}{1}{104}%
+\:CrossWord{)Qx1-41017r61}{1}{104}%
+\:CrossWord{)Qx1-41018r62}{1}{105}%
+\:CrossWord{)QcFunc-is-Twice-Continuously-Differentiable}{1}{105}%
+\:CrossWord{)Qx1-42000C}{1}{105}%
+\:CrossWord{)Qx1-42001r63}{1}{106}%
+\:CrossWord{)QIt-Is-A-Contraction-Mapping}{1}{106}%
+\:CrossWord{)Qx1-43000D}{1}{107}%
+\:CrossWord{fn47x0}{}{107}%
+\:CrossWord{)Qx1-43001f47}{1}{107}%
+\:CrossWord{)BBufferStockTheory48.html(L }{BufferStockTheory.html}{107}%
+\:CrossWord{)F48F-}{BufferStockTheory48.html}{107}%
+\:CrossWord{BufferStockTheory48.html(L }{BufferStockTheory48.html}{107}%
+\:CrossWord{)Qfn47x0}{48}{107}%
+\:CrossWord{)Qx1-43002r64}{1}{107}%
+\:CrossWord{fn48x0}{}{108}%
+\:CrossWord{)Qx1-43003f48}{1}{108}%
+\:CrossWord{)BBufferStockTheory49.html(L }{BufferStockTheory.html}{108}%
+\:CrossWord{)F49F-}{BufferStockTheory49.html}{108}%
+\:CrossWord{BufferStockTheory49.html(L }{BufferStockTheory49.html}{108}%
+\:CrossWord{)Qfn48x0}{49}{108}%
+\:CrossWord{fn49x0}{}{109}%
+\:CrossWord{)Qx1-43004f49}{1}{109}%
+\:CrossWord{)BBufferStockTheory50.html(L }{BufferStockTheory.html}{109}%
+\:CrossWord{)F50F-}{BufferStockTheory50.html}{109}%
+\:CrossWord{BufferStockTheory50.html(L }{BufferStockTheory50.html}{109}%
+\:CrossWord{)Qfn49x0}{50}{109}%
+\:CrossWord{)Qx1-43005r65}{1}{109}%
+\:CrossWord{)Qx1-43006r66}{1}{109}%
+\:CrossWord{)Qx1-43006r65}{1}{110}%
+\:CrossWord{)Qx1-43007r66}{1}{110}%
+\:CrossWord{)Qx1-44000D.1}{1}{110}%
+\:CrossWord{fn50x0}{}{111}%
+\:CrossWord{)Qx1-44001f50}{1}{111}%
+\:CrossWord{)BBufferStockTheory51.html(L }{BufferStockTheory.html}{111}%
+\:CrossWord{)F51F-}{BufferStockTheory51.html}{111}%
+\:CrossWord{BufferStockTheory51.html(L }{BufferStockTheory51.html}{111}%
+\:CrossWord{)Qfn50x0}{51}{111}%
+\:CrossWord{)Qx1-45000E}{1}{111}%
+\:CrossWord{)Qx1-46000E.1}{1}{112}%
+\:CrossWord{)Qx1-46001r67}{1}{112}%
+\:CrossWord{)Qx1-46002r68}{1}{112}%
+\:CrossWord{)Qx1-46003r69}{1}{112}%
+\:CrossWord{)Qx1-47000E.2}{1}{113}%
+\:CrossWord{)Qx1-47001r70}{1}{113}%
+\:CrossWord{)Qx1-47002r71}{1}{113}%
+\:CrossWord{)Qx1-48000F}{1}{114}%
+\:CrossWord{)Qx1-48001r72}{1}{114}%
+\:CrossWord{)Qx1-48001r71}{1}{114}%
+\:CrossWord{)Qx1-48002r72}{1}{114}%
+\:CrossWord{)Qx1-48003r72}{1}{115}%
+\:CrossWord{)Qx1-48004r72}{1}{115}%
+\:CrossWord{)Qx1-48005r72}{1}{115}%
+\:CrossWord{)QThe-Limiting-MPCs}{1}{116}%
+\:CrossWord{)Qx1-49000G}{1}{116}%
+\:CrossWord{)Qx1-49001r72}{1}{116}%
+\:CrossWord{)Qx1-49001r71}{1}{117}%
+\:CrossWord{)Qx1-49002r72}{1}{117}%
+\:CrossWord{)Qx1-49002r71}{1}{117}%
+\:CrossWord{)Qx1-49003r72}{1}{117}%
+\:CrossWord{)Qx1-49003r71}{1}{118}%
+\:CrossWord{)Qx1-49004r72}{1}{118}%
+\:CrossWord{)Qx1-49005r73}{1}{118}%
+\:CrossWord{)QMPCnvrs}{1}{119}%
+\:CrossWord{)Qx1-49008r74}{1}{119}%
+\:CrossWord{)Qx1-49009r75}{1}{120}%
+\:CrossWord{)QMPCnvrsIsCPDV}{1}{120}%
+\:CrossWord{)Qx1-49011r76}{1}{120}%
+\:CrossWord{)Qx1-50000H}{1}{121}%
+\:CrossWord{)Qx1-50001r77}{1}{121}%
+\:CrossWord{)Qx1-50002r77}{1}{121}%
+\:CrossWord{)Qx1-50003r78}{1}{122}%
+\:CrossWord{)Qx1-50004r79}{1}{122}%
+\:CrossWord{)Qx1-50005r79}{1}{123}%
+\:CrossWord{)Qx1-50006r80}{1}{123}%
+\:CrossWord{)Qx1-50007r80}{1}{123}%
+\:CrossWord{)Qx1-50008r80}{1}{124}%
+\:CrossWord{)Qx1-50009r81}{1}{124}%
+\:CrossWord{)Qx1-51000I}{1}{125}%
+\:CrossWord{fn51x0}{}{126}%
+\:CrossWord{)Qx1-51001f51}{1}{126}%
+\:CrossWord{)BBufferStockTheory52.html(L }{BufferStockTheory.html}{126}%
+\:CrossWord{)F52F-}{BufferStockTheory52.html}{126}%
+\:CrossWord{BufferStockTheory52.html(L }{BufferStockTheory52.html}{126}%
+\:CrossWord{)Qfn51x0}{52}{126}%
+\:CrossWord{)Qx1-51002r82}{1}{126}%
+\:CrossWord{)Qx1-51002r81}{1}{126}%
+\:CrossWord{)Qx1-51004r82}{1}{126}%
+\:CrossWord{)Qx1-51004r81}{1}{127}%
+\:CrossWord{)Qx1-52000J}{1}{127}%
+\:CrossWord{fn52x0}{}{127}%
+\:CrossWord{)Qx1-52001f52}{1}{127}%
+\:CrossWord{)BBufferStockTheory53.html(L }{BufferStockTheory.html}{127}%
+\:CrossWord{)F53F-}{BufferStockTheory53.html}{127}%
+\:CrossWord{BufferStockTheory53.html(L }{BufferStockTheory53.html}{127}%
+\:CrossWord{)Qfn52x0}{53}{127}%
+\:CrossWord{fn53x0}{}{128}%
+\:CrossWord{)Qx1-52002f53}{1}{128}%
+\:CrossWord{)BBufferStockTheory54.html(L }{BufferStockTheory.html}{128}%
+\:CrossWord{)F54F-}{BufferStockTheory54.html}{128}%
+\:CrossWord{BufferStockTheory54.html(L }{BufferStockTheory54.html}{128}%
+\:CrossWord{)Qfn53x0}{54}{128}%
+\:CrossWord{)Qx1-52004x1}{1}{128}%
+\:CrossWord{)Qx1-52006x2}{1}{128}%
+\:CrossWord{)Qx1-52008x3}{1}{128}%
+\:CrossWord{)Qx1-52010x4}{1}{128}%
+\:CrossWord{)Qx1-52011r82}{1}{129}%
+\:CrossWord{)Qx1-52012r83}{1}{129}%
+\:CrossWord{)Qx1-52013r84}{1}{129}%
+\:CrossWord{)Qx1-52014r85}{1}{130}%
+\:CrossWord{)Qx1-52015r86}{1}{130}%
+\:CrossWord{)QApndxConditionDiagrams}{1}{130}%
+\:CrossWord{)Qx1-53000K}{1}{131}%
+\:CrossWord{)QInequalityPFGICFHWCRIC}{1}{131}%
+\:CrossWord{)Qx1-530019}{1}{132}%
+\:CrossWord{14cAp0}{x1-530019}{133}%
+\:CrossWord{)Qx1-54000K.1}{1}{134}%
+\:CrossWord{fn54x0}{}{134}%
+\:CrossWord{)Qx1-54001f54}{1}{134}%
+\:CrossWord{)BBufferStockTheory55.html(L }{BufferStockTheory.html}{134}%
+\:CrossWord{)F55F-}{BufferStockTheory55.html}{134}%
+\:CrossWord{BufferStockTheory55.html(L }{BufferStockTheory55.html}{134}%
+\:CrossWord{)Qfn54x0}{55}{134}%
+\:CrossWord{fn55x0}{}{134}%
+\:CrossWord{)Qx1-54002f55}{1}{134}%
+\:CrossWord{)BBufferStockTheory56.html(L }{BufferStockTheory.html}{134}%
+\:CrossWord{)F56F-}{BufferStockTheory56.html}{134}%
+\:CrossWord{BufferStockTheory56.html(L }{BufferStockTheory56.html}{134}%
+\:CrossWord{)Qfn55x0}{56}{134}%
+\:CrossWord{fn56x0}{}{134}%
+\:CrossWord{)Qx1-54003f56}{1}{134}%
+\:CrossWord{)BBufferStockTheory57.html(L }{BufferStockTheory.html}{134}%
+\:CrossWord{)F57F-}{BufferStockTheory57.html}{134}%
+\:CrossWord{BufferStockTheory57.html(L }{BufferStockTheory57.html}{134}%
+\:CrossWord{)Qfn56x0}{57}{134}%
+\:CrossWord{fn57x0}{}{135}%
+\:CrossWord{)Qx1-54004f57}{1}{135}%
+\:CrossWord{)BBufferStockTheory58.html(L }{BufferStockTheory.html}{135}%
+\:CrossWord{)F58F-}{BufferStockTheory58.html}{135}%
+\:CrossWord{BufferStockTheory58.html(L }{BufferStockTheory58.html}{135}%
+\:CrossWord{)Qfn57x0}{58}{135}%
+\:CrossWord{)Qx58-54005r87}{58}{135}%
+\:CrossWord{)Qx58-54005r57}{58}{135}%
+\:CrossWord{)Qx1-5400610}{1}{136}%
+\:CrossWord{15cAp0}{x1-5400610}{137}%
+\:CrossWord{fn58x0}{}{138}%
+\:CrossWord{)Qx1-54007f58}{1}{138}%
+\:CrossWord{)BBufferStockTheory59.html(L }{BufferStockTheory.html}{138}%
+\:CrossWord{)F59F-}{BufferStockTheory59.html}{138}%
+\:CrossWord{BufferStockTheory59.html(L }{BufferStockTheory59.html}{138}%
+\:CrossWord{)Qfn58x0}{59}{138}%
+\:CrossWord{)Qx1-54008r87}{1}{138}%
+\:CrossWord{)Qx1-54009r88}{1}{138}%
+\:CrossWord{)Qx1-54009r87}{1}{139}%
+\:CrossWord{)Qx1-5401011}{1}{140}%
+\:CrossWord{16cAp0}{x1-5401011}{141}%
+\:CrossWord{)Qx1-5401112}{1}{143}%
+\:CrossWord{17cAp0}{x1-5401112}{144}%
+\:CrossWord{)QApndxCGrowthDeclines}{1}{145}%
+\:CrossWord{)Qx1-55000L}{1}{145}%
+\:CrossWord{)Qx1-55001r88}{1}{145}%
+\:CrossWord{)Qx1-55001r87}{1}{145}%
+\:CrossWord{)Qx1-55002r88}{1}{145}%
+\:CrossWord{)Qx1-55002r87}{1}{145}%
+\:CrossWord{)Qx1-55003r88}{1}{145}%
+\:CrossWord{)Qx1-55004r88}{1}{146}%
+\:CrossWord{)Qx1-55005r88}{1}{146}%
+\:CrossWord{)QApndxMTargetIsStable}{1}{147}%
+\:CrossWord{)Qx1-56000M}{1}{147}%
+\:CrossWord{)Qx1-56001r4}{1}{147}%
+\:CrossWord{)Qx1-56002r88}{1}{147}%
+\:CrossWord{)Qx1-56003r89}{1}{147}%
+\:CrossWord{)Qx1-56003r88}{1}{148}%
+\:CrossWord{)Qx1-56004r5}{1}{148}%
+\:CrossWord{)Qx1-56005r89}{1}{148}%
+\:CrossWord{)Qx1-56006r90}{1}{148}%
+\:CrossWord{)Qx1-56006r89}{1}{149}%
+\:CrossWord{)Qx1-56007r1}{1}{149}%
+\:CrossWord{)Qx1-57000M.1}{1}{149}%
+\:CrossWord{)Qx1-58000M.1.1}{1}{149}%
+\:CrossWord{)Qx1-59000M.1.2}{1}{150}%
+\:CrossWord{)Qx1-59002x1}{1}{150}%
+\:CrossWord{)Qx1-59004x2}{1}{150}%
+\:CrossWord{)Qx1-59006x3}{1}{150}%
+\:CrossWord{)Qx1-59008x4}{1}{150}%
+\:CrossWord{)Qx1-59009r90}{1}{150}%
+\:CrossWord{)Qx1-59009r89}{1}{150}%
+\:CrossWord{)Qx1-60000M.1.3}{1}{151}%
+\:CrossWord{)Qx1-60001r90}{1}{151}%
+\:CrossWord{)Qx1-60001r89}{1}{151}%
+\:CrossWord{)Qx1-60002r90}{1}{151}%
+\:CrossWord{)Qx1-60002r89}{1}{151}%
+\:CrossWord{)Qx1-60003r90}{1}{152}%
+\:CrossWord{)Qx1-61000M.2}{1}{153}%
+\:CrossWord{)Qx1-62000M.2.1}{1}{153}%
+\:CrossWord{)Qx1-63000M.2.2}{1}{153}%
+\:CrossWord{)Qx1-63001r91}{1}{154}%
+\:CrossWord{)Qx1-63001r90}{1}{154}%
+\:CrossWord{)Qx1-64000M.2.3}{1}{154}%
+\:CrossWord{)Qx1-64001r91}{1}{154}%
+\:CrossWord{)Qx1-64001r90}{1}{155}%
+\:CrossWord{)Qx1-64002r91}{1}{155}%
+\:CrossWord{)Qx1-64002r90}{1}{155}%
+\:CrossWord{)Qx1-64003r91}{1}{156}%
+\:CrossWord{)Qx1-65000M.3}{1}{156}%
+\:CrossWord{)Qx1-66000M.3}{1}{157}%
+\:CrossWord{)QXacCovariance}{1}{157}%
+\:CrossWord{)QXaiyagari:ge}{1}{157}%
+\:CrossWord{)QXasHomogeneous}{1}{157}%
+\:CrossWord{)QXbellmanDynamicProgramming}{1}{157}%
+\:CrossWord{)QXbenhabibWealth}{1}{157}%
+\:CrossWord{)QXbewleyPIH}{1}{157}%
+\:CrossWord{)QXblanchardFinite}{1}{157}%
+\:CrossWord{)QXblpRisk}{1}{157}%
+\:CrossWord{)QXjboydWeighted}{1}{157}%
+\:CrossWord{)QXCagetti}{1}{158}%
+\:CrossWord{)QXcarrollBrookings}{1}{158}%
+\:CrossWord{)QXcarrollBSLCPIH}{1}{158}%
+\:CrossWord{)QXcarrollEGM}{1}{158}%
+\:CrossWord{)QXckConcavity}{1}{158}%
+\:CrossWord{)QXcsNature}{1}{158}%
+\:CrossWord{)QXcstwMPC}{1}{158}%
+\:CrossWord{)QXcwcUnderUncert}{1}{158}%
+\:CrossWord{)QXclaridaErgodic}{1}{159}%
+\:CrossWord{)QXdeatonLiqConstr}{1}{159}%
+\:CrossWord{)QXduranDiscounting}{1}{159}%
+\:CrossWord{)QXfriedmanATheory}{1}{159}%
+\:CrossWord{)QXgpLifeCycle}{1}{159}%
+\:CrossWord{)QXhendricksBequests}{1}{159}%
+\:CrossWord{)QXhendricksSmallBequests}{1}{159}%
+\:CrossWord{)QXhiraguchiBSProofs}{1}{159}%
+\:CrossWord{)QXjpCins}{1}{159}%
+\:CrossWord{)QXkmpHandbook}{1}{159}%
+\:CrossWord{)QXlsIncFluct}{1}{160}%
+\:CrossWord{)QXmstIncFluct}{1}{160}%
+\:CrossWord{)QXmaTodaRich}{1}{160}%
+\:CrossWord{)QXmacurdyTimeseries}{1}{160}%
+\:CrossWord{)QXmvExistence}{1}{160}%
+\:CrossWord{)QXmnUnique}{1}{160}%
+\:CrossWord{)QXmodiglianiWealth}{1}{160}%
+\:CrossWord{)QXmuthOptimal}{1}{160}%
+\:CrossWord{)QXrabaultBorrowing}{1}{160}%
+\:CrossWord{)QXramseySave}{1}{161}%
+\:CrossWord{)QXriehl2017category}{1}{161}%
+\:CrossWord{)QXrrExistence}{1}{161}%
+\:CrossWord{)QXseIncFluct}{1}{161}%
+\:CrossWord{)QXscheinkman&weiss:borrowing}{1}{161}%
+\:CrossWord{)QXschmitt2003closing}{1}{161}%
+\:CrossWord{)QXStachurskiToda2019JET}{1}{161}%
+\:CrossWord{)QXslpMethods}{1}{161}%
+\:CrossWord{)QXstyConsumption}{1}{161}%
+\:CrossWord{)QXszeidlInvariant}{1}{161}%
+\:CrossWord{)QXtocheUrisk}{1}{162}%
+\:CrossWord{)QXyaoNote}{1}{162}%
+\:CrossWord{)QXzeldesStochastic}{1}{162}%

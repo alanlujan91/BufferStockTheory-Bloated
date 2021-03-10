@@ -1,0 +1,3307 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=latex 2020.4.7)  10 MAR 2021 11:24
+entering extended mode
+ \write18 enabled.
+ %&-line parsing enabled.
+**\makeatletter\def\HCode{\futurelet\HCode\HChar}\def\HChar{\ifx"\HCode\def\HCode"##1"{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.{\g@addto@macro\@documentclasshook{\RequirePackage[#1,html]{tex4ht}}\let\HCode\documentstyle\def\documentstyle{\let\documentstyle\HCode\expandafter\def\csname tex4ht\endcsname{#1,html}\def\HCode####1{\documentstyle[tex4ht,}\@ifnextchar[{\HCode}{\documentstyle[tex4ht]}}}\makeatother\HCode BufferStockTheory.cfg,svg            ,charset=utf-8,html5.a.b.c.\input "\detokenize{BufferStockTheory}"
+(./BufferStockTheory.tex (./econtexRoot.tex (./Resources/econtexPaths.tex)) (./Resources/texmf-local/tex/latex/econtex.cls
+
+LaTeX Warning: You have requested document class `./Resources/texmf-local/tex/latex/econtex',
+               but the document class provides `econtex'.
+
+Document Class: econtex 2017/08/01 LaTeX class for economics papers, handouts, and exam questions written by Christopher Carroll
+(/usr/local/texlive/texmf-local/tex/latex/snapshot.sty
+Package: snapshot 2002/03/05 v1.14
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count167
+\cp@tempcnt=\count168
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+\c@IncludeTitlePage=\count169
+(/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/scrartcl.cls
+Document Class: scrartcl 2020/01/24 v3.29 KOMA-Script document class (article)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2020/01/24 v3.29 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2020/01/24 v3.29 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2020/01/24 v3.29 KOMA-Script package (loading files)
+))) (/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2020/01/24 v3.29 KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip47
+\scr@dte@tocline@numbox=\box45
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 137.
+Class scrartcl Info: File `scrsize12pt.clo' used to setup font sizes on input line 2212.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
+File: scrsize12pt.clo 2020/01/24 v3.29 KOMA-Script font size class option (12pt)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2020/01/24 v3.29 KOMA-Script package (type area)
+\ta@bcor=\skip48
+\ta@div=\count170
+\ta@hblk=\skip49
+\ta@vblk=\skip50
+\ta@temp=\skip51
+\footheight=\skip52
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 12
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 448.13095pt
+(typearea)              DIV departure   = -6%
+(typearea)              \evensidemargin = 2.4185pt
+(typearea)              \oddsidemargin  = 2.4185pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 635.5pt
+(typearea)              \topmargin      = -41.72441pt
+(typearea)              \headheight     = 18.125pt
+(typearea)              \headsep        = 21.75pt
+(typearea)              \topskip        = 12.0pt
+(typearea)              \footskip       = 50.75pt
+(typearea)              \baselineskip   = 14.5pt
+(typearea)              on input line 1719.
+)
+\c@part=\count171
+\c@section=\count172
+\c@subsection=\count173
+\c@subsubsection=\count174
+\c@paragraph=\count175
+\c@subparagraph=\count176
+\scr@dte@section@maxnumwidth=\skip53
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\section on input line 4723.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\section on input line 4723.
+\scr@dte@part@maxnumwidth=\skip54
+Class scrartcl Info: using compatibility default `afterindent=false'
+(scrartcl)           for `\part on input line 4731.
+\scr@dte@subsection@maxnumwidth=\skip55
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsection on input line 4741.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsection on input line 4741.
+\scr@dte@subsubsection@maxnumwidth=\skip56
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsubsection on input line 4751.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsubsection on input line 4751.
+\scr@dte@paragraph@maxnumwidth=\skip57
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\paragraph on input line 4761.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\paragraph on input line 4761.
+\scr@dte@subparagraph@maxnumwidth=\skip58
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subparagraph on input line 4771.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subparagraph on input line 4771.
+\abovecaptionskip=\skip59
+\belowcaptionskip=\skip60
+\c@pti@nb@sid@b@x=\box46
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 6002.
+\scr@dte@figure@maxnumwidth=\skip61
+\c@figure=\count177
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 6014.
+\scr@dte@table@maxnumwidth=\skip62
+\c@table=\count178
+Class scrartcl Info: Redefining `\numberline' on input line 6178.
+\bibindent=\dimen134
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/03/22 3.42 The Babel package
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2020/03/22 3.42 Babel switching mechanism
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/03/22 3.42 Babel common definitions
+\babel@savecnt=\count179
+\U@D=\dimen135
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count180
+)
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language21) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language21) on input line 108.
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count181
+\calc@Bcount=\count182
+\calc@Adimen=\dimen136
+\calc@Bdimen=\dimen137
+\calc@Askip=\skip63
+\calc@Bskip=\skip64
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count183
+\calc@Cskip=\skip65
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks16
+\verbatim@line=\toks17
+\verbatim@in@stream=\read3
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip66
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen138
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen139
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count184
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count185
+\leftroot@=\count186
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count187
+\DOTSCASE@=\count188
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen140
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count189
+\c@MaxMatrixCols=\count190
+\dotsspace@=\muskip16
+\c@parentequation=\count191
+\dspbrk@lvl=\count192
+\tag@help=\toks19
+\row@=\count193
+\column@=\count194
+\maxfields@=\count195
+\andhelp@=\toks20
+\eqnshift@=\dimen141
+\alignsep@=\dimen142
+\tagshift@=\dimen143
+\tagwidth@=\dimen144
+\totwidth@=\dimen145
+\lineht@=\dimen146
+\@envbody=\toks21
+\multlinegap=\skip67
+\multlinetaggap=\skip68
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks23
+\thm@bodyfont=\toks24
+\thm@headfont=\toks25
+\thm@notefont=\toks26
+\thm@headpunct=\toks27
+\thm@preskip=\skip69
+\thm@postskip=\skip70
+\thm@headsep=\skip71
+\dth@everypar=\toks28
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/xpatch/xpatch.sty (/usr/local/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-03-06 L3 programming layer (loader) 
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2020-03-12 L3 backend support: dvips
+\l__pdf_internal_box=\box49
+\g__pdf_backend_object_int=\count196
+\l__pdf_backend_content_box=\box50
+\l__pdf_backend_model_box=\box51
+\g__pdf_backend_annotation_int=\count197
+\g__pdf_backend_link_int=\count198
+\g__pdf_backend_link_sf_int=\count199
+))
+Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2020-03-06 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count266
+\g__xparse_grabber_int=\count267
+\l__xparse_m_args_int=\count268
+\l__xparse_v_nesting_int=\count269
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count270
+))
+Class scrartcl Info: amsthm's \deferred@thm@head patched.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box52
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/dcolumn.sty
+Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen147
+\ar@mcellbox=\box53
+\extrarowheight=\dimen148
+\NC@list=\toks29
+\extratabsurround=\skip72
+\backup@length=\skip73
+\ar@cellbox=\box54
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count271
+\mult@box=\box55
+\multicol@leftmargin=\dimen149
+\c@unbalance=\count272
+\c@collectmore=\count273
+\doublecol@number=\count274
+\multicoltolerance=\count275
+\multicolpretolerance=\count276
+\full@width=\dimen150
+\page@free=\dimen151
+\premulticols=\dimen152
+\postmulticols=\dimen153
+\multicolsep=\skip74
+\multicolbaselineskip=\skip75
+\partial@page=\box56
+\last@line=\box57
+\maxbalancingoverflow=\dimen154
+\mult@rightbox=\box58
+\mult@grightbox=\box59
+\mult@gfirstbox=\box60
+\mult@firstbox=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\c@minrows=\count277
+\c@columnbadness=\count278
+\c@finalcolumnbadness=\count279
+\last@try=\dimen155
+\multicolovershoot=\dimen156
+\multicolundershoot=\dimen157
+\mult@nat@firstbox=\box99
+\colbreak@box=\box100
+\mc@col@check@num=\count280
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip76
+\multirow@cntb=\count281
+\multirow@dima=\skip77
+\bigstrutjot=\dimen158
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen159
+\lightrulewidth=\dimen160
+\cmidrulewidth=\dimen161
+\belowrulesep=\dimen162
+\belowbottomsep=\dimen163
+\aboverulesep=\dimen164
+\abovetopsep=\dimen165
+\cmidrulesep=\dimen166
+\cmidrulekern=\dimen167
+\defaultaddspace=\dimen168
+\@cmidla=\count282
+\@cmidlb=\count283
+\@aboverulesep=\dimen169
+\@belowrulesep=\dimen170
+\@thisruleclass=\count284
+\@lastruleclass=\count285
+\@thisrulewidth=\dimen171
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/afterpage.sty
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks30
+\AP@partial=\box101
+\AP@footins=\box102
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/enotez/enotez.sty (/usr/local/texlive/2020/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2020-03-06 LaTeX2e option processing using LaTeX3 keys
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+Package: xtemplate 2020-03-06 L3 Experimental prototype document functions
+\l__xtemplate_tmp_dim=\dimen172
+\l__xtemplate_tmp_int=\count286
+\l__xtemplate_tmp_muskip=\muskip17
+\l__xtemplate_tmp_skip=\skip78
+)
+Package: enotez 2020/01/16 v0.10b Endnotes for LaTeX2e
+\l__enotez_list_preamble_skip=\skip79
+\l__enotez_list_postamble_skip=\skip80
+\g__enotez_endnote_id_int=\count287
+\g__enotez_endnote_mark_int=\count288
+\c@endnote=\count289
+\g__enotez_list_printed_int=\count290
+\l__enotez_tmpa_int=\count291
+
+Package xtemplate Info: Declaring object type 'enotez-list' taking 1
+(xtemplate)             argument(s) on line 473.
+
+\l__enotez_list_notes_sep_dim=\dimen173
+(/usr/local/texlive/2020/texmf-dist/tex/latex/translations/translations.sty
+Package: translations 2018/02/28 v1.8 internationalization of LaTeX2e packages (CN)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
+))) (/usr/local/texlive/2020/texmf-dist/tex/latex/moreverb/moreverb.sty
+Package: moreverb 2008/06/03 v2.3a `more' verbatim facilities
+\tab@position=\count292
+\tab@size=\count293
+\listing@line=\count294
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/hhline.sty
+Package: hhline 2020/01/04 v2.04 Table rule package (DPC)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tipa/tipa.sty
+Package: tipa 2002/08/08 TIPA version 1.1
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tipa/t3enc.def
+File: t3enc.def 2001/12/31 T3 encoding
+Now handling font encoding T3 ...
+... no UTF-8 mapping file for font encoding T3
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 357.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/t1cmss.fd
+File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)))) (/usr/local/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: dvips.def on input line 225.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/accents/accents.sty
+Package: accents 2006/05/12 v1.4 Math Accent Tools
+\cc@skew=\dimen174
+\cc@wd=\dimen175
+\cc@code=\count295
+\cc@group=\count296
+\cc@skewchar=\count297
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count298
+\c@@ppsavesec=\count299
+\c@@ppsaveapp=\count300
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/eucal.sty
+Package: eucal 2009/06/22 v3.00 Euler Script fonts
+LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
+(Font)                  U/eus/m/n --> U/eus/b/n on input line 33.
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box103
+\UL@hyphenbox=\box104
+\UL@skip=\skip81
+\UL@hook=\toks31
+\UL@height=\dimen176
+\UL@pe=\count301
+\UL@pixel=\dimen177
+\ULC@box=\box105
+Package: ulem 2019/11/18
+\ULdepth=\dimen178
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+LaTeX Info: Redefining \bm on input line 209.
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/bbm-macros/bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/optional/optional.sty
+Package: optional 2005/01/26 ver 2.2b;  Optional inclusion/omission
+)
+Using optional text marked with econtex. 
+(/usr/local/texlive/2020/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip82
+\bibsep=\skip83
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count302
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks32
+\footnotemargin=\dimen179
+\c@pp@next@reset=\count303
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924.
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/ncctools/manyfoot.sty
+Package: manyfoot 2019/08/03 v1.11 Many Footnote Levels Package (NCC)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/ncctools/nccfoots.sty
+Package: nccfoots 2005/02/03 v1.2 NCC Footnotes Package (NCC)
+)
+\MFL@columnwidth=\dimen180
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/bigfoot/perpage.sty
+Package: perpage 2014/10/25 2.0 Reset/sort counters per page
+\c@abspage=\count304
+)
+Package footmisc Info: Declaring symbol style blank on input line 349.
+\footinsB=\insert252
+\c@footnoteB=\count305
+\c@pp@a@footnoteB=\count306
+\c@authornum=\count307
+\c@bottomauthor=\count308
+LaTeX Info: Redefining \rm on input line 404.
+LaTeX Info: Redefining \sf on input line 405.
+LaTeX Info: Redefining \tt on input line 406.
+LaTeX Info: Redefining \bf on input line 407.
+LaTeX Info: Redefining \it on input line 408.
+LaTeX Info: Redefining \sl on input line 409.
+LaTeX Info: Redefining \sc on input line 410.
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/tex4ht.sty
+version 2020-02-18-14:17
+Package: tex4ht 
+--------------------------------------
+--- Note --- for _ at preamble, use the command line option `early_'
+--------------------------------------
+--------------------------------------
+--- Note --- for ^ at preamble, use the command line option `early^'
+--------------------------------------
+\tmp:toks=\toks33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/usepackage.4ht
+version 2020-03-12-14:03
+) (./Resources/LaTeXInputs/BufferStockTheory.sty (./Resources/owner.tex) (/usr/local/texlive/2020/texmf-dist/tex/latex/datetime2/datetime2.sty
+Package: datetime2 2020/03/02 v1.5.6 (NLCT) date and time formats
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tracklang/tracklang.sty
+Package: tracklang 2019/11/30 v1.4 (NLCT) Track Languages
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tracklang/tracklang.tex)) (/usr/local/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks34
+\XKV@tempa@toks=\toks35
+)
+\XKV@depth=\count309
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/datetime2-english/datetime2-english.ldf
+File: datetime2-english.ldf 2019/10/21 v1.05 (NLCT)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/datetime2-english/datetime2-english-base.ldf
+File: datetime2-english-base.ldf 2019/10/21 v1.05 (NLCT)
+))) (/usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/usepackage.4ht
+version 2020-03-12-14:03
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/xr-hyper.sty
+Package: xr-hyper 2019/10/03 v6.1 eXternal References (DPC)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/subfiles/subfiles.sty
+Package: subfiles 2020/02/14 v1.6 Multi-file projects (package)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/import/import.sty
+Package: import 2020/01/22  v 6.0
+)) (./Resources/texmf-local/tex/latex/econtexSetup.sty (/usr/local/texlive/2020/texmf-dist/tex/latex/wasysym/wasysym.sty
+Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
+\symwasy=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/ibygrk/psibycus.sty
+Package: psibycus 2004/10/18 v4.5 Ibycus4 using Type1 fonts (P.A.MacKay/WaS)
+\digraphs=\toks36
+(/usr/local/texlive/2020/texmf-dist/tex/generic/ibygrk/ibycus4.map (/usr/local/texlive/2020/texmf-dist/tex/generic/ibygrk/tlgsqq.tex)) (/usr/local/texlive/2020/texmf-dist/tex/generic/ibygrk/Uibycus.fd
+File: Uibycus.fd 2004/10/18 v4.5 font definitions for Ibycus/Type1 (WaS)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/ibygrk/iby4extr.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/ibygrk/version4.tex Ibycus Greek. Version 4. 15 July 1997))) (/usr/local/texlive/2020/texmf-dist/tex/latex/ushort/ushort.sty
+ushort.sty by M. Vaeth: Release: 2.2 
+Package: ushort 2001/06/13 v2.2
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/usepackage.4ht
+version 2020-03-12-14:03
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvips.def on input line 105.
+)
+\Gin@req@height=\dimen181
+\Gin@req@width=\dimen182
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+(/usr/local/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+
+Package auxhook Warning: Cannot patch \document,
+(auxhook)                using \AtBeginDocument instead.
+
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+)
+\@linkdim=\dimen183
+\Hy@linkcounter=\count310
+\Hy@pagecounter=\count311
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count312
+Package hyperref Info: Option `colorlinks' set `true' on input line 4421.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4421.
+Package hyperref Info: Hyper figures OFF on input line 4547.
+Package hyperref Info: Link nesting OFF on input line 4552.
+Package hyperref Info: Hyper index ON on input line 4555.
+Package hyperref Info: Plain pages OFF on input line 4562.
+Package hyperref Info: Backreferencing OFF on input line 4567.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4800.
+\c@Hy@tempcnt=\count313
+LaTeX Info: Redefining \url on input line 5159.
+\XeTeXLinkMargin=\dimen184
+(/usr/local/texlive/2020/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count314
+\Field@Width=\dimen185
+\Fld@charsize=\dimen186
+\Field@toks=\toks37
+Package hyperref Info: Hyper figures OFF on input line 6430.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing OFF on input line 6445.
+Package hyperref Info: Link coloring ON on input line 6448.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
+(/usr/local/texlive/2020/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count315
+
+Package hyperref Message: Stopped early.
+
+)
+Package hyperref Info: Driver: htex4ht.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/htex4ht.def
+File: htex4ht.def 2020/01/14 v7.00d Hyperref driver for TeX4ht
+Package hyperref Info: tex4ht is already loaded.
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 153.
+Including MathFactsList.defs) (./Resources/texmf-local/tex/latex/econtexShortcuts.sty) (/usr/local/texlive/2020/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen187
+\c@nlinenum=\count316
+\TeXr@lab=\toks38
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count317
+\rotFPtop=\skip84
+\rotFPbot=\skip85
+\rot@float@box=\box106
+\rot@mess@toks=\toks39
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip86
+\subfigcapskip=\skip87
+\subfigcaptopadj=\dimen188
+\subfigbottomskip=\skip88
+\subfigcapmargin=\dimen189
+\subfiglabelskip=\skip89
+\c@subfigure=\count318
+\c@lofdepth=\count319
+\c@subtable=\count320
+\c@lotdepth=\count321
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2020/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip90
+\subfig@bottom=\skip91
+)
+\c@defn=\count322
+\c@theorem=\count323
+\c@lemma=\count324
+) (./BufferStockTheory.cfg (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/tex4ht.4ht
+version 2020-03-12-14:03
+--------------------------------------
+--- Note --- for additional information, use the command line option `info'
+--------------------------------------
+::::::::::::::::::::::::::::::::::::::::::
+ TeX4ht info is available in the log file 
+::::::::::::::::::::::::::::::::::::::::::
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/tex4ht.sty
+version 2020-02-18-14:17
+--- needs --- tex4ht BufferStockTheory ---
+\tmp:cnt=\count325
+\openout15 = `BufferStockTheory.tmp'.
+
+(./BufferStockTheory.tmp)
+\tmp:dim=\skip92
+--------------------------------------
+--- Note --- for XML code, use the command line option `xml' or `xhtml'
+--------------------------------------
+(./BufferStockTheory.xref)
+\:refout=\write3
+\openout3 = `BufferStockTheory.xref'.
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+--------------------------------------
+--- Note --- to remove the <?xml version=...?> processing instruction use the command line option `no-VERSION'
+--------------------------------------
+--------------------------------------
+--- Note --- to remove the DOCTYPE declaration use the command line option `no-DOCTYPE'
+--------------------------------------
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)
+--------------------------------------
+--- Note --- for marking of the base font, use the command line option `fonts+'
+--------------------------------------
+--------------------------------------
+--- Note --- for non active _, use the command line option `no_'
+--------------------------------------
+--------------------------------------
+--- Note --- for _ of catcode 13, use the command line option `_13'
+--------------------------------------
+--------------------------------------
+--- Note --- for non active ^, use the command line option `no^'
+--------------------------------------
+--------------------------------------
+--- Note --- for ^ of catcode 13, use the command line option `^13'
+--------------------------------------
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+--------------------------------------
+--- Note --- to ignore CSS font decoration, use the `NoFonts' command line option
+--------------------------------------
+--------------------------------------
+--- Note --- for jpg bitmaps of pictures, use the `jpg' command line option. (Character bitmaps are controled only by `g' records of tex4ht.env and `-g' switches of tex4ht.c) 
+--------------------------------------
+--------------------------------------
+--- Note --- for gif bitmaps of pictures, use the `gif' command line option. (Character bitmaps are controled only by `g' records of tex4ht.env and `-g' switches of tex4ht.c) 
+--------------------------------------
+--------------------------------------
+--- Note --- for content and toc in 2 frames, use the command line option `frames'
+--------------------------------------
+--------------------------------------
+--- Note --- for content, toc, and footnotes in 3 frames, use the command line option `frames-fn'
+--------------------------------------
+--------------------------------------
+--- Note --- for file extension name xht, use the command line option `xht'
+--------------------------------------
+TeX4ht package options: svg,charset=utf-8,html5,html,charset="latin1",p-width,pic-align,pic-tabular
+--------------------------------------
+--- Note --- To print a timestamp, use the command line option timestamp
+--------------------------------------
+--------------------------------------
+--- Note --- to ignore CSS code, use the command line option `-css
+--------------------------------------
+--------------------------------------
+--- Note --- for inline CSS code, use the command line option `css-in'
+--------------------------------------
+--------------------------------------
+--- Note --- for pop ups on mouse over, use the command line option `mouseover'
+--------------------------------------
+--------------------------------------
+--- Note --- for addressing images in a subdirectory, use the command line option `imgdir:.../'
+--------------------------------------
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+--------------------------------------
+--- Note --- for external SVG files try the command line options `svg-obj' and 'svg-'
+--------------------------------------
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+--------------------------------------
+--- Note --- To print a timestamp, use the command line option timestamp
+--------------------------------------
+)
+\:tokwrite=\toks40
+\:tokpage=\toks41
+--------------------------------------
+--- Note --- for back links to toc, use the command line option `sections+'
+--------------------------------------
+--------------------------------------
+--- Note --- for linear crosslinks of pages, use the command line option `next'
+--------------------------------------
+\openout15 = `BufferStockTheory.4ct'.
+
+\:tocout=\write4
+\openout4 = `BufferStockTheory.4tc'.
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/latex.4ht
+version 2020-02-26-14:25
+LaTeX Info: Redefining \_ on input line 168.
+--------------------------------------
+--- Note --- for links into captions, instead of float heads, use the command line option `refcaption'
+--------------------------------------
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+--------------------------------------
+--- Note --- For mini tocs immediately aftter the header use the command line option `minitoc<'
+--------------------------------------
+--------------------------------------
+--- Note --- for enumerated list elements with valued data, use the command line option `enumerate+'
+--------------------------------------
+--------------------------------------
+--- Note --- for enumerated list elements li's with value attributes, use the command line option `enumerate-'
+--------------------------------------
+--------------------------------------
+--- Note --- for CSS2 code, use the command line option `css2'
+--------------------------------------
+--------------------------------------
+--- Note --- for bitmap fbox'es, use the command line option `pic-fbox'
+--------------------------------------
+--------------------------------------
+--- Note --- for bitmap framebox'es, use the command line option `pic-framebox'
+--------------------------------------
+--------------------------------------
+--- Note --- for inline footnotes use command line option `fn-in'
+--------------------------------------
+--------------------------------------
+--- Note --- for tracing of latex font commands, use the command line option `fonts'
+--------------------------------------
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+--------------------------------------
+--- Note --- for pictorial eqnarray, use the command line option `pic-eqnarray'
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial array, use the command line option `pic-array'
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial $...$ environments, use the command line option `pic-m' (not recommended!!)
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial $...$ and $$...$$ environments with latex alt, use the command line option `pic-m+' (not safe!!)
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial array, use the command line option `pic-array'
+--------------------------------------
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/fontmath.4ht
+version 2018-11-06-15:55
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/ifthen.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/scrartcl.4ht
+version 2018-10-20-15:45
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/article.4ht (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+--------------------------------------
+--- Note --- for automatic sectioning pagination, use the command line option `1', `2', `3', '4', '5', '6', or '7'
+--------------------------------------
+--------------------------------------
+--- Note --- for files named derived from section titles, use the command line option `sec-filename'
+--------------------------------------
+--------------------------------------
+--- Note --- for i-columns index, use the command line option `index=i' (e.g., index=2)
+--------------------------------------
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/babel.4ht (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/english.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/verbatim.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/amsmath.4ht
+version 2019-12-29-14:17
+\tmp:muskip=\muskip19
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/amstext.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/amsbsy.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/amsopn.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/amssymb.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/amsfonts.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/amsthm.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/dcolumn.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/array.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+--------------------------------------
+--- Note --- for pictorial array, use the command line option `pic-array'
+--------------------------------------
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/multicol.4ht (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/multirow.4ht (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/booktabs.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/afterpage.4ht
+version 2009-05-21-09:32
+l.37 --- TeX4ht warning --- afterpage.sty not supported ---
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/moreverb.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/xcolor.4ht
+version 2019-04-09-10:06
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/color.4ht (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/color.4ht) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/dvips.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/accents.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/appendix.4ht
+version 2019-10-24-10:36
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/eucal.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/ulem.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/bm.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/url.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+--------------------------------------
+--- Note --- for URL encoding within href use the command line option `url-enc'
+--------------------------------------
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/natbib.4ht (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/footmisc.4ht
+version 2019-12-23-13:36
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/xr-hyper.4ht
+version 2016-12-21-15:03
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/ushort.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/graphicx.4ht
+version 2018-10-01-14:24
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/graphics.4ht (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+--------------------------------------
+--- Note --- if included graphics are of degraded quality, try the command line options `graphics-num' or `graphics-'. The `num' should provide the density of pixels in the bitmaps (e.g., 110). 
+--------------------------------------
+--------------------------------------
+--- Note --- for key dimensions try the option `Gin-dim'; for key dimensions when bounding box is unavailable try `Gin-dim+'; neither is recommended
+--------------------------------------
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/hyperref.4ht
+version 2019-09-14-15:17
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+(/usr/local/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count326
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/nameref.4ht
+version 2019-12-23-13:36
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+))
+LaTeX Info: Redefining \autoref on input line 95.
+\Hy@SectionHShift=\skip93
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/pd1enc.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/rotating.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/subfigure.4ht
+version 2009-05-21-09:32
+(/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-03-16-10:43
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/unicode.4ht
+version 2019-12-28-14:40
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2020-03-06-15:07
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/svg-option.4ht
+version 2018-12-30-09:33
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/tex4ht/html5.4ht
+version 2019-11-21-13:36
+)) (./BufferStockTheory.aux
+
+LaTeX Warning: Label `eq:mTarget' multiply defined.
+
+
+LaTeX Warning: Label `eq:stability' multiply defined.
+
+
+LaTeX Warning: Label `thm:target' multiply defined.
+
+
+LaTeX Warning: Label `eq:mTarget' multiply defined.
+
+
+LaTeX Warning: Label `eq:stability' multiply defined.
+
+
+LaTeX Warning: Label `thm:balance' multiply defined.
+
+
+LaTeX Warning: Label `thm:MSSBalExists' multiply defined.
+
+
+LaTeX Warning: Label `eq:mTarget' multiply defined.
+
+
+LaTeX Warning: Label `eq:stability' multiply defined.
+
+
+LaTeX Warning: Label `eq:difRatioEquiv' multiply defined.
+
+
+LaTeX Warning: Label `eq:difFuncDecreases' multiply defined.
+
+)
+\openout1 = `BufferStockTheory.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 80.
+LaTeX Font Info:    Trying to load font information for T3+cmr on input line 80.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tipa/t3cmr.fd
+File: t3cmr.fd 2001/12/31 TIPA font definitions
+)
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+Package scrbase Info: activating english \contentsname on input line 80.
+Package scrbase Info: activating english \listfigurename on input line 80.
+Package scrbase Info: activating english \listtablename on input line 80.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 80.
+\AtBeginShipoutBox=\box107
+Package hyperref Info: Link coloring ON on input line 80.
+LaTeX Info: Redefining \ref on input line 80.
+LaTeX Info: Redefining \pageref on input line 80.
+LaTeX Info: Redefining \nameref on input line 80.
+Class scrartcl Info: loading recommended package `bookmark'.
+(scrartcl)           Using `bookmark' together with `hyperref' is recommended,
+(scrartcl)           because of handling of possible bookmark level gaps.
+(scrartcl)           You can avoid loading `bookmark' with KOMA-Script option
+(scrartcl)           `bookmarkpackage=false' before \begin{document} and
+(scrartcl)           you can avoid this message adding:
+(scrartcl)             \usepackage{bookmark}
+(scrartcl)           before \begin{document} on input line 80.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2019/12/03 v1.28 PDF bookmarks (HO)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/bookmark/bkm-dvips.def
+File: bkm-dvips.def 2019/12/03 v1.28 bookmark driver for dvips (HO)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+)
+Package auxhook Info: \AddLineBeginMainAux comes a little late,
+(auxhook)             because the main .aux file is already opened on input line 213.
+\BKM@id=\count327
+))
+--- file BufferStockTheory.css ---
+) (./BufferStockTheory-NoAppendix.tex (./econtexRoot.tex (./Resources/econtexPaths.tex)) (./Resources/LaTeXInputs/econtex_onlyinsubfile.tex) (./Resources/.git-source-commit) (./Resources/.git-public-commit)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 38.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 38.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
+)
+l.42 --- TeX4ht warning --- File `"./Resources/PoweredByEconARK.xbb"' not found ---
+l.42 --- TeX4ht warning --- Cannot determine size of graphic in "./Resources/PoweredByEconARK.xbb" (no BoundingBox) ---
+l. 42 --- needs --- ./Resources/PoweredByEconARK.svg ---
+[1
+
+]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 61.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+) [2]
+--- file BufferStockTheory2.html ---
+--- file BufferStockTheory3.html ---
+--- file BufferStockTheory4.html ---
+--- file BufferStockTheory5.html ---
+l. 104 Writing BufferStockTheory.idv[1] (BufferStockTheory0x.svg)
+[3
+
+
+
+
+] [4]
+l. 126 Writing BufferStockTheory.idv[2] (BufferStockTheory1x.svg)
+l. 126 Writing BufferStockTheory.idv[3] (BufferStockTheory2x.svg)
+l. 126 Writing BufferStockTheory.idv[4] (BufferStockTheory3x.svg)
+l. 126 Writing BufferStockTheory.idv[5] (BufferStockTheory4x.svg)
+l. 126 Writing BufferStockTheory.idv[6] (BufferStockTheory5x.svg)
+l. 126 Writing BufferStockTheory.idv[7] (BufferStockTheory6x.svg)
+l. 126 Writing BufferStockTheory.idv[8] (BufferStockTheory7x.svg)
+l. 126 Writing BufferStockTheory.idv[9] (BufferStockTheory8x.svg)
+l. 128 Writing BufferStockTheory.idv[10] (BufferStockTheory9x.svg)
+l. 128 Writing BufferStockTheory.idv[11] (BufferStockTheory10x.svg)
+\verbatim@out=\write5
+\openout5 = `./Equations/supfn.tex'.
+
+(./Equations/supfn.tex
+l. 1 Writing BufferStockTheory.idv[12] (BufferStockTheory11x.svg)
+)
+l. 136 Writing BufferStockTheory.idv[13] (BufferStockTheory12x.svg)
+[5]
+l. 139 Writing BufferStockTheory.idv[14] (BufferStockTheory13x.svg)
+--- file BufferStockTheory6.html ---
+l. 143 Writing BufferStockTheory.idv[15] (BufferStockTheory14x.svg)
+l. 144 Writing BufferStockTheory.idv[16] (BufferStockTheory15x.svg)
+l. 144 Writing BufferStockTheory.idv[17] (BufferStockTheory16x.svg)
+l. 146 Writing BufferStockTheory.idv[18] (BufferStockTheory17x.svg)
+l. 150 Writing BufferStockTheory.idv[19] (BufferStockTheory18x.svg)
+l. 156 Writing BufferStockTheory.idv[20] (BufferStockTheory19x.svg)
+\openout5 = `./Equations/DBCparts.tex'.
+
+(./Equations/DBCparts.tex [6
+
+]
+l. 1 Writing BufferStockTheory.idv[21] (BufferStockTheory20x.svg)
+)
+l. 167 Writing BufferStockTheory.idv[22] (BufferStockTheory21x.svg)
+l. 167 Writing BufferStockTheory.idv[23] (BufferStockTheory22x.svg)
+l. 167 Writing BufferStockTheory.idv[24] (BufferStockTheory23x.svg)
+l. 167 Writing BufferStockTheory.idv[25] (BufferStockTheory24x.svg)
+--- file BufferStockTheory7.html ---
+l. 167 Writing BufferStockTheory.idv[26] (BufferStockTheory25x.svg)
+l. 167 Writing BufferStockTheory.idv[27] (BufferStockTheory26x.svg)
+l. 167 Writing BufferStockTheory.idv[28] (BufferStockTheory27x.svg)
+l. 167 Writing BufferStockTheory.idv[29] (BufferStockTheory28x.svg)
+l. 167 Writing BufferStockTheory.idv[30] (BufferStockTheory29x.svg)
+l. 167 Writing BufferStockTheory.idv[31] (BufferStockTheory30x.svg)
+l. 167 Writing BufferStockTheory.idv[32] (BufferStockTheory31x.svg)
+l. 167 Writing BufferStockTheory.idv[33] (BufferStockTheory32x.svg)
+l. 167 Writing BufferStockTheory.idv[34] (BufferStockTheory33x.svg)
+l. 167 Writing BufferStockTheory.idv[35] (BufferStockTheory34x.svg)
+l. 167 Writing BufferStockTheory.idv[36] (BufferStockTheory35x.svg)
+l. 167 Writing BufferStockTheory.idv[37] (BufferStockTheory36x.svg)
+l. 167 Writing BufferStockTheory.idv[38] (BufferStockTheory37x.svg)
+l. 169 Writing BufferStockTheory.idv[39] (BufferStockTheory38x.svg)
+l. 169 Writing BufferStockTheory.idv[40] (BufferStockTheory39x.svg)
+\openout5 = `./Equations/tShkDef.tex'.
+
+(./Equations/tShkDef.tex
+l. 1 Writing BufferStockTheory.idv[41] (BufferStockTheory40x.svg)
+[7
+
+])
+l. 180 Writing BufferStockTheory.idv[42] (BufferStockTheory41x.svg)
+l. 181 Writing BufferStockTheory.idv[43] (BufferStockTheory42x.svg)
+l. 182 Writing BufferStockTheory.idv[44] (BufferStockTheory43x.svg)
+l. 183 Writing BufferStockTheory.idv[45] (BufferStockTheory44x.svg)
+--- file BufferStockTheory8.html ---
+l. 184 Writing BufferStockTheory.idv[46] (BufferStockTheory45x.svg)
+l. 184 Writing BufferStockTheory.idv[47] (BufferStockTheory46x.svg)
+l. 184 Writing BufferStockTheory.idv[48] (BufferStockTheory47x.svg)
+l. 185 Writing BufferStockTheory.idv[49] (BufferStockTheory48x.svg)
+--- file BufferStockTheory9.html ---
+l. 192 Writing BufferStockTheory.idv[50] (BufferStockTheory49x.svg)
+--- file BufferStockTheory10.html ---
+l. 197 Writing BufferStockTheory.idv[51] (BufferStockTheory50x.svg)
+--- file BufferStockTheory11.html ---
+l. 200 Writing BufferStockTheory.idv[52] (BufferStockTheory51x.svg)
+l. 200 Writing BufferStockTheory.idv[53] (BufferStockTheory52x.svg)
+--- file BufferStockTheory12.html ---
+--- file BufferStockTheory13.html ---
+--- file BufferStockTheory14.html ---
+l. 200 Writing BufferStockTheory.idv[54] (BufferStockTheory53x.svg)
+--- file BufferStockTheory15.html ---
+[8
+
+
+
+
+]
+l. 202 Writing BufferStockTheory.idv[55] (BufferStockTheory54x.svg)
+l. 202 Writing BufferStockTheory.idv[56] (BufferStockTheory55x.svg)
+--- file BufferStockTheory16.html ---
+l. 210 Writing BufferStockTheory.idv[57] (BufferStockTheory56x.svg)
+l. 210 Writing BufferStockTheory.idv[58] (BufferStockTheory57x.svg)
+l. 210 Writing BufferStockTheory.idv[59] (BufferStockTheory58x.svg)
+l. 210 Writing BufferStockTheory.idv[60] (BufferStockTheory59x.svg)
+l. 210 Writing BufferStockTheory.idv[61] (BufferStockTheory60x.svg)
+l. 210 Writing BufferStockTheory.idv[62] (BufferStockTheory61x.svg)
+l. 210 Writing BufferStockTheory.idv[63] (BufferStockTheory62x.svg)
+[9
+
+
+
+
+
+]
+l. 211 Writing BufferStockTheory.idv[64] (BufferStockTheory63x.svg)
+l. 224 Writing BufferStockTheory.idv[65] (BufferStockTheory64x.svg)
+l. 224 Writing BufferStockTheory.idv[66] (BufferStockTheory65x.svg)
+l. 225 Writing BufferStockTheory.idv[67] (BufferStockTheory66x.svg)
+l. 232 Writing BufferStockTheory.idv[68] (BufferStockTheory67x.svg)
+--- file BufferStockTheory17.html ---
+l. 232 Writing BufferStockTheory.idv[69] (BufferStockTheory68x.svg)
+l. 232 Writing BufferStockTheory.idv[70] (BufferStockTheory69x.svg)
+l. 232 Writing BufferStockTheory.idv[71] (BufferStockTheory70x.svg)
+l. 232 Writing BufferStockTheory.idv[72] (BufferStockTheory71x.svg)
+[10]
+l. 234 Writing BufferStockTheory.idv[73] (BufferStockTheory72x.svg)
+l. 241 Writing BufferStockTheory.idv[74] (BufferStockTheory73x.svg)
+l. 241 Writing BufferStockTheory.idv[75] (BufferStockTheory74x.svg)
+l. 242 Writing BufferStockTheory.idv[76] (BufferStockTheory75x.svg)
+l. 248 Writing BufferStockTheory.idv[77] (BufferStockTheory76x.svg)
+l. 250 Writing BufferStockTheory.idv[78] (BufferStockTheory77x.svg)
+l. 258 Writing BufferStockTheory.idv[79] (BufferStockTheory78x.svg)
+l. 258 Writing BufferStockTheory.idv[80] (BufferStockTheory79x.svg)
+l. 258 Writing BufferStockTheory.idv[81] (BufferStockTheory80x.svg)
+[11
+
+]
+l. 259 Writing BufferStockTheory.idv[82] (BufferStockTheory81x.svg)
+l. 263 Writing BufferStockTheory.idv[83] (BufferStockTheory82x.svg)
+l. 266 Writing BufferStockTheory.idv[84] (BufferStockTheory83x.svg)
+l. 271 Writing BufferStockTheory.idv[85] (BufferStockTheory84x.svg)
+l. 271 Writing BufferStockTheory.idv[86] (BufferStockTheory85x.svg)
+[12]
+l. 276 Writing BufferStockTheory.idv[87] (BufferStockTheory86x.svg)
+l. 279 Writing BufferStockTheory.idv[88] (BufferStockTheory87x.svg)
+l. 279 Writing BufferStockTheory.idv[89] (BufferStockTheory88x.svg)
+l. 280 Writing BufferStockTheory.idv[90] (BufferStockTheory89x.svg)
+l. 286 Writing BufferStockTheory.idv[91] (BufferStockTheory90x.svg)
+l. 289 Writing BufferStockTheory.idv[92] (BufferStockTheory91x.svg)
+[13]
+l. 301 Writing BufferStockTheory.idv[93] (BufferStockTheory92x.svg)
+l. 302 Writing BufferStockTheory.idv[94] (BufferStockTheory93x.svg)
+l. 306 Writing BufferStockTheory.idv[95] (BufferStockTheory94x.svg)
+l. 309 Writing BufferStockTheory.idv[96] (BufferStockTheory95x.svg)
+--- file BufferStockTheory18.html ---
+[14]
+l. 310 Writing BufferStockTheory.idv[97] (BufferStockTheory96x.svg)
+l. 317 Writing BufferStockTheory.idv[98] (BufferStockTheory97x.svg)
+l. 320 Writing BufferStockTheory.idv[99] (BufferStockTheory98x.svg)
+l. 320 Writing BufferStockTheory.idv[100] (BufferStockTheory99x.svg)
+l. 321 Writing BufferStockTheory.idv[101] (BufferStockTheory100x.svg)
+[15
+
+]
+l. 325 Writing BufferStockTheory.idv[102] (BufferStockTheory101x.svg)
+l. 330 Writing BufferStockTheory.idv[103] (BufferStockTheory102x.svg)
+l. 334 Writing BufferStockTheory.idv[104] (BufferStockTheory103x.svg)
+l. 336 Writing BufferStockTheory.idv[105] (BufferStockTheory104x.svg)
+l. 336 Writing BufferStockTheory.idv[106] (BufferStockTheory105x.svg)
+l. 336 Writing BufferStockTheory.idv[107] (BufferStockTheory106x.svg)
+[16]
+l. 338 Writing BufferStockTheory.idv[108] (BufferStockTheory107x.svg)
+l. 338 Writing BufferStockTheory.idv[109] (BufferStockTheory108x.svg)
+l. 339 Writing BufferStockTheory.idv[110] (BufferStockTheory109x.svg)
+l. 343 Writing BufferStockTheory.idv[111] (BufferStockTheory110x.svg)
+l. 348 Writing BufferStockTheory.idv[112] (BufferStockTheory111x.svg)
+[17]
+l. 351 Writing BufferStockTheory.idv[113] (BufferStockTheory112x.svg)
+l. 355 Writing BufferStockTheory.idv[114] (BufferStockTheory113x.svg)
+l. 355 Writing BufferStockTheory.idv[115] (BufferStockTheory114x.svg)
+l. 361 Writing BufferStockTheory.idv[116] (BufferStockTheory115x.svg)
+l. 361 Writing BufferStockTheory.idv[117] (BufferStockTheory116x.svg)
+l. 362 Writing BufferStockTheory.idv[118] (BufferStockTheory117x.svg)
+l. 367 Writing BufferStockTheory.idv[119] (BufferStockTheory118x.svg)
+l. 367 Writing BufferStockTheory.idv[120] (BufferStockTheory119x.svg)
+l. 367 Writing BufferStockTheory.idv[121] (BufferStockTheory120x.svg)
+l. 368 Writing BufferStockTheory.idv[122] (BufferStockTheory121x.svg)
+[18]
+l. 373 Writing BufferStockTheory.idv[123] (BufferStockTheory122x.svg)
+--- file BufferStockTheory19.html ---
+--- file BufferStockTheory20.html ---
+l. 375 Writing BufferStockTheory.idv[124] (BufferStockTheory123x.svg)
+l. 376 Writing BufferStockTheory.idv[125] (BufferStockTheory124x.svg)
+l. 379 Writing BufferStockTheory.idv[126] (BufferStockTheory125x.svg)
+l. 379 Writing BufferStockTheory.idv[127] (BufferStockTheory126x.svg)
+l. 379 Writing BufferStockTheory.idv[128] (BufferStockTheory127x.svg)
+l. 379 Writing BufferStockTheory.idv[129] (BufferStockTheory128x.svg)
+l. 382 Writing BufferStockTheory.idv[130] (BufferStockTheory129x.svg)
+[19
+
+
+]
+l. 386 Writing BufferStockTheory.idv[131] (BufferStockTheory130x.svg)
+l. 386 Writing BufferStockTheory.idv[132] (BufferStockTheory131x.svg)
+l. 401 Writing BufferStockTheory.idv[133] (BufferStockTheory132x.svg)
+l. 401 Writing BufferStockTheory.idv[134] (BufferStockTheory133x.svg)
+l. 403 Writing BufferStockTheory.idv[135] (BufferStockTheory134x.svg)
+l. 403 Writing BufferStockTheory.idv[136] (BufferStockTheory135x.svg)
+l. 403 Writing BufferStockTheory.idv[137] (BufferStockTheory136x.svg)
+l. 403 Writing BufferStockTheory.idv[138] (BufferStockTheory137x.svg)
+l. 403 Writing BufferStockTheory.idv[139] (BufferStockTheory138x.svg)
+l. 403 Writing BufferStockTheory.idv[140] (BufferStockTheory139x.svg)
+l. 403 Writing BufferStockTheory.idv[141] (BufferStockTheory140x.svg)
+l. 403 Writing BufferStockTheory.idv[142] (BufferStockTheory141x.svg)
+l. 403 Writing BufferStockTheory.idv[143] (BufferStockTheory142x.svg)
+l. 403 Writing BufferStockTheory.idv[144] (BufferStockTheory143x.svg)
+l. 403 Writing BufferStockTheory.idv[145] (BufferStockTheory144x.svg)
+(./Figures/RelatePFGICFHWCRICPFFVAC.tex [20] [21
+
+]
+l. 4 --- needs --- ./Figures/RelatePFGICFHWCRICPFFVAC.svg ---
+l. 6 Writing BufferStockTheory.idv[146] (BufferStockTheory145x.svg)
+[22
+
+])
+l. 434 Writing BufferStockTheory.idv[147] (BufferStockTheory146x.svg)
+l. 438 Writing BufferStockTheory.idv[148] (BufferStockTheory147x.svg)
+l. 440 Writing BufferStockTheory.idv[149] (BufferStockTheory148x.svg)
+l. 441 Writing BufferStockTheory.idv[150] (BufferStockTheory149x.svg)
+l. 443 Writing BufferStockTheory.idv[151] (BufferStockTheory150x.svg)
+l. 444 Writing BufferStockTheory.idv[152] (BufferStockTheory151x.svg)
+l. 445 Writing BufferStockTheory.idv[153] (BufferStockTheory152x.svg)
+l. 447 Writing BufferStockTheory.idv[154] (BufferStockTheory153x.svg)
+l. 454 Writing BufferStockTheory.idv[155] (BufferStockTheory154x.svg)
+\openout5 = `./Equations/GICAbs.tex'.
+
+(./Equations/GICAbs.tex [23
+
+]
+l. 1 Writing BufferStockTheory.idv[156] (BufferStockTheory155x.svg)
+)
+l. 465 Writing BufferStockTheory.idv[157] (BufferStockTheory156x.svg)
+l. 469 Writing BufferStockTheory.idv[158] (BufferStockTheory157x.svg)
+l. 469 Writing BufferStockTheory.idv[159] (BufferStockTheory158x.svg)
+l. 470 Writing BufferStockTheory.idv[160] (BufferStockTheory159x.svg)
+l. 470 Writing BufferStockTheory.idv[161] (BufferStockTheory160x.svg)
+l. 471 Writing BufferStockTheory.idv[162] (BufferStockTheory161x.svg)
+l. 473 Writing BufferStockTheory.idv[163] (BufferStockTheory162x.svg)
+--- file BufferStockTheory21.html ---
+l. 474 Writing BufferStockTheory.idv[164] (BufferStockTheory163x.svg)
+l. 474 Writing BufferStockTheory.idv[165] (BufferStockTheory164x.svg)
+l. 475 Writing BufferStockTheory.idv[166] (BufferStockTheory165x.svg)
+l. 476 Writing BufferStockTheory.idv[167] (BufferStockTheory166x.svg)
+l. 476 Writing BufferStockTheory.idv[168] (BufferStockTheory167x.svg)
+l. 476 Writing BufferStockTheory.idv[169] (BufferStockTheory168x.svg)
+l. 476 Writing BufferStockTheory.idv[170] (BufferStockTheory169x.svg)
+l. 477 Writing BufferStockTheory.idv[171] (BufferStockTheory170x.svg)
+[24
+
+]
+l. 485 Writing BufferStockTheory.idv[172] (BufferStockTheory171x.svg)
+l. 485 Writing BufferStockTheory.idv[173] (BufferStockTheory172x.svg)
+l. 485 Writing BufferStockTheory.idv[174] (BufferStockTheory173x.svg)
+l. 485 Writing BufferStockTheory.idv[175] (BufferStockTheory174x.svg)
+l. 485 Writing BufferStockTheory.idv[176] (BufferStockTheory175x.svg)
+l. 485 Writing BufferStockTheory.idv[177] (BufferStockTheory176x.svg)
+l. 485 Writing BufferStockTheory.idv[178] (BufferStockTheory177x.svg)
+l. 485 Writing BufferStockTheory.idv[179] (BufferStockTheory178x.svg)
+l. 485 Writing BufferStockTheory.idv[180] (BufferStockTheory179x.svg)
+l. 487 Writing BufferStockTheory.idv[181] (BufferStockTheory180x.svg)
+l. 487 Writing BufferStockTheory.idv[182] (BufferStockTheory181x.svg)
+l. 487 Writing BufferStockTheory.idv[183] (BufferStockTheory182x.svg)
+l. 487 Writing BufferStockTheory.idv[184] (BufferStockTheory183x.svg)
+l. 487 Writing BufferStockTheory.idv[185] (BufferStockTheory184x.svg)
+l. 488 Writing BufferStockTheory.idv[186] (BufferStockTheory185x.svg)
+l. 494 Writing BufferStockTheory.idv[187] (BufferStockTheory186x.svg)
+l. 494 Writing BufferStockTheory.idv[188] (BufferStockTheory187x.svg)
+l. 494 Writing BufferStockTheory.idv[189] (BufferStockTheory188x.svg)
+l. 494 Writing BufferStockTheory.idv[190] (BufferStockTheory189x.svg)
+l. 497 Writing BufferStockTheory.idv[191] (BufferStockTheory190x.svg)
+l. 498 Writing BufferStockTheory.idv[192] (BufferStockTheory191x.svg)
+l. 500 Writing BufferStockTheory.idv[193] (BufferStockTheory192x.svg)
+l. 501 Writing BufferStockTheory.idv[194] (BufferStockTheory193x.svg)
+l. 503 Writing BufferStockTheory.idv[195] (BufferStockTheory194x.svg)
+l. 504 Writing BufferStockTheory.idv[196] (BufferStockTheory195x.svg)
+l. 504 Writing BufferStockTheory.idv[197] (BufferStockTheory196x.svg)
+l. 505 Writing BufferStockTheory.idv[198] (BufferStockTheory197x.svg)
+[25]
+l. 516 Writing BufferStockTheory.idv[199] (BufferStockTheory198x.svg)
+l. 517 Writing BufferStockTheory.idv[200] (BufferStockTheory199x.svg)
+l. 521 Writing BufferStockTheory.idv[201] (BufferStockTheory200x.svg)
+l. 524 Writing BufferStockTheory.idv[202] (BufferStockTheory201x.svg)
+l. 525 Writing BufferStockTheory.idv[203] (BufferStockTheory202x.svg)
+[26]
+\openout5 = `./Equations/PatPGroAdj.tex'.
+
+(./Equations/PatPGroAdj.tex
+l. 1 Writing BufferStockTheory.idv[204] (BufferStockTheory203x.svg)
+)
+\openout5 = `./Equations/GICNrm.tex'.
+
+(./Equations/GICNrm.tex
+l. 1 Writing BufferStockTheory.idv[205] (BufferStockTheory204x.svg)
+)
+l. 549 Writing BufferStockTheory.idv[206] (BufferStockTheory205x.svg)
+[27]
+l. 559 Writing BufferStockTheory.idv[207] (BufferStockTheory206x.svg)
+l. 565 Writing BufferStockTheory.idv[208] (BufferStockTheory207x.svg)
+l. 568 Writing BufferStockTheory.idv[209] (BufferStockTheory208x.svg)
+l. 568 Writing BufferStockTheory.idv[210] (BufferStockTheory209x.svg)
+l. 568 Writing BufferStockTheory.idv[211] (BufferStockTheory210x.svg)
+l. 571 Writing BufferStockTheory.idv[212] (BufferStockTheory211x.svg)
+[28]
+l. 575 Writing BufferStockTheory.idv[213] (BufferStockTheory212x.svg)
+l. 576 Writing BufferStockTheory.idv[214] (BufferStockTheory213x.svg)
+l. 576 Writing BufferStockTheory.idv[215] (BufferStockTheory214x.svg)
+\openout5 = `./Equations/FVAC.tex'.
+
+(./Equations/FVAC.tex
+l. 1 Writing BufferStockTheory.idv[216] (BufferStockTheory215x.svg)
+)
+l. 587 Writing BufferStockTheory.idv[217] (BufferStockTheory216x.svg)
+--- file BufferStockTheory22.html ---
+l. 587 Writing BufferStockTheory.idv[218] (BufferStockTheory217x.svg)
+l. 587 Writing BufferStockTheory.idv[219] (BufferStockTheory218x.svg)
+l. 589 Writing BufferStockTheory.idv[220] (BufferStockTheory219x.svg)
+l. 590 Writing BufferStockTheory.idv[221] (BufferStockTheory220x.svg)
+--- file BufferStockTheory23.html ---
+l. 598 Writing BufferStockTheory.idv[222] (BufferStockTheory221x.svg)
+l. 598 Writing BufferStockTheory.idv[223] (BufferStockTheory222x.svg)
+[29
+
+
+]
+l. 605 Writing BufferStockTheory.idv[224] (BufferStockTheory223x.svg)
+l. 606 Writing BufferStockTheory.idv[225] (BufferStockTheory224x.svg)
+(./Tables/Parameters.tex
+\TableWidth=\skip94
+\Parameters=\box108
+[30] [31
+
+]
+l. 20 Writing BufferStockTheory.idv[226] (BufferStockTheory225x.svg)
+[32
+
+]) (./Tables/Calibration.tex
+\TableWidth=\skip95
+\Calibration=\box109
+[33
+
+] [34
+
+]
+l. 28 Writing BufferStockTheory.idv[227] (BufferStockTheory226x.svg)
+[35
+
+]) (./Figures/cFuncsConverge.tex [36
+
+] [37
+
+]
+l. 4 --- needs --- ./Figures/cFuncsConverge.svg ---
+[38
+
+])
+l. 624 Writing BufferStockTheory.idv[228] (BufferStockTheory227x.svg)
+--- file BufferStockTheory24.html ---
+l. 630 Writing BufferStockTheory.idv[229] (BufferStockTheory228x.svg)
+l. 630 Writing BufferStockTheory.idv[230] (BufferStockTheory229x.svg)
+l. 630 Writing BufferStockTheory.idv[231] (BufferStockTheory230x.svg)
+l. 630 Writing BufferStockTheory.idv[232] (BufferStockTheory231x.svg)
+l. 630 Writing BufferStockTheory.idv[233] (BufferStockTheory232x.svg)
+l. 630 Writing BufferStockTheory.idv[234] (BufferStockTheory233x.svg)
+--- file BufferStockTheory25.html ---
+l. 638 Writing BufferStockTheory.idv[235] (BufferStockTheory234x.svg)
+l. 638 Writing BufferStockTheory.idv[236] (BufferStockTheory235x.svg)
+--- file BufferStockTheory26.html ---
+[39
+
+
+
+]
+l. 646 Writing BufferStockTheory.idv[237] (BufferStockTheory236x.svg)
+l. 647 Writing BufferStockTheory.idv[238] (BufferStockTheory237x.svg)
+l. 647 Writing BufferStockTheory.idv[239] (BufferStockTheory238x.svg)
+l. 648 Writing BufferStockTheory.idv[240] (BufferStockTheory239x.svg)
+l. 648 Writing BufferStockTheory.idv[241] (BufferStockTheory240x.svg)
+l. 649 Writing BufferStockTheory.idv[242] (BufferStockTheory241x.svg)
+l. 654 Writing BufferStockTheory.idv[243] (BufferStockTheory242x.svg)
+l. 661 Writing BufferStockTheory.idv[244] (BufferStockTheory243x.svg)
+l. 662 Writing BufferStockTheory.idv[245] (BufferStockTheory244x.svg)
+[40
+
+]
+l. 665 Writing BufferStockTheory.idv[246] (BufferStockTheory245x.svg)
+l. 666 Writing BufferStockTheory.idv[247] (BufferStockTheory246x.svg)
+l. 667 Writing BufferStockTheory.idv[248] (BufferStockTheory247x.svg)
+l. 671 Writing BufferStockTheory.idv[249] (BufferStockTheory248x.svg)
+l. 672 Writing BufferStockTheory.idv[250] (BufferStockTheory249x.svg)
+l. 676 Writing BufferStockTheory.idv[251] (BufferStockTheory250x.svg)
+l. 680 Writing BufferStockTheory.idv[252] (BufferStockTheory251x.svg)
+--- file BufferStockTheory27.html ---
+l. 683 Writing BufferStockTheory.idv[253] (BufferStockTheory252x.svg)
+l. 683 Writing BufferStockTheory.idv[254] (BufferStockTheory253x.svg)
+[41]
+l. 698 Writing BufferStockTheory.idv[255] (BufferStockTheory254x.svg)
+l. 698 Writing BufferStockTheory.idv[256] (BufferStockTheory255x.svg)
+--- file BufferStockTheory28.html ---
+l. 702 Writing BufferStockTheory.idv[257] (BufferStockTheory256x.svg)
+LaTeX Font Info:    Trying to load font information for U+eus on input line 702.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/ueus.fd
+File: ueus.fd 2013/01/14 v3.01 Euler Script
+)
+l. 702 Writing BufferStockTheory.idv[258] (BufferStockTheory257x.svg)
+l. 702 Writing BufferStockTheory.idv[259] (BufferStockTheory258x.svg)
+l. 703 Writing BufferStockTheory.idv[260] (BufferStockTheory259x.svg)
+l. 703 Writing BufferStockTheory.idv[261] (BufferStockTheory260x.svg)
+l. 704 Writing BufferStockTheory.idv[262] (BufferStockTheory261x.svg)
+l. 704 Writing BufferStockTheory.idv[263] (BufferStockTheory262x.svg)
+l. 704 Writing BufferStockTheory.idv[264] (BufferStockTheory263x.svg)
+l. 704 Writing BufferStockTheory.idv[265] (BufferStockTheory264x.svg)
+l. 704 Writing BufferStockTheory.idv[266] (BufferStockTheory265x.svg)
+l. 704 Writing BufferStockTheory.idv[267] (BufferStockTheory266x.svg)
+l. 705 Writing BufferStockTheory.idv[268] (BufferStockTheory267x.svg)
+[42
+
+
+]
+l. 712 Writing BufferStockTheory.idv[269] (BufferStockTheory268x.svg)
+l. 714 Writing BufferStockTheory.idv[270] (BufferStockTheory269x.svg)
+l. 714 Writing BufferStockTheory.idv[271] (BufferStockTheory270x.svg)
+l. 715 Writing BufferStockTheory.idv[272] (BufferStockTheory271x.svg)
+l. 715 Writing BufferStockTheory.idv[273] (BufferStockTheory272x.svg)
+l. 715 Writing BufferStockTheory.idv[274] (BufferStockTheory273x.svg)
+l. 715 Writing BufferStockTheory.idv[275] (BufferStockTheory274x.svg)
+l. 716 Writing BufferStockTheory.idv[276] (BufferStockTheory275x.svg)
+l. 716 Writing BufferStockTheory.idv[277] (BufferStockTheory276x.svg)
+l. 722 Writing BufferStockTheory.idv[278] (BufferStockTheory277x.svg)
+--- file BufferStockTheory29.html ---
+l. 722 Writing BufferStockTheory.idv[279] (BufferStockTheory278x.svg)
+l. 722 Writing BufferStockTheory.idv[280] (BufferStockTheory279x.svg)
+--- file BufferStockTheory30.html ---
+l. 722 Writing BufferStockTheory.idv[281] (BufferStockTheory280x.svg)
+l. 722 Writing BufferStockTheory.idv[282] (BufferStockTheory281x.svg)
+l. 722 Writing BufferStockTheory.idv[283] (BufferStockTheory282x.svg)
+l. 722 Writing BufferStockTheory.idv[284] (BufferStockTheory283x.svg)
+l. 722 Writing BufferStockTheory.idv[285] (BufferStockTheory284x.svg)
+l. 722 Writing BufferStockTheory.idv[286] (BufferStockTheory285x.svg)
+l. 723 Writing BufferStockTheory.idv[287] (BufferStockTheory286x.svg)
+l. 733 Writing BufferStockTheory.idv[288] (BufferStockTheory287x.svg)
+l. 735 Writing BufferStockTheory.idv[289] (BufferStockTheory288x.svg)
+l. 735 Writing BufferStockTheory.idv[290] (BufferStockTheory289x.svg)
+l. 735 Writing BufferStockTheory.idv[291] (BufferStockTheory290x.svg)
+l. 736 Writing BufferStockTheory.idv[292] (BufferStockTheory291x.svg)
+l. 737 Writing BufferStockTheory.idv[293] (BufferStockTheory292x.svg)
+l. 742 Writing BufferStockTheory.idv[294] (BufferStockTheory293x.svg)
+--- file BufferStockTheory31.html ---
+l. 742 Writing BufferStockTheory.idv[295] (BufferStockTheory294x.svg)
+l. 742 Writing BufferStockTheory.idv[296] (BufferStockTheory295x.svg)
+l. 742 Writing BufferStockTheory.idv[297] (BufferStockTheory296x.svg)
+l. 742 Writing BufferStockTheory.idv[298] (BufferStockTheory297x.svg)
+[43
+
+
+
+]
+l. 747 Writing BufferStockTheory.idv[299] (BufferStockTheory298x.svg)
+l. 768 Writing BufferStockTheory.idv[300] (BufferStockTheory299x.svg)
+l. 769 Writing BufferStockTheory.idv[301] (BufferStockTheory300x.svg)
+l. 780 Writing BufferStockTheory.idv[302] (BufferStockTheory301x.svg)
+l. 785 Writing BufferStockTheory.idv[303] (BufferStockTheory302x.svg)
+l. 785 Writing BufferStockTheory.idv[304] (BufferStockTheory303x.svg)
+l. 785 Writing BufferStockTheory.idv[305] (BufferStockTheory304x.svg)
+l. 785 Writing BufferStockTheory.idv[306] (BufferStockTheory305x.svg)
+l. 785 Writing BufferStockTheory.idv[307] (BufferStockTheory306x.svg)
+--- file BufferStockTheory32.html ---
+l. 790 Writing BufferStockTheory.idv[308] (BufferStockTheory307x.svg)
+[44]
+l. 799 Writing BufferStockTheory.idv[309] (BufferStockTheory308x.svg)
+l. 805 Writing BufferStockTheory.idv[310] (BufferStockTheory309x.svg)
+l. 806 Writing BufferStockTheory.idv[311] (BufferStockTheory310x.svg)
+l. 809 Writing BufferStockTheory.idv[312] (BufferStockTheory311x.svg)
+l. 813 Writing BufferStockTheory.idv[313] (BufferStockTheory312x.svg)
+l. 815 Writing BufferStockTheory.idv[314] (BufferStockTheory313x.svg)
+--- file BufferStockTheory33.html ---
+[45
+
+
+] (./Figures/Inequalities.tex [46] [47
+
+]
+l. 4 --- needs --- ./Figures/Inequalities.svg ---
+[48
+
+])
+l. 852 Writing BufferStockTheory.idv[315] (BufferStockTheory314x.svg)
+l. 856 Writing BufferStockTheory.idv[316] (BufferStockTheory315x.svg)
+l. 856 Writing BufferStockTheory.idv[317] (BufferStockTheory316x.svg)
+l. 856 Writing BufferStockTheory.idv[318] (BufferStockTheory317x.svg)
+l. 856 Writing BufferStockTheory.idv[319] (BufferStockTheory318x.svg)
+l. 856 Writing BufferStockTheory.idv[320] (BufferStockTheory319x.svg)
+l. 858 Writing BufferStockTheory.idv[321] (BufferStockTheory320x.svg)
+l. 859 Writing BufferStockTheory.idv[322] (BufferStockTheory321x.svg)
+l. 859 Writing BufferStockTheory.idv[323] (BufferStockTheory322x.svg)
+l. 860 Writing BufferStockTheory.idv[324] (BufferStockTheory323x.svg)
+l. 860 Writing BufferStockTheory.idv[325] (BufferStockTheory324x.svg)
+l. 862 Writing BufferStockTheory.idv[326] (BufferStockTheory325x.svg)
+l. 865 Writing BufferStockTheory.idv[327] (BufferStockTheory326x.svg)
+l. 866 Writing BufferStockTheory.idv[328] (BufferStockTheory327x.svg)
+l. 869 Writing BufferStockTheory.idv[329] (BufferStockTheory328x.svg)
+l. 869 Writing BufferStockTheory.idv[330] (BufferStockTheory329x.svg)
+l. 875 Writing BufferStockTheory.idv[331] (BufferStockTheory330x.svg)
+l. 879 Writing BufferStockTheory.idv[332] (BufferStockTheory331x.svg)
+l. 880 Writing BufferStockTheory.idv[333] (BufferStockTheory332x.svg)
+l. 885 Writing BufferStockTheory.idv[334] (BufferStockTheory333x.svg)
+[49
+
+]
+l. 900 Writing BufferStockTheory.idv[335] (BufferStockTheory334x.svg)
+l. 900 Writing BufferStockTheory.idv[336] (BufferStockTheory335x.svg)
+l. 901 Writing BufferStockTheory.idv[337] (BufferStockTheory336x.svg)
+l. 907 Writing BufferStockTheory.idv[338] (BufferStockTheory337x.svg)
+l. 907 Writing BufferStockTheory.idv[339] (BufferStockTheory338x.svg)
+l. 907 Writing BufferStockTheory.idv[340] (BufferStockTheory339x.svg)
+l. 907 Writing BufferStockTheory.idv[341] (BufferStockTheory340x.svg)
+l. 907 Writing BufferStockTheory.idv[342] (BufferStockTheory341x.svg)
+l. 909 Writing BufferStockTheory.idv[343] (BufferStockTheory342x.svg)
+l. 909 Writing BufferStockTheory.idv[344] (BufferStockTheory343x.svg)
+l. 909 Writing BufferStockTheory.idv[345] (BufferStockTheory344x.svg)
+l. 909 Writing BufferStockTheory.idv[346] (BufferStockTheory345x.svg)
+l. 909 Writing BufferStockTheory.idv[347] (BufferStockTheory346x.svg)
+l. 909 Writing BufferStockTheory.idv[348] (BufferStockTheory347x.svg)
+l. 909 Writing BufferStockTheory.idv[349] (BufferStockTheory348x.svg)
+l. 909 Writing BufferStockTheory.idv[350] (BufferStockTheory349x.svg)
+l. 909 Writing BufferStockTheory.idv[351] (BufferStockTheory350x.svg)
+l. 909 Writing BufferStockTheory.idv[352] (BufferStockTheory351x.svg)
+l. 909 Writing BufferStockTheory.idv[353] (BufferStockTheory352x.svg)
+--- file BufferStockTheory34.html ---
+[50]
+l. 914 Writing BufferStockTheory.idv[354] (BufferStockTheory353x.svg)
+l. 929 Writing BufferStockTheory.idv[355] (BufferStockTheory354x.svg)
+l. 929 Writing BufferStockTheory.idv[356] (BufferStockTheory355x.svg)
+l. 929 Writing BufferStockTheory.idv[357] (BufferStockTheory356x.svg)
+l. 929 Writing BufferStockTheory.idv[358] (BufferStockTheory357x.svg)
+l. 929 Writing BufferStockTheory.idv[359] (BufferStockTheory358x.svg)
+l. 929 Writing BufferStockTheory.idv[360] (BufferStockTheory359x.svg)
+l. 930 Writing BufferStockTheory.idv[361] (BufferStockTheory360x.svg)
+l. 934 Writing BufferStockTheory.idv[362] (BufferStockTheory361x.svg)
+l. 934 Writing BufferStockTheory.idv[363] (BufferStockTheory362x.svg)
+l. 934 Writing BufferStockTheory.idv[364] (BufferStockTheory363x.svg)
+l. 934 Writing BufferStockTheory.idv[365] (BufferStockTheory364x.svg)
+l. 934 Writing BufferStockTheory.idv[366] (BufferStockTheory365x.svg)
+
+LaTeX Warning: Reference `subsubsec:FVACnotGIC' on page 51 undefined on input line 934.
+
+[51
+
+] (./Tables/Comparison.tex
+\TableWidth=\skip96
+\ComparisonSub=\box110
+[52] [53
+
+]
+l. 58 Writing BufferStockTheory.idv[367] (BufferStockTheory366x.svg)
+[54
+
+] [55]) (./Tables/Required.tex
+\Required=\box111
+[56
+
+] [57
+
+]
+l. 5 Writing BufferStockTheory.idv[368] (BufferStockTheory367x.svg)
+l. 47 Writing BufferStockTheory.idv[369] (BufferStockTheory368x.svg)
+l. 52 Writing BufferStockTheory.idv[370] (BufferStockTheory369x.svg)
+l. 52 Writing BufferStockTheory.idv[371] (BufferStockTheory370x.svg)
+l. 52 Writing BufferStockTheory.idv[372] (BufferStockTheory371x.svg)
+l. 52 Writing BufferStockTheory.idv[373] (BufferStockTheory372x.svg)
+l. 52 Writing BufferStockTheory.idv[374] (BufferStockTheory373x.svg)
+l. 52 Writing BufferStockTheory.idv[375] (BufferStockTheory374x.svg)
+l. 52 Writing BufferStockTheory.idv[376] (BufferStockTheory375x.svg)
+l. 52 Writing BufferStockTheory.idv[377] (BufferStockTheory376x.svg)
+l. 52 Writing BufferStockTheory.idv[378] (BufferStockTheory377x.svg)
+l. 52 Writing BufferStockTheory.idv[379] (BufferStockTheory378x.svg)
+l. 52 Writing BufferStockTheory.idv[380] (BufferStockTheory379x.svg)
+l. 52 Writing BufferStockTheory.idv[381] (BufferStockTheory380x.svg)
+l. 52 Writing BufferStockTheory.idv[382] (BufferStockTheory381x.svg)
+l. 52 Writing BufferStockTheory.idv[383] (BufferStockTheory382x.svg)
+[58
+
+])
+--- file BufferStockTheory35.html ---
+l. 1014 Writing BufferStockTheory.idv[384] (BufferStockTheory383x.svg)
+l. 1014 Writing BufferStockTheory.idv[385] (BufferStockTheory384x.svg)
+l. 1018 Writing BufferStockTheory.idv[386] (BufferStockTheory385x.svg)
+l. 1019 Writing BufferStockTheory.idv[387] (BufferStockTheory386x.svg)
+l. 1021 Writing BufferStockTheory.idv[388] (BufferStockTheory387x.svg)
+l. 1022 Writing BufferStockTheory.idv[389] (BufferStockTheory388x.svg)
+l. 1023 Writing BufferStockTheory.idv[390] (BufferStockTheory389x.svg)
+l. 1024 Writing BufferStockTheory.idv[391] (BufferStockTheory390x.svg)
+l. 1025 Writing BufferStockTheory.idv[392] (BufferStockTheory391x.svg)
+l. 1025 Writing BufferStockTheory.idv[393] (BufferStockTheory392x.svg)
+l. 1025 Writing BufferStockTheory.idv[394] (BufferStockTheory393x.svg)
+l. 1025 Writing BufferStockTheory.idv[395] (BufferStockTheory394x.svg)
+l. 1025 Writing BufferStockTheory.idv[396] (BufferStockTheory395x.svg)
+--- file BufferStockTheory36.html ---
+l. 1030 Writing BufferStockTheory.idv[397] (BufferStockTheory396x.svg)
+(./Figures/cGroTargetFig.tex [59
+
+
+
+] [60
+
+]
+l. 15 --- needs --- ./Figures/cGroTargetFig.png ---
+l. 15 Writing BufferStockTheory.idv[398] (BufferStockTheory397x.svg)
+[61
+
+])
+l. 1056 Writing BufferStockTheory.idv[399] (BufferStockTheory398x.svg)
+l. 1061 Writing BufferStockTheory.idv[400] (BufferStockTheory399x.svg)
+l. 1064 Writing BufferStockTheory.idv[401] (BufferStockTheory400x.svg)
+l. 1064 Writing BufferStockTheory.idv[402] (BufferStockTheory401x.svg)
+l. 1064 Writing BufferStockTheory.idv[403] (BufferStockTheory402x.svg)
+l. 1066 Writing BufferStockTheory.idv[404] (BufferStockTheory403x.svg)
+l. 1067 Writing BufferStockTheory.idv[405] (BufferStockTheory404x.svg)
+l. 1072 Writing BufferStockTheory.idv[406] (BufferStockTheory405x.svg)
+l. 1077 Writing BufferStockTheory.idv[407] (BufferStockTheory406x.svg)
+l. 1079 Writing BufferStockTheory.idv[408] (BufferStockTheory407x.svg)
+[62
+
+]
+l. 1080 Writing BufferStockTheory.idv[409] (BufferStockTheory408x.svg)
+l. 1085 Writing BufferStockTheory.idv[410] (BufferStockTheory409x.svg)
+l. 1086 Writing BufferStockTheory.idv[411] (BufferStockTheory410x.svg)
+(./Figures/MPCLimits.tex [63] [64
+
+]
+l. 3 --- needs --- ./Figures/MPCLimits.svg ---
+[65
+
+]) (./Figures/cFuncBounds.tex [66
+
+] [67
+
+]
+l. 4 --- needs --- ./Figures/cFuncBounds.svg ---
+[68
+
+])
+l. 1101 Writing BufferStockTheory.idv[412] (BufferStockTheory411x.svg)
+l. 1102 Writing BufferStockTheory.idv[413] (BufferStockTheory412x.svg)
+l. 1109 Writing BufferStockTheory.idv[414] (BufferStockTheory413x.svg)
+l. 1113 Writing BufferStockTheory.idv[415] (BufferStockTheory414x.svg)
+l. 1118 Writing BufferStockTheory.idv[416] (BufferStockTheory415x.svg)
+l. 1119 Writing BufferStockTheory.idv[417] (BufferStockTheory416x.svg)
+l. 1124 Writing BufferStockTheory.idv[418] (BufferStockTheory417x.svg)
+--- file BufferStockTheory37.html ---
+l. 1124 Writing BufferStockTheory.idv[419] (BufferStockTheory418x.svg)
+l. 1125 Writing BufferStockTheory.idv[420] (BufferStockTheory419x.svg)
+l. 1126 Writing BufferStockTheory.idv[421] (BufferStockTheory420x.svg)
+[69
+
+]
+l. 1129 Writing BufferStockTheory.idv[422] (BufferStockTheory421x.svg)
+l. 1133 Writing BufferStockTheory.idv[423] (BufferStockTheory422x.svg)
+l. 1151 Writing BufferStockTheory.idv[424] (BufferStockTheory423x.svg)
+l. 1156 Writing BufferStockTheory.idv[425] (BufferStockTheory424x.svg)
+l. 1157 Writing BufferStockTheory.idv[426] (BufferStockTheory425x.svg)
+l. 1161 Writing BufferStockTheory.idv[427] (BufferStockTheory426x.svg)
+l. 1162 Writing BufferStockTheory.idv[428] (BufferStockTheory427x.svg)
+l. 1176 Writing BufferStockTheory.idv[429] (BufferStockTheory428x.svg)
+[70
+
+]
+l. 1181 Writing BufferStockTheory.idv[430] (BufferStockTheory429x.svg)
+l. 1183 Writing BufferStockTheory.idv[431] (BufferStockTheory430x.svg)
+l. 1184 Writing BufferStockTheory.idv[432] (BufferStockTheory431x.svg)
+l. 1195 Writing BufferStockTheory.idv[433] (BufferStockTheory432x.svg)
+l. 1195 Writing BufferStockTheory.idv[434] (BufferStockTheory433x.svg)
+l. 1195 Writing BufferStockTheory.idv[435] (BufferStockTheory434x.svg)
+--- file BufferStockTheory38.html ---
+[71
+
+]
+l. 1213 Writing BufferStockTheory.idv[436] (BufferStockTheory435x.svg)
+l. 1213 Writing BufferStockTheory.idv[437] (BufferStockTheory436x.svg)
+l. 1213 Writing BufferStockTheory.idv[438] (BufferStockTheory437x.svg)
+\openout5 = `./Equations/TheoremMTargetIsStable.tex'.
+
+(./Equations/TheoremMTargetIsStable.tex
+l. 2 Writing BufferStockTheory.idv[439] (BufferStockTheory438x.svg)
+l. 3 Writing BufferStockTheory.idv[440] (BufferStockTheory439x.svg)
+l. 7 Writing BufferStockTheory.idv[441] (BufferStockTheory440x.svg)
+l. 8 Writing BufferStockTheory.idv[442] (BufferStockTheory441x.svg)
+)
+l. 1233 Writing BufferStockTheory.idv[443] (BufferStockTheory442x.svg)
+l. 1233 Writing BufferStockTheory.idv[444] (BufferStockTheory443x.svg)
+[72]
+l. 1234 Writing BufferStockTheory.idv[445] (BufferStockTheory444x.svg)
+l. 1264 Writing BufferStockTheory.idv[446] (BufferStockTheory445x.svg)
+l. 1264 Writing BufferStockTheory.idv[447] (BufferStockTheory446x.svg)
+l. 1266 Writing BufferStockTheory.idv[448] (BufferStockTheory447x.svg)
+l. 1266 Writing BufferStockTheory.idv[449] (BufferStockTheory448x.svg)
+l. 1266 Writing BufferStockTheory.idv[450] (BufferStockTheory449x.svg)
+l. 1266 Writing BufferStockTheory.idv[451] (BufferStockTheory450x.svg)
+l. 1266 Writing BufferStockTheory.idv[452] (BufferStockTheory451x.svg)
+l. 1266 Writing BufferStockTheory.idv[453] (BufferStockTheory452x.svg)
+l. 1266 Writing BufferStockTheory.idv[454] (BufferStockTheory453x.svg)
+l. 1266 Writing BufferStockTheory.idv[455] (BufferStockTheory454x.svg)
+l. 1270 Writing BufferStockTheory.idv[456] (BufferStockTheory455x.svg)
+l. 1270 Writing BufferStockTheory.idv[457] (BufferStockTheory456x.svg)
+l. 1270 Writing BufferStockTheory.idv[458] (BufferStockTheory457x.svg)
+l. 1271 Writing BufferStockTheory.idv[459] (BufferStockTheory458x.svg)
+[73]
+l. 1280 Writing BufferStockTheory.idv[460] (BufferStockTheory459x.svg)
+l. 1290 Writing BufferStockTheory.idv[461] (BufferStockTheory460x.svg)
+l. 1290 Writing BufferStockTheory.idv[462] (BufferStockTheory461x.svg)
+l. 1292 Writing BufferStockTheory.idv[463] (BufferStockTheory462x.svg)
+l. 1292 Writing BufferStockTheory.idv[464] (BufferStockTheory463x.svg)
+--- file BufferStockTheory39.html ---
+l. 1295 Writing BufferStockTheory.idv[465] (BufferStockTheory464x.svg)
+\openout5 = `./Equations/TheoremMSSBalExists.tex'.
+
+(./Equations/TheoremMSSBalExists.tex [74
+
+]
+l. 2 Writing BufferStockTheory.idv[466] (BufferStockTheory465x.svg)
+l. 3 Writing BufferStockTheory.idv[467] (BufferStockTheory466x.svg)
+l. 7 Writing BufferStockTheory.idv[468] (BufferStockTheory467x.svg)
+l. 8 Writing BufferStockTheory.idv[469] (BufferStockTheory468x.svg)
+)
+l. 1322 Writing BufferStockTheory.idv[470] (BufferStockTheory469x.svg)
+l. 1322 Writing BufferStockTheory.idv[471] (BufferStockTheory470x.svg)
+[75]
+l. 1330 Writing BufferStockTheory.idv[472] (BufferStockTheory471x.svg)
+l. 1330 Writing BufferStockTheory.idv[473] (BufferStockTheory472x.svg)
+l. 1345 Writing BufferStockTheory.idv[474] (BufferStockTheory473x.svg)
+l. 1345 Writing BufferStockTheory.idv[475] (BufferStockTheory474x.svg)
+l. 1345 Writing BufferStockTheory.idv[476] (BufferStockTheory475x.svg)
+l. 1345 Writing BufferStockTheory.idv[477] (BufferStockTheory476x.svg)
+l. 1345 Writing BufferStockTheory.idv[478] (BufferStockTheory477x.svg)
+l. 1345 Writing BufferStockTheory.idv[479] (BufferStockTheory478x.svg)
+l. 1347 Writing BufferStockTheory.idv[480] (BufferStockTheory479x.svg)
+l. 1347 Writing BufferStockTheory.idv[481] (BufferStockTheory480x.svg)
+(./Figures/GICNrmFailsButGICRawHolds.tex [76] [77
+
+]
+l. 4 --- needs --- ./Figures/GICNrmFailsButGICRawHolds.svg ---
+l. 5 Writing BufferStockTheory.idv[482] (BufferStockTheory481x.svg)
+l. 5 Writing BufferStockTheory.idv[483] (BufferStockTheory482x.svg)
+l. 5 Writing BufferStockTheory.idv[484] (BufferStockTheory483x.svg)
+[78
+
+])
+l. 1354 Writing BufferStockTheory.idv[485] (BufferStockTheory484x.svg)
+l. 1354 Writing BufferStockTheory.idv[486] (BufferStockTheory485x.svg)
+l. 1354 Writing BufferStockTheory.idv[487] (BufferStockTheory486x.svg)
+l. 1354 Writing BufferStockTheory.idv[488] (BufferStockTheory487x.svg)
+l. 1354 Writing BufferStockTheory.idv[489] (BufferStockTheory488x.svg)
+l. 1354 Writing BufferStockTheory.idv[490] (BufferStockTheory489x.svg)
+l. 1354 Writing BufferStockTheory.idv[491] (BufferStockTheory490x.svg)
+l. 1354 Writing BufferStockTheory.idv[492] (BufferStockTheory491x.svg)
+l. 1354 Writing BufferStockTheory.idv[493] (BufferStockTheory492x.svg)
+l. 1354 Writing BufferStockTheory.idv[494] (BufferStockTheory493x.svg)
+l. 1356 Writing BufferStockTheory.idv[495] (BufferStockTheory494x.svg)
+--- file BufferStockTheory40.html ---
+l. 1476 Writing BufferStockTheory.idv[496] (BufferStockTheory495x.svg)
+l. 1476 Writing BufferStockTheory.idv[497] (BufferStockTheory496x.svg)
+l. 1476 Writing BufferStockTheory.idv[498] (BufferStockTheory497x.svg)
+l. 1476 Writing BufferStockTheory.idv[499] (BufferStockTheory498x.svg)
+--- file BufferStockTheory41.html ---
+l. 1483 Writing BufferStockTheory.idv[500] (BufferStockTheory499x.svg)
+l. 1483 Writing BufferStockTheory.idv[501] (BufferStockTheory500x.svg)
+l. 1483 Writing BufferStockTheory.idv[502] (BufferStockTheory501x.svg)
+l. 1483 Writing BufferStockTheory.idv[503] (BufferStockTheory502x.svg)
+l. 1483 Writing BufferStockTheory.idv[504] (BufferStockTheory503x.svg)
+l. 1483 Writing BufferStockTheory.idv[505] (BufferStockTheory504x.svg)
+[79
+
+
+]
+l. 1489 Writing BufferStockTheory.idv[506] (BufferStockTheory505x.svg)
+l. 1489 Writing BufferStockTheory.idv[507] (BufferStockTheory506x.svg)
+l. 1491 Writing BufferStockTheory.idv[508] (BufferStockTheory507x.svg)
+l. 1492 Writing BufferStockTheory.idv[509] (BufferStockTheory508x.svg)
+l. 1499 Writing BufferStockTheory.idv[510] (BufferStockTheory509x.svg)
+l. 1500 Writing BufferStockTheory.idv[511] (BufferStockTheory510x.svg)
+l. 1500 Writing BufferStockTheory.idv[512] (BufferStockTheory511x.svg)
+l. 1502 Writing BufferStockTheory.idv[513] (BufferStockTheory512x.svg)
+[80
+
+]
+l. 1511 Writing BufferStockTheory.idv[514] (BufferStockTheory513x.svg)
+l. 1515 Writing BufferStockTheory.idv[515] (BufferStockTheory514x.svg)
+l. 1515 Writing BufferStockTheory.idv[516] (BufferStockTheory515x.svg)
+l. 1528 Writing BufferStockTheory.idv[517] (BufferStockTheory516x.svg)
+l. 1529 Writing BufferStockTheory.idv[518] (BufferStockTheory517x.svg)
+l. 1535 Writing BufferStockTheory.idv[519] (BufferStockTheory518x.svg)
+l. 1535 Writing BufferStockTheory.idv[520] (BufferStockTheory519x.svg)
+l. 1544 Writing BufferStockTheory.idv[521] (BufferStockTheory520x.svg)
+l. 1544 Writing BufferStockTheory.idv[522] (BufferStockTheory521x.svg)
+l. 1552 Writing BufferStockTheory.idv[523] (BufferStockTheory522x.svg)
+[81]
+l. 1559 Writing BufferStockTheory.idv[524] (BufferStockTheory523x.svg)
+l. 1559 Writing BufferStockTheory.idv[525] (BufferStockTheory524x.svg)
+l. 1559 Writing BufferStockTheory.idv[526] (BufferStockTheory525x.svg)
+l. 1559 Writing BufferStockTheory.idv[527] (BufferStockTheory526x.svg)
+l. 1560 Writing BufferStockTheory.idv[528] (BufferStockTheory527x.svg)
+l. 1564 Writing BufferStockTheory.idv[529] (BufferStockTheory528x.svg)
+l. 1564 Writing BufferStockTheory.idv[530] (BufferStockTheory529x.svg)
+[82]
+l. 1577 Writing BufferStockTheory.idv[531] (BufferStockTheory530x.svg)
+l. 1579 Writing BufferStockTheory.idv[532] (BufferStockTheory531x.svg)
+[83]
+
+Package hyperref Warning: Suppressing empty link on input line 1593.
+
+[84]
+l. 1601 Writing BufferStockTheory.idv[533] (BufferStockTheory532x.svg)
+[85]) (./Appendices/ApndxLiqConstr.tex (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/../Resources/LaTeXInputs/econtex_onlyinsubfile.tex)
+\TableWidth=\skip97
+l. 13 Writing BufferStockTheory.idv[534] (BufferStockTheory533x.svg)
+l. 15 Writing BufferStockTheory.idv[535] (BufferStockTheory534x.svg)
+(./Appendices/../Tables/LiqConstrScenarios.tex
+\LiqConstrScenarios=\box112
+[86
+
+] [87
+
+]
+l. 22 Writing BufferStockTheory.idv[536] (BufferStockTheory535x.svg)
+l. 27 Writing BufferStockTheory.idv[537] (BufferStockTheory536x.svg)
+[88
+
+])
+l. 22 Writing BufferStockTheory.idv[538] (BufferStockTheory537x.svg)
+l. 22 Writing BufferStockTheory.idv[539] (BufferStockTheory538x.svg)
+l. 23 Writing BufferStockTheory.idv[540] (BufferStockTheory539x.svg)
+l. 23 Writing BufferStockTheory.idv[541] (BufferStockTheory540x.svg)
+l. 24 Writing BufferStockTheory.idv[542] (BufferStockTheory541x.svg)
+l. 25 Writing BufferStockTheory.idv[543] (BufferStockTheory542x.svg)
+l. 27 Writing BufferStockTheory.idv[544] (BufferStockTheory543x.svg)
+--- file BufferStockTheory42.html ---
+l. 34 Writing BufferStockTheory.idv[545] (BufferStockTheory544x.svg)
+l. 34 Writing BufferStockTheory.idv[546] (BufferStockTheory545x.svg)
+l. 34 Writing BufferStockTheory.idv[547] (BufferStockTheory546x.svg)
+l. 34 Writing BufferStockTheory.idv[548] (BufferStockTheory547x.svg)
+l. 35 Writing BufferStockTheory.idv[549] (BufferStockTheory548x.svg)
+l. 42 Writing BufferStockTheory.idv[550] (BufferStockTheory549x.svg)
+l. 42 Writing BufferStockTheory.idv[551] (BufferStockTheory550x.svg)
+l. 43 Writing BufferStockTheory.idv[552] (BufferStockTheory551x.svg)
+l. 47 Writing BufferStockTheory.idv[553] (BufferStockTheory552x.svg)
+l. 48 Writing BufferStockTheory.idv[554] (BufferStockTheory553x.svg)
+l. 50 Writing BufferStockTheory.idv[555] (BufferStockTheory554x.svg)
+[89
+
+
+]
+l. 56 Writing BufferStockTheory.idv[556] (BufferStockTheory555x.svg)
+l. 56 Writing BufferStockTheory.idv[557] (BufferStockTheory556x.svg)
+l. 58 Writing BufferStockTheory.idv[558] (BufferStockTheory557x.svg)
+l. 59 Writing BufferStockTheory.idv[559] (BufferStockTheory558x.svg)
+l. 61 Writing BufferStockTheory.idv[560] (BufferStockTheory559x.svg)
+--- file BufferStockTheory43.html ---
+l. 63 Writing BufferStockTheory.idv[561] (BufferStockTheory560x.svg)
+l. 63 Writing BufferStockTheory.idv[562] (BufferStockTheory561x.svg)
+\TableWidth=\skip98
+l. 69 Writing BufferStockTheory.idv[563] (BufferStockTheory562x.svg)
+l. 70 Writing BufferStockTheory.idv[564] (BufferStockTheory563x.svg)
+l. 73 Writing BufferStockTheory.idv[565] (BufferStockTheory564x.svg)
+l. 74 Writing BufferStockTheory.idv[566] (BufferStockTheory565x.svg)
+l. 79 Writing BufferStockTheory.idv[567] (BufferStockTheory566x.svg)
+--- file BufferStockTheory44.html ---
+l. 79 Writing BufferStockTheory.idv[568] (BufferStockTheory567x.svg)
+l. 79 Writing BufferStockTheory.idv[569] (BufferStockTheory568x.svg)
+l. 79 Writing BufferStockTheory.idv[570] (BufferStockTheory569x.svg)
+l. 80 Writing BufferStockTheory.idv[571] (BufferStockTheory570x.svg)
+l. 81 Writing BufferStockTheory.idv[572] (BufferStockTheory571x.svg)
+l. 81 Writing BufferStockTheory.idv[573] (BufferStockTheory572x.svg)
+l. 82 Writing BufferStockTheory.idv[574] (BufferStockTheory573x.svg)
+--- file BufferStockTheory45.html ---
+l. 88 Writing BufferStockTheory.idv[575] (BufferStockTheory574x.svg)
+l. 88 Writing BufferStockTheory.idv[576] (BufferStockTheory575x.svg)
+l. 88 Writing BufferStockTheory.idv[577] (BufferStockTheory576x.svg)
+l. 88 Writing BufferStockTheory.idv[578] (BufferStockTheory577x.svg)
+l. 89 Writing BufferStockTheory.idv[579] (BufferStockTheory578x.svg)
+l. 91 Writing BufferStockTheory.idv[580] (BufferStockTheory579x.svg)
+[90
+
+
+]
+l. 100 Writing BufferStockTheory.idv[581] (BufferStockTheory580x.svg)
+l. 102 Writing BufferStockTheory.idv[582] (BufferStockTheory581x.svg)
+l. 104 Writing BufferStockTheory.idv[583] (BufferStockTheory582x.svg)
+l. 104 Writing BufferStockTheory.idv[584] (BufferStockTheory583x.svg)
+l. 105 Writing BufferStockTheory.idv[585] (BufferStockTheory584x.svg)
+l. 105 Writing BufferStockTheory.idv[586] (BufferStockTheory585x.svg)
+l. 105 Writing BufferStockTheory.idv[587] (BufferStockTheory586x.svg)
+l. 105 Writing BufferStockTheory.idv[588] (BufferStockTheory587x.svg)
+l. 105 Writing BufferStockTheory.idv[589] (BufferStockTheory588x.svg)
+l. 106 Writing BufferStockTheory.idv[590] (BufferStockTheory589x.svg)
+l. 106 Writing BufferStockTheory.idv[591] (BufferStockTheory590x.svg)
+l. 108 Writing BufferStockTheory.idv[592] (BufferStockTheory591x.svg)
+l. 108 Writing BufferStockTheory.idv[593] (BufferStockTheory592x.svg)
+l. 109 Writing BufferStockTheory.idv[594] (BufferStockTheory593x.svg)
+l. 111 Writing BufferStockTheory.idv[595] (BufferStockTheory594x.svg)
+l. 113 Writing BufferStockTheory.idv[596] (BufferStockTheory595x.svg)
+l. 115 Writing BufferStockTheory.idv[597] (BufferStockTheory596x.svg)
+l. 117 Writing BufferStockTheory.idv[598] (BufferStockTheory597x.svg)
+l. 117 Writing BufferStockTheory.idv[599] (BufferStockTheory598x.svg)
+l. 117 Writing BufferStockTheory.idv[600] (BufferStockTheory599x.svg)
+l. 118 Writing BufferStockTheory.idv[601] (BufferStockTheory600x.svg)
+[91
+
+]
+l. 122 Writing BufferStockTheory.idv[602] (BufferStockTheory601x.svg)
+l. 122 Writing BufferStockTheory.idv[603] (BufferStockTheory602x.svg)
+l. 123 Writing BufferStockTheory.idv[604] (BufferStockTheory603x.svg)
+l. 130 Writing BufferStockTheory.idv[605] (BufferStockTheory604x.svg)
+l. 130 Writing BufferStockTheory.idv[606] (BufferStockTheory605x.svg)
+l. 131 Writing BufferStockTheory.idv[607] (BufferStockTheory606x.svg)
+l. 132 Writing BufferStockTheory.idv[608] (BufferStockTheory607x.svg)
+l. 133 Writing BufferStockTheory.idv[609] (BufferStockTheory608x.svg)
+l. 137 Writing BufferStockTheory.idv[610] (BufferStockTheory609x.svg)
+l. 140 Writing BufferStockTheory.idv[611] (BufferStockTheory610x.svg)
+l. 141 Writing BufferStockTheory.idv[612] (BufferStockTheory611x.svg)
+l. 142 Writing BufferStockTheory.idv[613] (BufferStockTheory612x.svg)
+l. 142 Writing BufferStockTheory.idv[614] (BufferStockTheory613x.svg)
+l. 143 Writing BufferStockTheory.idv[615] (BufferStockTheory614x.svg)
+[92]
+l. 144 Writing BufferStockTheory.idv[616] (BufferStockTheory615x.svg)
+l. 148 Writing BufferStockTheory.idv[617] (BufferStockTheory616x.svg)
+l. 149 Writing BufferStockTheory.idv[618] (BufferStockTheory617x.svg)
+l. 150 Writing BufferStockTheory.idv[619] (BufferStockTheory618x.svg)
+l. 150 Writing BufferStockTheory.idv[620] (BufferStockTheory619x.svg)
+l. 151 Writing BufferStockTheory.idv[621] (BufferStockTheory620x.svg)
+l. 151 Writing BufferStockTheory.idv[622] (BufferStockTheory621x.svg)
+l. 152 Writing BufferStockTheory.idv[623] (BufferStockTheory622x.svg)
+l. 153 Writing BufferStockTheory.idv[624] (BufferStockTheory623x.svg)
+l. 155 Writing BufferStockTheory.idv[625] (BufferStockTheory624x.svg)
+l. 156 Writing BufferStockTheory.idv[626] (BufferStockTheory625x.svg)
+l. 157 Writing BufferStockTheory.idv[627] (BufferStockTheory626x.svg)
+l. 163 Writing BufferStockTheory.idv[628] (BufferStockTheory627x.svg)
+l. 163 Writing BufferStockTheory.idv[629] (BufferStockTheory628x.svg)
+l. 164 Writing BufferStockTheory.idv[630] (BufferStockTheory629x.svg)
+l. 165 Writing BufferStockTheory.idv[631] (BufferStockTheory630x.svg)
+[93]
+l. 170 Writing BufferStockTheory.idv[632] (BufferStockTheory631x.svg)
+l. 170 Writing BufferStockTheory.idv[633] (BufferStockTheory632x.svg)
+l. 171 Writing BufferStockTheory.idv[634] (BufferStockTheory633x.svg)
+l. 176 Writing BufferStockTheory.idv[635] (BufferStockTheory634x.svg)
+l. 176 Writing BufferStockTheory.idv[636] (BufferStockTheory635x.svg)
+l. 176 Writing BufferStockTheory.idv[637] (BufferStockTheory636x.svg)
+l. 177 Writing BufferStockTheory.idv[638] (BufferStockTheory637x.svg)
+l. 183 Writing BufferStockTheory.idv[639] (BufferStockTheory638x.svg)
+[94]
+l. 206 Writing BufferStockTheory.idv[640] (BufferStockTheory639x.svg)
+l. 215 Writing BufferStockTheory.idv[641] (BufferStockTheory640x.svg)
+[95]
+l. 219 Writing BufferStockTheory.idv[642] (BufferStockTheory641x.svg)
+l. 226 Writing BufferStockTheory.idv[643] (BufferStockTheory642x.svg)
+--- file BufferStockTheory46.html ---
+l. 233 Writing BufferStockTheory.idv[644] (BufferStockTheory643x.svg)
+--- file BufferStockTheory47.html ---
+[96]
+l. 234 Writing BufferStockTheory.idv[645] (BufferStockTheory644x.svg)
+l. 238 Writing BufferStockTheory.idv[646] (BufferStockTheory645x.svg)
+l. 238 Writing BufferStockTheory.idv[647] (BufferStockTheory646x.svg)
+l. 239 Writing BufferStockTheory.idv[648] (BufferStockTheory647x.svg)
+l. 242 Writing BufferStockTheory.idv[649] (BufferStockTheory648x.svg)
+l. 242 Writing BufferStockTheory.idv[650] (BufferStockTheory649x.svg)
+l. 242 Writing BufferStockTheory.idv[651] (BufferStockTheory650x.svg)
+l. 243 Writing BufferStockTheory.idv[652] (BufferStockTheory651x.svg)
+[97
+
+
+]
+l. 244 Writing BufferStockTheory.idv[653] (BufferStockTheory652x.svg)
+l. 249 Writing BufferStockTheory.idv[654] (BufferStockTheory653x.svg)
+l. 250 Writing BufferStockTheory.idv[655] (BufferStockTheory654x.svg)
+l. 250 Writing BufferStockTheory.idv[656] (BufferStockTheory655x.svg)
+l. 251 Writing BufferStockTheory.idv[657] (BufferStockTheory656x.svg)
+l. 251 Writing BufferStockTheory.idv[658] (BufferStockTheory657x.svg)
+l. 252 Writing BufferStockTheory.idv[659] (BufferStockTheory658x.svg)
+l. 253 Writing BufferStockTheory.idv[660] (BufferStockTheory659x.svg)
+l. 260 Writing BufferStockTheory.idv[661] (BufferStockTheory660x.svg)
+l. 260 Writing BufferStockTheory.idv[662] (BufferStockTheory661x.svg)
+l. 260 Writing BufferStockTheory.idv[663] (BufferStockTheory662x.svg)
+l. 260 Writing BufferStockTheory.idv[664] (BufferStockTheory663x.svg)
+[98]
+l. 261 Writing BufferStockTheory.idv[665] (BufferStockTheory664x.svg)
+l. 264 Writing BufferStockTheory.idv[666] (BufferStockTheory665x.svg)
+l. 266 Writing BufferStockTheory.idv[667] (BufferStockTheory666x.svg)
+l. 266 Writing BufferStockTheory.idv[668] (BufferStockTheory667x.svg)
+l. 268 Writing BufferStockTheory.idv[669] (BufferStockTheory668x.svg)
+l. 270 Writing BufferStockTheory.idv[670] (BufferStockTheory669x.svg)
+l. 275 Writing BufferStockTheory.idv[671] (BufferStockTheory670x.svg)
+l. 275 Writing BufferStockTheory.idv[672] (BufferStockTheory671x.svg)
+l. 275 Writing BufferStockTheory.idv[673] (BufferStockTheory672x.svg)
+l. 275 Writing BufferStockTheory.idv[674] (BufferStockTheory673x.svg)
+l. 275 Writing BufferStockTheory.idv[675] (BufferStockTheory674x.svg)
+l. 275 Writing BufferStockTheory.idv[676] (BufferStockTheory675x.svg)
+l. 275 Writing BufferStockTheory.idv[677] (BufferStockTheory676x.svg)
+(./Appendices/../Figures/PFGICHoldsFHWCFailsRICFails.tex [99] [100
+
+]
+l. 3 --- needs --- ./Appendices/../Figures/PFGICHoldsFHWCFailsRICFails.svg ---
+l. 4 Writing BufferStockTheory.idv[678] (BufferStockTheory677x.svg)
+l. 4 Writing BufferStockTheory.idv[679] (BufferStockTheory678x.svg)
+[101
+
+])
+l. 343 Writing BufferStockTheory.idv[680] (BufferStockTheory679x.svg)
+l. 352 Writing BufferStockTheory.idv[681] (BufferStockTheory680x.svg)
+) (./Appendices/ApndxConcaveCFunc.tex (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/../Resources/LaTeXInputs/econtex_onlyinsubfile.tex)
+l. 9 Writing BufferStockTheory.idv[682] (BufferStockTheory681x.svg)
+l. 9 Writing BufferStockTheory.idv[683] (BufferStockTheory682x.svg)
+l. 12 Writing BufferStockTheory.idv[684] (BufferStockTheory683x.svg)
+l. 12 Writing BufferStockTheory.idv[685] (BufferStockTheory684x.svg)
+l. 14 Writing BufferStockTheory.idv[686] (BufferStockTheory685x.svg)
+l. 16 Writing BufferStockTheory.idv[687] (BufferStockTheory686x.svg)
+l. 18 Writing BufferStockTheory.idv[688] (BufferStockTheory687x.svg)
+l. 18 Writing BufferStockTheory.idv[689] (BufferStockTheory688x.svg)
+l. 20 Writing BufferStockTheory.idv[690] (BufferStockTheory689x.svg)
+l. 22 Writing BufferStockTheory.idv[691] (BufferStockTheory690x.svg)
+l. 28 Writing BufferStockTheory.idv[692] (BufferStockTheory691x.svg)
+[102
+
+]
+l. 30 Writing BufferStockTheory.idv[693] (BufferStockTheory692x.svg)
+l. 31 Writing BufferStockTheory.idv[694] (BufferStockTheory693x.svg)
+l. 32 Writing BufferStockTheory.idv[695] (BufferStockTheory694x.svg)
+l. 32 Writing BufferStockTheory.idv[696] (BufferStockTheory695x.svg)
+l. 32 Writing BufferStockTheory.idv[697] (BufferStockTheory696x.svg)
+l. 33 Writing BufferStockTheory.idv[698] (BufferStockTheory697x.svg)
+l. 35 Writing BufferStockTheory.idv[699] (BufferStockTheory698x.svg)
+LaTeX Font Info:    Trying to load font information for U+euf on input line 35.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+l. 36 Writing BufferStockTheory.idv[700] (BufferStockTheory699x.svg)
+l. 40 Writing BufferStockTheory.idv[701] (BufferStockTheory700x.svg)
+l. 41 Writing BufferStockTheory.idv[702] (BufferStockTheory701x.svg)
+l. 42 Writing BufferStockTheory.idv[703] (BufferStockTheory702x.svg)
+l. 43 Writing BufferStockTheory.idv[704] (BufferStockTheory703x.svg)
+l. 44 Writing BufferStockTheory.idv[705] (BufferStockTheory704x.svg)
+l. 44 Writing BufferStockTheory.idv[706] (BufferStockTheory705x.svg)
+l. 45 Writing BufferStockTheory.idv[707] (BufferStockTheory706x.svg)
+l. 48 Writing BufferStockTheory.idv[708] (BufferStockTheory707x.svg)
+l. 49 Writing BufferStockTheory.idv[709] (BufferStockTheory708x.svg)
+l. 52 Writing BufferStockTheory.idv[710] (BufferStockTheory709x.svg)
+l. 52 Writing BufferStockTheory.idv[711] (BufferStockTheory710x.svg)
+l. 52 Writing BufferStockTheory.idv[712] (BufferStockTheory711x.svg)
+l. 53 Writing BufferStockTheory.idv[713] (BufferStockTheory712x.svg)
+[103]
+l. 55 Writing BufferStockTheory.idv[714] (BufferStockTheory713x.svg)
+l. 59 Writing BufferStockTheory.idv[715] (BufferStockTheory714x.svg)
+l. 59 Writing BufferStockTheory.idv[716] (BufferStockTheory715x.svg)
+l. 60 Writing BufferStockTheory.idv[717] (BufferStockTheory716x.svg)
+l. 61 Writing BufferStockTheory.idv[718] (BufferStockTheory717x.svg)
+l. 62 Writing BufferStockTheory.idv[719] (BufferStockTheory718x.svg)
+l. 63 Writing BufferStockTheory.idv[720] (BufferStockTheory719x.svg)
+l. 64 Writing BufferStockTheory.idv[721] (BufferStockTheory720x.svg)
+l. 65 Writing BufferStockTheory.idv[722] (BufferStockTheory721x.svg)
+l. 70 Writing BufferStockTheory.idv[723] (BufferStockTheory722x.svg)
+l. 75 Writing BufferStockTheory.idv[724] (BufferStockTheory723x.svg)
+l. 75 Writing BufferStockTheory.idv[725] (BufferStockTheory724x.svg)
+l. 76 Writing BufferStockTheory.idv[726] (BufferStockTheory725x.svg)
+l. 76 Writing BufferStockTheory.idv[727] (BufferStockTheory726x.svg)
+l. 77 Writing BufferStockTheory.idv[728] (BufferStockTheory727x.svg)
+l. 77 Writing BufferStockTheory.idv[729] (BufferStockTheory728x.svg)
+l. 79 Writing BufferStockTheory.idv[730] (BufferStockTheory729x.svg)
+[104]
+l. 80 Writing BufferStockTheory.idv[731] (BufferStockTheory730x.svg)
+l. 84 Writing BufferStockTheory.idv[732] (BufferStockTheory731x.svg)
+l. 85 Writing BufferStockTheory.idv[733] (BufferStockTheory732x.svg)
+l. 87 Writing BufferStockTheory.idv[734] (BufferStockTheory733x.svg)
+l. 88 Writing BufferStockTheory.idv[735] (BufferStockTheory734x.svg)
+l. 91 Writing BufferStockTheory.idv[736] (BufferStockTheory735x.svg)
+l. 93 Writing BufferStockTheory.idv[737] (BufferStockTheory736x.svg)
+l. 93 Writing BufferStockTheory.idv[738] (BufferStockTheory737x.svg)
+l. 93 Writing BufferStockTheory.idv[739] (BufferStockTheory738x.svg)
+l. 94 Writing BufferStockTheory.idv[740] (BufferStockTheory739x.svg)
+l. 95 Writing BufferStockTheory.idv[741] (BufferStockTheory740x.svg)
+l. 97 Writing BufferStockTheory.idv[742] (BufferStockTheory741x.svg)
+l. 100 Writing BufferStockTheory.idv[743] (BufferStockTheory742x.svg)
+l. 106 Writing BufferStockTheory.idv[744] (BufferStockTheory743x.svg)
+l. 106 Writing BufferStockTheory.idv[745] (BufferStockTheory744x.svg)
+l. 106 Writing BufferStockTheory.idv[746] (BufferStockTheory745x.svg)
+l. 109 Writing BufferStockTheory.idv[747] (BufferStockTheory746x.svg)
+l. 111 Writing BufferStockTheory.idv[748] (BufferStockTheory747x.svg)
+l. 114 Writing BufferStockTheory.idv[749] (BufferStockTheory748x.svg)
+l. 117 Writing BufferStockTheory.idv[750] (BufferStockTheory749x.svg)
+[105]
+l. 124 Writing BufferStockTheory.idv[751] (BufferStockTheory750x.svg)
+l. 127 Writing BufferStockTheory.idv[752] (BufferStockTheory751x.svg)
+l. 132 Writing BufferStockTheory.idv[753] (BufferStockTheory752x.svg)
+l. 133 Writing BufferStockTheory.idv[754] (BufferStockTheory753x.svg)
+l. 133 Writing BufferStockTheory.idv[755] (BufferStockTheory754x.svg)
+l. 134 Writing BufferStockTheory.idv[756] (BufferStockTheory755x.svg)
+l. 134 Writing BufferStockTheory.idv[757] (BufferStockTheory756x.svg)
+l. 135 Writing BufferStockTheory.idv[758] (BufferStockTheory757x.svg)
+l. 136 Writing BufferStockTheory.idv[759] (BufferStockTheory758x.svg)
+l. 136 Writing BufferStockTheory.idv[760] (BufferStockTheory759x.svg)
+l. 136 Writing BufferStockTheory.idv[761] (BufferStockTheory760x.svg)
+l. 137 Writing BufferStockTheory.idv[762] (BufferStockTheory761x.svg)
+l. 137 Writing BufferStockTheory.idv[763] (BufferStockTheory762x.svg)
+l. 139 Writing BufferStockTheory.idv[764] (BufferStockTheory763x.svg)
+l. 140 Writing BufferStockTheory.idv[765] (BufferStockTheory764x.svg)
+l. 147 Writing BufferStockTheory.idv[766] (BufferStockTheory765x.svg)
+l. 148 Writing BufferStockTheory.idv[767] (BufferStockTheory766x.svg)
+l. 151 Writing BufferStockTheory.idv[768] (BufferStockTheory767x.svg)
+l. 153 Writing BufferStockTheory.idv[769] (BufferStockTheory768x.svg)
+l. 156 Writing BufferStockTheory.idv[770] (BufferStockTheory769x.svg)
+l. 157 Writing BufferStockTheory.idv[771] (BufferStockTheory770x.svg)
+l. 158 Writing BufferStockTheory.idv[772] (BufferStockTheory771x.svg)
+l. 159 Writing BufferStockTheory.idv[773] (BufferStockTheory772x.svg)
+l. 159 Writing BufferStockTheory.idv[774] (BufferStockTheory773x.svg)
+l. 159 Writing BufferStockTheory.idv[775] (BufferStockTheory774x.svg)
+l. 160 Writing BufferStockTheory.idv[776] (BufferStockTheory775x.svg)
+[106]
+l. 164 Writing BufferStockTheory.idv[777] (BufferStockTheory776x.svg)
+l. 177 Writing BufferStockTheory.idv[778] (BufferStockTheory777x.svg)
+l. 177 Writing BufferStockTheory.idv[779] (BufferStockTheory778x.svg)
+--- file BufferStockTheory48.html ---
+l. 178 Writing BufferStockTheory.idv[780] (BufferStockTheory779x.svg)
+l. 178 Writing BufferStockTheory.idv[781] (BufferStockTheory780x.svg)
+l. 178 Writing BufferStockTheory.idv[782] (BufferStockTheory781x.svg)
+l. 180 Writing BufferStockTheory.idv[783] (BufferStockTheory782x.svg)
+l. 181 Writing BufferStockTheory.idv[784] (BufferStockTheory783x.svg)
+l. 187 Writing BufferStockTheory.idv[785] (BufferStockTheory784x.svg)
+l. 188 Writing BufferStockTheory.idv[786] (BufferStockTheory785x.svg)
+l. 188 Writing BufferStockTheory.idv[787] (BufferStockTheory786x.svg)
+l. 190 Writing BufferStockTheory.idv[788] (BufferStockTheory787x.svg)
+[107
+
+]
+l. 194 Writing BufferStockTheory.idv[789] (BufferStockTheory788x.svg)
+l. 195 Writing BufferStockTheory.idv[790] (BufferStockTheory789x.svg)
+l. 196 Writing BufferStockTheory.idv[791] (BufferStockTheory790x.svg)
+l. 198 Writing BufferStockTheory.idv[792] (BufferStockTheory791x.svg)
+l. 200 Writing BufferStockTheory.idv[793] (BufferStockTheory792x.svg)
+l. 203 Writing BufferStockTheory.idv[794] (BufferStockTheory793x.svg)
+l. 203 Writing BufferStockTheory.idv[795] (BufferStockTheory794x.svg)
+--- file BufferStockTheory49.html ---
+l. 207 Writing BufferStockTheory.idv[796] (BufferStockTheory795x.svg)
+l. 207 Writing BufferStockTheory.idv[797] (BufferStockTheory796x.svg)
+l. 208 Writing BufferStockTheory.idv[798] (BufferStockTheory797x.svg)
+l. 208 Writing BufferStockTheory.idv[799] (BufferStockTheory798x.svg)
+l. 210 Writing BufferStockTheory.idv[800] (BufferStockTheory799x.svg)
+l. 214 Writing BufferStockTheory.idv[801] (BufferStockTheory800x.svg)
+l. 215 Writing BufferStockTheory.idv[802] (BufferStockTheory801x.svg)
+l. 215 Writing BufferStockTheory.idv[803] (BufferStockTheory802x.svg)
+l. 216 Writing BufferStockTheory.idv[804] (BufferStockTheory803x.svg)
+l. 221 Writing BufferStockTheory.idv[805] (BufferStockTheory804x.svg)
+l. 229 Writing BufferStockTheory.idv[806] (BufferStockTheory805x.svg)
+--- file BufferStockTheory50.html ---
+[108
+
+]
+l. 231 Writing BufferStockTheory.idv[807] (BufferStockTheory806x.svg)
+l. 232 Writing BufferStockTheory.idv[808] (BufferStockTheory807x.svg)
+l. 233 Writing BufferStockTheory.idv[809] (BufferStockTheory808x.svg)
+l. 236 Writing BufferStockTheory.idv[810] (BufferStockTheory809x.svg)
+l. 237 Writing BufferStockTheory.idv[811] (BufferStockTheory810x.svg)
+l. 241 Writing BufferStockTheory.idv[812] (BufferStockTheory811x.svg)
+l. 242 Writing BufferStockTheory.idv[813] (BufferStockTheory812x.svg)
+[109
+
+]
+l. 257 Writing BufferStockTheory.idv[814] (BufferStockTheory813x.svg)
+l. 262 Writing BufferStockTheory.idv[815] (BufferStockTheory814x.svg)
+l. 266 Writing BufferStockTheory.idv[816] (BufferStockTheory815x.svg)
+l. 266 Writing BufferStockTheory.idv[817] (BufferStockTheory816x.svg)
+l. 268 Writing BufferStockTheory.idv[818] (BufferStockTheory817x.svg)
+l. 269 Writing BufferStockTheory.idv[819] (BufferStockTheory818x.svg)
+l. 271 Writing BufferStockTheory.idv[820] (BufferStockTheory819x.svg)
+l. 278 Writing BufferStockTheory.idv[821] (BufferStockTheory820x.svg)
+l. 278 Writing BufferStockTheory.idv[822] (BufferStockTheory821x.svg)
+[110]
+l. 283 Writing BufferStockTheory.idv[823] (BufferStockTheory822x.svg)
+l. 288 Writing BufferStockTheory.idv[824] (BufferStockTheory823x.svg)
+l. 288 Writing BufferStockTheory.idv[825] (BufferStockTheory824x.svg)
+l. 288 Writing BufferStockTheory.idv[826] (BufferStockTheory825x.svg)
+l. 289 Writing BufferStockTheory.idv[827] (BufferStockTheory826x.svg)
+l. 289 Writing BufferStockTheory.idv[828] (BufferStockTheory827x.svg)
+l. 291 Writing BufferStockTheory.idv[829] (BufferStockTheory828x.svg)
+l. 297 Writing BufferStockTheory.idv[830] (BufferStockTheory829x.svg)
+l. 298 Writing BufferStockTheory.idv[831] (BufferStockTheory830x.svg)
+l. 299 Writing BufferStockTheory.idv[832] (BufferStockTheory831x.svg)
+l. 299 Writing BufferStockTheory.idv[833] (BufferStockTheory832x.svg)
+l. 300 Writing BufferStockTheory.idv[834] (BufferStockTheory833x.svg)
+l. 305 Writing BufferStockTheory.idv[835] (BufferStockTheory834x.svg)
+l. 305 Writing BufferStockTheory.idv[836] (BufferStockTheory835x.svg)
+l. 306 Writing BufferStockTheory.idv[837] (BufferStockTheory836x.svg)
+l. 307 Writing BufferStockTheory.idv[838] (BufferStockTheory837x.svg)
+l. 308 Writing BufferStockTheory.idv[839] (BufferStockTheory838x.svg)
+l. 309 Writing BufferStockTheory.idv[840] (BufferStockTheory839x.svg)
+l. 310 Writing BufferStockTheory.idv[841] (BufferStockTheory840x.svg)
+l. 312 Writing BufferStockTheory.idv[842] (BufferStockTheory841x.svg)
+l. 313 Writing BufferStockTheory.idv[843] (BufferStockTheory842x.svg)
+--- file BufferStockTheory51.html ---
+) (./Appendices/ApndxEuclidian.tex (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/../Resources/LaTeXInputs/econtex_onlyinsubfile.tex) [111
+
+]
+l. 8 Writing BufferStockTheory.idv[844] (BufferStockTheory843x.svg)
+l. 10 Writing BufferStockTheory.idv[845] (BufferStockTheory844x.svg)
+l. 11 Writing BufferStockTheory.idv[846] (BufferStockTheory845x.svg)
+l. 11 Writing BufferStockTheory.idv[847] (BufferStockTheory846x.svg)
+l. 14 Writing BufferStockTheory.idv[848] (BufferStockTheory847x.svg)
+l. 14 Writing BufferStockTheory.idv[849] (BufferStockTheory848x.svg)
+l. 14 Writing BufferStockTheory.idv[850] (BufferStockTheory849x.svg)
+l. 15 Writing BufferStockTheory.idv[851] (BufferStockTheory850x.svg)
+l. 19 Writing BufferStockTheory.idv[852] (BufferStockTheory851x.svg)
+l. 20 Writing BufferStockTheory.idv[853] (BufferStockTheory852x.svg)
+l. 20 Writing BufferStockTheory.idv[854] (BufferStockTheory853x.svg)
+l. 20 Writing BufferStockTheory.idv[855] (BufferStockTheory854x.svg)
+l. 20 Writing BufferStockTheory.idv[856] (BufferStockTheory855x.svg)
+l. 22 Writing BufferStockTheory.idv[857] (BufferStockTheory856x.svg)
+l. 26 Writing BufferStockTheory.idv[858] (BufferStockTheory857x.svg)
+[112]
+l. 30 Writing BufferStockTheory.idv[859] (BufferStockTheory858x.svg)
+l. 30 Writing BufferStockTheory.idv[860] (BufferStockTheory859x.svg)
+l. 30 Writing BufferStockTheory.idv[861] (BufferStockTheory860x.svg)
+l. 31 Writing BufferStockTheory.idv[862] (BufferStockTheory861x.svg)
+l. 31 Writing BufferStockTheory.idv[863] (BufferStockTheory862x.svg)
+l. 32 Writing BufferStockTheory.idv[864] (BufferStockTheory863x.svg)
+l. 32 Writing BufferStockTheory.idv[865] (BufferStockTheory864x.svg)
+l. 34 Writing BufferStockTheory.idv[866] (BufferStockTheory865x.svg)
+l. 37 Writing BufferStockTheory.idv[867] (BufferStockTheory866x.svg)
+l. 42 Writing BufferStockTheory.idv[868] (BufferStockTheory867x.svg)
+l. 44 Writing BufferStockTheory.idv[869] (BufferStockTheory868x.svg)
+l. 44 Writing BufferStockTheory.idv[870] (BufferStockTheory869x.svg)
+l. 44 Writing BufferStockTheory.idv[871] (BufferStockTheory870x.svg)
+l. 44 Writing BufferStockTheory.idv[872] (BufferStockTheory871x.svg)
+l. 45 Writing BufferStockTheory.idv[873] (BufferStockTheory872x.svg)
+l. 48 Writing BufferStockTheory.idv[874] (BufferStockTheory873x.svg)
+l. 48 Writing BufferStockTheory.idv[875] (BufferStockTheory874x.svg)
+l. 48 Writing BufferStockTheory.idv[876] (BufferStockTheory875x.svg)
+l. 48 Writing BufferStockTheory.idv[877] (BufferStockTheory876x.svg)
+l. 48 Writing BufferStockTheory.idv[878] (BufferStockTheory877x.svg)
+l. 49 Writing BufferStockTheory.idv[879] (BufferStockTheory878x.svg)
+[113]
+l. 52 Writing BufferStockTheory.idv[880] (BufferStockTheory879x.svg)
+l. 52 Writing BufferStockTheory.idv[881] (BufferStockTheory880x.svg)
+l. 52 Writing BufferStockTheory.idv[882] (BufferStockTheory881x.svg)
+) (./Appendices/ApndxCGroIsPGro.tex (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/../Resources/LaTeXInputs/econtex_onlyinsubfile.tex)
+l. 14 Writing BufferStockTheory.idv[883] (BufferStockTheory882x.svg)
+l. 14 Writing BufferStockTheory.idv[884] (BufferStockTheory883x.svg)
+l. 16 Writing BufferStockTheory.idv[885] (BufferStockTheory884x.svg)
+l. 17 Writing BufferStockTheory.idv[886] (BufferStockTheory885x.svg)
+l. 18 Writing BufferStockTheory.idv[887] (BufferStockTheory886x.svg)
+l. 18 Writing BufferStockTheory.idv[888] (BufferStockTheory887x.svg)
+l. 18 Writing BufferStockTheory.idv[889] (BufferStockTheory888x.svg)
+l. 20 Writing BufferStockTheory.idv[890] (BufferStockTheory889x.svg)
+l. 24 Writing BufferStockTheory.idv[891] (BufferStockTheory890x.svg)
+l. 25 Writing BufferStockTheory.idv[892] (BufferStockTheory891x.svg)
+l. 25 Writing BufferStockTheory.idv[893] (BufferStockTheory892x.svg)
+l. 25 Writing BufferStockTheory.idv[894] (BufferStockTheory893x.svg)
+l. 25 Writing BufferStockTheory.idv[895] (BufferStockTheory894x.svg)
+l. 25 Writing BufferStockTheory.idv[896] (BufferStockTheory895x.svg)
+l. 25 Writing BufferStockTheory.idv[897] (BufferStockTheory896x.svg)
+[114]
+l. 26 Writing BufferStockTheory.idv[898] (BufferStockTheory897x.svg)
+l. 32 Writing BufferStockTheory.idv[899] (BufferStockTheory898x.svg)
+l. 38 Writing BufferStockTheory.idv[900] (BufferStockTheory899x.svg)
+l. 39 Writing BufferStockTheory.idv[901] (BufferStockTheory900x.svg)
+l. 45 Writing BufferStockTheory.idv[902] (BufferStockTheory901x.svg)
+l. 45 Writing BufferStockTheory.idv[903] (BufferStockTheory902x.svg)
+l. 46 Writing BufferStockTheory.idv[904] (BufferStockTheory903x.svg)
+[115]
+l. 54 Writing BufferStockTheory.idv[905] (BufferStockTheory904x.svg)
+l. 55 Writing BufferStockTheory.idv[906] (BufferStockTheory905x.svg)
+l. 55 Writing BufferStockTheory.idv[907] (BufferStockTheory906x.svg)
+l. 58 Writing BufferStockTheory.idv[908] (BufferStockTheory907x.svg)
+l. 61 Writing BufferStockTheory.idv[909] (BufferStockTheory908x.svg)
+l. 61 Writing BufferStockTheory.idv[910] (BufferStockTheory909x.svg)
+l. 61 Writing BufferStockTheory.idv[911] (BufferStockTheory910x.svg)
+l. 62 Writing BufferStockTheory.idv[912] (BufferStockTheory911x.svg)
+l. 69 Writing BufferStockTheory.idv[913] (BufferStockTheory912x.svg)
+l. 71 Writing BufferStockTheory.idv[914] (BufferStockTheory913x.svg)
+l. 72 Writing BufferStockTheory.idv[915] (BufferStockTheory914x.svg)
+l. 74 Writing BufferStockTheory.idv[916] (BufferStockTheory915x.svg)
+l. 75 Writing BufferStockTheory.idv[917] (BufferStockTheory916x.svg)
+) (./Appendices/ApndxMPCLimits.tex (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/../Resources/LaTeXInputs/econtex_onlyinsubfile.tex)
+l. 10 Writing BufferStockTheory.idv[918] (BufferStockTheory917x.svg)
+l. 10 Writing BufferStockTheory.idv[919] (BufferStockTheory918x.svg)
+l. 11 Writing BufferStockTheory.idv[920] (BufferStockTheory919x.svg)
+l. 13 Writing BufferStockTheory.idv[921] (BufferStockTheory920x.svg)
+[116]
+l. 22 Writing BufferStockTheory.idv[922] (BufferStockTheory921x.svg)
+l. 22 Writing BufferStockTheory.idv[923] (BufferStockTheory922x.svg)
+l. 23 Writing BufferStockTheory.idv[924] (BufferStockTheory923x.svg)
+l. 25 Writing BufferStockTheory.idv[925] (BufferStockTheory924x.svg)
+l. 27 Writing BufferStockTheory.idv[926] (BufferStockTheory925x.svg)
+l. 29 Writing BufferStockTheory.idv[927] (BufferStockTheory926x.svg)
+l. 31 Writing BufferStockTheory.idv[928] (BufferStockTheory927x.svg)
+l. 32 Writing BufferStockTheory.idv[929] (BufferStockTheory928x.svg)
+l. 32 Writing BufferStockTheory.idv[930] (BufferStockTheory929x.svg)
+l. 33 Writing BufferStockTheory.idv[931] (BufferStockTheory930x.svg)
+l. 36 Writing BufferStockTheory.idv[932] (BufferStockTheory931x.svg)
+l. 36 Writing BufferStockTheory.idv[933] (BufferStockTheory932x.svg)
+l. 38 Writing BufferStockTheory.idv[934] (BufferStockTheory933x.svg)
+l. 39 Writing BufferStockTheory.idv[935] (BufferStockTheory934x.svg)
+l. 47 Writing BufferStockTheory.idv[936] (BufferStockTheory935x.svg)
+[117]
+l. 54 Writing BufferStockTheory.idv[937] (BufferStockTheory936x.svg)
+l. 58 Writing BufferStockTheory.idv[938] (BufferStockTheory937x.svg)
+l. 60 Writing BufferStockTheory.idv[939] (BufferStockTheory938x.svg)
+l. 64 Writing BufferStockTheory.idv[940] (BufferStockTheory939x.svg)
+l. 67 Writing BufferStockTheory.idv[941] (BufferStockTheory940x.svg)
+l. 68 Writing BufferStockTheory.idv[942] (BufferStockTheory941x.svg)
+l. 70 Writing BufferStockTheory.idv[943] (BufferStockTheory942x.svg)
+[118]
+l. 72 Writing BufferStockTheory.idv[944] (BufferStockTheory943x.svg)
+l. 75 Writing BufferStockTheory.idv[945] (BufferStockTheory944x.svg)
+l. 75 Writing BufferStockTheory.idv[946] (BufferStockTheory945x.svg)
+l. 76 Writing BufferStockTheory.idv[947] (BufferStockTheory946x.svg)
+l. 81 Writing BufferStockTheory.idv[948] (BufferStockTheory947x.svg)
+l. 83 Writing BufferStockTheory.idv[949] (BufferStockTheory948x.svg)
+[119]
+l. 86 Writing BufferStockTheory.idv[950] (BufferStockTheory949x.svg)
+l. 88 Writing BufferStockTheory.idv[951] (BufferStockTheory950x.svg)
+l. 91 Writing BufferStockTheory.idv[952] (BufferStockTheory951x.svg)
+l. 92 Writing BufferStockTheory.idv[953] (BufferStockTheory952x.svg)
+l. 97 Writing BufferStockTheory.idv[954] (BufferStockTheory953x.svg)
+l. 101 Writing BufferStockTheory.idv[955] (BufferStockTheory954x.svg)
+[120]) (./Appendices/ApndxLiqConstrAsLimit.tex (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/../Resources/LaTeXInputs/econtex_onlyinsubfile.tex)
+l. 12 Writing BufferStockTheory.idv[956] (BufferStockTheory955x.svg)
+l. 17 Writing BufferStockTheory.idv[957] (BufferStockTheory956x.svg)
+l. 23 Writing BufferStockTheory.idv[958] (BufferStockTheory957x.svg)
+l. 23 Writing BufferStockTheory.idv[959] (BufferStockTheory958x.svg)
+l. 24 Writing BufferStockTheory.idv[960] (BufferStockTheory959x.svg)
+l. 25 Writing BufferStockTheory.idv[961] (BufferStockTheory960x.svg)
+l. 27 Writing BufferStockTheory.idv[962] (BufferStockTheory961x.svg)
+[121]
+l. 31 Writing BufferStockTheory.idv[963] (BufferStockTheory962x.svg)
+l. 34 Writing BufferStockTheory.idv[964] (BufferStockTheory963x.svg)
+l. 35 Writing BufferStockTheory.idv[965] (BufferStockTheory964x.svg)
+l. 40 Writing BufferStockTheory.idv[966] (BufferStockTheory965x.svg)
+l. 40 Writing BufferStockTheory.idv[967] (BufferStockTheory966x.svg)
+l. 41 Writing BufferStockTheory.idv[968] (BufferStockTheory967x.svg)
+l. 42 Writing BufferStockTheory.idv[969] (BufferStockTheory968x.svg)
+l. 47 Writing BufferStockTheory.idv[970] (BufferStockTheory969x.svg)
+l. 48 Writing BufferStockTheory.idv[971] (BufferStockTheory970x.svg)
+l. 48 Writing BufferStockTheory.idv[972] (BufferStockTheory971x.svg)
+l. 49 Writing BufferStockTheory.idv[973] (BufferStockTheory972x.svg)
+[122]
+l. 53 Writing BufferStockTheory.idv[974] (BufferStockTheory973x.svg)
+l. 58 Writing BufferStockTheory.idv[975] (BufferStockTheory974x.svg)
+l. 59 Writing BufferStockTheory.idv[976] (BufferStockTheory975x.svg)
+l. 60 Writing BufferStockTheory.idv[977] (BufferStockTheory976x.svg)
+l. 62 Writing BufferStockTheory.idv[978] (BufferStockTheory977x.svg)
+l. 64 Writing BufferStockTheory.idv[979] (BufferStockTheory978x.svg)
+l. 70 Writing BufferStockTheory.idv[980] (BufferStockTheory979x.svg)
+[123]
+l. 73 Writing BufferStockTheory.idv[981] (BufferStockTheory980x.svg)
+l. 74 Writing BufferStockTheory.idv[982] (BufferStockTheory981x.svg)
+l. 77 Writing BufferStockTheory.idv[983] (BufferStockTheory982x.svg)
+l. 81 Writing BufferStockTheory.idv[984] (BufferStockTheory983x.svg)
+l. 84 Writing BufferStockTheory.idv[985] (BufferStockTheory984x.svg)
+l. 85 Writing BufferStockTheory.idv[986] (BufferStockTheory985x.svg)
+l. 85 Writing BufferStockTheory.idv[987] (BufferStockTheory986x.svg)
+l. 89 Writing BufferStockTheory.idv[988] (BufferStockTheory987x.svg)
+l. 92 Writing BufferStockTheory.idv[989] (BufferStockTheory988x.svg)
+l. 95 Writing BufferStockTheory.idv[990] (BufferStockTheory989x.svg)
+l. 96 Writing BufferStockTheory.idv[991] (BufferStockTheory990x.svg)
+l. 96 Writing BufferStockTheory.idv[992] (BufferStockTheory991x.svg)
+l. 97 Writing BufferStockTheory.idv[993] (BufferStockTheory992x.svg)
+l. 100 Writing BufferStockTheory.idv[994] (BufferStockTheory993x.svg)
+l. 102 Writing BufferStockTheory.idv[995] (BufferStockTheory994x.svg)
+l. 102 Writing BufferStockTheory.idv[996] (BufferStockTheory995x.svg)
+l. 103 Writing BufferStockTheory.idv[997] (BufferStockTheory996x.svg)
+l. 105 Writing BufferStockTheory.idv[998] (BufferStockTheory997x.svg)
+l. 107 Writing BufferStockTheory.idv[999] (BufferStockTheory998x.svg)
+[124]
+l. 109 Writing BufferStockTheory.idv[1000] (BufferStockTheory999x.svg)
+l. 111 Writing BufferStockTheory.idv[1001] (BufferStockTheory1000x.svg)
+l. 111 Writing BufferStockTheory.idv[1002] (BufferStockTheory1001x.svg)
+l. 112 Writing BufferStockTheory.idv[1003] (BufferStockTheory1002x.svg)
+l. 114 Writing BufferStockTheory.idv[1004] (BufferStockTheory1003x.svg)
+l. 115 Writing BufferStockTheory.idv[1005] (BufferStockTheory1004x.svg)
+l. 116 Writing BufferStockTheory.idv[1006] (BufferStockTheory1005x.svg)
+l. 117 Writing BufferStockTheory.idv[1007] (BufferStockTheory1006x.svg)
+l. 118 Writing BufferStockTheory.idv[1008] (BufferStockTheory1007x.svg)
+l. 120 Writing BufferStockTheory.idv[1009] (BufferStockTheory1008x.svg)
+l. 120 Writing BufferStockTheory.idv[1010] (BufferStockTheory1009x.svg)
+l. 122 Writing BufferStockTheory.idv[1011] (BufferStockTheory1010x.svg)
+l. 123 Writing BufferStockTheory.idv[1012] (BufferStockTheory1011x.svg)
+l. 131 Writing BufferStockTheory.idv[1013] (BufferStockTheory1012x.svg)
+) (./Appendices/ApndxSolnMethEndogGpts.tex (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/../Resources/LaTeXInputs/econtex_onlyinsubfile.tex)
+l. 11 Writing BufferStockTheory.idv[1014] (BufferStockTheory1013x.svg)
+l. 11 Writing BufferStockTheory.idv[1015] (BufferStockTheory1014x.svg)
+--- file BufferStockTheory52.html ---
+[125]
+l. 13 Writing BufferStockTheory.idv[1016] (BufferStockTheory1015x.svg)
+l. 21 Writing BufferStockTheory.idv[1017] (BufferStockTheory1016x.svg)
+l. 22 Writing BufferStockTheory.idv[1018] (BufferStockTheory1017x.svg)
+l. 27 Writing BufferStockTheory.idv[1019] (BufferStockTheory1018x.svg)
+l. 31 Writing BufferStockTheory.idv[1020] (BufferStockTheory1019x.svg)
+l. 32 Writing BufferStockTheory.idv[1021] (BufferStockTheory1020x.svg)
+l. 34 Writing BufferStockTheory.idv[1022] (BufferStockTheory1021x.svg)
+[126
+
+]
+l. 40 Writing BufferStockTheory.idv[1023] (BufferStockTheory1022x.svg)
+l. 41 Writing BufferStockTheory.idv[1024] (BufferStockTheory1023x.svg)
+l. 45 Writing BufferStockTheory.idv[1025] (BufferStockTheory1024x.svg)
+l. 48 Writing BufferStockTheory.idv[1026] (BufferStockTheory1025x.svg)
+l. 52 Writing BufferStockTheory.idv[1027] (BufferStockTheory1026x.svg)
+l. 52 Writing BufferStockTheory.idv[1028] (BufferStockTheory1027x.svg)
+) (./Appendices/ApndxSolnMethTermFunc.tex (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/../Resources/LaTeXInputs/econtex_onlyinsubfile.tex)
+l. 11 Writing BufferStockTheory.idv[1029] (BufferStockTheory1028x.svg)
+l. 12 Writing BufferStockTheory.idv[1030] (BufferStockTheory1029x.svg)
+l. 13 Writing BufferStockTheory.idv[1031] (BufferStockTheory1030x.svg)
+l. 13 Writing BufferStockTheory.idv[1032] (BufferStockTheory1031x.svg)
+l. 14 Writing BufferStockTheory.idv[1033] (BufferStockTheory1032x.svg)
+--- file BufferStockTheory53.html ---
+l. 14 Writing BufferStockTheory.idv[1034] (BufferStockTheory1033x.svg)
+l. 18 Writing BufferStockTheory.idv[1035] (BufferStockTheory1034x.svg)
+l. 18 Writing BufferStockTheory.idv[1036] (BufferStockTheory1035x.svg)
+[127
+
+]
+l. 22 Writing BufferStockTheory.idv[1037] (BufferStockTheory1036x.svg)
+l. 22 Writing BufferStockTheory.idv[1038] (BufferStockTheory1037x.svg)
+l. 23 Writing BufferStockTheory.idv[1039] (BufferStockTheory1038x.svg)
+l. 23 Writing BufferStockTheory.idv[1040] (BufferStockTheory1039x.svg)
+l. 24 Writing BufferStockTheory.idv[1041] (BufferStockTheory1040x.svg)
+l. 27 Writing BufferStockTheory.idv[1042] (BufferStockTheory1041x.svg)
+l. 28 Writing BufferStockTheory.idv[1043] (BufferStockTheory1042x.svg)
+l. 32 Writing BufferStockTheory.idv[1044] (BufferStockTheory1043x.svg)
+--- file BufferStockTheory54.html ---
+l. 35 Writing BufferStockTheory.idv[1045] (BufferStockTheory1044x.svg)
+l. 40 Writing BufferStockTheory.idv[1046] (BufferStockTheory1045x.svg)
+l. 41 Writing BufferStockTheory.idv[1047] (BufferStockTheory1046x.svg)
+l. 42 Writing BufferStockTheory.idv[1048] (BufferStockTheory1047x.svg)
+l. 43 Writing BufferStockTheory.idv[1049] (BufferStockTheory1048x.svg)
+l. 44 Writing BufferStockTheory.idv[1050] (BufferStockTheory1049x.svg)
+l. 51 Writing BufferStockTheory.idv[1051] (BufferStockTheory1050x.svg)
+l. 51 Writing BufferStockTheory.idv[1052] (BufferStockTheory1051x.svg)
+l. 52 Writing BufferStockTheory.idv[1053] (BufferStockTheory1052x.svg)
+l. 52 Writing BufferStockTheory.idv[1054] (BufferStockTheory1053x.svg)
+l. 53 Writing BufferStockTheory.idv[1055] (BufferStockTheory1054x.svg)
+l. 54 Writing BufferStockTheory.idv[1056] (BufferStockTheory1055x.svg)
+l. 56 Writing BufferStockTheory.idv[1057] (BufferStockTheory1056x.svg)
+l. 57 Writing BufferStockTheory.idv[1058] (BufferStockTheory1057x.svg)
+l. 58 Writing BufferStockTheory.idv[1059] (BufferStockTheory1058x.svg)
+l. 59 Writing BufferStockTheory.idv[1060] (BufferStockTheory1059x.svg)
+l. 61 Writing BufferStockTheory.idv[1061] (BufferStockTheory1060x.svg)
+l. 63 Writing BufferStockTheory.idv[1062] (BufferStockTheory1061x.svg)
+l. 64 Writing BufferStockTheory.idv[1063] (BufferStockTheory1062x.svg)
+[128
+
+]
+l. 68 Writing BufferStockTheory.idv[1064] (BufferStockTheory1063x.svg)
+l. 79 Writing BufferStockTheory.idv[1065] (BufferStockTheory1064x.svg)
+l. 80 Writing BufferStockTheory.idv[1066] (BufferStockTheory1065x.svg)
+l. 80 Writing BufferStockTheory.idv[1067] (BufferStockTheory1066x.svg)
+l. 81 Writing BufferStockTheory.idv[1068] (BufferStockTheory1067x.svg)
+l. 84 Writing BufferStockTheory.idv[1069] (BufferStockTheory1068x.svg)
+l. 84 Writing BufferStockTheory.idv[1070] (BufferStockTheory1069x.svg)
+l. 84 Writing BufferStockTheory.idv[1071] (BufferStockTheory1070x.svg)
+l. 84 Writing BufferStockTheory.idv[1072] (BufferStockTheory1071x.svg)
+l. 85 Writing BufferStockTheory.idv[1073] (BufferStockTheory1072x.svg)
+l. 85 Writing BufferStockTheory.idv[1074] (BufferStockTheory1073x.svg)
+l. 85 Writing BufferStockTheory.idv[1075] (BufferStockTheory1074x.svg)
+l. 85 Writing BufferStockTheory.idv[1076] (BufferStockTheory1075x.svg)
+l. 87 Writing BufferStockTheory.idv[1077] (BufferStockTheory1076x.svg)
+[129]
+l. 89 Writing BufferStockTheory.idv[1078] (BufferStockTheory1077x.svg)
+l. 93 Writing BufferStockTheory.idv[1079] (BufferStockTheory1078x.svg)
+l. 108 Writing BufferStockTheory.idv[1080] (BufferStockTheory1079x.svg)
+l. 113 Writing BufferStockTheory.idv[1081] (BufferStockTheory1080x.svg)
+l. 114 Writing BufferStockTheory.idv[1082] (BufferStockTheory1081x.svg)
+) (./Appendices/ApndxConditionDiagrams.tex (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/../Resources/LaTeXInputs/econtex_onlyinsubfile.tex) [130] [131] [132
+
+]
+l. 28 --- needs --- ./Appendices/../Figures/InequalityPFGICFHWCRIC.svg ---
+[133
+
+]
+l. 36 Writing BufferStockTheory.idv[1083] (BufferStockTheory1082x.svg)
+l. 36 Writing BufferStockTheory.idv[1084] (BufferStockTheory1083x.svg)
+l. 36 Writing BufferStockTheory.idv[1085] (BufferStockTheory1084x.svg)
+l. 36 Writing BufferStockTheory.idv[1086] (BufferStockTheory1085x.svg)
+l. 36 Writing BufferStockTheory.idv[1087] (BufferStockTheory1086x.svg)
+--- file BufferStockTheory55.html ---
+l. 36 Writing BufferStockTheory.idv[1088] (BufferStockTheory1087x.svg)
+l. 36 Writing BufferStockTheory.idv[1089] (BufferStockTheory1088x.svg)
+l. 36 Writing BufferStockTheory.idv[1090] (BufferStockTheory1089x.svg)
+l. 36 Writing BufferStockTheory.idv[1091] (BufferStockTheory1090x.svg)
+l. 36 Writing BufferStockTheory.idv[1092] (BufferStockTheory1091x.svg)
+l. 36 Writing BufferStockTheory.idv[1093] (BufferStockTheory1092x.svg)
+l. 38 Writing BufferStockTheory.idv[1094] (BufferStockTheory1093x.svg)
+l. 38 Writing BufferStockTheory.idv[1095] (BufferStockTheory1094x.svg)
+l. 40 Writing BufferStockTheory.idv[1096] (BufferStockTheory1095x.svg)
+l. 40 Writing BufferStockTheory.idv[1097] (BufferStockTheory1096x.svg)
+l. 40 Writing BufferStockTheory.idv[1098] (BufferStockTheory1097x.svg)
+l. 40 Writing BufferStockTheory.idv[1099] (BufferStockTheory1098x.svg)
+l. 40 Writing BufferStockTheory.idv[1100] (BufferStockTheory1099x.svg)
+l. 40 Writing BufferStockTheory.idv[1101] (BufferStockTheory1100x.svg)
+--- file BufferStockTheory56.html ---
+--- file BufferStockTheory57.html ---
+l. 42 Writing BufferStockTheory.idv[1102] (BufferStockTheory1101x.svg)
+l. 42 Writing BufferStockTheory.idv[1103] (BufferStockTheory1102x.svg)
+l. 42 Writing BufferStockTheory.idv[1104] (BufferStockTheory1103x.svg)
+l. 44 Writing BufferStockTheory.idv[1105] (BufferStockTheory1104x.svg)
+l. 44 Writing BufferStockTheory.idv[1106] (BufferStockTheory1105x.svg)
+l. 44 Writing BufferStockTheory.idv[1107] (BufferStockTheory1106x.svg)
+l. 44 Writing BufferStockTheory.idv[1108] (BufferStockTheory1107x.svg)
+l. 44 Writing BufferStockTheory.idv[1109] (BufferStockTheory1108x.svg)
+l. 44 Writing BufferStockTheory.idv[1110] (BufferStockTheory1109x.svg)
+l. 44 Writing BufferStockTheory.idv[1111] (BufferStockTheory1110x.svg)
+l. 44 Writing BufferStockTheory.idv[1112] (BufferStockTheory1111x.svg)
+l. 44 Writing BufferStockTheory.idv[1113] (BufferStockTheory1112x.svg)
+l. 44 Writing BufferStockTheory.idv[1114] (BufferStockTheory1113x.svg)
+l. 44 Writing BufferStockTheory.idv[1115] (BufferStockTheory1114x.svg)
+l. 44 Writing BufferStockTheory.idv[1116] (BufferStockTheory1115x.svg)
+l. 44 Writing BufferStockTheory.idv[1117] (BufferStockTheory1116x.svg)
+l. 44 Writing BufferStockTheory.idv[1118] (BufferStockTheory1117x.svg)
+--- file BufferStockTheory58.html ---
+l. 50 Writing BufferStockTheory.idv[1119] (BufferStockTheory1118x.svg)
+[134
+
+
+
+
+] [135
+
+] [136
+
+]
+l. 57 --- needs --- ./Appendices/../Figures/RelatePFGICFHWCRICPFFVAC.svg ---
+l. 59 Writing BufferStockTheory.idv[1120] (BufferStockTheory1119x.svg)
+[137
+
+]
+l. 62 Writing BufferStockTheory.idv[1121] (BufferStockTheory1120x.svg)
+l. 62 Writing BufferStockTheory.idv[1122] (BufferStockTheory1121x.svg)
+--- file BufferStockTheory59.html ---
+l. 62 Writing BufferStockTheory.idv[1123] (BufferStockTheory1122x.svg)
+l. 62 Writing BufferStockTheory.idv[1124] (BufferStockTheory1123x.svg)
+l. 62 Writing BufferStockTheory.idv[1125] (BufferStockTheory1124x.svg)
+l. 62 Writing BufferStockTheory.idv[1126] (BufferStockTheory1125x.svg)
+l. 62 Writing BufferStockTheory.idv[1127] (BufferStockTheory1126x.svg)
+l. 62 Writing BufferStockTheory.idv[1128] (BufferStockTheory1127x.svg)
+l. 63 Writing BufferStockTheory.idv[1129] (BufferStockTheory1128x.svg)
+l. 68 Writing BufferStockTheory.idv[1130] (BufferStockTheory1129x.svg)
+l. 68 Writing BufferStockTheory.idv[1131] (BufferStockTheory1130x.svg)
+l. 68 Writing BufferStockTheory.idv[1132] (BufferStockTheory1131x.svg)
+l. 68 Writing BufferStockTheory.idv[1133] (BufferStockTheory1132x.svg)
+l. 68 Writing BufferStockTheory.idv[1134] (BufferStockTheory1133x.svg)
+l. 68 Writing BufferStockTheory.idv[1135] (BufferStockTheory1134x.svg)
+l. 68 Writing BufferStockTheory.idv[1136] (BufferStockTheory1135x.svg)
+l. 68 Writing BufferStockTheory.idv[1137] (BufferStockTheory1136x.svg)
+l. 69 Writing BufferStockTheory.idv[1138] (BufferStockTheory1137x.svg)
+l. 70 Writing BufferStockTheory.idv[1139] (BufferStockTheory1138x.svg)
+[138
+
+
+]
+l. 75 Writing BufferStockTheory.idv[1140] (BufferStockTheory1139x.svg)
+[139] [140
+
+]
+l. 84 --- needs --- ./Appendices/../Figures/Inequalities.svg ---
+[141
+
+] [142
+
+] [143
+
+]
+l.92 --- TeX4ht warning --- File `"./Appendices/../Figures/Inequalities-numer.xbb"' not found ---
+l.92 --- TeX4ht warning --- Cannot determine size of graphic in "./Appendices/../Figures/Inequalities-numer.xbb" (no BoundingBox) ---
+l. 92 --- needs --- ./Appendices/../Figures/Inequalities-numer.svg ---
+[144
+
+]) (./Appendices/ApndxCGrowthDeclines.tex (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/../Resources/LaTeXInputs/econtex_onlyinsubfile.tex)
+l. 6 Writing BufferStockTheory.idv[1141] (BufferStockTheory1140x.svg)
+l. 10 Writing BufferStockTheory.idv[1142] (BufferStockTheory1141x.svg)
+l. 11 Writing BufferStockTheory.idv[1143] (BufferStockTheory1142x.svg)
+
+LaTeX Warning: Reference `eq:kappaPrimeLT0' on page 145 undefined on input line 11.
+
+l. 12 Writing BufferStockTheory.idv[1144] (BufferStockTheory1143x.svg)
+l. 18 Writing BufferStockTheory.idv[1145] (BufferStockTheory1144x.svg)
+l. 19 Writing BufferStockTheory.idv[1146] (BufferStockTheory1145x.svg)
+l. 25 Writing BufferStockTheory.idv[1147] (BufferStockTheory1146x.svg)
+
+LaTeX Warning: Reference `eq:kappaPrimeLT0' on page 145 undefined on input line 25.
+
+[145
+
+]
+l. 26 Writing BufferStockTheory.idv[1148] (BufferStockTheory1147x.svg)
+l. 30 Writing BufferStockTheory.idv[1149] (BufferStockTheory1148x.svg)
+l. 34 Writing BufferStockTheory.idv[1150] (BufferStockTheory1149x.svg)
+l. 38 Writing BufferStockTheory.idv[1151] (BufferStockTheory1150x.svg)
+l. 42 Writing BufferStockTheory.idv[1152] (BufferStockTheory1151x.svg)
+l. 43 Writing BufferStockTheory.idv[1153] (BufferStockTheory1152x.svg)
+[146]
+l. 47 Writing BufferStockTheory.idv[1154] (BufferStockTheory1153x.svg)
+l. 48 Writing BufferStockTheory.idv[1155] (BufferStockTheory1154x.svg)
+l. 49 Writing BufferStockTheory.idv[1156] (BufferStockTheory1155x.svg)
+l. 49 Writing BufferStockTheory.idv[1157] (BufferStockTheory1156x.svg)
+l. 52 Writing BufferStockTheory.idv[1158] (BufferStockTheory1157x.svg)
+l. 52 Writing BufferStockTheory.idv[1159] (BufferStockTheory1158x.svg)
+l. 53 Writing BufferStockTheory.idv[1160] (BufferStockTheory1159x.svg)
+l. 53 Writing BufferStockTheory.idv[1161] (BufferStockTheory1160x.svg)
+l. 54 Writing BufferStockTheory.idv[1162] (BufferStockTheory1161x.svg)
+l. 54 Writing BufferStockTheory.idv[1163] (BufferStockTheory1162x.svg)
+l. 55 Writing BufferStockTheory.idv[1164] (BufferStockTheory1163x.svg)
+l. 57 Writing BufferStockTheory.idv[1165] (BufferStockTheory1164x.svg)
+) (./Appendices/ApndxMTargetIsStable.tex (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/./econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex)) (./Appendices/../Resources/LaTeXInputs/econtex_onlyinsubfile.tex) (./Appendices/../Equations/TheoremMTargetIsStable.tex
+l. 2 Writing BufferStockTheory.idv[1166] (BufferStockTheory1165x.svg)
+l. 3 Writing BufferStockTheory.idv[1167] (BufferStockTheory1166x.svg)
+l. 7 Writing BufferStockTheory.idv[1168] (BufferStockTheory1167x.svg)
+[147]
+l. 8 Writing BufferStockTheory.idv[1169] (BufferStockTheory1168x.svg)
+) (./Appendices/../Equations/TheoremMSSBalExists.tex
+l. 2 Writing BufferStockTheory.idv[1170] (BufferStockTheory1169x.svg)
+l. 3 Writing BufferStockTheory.idv[1171] (BufferStockTheory1170x.svg)
+l. 7 Writing BufferStockTheory.idv[1172] (BufferStockTheory1171x.svg)
+l. 8 Writing BufferStockTheory.idv[1173] (BufferStockTheory1172x.svg)
+[148])
+l. 21 Writing BufferStockTheory.idv[1174] (BufferStockTheory1173x.svg)
+l. 21 Writing BufferStockTheory.idv[1175] (BufferStockTheory1174x.svg)
+l. 21 Writing BufferStockTheory.idv[1176] (BufferStockTheory1175x.svg)
+l. 28 Writing BufferStockTheory.idv[1177] (BufferStockTheory1176x.svg)
+l. 29 Writing BufferStockTheory.idv[1178] (BufferStockTheory1177x.svg)
+l. 30 Writing BufferStockTheory.idv[1179] (BufferStockTheory1178x.svg)
+l. 34 Writing BufferStockTheory.idv[1180] (BufferStockTheory1179x.svg)
+l. 35 Writing BufferStockTheory.idv[1181] (BufferStockTheory1180x.svg)
+l. 35 Writing BufferStockTheory.idv[1182] (BufferStockTheory1181x.svg)
+l. 35 Writing BufferStockTheory.idv[1183] (BufferStockTheory1182x.svg)
+l. 37 Writing BufferStockTheory.idv[1184] (BufferStockTheory1183x.svg)
+l. 37 Writing BufferStockTheory.idv[1185] (BufferStockTheory1184x.svg)
+l. 37 Writing BufferStockTheory.idv[1186] (BufferStockTheory1185x.svg)
+l. 37 Writing BufferStockTheory.idv[1187] (BufferStockTheory1186x.svg)
+l. 37 Writing BufferStockTheory.idv[1188] (BufferStockTheory1187x.svg)
+l. 37 Writing BufferStockTheory.idv[1189] (BufferStockTheory1188x.svg)
+l. 37 Writing BufferStockTheory.idv[1190] (BufferStockTheory1189x.svg)
+l. 37 Writing BufferStockTheory.idv[1191] (BufferStockTheory1190x.svg)
+l. 37 Writing BufferStockTheory.idv[1192] (BufferStockTheory1191x.svg)
+l. 37 Writing BufferStockTheory.idv[1193] (BufferStockTheory1192x.svg)
+[149]
+l. 39 Writing BufferStockTheory.idv[1194] (BufferStockTheory1193x.svg)
+l. 41 Writing BufferStockTheory.idv[1195] (BufferStockTheory1194x.svg)
+l. 43 Writing BufferStockTheory.idv[1196] (BufferStockTheory1195x.svg)
+l. 44 Writing BufferStockTheory.idv[1197] (BufferStockTheory1196x.svg)
+l. 45 Writing BufferStockTheory.idv[1198] (BufferStockTheory1197x.svg)
+l. 49 Writing BufferStockTheory.idv[1199] (BufferStockTheory1198x.svg)
+l. 51 Writing BufferStockTheory.idv[1200] (BufferStockTheory1199x.svg)
+l. 52 Writing BufferStockTheory.idv[1201] (BufferStockTheory1200x.svg)
+l. 62 Writing BufferStockTheory.idv[1202] (BufferStockTheory1201x.svg)
+l. 62 Writing BufferStockTheory.idv[1203] (BufferStockTheory1202x.svg)
+l. 62 Writing BufferStockTheory.idv[1204] (BufferStockTheory1203x.svg)
+l. 62 Writing BufferStockTheory.idv[1205] (BufferStockTheory1204x.svg)
+l. 62 Writing BufferStockTheory.idv[1206] (BufferStockTheory1205x.svg)
+l. 64 Writing BufferStockTheory.idv[1207] (BufferStockTheory1206x.svg)
+l. 68 Writing BufferStockTheory.idv[1208] (BufferStockTheory1207x.svg)
+l. 70 Writing BufferStockTheory.idv[1209] (BufferStockTheory1208x.svg)
+l. 70 Writing BufferStockTheory.idv[1210] (BufferStockTheory1209x.svg)
+l. 70 Writing BufferStockTheory.idv[1211] (BufferStockTheory1210x.svg)
+l. 70 Writing BufferStockTheory.idv[1212] (BufferStockTheory1211x.svg)
+l. 70 Writing BufferStockTheory.idv[1213] (BufferStockTheory1212x.svg)
+l. 74 Writing BufferStockTheory.idv[1214] (BufferStockTheory1213x.svg)
+[150]
+l. 76 Writing BufferStockTheory.idv[1215] (BufferStockTheory1214x.svg)
+l. 78 Writing BufferStockTheory.idv[1216] (BufferStockTheory1215x.svg)
+l. 80 Writing BufferStockTheory.idv[1217] (BufferStockTheory1216x.svg)
+l. 87 Writing BufferStockTheory.idv[1218] (BufferStockTheory1217x.svg)
+l. 87 Writing BufferStockTheory.idv[1219] (BufferStockTheory1218x.svg)
+l. 88 Writing BufferStockTheory.idv[1220] (BufferStockTheory1219x.svg)
+l. 89 Writing BufferStockTheory.idv[1221] (BufferStockTheory1220x.svg)
+l. 98 Writing BufferStockTheory.idv[1222] (BufferStockTheory1221x.svg)
+[151]
+l. 100 Writing BufferStockTheory.idv[1223] (BufferStockTheory1222x.svg)
+l. 100 Writing BufferStockTheory.idv[1224] (BufferStockTheory1223x.svg)
+l. 101 Writing BufferStockTheory.idv[1225] (BufferStockTheory1224x.svg)
+l. 107 Writing BufferStockTheory.idv[1226] (BufferStockTheory1225x.svg)
+l. 110 Writing BufferStockTheory.idv[1227] (BufferStockTheory1226x.svg)
+l. 110 Writing BufferStockTheory.idv[1228] (BufferStockTheory1227x.svg)
+l. 110 Writing BufferStockTheory.idv[1229] (BufferStockTheory1228x.svg)
+l. 111 Writing BufferStockTheory.idv[1230] (BufferStockTheory1229x.svg)
+l. 114 Writing BufferStockTheory.idv[1231] (BufferStockTheory1230x.svg)
+l. 115 Writing BufferStockTheory.idv[1232] (BufferStockTheory1231x.svg)
+l. 119 Writing BufferStockTheory.idv[1233] (BufferStockTheory1232x.svg)
+[152]
+l. 122 Writing BufferStockTheory.idv[1234] (BufferStockTheory1233x.svg)
+l. 123 Writing BufferStockTheory.idv[1235] (BufferStockTheory1234x.svg)
+l. 133 Writing BufferStockTheory.idv[1236] (BufferStockTheory1235x.svg)
+l. 134 Writing BufferStockTheory.idv[1237] (BufferStockTheory1236x.svg)
+l. 135 Writing BufferStockTheory.idv[1238] (BufferStockTheory1237x.svg)
+l. 140 Writing BufferStockTheory.idv[1239] (BufferStockTheory1238x.svg)
+l. 140 Writing BufferStockTheory.idv[1240] (BufferStockTheory1239x.svg)
+l. 140 Writing BufferStockTheory.idv[1241] (BufferStockTheory1240x.svg)
+l. 144 Writing BufferStockTheory.idv[1242] (BufferStockTheory1241x.svg)
+l. 144 Writing BufferStockTheory.idv[1243] (BufferStockTheory1242x.svg)
+l. 144 Writing BufferStockTheory.idv[1244] (BufferStockTheory1243x.svg)
+l. 144 Writing BufferStockTheory.idv[1245] (BufferStockTheory1244x.svg)
+l. 144 Writing BufferStockTheory.idv[1246] (BufferStockTheory1245x.svg)
+l. 144 Writing BufferStockTheory.idv[1247] (BufferStockTheory1246x.svg)
+l. 144 Writing BufferStockTheory.idv[1248] (BufferStockTheory1247x.svg)
+l. 146 Writing BufferStockTheory.idv[1249] (BufferStockTheory1248x.svg)
+[153]
+l. 147 Writing BufferStockTheory.idv[1250] (BufferStockTheory1249x.svg)
+l. 163 Writing BufferStockTheory.idv[1251] (BufferStockTheory1250x.svg)
+l. 165 Writing BufferStockTheory.idv[1252] (BufferStockTheory1251x.svg)
+l. 167 Writing BufferStockTheory.idv[1253] (BufferStockTheory1252x.svg)
+l. 169 Writing BufferStockTheory.idv[1254] (BufferStockTheory1253x.svg)
+[154]
+l. 176 Writing BufferStockTheory.idv[1255] (BufferStockTheory1254x.svg)
+l. 176 Writing BufferStockTheory.idv[1256] (BufferStockTheory1255x.svg)
+l. 177 Writing BufferStockTheory.idv[1257] (BufferStockTheory1256x.svg)
+l. 178 Writing BufferStockTheory.idv[1258] (BufferStockTheory1257x.svg)
+l. 186 Writing BufferStockTheory.idv[1259] (BufferStockTheory1258x.svg)
+l. 186 Writing BufferStockTheory.idv[1260] (BufferStockTheory1259x.svg)
+l. 188 Writing BufferStockTheory.idv[1261] (BufferStockTheory1260x.svg)
+l. 188 Writing BufferStockTheory.idv[1262] (BufferStockTheory1261x.svg)
+l. 189 Writing BufferStockTheory.idv[1263] (BufferStockTheory1262x.svg)
+l. 193 Writing BufferStockTheory.idv[1264] (BufferStockTheory1263x.svg)
+l. 196 Writing BufferStockTheory.idv[1265] (BufferStockTheory1264x.svg)
+l. 196 Writing BufferStockTheory.idv[1266] (BufferStockTheory1265x.svg)
+l. 196 Writing BufferStockTheory.idv[1267] (BufferStockTheory1266x.svg)
+l. 197 Writing BufferStockTheory.idv[1268] (BufferStockTheory1267x.svg)
+l. 200 Writing BufferStockTheory.idv[1269] (BufferStockTheory1268x.svg)
+[155]
+l. 201 Writing BufferStockTheory.idv[1270] (BufferStockTheory1269x.svg)
+) [156] (./BufferStockTheory.bbl [157
+
+] [158] [159] [160] [161])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 38.
+[162]
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 38.
+\BKM@file=\write6
+\openout6 = `BufferStockTheory.out.ps'.
+
+(./BufferStockTheory.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 38.
+\snap@out=\write7
+\openout7 = `BufferStockTheory.dep'.
+
+Dependency list written on BufferStockTheory.dep.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 38.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 27042 strings out of 480609
+ 483710 string characters out of 5903657
+ 928555 words of memory out of 5000000
+ 41655 multiletter control sequences out of 15000+600000
+ 569629 words of font info for 132 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 66i,29n,105p,10640b,1463s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on BufferStockTheory.dvi (162 pages, 819056 bytes).
