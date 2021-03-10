@@ -1233,7 +1233,7 @@ One definition of a `stable' point is an $\mTarg$ such that if $\mRat_{t}=\mTarg
  Since $\mRat_{t+1}=(\mRat_{t}-\cFunc(\mRat_{t}))\Rnorm_{t+1}+\tShk_{t+1}$, the implicit equation for $\mTarg$ is
  \begin{align}
   \Ex_{t}[(\mTarg-\cFunc(\mTarg))\Rnorm_{t+1}+\tShk_{t+1}] & = \mTarg \label{eq:mTargImplicit}
-\\   (\mTarg-\cFunc(\mTarg))\underbrace{\Rnorm\Ex_{t}[\pShk^{-1}]}_{\equiv \bar{\Rnorm}}+1 & = \mTarg \notag.
+\\   (\mTarg-\cFunc(\mTarg))\underbrace{\Rnorm\Ex_{t}[\pShk^{-1}]}_{\equiv \bar{\Rnorm}}+1 & = \mTarg
  \end{align}
  
 
@@ -1261,9 +1261,9 @@ One definition of a `stable' point is an $\mTarg$ such that if $\mRat_{t}=\mTarg
 
  \hypertarget{Collective-Stability}{}
  \subsubsection{Collective Stability and the Pseudo-Steady-State}\label{subsubsec:mSteadyState}
- A traditional question in macroeconomic models is whether there is a `balanced growth' equilibrium in which aggregate variables (income, consumption, market resources) all grow forever at the same rate.  For the model here, we have already seen in Figure~\ref{fig:cGroTargetFig} that there is no single $\mRat$ for which $\Ex_{t}[\mRatBF_{t+1}]/\mRatBF_{t} = \Ex_{t}[\cLevBF_{t+1}]/\cLevBF_{t} = \PGro$ for an individual consumer.  Nevertheless, analysis below will show that economies populated by collections of such consumers can exhibit balanced growth in the aggregate.
+ A traditional question in macroeconomic models is whether there is a `balanced growth' equilibrium in which aggregate variables (income, consumption, market resources) all grow forever at the same rate.  For the model here, we have already seen in Figure~\ref{fig:cGroTargetFig} that there is no single $\mRat$ for which $\Ex_{t}[\mRatBF_{t+1}]/\mRatBF_{t} = \Ex_{t}[\cLevBF_{t+1}]/\cLevBF_{t} = \PGro$~for an individual consumer.  Nevertheless, analysis below will show that economies populated by collections of such consumers can exhibit balanced growth in the aggregate.
 
- As an input to that analysis, we show here that if the {\GIC} holds, the problem will have a point of what we call `collective stability,' by which we mean that there is some $\hat{\mRat}$ such that, for all $\mRat_{t}>\hat{\mRat}$, $\Ex_{t}[\mRatBF_{t+1}/\mRatBF_{t}] < \PGro$.  (`Collective' is meant to capture the fact that calculating the expectation of the levels of future $\mLevBF$ and $\pLevBF$ before dividing $\mLevBF$ by $\pLevBF$ is akin to examining aggregate values in a population).
+ As an input to that analysis, we show here that if the {\GIC} holds, the problem will have a point of what we call `collective stability,' by which we mean that there is some $\hat{\mRat}$ such that, for all $\mRat_{t}>\hat{\mRat}$, $\Ex_{t}[\mRatBF_{t+1}/\mRatBF_{t}] < \PGro$, and conversely for $\mRat_{t}<\hat{\mRat}$.  (`Collective' is meant to capture the fact that calculating the expectation of the levels of future $\mLevBF$ and $\pLevBF$ before dividing $\mLevBF$ by $\pLevBF$ is akin to examining aggregate values in a population).
 
  \hypertarget{balgrostable}{}
 
@@ -1353,7 +1353,7 @@ An illuminating exception is exhibited in figure~\ref{fig:GICNrmFailsButGICRawHo
 
 The pseudo-steady-state still exists because it turns off realizations of the permanent shock.  But an aggregate balanced growth equilibrim can exist even when realizations of the permanent shock are implemented exactly as specified in the model.  The key insight can be understood by considering the evolution of an economy that starts, at date $t$, with the entire population at $\mRat_{t}=\StE{\mRat}$, but then evolves according to the model's correct assumed dynamics between $t$ and $t+1$.  Equation~\eqref{eq:balgrostable} will still hold for this economy, so for this first period, at least, the economy will exhibit balanced growth: the growth factor for aggregate $\mRatBF$ will match the growth factor for permanent income $\PGro$.  It is true that there will be people for whom $\bRat_{t+1}=\aRat_{t}\Rfree/(\PGro\pShk_{t+1})$ is boosted by a small draw of $\pShk_{t+1}$.  But their contribution to the aggregate variable is given by $\bRatBF_{t+1}=\bRat_{t+1}\pShk_{t+1}$, so their $\bRatBF_{t+1}$ reweighted by an amount that exactly undoes the boosting caused by earlier normalization.
 
-The surprising consequence is that, if the \GICAbs holds but the {\GICNrm}~fails, it is possible to construct an aggregate economy composed of consumers all of whom have target wealth of $\Trg{\mRat}=\infty$, but in which nevertheless the aggregate economy exhibits balanced growth with a finite ratio of aggregate wealth to income.
+The surprising consequence is that, if the \GICAbs holds but the {\GICNrm}~fails, it is possible to construct an aggregate economy composed of consumers all of whom have target wealth of $\Trg{\mRat}=\infty$, but in which the aggregate economy still exhibits balanced growth with a finite ratio of aggregate wealth to income.  (For an example, see the software archive for the paper).
 
 This is a good introduction to a more explicit discssion of aggregation.
 
