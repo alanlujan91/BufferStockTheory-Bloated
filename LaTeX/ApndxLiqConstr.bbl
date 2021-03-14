@@ -1,0 +1,20 @@
+\providecommand{\noopsort}[1]{} \providecommand{\singleletter}[1]{#1}
+  \providecommand{\noopsort}[1]{} \providecommand{\singleletter}[1]{#1}
+  \providecommand{\noopsort}[1]{} \providecommand{\singleletter}[1]{#1}
+  \providecommand{\noopsort}[1]{} \providecommand{\singleletter}[1]{#1}
+\ifx\undefined\BySame
+\newcommand{\BySame}{\leavevmode\rule[.5ex]{3em}{.5pt}\ }
+\fi
+\begin{thebibliography}{}
+
+\harvarditem[Ma and Toda]{Ma and Toda}{2020}{maTodaRich}
+\textsc{Ma, Qingyin,  {and} Alexis~Akira Toda}  (2020): ``A Theory of the
+  Saving Rate of the Rich,'' .
+
+\harvarditem[Stachurski and Toda]{Stachurski and
+  Toda}{2019}{StachurskiToda2019JET}
+\textsc{Stachurski, John,  {and} Alexis~Akira Toda}  (2019): ``An Impossibility
+  Theorem for Wealth in Heterogeneous-Agent Models with Limited
+  Heterogeneity,'' \emph{Journal of Economic Theory}, 182, 1--24.
+
+\end{thebibliography}

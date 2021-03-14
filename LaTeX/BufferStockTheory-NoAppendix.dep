@@ -168,8 +168,9 @@
   *{file}   {./Figures/MPCLimits.pdf}{0000/00/00 v0.0}
   *{file}   {./Figures/cFuncBounds.tex}{0000/00/00 v0.0}
   *{file}   {./Figures/cFuncBounds.pdf}{0000/00/00 v0.0}
-  *{file}   {./Figures/cRatTargetFig.pdf}{0000/00/00 v0.0}
-  *{file}   {./Figures/FVACnotGIC.tex}{0000/00/00 v0.0}
-  *{file}   {./Figures/FVACnotGIC.pdf}{0000/00/00 v0.0}
+  *{file}   {./Equations/TheoremMTargetIsStable.tex}{0000/00/00 v0.0}
+  *{file}   {./Equations/TheoremMSSBalExists.tex}{0000/00/00 v0.0}
+  *{file}   {./Figures/GICNrmFailsButGICRawHolds.tex}{0000/00/00 v0.0}
+  *{file}   {./Figures/GICNrmFailsButGICRawHolds.pdf}{0000/00/00 v0.0}
   *{file}   {BufferStockTheory-NoAppendix.bbl}{0000/00/00 v0.0}
 }

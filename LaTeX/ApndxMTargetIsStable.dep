@@ -138,8 +138,10 @@
   *{file}   {ApndxMTargetIsStable.out}{0000/00/00 v0.0}
   *{package}{bookmark}    {2019/12/03 v1.28}
   *{file}   {bkm-pdftex.def}{2019/12/03 v1.28}
+  *{file}   {./Equations/TheoremMTargetIsStable.tex}{0000/00/00 v0.0}
   *{file}   {umsa.fd}     {2013/01/14 v3.01}
   *{file}   {umsb.fd}     {2013/01/14 v3.01}
   *{file}   {ulasy.fd}    {1998/08/17 v2.2e}
   *{file}   {uwasy.fd}    {2020/01/19 v2.4}
+  *{file}   {./Equations/TheoremMSSBalExists.tex}{0000/00/00 v0.0}
 }

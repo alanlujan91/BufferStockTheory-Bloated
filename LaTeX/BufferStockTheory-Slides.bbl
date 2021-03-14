@@ -1,0 +1,21 @@
+\providecommand{\noopsort}[1]{} \providecommand{\singleletter}[1]{#1}
+  \providecommand{\noopsort}[1]{} \providecommand{\singleletter}[1]{#1}
+  \providecommand{\noopsort}[1]{} \providecommand{\singleletter}[1]{#1}
+  \providecommand{\noopsort}[1]{} \providecommand{\singleletter}[1]{#1}
+\ifx\undefined\BySame
+\newcommand{\BySame}{\leavevmode\rule[.5ex]{3em}{.5pt}\ }
+\fi
+\begin{thebibliography}{}
+
+\harvarditem[Matkowski and Nowak]{Matkowski and Nowak}{2011}{mnUnique}
+\textsc{Matkowski, Janusz,  {and} Andrzej~S. Nowak}  (2011): ``On Discounted
+  Dynamic Programming With Unbounded Returns,'' \emph{Economic Theory}, 46,
+  455--474.
+
+\harvarditem[Szeidl]{Szeidl}{2013}{szeidlInvariant}
+\textsc{Szeidl, Adam}  (2013): ``Stable Invariant Distribution in Buffer-Stock
+  Saving and Stochastic Growth Models,'' \emph{Manuscript, Central European
+  University}, Available at
+  \url{http://www.personal.ceu.hu/staff/Adam_Szeidl/papers/invariant_revision.pdf}.
+
+\end{thebibliography}

@@ -1,0 +1,15 @@
+\providecommand{\noopsort}[1]{} \providecommand{\singleletter}[1]{#1}
+  \providecommand{\noopsort}[1]{} \providecommand{\singleletter}[1]{#1}
+  \providecommand{\noopsort}[1]{} \providecommand{\singleletter}[1]{#1}
+  \providecommand{\noopsort}[1]{} \providecommand{\singleletter}[1]{#1}
+\ifx\undefined\BySame
+\newcommand{\BySame}{\leavevmode\rule[.5ex]{3em}{.5pt}\ }
+\fi
+\begin{thebibliography}{}
+
+\harvarditem[Deaton]{Deaton}{1991}{deatonLiqConstr}
+\textsc{Deaton, Angus~S.}  (1991): ``Saving and Liquidity Constraints,''
+  \emph{Econometrica}, 59, 1221--1248,
+  \url{http://www.jstor.org/stable/2938366}.
+
+\end{thebibliography}

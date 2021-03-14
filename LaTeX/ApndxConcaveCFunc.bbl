@@ -1,0 +1,14 @@
+\providecommand{\noopsort}[1]{} \providecommand{\singleletter}[1]{#1}
+  \providecommand{\noopsort}[1]{} \providecommand{\singleletter}[1]{#1}
+  \providecommand{\noopsort}[1]{} \providecommand{\singleletter}[1]{#1}
+  \providecommand{\noopsort}[1]{} \providecommand{\singleletter}[1]{#1}
+\ifx\undefined\BySame
+\newcommand{\BySame}{\leavevmode\rule[.5ex]{3em}{.5pt}\ }
+\fi
+\begin{thebibliography}{}
+
+\harvarditem[Hiraguchi]{Hiraguchi}{2003}{hiraguchiBSProofs}
+\textsc{Hiraguchi, Ryoji}  (2003): ``On the Convergence of Consumption Rules,''
+  \emph{Manuscript, Johns Hopkins University}.
+
+\end{thebibliography}
