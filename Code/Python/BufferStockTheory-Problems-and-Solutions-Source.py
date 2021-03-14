@@ -912,7 +912,7 @@ make('MPCLimits')
 # ### Appendix: Perfect foresight agent failing both the FHWC and RIC
 
 # %%
-PFGICHoldsFHWCFailsRICFails_par = copy(base_params)
+PFGICRawHoldsFHWCFailsRICFails_par = copy(base_params)
 
 # Replace parameters.
 PFGICRawHoldsFHWCFailsRICFails_par['Rfree'] = 0.98
