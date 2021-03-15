@@ -526,10 +526,10 @@ which satisfies $\InvEpShkInv < 1$ (thanks to Mr. Jensen), so we can define
       \PGroAdj & \equiv \PGro \InvEpShkInv < \PGro \label{eq:PGroAdj}
 \end{align}
 which is useful because it allows us to write uncertainty-adjusted versions of equations and conditions in a manner exactly parallel to those for the perfect foresight case; for example, we define a normalized Growth Patience Pactor (GPF-Nrm):
-\hypertarget{GICNrm}{}\hypertarget{GICNrmI}{}\hypertarget{PGroAdj}{}
+\hypertarget{GICNrm}{}\hypertarget{GICNrmI}{}\hypertarget{PermGroAdj}{}
 \begin{verbatimwrite}{\EqDir/PatPGroAdj}
   \begin{align}
-    \PatPGroAdj  & = \Pat/\PGroAdj = \Ex[\Pat/\PGro\pShk]  \label{eq:GPFNrm} 
+    \PatPGroAdj  & = \Pat/\PGroAdj = \Ex[\Pat/(\PGro\pShk)]  \label{eq:GPFNrm} 
   \end{align}
 \end{verbatimwrite}
 \input{\EqDir/PatPGroAdj}
@@ -561,7 +561,7 @@ Analogously to \eqref{eq:ValuePFAnalyticalAutarky}, value for a consumer who spe
 %               & = \uFunc(\pLevBF_{t})\left(1+ \DiscFac \Ex_{t}[\PGro_{t+1}^{1-\CRRA}] +  ... + \DiscFac^{T-t}\Ex_{t}[\PGro_{t+1}^{1-\CRRA}]...\Ex_{t}[\PGro_{T}^{1-\CRRA}]\right) \\
                & = \uFunc(\pLevBF_{t})\left(\frac{1-(\DiscFac \PGro^{1-\CRRA}\Ex[\pShk^{1-\CRRA}])^{T-t+1}}{1-\DiscFac \PGro^{1-\CRRA} \Ex[\pShk^{1-\CRRA}]}\right)
 \end{align*}
-which invites the definition of a utility-compensated equivalent of the permanent shock,\hypertarget{PGrouAdj}{}
+which invites the definition of a utility-compensated equivalent of the permanent shock,\hypertarget{PermGrouAdj}{}
 \begin{align}
   \uInvEpShkuInv  & = (\Ex[\pShk^{1-\CRRA}])^{1/(1-\CRRA)} \label{eq:uInvEpShkuInv}
 \end{align}
