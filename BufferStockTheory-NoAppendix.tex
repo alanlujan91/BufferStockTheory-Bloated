@@ -400,7 +400,7 @@ where the last line holds because {\FHWC} $\Rightarrow 0 \leq (\PGro/\Rfree) < 1
 
 The first panel of Table~\ref{table:Required} summarizes:  The PF-Unconstrained model has a nondegenerate limiting solution if we impose the {\RIC} and {\FHWC} (these conditions are necessary as well as sufficient).  Imposing the {\PFFVAC} and the {\FHWC} implies the {\RIC}, so {\PFFVAC} and {\FHWC} are jointly sufficient.  If we impose the {\GIC} and the {\FHWC}, both the {\PFFVAC} and the {\RIC} follow, so {\GIC}+{\FHWC} are also sufficient.  But there are circumstances under which the {\RIC} and {\FHWC} can hold while the {\PFFVAC} fails (which we write \cncl{\PFFVAC}).  For example, if $\PGro=0$, the problem is a standard `cake-eating' problem with a nondegenerate solution under the {\RIC}.%\footnote{For example, $\{\DiscFac,\Rfree,\CRRA,\PGro\}=\{0.98,1.00,2,0.95\}$ exhibits $\{\RPF,\FHWF,\PFVAF\}=\{0.99,0.95,1.03\}$, satisfying both the {\RIC} and the {\FHWC} but not the {\PFFVAC}.  This requires failure of the {\GIC}, because it occurs in circumstances where the consumer desires and can achieve a consumption growth rate faster than the income growth rate.}
 
-Perhaps more useful than this prose or the table,  the relations of the conditions for the unconstrained perfect foresight case are presented diagrammatically in Figure~\ref{fig:RelatePFGICFHWCRICPFFVAC}.  Each node represents a quantity considered in the foregoing analysis.  The arrow associated with each inequality reflects the imposition of that condition.  For example, one way we wrote the {\PFFVAC} in equation \eqref{eq:PFFVAC} is $\Pat < \Rfree^{1/\CRRA} \PGro^{1-1/\CRRA}$, so imposition of the {\PFFVAC} is captured by the diagonal arrow connecting $\Pat$ and $\Rfree^{1/\CRRA}\PGro^{1-1/\CRRA}$.  Traversing the boundary of the diagram clockwise starting at $\Pat$ involves imposing first the {\GICAbs} then the {\FHWC}, and the consequent arrival at the bottom right node tells us that these two conditions jointly imply that the {\PFFVAC} holds.  Reversal of a condition will reverse the arrow's direction; so, for example, the bottommost arrow going from $\Rfree$ to $\Rfree^{1/\CRRA}\PGro^{1-1/\CRRA}$ imposes {\cncl{\FHWC}}; but we can cancel the cancellation and reverse the arrow.  This would allow us to traverse the diagram in a clockwise direction from $\Pat$ to $\Rfree$, revealing that imposition of {\GICAbs} and {\FHWC} (and, redundantly, {\FHWC} again) let us conclude that the {\RIC} holds because the starting point is $\Pat$ and the endpoint is $\Rfree$.  (Consult Appendix~\ref{sec:ApndxConditionDiagrams} for a detailed exposition of diagrams of this type).
+Perhaps more useful than this prose or the table,  the relations of the conditions for the unconstrained perfect foresight case are presented diagrammatically in Figure~\ref{fig:RelatePFGICFHWCRICPFFVAC}.  Each node represents a quantity considered in the foregoing analysis.  The arrow associated with each inequality reflects the imposition of that condition.  For example, one way we wrote the {\PFFVAC} in equation \eqref{eq:PFFVAC} is $\Pat < \Rfree^{1/\CRRA} \PGro^{1-1/\CRRA}$, so imposition of the {\PFFVAC} is captured by the diagonal arrow connecting $\Pat$ and $\Rfree^{1/\CRRA}\PGro^{1-1/\CRRA}$.  Traversing the boundary of the diagram clockwise starting at $\Pat$ involves imposing first the {\GICRaw} then the {\FHWC}, and the consequent arrival at the bottom right node tells us that these two conditions jointly imply that the {\PFFVAC} holds.  Reversal of a condition will reverse the arrow's direction; so, for example, the bottommost arrow going from $\Rfree$ to $\Rfree^{1/\CRRA}\PGro^{1-1/\CRRA}$ imposes {\cncl{\FHWC}}; but we can cancel the cancellation and reverse the arrow.  This would allow us to traverse the diagram in a clockwise direction from $\Pat$ to $\Rfree$, revealing that imposition of {\GICRaw} and {\FHWC} (and, redundantly, {\FHWC} again) let us conclude that the {\RIC} holds because the starting point is $\Pat$ and the endpoint is $\Rfree$.  (Consult Appendix~\ref{sec:ApndxConditionDiagrams} for a detailed exposition of diagrams of this type).
 
 
 
@@ -431,7 +431,7 @@ Perhaps more useful than this prose or the table,  the relations of the conditio
 
 \hypertarget{PF-Constrained-Solution}{}
 \hypertarget{Constrained-Solution}{}
-\subsubsection{PF Constrained Solution Exists Under {\RIC} or Under \{\cncl{\RIC},\GICAbs\}}\label{subsec:PFCon}
+\subsubsection{PF Constrained Solution Exists Under {\RIC} or Under \{\cncl{\RIC},\GICRaw\}}\label{subsec:PFCon}
 
 We next examine the perfect foresight constrained solution because it is a useful benchmark (and limit) for the unconstrained problem with uncertainty (examined next).
 
@@ -448,25 +448,25 @@ choices would violate the Euler equation \eqref{eq:scaledeuler}:
   1^{-\CRRA}  & > \Rfree \DiscFac (\PGro)^{-\CRRA}1^{-\CRRA}  \label{eq:LiqConstrBinds}.
 \end{align}
 
-\hypertarget{PFGPNew}{}
-\hypertarget{GICAbs}{}
-By analogy to the return patience factor, we therefore define a `growth patience factor' (\PFGPNew) as
+\hypertarget{GPFRaw}{}
+\hypertarget{GICRaw}{}
+By analogy to the return patience factor, we therefore define a `growth patience factor' (\GPFRaw) as
 \begin{align}
-  \PatPGro  & = {\Pat}/\PGro,  \label{eq:PFGPNew}
+  \PatPGro  & = {\Pat}/\PGro,  \label{eq:GPFRaw}
 \end{align}
-and define a `growth impatience condition' (\GICAbs)
-\begin{verbatimwrite}{\EqDir/GICAbs}
+and define a `growth impatience condition' (\GICRaw)
+\begin{verbatimwrite}{\EqDir/GICRaw}
 \begin{align}
-  \PatPGro &  < 1   \label{eq:GICAbs}
+  \PatPGro &  < 1   \label{eq:GICRaw}
 \end{align}
 \end{verbatimwrite}
-\input{\EqDir/GICAbs}
+\input{\EqDir/GICRaw}
 which is equivalent to \eqref{eq:LiqConstrBinds} (exponentiate both
 sides by $1/\CRRA$).
 
 We now examine implications of possible configurations of the conditions.
 
-\textit{\cncl{\GICAbs} and {\RIC}.}  If the {\GICAbs} fails but the \RIC~\eqref{eq:RIC} holds, appendix \ref{sec:ApndxLiqConstr} shows that, for some $0 < \mRat_{\#} < 1$, an unconstrained consumer behaving according to
+\textit{\cncl{\GICRaw} and {\RIC}.}  If the {\GICRaw} fails but the \RIC~\eqref{eq:RIC} holds, appendix \ref{sec:ApndxLiqConstr} shows that, for some $0 < \mRat_{\#} < 1$, an unconstrained consumer behaving according to
 \eqref{eq:cFuncPFUnc} would choose $\cRat < \mRat$ for all $\mRat >
 \mRat_{\#}$.  In this case the solution to the constrained consumer's problem is simple: For any $\mRat
 \geq \mRat_{\#}$ the constraint does not bind (and will never bind in
@@ -482,7 +482,7 @@ the consumer would consume $\cRat=\mRat$.  Using the $\constr{\bullet}$ accent t
   \end{cases}
 \end{equation}
 
-\textit{{\GICAbs} and {\RIC}.}  More useful is the case where the return impatience and {\GIC} conditions both hold.  In this case appendix \ref{sec:ApndxLiqConstr} shows that the limiting constrained consumption function is piecewise linear, with $\constr{\cFunc}(\mRat)=\mRat$ up to a first `kink point' at $\mRat_{\#}^{1}>1$, and with discrete declines in the MPC at a set of kink points $\{\mRat_{\#}^{1},\mRat_{\#}^{2},...\}$.  As $\mRat \uparrow \infty$ the constrained consumption function $\constr{\cFunc}(\mRat)$ becomes arbitrarily close to the unconstrained $\bar{\cFunc}(\mRat)$, and the marginal propensity to consume function $\constr{\MPCFunc}(\mRat) \equiv \constr{\cFunc}^{\prime}(\mRat)$ limits to $\MinMPC$.  Similarly, the value function $\constr{\vFunc}(\mRat)$ is nondegenerate and limits into the value function of the unconstrained consumer.
+\textit{{\GICRaw} and {\RIC}.}  More useful is the case where the return impatience and {\GIC} conditions both hold.  In this case appendix \ref{sec:ApndxLiqConstr} shows that the limiting constrained consumption function is piecewise linear, with $\constr{\cFunc}(\mRat)=\mRat$ up to a first `kink point' at $\mRat_{\#}^{1}>1$, and with discrete declines in the MPC at a set of kink points $\{\mRat_{\#}^{1},\mRat_{\#}^{2},...\}$.  As $\mRat \uparrow \infty$ the constrained consumption function $\constr{\cFunc}(\mRat)$ becomes arbitrarily close to the unconstrained $\bar{\cFunc}(\mRat)$, and the marginal propensity to consume function $\constr{\MPCFunc}(\mRat) \equiv \constr{\cFunc}^{\prime}(\mRat)$ limits to $\MinMPC$.  Similarly, the value function $\constr{\vFunc}(\mRat)$ is nondegenerate and limits into the value function of the unconstrained consumer.
 
 This logic holds even when the finite human wealth condition fails (\cncl{\FHWC}), because the constraint prevents the consumer from borrowing against infinite human wealth to finance infinite current consumption.  Under these circumstances, the consumer who starts with any amount of resources $\bRat_{t} > 1$ will, over time, run those resources down so that by some finite number of periods $n$ in the future the consumer will reach $\bRat_{t+n} = 0$, and thereafter will set $\cLevBF = \pLevBF$ for eternity (which the {\PFFVAC} says yields finite value).  Using the same steps as for equation \eqref{eq:ValuePFAnalyticalAutarky}, value of the interim program is also finite: \hypertarget{PFFVAC}{} \hypertarget{PFVAF}{}
 \begin{align*}
@@ -490,11 +490,11 @@ This logic holds even when the finite human wealth condition fails (\cncl{\FHWC}
  & = \PGro^{n(1-\CRRA)} \uFunc(\pLevBF_{t})\left(\frac{1-(\DiscFac
         \PGro^{1-\CRRA})^{T-(t+n)+1}}{1-\DiscFac \PGro^{1-\CRRA}}\right).
 \end{align*}
-%Note that the last version of the \PFFVAC~in \eqref{eq:PFFVAC} implies the \GICAbs~$\PatPGro < 1$ whenever \cncl{\FHWC} ($\Rfree < \PGro$) holds.
+%Note that the last version of the \PFFVAC~in \eqref{eq:PFFVAC} implies the \GICRaw~$\PatPGro < 1$ whenever \cncl{\FHWC} ($\Rfree < \PGro$) holds.
 So, if \cncl{\FHWC}, value for any finite $\mRat$ will be the sum of two finite numbers: The component due to the unconstrained consumption choice made over the finite horizon leading up to $\bRat_{t+n} = 0$, and the finite component due to the value of consuming all $\pLevBF_{t+n}$ thereafter.
   
 \hypertarget{RICandFHWCFail}{}
-\textit{{\GICAbs} and {\cncl{\RIC}}}.  
+\textit{{\GICRaw} and {\cncl{\RIC}}}.  
 The most peculiar possibility occurs when the \RIC~fails.  Under these circumstances the \FHWC~must also fail (Appendix~\ref{sec:ApndxLiqConstr}), and the constrained consumption function is nondegenerate.  (See appendix Figure~\ref{fig:PFGICHoldsFHWCFailsRICFails} for a numerical example).  While it is true that $\lim_{m \uparrow \infty}
 \constr{\MPCFunc}(\mRat) = 0$, nevertheless the limiting constrained
 consumption function $\constr{\cFunc}(\mRat)$ is strictly positive
@@ -538,7 +538,7 @@ and the proof of Theorem~\ref{thm:balance} below yields the conclusion that
 \begin{align*}
   \lim_{\mRat_{t} \rightarrow \infty} \Ex_{t}[\mRat_{t+1}/\mRat_{t}]  & = \PatPGroAdj,
 \end{align*}
-which implies that if we wish to prevent $\mRat$ from heading to infinity (that is, if we want $\mRat$ to be expected to fall for some large enough value of $m$) we must impose a modified version of the Growth Impatience Condition \eqref{eq:GICAbs}; we call the `Normalized Growth Impatience Condition' (\GICNrm) the requirement that the Normalized Growth Patience Factor~\eqref{eq:GPFNrm} must be less than 1:\footnote{Under our assumption that $\CRRA>1$, equation \eqref{eq:GICNrm} is a bit easier to satisfy than the similar condition imposed by Deaton~\citeyearpar{deatonLiqConstr}: $\left(\Ex[\pShk^{-\CRRA}]\right)^{1/\CRRA} \PatPGro < 1$ to guarantee that his problem defined a contraction mapping.}
+which implies that if we wish to prevent $\mRat$ from heading to infinity (that is, if we want $\mRat$ to be expected to fall for some large enough value of $m$) we must impose a modified version of the Growth Impatience Condition \eqref{eq:GICRaw}; we call the `Normalized Growth Impatience Condition' (\GICNrm) the requirement that the Normalized Growth Patience Factor~\eqref{eq:GPFNrm} must be less than 1:\footnote{Under our assumption that $\CRRA>1$, equation \eqref{eq:GICNrm} is a bit easier to satisfy than the similar condition imposed by Deaton~\citeyearpar{deatonLiqConstr}: $\left(\Ex[\pShk^{-\CRRA}]\right)^{1/\CRRA} \PatPGro < 1$ to guarantee that his problem defined a contraction mapping.}
 \end{comment}
 and a normalized version of the Growth Impatience Condition, {\GICNrm}:
 \begin{verbatimwrite}{\EqDir/GICNrm}
@@ -546,7 +546,7 @@ and a normalized version of the Growth Impatience Condition, {\GICNrm}:
     \PatPGroAdj  & < 1 \label{eq:GICNrm}
   \end{align}\end{verbatimwrite}
 \input{\EqDir/GICNrm}
-which is stronger than the perfect foresight version \eqref{eq:GICAbs} because $\PGroAdj < \PGro$ (cf \eqref{eq:PGroAdj}).
+which is stronger than the perfect foresight version \eqref{eq:GICRaw} because $\PGroAdj < \PGro$ (cf \eqref{eq:PGroAdj}).
 \begin{comment}
 \begin{align}
   \PGroAdj & < \PGro \label{eq:PGroAdjLTPGro}.
@@ -906,7 +906,7 @@ exhibit (given the \FVAC) under \cncl{\RIC} (that is, $\Rfree < (\Rfree \DiscFac
 \end{align}
 but since $\uInvEpShkuInv < 1$ (cf.\ the argument below \eqref{eq:uInvEpShkuInv}), this requires $\Rfree/\PGro < 1$; so, given the \FVAC, the \RIC~can fail only if human wealth is unbounded.  As an illustration of the usefulness of our diagrams, note that this algebraically complicated conclusion could be easily reached diagrammatically in figure~\ref{fig:Inequalities} by starting at the $\Rfree$ node and imposing $\cncl{\RIC}$ (reversing the {\RIC} arrow) and then traversing the diagram along any clockwise path to the {\PFVAF} node at which point we realize that we \textit{cannot} impose the {\FHWC} because that would let us conclude $\Rfree > \Rfree$.
 
-As in the perfect foresight constrained problem, unbounded limiting human wealth (\cncl{\FHWC}) here does not lead to a degenerate limiting consumption function (finite human wealth is not a condition required for the convergence theorem).  But, from equation \eqref{eq:MinMPCInv} and the discussion surrounding it, an implication of \cncl{\RIC} is that $\lim_{m \uparrow \infty} \mathring{\cFunc}^{\prime}(\mRat) = 0$.  Thus, interestingly, in the special $\{\cncl{\RIC},\cncl{\FHWC}\}$ case (unavailable in the perfect foresight model) the presence of uncertainty both permits unlimited human wealth and at the same time prevents unlimited human wealth from resulting in infinite consumption at any finite $\mRat$.  Intutively, in the presence of uncertainty, pathological patience (which in the perfect foresight model results in a limiting consumption function of $\mathring{\cFunc}(\mRat)=0$ for finite $\mRat$) plus unbounded human wealth (which the perfect foresight model prohibits (by assumption {\FHWC}) because it leads to a limiting consumption function $\mathring{\cFunc}(\mRat)=\infty$ for any finite $\mRat$) combine to yield a unique finite level of consumption and the MPC for any finite value of $\mRat$.  Note the close parallel to the conclusion in the perfect foresight liquidity constrained model in the \{\GICAbs,\cncl{\RIC}\} case.  There, too, the tension between infinite human wealth and pathological patience was resolved with a nondegenerate consumption function whose limiting MPC was zero.\footnote{\cite{maTodaRich} derive conditions under which the limiting MPC is zero in an even more general case where there is also capital income risk.}
+As in the perfect foresight constrained problem, unbounded limiting human wealth (\cncl{\FHWC}) here does not lead to a degenerate limiting consumption function (finite human wealth is not a condition required for the convergence theorem).  But, from equation \eqref{eq:MinMPCInv} and the discussion surrounding it, an implication of \cncl{\RIC} is that $\lim_{m \uparrow \infty} \mathring{\cFunc}^{\prime}(\mRat) = 0$.  Thus, interestingly, in the special $\{\cncl{\RIC},\cncl{\FHWC}\}$ case (unavailable in the perfect foresight model) the presence of uncertainty both permits unlimited human wealth and at the same time prevents unlimited human wealth from resulting in infinite consumption at any finite $\mRat$.  Intutively, in the presence of uncertainty, pathological patience (which in the perfect foresight model results in a limiting consumption function of $\mathring{\cFunc}(\mRat)=0$ for finite $\mRat$) plus unbounded human wealth (which the perfect foresight model prohibits (by assumption {\FHWC}) because it leads to a limiting consumption function $\mathring{\cFunc}(\mRat)=\infty$ for any finite $\mRat$) combine to yield a unique finite level of consumption and the MPC for any finite value of $\mRat$.  Note the close parallel to the conclusion in the perfect foresight liquidity constrained model in the \{\GICRaw,\cncl{\RIC}\} case.  There, too, the tension between infinite human wealth and pathological patience was resolved with a nondegenerate consumption function whose limiting MPC was zero.\footnote{\cite{maTodaRich} derive conditions under which the limiting MPC is zero in an even more general case where there is also capital income risk.}
 
 \hypertarget{When-the-RIC-Holds}{}
 \subsubsection{When the {\RIC} Holds}\label{subsubsec:WhenTheGICNrmFails}  \label{subsubsec:WhenTheRICHolds} 
@@ -931,7 +931,7 @@ As in the perfect foresight constrained problem, unbounded limiting human wealth
    & \overbrace{\Pat < (\Rfree/\PGro)^{1/\CRRA}\PGro}^{\PFFVAC}
       \\ & \Pat < \PGro
 \end{align*}
-where the transition from the first to the second lines is justified because $\cncl{\FHWC} \Rightarrow (\Rfree/\PGro)^{1/\CRRA}<1.$  So, \{\RIC, \cncl{\FHWC}\} implies the {\GICAbs} holds.  However, we are not entitled to conclude that the {\GICNrm} holds: $\Pat < \PGro$ does not imply $\Pat < \InvEpShkInv \PGro$ where $\InvEpShkInv<1$.  See further discussion of this illuminating case in section~\ref{subsubsec:FVACnotGIC}.
+where the transition from the first to the second lines is justified because $\cncl{\FHWC} \Rightarrow (\Rfree/\PGro)^{1/\CRRA}<1.$  So, \{\RIC, \cncl{\FHWC}\} implies the {\GICRaw} holds.  However, we are not entitled to conclude that the {\GICNrm} holds: $\Pat < \PGro$ does not imply $\Pat < \InvEpShkInv \PGro$ where $\InvEpShkInv<1$.  See further discussion of this illuminating case in section~\ref{subsubsec:FVACnotGIC}.
 
 \begin{comment}
   
@@ -1030,8 +1030,8 @@ shocks, but in extreme cases it can be false if permanent shocks are
 present; see appendix~\ref{sec:ApndxCGrowthDeclines}.}
 \begin{comment}
 Third (Figure \ref{fig:cGroTargetFig}), there are two special values of $\mRat$, which
-we will call the `individual balanced growth' point $\mBal$ because it is the point where expected consumption growth and expected permanent income growth are balanced, and the `individual target' $\mTarg$  such that if $\mRat_t = \mTarg$ then $\Ex_t [{\mRat}_{t+1}] = \mRat_t$.  %As indicated by the arrows of motion on the $\Ex_{t}[\cLevBF_{t+1}/\cLevBF_{t}]$ curve, the model's dynamics are `stable' around this target in the sense that if $\mRat_{t} < \mTarg$ then $\mRat$ will rise (in expectation), while if $\mRat_{t} > \mTarg$, it will fall (in expectation).Fourth (Figure \ref{fig:cGroTargetFig}), at the market resources target $\mTarg$, the expected rate of growth of consumption is slightly less than the expected growth rate
-of permanent noncapital income.  (The individual consumer does not expect `balanced growth' at $\mTarg$).  
+we will call the `individual balanced growth' point $\mStE$ because it is the point where expected consumption growth and expected permanent income growth are balanced, and the `individual target' $\mTrg$  such that if $\mRat_t = \mTrg$ then $\Ex_t [{\mRat}_{t+1}] = \mRat_t$.  %As indicated by the arrows of motion on the $\Ex_{t}[\cLevBF_{t+1}/\cLevBF_{t}]$ curve, the model's dynamics are `stable' around this target in the sense that if $\mRat_{t} < \mTrg$ then $\mRat$ will rise (in expectation), while if $\mRat_{t} > \mTrg$, it will fall (in expectation).Fourth (Figure \ref{fig:cGroTargetFig}), at the market resources target $\mTrg$, the expected rate of growth of consumption is slightly less than the expected growth rate
+of permanent noncapital income.  (The individual consumer does not expect `balanced growth' at $\mTrg$).  
 
 The final proposition suggested by
 Figure~\ref{fig:cGroTargetFig} is that the expected consumption growth
@@ -1207,22 +1207,22 @@ Two theorems, whose proofs are sketched here and detailed in an appendix, articu
 \label{subsec:onetarget}
 \hypertarget{TheoremTarget}{}
 
-% We now prove the existence of a target cash-on-hand-to-income ratio $\mTarg$ towards which $\mRat$ be expected to move.
+% We now prove the existence of a target cash-on-hand-to-income ratio $\mTrg$ towards which $\mRat$ be expected to move.
 
 \subsubsection{`Individual Target Wealth'} \label{subsubsec:mTarget}
-One definition of a `stable' point is an $\mTarg$ such that if $\mRat_{t}=\mTarg$, then $\Ex_{t}[\mRat_{t+1}]=\mRat_{t}$.  Existence of such a target turns out to require the {\GICNrm} condition.
+One definition of a `stable' point is an $\mTrg$ such that if $\mRat_{t}=\mTrg$, then $\Ex_{t}[\mRat_{t+1}]=\mRat_{t}$.  Existence of such a target turns out to require the {\GICNrm} condition.
 
 \begin{verbatimwrite}{\EqDir/TheoremMTargetIsStable}
 \begin{theorem}\label{thm:target}
-  For the nondegenerate solution to the problem defined in section~\ref{subsec:Setup} when {\FVAC}, {\WRIC}, and {\GICNrm} all hold, there exists a unique cash-on-hand-to-permanent-income ratio $\mTarg>0$ such that
+  For the nondegenerate solution to the problem defined in section~\ref{subsec:Setup} when {\FVAC}, {\WRIC}, and {\GICNrm} all hold, there exists a unique cash-on-hand-to-permanent-income ratio $\mTrg>0$ such that
   \begin{equation}  
-    \Ex_t [{\mRat}_{t+1}/\mRat_t] = 1 \mbox{~if~} \mRat_t = \mTarg. 
+    \Ex_t [{\mRat}_{t+1}/\mRat_t] = 1 \mbox{~if~} \mRat_t = \mTrg. 
     \label{eq:mTarget}
   \end{equation}
-  Moreover, $\mTarg$ is a point of `wealth stablity' in the sense that
+  Moreover, $\mTrg$ is a point of `wealth stablity' in the sense that
   \begin{align}\label{eq:stability}
-    \forall {\mRat}_t\in(0,\mTarg),      \,\,& \Ex_t [{\mRat}_{t+1}] > {\mRat}_t  \\
-    \forall {\mRat}_t\in(\mTarg,\infty), \,\,& \Ex_t [{\mRat}_{t+1}] < {\mRat}_t. \notag
+    \forall {\mRat}_t\in(0,\mTrg),      \,\,& \Ex_t [{\mRat}_{t+1}] > {\mRat}_t  \\
+    \forall {\mRat}_t\in(\mTrg,\infty), \,\,& \Ex_t [{\mRat}_{t+1}] < {\mRat}_t. \notag
   \end{align}
   \end{theorem}
 \end{verbatimwrite}
@@ -1230,10 +1230,10 @@ One definition of a `stable' point is an $\mTarg$ such that if $\mRat_{t}=\mTarg
 
  \hypertarget{mTargImplicit}{}
  
- Since $\mRat_{t+1}=(\mRat_{t}-\cFunc(\mRat_{t}))\Rnorm_{t+1}+\tShk_{t+1}$, the implicit equation for $\mTarg$ is
+ Since $\mRat_{t+1}=(\mRat_{t}-\cFunc(\mRat_{t}))\Rnorm_{t+1}+\tShk_{t+1}$, the implicit equation for $\mTrg$ is
  \begin{align}
-  \Ex_{t}[(\mTarg-\cFunc(\mTarg))\Rnorm_{t+1}+\tShk_{t+1}] & = \mTarg \label{eq:mTargImplicit}
-\\   (\mTarg-\cFunc(\mTarg))\underbrace{\Rnorm\Ex_{t}[\pShk^{-1}]}_{\equiv \bar{\Rnorm}}+1 & = \mTarg
+  \Ex_{t}[(\mTrg-\cFunc(\mTrg))\Rnorm_{t+1}+\tShk_{t+1}] & = \mTrg \label{eq:mTargImplicit}
+\\   (\mTrg-\cFunc(\mTrg))\underbrace{\Rnorm\Ex_{t}[\pShk^{-1}]}_{\equiv \bar{\Rnorm}}+1 & = \mTrg
  \end{align}
  
 
@@ -1246,9 +1246,9 @@ One definition of a `stable' point is an $\mTarg$ such that if $\mRat_{t}=\mTarg
 \end{enumerate}
 % which can be differentiated and rearranged to yield\hypertarget{mTargDerImplicit}{}
  \begin{align}
-   \bar{\Rnorm}(1-\mathring{\cFunc}^{\prime}(\mTarg)) & = 1 \\
-   (1-\mathring{\cFunc}^{\prime}(\mTarg)) & = \bar{\Rnorm}^{-1} \\   
-%   1-\bar{\Rnorm}^{-1} & = \mathring{\cFunc}^{\prime}(\mTarg). \label{eq:mTargDerImplicit}
+   \bar{\Rnorm}(1-\mathring{\cFunc}^{\prime}(\mTrg)) & = 1 \\
+   (1-\mathring{\cFunc}^{\prime}(\mTrg)) & = \bar{\Rnorm}^{-1} \\   
+%   1-\bar{\Rnorm}^{-1} & = \mathring{\cFunc}^{\prime}(\mTrg). \label{eq:mTargDerImplicit}
  \end{align}
 
  The fact (cf.\ \eqref{eq:MinMPCDef}) that the minimum value of $\mathring{\cFunc}^{\prime}$ is $1-\PatR$ converts \eqref{eq:mTargDerImplicit} to the inequality $1-\bar{\Rnorm}^{-1} > 1-\PatR$ from which we have
@@ -1278,10 +1278,10 @@ One definition of a `stable' point is an $\mTarg$ such that if $\mRat_{t}=\mTarg
 
 
 \begin{align}
-  \Ex_{t}\left[(\mBal-\mathring{\cFunc}(\mBal))\overbrace{\Rfree/\PGro}^{\Rnorm}+\pShk_{t+1}\tShk_{t+1}\right] & = \mBal \notag
-\\  (\mBal-\mathring{\cFunc}(\mBal))\Rnorm+ 1 & = \mBal \label{eq:balgrostableSolve}.  
-% \\  \aFunc(\mBal+\epsilon)(\Rnorm+\nu)+ 1 & = \mBal+\epsilon
-% \\  (\aFunc(\mBal)+\epsilon\aFunc^{\prime})(\Rnorm+\nu)+ 1 & \approx \mBal+\epsilon
+  \Ex_{t}\left[(\mStE-\mathring{\cFunc}(\mBal))\overbrace{\Rfree/\PGro}^{\Rnorm}+\pShk_{t+1}\tShk_{t+1}\right] & = \mBal \notag
+\\  (\mStE-\mathring{\cFunc}(\mBal))\Rnorm+ 1 & = \mBal \label{eq:balgrostableSolve}.  
+% \\  \aFunc(\mStE+\epsilon)(\Rnorm+\nu)+ 1 & = \mBal+\epsilon
+% \\  (\aFunc(\mStE)+\epsilon\aFunc^{\prime})(\Rnorm+\nu)+ 1 & \approx \mBal+\epsilon
 % \\  \epsilon\aFunc^{\prime}(\Rnorm+\nu) + \aFunc(\hat{\mRat})\nu & \approx \epsilon
 % \\   \nu\aFunc(\hat{\mRat}) & \approx \epsilon\left(1-\aFunc^{\prime}(\Rnorm+\nu)\right)
 % \\   \frac{\nu\aFunc(\hat{\mRat})}{\left(1-\aFunc^{\prime}(\Rnorm+\nu)\right)} & \approx \epsilon
@@ -1295,26 +1295,26 @@ The only difference between \eqref{eq:balgrostableSolve} and \eqref{eq:mTargImpl
 }
 
 
-%Note that since $\PGroAdj < \PGro$, $\mathring{\cFunc}^{\prime}(\mTarg) > \mathring{\cFunc}^{\prime}(\mBal)$ which implies that $\mTarg < \mBal$.
+%Note that since $\PGroAdj < \PGro$, $\mathring{\cFunc}^{\prime}(\mTrg) > \mathring{\cFunc}^{\prime}(\mStE)$ which implies that $\mTrg < \mBal$.
 
 Theorem~\ref{thm:balance}~formally states the relevant proposition.
   \begin{verbatimwrite}{\EqDir/TheoremMSSBalExists}
 \begin{theorem}  \label{thm:balance} \label{thm:MSSBalExists}
- For the nondegenerate solution to the problem defined in section~\ref{subsec:Setup} when {\FVAC}, {\WRIC}, and {\GIC} all hold, there exists a unique pseudo-steady-state cash-on-hand-to-income ratio $\mBal>0$ such that
+ For the nondegenerate solution to the problem defined in section~\ref{subsec:Setup} when {\FVAC}, {\WRIC}, and {\GIC} all hold, there exists a unique pseudo-steady-state cash-on-hand-to-income ratio $\mStE>0$ such that
   \begin{equation}  
-    \Ex_t [\pShk_{t+1}{\mRat}_{t+1}/\mRat_t] = 1 \mbox{~if~} \mRat_t = \mBal. 
+    \Ex_t [\pShk_{t+1}{\mRat}_{t+1}/\mRat_t] = 1 \mbox{~if~} \mRat_t = \mStE. 
     \label{eq:mTarget}
   \end{equation}
-  Moreover, $\mBal$ is a point of stability in the sense that
+  Moreover, $\mStE$ is a point of stability in the sense that
   \begin{align}\label{eq:stability}
-    \forall {\mRat}_t\in(0,\mBal),      \,\,& \Ex_{t}[\mLevBF_{t+1}]/\mLevBF_{t} > \PGro \\
-    \forall {\mRat}_t\in(\mBal,\infty), \,\,& \Ex_{t}[\mLevBF_{t+1}]/\mLevBF_{t} < \PGro. \notag
+    \forall {\mRat}_t\in(0,\mStE),      \,\,& \Ex_{t}[\mLevBF_{t+1}]/\mLevBF_{t} > \PGro \\
+    \forall {\mRat}_t\in(\mStE,\infty), \,\,& \Ex_{t}[\mLevBF_{t+1}]/\mLevBF_{t} < \PGro. \notag
   \end{align}
 \end{theorem}
 \end{verbatimwrite}
 \input{\EqDir/TheoremMSSBalExists}
 
-%the sense in which $\mBal$ is a `target' is less obvious than that for $\mtarg$; a full justification of this terminology must await the macroeconomic analysis below.  a glimpse of the idea is can be seen by noting that, for an economy whose entire population of consumers in period $t$ all had $\mRat_{t} = \mBal$, the ratio of the aggregate values $\mlevbf_{t+1}= \int \mlevbf_{t+1}$ to $\plevbf_{t+1}= \int \plevbf_{t+1}$ next period would be $\mlevbf_{t+1}/\plevbf_{t+1}=\mbal$ so that, at least between those two periods, the economy would exhibit stability.  indeed, if we turned off the idiosyncratic shocks, 
+%the sense in which $\mStE$ is a `target' is less obvious than that for $\mtarg$; a full justification of this terminology must await the macroeconomic analysis below.  a glimpse of the idea is can be seen by noting that, for an economy whose entire population of consumers in period $t$ all had $\mRat_{t} = \mBal$, the ratio of the aggregate values $\mlevbf_{t+1}= \int \mlevbf_{t+1}$ to $\plevbf_{t+1}= \int \plevbf_{t+1}$ next period would be $\mlevbf_{t+1}/\plevbf_{t+1}=\mbal$ so that, at least between those two periods, the economy would exhibit stability.  indeed, if we turned off the idiosyncratic shocks, 
 
 The proofs of the two theorems are almost completely parallel; to save space, they are relegated to Appendix~\ref{sec:ApndxMTargetIsStable}.  In sum, they involve three steps:
 
@@ -1336,9 +1336,9 @@ The proofs of the two theorems are almost completely parallel; to save space, th
 %\footnote{The theorems' arguments rely on the continuous differentiability of $\mathring{\cFunc}(\mRat)$, so they do not directly go through for a problem in which the existence of liquidity constraints can lead to discrete changes in the slope $\mathring{\cFunc}^{\prime}(\mRat)$ at particular values of $\mRat$. But we can use the fact that the constrained model is the limit of the baseline model as $\pZero \downarrow 0$ to derive the unique target cash level even in the constrained model.}
 
 
-%If $\mBal$ exists, a weak sense in which it is a point of stability is that for an economy that started in period $t$ with all consumers exactly at $\mRat_{t}=\mBal$, the ratio of aggregate market assets $\MLevBF_{t+1}= \int \mLevBF_{t+1}$ to aggregate permanent income $\PLevBF_{t+1}= \int \pLevBF_{t+1}$ would be $\MLevBF_{t+1}/\PLevBF_{t+1}=\mBal$ so that, between those two periods, the aggregate economy would exhibit balanced growth (stability of the $\MLevBF/\PLevBF$ ratio).\footnote{This does not require all consumers to have the same $\pLevBF.$  The unlimited size of the population means that the expectation in \eqref{eq:balgrostable} holds for the set of consumers at each value of $\pLevBF$ represented in the population, and so holds for the entire population.}  After that, however, the nondegenerate distribution across values of $\mRatBF_{t+1}$ and $\pLevBF_{t+1}$ would lead the aggregate ratio to drift away from $\mBal.$
+%If $\mStE$ exists, a weak sense in which it is a point of stability is that for an economy that started in period $t$ with all consumers exactly at $\mRat_{t}=\mBal$, the ratio of aggregate market assets $\MLevBF_{t+1}= \int \mLevBF_{t+1}$ to aggregate permanent income $\PLevBF_{t+1}= \int \pLevBF_{t+1}$ would be $\MLevBF_{t+1}/\PLevBF_{t+1}=\mBal$ so that, between those two periods, the aggregate economy would exhibit balanced growth (stability of the $\MLevBF/\PLevBF$ ratio).\footnote{This does not require all consumers to have the same $\pLevBF.$  The unlimited size of the population means that the expectation in \eqref{eq:balgrostable} holds for the set of consumers at each value of $\pLevBF$ represented in the population, and so holds for the entire population.}  After that, however, the nondegenerate distribution across values of $\mRatBF_{t+1}$ and $\pLevBF_{t+1}$ would lead the aggregate ratio to drift away from $\mBal.$
 
-%A glance at figure~\ref{fig:cGroTargetFig} will confirm that another $\mRat$ will be the point of `$\cRatBF$-balanced-growth.'  And yet another point would result in an expected growth rate $\PGro$ for assets $\aRatBF$ or bank balances $\bRatBF$.  But the $\mRatBF$-balanced-growth point is special in one important sense, which justifies highlighting it as at least a `pseudo' steady state:  If after the date $t$ at which all consumers had $\mLev_{t}=\mBal$, all consumers always drew exactly the expected values of the idiosyncratic shocks ($\pShk_{i,t+n}=\tShk_{j,t+n}=1~\forall~i,j$ and for all $n>0$), such an economy \textit{would} exhibit perpetual `balanced growth': $\MLevBF_{t+n}/\PLevBF_{t+n} = \mBal$ for all $n>0$.  (See below for a discussion of balanced growth in an aggregate economy).
+%A glance at figure~\ref{fig:cGroTargetFig} will confirm that another $\mRat$ will be the point of `$\cRatBF$-balanced-growth.'  And yet another point would result in an expected growth rate $\PGro$ for assets $\aRatBF$ or bank balances $\bRatBF$.  But the $\mRatBF$-balanced-growth point is special in one important sense, which justifies highlighting it as at least a `pseudo' steady state:  If after the date $t$ at which all consumers had $\mLev_{t}=\mStE$, all consumers always drew exactly the expected values of the idiosyncratic shocks ($\pShk_{i,t+n}=\tShk_{j,t+n}=1~\forall~i,j$ and for all $n>0$), such an economy \textit{would} exhibit perpetual `balanced growth': $\MLevBF_{t+n}/\PLevBF_{t+n} = \mBal$ for all $n>0$.  (See below for a discussion of balanced growth in an aggregate economy).
 
 \subsubsection{Example Where There Is A Pseudo-Steady-State But No Target}
 
@@ -1353,7 +1353,7 @@ An illuminating exception is exhibited in figure~\ref{fig:GICNrmFailsButGICRawHo
 
 The pseudo-steady-state still exists because it turns off realizations of the permanent shock.  But an aggregate balanced growth equilibrim can exist even when realizations of the permanent shock are implemented exactly as specified in the model.  The key insight can be understood by considering the evolution of an economy that starts, at date $t$, with the entire population at $\mRat_{t}=\StE{\mRat}$, but then evolves according to the model's correct assumed dynamics between $t$ and $t+1$.  Equation~\eqref{eq:balgrostable} will still hold for this economy, so for this first period, at least, the economy will exhibit balanced growth: the growth factor for aggregate $\mRatBF$ will match the growth factor for permanent income $\PGro$.  It is true that there will be people for whom $\bRat_{t+1}=\aRat_{t}\Rfree/(\PGro\pShk_{t+1})$ is boosted by a small draw of $\pShk_{t+1}$.  But their contribution to the aggregate variable is given by $\bRatBF_{t+1}=\bRat_{t+1}\pShk_{t+1}$, so their $\bRatBF_{t+1}$ reweighted by an amount that exactly undoes the boosting caused by earlier normalization.
 
-The surprising consequence is that, if the \GICAbs holds but the {\GICNrm}~fails, it is possible to construct an aggregate economy composed of consumers all of whom have target wealth of $\Trg{\mRat}=\infty$, but in which the aggregate economy still exhibits balanced growth with a finite ratio of aggregate wealth to income.  (For an example, see the software archive for the paper).
+The surprising consequence is that, if the \GICRaw holds but the {\GICNrm}~fails, it is possible to construct an aggregate economy composed of consumers all of whom have target wealth of $\Trg{\mRat}=\infty$, but in which the aggregate economy still exhibits balanced growth with a finite ratio of aggregate wealth to income.  (For an example, see the software archive for the paper).
 
 This is a good introduction to a more explicit discssion of aggregation.
 
@@ -1361,7 +1361,7 @@ This is a good introduction to a more explicit discssion of aggregation.
 \begin{comment}
 \subsubsection{Example Where There Is A Solution Without A Target}\label{subsubsec:FVACnotGIC}
 
-To build intuition, it is useful to describe an example in which a nondegenerate solution exists but a target $\mTarg$ does not.  An example that satisfies the combination \FVAC~and~\cncl{\GICNrm} is depicted in Figure \ref{fig:FVACnotGIC}.  The consumption function is shown along with the $\Ex_{t}[\Delta \mRat_{t+1}]=0$ locus that identifies the `sustainable' level of spending at which $\mRat$ is expected to remain unchanged.  The diagram suggests a fact that is confirmed by deeper analysis: Under the depicted configuration of parameter values (see the code for details), the consumption function never reaches the $\Ex_{t}[\Delta \mRat_{t+1}]=0$ locus; indeed, when the \RIC~holds but the \GICNrm~does not, the consumption function's limiting slope $(1-\Pat/\Rfree)$ is shallower than that of the sustainable consumption locus $(1-\PGroAdj/\Rfree)$,\footnote{This is because $\Ex_{t}[\mRat_{t+1}]=\Ex_{t}[\Rnorm_{t+1}(\mRat_{t}-\cRat_{t})]+1$; solve $\mRat = (\mRat - \cRat)\Rnorm \InvEpShkInv^{-1}+1$ for $\cRat$ and differentiate.}  so the gap between the two \textit{increases} with $\mRat$ in the limit.  Although a nondegenerate consumption function exists, a target level of $\mRat$ does not (or, rather, the target is $\mRat=\infty$), because no matter how wealthy a consumer becomes, the consumer will always spend less than the amount that would keep $\mRat$ stable (in expectation).
+To build intuition, it is useful to describe an example in which a nondegenerate solution exists but a target $\mTrg$ does not.  An example that satisfies the combination \FVAC~and~\cncl{\GICNrm} is depicted in Figure \ref{fig:FVACnotGIC}.  The consumption function is shown along with the $\Ex_{t}[\Delta \mRat_{t+1}]=0$ locus that identifies the `sustainable' level of spending at which $\mRat$ is expected to remain unchanged.  The diagram suggests a fact that is confirmed by deeper analysis: Under the depicted configuration of parameter values (see the code for details), the consumption function never reaches the $\Ex_{t}[\Delta \mRat_{t+1}]=0$ locus; indeed, when the \RIC~holds but the \GICNrm~does not, the consumption function's limiting slope $(1-\Pat/\Rfree)$ is shallower than that of the sustainable consumption locus $(1-\PGroAdj/\Rfree)$,\footnote{This is because $\Ex_{t}[\mRat_{t+1}]=\Ex_{t}[\Rnorm_{t+1}(\mRat_{t}-\cRat_{t})]+1$; solve $\mRat = (\mRat - \cRat)\Rnorm \InvEpShkInv^{-1}+1$ for $\cRat$ and differentiate.}  so the gap between the two \textit{increases} with $\mRat$ in the limit.  Although a nondegenerate consumption function exists, a target level of $\mRat$ does not (or, rather, the target is $\mRat=\infty$), because no matter how wealthy a consumer becomes, the consumer will always spend less than the amount that would keep $\mRat$ stable (in expectation).
 
 \renewcommand{\figFile}{FVACnotGIC}
 \hypertarget{\figFile}{}
@@ -1372,7 +1372,7 @@ To build intuition, it is useful to describe an example in which a nondegenerate
 
 
 
-\label{subsec:expcgrowth} Figure~\ref{fig:cGroTargetFig} shows that at the value of $\mRat=\mBal$ where expected growth in market resources $\Ex_{t}[\mLevBF_{t+1}/\mLevBF_{t}]$ matches expected growth in permanent income $\PGro$, the expected growth rate of consumption $\Ex_{t}[\cLevBF_{t+1}/\cLevBF_{t}]$ is lower than $\PGro.$  
+\label{subsec:expcgrowth} Figure~\ref{fig:cGroTargetFig} shows that at the value of $\mRat=\mStE$ where expected growth in market resources $\Ex_{t}[\mLevBF_{t+1}/\mLevBF_{t}]$ matches expected growth in permanent income $\PGro$, the expected growth rate of consumption $\Ex_{t}[\cLevBF_{t+1}/\cLevBF_{t}]$ is lower than $\PGro.$  
 
 A second-order expansion of next period's consumption function around $\hat{\mRat}$ yields:
 \begin{align*}
@@ -1385,7 +1385,7 @@ Expected consumption growth is therefore
 \begin{align}
   \Ex_{t}\left[\frac{{\PGro}_{t+1} \mathring{\cFunc}({\mRat}_{t+1})}{\mathring{\cFunc}(\mRat_{t})}
   \right]  & \lesssim \PGro \left(\frac{
-             \mathring{\cFunc}(\mBal)+\mathring{\cFunc}^{\prime}(\mBal)\overbrace{\Ex_{t}[\pShk_{t+1}{\mRat}_{t+1}-\mBal]}^{=0~\text{~from~\eqref{eq:balgrostable}}}}{\mathring{\cFunc}(\mBal)}\right)  = \PGro \nonumber \\
+             \mathring{\cFunc}(\mStE)+\mathring{\cFunc}^{\prime}(\mBal)\overbrace{\Ex_{t}[\pShk_{t+1}{\mRat}_{t+1}-\mBal]}^{=0~\text{~from~\eqref{eq:balgrostable}}}}{\mathring{\cFunc}(\mBal)}\right)  = \PGro \nonumber \\
 \end{align}
 
 In fact, the $\mRat_{t}$ for which $Ex_{t}[\aRatBF_{t+1}/\aRatBF_{t}] = \PGro$ is yet another slightly different value of $\mRat.$  
@@ -1407,37 +1407,37 @@ In fact, the $\mRat_{t}$ for which $Ex_{t}[\aRatBF_{t+1}/\aRatBF_{t}] = \PGro$ i
 \begin{align}
   \Ex_{t}\left[\frac{{\PGro}_{t+1} \mathring{\cFunc}({\mRat}_{t+1})}{\mathring{\cFunc}(\mRat_{t})}
   \right]  & < \Ex_{t}\left[\left(\frac{{\PGro}_{t+1}
-             (\mathring{\cFunc}(\mBal)+\mathring{\cFunc}^{\prime}(\mBal)({\mRat}_{t+1}-\mBal))}{\mathring{\cFunc}(\mBal)}\right)\right]  \nonumber \\
-           & = \Ex_{t}\left[{\PGro}_{t+1} \left(1+\left(\frac{\mathring{\cFunc}^{\prime}(\mBal)}{%
-             \mathring{\cFunc}(\mBal)}\right)({\mRat}_{t+1}-\mBal)\right)\right]  \nonumber  \\
-           & = \PGro + \left(\frac{\mathring{\cFunc}^{\prime}(\mBal)}{\mathring{\cFunc}(\mBal)}\right)\Ex_{t}\left[ {\PGro}_{t+1}\left((\Rfree/{\PGro}_{t+1})(\mBal-\cFunc(\mBal))-\mBal\right)\right]  \nonumber \\
-             & = \PGro + \left(\frac{\mathring{\cFunc}^{\prime}(\mBal)}{\mathring{\cFunc}(\mBal)}\right)\Ex_{t}\left[ \Rfree(\mBal-\cFunc(\mBal))+1-\PGro\mBal\right]  \nonumber \\
-           & = \PGro + \left(\frac{\mathring{\cFunc}^{\prime}(\mBal)}{\mathring{\cFunc}(\mBal)}\right)\left[
+             (\mathring{\cFunc}(\mStE)+\mathring{\cFunc}^{\prime}(\mBal)({\mRat}_{t+1}-\mBal))}{\mathring{\cFunc}(\mBal)}\right)\right]  \nonumber \\
+           & = \Ex_{t}\left[{\PGro}_{t+1} \left(1+\left(\frac{\mathring{\cFunc}^{\prime}(\mStE)}{%
+             \mathring{\cFunc}(\mStE)}\right)({\mRat}_{t+1}-\mBal)\right)\right]  \nonumber  \\
+           & = \PGro + \left(\frac{\mathring{\cFunc}^{\prime}(\mStE)}{\mathring{\cFunc}(\mBal)}\right)\Ex_{t}\left[ {\PGro}_{t+1}\left((\Rfree/{\PGro}_{t+1})(\mBal-\cFunc(\mBal))-\mBal\right)\right]  \nonumber \\
+             & = \PGro + \left(\frac{\mathring{\cFunc}^{\prime}(\mStE)}{\mathring{\cFunc}(\mBal)}\right)\Ex_{t}\left[ \Rfree(\mBal-\cFunc(\mBal))+1-\PGro\mBal\right]  \nonumber \\
+           & = \PGro + \left(\frac{\mathring{\cFunc}^{\prime}(\mStE)}{\mathring{\cFunc}(\mBal)}\right)\left[
              \Ex_{t}[ \PGro_{t+1}]\underbrace{\Ex_{t}[
-             {\mRat}_{t+1}-\mBal]}_{=0}+\mbox{cov}_{t}( {\PGro}_{t+1},{\mRat}_{t+1})\right]
+             {\mRat}_{t+1}-\mStE]}_{=0}+\mbox{cov}_{t}( {\PGro}_{t+1},{\mRat}_{t+1})\right]
              \label{eq:covcgrow}
 \end{align}
-and since $\mRat_{t+1} = (\Rfree/\PGro_{t+1}) \aFunc(\mBal)+\tShkAll_{t+1}$ and
-$\aFunc(\mBal)>0$ it is clear that
+and since $\mRat_{t+1} = (\Rfree/\PGro_{t+1}) \aFunc(\mStE)+\tShkAll_{t+1}$ and
+$\aFunc(\mStE)>0$ it is clear that
 cov$_{t}({\PGro}_{t+1},{\mRat}_{t+1})<0$ which implies that
 the entire term added to $\PGro$ in \eqref{eq:covcgrow} is negative, as
 required.
 
-Strict concavity of the consumption function implies that if $\Ex_{t}[{\mRat}_{t+1}] = \mTarg = \mRat_{t}$ then
+Strict concavity of the consumption function implies that if $\Ex_{t}[{\mRat}_{t+1}] = \mTrg = \mRat_{t}$ then
 \begin{align}
   \Ex_{t}\left[\frac{{\PGro}_{t+1} \mathring{\cFunc}({\mRat}_{t+1})}{\mathring{\cFunc}(\mRat_{t})}
   \right]  & < \Ex_{t}\left[\left(\frac{{\PGro}_{t+1}
-             (\mathring{\cFunc}(\mTarg)+\mathring{\cFunc}^{\prime}(\mTarg)({\mRat}_{t+1}-\mTarg))}{\mathring{\cFunc}(\mTarg)}\right)\right]  \nonumber \\
-           & = \Ex_{t}\left[{\PGro}_{t+1} \left(1+\left(\frac{\mathring{\cFunc}^{\prime}(\mTarg)}{%
-             \mathring{\cFunc}(\mTarg)}\right)({\mRat}_{t+1}-\mTarg)\right)\right]  \nonumber  \\
-           & = \PGro + \left(\frac{\mathring{\cFunc}^{\prime}(\mTarg)}{\mathring{\cFunc}(\mTarg)}\right)\Ex_{t}\left[ {\PGro}_{t+1}\left({\mRat}_{t+1}-\mTarg\right)\right]  \nonumber \\
-           & = \PGro + \left(\frac{\mathring{\cFunc}^{\prime}(\mTarg)}{\mathring{\cFunc}(\mTarg)}\right)\left[
+             (\mathring{\cFunc}(\mTrg)+\mathring{\cFunc}^{\prime}(\mTrg)({\mRat}_{t+1}-\mTrg))}{\mathring{\cFunc}(\mTrg)}\right)\right]  \nonumber \\
+           & = \Ex_{t}\left[{\PGro}_{t+1} \left(1+\left(\frac{\mathring{\cFunc}^{\prime}(\mTrg)}{%
+             \mathring{\cFunc}(\mTrg)}\right)({\mRat}_{t+1}-\mTrg)\right)\right]  \nonumber  \\
+           & = \PGro + \left(\frac{\mathring{\cFunc}^{\prime}(\mTrg)}{\mathring{\cFunc}(\mTrg)}\right)\Ex_{t}\left[ {\PGro}_{t+1}\left({\mRat}_{t+1}-\mTrg\right)\right]  \nonumber \\
+           & = \PGro + \left(\frac{\mathring{\cFunc}^{\prime}(\mTrg)}{\mathring{\cFunc}(\mTrg)}\right)\left[
              \Ex_{t}[ \PGro_{t+1}]\underbrace{\Ex_{t}[
-             {\mRat}_{t+1}-\mTarg]}_{=0}+\mbox{cov}_{t}( {\PGro}_{t+1},{\mRat}_{t+1})\right]
+             {\mRat}_{t+1}-\mTrg]}_{=0}+\mbox{cov}_{t}( {\PGro}_{t+1},{\mRat}_{t+1})\right]
              \label{eq:covcgrow}
 \end{align}
-and since $\mRat_{t+1} = (\Rfree/\PGro_{t+1}) \aFunc(\mTarg)+\tShkAll_{t+1}$ and
-$\aFunc(\mTarg)>0$ it is clear that
+and since $\mRat_{t+1} = (\Rfree/\PGro_{t+1}) \aFunc(\mTrg)+\tShkAll_{t+1}$ and
+$\aFunc(\mTrg)>0$ it is clear that
 cov$_{t}({\PGro}_{t+1},{\mRat}_{t+1})<0$ which implies that
 the entire term added to $\PGro$ in \eqref{eq:covcgrow} is negative, as
 required.
@@ -1563,7 +1563,7 @@ Even with those (numerical) results in hand, the centrality of mortality assumpt
 
 The only adjustments this requires to the analysis from prior parts of this paper are therefore to the few elements that involve a role for $\Rfree$ distinct from its contribution to $\Pat$ (principally, the {\RIC}).  %These would need to be adjusted to incorporate in interest factor with a higher rate of return.  %For example, the {\RIC}~($\Pat/(\Rfree /\Alive) < 1$) will be somewhat easier to satisfy because $\Rfree/\Alive > \Rfree$.
 
-The numerical finding that the covariance term above is approximately zero allows us to conclude again that the key requirement for aggregate balanced growth is presumably the {\GICAbs}.
+The numerical finding that the covariance term above is approximately zero allows us to conclude again that the key requirement for aggregate balanced growth is presumably the {\GICRaw}.
 
 \hypertarget{Modigliani-Lives}{}
 \subsubsection{Modigliani Lives}

@@ -84,7 +84,7 @@ Now define \providecommand{\difFunc}{\pmb{\zeta}} $\difFunc(\mRat_t) \equiv
   \difFunc(\mRat_t) > 0 &\leftrightarrow \Ex_t[{\mRat}_{t+1}/\mRat_t] > 
                           1,\nonumber
 \end{align}
-so that $\difFunc(\mTarg)=0$. Our goal is to prove that $\difFunc(\bullet)$ is strictly 
+so that $\difFunc(\mTrg)=0$. Our goal is to prove that $\difFunc(\bullet)$ is strictly 
 decreasing on $(0,\infty)$ using the fact that
 \begin{align}
   \difFunc^{\prime}(\mRat_{t}) \equiv  \left( \frac{d}{d\mRat_{t}}\right) \difFunc(\mRat_t)  & = \Ex_{t}\left[
@@ -158,7 +158,7 @@ The limit of the expected ratio as $\mRat_{t}$ goes to infinity is most easily c
   \\  & = \PatPGro \notag
   \\  & < 1 \notag
 \end{align}
-where the last two lines are merely a restatement of the \GICAbs~\eqref{eq:GICAbs}.
+where the last two lines are merely a restatement of the \GICRaw~\eqref{eq:GICRaw}.
 
 The Intermediate Value Theorem says that if $\Ex_{t}[\pShk_{t+1}\mRat_{t+1}/\mRat_t]$ is continuous, and takes on values above and below 1, there must be at least one point at which it is equal to one.
 
@@ -173,7 +173,7 @@ Define \providecommand{\difFunc}{\pmb{\zeta}} $\difFunc(\mRat_t) \equiv
   \difFunc(\mRat_t) > 0 &\leftrightarrow \Ex_t[\pShk_{t+1}\mRat_{t+1}/\mRat_{t}] > 
                           1,\nonumber
 \end{align}
-so that $\difFunc(\mTarg)=0$. Our goal is to prove that $\difFunc(\bullet)$ is strictly 
+so that $\difFunc(\mTrg)=0$. Our goal is to prove that $\difFunc(\bullet)$ is strictly 
 decreasing on $(0,\infty)$ using the fact that
 \begin{align}
   \difFunc^{\prime}(\mRat_{t}) \equiv  \left( \frac{d}{d\mRat_{t}}\right) \difFunc(\mRat_t)  & = \Ex_{t}\left[
@@ -190,7 +190,7 @@ Now, we show that (given our other assumptions) $\difFunc^{\prime}(\mRat)$ is de
   \Rnorm\left(1-\cFunc^{\prime}({\mRat}_t)\right) - 1 & <  \Rnorm(1-\underbrace{(1-\PatR)}_{\MinMPC}) - 1  \\
                                                       & = (\Rfree/\PGro)\PatR - 1 
 \end{align*}
-which is negative because the {\GICAbs} says $\PatPGro < 1$.  
+which is negative because the {\GICRaw} says $\PatPGro < 1$.  
 
 \textbf{If {\RIC} fails.}
 Under \cncl{\RIC}, recall that $\lim_{\mRat \uparrow \infty} \cFunc^{\prime}(\mRat) = 0$.  Concavity of the consumption function means that $\cFunc^{\prime}$ is a decreasing function, so everywhere 
@@ -303,10 +303,10 @@ but at $\mRat=\check{\mRat}$, $\Ex_{t}[\mRat_{t+1}]=\check{\mRat}\approx\grave{\
 \hypertarget{balgrostableSolve}{}
 If some value $\mRat_{t}=\hat{\mRat}$ exists for which equation~\eqref{eq:balgrostable} holds, for reasons articulated below we will call that point the `individual pseudo-steady-state' (alternatively the `$\mRatBF$-balanced-growth' point):
 \begin{align}
-  \Ex_{t}\left[(\mBal-\mathring{\cFunc}(\mBal))\overbrace{\Rfree/\PGro}^{\Rnorm}+\pShk_{t+1}\tShk_{t+1}\right] & = \mBal \notag
-\\  (\mBal-\mathring{\cFunc}(\mBal))\Rnorm+ 1 & = \mBal \label{eq:balgrostableSolve}.  
-% \\  \aFunc(\mBal+\epsilon)(\Rnorm+\nu)+ 1 & = \mBal+\epsilon
-% \\  (\aFunc(\mBal)+\epsilon\aFunc^{\prime})(\Rnorm+\nu)+ 1 & \approx \mBal+\epsilon
+  \Ex_{t}\left[(\mStE-\mathring{\cFunc}(\mBal))\overbrace{\Rfree/\PGro}^{\Rnorm}+\pShk_{t+1}\tShk_{t+1}\right] & = \mBal \notag
+\\  (\mStE-\mathring{\cFunc}(\mBal))\Rnorm+ 1 & = \mBal \label{eq:balgrostableSolve}.  
+% \\  \aFunc(\mStE+\epsilon)(\Rnorm+\nu)+ 1 & = \mBal+\epsilon
+% \\  (\aFunc(\mStE)+\epsilon\aFunc^{\prime})(\Rnorm+\nu)+ 1 & \approx \mBal+\epsilon
 % \\  \epsilon\aFunc^{\prime}(\Rnorm+\nu) + \aFunc(\hat{\mRat})\nu & \approx \epsilon
 % \\   \nu\aFunc(\hat{\mRat}) & \approx \epsilon\left(1-\aFunc^{\prime}(\Rnorm+\nu)\right)
 % \\   \frac{\nu\aFunc(\hat{\mRat})}{\left(1-\aFunc^{\prime}(\Rnorm+\nu)\right)} & \approx \epsilon
@@ -330,10 +330,10 @@ If some value $\mRat_{t}=\hat{\mRat}$ exists for which equation~\eqref{eq:balgro
 \hypertarget{balgrostableSolve}{}
 If some value $\mRat_{t}=\hat{\mRat}$ exists for which equation~\eqref{eq:balgrostable} holds, for reasons articulated below we will call that point the `individual pseudo-steady-state' (alternatively the `$\mRatBF$-balanced-growth' point):
 \begin{align}
-  \Ex_{t}\left[(\mBal-\mathring{\cFunc}(\mBal))\overbrace{\Rfree/\PGro}^{\Rnorm}+\pShk_{t+1}\tShk_{t+1}\right] & = \mBal \notag
-\\  (\mBal-\mathring{\cFunc}(\mBal))\Rnorm+ 1 & = \mBal \label{eq:balgrostableSolve}.  
-% \\  \aFunc(\mBal+\epsilon)(\Rnorm+\nu)+ 1 & = \mBal+\epsilon
-% \\  (\aFunc(\mBal)+\epsilon\aFunc^{\prime})(\Rnorm+\nu)+ 1 & \approx \mBal+\epsilon
+  \Ex_{t}\left[(\mStE-\mathring{\cFunc}(\mBal))\overbrace{\Rfree/\PGro}^{\Rnorm}+\pShk_{t+1}\tShk_{t+1}\right] & = \mBal \notag
+\\  (\mStE-\mathring{\cFunc}(\mBal))\Rnorm+ 1 & = \mBal \label{eq:balgrostableSolve}.  
+% \\  \aFunc(\mStE+\epsilon)(\Rnorm+\nu)+ 1 & = \mBal+\epsilon
+% \\  (\aFunc(\mStE)+\epsilon\aFunc^{\prime})(\Rnorm+\nu)+ 1 & \approx \mBal+\epsilon
 % \\  \epsilon\aFunc^{\prime}(\Rnorm+\nu) + \aFunc(\hat{\mRat})\nu & \approx \epsilon
 % \\   \nu\aFunc(\hat{\mRat}) & \approx \epsilon\left(1-\aFunc^{\prime}(\Rnorm+\nu)\right)
 % \\   \frac{\nu\aFunc(\hat{\mRat})}{\left(1-\aFunc^{\prime}(\Rnorm+\nu)\right)} & \approx \epsilon

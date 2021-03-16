@@ -16,11 +16,11 @@ consumption function $\constr{\cFunc}(\mRat)$ that arise under various parametri
 
 \input{\TableDir/LiqConstrScenarios}
 
-\subsection{If \GICAbs~Fails}
+\subsection{If \GICRaw~Fails}
 
 A consumer is `growth patient' if the perfect foresight growth
-impatience condition fails (\cncl{\GICAbs}, $1 < \Pat/\PGro$).  Under
-\cncl{\GICAbs} the constraint does not bind at the lowest feasible value of $\mRat_{t}=1$ because
+impatience condition fails (\cncl{\GICRaw}, $1 < \Pat/\PGro$).  Under
+\cncl{\GICRaw} the constraint does not bind at the lowest feasible value of $\mRat_{t}=1$ because
 $1 < (\Rfree\Discount)^{1/\CRRA}/\PGro$ implies that spending
 everything today (setting $\cRat_{t}=\mRat_{t}=1$) produces lower
 marginal utility than is obtainable by reallocating a marginal unit of
@@ -35,7 +35,7 @@ resources to the next period at return $\Rfree$:\footnote{The point at
 \begin{equation}\begin{gathered}\begin{aligned}
   1  & < (\Rfree \Discount)^{1/\CRRA}\PGro^{-1}    \notag
   \\ 1  & < \Rfree \Discount \PGro^{-\CRRA} \notag
-  \\  \uFunc^{\prime}(1)  & < \Rfree \Discount \uFunc^{\prime}(\PGro)   \label{eq:EulerGICAbsFailsEnd}.
+  \\  \uFunc^{\prime}(1)  & < \Rfree \Discount \uFunc^{\prime}(\PGro)   \label{eq:EulerGICRawFailsEnd}.
 \end{aligned}\end{gathered}\end{equation}
 
 Similar logic shows that under these circumstances the constraint will
@@ -43,7 +43,7 @@ never bind at $\mRat=1$ for a constrained consumer with a finite horizon of $n$
 periods, so for $\mRat \geq 1$ such a consumer's consumption function will be the same as for the
 unconstrained case examined in the main text.
 
-\hypertarget{cnclGICAbscnclRICFHWC}{}
+\hypertarget{cnclGICRawcnclRICFHWC}{}
 \textit{{\RIC} fails, {\FHWC} holds.} If the \RIC~fails ($1 < \PatR$) while the finite human wealth condition
 holds, the limiting value of this consumption function as $n \uparrow
 \infty$ is the degenerate function
@@ -52,7 +52,7 @@ holds, the limiting value of this consumption function as $n \uparrow
 \end{aligned}\end{gathered}\end{equation}
 (that is, consumption is zero for any level of human or nonhuman wealth).
 
-\hypertarget{cnclGICAbscnclRICcnclFHWC}{}
+\hypertarget{cnclGICRawcnclRICcnclFHWC}{}
 \textit{{\RIC}~fails, {\FHWC}~fails}. {\cncl{\FHWC}} implies that human wealth limits to $\hRat =
 \infty$ so the consumption function limits to either
 $\constr{\cFunc}_{T-n}(\mRat) = 0$ or
@@ -66,8 +66,8 @@ $\infty$.\footnote{The knife-edge case is where $\Pat = \PGro$, in
 \newlength\TableWidth
 
 Thus, the requirement that the consumption function be nondegenerate
-implies that for a consumer satisfying \cncl{\GICAbs} we must impose
-the \RIC~(and the \FHWC~can be shown to be a consequence of \cncl{\GICAbs} and \RIC).  In
+implies that for a consumer satisfying \cncl{\GICRaw} we must impose
+the \RIC~(and the \FHWC~can be shown to be a consequence of \cncl{\GICRaw} and \RIC).  In
 this case, the consumer's optimal behavior is easy to describe.  We
 can calculate the point at which the unconstrained consumer would
 choose $\cRat = \mRat$ from equation \eqref{\localorexternallabel{eq:cFuncPFUnc}}:
@@ -76,7 +76,7 @@ choose $\cRat = \mRat$ from equation \eqref{\localorexternallabel{eq:cFuncPFUnc}
   \\ \mRat_{\#}(1-\MinMPC)  & = (\hRat - 1)\MinMPC
   \\ \mRat_{\#}  & = (\hRat - 1)\left(\frac{\MinMPC}{1-\MinMPC}\right)
 \end{aligned}\end{gathered}\end{equation}
-which (under these assumptions) satisfies $0 < \mRat_{\#} < 1$.\footnote{Note that $0 < \mRat_{\#}$ is implied by \RIC~and $ \mRat_{\#}<1$ is implied by \cncl{\GICAbs}.}  For
+which (under these assumptions) satisfies $0 < \mRat_{\#} < 1$.\footnote{Note that $0 < \mRat_{\#}$ is implied by \RIC~and $ \mRat_{\#}<1$ is implied by \cncl{\GICRaw}.}  For
 $\mRat < \mRat_{\#}$ the unconstrained consumer would choose to
 consume more than $\mRat$; for such $\mRat$, the constrained consumer
 is obliged to choose $\constr{\cFunc}(\mRat) = \mRat$.\footnote{As an
@@ -93,10 +93,10 @@ consumer, $\bar{\cFunc}(\mRat)$.
 (\cite{StachurskiToda2019JET} obtain a similar lower bound on consumption and use it to study the tail behavior of the wealth distribution.)
 
 
-\subsection{If \GICAbs~Holds}
+\subsection{If \GICRaw~Holds}
 
-Imposition of the \GICAbs~reverses the inequality in
-\eqref{\localorexternallabel{eq:EulerGICAbsFailsEnd}}, and thus
+Imposition of the \GICRaw~reverses the inequality in
+\eqref{\localorexternallabel{eq:EulerGICRawFailsEnd}}, and thus
 reverses the conclusion: A consumer who starts with $\mRat_{t}=1$ will
 desire to consume more than 1.  Such a consumer will be constrained,
 not only in period $t$, but perpetually thereafter.
@@ -106,7 +106,7 @@ an unconstrained consumer holding $\bRat_{t}=\bRat_{\#}^{n}$ would behave so as 
 $t-1$: Had $b_{t-1}$ been infinitesimally smaller, the constraint
 would have been binding (because the consumer would have desired, but
 been unable, to enter period $t$ with negative, not zero, $b$).  Given
-the \GICAbs, the constraint certainly binds in period $t$ (and
+the \GICRaw, the constraint certainly binds in period $t$ (and
 thereafter) with resources of
 $\mRat_{t}=\mRat_{\#}^{0}=1+\bRat_{\#}^{0}=1$: The consumer cannot
 spend more (because constrained), and will not choose to spend less
@@ -173,7 +173,7 @@ The \FHWC~requires $\Rnorm^{-1} < 1$, in which case the second term in \eqref{\l
   \\  \lim_{n \rightarrow \infty} \left(\frac{\PatPGro^{-n}-\Rnorm^{-n}\PatR}{1-\PatR}\right)  & = \infty
   \\  \lim_{n \rightarrow \infty} \left(\frac{\PatPGro^{-n}}{1-\PatR}\right)  & = \infty.
 \end{eqnarray*}
-Given the \GICAbs~$\PatPGro^{-1}>1$, this will hold iff the \RIC~holds, $\PatR < 1$.  But given that the \FHWC~$\Rfree > \PGro$ holds, the \GICAbs~is stronger (harder to satisfy) than the \RIC; thus, the~\FHWC~and the \GICAbs~together imply the \RIC, and so a well-defined
+Given the \GICRaw~$\PatPGro^{-1}>1$, this will hold iff the \RIC~holds, $\PatR < 1$.  But given that the \FHWC~$\Rfree > \PGro$ holds, the \GICRaw is stronger (harder to satisfy) than the \RIC; thus, the~\FHWC~and the \GICRaw~together imply the \RIC, and so a well-defined
 solution exists.  Furthermore, in the limit as $n$ approaches
 infinity, the difference between the limiting constrained consumption
 function and the unconstrained consumption function becomes
@@ -184,7 +184,7 @@ behavior shrinks to nothing.  That is,
   \lim_{m \rightarrow \infty}\constr{\cFunc}(m) - \bar{\cFunc}(m) = 0.
 \end{aligned}\end{gathered}\end{equation}
 
-% Finally, the main text shows that the \GICAbs~is a stronger condition than the PF-FVR; that is, \GICAbs~$\Rightarrow$ PF-FVR.
+% Finally, the main text shows that the \GICRaw~is a stronger condition than the PF-FVR; that is, \GICRaw~$\Rightarrow$ PF-FVR.
 
 \subsubsection{If \FHWC~Fails}
 If the \FHWC~fails, matters are a bit more complex.
@@ -197,8 +197,8 @@ If the \FHWC~fails, matters are a bit more complex.
     the parametric combinations required for this are somewhat peculiar
     (including both $\Rfree < 1$ and $\PGro < 1$); but we restrict our attention
     to the more useful and plausible cases with finite value.} which is stronger (holds
-  in strictly fewer circumstances) than the \GICAbs~condition $\PatPGro < 1$.
-  Thus, the \GICAbs~is an implication of $\cncl{\FHWC}$.
+  in strictly fewer circumstances) than the \GICRaw~condition $\PatPGro < 1$.
+  Thus, the \GICRaw~is an implication of $\cncl{\FHWC}$.
 \end{comment}
 
 Given failure of \FHWC, \eqref{\localorexternallabel{eq:bToInfty}} requires
@@ -246,7 +246,7 @@ $\Rnorm^{-n}$ in \eqref{\localorexternallabel{eq:FHWCfails}} will be positive if
   \\ \Rnorm^{-1}  & > & \PatR
   \\ \PGro  & > & \Pat
 \end{eqnarray*}
-which is merely the \GICAbs~which we are maintaining.  So the first term's limit is $+\infty$.  The
+which is merely the \GICRaw~which we are maintaining.  So the first term's limit is $+\infty$.  The
 combined limit will be $+\infty$ if the term involving $\Rnorm^{-n}$
 goes to $+\infty$ faster than the term involving $-\PatPGro^{-n}$ goes to
 $-\infty$; that is, if
@@ -337,7 +337,7 @@ degenerate $\constr{\cFunc}(\mRat)=0$.  (Figure~\ref{fig:PFGICHoldsFHWCFailsRICF
 
 \end{comment}
 
-We can summarize as follows.  Given that the \GICAbs~holds, the
+We can summarize as follows.  Given that the \GICRaw~holds, the
 interesting question is whether the \FHWC~holds.  If so, the
 RIC~automatically holds, and the solution limits
 into the solution to the unconstrained problem as $\mRat \uparrow
