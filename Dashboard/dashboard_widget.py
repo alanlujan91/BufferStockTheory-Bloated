@@ -176,7 +176,7 @@ def makeConvergencePlot(DiscFac, CRRA, Rfree, PermShkStd):
     baseAgent_Fin.Rfree = Rfree
     baseAgent_Fin.PermShkStd = [PermShkStd]
     baseAgent_Fin.cycles = 100
-    baseAgent_Fin.updateIncomeProcess()
+    baseAgent_Fin.update_income_process()
     baseAgent_Fin.solve()
     baseAgent_Fin.unpack('cFunc')
     
@@ -238,8 +238,8 @@ def makeGICFailExample(DiscFac, PermShkStd, UnempPrb):
     GICFailsExample.DiscFac = DiscFac
     GICFailsExample.PermShkStd = [PermShkStd]
     GICFailsExample.UnempPrb = UnempPrb
-    GICFailsExample.updateIncomeProcess()
-    GICFailsExample.checkConditions()
+    GICFailsExample.update_income_process()
+    GICFailsExample.check_conditions()
 
     # Get calibrated parameters to make code more readable
     LivPrb=GICFailsExample.LivPrb[0]
@@ -289,7 +289,7 @@ def makeGICFailExample(DiscFac, PermShkStd, UnempPrb):
     )
     plt.legend(fontsize='x-large')
     plt.show()
-    print(f'Current Growth Impatience Factor is {GICFailsExample.GPFInd}')
+    print(f'Current Growth Impatience Factor is {GICFailsExample.GPFNrm}')
     return None
 
 
@@ -298,8 +298,8 @@ def makeGrowthplot(PermGroFac, DiscFac):
     baseAgent_Inf = IndShockConsumerType(verbose=0, cycles=0,**base_params)
     baseAgent_Inf.PermGroFac = [PermGroFac]
     baseAgent_Inf.DiscFac = DiscFac
-    baseAgent_Inf.updateIncomeProcess()
-    baseAgent_Inf.checkConditions()
+    baseAgent_Inf.update_income_process()
+    baseAgent_Inf.check_conditions()
     mPlotMin = 0
     mPlotMax = 3500.5
     baseAgent_Inf.mPlotMax = 3500.5
@@ -308,9 +308,9 @@ def makeGrowthplot(PermGroFac, DiscFac):
     baseAgent_Inf.solve()
     baseAgent_Inf.unpack('cFunc')
     numPts   = 500
-    if (baseAgent_Inf.GPFInd >= 1):
+    if (baseAgent_Inf.GPFNrm >= 1):
         baseAgent_Inf.checkGICInd(verbose=3)
-    elif baseAgent_Inf.solution[0].mNrmSS > mPlotMax:
+    elif baseAgent_Inf.solution[0].mNrmTrg > mPlotMax:
         print('Target exists but is outside the plot range.')
     else:
         def EcLev_tp1_Over_p_t(a):
@@ -351,7 +351,7 @@ def makeGrowthplot(PermGroFac, DiscFac):
         
         # Calculate the expected consumption growth factor
         # mBelwTrg defines the plot range on the left of target m value (e.g. m <= target m)
-        mNrmTrg=baseAgent_Inf.solution[0].mNrmSS
+        mNrmTrg=baseAgent_Inf.solution[0].mNrmTrg
         mPlotMin = 0
         mPlotMax = 200
         mBelwTrg = np.linspace(mPlotMin,mNrmTrg,numPts) 
@@ -374,7 +374,7 @@ def makeGrowthplot(PermGroFac, DiscFac):
 
         Rfree      = 1.0
         EPermGroFac= 1.0
-        mNrmTrg    = baseAgent_Inf.solution[0].mNrmSS
+        mNrmTrg    = baseAgent_Inf.solution[0].mNrmTrg
 
         # Calculate Absolute Patience Factor Phi = lower bound of consumption growth factor
         APF = (Rfree*DiscFac)**(1.0/CRRA)
@@ -434,8 +434,8 @@ def makeBoundsFigure(UnempPrb, PermShkStd, TranShkStd, DiscFac ,CRRA):
     baseAgent_Inf.TranShkStd = [TranShkStd]
     baseAgent_Inf.DiscFac    = DiscFac
     baseAgent_Inf.CRRA       = CRRA
-    baseAgent_Inf.updateIncomeProcess()
-    baseAgent_Inf.checkConditions()
+    baseAgent_Inf.update_income_process()
+    baseAgent_Inf.check_conditions()
     mPlotMin = 0
     mPlotMax = 2500
     baseAgent_Inf.tolerance = 1e-09
@@ -448,7 +448,7 @@ def makeBoundsFigure(UnempPrb, PermShkStd, TranShkStd, DiscFac ,CRRA):
     Rfree      = baseAgent_Inf.Rfree
     CRRA       = baseAgent_Inf.CRRA
     EPermGroFac= baseAgent_Inf.PermGroFac[0]
-    mNrmTrg    = baseAgent_Inf.solution[0].mNrmSS
+    mNrmTrg    = baseAgent_Inf.solution[0].mNrmTrg
     UnempPrb   = baseAgent_Inf.UnempPrb
 
     κ_Min = 1.0-(Rfree**(-1.0))*(Rfree*DiscFac)**(1.0/CRRA)
@@ -493,8 +493,8 @@ def makeTargetMfig(Rfree, DiscFac, CRRA, PermShkStd, TranShkStd):
     baseAgent_Inf.CRRA = CRRA
     baseAgent_Inf.PermShkStd = [PermShkStd]
     baseAgent_Inf.TranShkStd = [TranShkStd]
-    baseAgent_Inf.updateIncomeProcess()
-    baseAgent_Inf.checkConditions()
+    baseAgent_Inf.update_income_process()
+    baseAgent_Inf.check_conditions()
     mPlotMin = 0
     mPlotMax = 250
     baseAgent_Inf.aXtraMax = mPlotMax
@@ -503,7 +503,7 @@ def makeTargetMfig(Rfree, DiscFac, CRRA, PermShkStd, TranShkStd):
     cPlotMin = 0
     cPlotMax = baseAgent_Inf.cFunc[0](mPlotMax)
     
-    if (baseAgent_Inf.GPFInd >= 1):
+    if (baseAgent_Inf.GPFNrm >= 1):
         baseAgent_Inf.checkGICInd(verbose=3)
         
     mBelwTrg = np.linspace(mPlotMin,mPlotMax,1000)
@@ -511,7 +511,7 @@ def makeTargetMfig(Rfree, DiscFac, CRRA, PermShkStd, TranShkStd):
     EmDelEq0 = lambda m:(EPermGroFac/Rfree)+(1.0-EPermGroFac/Rfree)*m
     cBelwTrg_Best = baseAgent_Inf.cFunc[0](mBelwTrg) # "best" = optimal c
     cBelwTrg_Sstn = EmDelEq0(mBelwTrg)               # "sustainable" c
-    mNrmTrg    = baseAgent_Inf.solution[0].mNrmSS
+    mNrmTrg    = baseAgent_Inf.solution[0].mNrmTrg
 
     plt.figure(figsize=(12, 8))
     plt.plot(mBelwTrg, cBelwTrg_Best, label="$c(m_{t})$")
@@ -558,10 +558,10 @@ def makeTargetMfig(Rfree, DiscFac, CRRA, PermShkStd, TranShkStd):
 #     else:         # Else the upper bound is the solution to the unconstrained PF model
 #         conFunc_PF = PerfForesightConsumerType(verbose=0, cycles=0,**base_params_PF)
 
-#     baseEx_inf.checkConditions(verbose=0)
+#     baseEx_inf.check_conditions(verbose=0)
 #     conFunc_PF.solve()
 #     conFunc_PF.unpackcFunc()
-#     baseEx_inf.updateIncomeProcess()
+#     baseEx_inf.update_income_process()
 #     baseEx_inf.solve()
 #     baseEx_inf.unpackcFunc()
 
