@@ -169,7 +169,7 @@ def makeFig(figure_name, target_dir="../../Figures"):
 # \newcommand{\IncUnemp}{\mu}
 # \newcommand{\MPC}{\kappa}
 # \newcommand{\PermGroFac}{\Gamma}
-# \newcommand{\PermGroFacAdj}{\tilde{\Gamma}}
+# \newcommand{\PermGroFacAdj}{\underline{\Gamma}}
 # \newcommand{\PermShkStd}{\sigma_\Psi}
 # \newcommand{\permShkStd}{\sigma_\psi}
 # \newcommand{\PermShk}{\Psi} % New
@@ -345,6 +345,98 @@ makeFig('cFuncsConverge')  # Comment out if you want to run uninterrupted
 # Use the [interactive dashboard](#interactive-dashboard) to explore the effects of changes in patience, risk aversion, or risk
 
 # %% [markdown] {"tags": []}
+# ### PROBLEM: Natural Borrowing Constraint Approaches Artificial Constraint
+#
+# Show numerically the result that is proven analytically in [The-Liquidity-Constrained-Solution-as-a-Limit](https://econ-ark.github.io/BufferStockTheory/#The-Liquidity-Constrained-Solution-as-a-Limit), by solving the model for successively smaller values of $\UnempPrb$.
+#    * You need only to solve for the second-to-last period of life to do this
+#       * `TwoPeriodModel = IndShockConsumerType(**base_params)`
+#       * `TwoPeriodModel.cycles = 2   # Make this type have a two period horizon (Set T = 2)`
+#
+#    * You should show the consumption rules for different values of $\UnempPrb$ on the same graph
+#       * To make this easier, you will want to use the plot_funcs command:
+#          * `from HARK.utilities import plot_funcs_der, plot_funcs`
+#
+# Create a cell or cells in the notebook below this cell and put your solution there; comment on the size of $\UnempPrb$ needed to make the two models visually indistinguishable
+
+# %% {"tags": []}
+# SOLUTION
+
+# Turns out that we have to make the probability REALLY small
+
+# Construct solution for truly constrained consumer
+BoroCnst_par = deepcopy(base_params)
+BoroCnst_par['CubicBool'] = False  # Cubic approx does not work will with kinks
+BoroCnst_par['UnempPrb'] = 0  # No risk of unemployment, just transitory shocks
+BoroCnst_par['BoroCnstArt'] = 0.0  # Cannot borrow more than 0.0 of permanent income
+# baseBoroCnst['IncUnemp'] = 0.3  # Assume unemployment insurance of 0.3
+
+periods_to_solve = 2
+baseBoroCnstEx = IndShockConsumerType(**BoroCnst_par,
+                                      horizon='finite',
+                                      cycles=periods_to_solve,
+                                      quietly=True)
+baseBoroCnstEx.solve(quietly=True)
+baseBoroCnstEx.unpack('cFunc')
+
+cFuncList = list()  # Create empty list for storing consumption functions
+
+# Period [-1] is period-T solution (c=m)
+# Period [-2] is the first 'interesting' period (where constraint matters)
+cFuncList.append(baseBoroCnstEx.cFunc[-2])
+
+# Now set up unconstrained two period solution
+unconstr_par = deepcopy(BoroCnst_par)
+# unconst_params['IncUnemp'] = 0.3 # If unemployed,income is zero
+unconstr_par['BoroCnstArt'] = None  # No 'artificial' constraint
+
+unconstAgent = IndShockConsumerType(**unconstr_par,
+                                    horizon='finite',
+                                    cycles=periods_to_solve,
+                                    quietly=True)  # base_params has no constraint
+
+unconstAgent_base = deepcopy(unconstAgent)
+unconstAgent_base.solve(quietly=True)        # Solve the model under baseline parameter values
+unconstAgent_base.unpack('cFunc')  # Make the consumption function easily accessible
+cFuncList.append(unconstAgent_base.cFunc[-2])
+
+# Consumption function for unconstrained
+# cFuncList0.append(unconstAgent_base.cFunc[-2])
+# cFuncList0=deepcopy(cFuncList)
+# cFuncList = list()  # Create empty list for storing consumption functions
+unconstAgentList = list()
+# Now consider three alternative values of unemployment probability
+UnempPrbList = [0.001, 0.0001, 0.00001]
+unconstr_With_Risk_of_Zero_income_par = deepcopy(unconstr_par)
+unconstr_With_Risk_of_Zero_income_par['IncUnemp'] = 0.0
+
+unconstr_with_risk = IndShockConsumerType(
+    **unconstr_With_Risk_of_Zero_income_par,
+    horizon='finite',
+    cycles=periods_to_solve,
+    verbose=False)
+i = 0
+
+for UnempPrb in UnempPrbList:
+    unconstAgentNow = deepcopy(unconstr_with_risk)
+    unconstAgentNow.UnempPrb = UnempPrb
+    unconstAgentNow.update_income_process()  # After changing parameters, recompute distn
+    unconstAgentNow.solve(quietly=True)
+    unconstAgentNow.unpack('cFunc')
+    cFuncList.append(unconstAgentNow.cFunc[0])  # Get the T-1 c function
+    unconstAgentList.append(unconstAgentList)
+    i += 1
+
+# Zoom in on consumption function in a region near the BoroCnstArt kink point
+RangeAroundPermInc = 0.5
+PermIncNorm = 1
+plot_funcs(cFuncList, PermIncNorm-RangeAroundPermInc, PermIncNorm+RangeAroundPermInc)
+
+print('Drawing and storing solution')
+if drawFigs:
+    plt.show()
+plt.close()
+
+# %% [markdown] {"tags": []}
 # ## Factors and Conditions
 #
 # ### [The Finite Human Wealth Condition](http://econ-ark.github.io/BufferStockTheory/#Human-Wealth)
@@ -386,7 +478,7 @@ makeFig('cFuncsConverge')  # Comment out if you want to run uninterrupted
 # ['Growth Impatience Condition'](https://econ-ark.github.io/BufferStockTheory/#GIC) determines whether, _in expectation_, the stochastic value of $c$ is rising, constant, or falling over time:
 #
 # \begin{eqnarray}
-#   \APF/\tilde{\PermGroFac} & < & 1.
+#   \APF/\underline{\PermGroFac} & < & 1.
 # \end{eqnarray}
 #
 # ### [The Finite Value of Autarky Condition (FVAC)](https://econ-ark.github.io/BufferStockTheory/#Autarky-Value)
@@ -848,7 +940,7 @@ makeFig('cGroTargetFig')
 # [The next figure](https://www.econ2.jhu.edu/people/ccarroll/papers/BufferStockTheory/#cFuncBounds)
 # illustrates theoretical bounds for the consumption function.
 #
-# We define two useful variables: lower bound of $\MPC$ (marginal propensity to consume) and limit of $h$ (Human wealth), along with some functions such as the limiting perfect foresight consumption function $\bar{c}(m)$, the upper bound function $\bar{\bar c}(m)$, and the lower bound function \tilde{_c_}$(m)$.
+# We define two useful variables: lower bound of $\MPC$ (marginal propensity to consume) and limit of $h$ (Human wealth), along with some functions such as the limiting perfect foresight consumption function $\bar{c}(m)$, the upper bound function $\bar{\bar c}(m)$, and the lower bound function \underline{_c_}$(m)$.
 
 # %% {"tags": []}
 # Define mpc_Min, h_inf and PF consumption function, upper and lower bound of c function
@@ -875,8 +967,8 @@ def cFunc_BotBnd(m): return mpc_Min * m
 # %% {"tags": []}
 # Plot the consumption function and its bounds
 
-cMaxLabel = r'$\overline{c}(m)= (m-1+h)\tilde{\kappa}$'
-cMinLabel = r'Lower Bound: $\tilde{c}(m)= (1-\pmb{\text{\TH}}_{R})\tilde{\kappa}m$'
+cMaxLabel = r'$\overline{c}(m)= (m-1+h)\underline{\kappa}$'
+cMinLabel = r'Lower Bound: $\underline{c}(m)= (1-\pmb{\text{\TH}}_{R})\underline{\kappa}m$'
 if not latexExists:
     cMaxLabel = r'$\overline{c}(m) = (m-1+h)mpc̲'  # Use unicode kludge
     cMinLabel = r'Lower Bound: c̲$(m)= (1-\Phi_{R})m = mpc̲ m$'
@@ -939,8 +1031,8 @@ makeFig('cFuncBounds')
 # %% [markdown]
 # ### [Upper and Lower Limits of the Marginal Propensity to Consume](https://www.econ2.jhu.edu/people/ccarroll/papers/BufferStockTheory/#MPCLimits)
 #
-# The paper shows that as $m_{t}~\uparrow~\infty$ the consumption function in the presence of risk gets arbitrarily close to the perfect foresight consumption function.  Defining $\tilde{κ}$
-# as the perfect foresight model's MPC, this implies that $\lim_{m_{t}~\uparrow~\infty} c^{\prime}(m) = \tilde{\kappa}$.
+# The paper shows that as $m_{t}~\uparrow~\infty$ the consumption function in the presence of risk gets arbitrarily close to the perfect foresight consumption function.  Defining $\underline{κ}$
+# as the perfect foresight model's MPC, this implies that $\lim_{m_{t}~\uparrow~\infty} c^{\prime}(m) = \underline{\kappa}$.
 #
 # The paper also derives an analytical limit $\bar{\MPC}$ for the MPC as $m$ approaches 0., its bounding value.  Strict concavity of the consumption function implies that the consumption function will be everywhere below a function $\bar{\MPC}m$, and strictly declining everywhere.  The last figure plots the MPC between these two limits.
 
@@ -962,7 +1054,7 @@ MPC = soln.cFunc.derivative(m)
 # Define the lower bound of MPC
 #MPCLower = mpc_Min
 
-kappaDef = r'$\tilde{\kappa}\equiv(1-\pmb{\text{\TH}}_{R})$'
+kappaDef = r'$\underline{\kappa}\equiv(1-\pmb{\text{\TH}}_{R})$'
 if not latexExists:
     kappaDef = r'κ̲$\equiv(1-\Phi_{R})$'
 
@@ -1012,7 +1104,7 @@ makeFig('MPCLimits')
 # %% [markdown]
 # ### Appendix: Perfect foresight agent failing both the FHWC and RIC
 
-# %% {"tags": []}
+# %%
 PFGICRawHoldsFHWCFailsRICFails_par = deepcopy(init_perfect_foresight)
 
 # Replace parameters.
