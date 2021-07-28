@@ -66,6 +66,7 @@
 # This cell does some setup
 
 # Import required python packages
+from HARK.utilities import plot_funcs
 from builtins import breakpoint
 import logging
 from HARK.utilities import (find_gui, make_figs, determine_platform,
@@ -340,100 +341,100 @@ plt.text(11.1, 0, "$m$", fontsize=26)
 
 makeFig('cFuncsConverge')  # Comment out if you want to run uninterrupted
 
-# # %% [markdown] {"slideshow": {"slide_type": "slide"}}
-# # Use the [interactive dashboard](#interactive-dashboard) to explore the effects of changes in patience, risk aversion, or risk
+# %% [markdown] {"slideshow": {"slide_type": "slide"}}
+# Use the [interactive dashboard](#interactive-dashboard) to explore the effects of changes in patience, risk aversion, or risk
 
-# # %% [markdown] {"tags": []}
-# # ### PROBLEM: Natural Borrowing Constraint Approaches Artificial Constraint
-# #
-# # Show numerically the result that is proven analytically in [The-Liquidity-Constrained-Solution-as-a-Limit](https://econ-ark.github.io/BufferStockTheory/#The-Liquidity-Constrained-Solution-as-a-Limit), by solving the model for successively smaller values of $\UnempPrb$.
-# #    * You need only to solve for the second-to-last period of life to do this
-# #       * `TwoPeriodModel = IndShockConsumerType(**base_params)`
-# #       * `TwoPeriodModel.cycles = 2   # Make this type have a two period horizon (Set T = 2)`
-# #
-# #    * You should show the consumption rules for different values of $\UnempPrb$ on the same graph
-# #       * To make this easier, you will want to use the plot_funcs command:
-# #          * `from HARK.utilities import plot_funcs_der, plot_funcs`
-# #
-# # Create a cell or cells in the notebook below this cell and put your solution there; comment on the size of $\UnempPrb$ needed to make the two models visually indistinguishable
+# %% [markdown] {"tags": []}
+# ### PROBLEM: Natural Borrowing Constraint Approaches Artificial Constraint
+#
+# Show numerically the result that is proven analytically in [The-Liquidity-Constrained-Solution-as-a-Limit](https://econ-ark.github.io/BufferStockTheory/#The-Liquidity-Constrained-Solution-as-a-Limit), by solving the model for successively smaller values of $\UnempPrb$.
+#    * You need only to solve for the second-to-last period of life to do this
+#       * `TwoPeriodModel = IndShockConsumerType(**base_params)`
+#       * `TwoPeriodModel.cycles = 2   # Make this type have a two period horizon (Set T = 2)`
+#
+#    * You should show the consumption rules for different values of $\UnempPrb$ on the same graph
+#       * To make this easier, you will want to use the plot_funcs command:
+#          * `from HARK.utilities import plot_funcs_der, plot_funcs`
+#
+# Create a cell or cells in the notebook below this cell and put your solution there; comment on the size of $\UnempPrb$ needed to make the two models visually indistinguishable
 
-# # %% {"tags": []}
-# # SOLUTION
+# %% {"tags": []}
+# SOLUTION
 
-# # Turns out that we have to make the probability REALLY small
+# Turns out that we have to make the probability REALLY small
 
-# # Construct solution for truly constrained consumer
-# BoroCnst_par = deepcopy(base_params)
-# BoroCnst_par['CubicBool'] = False  # Cubic approx does not work will with kinks
-# BoroCnst_par['UnempPrb'] = 0  # No risk of unemployment, just transitory shocks
-# BoroCnst_par['BoroCnstArt'] = 0.0  # Cannot borrow more than 0.0 of permanent income
-# # baseBoroCnst['IncUnemp'] = 0.3  # Assume unemployment insurance of 0.3
+# Construct solution for truly constrained consumer
+BoroCnst_par = deepcopy(base_params)
+BoroCnst_par['CubicBool'] = False  # Cubic approx does not work will with kinks
+BoroCnst_par['UnempPrb'] = 0  # No risk of unemployment, just transitory shocks
+BoroCnst_par['BoroCnstArt'] = 0.0  # Cannot borrow more than 0.0 of permanent income
+# baseBoroCnst['IncUnemp'] = 0.3  # Assume unemployment insurance of 0.3
 
-# periods_to_solve = 2
-# baseBoroCnstEx = IndShockConsumerType(**BoroCnst_par,
-#                                       horizon='finite',
-#                                       cycles=periods_to_solve,
-#                                       quietly=True)
-# baseBoroCnstEx.solve(quietly=True)
-# baseBoroCnstEx.unpack('cFunc')
+periods_to_solve = 2
+baseBoroCnstEx = IndShockConsumerType(**BoroCnst_par,
+                                      horizon='finite',
+                                      cycles=periods_to_solve,
+                                      quietly=True)
+baseBoroCnstEx.solve(quietly=True)
+baseBoroCnstEx.unpack('cFunc')
 
+cFuncList = list()  # Create empty list for storing consumption functions
+
+# Period [-1] is period-T solution (c=m)
+# Period [-2] is the first 'interesting' period (where constraint matters)
+cFuncList.append(baseBoroCnstEx.cFunc[-2])
+
+# Now set up unconstrained two period solution
+unconstr_par = deepcopy(BoroCnst_par)
+# unconst_params['IncUnemp'] = 0.3 # If unemployed,income is zero
+unconstr_par['BoroCnstArt'] = None  # No 'artificial' constraint
+
+unconstAgent = IndShockConsumerType(**unconstr_par,
+                                    horizon='finite',
+                                    cycles=periods_to_solve,
+                                    quietly=True)  # base_params has no constraint
+
+unconstAgent_base = deepcopy(unconstAgent)
+unconstAgent_base.solve(quietly=True)        # Solve the model under baseline parameter values
+unconstAgent_base.unpack('cFunc')  # Make the consumption function easily accessible
+cFuncList.append(unconstAgent_base.cFunc[-2])
+
+# Consumption function for unconstrained
+# cFuncList0.append(unconstAgent_base.cFunc[-2])
+# cFuncList0=deepcopy(cFuncList)
 # cFuncList = list()  # Create empty list for storing consumption functions
+unconstAgentList = list()
+# Now consider three alternative values of unemployment probability
+UnempPrbList = [0.001, 0.0001, 0.00001]
+unconstr_With_Risk_of_Zero_income_par = deepcopy(unconstr_par)
+unconstr_With_Risk_of_Zero_income_par['IncUnemp'] = 0.0
 
-# # Period [-1] is period-T solution (c=m)
-# # Period [-2] is the first 'interesting' period (where constraint matters)
-# cFuncList.append(baseBoroCnstEx.cFunc[-2])
+unconstr_with_risk = IndShockConsumerType(
+    **unconstr_With_Risk_of_Zero_income_par,
+    horizon='finite',
+    cycles=periods_to_solve,
+    verbose=False)
+i = 0
 
-# # Now set up unconstrained two period solution
-# unconstr_par = deepcopy(BoroCnst_par)
-# # unconst_params['IncUnemp'] = 0.3 # If unemployed,income is zero
-# unconstr_par['BoroCnstArt'] = None  # No 'artificial' constraint
+for UnempPrb in UnempPrbList:
+    unconstAgentNow = deepcopy(unconstr_with_risk)
+    unconstAgentNow.UnempPrb = UnempPrb
+    unconstAgentNow.update_income_process()  # After changing parameters, recompute distn
+    unconstAgentNow.solve(quietly=True)
+    unconstAgentNow.unpack('cFunc')
+    cFuncList.append(unconstAgentNow.cFunc[0])  # Get the T-1 c function
+    unconstAgentList.append(unconstAgentList)
+    i += 1
 
-# unconstAgent = IndShockConsumerType(**unconstr_par,
-#                                     horizon='finite',
-#                                     cycles=periods_to_solve,
-#                                     quietly=True)  # base_params has no constraint
+# Zoom in on consumption function in a region near the BoroCnstArt kink point
+RangeAroundPermInc = 0.5
+PermIncNorm = 1
+plot_funcs(cFuncList, PermIncNorm-RangeAroundPermInc, PermIncNorm+RangeAroundPermInc)
 
-# unconstAgent_base = deepcopy(unconstAgent)
-# unconstAgent_base.solve(quietly=True)        # Solve the model under baseline parameter values
-# unconstAgent_base.unpack('cFunc')  # Make the consumption function easily accessible
-# cFuncList.append(unconstAgent_base.cFunc[-2])
-
-# # Consumption function for unconstrained
-# # cFuncList0.append(unconstAgent_base.cFunc[-2])
-# # cFuncList0=deepcopy(cFuncList)
-# # cFuncList = list()  # Create empty list for storing consumption functions
-# unconstAgentList = list()
-# # Now consider three alternative values of unemployment probability
-# UnempPrbList = [0.001, 0.0001, 0.00001]
-# unconstr_With_Risk_of_Zero_income_par = deepcopy(unconstr_par)
-# unconstr_With_Risk_of_Zero_income_par['IncUnemp'] = 0.0
-
-# unconstr_with_risk = IndShockConsumerType(
-#     **unconstr_With_Risk_of_Zero_income_par,
-#     horizon='finite',
-#     cycles=periods_to_solve,
-#     verbose=False)
-# i = 0
-
-# for UnempPrb in UnempPrbList:
-#     unconstAgentNow = deepcopy(unconstr_with_risk)
-#     unconstAgentNow.UnempPrb = UnempPrb
-#     unconstAgentNow.update_income_process()  # After changing parameters, recompute distn
-#     unconstAgentNow.solve(quietly=True)
-#     unconstAgentNow.unpack('cFunc')
-#     cFuncList.append(unconstAgentNow.cFunc[0])  # Get the T-1 c function
-#     unconstAgentList.append(unconstAgentList)
-#     i += 1
-
-# # Zoom in on consumption function in a region near the BoroCnstArt kink point
-# RangeAroundPermInc = 0.5
-# PermIncNorm = 1
-# plot_funcs(cFuncList, PermIncNorm-RangeAroundPermInc, PermIncNorm+RangeAroundPermInc)
-
-# print('Drawing and storing solution')
-# if drawFigs:
-#     plt.show()
-# plt.close()
+print('Drawing and storing solution')
+if drawFigs:
+    plt.show()
+plt.close()
 
 # %% [markdown] {"tags": []}
 # ## Factors and Conditions
@@ -542,14 +543,14 @@ makeFig('cFuncsConverge')  # Comment out if you want to run uninterrupted
 #
 
 # %% [markdown]
-# For a given $m_{t}$ what is the $c_t$ ($=\rightarrow a_{t}$) such that for that $a_{t}$ we have that 
+# For a given $m_{t}$ what is the $c_t$ ($=\rightarrow a_{t}$) such that for that $a_{t}$ we have that
 #
 # \begin{align}
 # E_{t}[m_{t+1}-m_{t}] & < 0  \\
 # E_{t}[(\Rfree/(\PermGroFac \permShk_{t+1})) (m_{t}-c(m_{t}))]+1 & < m_{t} \\
 # (\Rfree/(\PermGroFac )) a_{t}E_{t}[(1/\permShk_{t+1})]+1 & < m_{t} \\
 # (m_{t}-\mathrm{c}_{t}(m_{t}))\bar{\mathcal{R}}+1 & < m_{t} \\
-# m_{t}(1-1/\bar{\mathcal{R}})+1 & < \mathrm{c}_{t}(m_{t}) 
+# m_{t}(1-1/\bar{\mathcal{R}})+1 & < \mathrm{c}_{t}(m_{t})
 # \end{align}
 #
 
@@ -808,14 +809,14 @@ baseAgent_Inf = IndShockConsumerType(
 
 # %% [markdown]
 # \begin{eqnarray*}
-# \Ex_{t}[m_{t+1}-m_{t}] 
+# \Ex_{t}[m_{t+1}-m_{t}]
 # & = & \Ex_{t}\left[(m_{t}-c_{t})(\Rfree/(\permShk_{t+1}\PermGroFac)) +\tranShk_{t+1}\right] - m_{t} \\
 # & = & (m_{t}-c_{t})\Rfree\Ex_{t}\left[\permShk^{-1}_{t+1}\PermGroFac\right] +1 - m_{t} \\
 # & = & a_{t}\Rfree\Ex_{t}\left[\permShk^{-1}_{t+1}\PermGroFac\right] +1 - m_{t}
 # \end{eqnarray*}
 #
 # \begin{eqnarray*}
-# \Ex_{t}[\mLev_{t+1}/(p_{t}\PermGroFac \permShk_{t+1})/(\mLev_{t}/p_{t})] 
+# \Ex_{t}[\mLev_{t+1}/(p_{t}\PermGroFac \permShk_{t+1})/(\mLev_{t}/p_{t})]
 # & = & \Ex_{t}\left[\frac{\mLev_{t+1}/(\PermGroFac \permShk_{t+1})}{\mLev_{t}}\right] \\
 # & = & \Ex_{t}\left[\frac{(m_{t}-c_{t})(\Rfree/(\permShk_{t+1}\PermGroFac)) +\tranShk_{t+1}}{m_{t}}\right] \\
 # & = & \Ex_{t}\left[\frac{a_{t}(\Rfree/(\permShk_{t+1}\PermGroFac) - \Rfree + \Rfree) +1}{m_{t}}\right] \\
