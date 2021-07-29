@@ -204,10 +204,10 @@ which means that $\difFunc^{\prime}(\mRat_{t})$ from \eqref{eq:difFuncDecreases}
 
 But we showed in section~\ref{subsec:UncertaintyModifiedConditions} that the only circumstances under which the problem has a nondegenerate solution while the {\RIC} fails were ones where the {\FHWC} also fails (that is, \eqref{eq:FHWCFails} holds).
 
-\subsection{Proof of Lemma}
-
 \begin{comment}
 \subsection{Comment}
+\subsection{Proof of Lemma}
+
 
 
 Due to the model's nonlinearities the values of $\mRat$ at which the expected growth rate of $\cLevBF$ matches $\PGro$ is very slightly different from the $\mRat$ at which the growth rate at which expected growth of $\mLevBF$ is $\PGro$.  Defining $\grave{\mRat}$ as the $\mRat$ at which $\Ex_{t}[\cRatBF_{t+1}/\cRatBF_{t}]=\PGro$, we can show that to first order $\grave{\mRat} \approx \check{\mRat}.$
@@ -221,6 +221,8 @@ Due to the model's nonlinearities the values of $\mRat$ at which the expected gr
 but at $\mRat=\check{\mRat}$, $\Ex_{t}[\mRat_{t+1}]=\check{\mRat}\approx\grave{\mRat}$.
 \end{comment}
 
+\end{document}
+
 \pagebreak
 \section{The `Individual Steady-State'}\label{sec:SteadyStateInd}
 
@@ -228,15 +230,14 @@ but at $\mRat=\check{\mRat}$, $\Ex_{t}[\mRat_{t+1}]=\check{\mRat}\approx\grave{\
  \overbrace{\Ex_{t}[\mLevBF_{t+1}]/\mLevBF_{t}}^{\equiv\nu} & = \Ex_{t}[\mRat_{t+1}\PGro\pShk_{t+1}\pLevBF_{t}]/(\mRat_{t}\pLevBF_{t}) 
     \\  &= \PGro\Ex_{t}[\mRat_{t+1}\pShk_{t+1}]/\mRat_{t}
     \\  &= \PGro\Ex_{t}[\left(\mRat_{t}-\cFunc(\mRat_{t}))(\Rfree/\PGro)+\tShk_{t+1}\right)\pShk_{t+1}]/\mRat_{t}
-    \\  &= \PGro\Ex_{t}[\left(\mRat_{t}-\cFunc(\mRat_{t}))(\Rfree/\pShk_{t+1}\PGro)+\tShk_{t+1}\right)\pShk_{t+1}]/\mRat_{t}
-  \\  &= \PGro\Ex_{t}[\left(\mRat_{t}-\cFunc(\mRat_{t}))(\Rfree/\PGro)+\pShk_{t+1}\tShk_{t+1}\right)]/\mRat_{t}                                         
-  \\  &= \left((\tilde{\mRat}-\cFunc(\tilde{\mRat}))\Rfree+\PGro\right)/\tilde{\mRat} 
-   \\  &= \left((\tilde{\mRat}-\cFunc(\tilde{\mRat}))\Rfree+\PGro\right)/\tilde{\mRat} 
-   \\  &= \left((\tilde{\mRat}-\cFunc(\tilde{\mRat}))\Rfree+\PGro\right)/\tilde{\mRat} 
+    \\  &= \PGro\Ex_{t}[\left(\aRat_{t}(\Rfree/\pShk_{t+1}\PGro)+\tShk_{t+1}\right)\pShk_{t+1}]/\mRat_{t}
+  \\  &= \PGro(\aRat_{t}(\Rfree/\PGro)+1)/\mRat_{t}                                         
+%  \\  &= \left((\tilde{\mRat}-\cFunc(\tilde{\mRat}))\Rfree+\PGro\right)/\tilde{\mRat} 
+%   \\  &= \left((\tilde{\mRat}-\cFunc(\tilde{\mRat}))\Rfree+\PGro\right)/\tilde{\mRat} 
+%   \\  &= \left((\tilde{\mRat}-\cFunc(\tilde{\mRat}))\Rfree+\PGro\right)/\tilde{\mRat} 
   \end{align*}
 
   Turn off shocks:
-
   \begin{align*}
 \cLevBF_{t+1}/\cLevBF_{t} 
  & = \cRat_{t+1}\PGro\pLevBF_{t}/(\cRat_{t}\pLevBF_{t})
