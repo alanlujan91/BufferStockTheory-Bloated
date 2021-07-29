@@ -9,24 +9,25 @@ from HARK.ConsumptionSaving.ConsIndShockModel import init_idiosyncratic_shocks a
 
 # Set the parameters for the baseline results in the paper
 # using the variable names defined in the cell above
-base_params['PermGroFac'] =                [1.03] # Permanent income growth factor
-base_params['Rfree']      = Rfree        =  1.04  # Interest factor on assets
-base_params['DiscFac']    = DiscFac      =  0.96  # Time Preference Factor
-base_params['CRRA']       = CRRA         =  2.00  # Coefficient of relative risk aversion
-base_params['UnempPrb']   = UnempPrb     =  0.005 # Probability of unemployment (e.g. Probability of Zero Income in the paper)
-base_params['IncUnemp']   = IncUnemp     =  0.0   # Induces natural borrowing constraint
-base_params['PermShkStd'] =                 [0.1]   # Standard deviation of log permanent income shocks
-base_params['TranShkStd'] =                 [0.1]   # Standard deviation of log transitory income shocks
+base_params['PermGroFac'] = [1.03]  # Permanent income growth factor
+base_params['Rfree'] = Rfree = 1.04  # Interest factor on assets
+base_params['DiscFac'] = DiscFac = 0.96  # Time Preference Factor
+base_params['CRRA'] = CRRA = 2.00  # Coefficient of relative risk aversion
+# Probability of unemployment (e.g. Probability of Zero Income in the paper)
+base_params['UnempPrb'] = UnempPrb = 0.005
+base_params['IncUnemp'] = IncUnemp = 0.0   # Induces natural borrowing constraint
+base_params['PermShkStd'] = [0.1]   # Standard deviation of log permanent income shocks
+base_params['TranShkStd'] = [0.1]   # Standard deviation of log transitory income shocks
 # %%
 # Uninteresting housekeeping and details
 # Make global variables for the things that were lists above -- uninteresting housekeeping
-PermGroFac, PermShkStd, TranShkStd = base_params['PermGroFac'][0],base_params['PermShkStd'][0],base_params['TranShkStd'][0]
+PermGroFac, PermShkStd, TranShkStd = base_params['PermGroFac'][0], base_params['PermShkStd'][0], base_params['TranShkStd'][0]
 
 # Some technical settings that are not interesting for our purposes
-base_params['LivPrb']       = [1.0]   # 100 percent probability of living to next period
-base_params['CubicBool']    = True    # Use cubic spline interpolation
-base_params['T_cycle']      = 1       # No 'seasonal' cycles
-base_params['BoroCnstArt']  = None    # No artificial borrowing constraint
+base_params['LivPrb'] = [1.0]   # 100 percent probability of living to next period
+base_params['CubicBool'] = True    # Use cubic spline interpolation
+base_params['T_cycle'] = 1       # No 'seasonal' cycles
+base_params['BoroCnstArt'] = None    # No artificial borrowing constraint
 
 
 # Define a slider for the discount factor
@@ -95,8 +96,8 @@ Rfree_widget[3].max = 1.0
 Rfree = 1.0
 PermGroFac_widget[3].min = Rfree_widget[3].min-0.03
 PermGroFac_widget[3].max = Rfree_widget[3].max
-DiscFacMin=0.92
-DiscFacMax=((Rfree_widget[3].max)**(CRRA-1))/Rfree_widget[3].max - 0.01
+DiscFacMin = 0.92
+DiscFacMax = ((Rfree_widget[3].max)**(CRRA-1))/Rfree_widget[3].max - 0.01
 
 # Define a slider for the discount factor
 DiscFac_widget = [
@@ -168,6 +169,7 @@ TranShkStd_widget = [
     for i in range(5)
 ]
 
+
 def makeConvergencePlot(DiscFac, CRRA, Rfree, PermShkStd):
     # Construct finite horizon agent with baseline parameters
     baseAgent_Fin = IndShockConsumerType(verbose=0, **base_params)
@@ -176,34 +178,36 @@ def makeConvergencePlot(DiscFac, CRRA, Rfree, PermShkStd):
     baseAgent_Fin.Rfree = Rfree
     baseAgent_Fin.PermShkStd = [PermShkStd]
     baseAgent_Fin.cycles = 100
-    baseAgent_Fin.updateIncomeProcess()
+    baseAgent_Fin.update_income_process()
     baseAgent_Fin.solve()
     baseAgent_Fin.unpack('cFunc')
-    
+
     # figure limits
-    mMax = 6 #11 
+    mMax = 6  # 11
     mMin = 0
     cMin = 0
     cMax = 7
-    
-    mPlotMin  = 0
-    mLocCLabels = 5.6 # 9.6 # Defines horizontal limit of figure
-    mPlotTop = 200 # 3.5 # 6.5    # Defines maximum m value where functions are plotted
-    mPts  = 1000      # Number of points at which functions are evaluated
+
+    mPlotMin = 0
+    mLocCLabels = 5.6  # 9.6 # Defines horizontal limit of figure
+    mPlotTop = 200  # 3.5 # 6.5    # Defines maximum m value where functions are plotted
+    mPts = 1000      # Number of points at which functions are evaluated
 
     plt.figure(figsize=(12, 8))
     plt.ylim([cMin, cMax])
     plt.xlim([mMin, mMax])
-    
-    
-    mBelwLabels    = np.linspace(mPlotMin,mLocCLabels-0.1,mPts) # Range of m below loc of labels
-    m_FullRange    = np.linspace(mPlotMin,mPlotTop,mPts)        # Full plot range 
-    c_Tm0  = m_FullRange                           # c_Tm0  defines the last period consumption rule (c=m)
-    c_Tm1  = baseAgent_Fin.cFunc[ -2](mBelwLabels) # c_Tm1 defines the second-to-last period consumption rule
-    c_Tm5  = baseAgent_Fin.cFunc[ -6](mBelwLabels) # c_Tm5 defines the T-5 period consumption rule
-    c_Tm10 = baseAgent_Fin.cFunc[-11](mBelwLabels) # c_Tm10 defines the T-10 period consumption rule
-    c_Limt = baseAgent_Fin.cFunc[  0](mBelwLabels) # c_Limt defines limiting inﬁnite-horizon consumption rule
 
+    mBelwLabels = np.linspace(mPlotMin, mLocCLabels-0.1, mPts)  # Range of m below loc of labels
+    m_FullRange = np.linspace(mPlotMin, mPlotTop, mPts)        # Full plot range
+    # c_Tm0  defines the last period consumption rule (c=m)
+    c_Tm0 = m_FullRange
+    # c_Tm1 defines the second-to-last period consumption rule
+    c_Tm1 = baseAgent_Fin.cFunc[-2](mBelwLabels)
+    c_Tm5 = baseAgent_Fin.cFunc[-6](mBelwLabels)  # c_Tm5 defines the T-5 period consumption rule
+    # c_Tm10 defines the T-10 period consumption rule
+    c_Tm10 = baseAgent_Fin.cFunc[-11](mBelwLabels)
+    # c_Limt defines limiting inﬁnite-horizon consumption rule
+    c_Limt = baseAgent_Fin.cFunc[0](mBelwLabels)
 
     plt.plot(mBelwLabels, c_Limt, label="$c(m)$")
     plt.plot(mBelwLabels, c_Tm1, label="$c_{T-1}(m)$")
@@ -225,41 +229,43 @@ def makeConvergencePlot(DiscFac, CRRA, Rfree, PermShkStd):
 
 
 def makeGICFailExample(DiscFac, PermShkStd, UnempPrb):
-    
+
     # Construct the "GIC fails" example.
 
     GIC_fails_dictionary = dict(base_params)
-    GIC_fails_dictionary['Rfree']      = 1.04
+    GIC_fails_dictionary['Rfree'] = 1.04
     GIC_fails_dictionary['PermGroFac'] = [1.00]
     GICFailsExample = IndShockConsumerType(
         verbose=0,
-        cycles=0, # cycles=0 makes this an infinite horizon consumer
+        cycles=0,  # cycles=0 makes this an infinite horizon consumer
         **GIC_fails_dictionary)
     GICFailsExample.DiscFac = DiscFac
     GICFailsExample.PermShkStd = [PermShkStd]
     GICFailsExample.UnempPrb = UnempPrb
-    GICFailsExample.updateIncomeProcess()
-    GICFailsExample.checkConditions()
+    GICFailsExample.update_income_process()
+    GICFailsExample.check_conditions()
 
     # Get calibrated parameters to make code more readable
-    LivPrb=GICFailsExample.LivPrb[0]
-    Rfree=GICFailsExample.Rfree
-    DiscFac=GICFailsExample.DiscFac
-    CRRA=GICFailsExample.CRRA
+    LivPrb = GICFailsExample.LivPrb[0]
+    Rfree = GICFailsExample.Rfree
+    DiscFac = GICFailsExample.DiscFac
+    CRRA = GICFailsExample.CRRA
 
-    permShkPrbs=GICFailsExample.PermShkDstn[0].pmf
-    permShkVals=GICFailsExample.PermShkDstn[0].X
-    EPermGroFac=GICFailsExample.PermGroFac[0]
+    permShkPrbs = GICFailsExample.PermShkDstn[0].pmf
+    permShkVals = GICFailsExample.PermShkDstn[0].X
+    EPermGroFac = GICFailsExample.PermGroFac[0]
 
     # np.dot multiplies vectors; probability times value for each outcome is expectation
-    EpermShkInv   = np.dot(permShkPrbs, permShkVals**(-1))    # $   \Ex[\permShk^{-1}]      $
-    InvEpermShkInv= (EpermShkInv) ** (-1)                     # $  (\Ex[\permShk^{-1}])^{-1}$
-    PermGroFac    = EPermGroFac * InvEpermShkInv               # Uncertainty-adjusted permanent growth factor
-    ERNrmFac      = Rfree / PermGroFac                        # Interest factor normalized by uncertainty-adjusted growth
-    ErNrmRte      = ERNrmFac - 1                              # Interest rate is interest factor - 1
+    EpermShkInv = np.dot(permShkPrbs, permShkVals**(-1))    # $   \Ex[\permShk^{-1}]      $
+    InvEpermShkInv = (EpermShkInv) ** (-1)                     # $  (\Ex[\permShk^{-1}])^{-1}$
+    # Uncertainty-adjusted permanent growth factor
+    PermGroFac = EPermGroFac * InvEpermShkInv
+    # Interest factor normalized by uncertainty-adjusted growth
+    ERNrmFac = Rfree / PermGroFac
+    ErNrmRte = ERNrmFac - 1                              # Interest rate is interest factor - 1
     # "sustainable" C = P + (discounted) interest income
     # "sustainable" c = 1 + (discounted, normalized) interest income
-    EmDelEq0      = lambda m : 1 + (m-1)*(ErNrmRte/ERNrmFac)  # "sustainable" c where E[Δ m] = 0
+    def EmDelEq0(m): return 1 + (m-1)*(ErNrmRte/ERNrmFac)  # "sustainable" c where E[Δ m] = 0
 
     GICFailsExample.solve()  # Above, we set up the problem but did not solve it
     GICFailsExample.unpack('cFunc')  # Make the consumption function easily accessible for plotting
@@ -268,11 +274,11 @@ def makeGICFailExample(DiscFac, PermShkStd, UnempPrb):
     mPlotMax = 200
     cPlotMin = 0
     cPlotMax = 1.1 * GICFailsExample.cFunc[0](mPlotMax)
-    
-    mPts  = 1000
-    m = np.linspace(mPlotMin,mPlotMax,mPts)
+
+    mPts = 1000
+    m = np.linspace(mPlotMin, mPlotMax, mPts)
     c_Limt = GICFailsExample.cFunc[0](m)
-    c_Sstn = EmDelEq0(m) # "sustainable" consumption
+    c_Sstn = EmDelEq0(m)  # "sustainable" consumption
 
     plt.figure(figsize=(12, 8))
     plt.plot(m, c_Limt, label="$c(m_{t})$")
@@ -284,7 +290,7 @@ def makeGICFailExample(DiscFac, PermShkStd, UnempPrb):
         labelleft=False,
         left="off",
         right="off",
-#        bottom="off",
+        #        bottom="off",
         top="off",
     )
     plt.legend(fontsize='x-large')
@@ -295,11 +301,11 @@ def makeGICFailExample(DiscFac, PermShkStd, UnempPrb):
 
 def makeGrowthplot(PermGroFac, DiscFac):
     # cycles=0 tells the solver to find the infinite horizon solution
-    baseAgent_Inf = IndShockConsumerType(verbose=0, cycles=0,**base_params)
+    baseAgent_Inf = IndShockConsumerType(verbose=0, cycles=0, **base_params)
     baseAgent_Inf.PermGroFac = [PermGroFac]
     baseAgent_Inf.DiscFac = DiscFac
-    baseAgent_Inf.updateIncomeProcess()
-    baseAgent_Inf.checkConditions()
+    baseAgent_Inf.update_income_process()
+    baseAgent_Inf.check_conditions()
     mPlotMin = 0
     mPlotMax = 3500.5
     baseAgent_Inf.mPlotMax = 3500.5
@@ -307,7 +313,7 @@ def makeGrowthplot(PermGroFac, DiscFac):
     baseAgent_Inf.tolerance = 1e-09
     baseAgent_Inf.solve()
     baseAgent_Inf.unpack('cFunc')
-    numPts   = 500
+    numPts = 500
     if (baseAgent_Inf.GPFInd >= 1):
         baseAgent_Inf.checkGICInd(verbose=3)
     elif baseAgent_Inf.solution[0].mNrmSS > mPlotMax:
@@ -324,15 +330,15 @@ def makeGrowthplot(PermGroFac, DiscFac):
                EcLev_tp1_Over_p_{t}: next period's expected c level / current p
             '''
             # Extract parameter values to make code more readable
-            permShkVals=baseAgent_Inf.PermShkDstn[0].X
-            tranShkVals=baseAgent_Inf.TranShkDstn[0].X
-            permShkPrbs=baseAgent_Inf.PermShkDstn[0].pmf
-            tranShkPrbs=baseAgent_Inf.TranShkDstn[0].pmf
-            Rfree      =baseAgent_Inf.Rfree
-            EPermGroFac=baseAgent_Inf.PermGroFac[0]
+            permShkVals = baseAgent_Inf.PermShkDstn[0].X
+            tranShkVals = baseAgent_Inf.TranShkDstn[0].X
+            permShkPrbs = baseAgent_Inf.PermShkDstn[0].pmf
+            tranShkPrbs = baseAgent_Inf.TranShkDstn[0].pmf
+            Rfree = baseAgent_Inf.Rfree
+            EPermGroFac = baseAgent_Inf.PermGroFac[0]
 
-            PermGrowFac_tp1 = EPermGroFac*permShkVals # Nonstochastic growth times idiosyncratic permShk
-            RNrmFac_tp1     = Rfree / PermGrowFac_tp1 # Growth-normalized interest factor 
+            PermGrowFac_tp1 = EPermGroFac*permShkVals  # Nonstochastic growth times idiosyncratic permShk
+            RNrmFac_tp1 = Rfree / PermGrowFac_tp1  # Growth-normalized interest factor
             # 'bank balances' b = end-of-last-period assets times normalized return factor
             b_tp1 = RNrmFac_tp1*a
             # expand dims of b_tp1 and use broadcasted sum of a column and a row vector
@@ -343,24 +349,25 @@ def makeGrowthplot(PermGroFac, DiscFac):
             cRat_tp1_GivenTranAndPermShks = baseAgent_Inf.cFunc[0](m_tp1_GivenTranAndPermShks).T
             cLev_tp1_GivenTranAndPermShks = cRat_tp1_GivenTranAndPermShks*PermGrowFac_tp1
             # compute expectation over perm shocks by right multiplying with probs
-            EOverPShks_cLev_tp1_GivenTranShkShks = np.dot(cLev_tp1_GivenTranAndPermShks, permShkPrbs)
+            EOverPShks_cLev_tp1_GivenTranShkShks = np.dot(
+                cLev_tp1_GivenTranAndPermShks, permShkPrbs)
             # finish expectation over trans shocks by right multiplying with probs
             EcLev_tp1_Over_p_t = np.dot(EOverPShks_cLev_tp1_GivenTranShkShks, tranShkPrbs)
             # return expected consumption
             return EcLev_tp1_Over_p_t
-        
+
         # Calculate the expected consumption growth factor
         # mBelwTrg defines the plot range on the left of target m value (e.g. m <= target m)
-        mNrmTrg=baseAgent_Inf.solution[0].mNrmSS
+        mNrmTrg = baseAgent_Inf.solution[0].mNrmSS
         mPlotMin = 0
         mPlotMax = 200
-        mBelwTrg = np.linspace(mPlotMin,mNrmTrg,numPts) 
+        mBelwTrg = np.linspace(mPlotMin, mNrmTrg, numPts)
         c_For_mBelwTrg = baseAgent_Inf.cFunc[0](mBelwTrg)
         a_For_mBelwTrg = mBelwTrg-c_For_mBelwTrg
         EcLev_tp1_Over_p_t_For_mBelwTrg = [EcLev_tp1_Over_p_t(i) for i in a_For_mBelwTrg]
 
         # mAbveTrg defines the plot range on the right of target m value (e.g. m >= target m)
-        mAbveTrg = np.linspace(mNrmTrg,mPlotMax,numPts)
+        mAbveTrg = np.linspace(mNrmTrg, mPlotMax, numPts)
 
         # EcGro_For_mAbveTrg: E [consumption growth factor] when m_{t} is below target m
         EcGro_For_mBelwTrg = np.array(EcLev_tp1_Over_p_t_For_mBelwTrg)/c_For_mBelwTrg
@@ -370,11 +377,11 @@ def makeGrowthplot(PermGroFac, DiscFac):
         EcLev_tp1_Over_p_t_For_mAbveTrg = [EcLev_tp1_Over_p_t(i) for i in a_For_mAbveTrg]
 
         # EcGro_For_mAbveTrg: E [consumption growth factor] when m_{t} is bigger than target m_{t}
-        EcGro_For_mAbveTrg = np.array(EcLev_tp1_Over_p_t_For_mAbveTrg)/c_For_mAbveTrg 
+        EcGro_For_mAbveTrg = np.array(EcLev_tp1_Over_p_t_For_mAbveTrg)/c_For_mAbveTrg
 
-        Rfree      = 1.0
-        EPermGroFac= 1.0
-        mNrmTrg    = baseAgent_Inf.solution[0].mNrmSS
+        Rfree = 1.0
+        EPermGroFac = 1.0
+        mNrmTrg = baseAgent_Inf.solution[0].mNrmSS
 
         # Calculate Absolute Patience Factor Phi = lower bound of consumption growth factor
         APF = (Rfree*DiscFac)**(1.0/CRRA)
@@ -394,7 +401,8 @@ def makeGrowthplot(PermGroFac, DiscFac):
         plt.plot(mBelwTrg, EcGro_For_mBelwTrg, color="black")
 
         # Plot the expected consumption growth factor on the right side of target m
-        plt.plot(mAbveTrg, EcGro_For_mAbveTrg, color="black", label="$\mathsf{E}_{t}[c_{t+1}/c_{t}]$")
+        plt.plot(mAbveTrg, EcGro_For_mAbveTrg, color="black",
+                 label="$\mathsf{E}_{t}[c_{t+1}/c_{t}]$")
 
         # Plot the target m
         plt.plot(
@@ -425,17 +433,17 @@ def makeGrowthplot(PermGroFac, DiscFac):
         plt.legend(fontsize='x-large')
         plt.show()
         return None
-    
-    
-def makeBoundsFigure(UnempPrb, PermShkStd, TranShkStd, DiscFac ,CRRA):   
+
+
+def makeBoundsFigure(UnempPrb, PermShkStd, TranShkStd, DiscFac, CRRA):
     baseAgent_Inf = IndShockConsumerType(verbose=0, cycles=0, **base_params)
     baseAgent_Inf.UnempPrb = UnempPrb
     baseAgent_Inf.PermShkStd = [PermShkStd]
     baseAgent_Inf.TranShkStd = [TranShkStd]
-    baseAgent_Inf.DiscFac    = DiscFac
-    baseAgent_Inf.CRRA       = CRRA
-    baseAgent_Inf.updateIncomeProcess()
-    baseAgent_Inf.checkConditions()
+    baseAgent_Inf.DiscFac = DiscFac
+    baseAgent_Inf.CRRA = CRRA
+    baseAgent_Inf.update_income_process()
+    baseAgent_Inf.check_conditions()
     mPlotMin = 0
     mPlotMax = 2500
     baseAgent_Inf.tolerance = 1e-09
@@ -445,24 +453,24 @@ def makeBoundsFigure(UnempPrb, PermShkStd, TranShkStd, DiscFac ,CRRA):
     cPlotMin = 0
     cPlotMax = 1.2 * baseAgent_Inf.cFunc[0](mPlotMax)
     # Retrieve parameters (makes code more readable)
-    Rfree      = baseAgent_Inf.Rfree
-    CRRA       = baseAgent_Inf.CRRA
-    EPermGroFac= baseAgent_Inf.PermGroFac[0]
-    mNrmTrg    = baseAgent_Inf.solution[0].mNrmSS
-    UnempPrb   = baseAgent_Inf.UnempPrb
+    Rfree = baseAgent_Inf.Rfree
+    CRRA = baseAgent_Inf.CRRA
+    EPermGroFac = baseAgent_Inf.PermGroFac[0]
+    mNrmTrg = baseAgent_Inf.solution[0].mNrmSS
+    UnempPrb = baseAgent_Inf.UnempPrb
 
     κ_Min = 1.0-(Rfree**(-1.0))*(Rfree*DiscFac)**(1.0/CRRA)
     h_inf = (1.0/(1.0-EPermGroFac/Rfree))
-    cFunc_Uncnst = lambda m: (h_inf -1)* κ_Min + κ_Min*m
-    cFunc_TopBnd = lambda m: (1 - UnempPrb ** (1.0/CRRA)*(Rfree*DiscFac)**(1.0/CRRA)/Rfree)*m
-    cFunc_BotBnd = lambda m: (1 -(Rfree*DiscFac)**(1.0/CRRA)/Rfree) * m
+    def cFunc_Uncnst(m): return (h_inf - 1) * κ_Min + κ_Min*m
+    def cFunc_TopBnd(m): return (1 - UnempPrb ** (1.0/CRRA)*(Rfree*DiscFac)**(1.0/CRRA)/Rfree)*m
+    def cFunc_BotBnd(m): return (1 - (Rfree*DiscFac)**(1.0/CRRA)/Rfree) * m
 
     # Plot the consumption function and its bounds
     cMaxLabel = r"c̅$(m) = (m-1+h)κ̲$"  # Use unicode kludge
     cMinLabel = r"c̲$(m)= (1-\Phi_{R})m = κ̲ m$"
-    
+
     # mKnk is point where the two upper bounds meet
-    mKnk = ((h_inf-1)* κ_Min)/((1 - UnempPrb**(1.0/CRRA)*(Rfree*DiscFac)**(1.0/CRRA)/Rfree)-κ_Min)
+    mKnk = ((h_inf-1) * κ_Min)/((1 - UnempPrb**(1.0/CRRA)*(Rfree*DiscFac)**(1.0/CRRA)/Rfree)-κ_Min)
     mBelwKnkPts = 300
     mAbveKnkPts = 700
     mBelwKnk = np.linspace(mPlotMin,mKnk,mBelwKnkPts)
@@ -493,8 +501,8 @@ def makeTargetMfig(Rfree, DiscFac, CRRA, PermShkStd, TranShkStd):
     baseAgent_Inf.CRRA = CRRA
     baseAgent_Inf.PermShkStd = [PermShkStd]
     baseAgent_Inf.TranShkStd = [TranShkStd]
-    baseAgent_Inf.updateIncomeProcess()
-    baseAgent_Inf.checkConditions()
+    baseAgent_Inf.update_income_process()
+    baseAgent_Inf.check_conditions()
     mPlotMin = 0
     mPlotMax = 250
     baseAgent_Inf.aXtraMax = mPlotMax
@@ -558,12 +566,12 @@ def makeTargetMfig(Rfree, DiscFac, CRRA, PermShkStd, TranShkStd):
 #     else:         # Else the upper bound is the solution to the unconstrained PF model
 #         conFunc_PF = PerfForesightConsumerType(verbose=0, cycles=0,**base_params_PF)
 
-#     baseEx_inf.checkConditions(verbose=0)
+#     baseEx_inf.check_conditions(verbose=0)
 #     conFunc_PF.solve()
-#     conFunc_PF.unpackcFunc()
-#     baseEx_inf.updateIncomeProcess()
+#     conFunc_PF.unpack('cFunc')
+#     baseEx_inf.update_income_process()
 #     baseEx_inf.solve()
-#     baseEx_inf.unpackcFunc()
+#     baseEx_inf.unpack('cFunc')
 
 #     # conFunc_PF = lambda m: (h_inf - 1) * k_lower + k_lower * m
     
