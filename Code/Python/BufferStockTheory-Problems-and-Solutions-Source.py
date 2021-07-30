@@ -268,6 +268,7 @@ PermGroFac, permShkStd, tranShkStd = base_params['PermGroFac'][0], base_params['
 
 # Some technical settings that are not interesting for our purposes
 base_params['LivPrb'] = [1.0]   # 100 percent probability of living to next period
+base_params['CubicBool'] = True    # Use cubic spline interpolation
 base_params['T_cycle'] = 1       # No 'seasonal' cycles
 base_params['BoroCnstArt'] = None    # No artificial borrowing constraint
 # %% [markdown]
@@ -283,11 +284,13 @@ base_params['BoroCnstArt'] = None    # No artificial borrowing constraint
 # Create a buffer stock consumer instance by invoking the IndShockConsumerType class
 # with the built-in parameter dictionary "base_params"
 
-base_params['cycles'] = 100  # periods to solve from end
+periods_to_solve = 100
+
 # Construct finite horizon agent with baseline parameters
 baseAgent_Fin = \
     IndShockConsumerType(**base_params,
-                         horizon='finite')
+                         horizon='finite',
+                         cycles=periods_to_solve)
 
 baseAgent_Fin.solve(quietly=False)  # Solve the model
 
@@ -360,55 +363,73 @@ makeFig('cFuncsConverge')  # Comment out if you want to run uninterrupted
 
 # Turns out that we have to make the probability REALLY small
 
-# Construct solution for truly constrained consumer:
-BoroCnst_par = deepcopy(base_params)  # regular equals sign would make an alias
+# Construct solution for truly constrained consumer
+BoroCnst_par = deepcopy(base_params)
+BoroCnst_par['CubicBool'] = False  # Cubic approx does not work will with kinks
+BoroCnst_par['UnempPrb'] = 0  # No risk of unemployment, just transitory shocks
+BoroCnst_par['BoroCnstArt'] = 0.0  # Cannot borrow more than 0.0 of permanent income
+# baseBoroCnst['IncUnemp'] = 0.3  # Assume unemployment insurance of 0.3
 
-BoroCnst_par['UnempPrb'] = 0  # No risk of unemployment
-BoroCnst_par['BoroCnstArt'] = 0.0  # 0.0 times permanent income
-BoroCnst_par['cycles'] = 2  # a 2 period model
+periods_to_solve = 2
+baseBoroCnstEx = IndShockConsumerType(**BoroCnst_par,
+                                      horizon='finite',
+                                      cycles=periods_to_solve,
+                                      quietly=True)
+baseBoroCnstEx.solve(quietly=True)
+baseBoroCnstEx.unpack('cFunc')
 
-# One way to turn off uncertainty is to set tran and perm shock std to zero
-BoroCnst_par['tranShkStd'] = BoroCnst_par['permShkStd'] = [0.]
-BoroCnst_par['tranShkCount'] = BoroCnst_par['permShkCount'] = 1  # 1 option
+cFuncList = list()  # Create empty list for storing consumption functions
 
-baseBoroCnstEx = IndShockConsumerType(**BoroCnst_par, quietly=True)
-baseBoroCnstEx.solve(quietly=False, messaging_level=logging.DEBUG)
+# Period [-1] is period-T solution (c=m)
+# Period [-2] is the first 'interesting' period (where constraint matters)
+cFuncList.append(baseBoroCnstEx.cFunc[-2])
 
-cFuncList = list()  # Create empty list for storing c functions to plot
+# Now set up unconstrained two period solution
+unconstr_par = deepcopy(BoroCnst_par)
+# unconst_params['IncUnemp'] = 0.3 # If unemployed,income is zero
+unconstr_par['BoroCnstArt'] = None  # No 'artificial' constraint
 
-# solution[0] is most recently solved solution object:
-cFuncList.append(baseBoroCnstEx.solution[0].cFunc)
+unconstAgent = IndShockConsumerType(**unconstr_par,
+                                    horizon='finite',
+                                    cycles=periods_to_solve,
+                                    quietly=True)  # base_params has no constraint
 
-# Unconstrained two period solution:
-unconstr_par_no_unemp = deepcopy(BoroCnst_par)  # OK to modify a deepcopy
-unconstr_par_no_unemp['BoroCnstArt'] = None  # No 'artificial' constraint @ 0
+unconstAgent_base = deepcopy(unconstAgent)
+unconstAgent_base.solve(quietly=True)        # Solve the model under baseline parameter values
+unconstAgent_base.unpack('cFunc')  # Make the consumption function easily accessible
+cFuncList.append(unconstAgent_base.cFunc[-2])
 
-unconstAgent_no_unemp = \
-    IndShockConsumerType(**unconstr_par_no_unemp, quietly=True)
-
-unconstAgent_no_unemp.solve(quietly=True)
-unconstAgent_no_unemp.unpack('cFunc')  # Make c function(s) accessible
-cFuncList.append(unconstAgent_no_unemp.cFunc[-2])
-
-unconstr_par_with_unemp = unconstr_par_no_unemp
-unconstr_par_with_unemp['IncUnemp'] = 0.0  # 0 income when unemployed
-
+# Consumption function for unconstrained
+# cFuncList0.append(unconstAgent_base.cFunc[-2])
+# cFuncList0=deepcopy(cFuncList)
+# cFuncList = list()  # Create empty list for storing consumption functions
+unconstAgentList = list()
 # Now consider three alternative values of unemployment probability
 UnempPrbList = [0.001, 0.0001, 0.00001]
+unconstr_With_Risk_of_Zero_income_par = deepcopy(unconstr_par)
+unconstr_With_Risk_of_Zero_income_par['IncUnemp'] = 0.0
 
-i = 0  # loop counter
+unconstr_with_risk = IndShockConsumerType(
+    **unconstr_With_Risk_of_Zero_income_par,
+    horizon='finite',
+    cycles=periods_to_solve,
+    verbose=False)
+i = 0
 
 for UnempPrb in UnempPrbList:
-    unconstr_par_with_unemp['UnempPrb'] = UnempPrbList[i]
-    unconstAgentNow = \
-        IndShockConsumerType(**unconstr_par_with_unemp, quietly=True)
+    unconstAgentNow = deepcopy(unconstr_with_risk)
+    unconstAgentNow.UnempPrb = UnempPrb
+    unconstAgentNow.update_income_process()  # After changing parameters, recompute distn
     unconstAgentNow.solve(quietly=True)
-    cFuncList.append(unconstAgentNow.solution[0].cFunc)  # last solved cFunc
+    unconstAgentNow.unpack('cFunc')
+    cFuncList.append(unconstAgentNow.cFunc[0])  # Get the T-1 c function
+    unconstAgentList.append(unconstAgentList)
     i += 1
 
 # Zoom in on consumption function in a region near the BoroCnstArt kink point
-Span, PermIncNorm = 0.5, 1.0
-plot_funcs(cFuncList, PermIncNorm-Span, PermIncNorm + Span)
+RangeAroundPermInc = 0.5
+PermIncNorm = 1
+plot_funcs(cFuncList, PermIncNorm-RangeAroundPermInc, PermIncNorm+RangeAroundPermInc)
 
 print('Drawing and storing solution')
 if drawFigs:
@@ -587,8 +608,6 @@ plt.close()
 # GICNrmFailsButGICRawHolds Example
 GICNrmFailsButGICRawHolds_params = dict(base_params)
 
-GICNrmFailsButGICRawHolds_params['cycles'] = 0  # 0 means inf horizon
-
 # Increase patience by increasing risk
 GICNrmFailsButGICRawHolds_params['permShkStd'] = [0.2]
 
@@ -757,12 +776,9 @@ print('Finite mNrmStE but infinite mNrmTrg')
 
 base_params['aXtraCount'] = base_params['aXtraCount'] * 20
 base_params['CubicBool'] = False
-base_params['cycles'] = 0  # Default for infinite horizon model
-
 baseAgent_Inf = IndShockConsumerType(
-    **base_params,
-    horizon='infinite',  # Infinite horizon
-    quietly=True)  # construct it silently
+    cycles=0    # Infinite horizon
+    , **base_params, quietly=True)  # construct it silently
 
 
 # %% [markdown] {"tags": []}
@@ -812,10 +828,12 @@ baseAgent_Inf = IndShockConsumerType(
 
 # %% {"jupyter": {"outputs_hidden": false}, "pycharm": {"name": "#%%\n"}}
 # Solve baseline parameters agent
+#base_params['CubicBool'] = False
 tweaked_params = deepcopy(base_params)
-tweaked_params['DiscFac'] = 0.970  # Tweak to make figure clearer
+tweaked_params['DiscFac'] = 0.970  # Tweak baseline parameter to make figure readable
 baseAgent_Inf = IndShockConsumerType(
-    **tweaked_params, quietly=True)  # construct it silently
+    cycles=0    # Infinite horizon
+    , **tweaked_params, quietly=True)  # construct it silently
 
 baseAgent_Inf.solve(
     quietly=False, messaging_level=logging.INFO)  # Solve it with info
@@ -1100,7 +1118,7 @@ PFGICRawHoldsFHWCFailsRICFails_par['T_retire'] = 0
 PFGICRawHoldsFHWCFailsRICFails_par['cycles'] = 400  # This many periods
 PFGICRawHoldsFHWCFailsRICFails_par['MaxKinks'] = 400
 PFGICRawHoldsFHWCFailsRICFails_par['quiet'] = False
-PFGICRawHoldsFHWCFailsRICFails_par['BoroCnstArt'] = 0.0  # Borrowing constraint
+PFGICRawHoldsFHWCFailsRICFails_par['BoroCnstArt'] = 0.0    # Borrowing constraint
 PFGICRawHoldsFHWCFailsRICFails_par['LivPrb'] = [1.0]
 
 # Create the agent
