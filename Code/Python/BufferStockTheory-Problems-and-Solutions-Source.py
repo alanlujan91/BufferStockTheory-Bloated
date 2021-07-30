@@ -267,9 +267,7 @@ base_params['tranShkStd'] = [0.1]   # Standard deviation of log transitory incom
 PermGroFac, permShkStd, tranShkStd = base_params['PermGroFac'][0], base_params['permShkStd'][0], base_params['tranShkStd'][0]
 
 # Some technical settings that are not interesting for our purposes
-base_params['LivPrb'] = [1.0]   # 100 percent probability of living to next period
-base_params['CubicBool'] = True    # Use cubic spline interpolation
-base_params['T_cycle'] = 1       # No 'seasonal' cycles
+base_params['LivPrb'] = [1.0]   # 100 percent chance of living to next period
 base_params['BoroCnstArt'] = None    # No artificial borrowing constraint
 # %% [markdown]
 # ## Convergence of the Consumption Rules
@@ -598,8 +596,8 @@ GICNrmFailsButGICRawHolds = \
                          )
 # %% {"tags": []}
 # Solve the model for these parameter values
-GICNrmFailsButGICRawHolds.tolerance = 0.0000001
-GICNrmFailsButGICRawHolds.tolerance = 100
+GICNrmFailsButGICRawHolds.tolerance = 0.01
+
 GICNrmFailsButGICRawHolds.solve(
     quietly=True,  # Suppress output
 )
@@ -767,46 +765,37 @@ baseAgent_Inf = IndShockConsumerType(
 # %% [markdown] {"tags": []}
 # ### [Target $m$, Expected Consumption Growth, and Permanent Income Growth](https://www.econ2.jhu.edu/people/ccarroll/papers/BufferStockTheory/#AnalysisoftheConvergedConsumptionFunction)
 #
-# The next figure, [Analysis of the Converged Consumption Function](https://www.econ2.jhu.edu/people/ccarroll/papers/BufferStockTheory/#cGroTargetFig), shows expected growth factors for the levels of consumption $\cLev$ and market resources $\mLev$ as a function of the market resources ratio $\mNrm$ for a consumer behaving according to the converged consumption rule, along with the growth factor for an unconstrained perfect foresight consumer which is constant at $\APF$ and the growth factor for permanent income which is constant at $\PermGroFac$.
+# The next figure, [Analysis of the Converged Consumption Function](https://www.econ2.jhu.edu/people/ccarroll/papers/BufferStockTheory/#cGroTargetFig), shows expected growth factors for the levels of consumption $\cLev$ and market resources $\mLev$ as a function of the market resources ratio $\mNrm$ for a consumer behaving according to the converged consumption rule, along with the growth factor for $\mNrm$ itself, and the (constant) growth factors for consumption and expected permanent income, $\APF$ and $\PermGroFac$.
 #
 # The growth factor for consumption can be computed without knowing the _level_ of the consumer's permanent income:
 #
 # \begin{eqnarray*}
 # \Ex_{t}[\cLev_{t+1}/\cLev_{t}] & = & \Ex_{t}\left[\frac{\pLev_{t+1}\cFunc(m_{t+1})}{\pLev_{t}\cFunc(m_{t})}\right] \\
 # % & = & \Ex_{t}\left[\frac{\PermGroFac \permShk_{t+1} \pLev_{t}}{\pLev_{t}}\frac{\cFunc(m_{t+1})}{\cFunc(m_{t})}\right] \\
-# & = & \Ex_{t}\left[\frac{\PermGroFac \permShk_{t+1} \cFunc(m_{t+1})}{\cFunc(m_{t})}\right]
+# & = & \left[\frac{\PermGroFac \permShk_{t+1} \cFunc(m_{t+1})}{\cFunc(m_{t})}\right]
 # \end{eqnarray*}
 #
 # and similarly the growth factor for market resources is:
 #
 # \begin{eqnarray*}
 # \Ex_{t}[\mLev_{t+1}/\mLev_{t}]
-# & = & \Ex_{t}\left[\frac{\PermGroFac \permShk_{t+1} \mNrm_{t+1}}{\mNrm_{t}}\right]
-# \\ & = & \Ex_{t}\left[\frac{\PermGroFac \permShk_{t+1} \bNrm_{t+1}+\tranShk_{t+1}}{\mNrm_{t}}\right]
-# \\ & = & \Ex_{t}\left[\frac{\PermGroFac \permShk_{t+1} (\aNrm_{t}\Rfree/(\PermGroFac \permShk_{t+1}))+\tranShk_{t+1}}{\mNrm_{t}}\right]
-# \\ & = & \Ex_{t}\left[\frac{\aNrm_{t}\Rfree+\tranShk_{t+1}}{\mNrm_{t}}\right]
-# \\ & = & \Ex_{t}\left[\frac{\aNrm_{t}\Rfree+1}{\mNrm_{t}}\right]
+# & = & \Ex_{t}\left[\frac{\PermGroFac \permShk_{t+1} \mNrm_{t+1}} {\mNrm_{t}} \right]
+# \\ & = & \Ex_{t}\left[\frac{\PermGroFac \permShk_{t+1} (\aNrm_{t}\Rfree/(\PermGroFac \permShk_{t+1}))+\tranShk_{t+1}}
+# {\mNrm_{t}}\right]
+# %\\ & = & \Ex_{t}\left[\frac{\aNrm_{t}\Rfree+\tranShk_{t+1}}{\mNrm_{t}}\right]
+# \\ & = & \left[\frac{\aNrm_{t}\Rfree+1}{\mNrm_{t}}\right]
 # \end{eqnarray*}
 #
 #
 
 # %% [markdown]
+# For $\mNrm$ things are slightly more complicated:
 # \begin{eqnarray*}
-# \Ex_{t}[m_{t+1}-m_{t}]
-# & = & \Ex_{t}\left[(m_{t}-c_{t})(\Rfree/(\permShk_{t+1}\PermGroFac)) +\tranShk_{t+1}\right] - m_{t} \\
-# & = & (m_{t}-c_{t})\Rfree\Ex_{t}\left[\permShk^{-1}_{t+1}\PermGroFac\right] +1 - m_{t} \\
-# & = & a_{t}\Rfree\Ex_{t}\left[\permShk^{-1}_{t+1}\PermGroFac\right] +1 - m_{t}
+# \Ex_{t}[m_{t+1}]
+# & = & \Ex_{t}\left[(m_{t}-c_{t})(\Rfree/(\permShk_{t+1}\PermGroFac)) +\tranShk_{t+1}\right]\\
+# & = & a_{t}\Rfree\Ex_{t}\left[(\permShk_{t+1}\PermGroFac)^{-1}\right] +1 \\
+# \Ex_{t}\left[\frac{m_{t+1}}{m_{t}}\right] & = & \left(\frac{a_{t}\Rfree\Ex_{t}\left[(\permShk_{t+1}\PermGroFac)^{-1}\right]+1}{\mNrm_{t}}\right)
 # \end{eqnarray*}
-#
-# \begin{eqnarray*}
-# \Ex_{t}[\mLev_{t+1}/(p_{t}\PermGroFac \permShk_{t+1})/(\mLev_{t}/p_{t})]
-# & = & \Ex_{t}\left[\frac{\mLev_{t+1}/(\PermGroFac \permShk_{t+1})}{\mLev_{t}}\right] \\
-# & = & \Ex_{t}\left[\frac{(m_{t}-c_{t})(\Rfree/(\permShk_{t+1}\PermGroFac)) +\tranShk_{t+1}}{m_{t}}\right] \\
-# & = & \Ex_{t}\left[\frac{a_{t}(\Rfree/(\permShk_{t+1}\PermGroFac) - \Rfree + \Rfree) +1}{m_{t}}\right] \\
-# & = & (a_{t}/m_{t})\Rfree\Ex_{t}\left[1/(\permShk_{t+1}\PermGroFac)- 1)\right]+ \Ex_{t}[\mLev_{t+1}/\mLev_{t}] \\
-# \lim_{m_{t} \uparrow \infty}  & = & \PatR (\bar{\psi} - 1) + \PermGro
-# \end{eqnarray*}
-#
 #
 
 # %% {"jupyter": {"outputs_hidden": false}, "pycharm": {"name": "#%%\n"}}
@@ -818,9 +807,6 @@ baseAgent_Inf = IndShockConsumerType(
 
 baseAgent_Inf.solve(
     quietly=False, messaging_level=logging.INFO)  # Solve it with info
-
-# %%
-
 
 # %%
 # Plot growth rates
@@ -921,7 +907,7 @@ makeFig('cGroTargetFig')
 # [The next figure](https://www.econ2.jhu.edu/people/ccarroll/papers/BufferStockTheory/#cFuncBounds)
 # illustrates theoretical bounds for the consumption function.
 #
-# We define two useful variables: lower bound of $\MPC$ (marginal propensity to consume) and limit of $h$ (Human wealth), along with some functions such as the limiting perfect foresight consumption function $\bar{c}(m)$, the upper bound function $\bar{\bar c}(m)$, and the lower bound function \underline{_c_}$(m)$.
+# We define two useful variables: lower bound of $\MPC$ (marginal propensity to consume) and limit of $h$ (Human wealth), along with some functions such as the limiting perfect foresight consumption function $\bar{c}(m)$, the upper bound function $\bar{\bar c}(m)$, and the lower bound function $\underline{c}$(m).
 
 # %% {"tags": []}
 # Define mpc_Min, h_inf and PF consumption function, upper and lower bound of c function
