@@ -288,12 +288,10 @@ base_params['cycles'] = 100  # periods to solve from end
 # Construct finite horizon agent with baseline parameters
 baseAgent_Fin = \
     IndShockConsumerType(**base_params,
-                         horizon='finite')
+                         quietly=True)  # Don't say anything during setup
 
-baseAgent_Fin.solve(quietly=False)  # Solve the model
+baseAgent_Fin.solve(quietly=True)  # Solve the model quietly
 
-
-# baseAgent_Fin.unpack('cFunc')  # Make cFunc easily accessible
 baseAgent_Fin.unpack('cFunc')
 cFunc = baseAgent_Fin.cFunc
 
@@ -403,7 +401,7 @@ for UnempPrb in UnempPrbList:
     unconstr_par_with_unemp['UnempPrb'] = UnempPrbList[i]
     unconstAgentNow = \
         IndShockConsumerType(**unconstr_par_with_unemp, quietly=True)
-    unconstAgentNow.solve(quietly=True)
+    unconstAgentNow.solve(quietly=False)
     cFuncList.append(unconstAgentNow.solution[0].cFunc)  # last solved cFunc
     i += 1
 
