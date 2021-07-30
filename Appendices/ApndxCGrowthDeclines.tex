@@ -4,7 +4,22 @@
 \begin{document}
 \hypertarget{ApndxCGrowthDeclines}{}
 \section{When Is Consumption Growth Declining in $m$?}\label{sec:ApndxCGrowthDeclines}
+\label{subsec:dcgdxneg}
 
+Figure~\ref{fig:cGroTargetFig} depicts the expected consumption growth factor as a strictly
+declining function of the cash-on-hand ratio. To investigate this,
+define
+\begin{align*}
+  \pmb{\Upsilon}(\mRat_{t})  & \equiv  \PGro_{t+1} \mathring{\cFunc}(\Rnorm_{t+1}\aFunc(\mRat_{t})+\tShkAll_{t+1})/\mathring{\cFunc}(\mRat_{t})  = \cLevBF_{t+1}/\cLevBF_{t}
+\end{align*}
+and the proposition in which we are interested is
+\begin{align*}
+  (d/d\mRat_{t})\Ex_{t}[\underbrace{\pmb{\Upsilon}(\mRat_{t})}_{\equiv \pmb{\Upsilon}_{t+1}}]  & < 0  
+\end{align*}
+or differentiating through the expectations operator, what we want is
+\begin{align}
+  \Ex_{t}\left[\PGro_{t+1} \left(\frac{\mathring{\cFunc}^{\prime}(\mRat_{t+1})\Rnorm_{t+1}\aFunc^{\prime}(\mRat_{t})\mathring{\cFunc}(\mRat_{t})-\mathring{\cFunc}(\mRat_{t+1})\mathring{\cFunc}^{\prime}(\mRat_{t})}{\mathring{\cFunc}(\mRat_{t})^{2}}\right)\right]  & < 0 \label{eq:kappaPrimeLT0}.
+\end{align}
 
 Henceforth indicating appropriate arguments by the corresponding
 subscript (e.g.\ $\cFunc_{t+1}^{\prime} \equiv \cFunc^{\prime}(\mRat_{t+1})$), since
