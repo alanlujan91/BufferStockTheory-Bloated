@@ -60,9 +60,10 @@
 #
 # An [interactive dashboard](https://econ-ark.org/BufferStockStockTheory/#Dashboard) allows you to modify parameters to see how the figures change.
 #
-# (In JupyterLab, click on the $\bullet$$\bullet$$\bullet$ patterns to expose the runnable code)
+# - JupyterLab, click on the $\bullet$$\bullet$$\bullet$ patterns to expose the runnable code
+# - in either a Jupyter notebook or JupyterLab, click a double triangle to execute the code and generate the figures
 
-# %% {"tags": []}
+# %% {"tags": [], "jupyter": {"source_hidden": true}}
 # This cell does some setup
 
 # Import required python packages
@@ -114,7 +115,7 @@ except ImportError:  # windows and MacOS requires manual install
 
 setup_latex_env_notebook(pf, latexExists)
 
-# %% {"tags": []}
+# %% {"tags": [], "jupyter": {"source_hidden": true}}
 # check if GUI is present if not then switch drawFigs to False and force saveFigs to be True
 if not find_gui():
     drawFigs = False
@@ -247,7 +248,7 @@ def makeFig(figure_name, target_dir="../../Figures"):
 # m_{t+1} &=& a_t \Rfree/(\PermGroFac \permShk_{t+1}) + \tranShk_{t+1} \\
 # \end{eqnarray*}
 
-# %% {"tags": []}
+# %% {"tags": [], "jupyter": {"source_hidden": true}}
 # Import default parameter values (init_idiosyncratic_shock)
 
 # Set the parameters for the baseline results in the paper
@@ -261,7 +262,7 @@ base_params['UnempPrb'] = UnempPrb = 0.005
 base_params['IncUnemp'] = IncUnemp = 0.0   # Induces natural borrowing constraint
 base_params['permShkStd'] = [0.1]   # Standard deviation of log permanent income shocks
 base_params['tranShkStd'] = [0.1]   # Standard deviation of log transitory income shocks
-# %% {"tags": []}
+# %% {"tags": [], "jupyter": {"source_hidden": true}}
 # Uninteresting housekeeping and details
 # Make global variables for the things that were lists above -- uninteresting housekeeping
 PermGroFac, permShkStd, tranShkStd = base_params['PermGroFac'][0], base_params['permShkStd'][0], base_params['tranShkStd'][0]
@@ -278,7 +279,7 @@ base_params['BoroCnstArt'] = None    # No artificial borrowing constraint
 # c(m) = \lim_{n \uparrow \infty} c_{T-n}(m) \notag
 # $
 
-# %% {"tags": []}
+# %% {"tags": [], "jupyter": {"source_hidden": true}}
 # Create a buffer stock consumer instance by invoking the IndShockConsumerType class
 # with the built-in parameter dictionary "base_params"
 
@@ -294,7 +295,7 @@ baseAgent_Fin.unpack('cFunc')
 cFunc = baseAgent_Fin.cFunc
 
 
-# %% {"tags": []}
+# %% {"tags": [], "jupyter": {"source_hidden": true}}
 # Plot the different consumption rules for the different periods
 
 mPlotMin = 0
@@ -338,7 +339,7 @@ makeFig('cFuncsConverge')  # Comment out if you want to run uninterrupted
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
 # Use the [interactive dashboard](#interactive-dashboard) to explore the effects of changes in patience, risk aversion, or risk
 
-# %% [markdown] {"tags": []}
+# %% [markdown] {"tags": [], "jupyter": {"source_hidden": true}}
 # ### PROBLEM: Natural Borrowing Constraint Approaches Artificial Constraint
 #
 # Show numerically the result that is proven analytically in [The-Liquidity-Constrained-Solution-as-a-Limit](https://econ-ark.github.io/BufferStockTheory/#The-Liquidity-Constrained-Solution-as-a-Limit), by solving the model for successively smaller values of $\UnempPrb$.
@@ -352,7 +353,7 @@ makeFig('cFuncsConverge')  # Comment out if you want to run uninterrupted
 #
 # Create a cell or cells in the notebook below this cell and put your solution there; comment on the size of $\UnempPrb$ needed to make the two models visually indistinguishable
 
-# %% {"tags": []}
+# %% {"tags": [], "jupyter": {"source_hidden": true}}
 # SOLUTION
 
 # Turns out that we have to make the probability REALLY small
@@ -580,7 +581,7 @@ plt.close()
 #
 # This example was constructed by quadrupling the variance of the permanent shocks from the baseline parameterization.  The extra precautionary saving induced by increased uncertainty is what pushes the agent into the region without a target wealth ratio.
 
-# %% {"tags": []}
+# %% {"tags": [], "jupyter": {"source_hidden": true}}
 # GICNrmFailsButGICRawHolds Example
 
 base_params['cycles'] = 0  # revert to default of infinite horizon
@@ -594,7 +595,7 @@ GICNrmFailsButGICRawHolds = \
     IndShockConsumerType(**GICNrmFailsButGICRawHolds_params,
                          quietly=False,  # If true, output would be suppressed
                          )
-# %% {"tags": []}
+# %% {"tags": [], "jupyter": {"source_hidden": true}}
 # Solve the model for these parameter values
 GICNrmFailsButGICRawHolds.tolerance = 0.01
 
@@ -641,7 +642,7 @@ distance_now = GICNrmFailsButGICRawHolds.solution[0].distance_last
 print('\ndistance_now < distance_original: ' +
       str(distance_now < distance_original))
 
-# %%
+# %% {"jupyter": {"source_hidden": true}, "tags": []}
 
 # Again increase the range
 GICNrmFailsButGICRawHolds.aXtraMax = GICNrmFailsButGICRawHolds.aXtraMax * 10
@@ -666,9 +667,7 @@ distance_now = GICNrmFailsButGICRawHolds.solution[0].distance_last
 print('\ndistance_now < distance_original: ' +
       str(distance_now < distance_original))
 
-# %%
-
-# %% {"tags": []}
+# %% {"tags": [], "jupyter": {"source_hidden": true}}
 # Plot GICNrmFailsButGICRawHolds
 
 soln = GICNrmFailsButGICRawHolds.solution[0]  # Short alias for solution
@@ -798,7 +797,7 @@ baseAgent_Inf = IndShockConsumerType(
 # \end{eqnarray*}
 #
 
-# %% {"jupyter": {"outputs_hidden": false}, "pycharm": {"name": "#%%\n"}}
+# %% {"jupyter": {"source_hidden": true}, "pycharm": {"name": "#%%\n"}, "tags": []}
 # Solve baseline parameters agent
 tweaked_params = deepcopy(base_params)
 tweaked_params['DiscFac'] = 0.970  # Tweak to make figure clearer
@@ -808,7 +807,7 @@ baseAgent_Inf = IndShockConsumerType(
 baseAgent_Inf.solve(
     quietly=False, messaging_level=logging.INFO)  # Solve it with info
 
-# %%
+# %% {"tags": [], "jupyter": {"source_hidden": true}}
 # Plot growth rates
 
 soln = baseAgent_Inf.solution[0]        # shorthand
@@ -909,7 +908,7 @@ makeFig('cGroTargetFig')
 #
 # We define two useful variables: lower bound of $\MPC$ (marginal propensity to consume) and limit of $h$ (Human wealth), along with some functions such as the limiting perfect foresight consumption function $\bar{c}(m)$, the upper bound function $\bar{\bar c}(m)$, and the lower bound function $\underline{c}$(m).
 
-# %% {"tags": []}
+# %% {"tags": [], "jupyter": {"source_hidden": true}}
 # Define mpc_Min, h_inf and PF consumption function, upper and lower bound of c function
 
 baseAgent_Inf = IndShockConsumerType(**base_params, quietly=True)  # construct it silently
@@ -931,7 +930,7 @@ def cFunc_TopBnd(m): return mpc_Max * m
 def cFunc_BotBnd(m): return mpc_Min * m
 
 
-# %% {"tags": []}
+# %% {"tags": [], "jupyter": {"source_hidden": true}}
 # Plot the consumption function and its bounds
 
 cMaxLabel = r'$\overline{c}(m)= (m-1+h)\underline{\kappa}$'
@@ -1003,7 +1002,7 @@ makeFig('cFuncBounds')
 #
 # The paper also derives an analytical limit $\bar{\MPC}$ for the MPC as $m$ approaches 0., its bounding value.  Strict concavity of the consumption function implies that the consumption function will be everywhere below a function $\bar{\MPC}m$, and strictly declining everywhere.  The last figure plots the MPC between these two limits.
 
-# %% {"tags": []}
+# %% {"tags": [], "jupyter": {"source_hidden": true}}
 # The last figure shows the upper and lower limits of the MPC
 
 mPlotMax = 8
@@ -1055,7 +1054,7 @@ makeFig('MPCLimits')
 #
 # [Two tables in the paper](https://econ-ark.github.io/BufferStockTheory/#Factors-Defined-And-Compared) summarize the various definitions, and then articulate conditions required for the problem to have a nondegenerate solution.  Among the nondegenerate cases, the most interesting result is that if the Growth Impatience Condition holds there will be a target level of wealth.
 
-# %% [markdown]
+# %% [markdown] {"tags": [], "heading_collapsed": "true"}
 # ### Appendix: Options for Interacting With This Notebook <a id='optionsForInstalling'></a>
 #
 # 1. [View (static version)](https://github.com/llorracc/BufferStockTheory/blob/master/Code/Python/BufferStockTheory.ipynb) on GitHub (warning:  GitHub does not render Jupyter notebooks reliably)
@@ -1068,10 +1067,10 @@ makeFig('MPCLimits')
 #    1. `cd REMARK/REMARKs/BufferStockTheory`
 #    1. `jupyter notebook BufferStockTheory.ipynb`
 
-# %% [markdown]
+# %% [markdown] {"tags": []}
 # ### Appendix: Perfect foresight agent failing both the FHWC and RIC
 
-# %%
+# %% {"tags": [], "jupyter": {"source_hidden": true}}
 PFGICRawHoldsFHWCFailsRICFails_par = deepcopy(init_perfect_foresight)
 
 # Replace parameters.
