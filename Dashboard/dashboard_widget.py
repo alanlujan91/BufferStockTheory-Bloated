@@ -1,3 +1,4 @@
+from HARK.core import _log
 import matplotlib.pyplot as plt
 import numpy as np
 from copy import deepcopy
@@ -104,6 +105,20 @@ PermGroFac_widget = [
         value=PermGroFac,  # Default value
         continuous_update=False,
         readout_format=".2f",
+        description="\u0393",
+    )
+    for i in range(5)
+]
+
+# Define a slider for permanent income growth
+PermGroFac_growth_widget = [
+    widgets.FloatSlider(
+        min=1.00,
+        max=1.04,
+        step=0.005,
+        value=PermGroFac,  # Default value
+        continuous_update=False,
+        readout_format=".3f",
         description="\u0393",
     )
     for i in range(5)
@@ -274,9 +289,10 @@ def makeGICFailExample(DiscFac, permShkStd, UnempPrb):
     # Shortcuts/aliases
     soln = GICFailsExample.solution[0]  # solution
     cFunc, Bilt, E_Next_ = soln.cFunc, soln.Bilt, soln.E_Next_
+    mNrmStE, mNrmTrg = Bilt.mNrmStE, Bilt.mNrmTrg
 
     E_d_mtp1_0 = E_Next_.c_where_E_Next_m_tp1_minus_m_t_eq_0
-    E_MGro_Bal = E_Next_.c_where_E_Next_permShk_times_m_tp1_minus_m_t_eq_0
+    E_MGro_Bal = E_Next_.c_where_E_Next_permGroShk_times_m_tp1_minus_m_t_eq_0
 
     mPlotMin, mPlotMax = 0, 20
     cPlotMin, cPlotMax = 0, 1.1 * E_d_mtp1_0(mPlotMax)
@@ -306,17 +322,21 @@ def makeGICFailExample(DiscFac, permShkStd, UnempPrb):
         top="off"
     )
 
-    plt.legend(fontsize='x-large')
+    _log.critical(f'mNrmTrg: {mNrmTrg:.3f}')
+    _log.critical(f'mNrmStE: {mNrmStE:.3f}')
+
+    plt.legend(fontsize='medium')
     plt.show()
     return None
 
 
 def cGroTargetFig_make(PermGroFac, DiscFac):
+
     gro_params = deepcopy(base_params)
     gro_params['PermGroFac'] = [PermGroFac]
     gro_params['DiscFac'] = DiscFac
     gro_params['aXtraGrid'] = 40
-    gro_params['aXtraMax'] = 200
+    gro_params['aXtraMax'] = 100
 
     baseAgent_Inf = IndShockConsumerType(
         **gro_params, quietly=True, messaging_level=logging.WARNING)  # construct it silently
@@ -327,8 +347,8 @@ def cGroTargetFig_make(PermGroFac, DiscFac):
         quietly=True, messaging_level=logging.WARNING)
 
     soln = baseAgent_Inf.solution[0]        # shorthand
-    Bilt, Pars, E_Next_ = soln.Bilt, soln.Pars, soln.E_Next_  # shorthand
-    # Retrieve parameters (makes code more readable)
+    Bilt, Pars, E_Next_, cFunc = soln.Bilt, soln.Pars, soln.E_Next_, soln.cFunc
+
     Rfree, DiscFac, CRRA, G = Pars.Rfree, Pars.DiscFac, Pars.CRRA, Pars.PermGroFac
 
     color_cons, color_mrktLev, color_mrktRat, color_perm = "blue", "red", "green", "orange"
@@ -345,11 +365,11 @@ def cGroTargetFig_make(PermGroFac, DiscFac):
     a_pts = m_pts - c_pts                       # values of a
 
     Ex_cLev_tp1_Over_pLev_t = [
-        soln.E_Next_.cLev_tp1_Over_pLev_t_from_a_t(a) for a in a_pts]
+        E_Next_.cLev_tp1_Over_pLev_t_from_a_t(a) for a in a_pts]
     Ex_mLev_tp1_Over_pLev_t = [
-        soln.E_Next_.mLev_tp1_Over_pLev_t_from_a_t(a) for a in a_pts]
+        E_Next_.mLev_tp1_Over_pLev_t_from_a_t(a) for a in a_pts]
     Ex_m_tp1_from_a_t = [
-        soln.E_Next_.m_tp1_from_a_t(a) for a in a_pts]
+        E_Next_.m_tp1_from_a_t(a) for a in a_pts]
 
     Ex_cLevGro = np.array(Ex_cLev_tp1_Over_pLev_t)/c_pts
     Ex_mLevGro = np.array(Ex_mLev_tp1_Over_pLev_t)/m_pts
@@ -358,54 +378,63 @@ def cGroTargetFig_make(PermGroFac, DiscFac):
     # Absolute Patience Factor = lower bound of consumption growth factor
     APF = (Rfree*DiscFac)**(1.0/CRRA)
 
-    fig, ax = plt.subplots(figsize=(12, 8))
+    fig, ax = plt.subplots(figsize=(12, 4))
 
     # Plot the Absolute Patience Factor line
-    ax.plot([0, mPlotMax], [APF, APF], color=color_cons,
-            label=r'C-Level-Growth: $\mathbb{E}_{t}[{\mathbf{c}}_{t+1}/{\mathbf{c}}_{t}]$')
+    ax.plot([0, mPlotMax], [APF, APF], color=color_cons, linestyle='dashed')
 
     # Plot the Permanent Income Growth Factor line
     ax.plot([0, mPlotMax], [G, G], color=color_perm)
 
     # Plot the expected consumption growth factor
-    ax.plot(m_pts, Ex_cLevGro, color=color_cons)
+    ax.plot(m_pts, Ex_cLevGro, color=color_cons,
+            label=r'$\mathbf{c}$-Level-Growth: $\mathbb{E}_{t}[{\mathbf{c}}_{t+1}/{\mathbf{c}}_{t}]$'
+            )
 
     # Plot the expect growth for the level of market resources
-    ax.plot(m_pts, Ex_mLevGro, color=color_mrktLev)
+    mLevGro_lbl, = ax.plot(m_pts, Ex_mLevGro, color=color_mrktLev,
+                           label=r'$\mathbf{m}$-Level-Growth: $\mathbb{E}_{t}[{\mathbf{m}}_{t+1}/{\mathbf{m}}_{t}]$')
 
     # Plot the expect growth for the market resources ratio
-    ax.plot(m_pts, Ex_mRatGro, color=color_mrktRat)
+    mRatGro_lbl, = ax.plot(m_pts, Ex_mRatGro, color=color_mrktRat,
+                           label=r'$m$-ratio Growth: $\mathbb{E}_{t}[m_{t+1}/m_{t}]$')
 
     # Axes limits
-    GroFacMin, GroFacMax, xMin = 0.94, 1.08, 1.1
+    GroFacMin, GroFacMax, xMin = 0.96, 1.08, 1.1
 
-    # Vertical lines at StE and Trg
-    mNrmStE_lbl, = ax.plot([mNrmStE, mNrmStE], [0, GroFacMax], color=color_mrktLev,
-                           label=r'M-Level-Growth: $\mathbb{E}_{t}[{\mathbf{m}}_{t+1}/{\mathbf{m}}_{t}]$')
-    ax.legend(handles=[mNrmStE_lbl])
+    if mNrmStE and mNrmStE < mPlotMax:
+        ax.plot(mNrmStE, PermGroFac, marker=".", markersize=15, color="black")
 
-    ax.set_xlim(xMin, mPlotMax * 1.1)
+#    mLevGro, = ax.plot([mNrmStE, mNrmStE], [0, GroFacMax], color=color_mrktLev,
+#                       label=r'$\mathbf{m}$-Level-Growth: $\mathbb{E}_{t}[{\mathbf{m}}_{t+1}/{\mathbf{m}}_{t}]$')
+#    ax.legend(handles=[mLevGro])
+
+    ax.set_xlim(xMin, mPlotMax * 1.2)
     ax.set_ylim(GroFacMin, GroFacMax)
 
-    if mNrmTrg:
-        mNrmTrg_lbl, = ax.plot([mNrmTrg, mNrmTrg], [0, GroFacMax], color=color_mrktRat,
-                               label=r'$m$-ratio Growth: $\mathbb{E}_{t}[m_{t+1}/m_{t}]$')
-        ax.legend(handles=[mNrmStE_lbl, mNrmTrg_lbl])
+#    mRatGro, = ax.plot([mNrmTrg, mNrmTrg], [0, GroFacMax], color=color_mrktRat,
+    ax.legend(handles=[mLevGro_lbl, mRatGro_lbl])
     ax.legend(prop=dict(size=fssml))
 
     ax.text(mPlotMax+0.01, PermGroFac,
             r"$\Gamma$", fontsize=fssml, fontweight='bold')
+
 #    ax.text(mPlotMax+0.01, Ex_cLevGro[-1],
 #            r"$\mathsf{E}_{t}[\mathbf{c}_{t+1}/\mathbf{c}_{t}]$", fontsize=fssml, fontweight='bold')
-    ax.text(mPlotMax+0.01, APF-0.001,
+    ax.text(mPlotMax+0.01, APF-0.003,
             r'$\Phi = (R\beta)^{1/\rho}$', fontsize=fssml, fontweight='bold')
 
     # Ticks
-    ax.tick_params(labelbottom=False, labelleft=True, left='off',
+#    ax.tick_params(labelbottom=False, labelleft=True, left='off',
+    ax.tick_params(labelbottom=True, labelleft=True, left='off',
                    right='on', bottom='on', top='off')
     plt.setp(ax.get_yticklabels(), fontsize=fssml)
 
-    ax.set_ylabel('Growth Factors', fontsize=fsmid, fontweight='bold')
+    _log.critical(f'mNrmTrg: {mNrmTrg:.3f}')
+    _log.critical(f'mNrmStE: {mNrmStE:.3f}')
+
+    plt.legend(fontsize='medium')
+    ax.set_ylabel('Growth Factors', fontsize=fsmid)
 
     plt.show()
     return None
@@ -489,7 +518,7 @@ def makeTargetMfig(Rfree, DiscFac, CRRA, permShkStd, TranShkStd):
     cPlotMin = 0, cFunc(mPlotMax)
 
     if Bilt.GICNrm:  # tattle
-        soln.check_GICNrm(quietly=False, messaging_level=logging.WARNING)
+        soln.check_GICNrm(soln, quietly=False, messaging_level=logging.WARNING)
 
     mBelwStE = np.linspace(mPlotMin, mPlotMax, 1000)
     EPermGroFac = inf_hor.PermGroFac[0]

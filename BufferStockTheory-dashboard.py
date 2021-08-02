@@ -52,14 +52,14 @@
 
 # %%
 # Some setup stuff
-
+from builtins import breakpoint
 # Get others' tools
 from ipywidgets import interact, interactive, fixed, interact_manual
 
 # Get HARK modeling tool
 from HARK.ConsumptionSaving.ConsIndShockModel import IndShockConsumerType
 
-# Get Dashboard tools
+# Get BufferStockTheory dashboard tools
 import Dashboard.dashboard_widget as BST
 
 # %% [markdown]
@@ -85,9 +85,9 @@ cFuncsConverge_widget=interactive(
 cFuncsConverge_widget
 
 # %% [markdown]
-# ## [If the GIC Fails, Target Wealth is Infinite ](http://econ.jhu.edu/people/ccarroll/papers/BufferStockTheory/#The-GIC)
+# ## [Growth Impatience (Raw and Normalized), and Pseudo-Steady-State versus Target Wealth](http://econ.jhu.edu/people/ccarroll/papers/BufferStockTheory/#The-GIC)
 #
-# [A figure](http://econ.jhu.edu/people/ccarroll/papers/BufferStockTheory/#FVACnotGIC) depicts a solution when the **FVAC** [(Finite Value of Autarky Condition)](https://llorracc.github.io/BufferStockTheory/#FVAC) and **WRIC** [(Weak Return Impatience Condition)](https://llorracc.github.io/BufferStockTheory/#WRIC) hold (so that the model has a solution) but the **GIC** [(Growth Impatience Condition)](https://llorracc.github.io/BufferStockTheory/#GIC) fails:
+# [A figure](http://econ.jhu.edu/people/ccarroll/papers/BufferStockTheory/#FVACnotGIC) in the paper depicts a solution when the **FVAC** [(Finite Value of Autarky Condition)](https://llorracc.github.io/BufferStockTheory/#FVAC) and **WRIC** [(Weak Return Impatience Condition)](https://llorracc.github.io/BufferStockTheory/#WRIC) hold (so that the model has a solution) but the **GIC** [(Growth Impatience Condition)](https://llorracc.github.io/BufferStockTheory/#GIC) fails:
 #
 # \begin{eqnarray}
 # \mathbb{E}\left[\frac{\Phi}{\Gamma\psi}\right] & < & 1
@@ -95,12 +95,11 @@ cFuncsConverge_widget
 #
 # (see [Calibrated Parameters](https://llorracc.github.io/BufferStockTheory/#Calibration) and [Definitions and Characteristics Calculated from Parameters](https://llorracc.github.io/BufferStockTheory/#Symbols))
 #
-# Use the slider to see what happens as you move $\Gamma$ from below to above its "cusp" value.  
+# Use the slider to see what happens as you move $\sigma_{\psi}$ from below to above the value that makes the GIC-Nrm condition fail.  
 #
 # | Param | Description | Code | Value |
 # | :---: | ---         | ---  | :---: |
-# | Γ | Permanent Income Growth Factor | $\texttt{PermGroFac}$ | 1.00 |
-# | R | Interest Factor | $\texttt{Rfree}$ | 1.06 |
+# | $\sigma_{\psi}$ | Std Dev Perm Shk | `permShkStd` | 0.2 |
 #
 #
 
@@ -134,14 +133,17 @@ GICFailsExample_widget
 # %% [markdown]
 # ### [Balanced Growth "Steady State Equilibrium" $m$, "Target" m, Expected Consumption Growth, and Permanent Income Growth](https://econ.jhu.edu/people/ccarroll/papers/BufferStockTheory/#AnalysisoftheConvergedConsumptionFunction)
 #
-# The next figure is shown in  [Analysis of the Converged Consumption Function](https://econ.jhu.edu/people/ccarroll/papers/BufferStockTheory/#cGroTargetFig), which shows the expected consumption growth factor $\mathrm{\mathbb{E}}_{t}[\pmb{\mathrm{c}}_{t+1}/\pmb{\mathrm{c}}_{t}]$ for a consumer behaving according to the converged consumption rule, along with the expected growth factor for market resources $\mathrm{\mathbb{E}}_{t}[\pmb{\mathrm{m}}_{t+1}/\pmb{\mathrm{m}}_{t}]$, and the expected growth factor for the ratio of market resources to permanent income, $\mathrm{\mathbb{E}}_{t}[m_{t+1}/m_{t}]$.
+# The next figure is shown in  [Analysis of the Converged Consumption Function](https://econ.jhu.edu/people/ccarroll/papers/BufferStockTheory/#cGroTargetFig), and depicts the expected consumption growth factor $\mathrm{\mathbb{E}}_{t}[\pmb{\mathrm{c}}_{t+1}/\pmb{\mathrm{c}}_{t}]$ for a consumer behaving according to the converged consumption rule, along with the expected growth factor for market resources $\mathrm{\mathbb{E}}_{t}[\pmb{\mathrm{m}}_{t+1}/\pmb{\mathrm{m}}_{t}]$, and the expected growth factor for the ratio of market resources to permanent income, $\mathrm{\mathbb{E}}_{t}[m_{t+1}/m_{t}]$.
 #
+# Manipulate the time preference and income growth factors to show the effects on target and pseudo-steady-state ("balanced growth") wealth, whose numerical values appear above the figure.
 
 # %% {"tags": []}
 # Explore what happens as you make the consumer more patient in two ways: β ↑ and Γ ↓
+
+BST.base_params['permShkStd'] = [0.1]  #  Restore the original default uncertainty
 cGroTargetFig_widget = interactive(
     BST.cGroTargetFig_make,
-    PermGroFac=BST.PermGroFac_widget[2],
+    PermGroFac=BST.PermGroFac_growth_widget[2],
     DiscFac=BST.DiscFac_growth_widget[2]
 )
 cGroTargetFig_widget
@@ -173,25 +175,6 @@ cFuncBounds_widget = interactive(
     CRRA=BST.CRRA_widget[3]
 )
 cFuncBounds_widget
-
-
-# %% [markdown]
-# ### [The Consumption Function and Target $m$](https://econ.jhu.edu/people/ccarroll/papers/BufferStockTheory/#cFuncBounds)
-#
-# This figure shows the $\mathrm{\mathbb{E}}_{t}[\Delta m_{t+1}]$ and consumption function $c(m_{t})$, along with the intersection of these two functions, which defines the target value of $m$.
-#
-# Use the sliders to explore the effects of transitory and permanent uncertainty, and of relative risk aversion ρ.
-
-# %%
-cRatTargetFig_widget = interactive(
-    BST.makeTargetMfig,
-    Rfree=BST.Rfree_widget[4],
-    DiscFac=BST.DiscFac_widget[4],
-    CRRA=BST.CRRA_widget[4],
-    permShkStd=BST.permShkStd_widget[4],
-    TranShkStd=BST.TranShkStd_widget[4],
-)
-cRatTargetFig_widget
 
 
 # %% [markdown]
