@@ -53,6 +53,19 @@ DiscFac_widget = [
     for i in range(5)
 ]  # beta unicode
 
+DiscFac_growth_widget = [
+    widgets.FloatSlider(
+        min=0.94,
+        max=0.99,
+        step=0.005,
+        value=DiscFac,  # Default value
+        continuous_update=False,
+        readout_format=".3f",
+        description="\u03B2",
+    )
+    for i in range(5)
+]  # beta unicode
+
 # Define a slider for relative risk aversion
 CRRA_widget = [
     widgets.FloatSlider(
@@ -210,7 +223,7 @@ def makeConvergencePlot(DiscFac, CRRA, Rfree, permShkStd):
 
     mPlotMin = 0
     mLocCLabels = 5.6  # Defines horizontal limit of figure
-    mPlotTop = 200  # 3.5 # 6.5    # Defines maximum m value where functions are plotted
+    mPlotTop = 6.5  # 3.5 # 6.5    # Defines maximum m value where functions are plotted
     mPts = 100      # Number of points at which functions are evaluated
 
     plt.figure(figsize=(12, 8))
@@ -302,9 +315,13 @@ def cGroTargetFig_make(PermGroFac, DiscFac):
     gro_params = deepcopy(base_params)
     gro_params['PermGroFac'] = [PermGroFac]
     gro_params['DiscFac'] = DiscFac
+    gro_params['aXtraGrid'] = 40
+    gro_params['aXtraMax'] = 200
 
     baseAgent_Inf = IndShockConsumerType(
         **gro_params, quietly=True, messaging_level=logging.WARNING)  # construct it silently
+
+    baseAgent_Inf.tolerance = baseAgent_Inf.tolerance/10
 
     baseAgent_Inf.solve(
         quietly=True, messaging_level=logging.WARNING)
@@ -314,9 +331,9 @@ def cGroTargetFig_make(PermGroFac, DiscFac):
     # Retrieve parameters (makes code more readable)
     Rfree, DiscFac, CRRA, G = Pars.Rfree, Pars.DiscFac, Pars.CRRA, Pars.PermGroFac
 
-    color_cons, color_mrktLev, color_mrktRat, color_perm = "blue", "red", "green", "black"
+    color_cons, color_mrktLev, color_mrktRat, color_perm = "blue", "red", "green", "orange"
 
-    mPlotMin, mCalcMax, mPlotMax = 0.0, 50, 2.20
+    mPlotMin, mCalcMax, mPlotMax = 0.3, 50, 8
 
     # Get StE and target values
     mNrmStE, mNrmTrg = Bilt.mNrmStE, Bilt.mNrmTrg
@@ -344,7 +361,8 @@ def cGroTargetFig_make(PermGroFac, DiscFac):
     fig, ax = plt.subplots(figsize=(12, 8))
 
     # Plot the Absolute Patience Factor line
-    ax.plot([0, mPlotMax], [APF, APF], color=color_cons)
+    ax.plot([0, mPlotMax], [APF, APF], color=color_cons,
+            label=r'C-Level-Growth: $\mathbb{E}_{t}[{\mathbf{c}}_{t+1}/{\mathbf{c}}_{t}]$')
 
     # Plot the Permanent Income Growth Factor line
     ax.plot([0, mPlotMax], [G, G], color=color_perm)
@@ -359,11 +377,11 @@ def cGroTargetFig_make(PermGroFac, DiscFac):
     ax.plot(m_pts, Ex_mRatGro, color=color_mrktRat)
 
     # Axes limits
-    GroFacMin, GroFacMax, xMin = 0.98, 1.06, 1.1
+    GroFacMin, GroFacMax, xMin = 0.94, 1.08, 1.1
 
     # Vertical lines at StE and Trg
-    mNrmStE_lbl, = ax.plot([mNrmStE, mNrmStE], [0, GroFacMax], color=color_mrktLev, linestyle="--",
-                           label=r'$\check{m}$: M-Balanced-Growth: $\mathbb{E}_{t}[{\mathbf{m}}_{t+1}/{\mathbf{m}}_{t}]=\Gamma$')
+    mNrmStE_lbl, = ax.plot([mNrmStE, mNrmStE], [0, GroFacMax], color=color_mrktLev,
+                           label=r'M-Level-Growth: $\mathbb{E}_{t}[{\mathbf{m}}_{t+1}/{\mathbf{m}}_{t}]$')
     ax.legend(handles=[mNrmStE_lbl])
 
     ax.set_xlim(xMin, mPlotMax * 1.1)
@@ -371,14 +389,16 @@ def cGroTargetFig_make(PermGroFac, DiscFac):
 
     if mNrmTrg:
         mNrmTrg_lbl, = ax.plot([mNrmTrg, mNrmTrg], [0, GroFacMax], color=color_mrktRat,
-                               linestyle="dotted", label=r'$\hat{m}$: Target: $\mathbb{E}_{t}[m_{t+1}]=m_{t}$')
+                               label=r'$m$-ratio Growth: $\mathbb{E}_{t}[m_{t+1}/m_{t}]$')
         ax.legend(handles=[mNrmStE_lbl, mNrmTrg_lbl])
     ax.legend(prop=dict(size=fssml))
 
-    ax.text(mPlotMax+0.01, Ex_cLevGro[-1],
-            r"$\mathsf{E}_{t}[\mathbf{c}_{t+1}/\mathbf{c}_{t}]$", fontsize=fssml, fontweight='bold')
+    ax.text(mPlotMax+0.01, PermGroFac,
+            r"$\Gamma$", fontsize=fssml, fontweight='bold')
+#    ax.text(mPlotMax+0.01, Ex_cLevGro[-1],
+#            r"$\mathsf{E}_{t}[\mathbf{c}_{t+1}/\mathbf{c}_{t}]$", fontsize=fssml, fontweight='bold')
     ax.text(mPlotMax+0.01, APF-0.001,
-            r'$\Phi = ((R)\beta)^{1/\rho}$', fontsize=fssml, fontweight='bold')
+            r'$\Phi = (R\beta)^{1/\rho}$', fontsize=fssml, fontweight='bold')
 
     # Ticks
     ax.tick_params(labelbottom=False, labelleft=True, left='off',
@@ -406,7 +426,7 @@ def makeBoundsFigure(UnempPrb, permShkStd, TranShkStd, DiscFac, CRRA):
     Bilt, Pars = soln.Bilt, soln.Pars
 
     cFunc = soln.cFunc
-    mPlotMin, mPlotMax = 0, 2500
+    mPlotMin, mPlotMax = 0, 25
     inf_hor.aXtraMax = mPlotMax
 
     # Retrieve parameters (makes code more readable)

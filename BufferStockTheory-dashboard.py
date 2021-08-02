@@ -52,7 +52,7 @@
 
 # %%
 # Some setup stuff
-from builtins import breakpoint
+
 # Get others' tools
 from ipywidgets import interact, interactive, fixed, interact_manual
 
@@ -95,7 +95,7 @@ cFuncsConverge_widget
 #
 # (see [Calibrated Parameters](https://llorracc.github.io/BufferStockTheory/#Calibration) and [Definitions and Characteristics Calculated from Parameters](https://llorracc.github.io/BufferStockTheory/#Symbols))
 #
-# Under the default parameter values, $\mathbb{E}[\psi^{-1}]=0.99$, $\Phi = 0.999$.  Use the slider to see what happens as you move $\Gamma$ from below to above its "cusp" value.  
+# Use the slider to see what happens as you move $\Gamma$ from below to above its "cusp" value.  
 #
 # | Param | Description | Code | Value |
 # | :---: | ---         | ---  | :---: |
@@ -142,7 +142,7 @@ GICFailsExample_widget
 cGroTargetFig_widget = interactive(
     BST.cGroTargetFig_make,
     PermGroFac=BST.PermGroFac_widget[2],
-    DiscFac=BST.DiscFac_widget[2]
+    DiscFac=BST.DiscFac_growth_widget[2]
 )
 cGroTargetFig_widget
 
