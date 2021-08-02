@@ -2,7 +2,7 @@
         \node (gamma) [right of = thorn, xshift = 5cm] {1.030};
         \node (rfree) [below of = thorn]{1.04};
         \node (pffvacFac) [right of = rfree] 
-        {1.035};
+        {$\underbrace{\mathsf{\Rfree}^{1/\CRRA}\PGro^{1 - 1/\CRRA}}_{\PFVAF}$};
         \node (pThorn) [left of = thorn] {0.072};
         \node (compgamma) [above of = gamma, xshift = -5cm, yshift = -2.5cm]{1.02};
         \node (fvacFac) [right of = thorn, yshift = -2cm]{1.030};
@@ -13,7 +13,7 @@
         \draw[->] (pffvacFac) to node {${\FHWC}$} (rfree);
         \draw[->] (pThorn) to node [above]{because $\wp < 1$} (thorn);
         \draw[->] (pThorn) to node [swap] {${\WRIC}$} (rfree);
-        \draw[->] (compgamma) to node [rotate=-35,xshift=-2.2cm,yshift=+0.05cm]{because $\underline{\psi} < 1$ and $\underline{\PGro} \equiv \underline{\psi} \PGro$} (gamma);
-        \draw[->] (thorn) to node {${\GIC}$} (compgamma);
-        \draw[->] (fvacFac) to node {} (pffvacFac);
+        \draw[->] (compgamma) to node [rotate=-35,xshift=-2.2cm,yshift=+0.05cm]{because $\underline{\psi} < 1$ and $\uline{\PGro} \equiv \underline{\psi} \PGro$} (gamma);
+        \draw[->] (thorn) to node {${\GICNrm}$} (compgamma);
+        \draw[->] (fvacFac) to node [rotate=-90,xshift=-1.6cm,yshift=0.25cm]{because $\PGrouAdj < \PGro$} (pffvacFac);
         \draw[->] (thorn) to node {${\FVAC}$} (fvacFac);
