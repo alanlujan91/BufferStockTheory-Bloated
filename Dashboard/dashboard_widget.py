@@ -1,14 +1,18 @@
-import ipywidgets as widgets
-from HARK.ConsumptionSaving.ConsIndShockModel import IndShockConsumerType, PerfForesightConsumerType
-from copy import deepcopy
 import matplotlib.pyplot as plt
 import numpy as np
+from copy import deepcopy
+import ipywidgets as widgets
+import logging
+import warnings
 
-# Import default parameter values (init_idiosyncratic_shock)
-from HARK.ConsumptionSaving.ConsIndShockModel import init_idiosyncratic_shocks as base_params
+from HARK.ConsumptionSaving.ConsIndShockModel \
+    import (IndShockConsumerType, init_idiosyncratic_shocks)
+
+warnings.filterwarnings("ignore")
+
+base_params = deepcopy(init_idiosyncratic_shocks)
 
 # Set the parameters for the baseline results in the paper
-# using the variable names defined in the cell above
 base_params['PermGroFac'] = [1.03]  # Permanent income growth factor
 base_params['Rfree'] = Rfree = 1.04  # Interest factor on assets
 base_params['DiscFac'] = DiscFac = 0.96  # Time Preference Factor
@@ -16,29 +20,34 @@ base_params['CRRA'] = CRRA = 2.00  # Coefficient of relative risk aversion
 # Probability of unemployment (e.g. Probability of Zero Income in the paper)
 base_params['UnempPrb'] = UnempPrb = 0.005
 base_params['IncUnemp'] = IncUnemp = 0.0   # Induces natural borrowing constraint
-base_params['PermShkStd'] = [0.1]   # Standard deviation of log permanent income shocks
+base_params['permShkStd'] = [0.1]   # Standard deviation of log permanent income shocks
 base_params['TranShkStd'] = [0.1]   # Standard deviation of log transitory income shocks
 # %%
 # Uninteresting housekeeping and details
 # Make global variables for the things that were lists above -- uninteresting housekeeping
-PermGroFac, PermShkStd, TranShkStd = base_params['PermGroFac'][0], base_params['PermShkStd'][0], base_params['TranShkStd'][0]
+PermGroFac, permShkStd, TranShkStd = base_params['PermGroFac'][0], base_params['permShkStd'][0], base_params['TranShkStd'][0]
 
 # Some technical settings that are not interesting for our purposes
 base_params['LivPrb'] = [1.0]   # 100 percent probability of living to next period
 base_params['CubicBool'] = True    # Use cubic spline interpolation
-base_params['T_cycle'] = 1       # No 'seasonal' cycles
 base_params['BoroCnstArt'] = None    # No artificial borrowing constraint
 
+# Settings to speed up the calcs for the widgets (at the cost of accuracy)
+base_params['tranShkCount'] = 2    # 2 shocks instead of 7 speeds things up a lot!
+base_params['permShkCount'] = 2    #
+base_params['aXtraCount'] = 20     # not very many gridpoints
+
+fssml, fsmid, fsbig = 18, 22, 26
 
 # Define a slider for the discount factor
 DiscFac_widget = [
     widgets.FloatSlider(
-        min=0.9,
+        min=0.90,
         max=0.99,
-        step=0.0002,
+        step=0.01,
         value=DiscFac,  # Default value
         continuous_update=False,
-        readout_format=".4f",
+        readout_format=".3f",
         description="\u03B2",
     )
     for i in range(5)
@@ -49,7 +58,7 @@ CRRA_widget = [
     widgets.FloatSlider(
         min=1.0,
         max=5.0,
-        step=0.01,
+        step=0.1,
         value=CRRA,  # Default value
         continuous_update=False,
         readout_format=".2f",
@@ -63,10 +72,10 @@ Rfree_widget = [
     widgets.FloatSlider(
         min=1.01,
         max=1.08,
-        step=0.001,
+        step=0.01,
         value=Rfree,  # Default value
         continuous_update=False,
-        readout_format=".4f",
+        readout_format=".2f",
         description="R",
     )
     for i in range(5)
@@ -77,15 +86,15 @@ Rfree_widget = [
 PermGroFac_widget = [
     widgets.FloatSlider(
         min=1.00,
-        max=1.08,
-        step=0.001,
+        max=1.04,
+        step=0.01,
         value=PermGroFac,  # Default value
         continuous_update=False,
-        readout_format=".4f",
+        readout_format=".2f",
         description="\u0393",
     )
     for i in range(5)
-]  # capital gamma
+]
 
 # change default value for GIC fail figure
 PermGroFac_widget[1].value = 1.0
@@ -104,97 +113,108 @@ DiscFac_widget = [
     widgets.FloatSlider(
         min=0.92,
         max=DiscFacMax,
-        step=0.0002,
+        step=0.01,
         value=DiscFac,  # Default value
         continuous_update=False,
-        readout_format=".4f",
+        readout_format=".2f",
         description="\u03B2",
     )
     for i in range(5)
 ]  # beta unicode
 
-# Define a slider for unemployment (or retirement) probability
+# Define a slider for unemployment probability
 UnempPrb_widget = [
     widgets.FloatSlider(
-        min=0.00005,
+        min=0.001,
         max=0.05,  # Go up to twice the default value
-        step=0.0001,
+        step=0.001,
         value=UnempPrb,
         continuous_update=False,
-        readout_format=".5f",
+        readout_format=".3f",
         description="℘",
     )
     for i in range(5)
 ]
 
-# Define a slider for unemployment (or retirement) probability
+# Define a slider for unemployment income
 IncUnemp_widget = [
     widgets.FloatSlider(
-        min=0.0001,
+        min=0.001,
         max=0.01,  # Go up to twice the default value
-        step=0.00001,
+        step=0.001,
         value=IncUnemp,
         continuous_update=False,
-        readout_format=".5f",
+        readout_format=".3f",
         description="$\\mho$",
     )
     for i in range(5)
 ]
 
-# Define a slider for PermShkStd
-PermShkStd_widget = [
+# Define a slider for permShkStd
+permShkStd_widget = [
     widgets.FloatSlider(
-        min=0.0001,
-        max=0.3,  # Go up to twice the default value
-        step=0.001,
-        value=PermShkStd,
+        min=0.01,
+        max=0.30,  # Go up to twice the default value
+        step=0.01,
+        value=permShkStd,
         continuous_update=False,
-        readout_format=".5f",
+        readout_format=".2f",
         description="$\sigma_\psi$",
     )
     for i in range(5)
 ]
 
-# Define a slider for unemployment (or retirement) probability
+# Define an alternative slider for permShkStd
+permShkStd_alt_start_widget = [
+    widgets.FloatSlider(
+        min=0.01,
+        max=0.3,
+        step=0.01,
+        value=0.2,
+        continuous_update=False,
+        readout_format=".2f",
+        description="$\sigma_\psi$",
+    )
+    for i in range(5)
+]
+
+# Define a slider for the std of the transitory shock
 TranShkStd_widget = [
     widgets.FloatSlider(
-        min=0.0001,
-        max=0.3,  # Go up to twice the default value
-        step=0.001,
+        min=0.01,
+        max=0.30,  # Go up to twice the default value
+        step=0.01,
         value=TranShkStd,
         continuous_update=False,
-        readout_format=".5f",
+        readout_format=".2f",
         description="$\sigma_θ$",
     )
     for i in range(5)
 ]
 
 
-def makeConvergencePlot(DiscFac, CRRA, Rfree, PermShkStd):
+def makeConvergencePlot(DiscFac, CRRA, Rfree, permShkStd):
     # Construct finite horizon agent with baseline parameters
-    baseAgent_Fin = IndShockConsumerType(verbose=0, **base_params)
+    baseAgent_Fin = IndShockConsumerType(
+        quietly=True, messaging_level=logging.CRITICAL, **base_params)
     baseAgent_Fin.DiscFac = DiscFac
     baseAgent_Fin.CRRA = CRRA
     baseAgent_Fin.Rfree = Rfree
-    baseAgent_Fin.PermShkStd = [PermShkStd]
+    baseAgent_Fin.permShkStd = [permShkStd]
     baseAgent_Fin.cycles = 100
-    baseAgent_Fin.update_income_process()
-    baseAgent_Fin.solve()
+    baseAgent_Fin.solve(quietly=True, messaging_level=logging.CRITICAL)
     baseAgent_Fin.unpack('cFunc')
 
-    # figure limits
-    mMax = 6  # 11
-    mMin = 0
-    cMin = 0
-    cMax = 7
+    # figure plot limits
+    mMin, mMax, cPlotMin, cPlotMax = 0, 7, 0, 7
 
     mPlotMin = 0
-    mLocCLabels = 5.6  # 9.6 # Defines horizontal limit of figure
+    mLocCLabels = 5.6  # Defines horizontal limit of figure
     mPlotTop = 200  # 3.5 # 6.5    # Defines maximum m value where functions are plotted
-    mPts = 1000      # Number of points at which functions are evaluated
+    mPts = 100      # Number of points at which functions are evaluated
 
     plt.figure(figsize=(12, 8))
-    plt.ylim([cMin, cMax])
+    plt.ylim([cPlotMin, cPlotMax])
     plt.xlim([mMin, mMax])
 
     mBelwLabels = np.linspace(mPlotMin, mLocCLabels-0.1, mPts)  # Range of m below loc of labels
@@ -216,492 +236,270 @@ def makeConvergencePlot(DiscFac, CRRA, Rfree, PermShkStd):
     plt.plot(m_FullRange, c_Tm0, label="$c_{T}(m) = 45$ degree line")
     plt.legend(fontsize='x-large')
     plt.tick_params(
-        labelbottom=False,
-        labelleft=False,
-        left="off",
-        right="off",
-        bottom="off",
-        top="off",
-    )
+        labelbottom=False, labelleft=False, left="off", right="off",
+        bottom="off", top="off")
 
     plt.show()
     return None
 
 
-def makeGICFailExample(DiscFac, PermShkStd, UnempPrb):
+def makeGICFailExample(DiscFac, permShkStd, UnempPrb):
+    # replace default params with passed
+    GIC_fails_dict = deepcopy(base_params)
+    GIC_fails_dict['DiscFac'] = DiscFac
+    GIC_fails_dict['permShkStd'] = [permShkStd]
+    GIC_fails_dict['UnempPrb'] = UnempPrb
 
-    # Construct the "GIC fails" example.
+    GIC_fails_dict['permShkCount'] = 7  # Need more accuracy
 
-    GIC_fails_dictionary = dict(base_params)
-    GIC_fails_dictionary['Rfree'] = 1.04
-    GIC_fails_dictionary['PermGroFac'] = [1.00]
     GICFailsExample = IndShockConsumerType(
-        verbose=0,
-        cycles=0,  # cycles=0 makes this an infinite horizon consumer
-        **GIC_fails_dictionary)
-    GICFailsExample.DiscFac = DiscFac
-    GICFailsExample.PermShkStd = [PermShkStd]
-    GICFailsExample.UnempPrb = UnempPrb
-    GICFailsExample.update_income_process()
-    GICFailsExample.check_conditions()
+        **GIC_fails_dict, quietly=True, messaging_level=logging.WARNING)
 
-    # Get calibrated parameters to make code more readable
-    LivPrb = GICFailsExample.LivPrb[0]
-    Rfree = GICFailsExample.Rfree
-    DiscFac = GICFailsExample.DiscFac
-    CRRA = GICFailsExample.CRRA
+    # Prior command set up the problem but did not solve it
+    GICFailsExample.solve(quietly=True, messaging_level=logging.WARNING)
 
-    permShkPrbs = GICFailsExample.PermShkDstn[0].pmf
-    permShkVals = GICFailsExample.PermShkDstn[0].X
-    EPermGroFac = GICFailsExample.PermGroFac[0]
+    # Shortcuts/aliases
+    soln = GICFailsExample.solution[0]  # solution
+    cFunc, Bilt, E_Next_ = soln.cFunc, soln.Bilt, soln.E_Next_
 
-    # np.dot multiplies vectors; probability times value for each outcome is expectation
-    EpermShkInv = np.dot(permShkPrbs, permShkVals**(-1))    # $   \Ex[\permShk^{-1}]      $
-    InvEpermShkInv = (EpermShkInv) ** (-1)                     # $  (\Ex[\permShk^{-1}])^{-1}$
-    # Uncertainty-adjusted permanent growth factor
-    PermGroFac = EPermGroFac * InvEpermShkInv
-    # Interest factor normalized by uncertainty-adjusted growth
-    ERNrmFac = Rfree / PermGroFac
-    ErNrmRte = ERNrmFac - 1                              # Interest rate is interest factor - 1
-    # "sustainable" C = P + (discounted) interest income
-    # "sustainable" c = 1 + (discounted, normalized) interest income
-    def EmDelEq0(m): return 1 + (m-1)*(ErNrmRte/ERNrmFac)  # "sustainable" c where E[Δ m] = 0
+    E_d_mtp1_0 = E_Next_.c_where_E_Next_m_tp1_minus_m_t_eq_0
+    E_MGro_Bal = E_Next_.c_where_E_Next_permShk_times_m_tp1_minus_m_t_eq_0
 
-    GICFailsExample.solve()  # Above, we set up the problem but did not solve it
-    GICFailsExample.unpack('cFunc')  # Make the consumption function easily accessible for plotting
+    mPlotMin, mPlotMax = 0, 20
+    cPlotMin, cPlotMax = 0, 1.1 * E_d_mtp1_0(mPlotMax)
 
-    mPlotMin = 0
-    mPlotMax = 200
-    cPlotMin = 0
-    cPlotMax = 1.1 * GICFailsExample.cFunc[0](mPlotMax)
-
-    mPts = 1000
-    m = np.linspace(mPlotMin, mPlotMax, mPts)
-    c_Limt = GICFailsExample.cFunc[0](m)
-    c_Sstn = EmDelEq0(m)  # "sustainable" consumption
+    mPtsCount = 50
+    mVec = np.linspace(mPlotMin, mPlotMax, mPtsCount)
+    c_Limt = cFunc(mVec)
+    c_E_d_mtp1_0 = E_d_mtp1_0(mVec)  # "sustainable" consumption ratio
+    c_E_MGro_Bal = E_MGro_Bal(mVec)  # "M-Balanced-Growth" consumption ratio
 
     plt.figure(figsize=(12, 8))
-    plt.plot(m, c_Limt, label="$c(m_{t})$")
-    plt.plot(m, c_Sstn, label="$\mathsf{E}_{t}[\Delta m_{t+1}] = 0$")
+    plt.plot(mVec, c_Limt, label="$c(m_{t})$", color="black")
+    plt.plot(mVec, c_E_d_mtp1_0, label="$\mathsf{E}_{t}[\Delta m_{t+1}] = 0$", color="orange")
+    plt.plot(mVec, c_E_MGro_Bal, label="$\mathsf{E}_{t}[M_{t+1}/M_{t}] = \Gamma$", color="green")
+
     plt.xlim(mPlotMin, mPlotMax)
     plt.ylim(cPlotMin, cPlotMax)
+
+    if Bilt.GICLiv:  # Growth impatience condition (including mortality)
+        plt.axvline(Bilt.mNrmStE, label="mNrmStE exists", color="orange", linestyle="dashed")
+
+    if Bilt.GICNrm:  # Normalized GIC
+        plt.axvline(Bilt.mNrmTrg, label="mNrmTrg exists", color="green", linestyle="dashed")
+
     plt.tick_params(
-        labelbottom=False,
-        labelleft=False,
-        left="off",
-        right="off",
-        #        bottom="off",
-        top="off",
+        labelbottom=False, labelleft=False, left="on", right="off",  # bottom="off",
+        top="off"
     )
+
     plt.legend(fontsize='x-large')
     plt.show()
-    print(f'Current Growth Impatience Factor is {GICFailsExample.GPFInd}')
     return None
 
 
-def makeGrowthplot(PermGroFac, DiscFac):
-    # cycles=0 tells the solver to find the infinite horizon solution
-    baseAgent_Inf = IndShockConsumerType(verbose=0, cycles=0, **base_params)
-    baseAgent_Inf.PermGroFac = [PermGroFac]
-    baseAgent_Inf.DiscFac = DiscFac
-    baseAgent_Inf.update_income_process()
-    baseAgent_Inf.check_conditions()
-    mPlotMin = 0
-    mPlotMax = 3500.5
-    baseAgent_Inf.mPlotMax = 3500.5
-    baseAgent_Inf.aXtraMax = mPlotMax
-    baseAgent_Inf.tolerance = 1e-09
-    baseAgent_Inf.solve()
-    baseAgent_Inf.unpack('cFunc')
-    numPts = 500
-    if (baseAgent_Inf.GPFInd >= 1):
-        baseAgent_Inf.checkGICInd(verbose=3)
-    elif baseAgent_Inf.solution[0].mNrmSS > mPlotMax:
-        print('Target exists but is outside the plot range.')
-    else:
-        def EcLev_tp1_Over_p_t(a):
-            '''
-            Taking end-of-period assets a as input, return ratio of expectation 
-            of next period's consumption to this period's permanent income 
+def cGroTargetFig_make(PermGroFac, DiscFac):
+    gro_params = deepcopy(base_params)
+    gro_params['PermGroFac'] = [PermGroFac]
+    gro_params['DiscFac'] = DiscFac
 
-            Inputs:
-               a: end-of-period assets
-            Returns:
-               EcLev_tp1_Over_p_{t}: next period's expected c level / current p
-            '''
-            # Extract parameter values to make code more readable
-            permShkVals = baseAgent_Inf.PermShkDstn[0].X
-            tranShkVals = baseAgent_Inf.TranShkDstn[0].X
-            permShkPrbs = baseAgent_Inf.PermShkDstn[0].pmf
-            tranShkPrbs = baseAgent_Inf.TranShkDstn[0].pmf
-            Rfree = baseAgent_Inf.Rfree
-            EPermGroFac = baseAgent_Inf.PermGroFac[0]
+    baseAgent_Inf = IndShockConsumerType(
+        **gro_params, quietly=True, messaging_level=logging.WARNING)  # construct it silently
 
-            PermGrowFac_tp1 = EPermGroFac*permShkVals  # Nonstochastic growth times idiosyncratic permShk
-            RNrmFac_tp1 = Rfree / PermGrowFac_tp1  # Growth-normalized interest factor
-            # 'bank balances' b = end-of-last-period assets times normalized return factor
-            b_tp1 = RNrmFac_tp1*a
-            # expand dims of b_tp1 and use broadcasted sum of a column and a row vector
-            # to obtain a matrix of possible market resources next period
-            # because matrix mult is much much faster than looping to calc E
-            m_tp1_GivenTranAndPermShks = np.expand_dims(b_tp1, axis=1) + tranShkVals
-            # List of possible values of $\mathbf{c}_{t+1}$ (Transposed by .T)
-            cRat_tp1_GivenTranAndPermShks = baseAgent_Inf.cFunc[0](m_tp1_GivenTranAndPermShks).T
-            cLev_tp1_GivenTranAndPermShks = cRat_tp1_GivenTranAndPermShks*PermGrowFac_tp1
-            # compute expectation over perm shocks by right multiplying with probs
-            EOverPShks_cLev_tp1_GivenTranShkShks = np.dot(
-                cLev_tp1_GivenTranAndPermShks, permShkPrbs)
-            # finish expectation over trans shocks by right multiplying with probs
-            EcLev_tp1_Over_p_t = np.dot(EOverPShks_cLev_tp1_GivenTranShkShks, tranShkPrbs)
-            # return expected consumption
-            return EcLev_tp1_Over_p_t
+    baseAgent_Inf.solve(
+        quietly=True, messaging_level=logging.WARNING)
 
-        # Calculate the expected consumption growth factor
-        # mBelwTrg defines the plot range on the left of target m value (e.g. m <= target m)
-        mNrmTrg = baseAgent_Inf.solution[0].mNrmSS
-        mPlotMin = 0
-        mPlotMax = 200
-        mBelwTrg = np.linspace(mPlotMin, mNrmTrg, numPts)
-        c_For_mBelwTrg = baseAgent_Inf.cFunc[0](mBelwTrg)
-        a_For_mBelwTrg = mBelwTrg-c_For_mBelwTrg
-        EcLev_tp1_Over_p_t_For_mBelwTrg = [EcLev_tp1_Over_p_t(i) for i in a_For_mBelwTrg]
-
-        # mAbveTrg defines the plot range on the right of target m value (e.g. m >= target m)
-        mAbveTrg = np.linspace(mNrmTrg, mPlotMax, numPts)
-
-        # EcGro_For_mAbveTrg: E [consumption growth factor] when m_{t} is below target m
-        EcGro_For_mBelwTrg = np.array(EcLev_tp1_Over_p_t_For_mBelwTrg)/c_For_mBelwTrg
-
-        c_For_mAbveTrg = baseAgent_Inf.cFunc[0](mAbveTrg)
-        a_For_mAbveTrg = mAbveTrg-c_For_mAbveTrg
-        EcLev_tp1_Over_p_t_For_mAbveTrg = [EcLev_tp1_Over_p_t(i) for i in a_For_mAbveTrg]
-
-        # EcGro_For_mAbveTrg: E [consumption growth factor] when m_{t} is bigger than target m_{t}
-        EcGro_For_mAbveTrg = np.array(EcLev_tp1_Over_p_t_For_mAbveTrg)/c_For_mAbveTrg
-
-        Rfree = 1.0
-        EPermGroFac = 1.0
-        mNrmTrg = baseAgent_Inf.solution[0].mNrmSS
-
-        # Calculate Absolute Patience Factor Phi = lower bound of consumption growth factor
-        APF = (Rfree*DiscFac)**(1.0/CRRA)
-
-        plt.figure(figsize=(12, 8))
-        # Plot the Absolute Patience Factor line
-        plt.plot(
-            [mPlotMin, mPlotMax], [APF, APF], label="\u03A6 = [(\u03B2 R)^(1/ \u03C1)]/R"
-        )
-
-        # Plot the Permanent Income Growth Factor line
-        plt.plot(
-            [mPlotMin, mPlotMax], [EPermGroFac, EPermGroFac], label="\u0393"
-        )
-
-        # Plot the expected consumption growth factor on the left side of target m
-        plt.plot(mBelwTrg, EcGro_For_mBelwTrg, color="black")
-
-        # Plot the expected consumption growth factor on the right side of target m
-        plt.plot(mAbveTrg, EcGro_For_mAbveTrg, color="black",
-                 label="$\mathsf{E}_{t}[c_{t+1}/c_{t}]$")
-
-        # Plot the target m
-        plt.plot(
-            [mNrmTrg, mNrmTrg],
-            [mPlotMin, mPlotMax],
-            color="black",
-            linestyle="--",
-            label="",
-        )
-        plt.xlim(1, mPlotMax)
-        plt.ylim(0.94, 1.10)
-        plt.text(2.105, 0.930, "$m_{t}$", fontsize=26, fontweight="bold")
-        plt.text(
-            mNrmTrg - 0.02,
-            0.930,
-            "m̌",
-            fontsize=26,
-            fontweight="bold",
-        )
-        plt.tick_params(
-            labelbottom=False,
-            labelleft=False,
-            left="off",
-            right="off",
-            bottom="off",
-            top="off",
-        )
-        plt.legend(fontsize='x-large')
-        plt.show()
-        return None
-
-
-def makeBoundsFigure(UnempPrb, PermShkStd, TranShkStd, DiscFac, CRRA):
-    baseAgent_Inf = IndShockConsumerType(verbose=0, cycles=0, **base_params)
-    baseAgent_Inf.UnempPrb = UnempPrb
-    baseAgent_Inf.PermShkStd = [PermShkStd]
-    baseAgent_Inf.TranShkStd = [TranShkStd]
-    baseAgent_Inf.DiscFac = DiscFac
-    baseAgent_Inf.CRRA = CRRA
-    baseAgent_Inf.update_income_process()
-    baseAgent_Inf.check_conditions()
-    mPlotMin = 0
-    mPlotMax = 2500
-    baseAgent_Inf.tolerance = 1e-09
-    baseAgent_Inf.aXtraMax = mPlotMax
-    baseAgent_Inf.solve(verbose=0)
-    baseAgent_Inf.unpack('cFunc')
-    cPlotMin = 0
-    cPlotMax = 1.2 * baseAgent_Inf.cFunc[0](mPlotMax)
+    soln = baseAgent_Inf.solution[0]        # shorthand
+    Bilt, Pars, E_Next_ = soln.Bilt, soln.Pars, soln.E_Next_  # shorthand
     # Retrieve parameters (makes code more readable)
-    Rfree = baseAgent_Inf.Rfree
-    CRRA = baseAgent_Inf.CRRA
-    EPermGroFac = baseAgent_Inf.PermGroFac[0]
-    mNrmTrg = baseAgent_Inf.solution[0].mNrmSS
-    UnempPrb = baseAgent_Inf.UnempPrb
+    Rfree, DiscFac, CRRA, G = Pars.Rfree, Pars.DiscFac, Pars.CRRA, Pars.PermGroFac
+
+    color_cons, color_mrktLev, color_mrktRat, color_perm = "blue", "red", "green", "black"
+
+    mPlotMin, mCalcMax, mPlotMax = 0.0, 50, 2.20
+
+    # Get StE and target values
+    mNrmStE, mNrmTrg = Bilt.mNrmStE, Bilt.mNrmTrg
+
+    pts_num = 200  # Plot this many points
+
+    m_pts = np.linspace(1, mPlotMax, pts_num)   # values of m for plot
+    c_pts = soln.cFunc(m_pts)                   # values of c for plot
+    a_pts = m_pts - c_pts                       # values of a
+
+    Ex_cLev_tp1_Over_pLev_t = [
+        soln.E_Next_.cLev_tp1_Over_pLev_t_from_a_t(a) for a in a_pts]
+    Ex_mLev_tp1_Over_pLev_t = [
+        soln.E_Next_.mLev_tp1_Over_pLev_t_from_a_t(a) for a in a_pts]
+    Ex_m_tp1_from_a_t = [
+        soln.E_Next_.m_tp1_from_a_t(a) for a in a_pts]
+
+    Ex_cLevGro = np.array(Ex_cLev_tp1_Over_pLev_t)/c_pts
+    Ex_mLevGro = np.array(Ex_mLev_tp1_Over_pLev_t)/m_pts
+    Ex_mRatGro = np.array(Ex_m_tp1_from_a_t)/m_pts
+
+    # Absolute Patience Factor = lower bound of consumption growth factor
+    APF = (Rfree*DiscFac)**(1.0/CRRA)
+
+    fig, ax = plt.subplots(figsize=(12, 8))
+
+    # Plot the Absolute Patience Factor line
+    ax.plot([0, mPlotMax], [APF, APF], color=color_cons)
+
+    # Plot the Permanent Income Growth Factor line
+    ax.plot([0, mPlotMax], [G, G], color=color_perm)
+
+    # Plot the expected consumption growth factor
+    ax.plot(m_pts, Ex_cLevGro, color=color_cons)
+
+    # Plot the expect growth for the level of market resources
+    ax.plot(m_pts, Ex_mLevGro, color=color_mrktLev)
+
+    # Plot the expect growth for the market resources ratio
+    ax.plot(m_pts, Ex_mRatGro, color=color_mrktRat)
+
+    # Axes limits
+    GroFacMin, GroFacMax, xMin = 0.98, 1.06, 1.1
+
+    # Vertical lines at StE and Trg
+    mNrmStE_lbl, = ax.plot([mNrmStE, mNrmStE], [0, GroFacMax], color=color_mrktLev, linestyle="--",
+                           label=r'$\check{m}$: M-Balanced-Growth: $\mathbb{E}_{t}[{\mathbf{m}}_{t+1}/{\mathbf{m}}_{t}]=\Gamma$')
+    ax.legend(handles=[mNrmStE_lbl])
+
+    ax.set_xlim(xMin, mPlotMax * 1.1)
+    ax.set_ylim(GroFacMin, GroFacMax)
+
+    if mNrmTrg:
+        mNrmTrg_lbl, = ax.plot([mNrmTrg, mNrmTrg], [0, GroFacMax], color=color_mrktRat,
+                               linestyle="dotted", label=r'$\hat{m}$: Target: $\mathbb{E}_{t}[m_{t+1}]=m_{t}$')
+        ax.legend(handles=[mNrmStE_lbl, mNrmTrg_lbl])
+    ax.legend(prop=dict(size=fssml))
+
+    ax.text(mPlotMax+0.01, Ex_cLevGro[-1],
+            r"$\mathsf{E}_{t}[\mathbf{c}_{t+1}/\mathbf{c}_{t}]$", fontsize=fssml, fontweight='bold')
+    ax.text(mPlotMax+0.01, APF-0.001,
+            r'$\Phi = ((R)\beta)^{1/\rho}$', fontsize=fssml, fontweight='bold')
+
+    # Ticks
+    ax.tick_params(labelbottom=False, labelleft=True, left='off',
+                   right='on', bottom='on', top='off')
+    plt.setp(ax.get_yticklabels(), fontsize=fssml)
+
+    ax.set_ylabel('Growth Factors', fontsize=fsmid, fontweight='bold')
+
+    plt.show()
+    return None
+
+
+def makeBoundsFigure(UnempPrb, permShkStd, TranShkStd, DiscFac, CRRA):
+    inf_hor = IndShockConsumerType(quietly=True, messaging_level=logging.CRITICAL,
+                                   **base_params)
+    inf_hor.UnempPrb = UnempPrb
+    inf_hor.permShkStd = [permShkStd]
+    inf_hor.TranShkStd = [TranShkStd]
+    inf_hor.DiscFac = DiscFac
+    inf_hor.CRRA = CRRA
+    inf_hor.update_income_process()
+
+    inf_hor.solve(quietly=True, messaging_level=logging.CRITICAL)
+    soln = inf_hor.solution[0]
+    Bilt, Pars = soln.Bilt, soln.Pars
+
+    cFunc = soln.cFunc
+    mPlotMin, mPlotMax = 0, 2500
+    inf_hor.aXtraMax = mPlotMax
+
+    # Retrieve parameters (makes code more readable)
+    Rfree, EPermGroFac = Pars.Rfree, Pars.PermGroFac
 
     κ_Min = 1.0-(Rfree**(-1.0))*(Rfree*DiscFac)**(1.0/CRRA)
     h_inf = (1.0/(1.0-EPermGroFac/Rfree))
-    def cFunc_Uncnst(m): return (h_inf - 1) * κ_Min + κ_Min*m
-    def cFunc_TopBnd(m): return (1 - UnempPrb ** (1.0/CRRA)*(Rfree*DiscFac)**(1.0/CRRA)/Rfree)*m
-    def cFunc_BotBnd(m): return (1 - (Rfree*DiscFac)**(1.0/CRRA)/Rfree) * m
+    def cFunc_Uncnst(mVec): return (h_inf - 1) * κ_Min + κ_Min*mVec
+    def cFunc_TopBnd(mVec): return (1 - UnempPrb ** (1.0/CRRA)
+                                    * (Rfree*DiscFac)**(1.0/CRRA)/Rfree)*mVec
+
+    def cFunc_BotBnd(mVec): return (1 - (Rfree*DiscFac)**(1.0/CRRA)/Rfree) * mVec
 
     # Plot the consumption function and its bounds
-    cMaxLabel = r"c̅$(m) = (m-1+h)κ̲$"  # Use unicode kludge
-    cMinLabel = r"c̲$(m)= (1-\Phi_{R})m = κ̲ m$"
+    cPlotMaxLabel = r"c̅$(m) = (m-1+h)κ̲$"  # Use unicode kludge
+    cPlotMinLabel = r"c̲$(m)= (1-\Phi_{R})m = κ̲ m$"
 
     # mKnk is point where the two upper bounds meet
     mKnk = ((h_inf-1) * κ_Min)/((1 - UnempPrb**(1.0/CRRA)*(Rfree*DiscFac)**(1.0/CRRA)/Rfree)-κ_Min)
-    mBelwKnkPts = 300
-    mAbveKnkPts = 700
-    mBelwKnk = np.linspace(mPlotMin,mKnk,mBelwKnkPts)
-    mAbveKnk = np.linspace(mKnk,mPlotMax,mAbveKnkPts)
-    mFullPts = np.linspace(mPlotMin,mPlotMax,mBelwKnkPts+mAbveKnkPts)
+    mBelwKnkPts, mAbveKnkPts = 50, 100
+    mBelwKnk = np.linspace(mPlotMin, mKnk, mBelwKnkPts)
+    mAbveKnk = np.linspace(mKnk, mPlotMax, mAbveKnkPts)
+    mFullPts = np.linspace(mPlotMin, mPlotMax, mBelwKnkPts+mAbveKnkPts)
 
-    plt.figure(figsize = (12,8))
-    plt.plot(mFullPts,baseAgent_Inf.cFunc[0](mFullPts), label=r'$c(m)$')
-    plt.plot(mBelwKnk,cFunc_Uncnst(mBelwKnk), label=cMaxLabel, linestyle="--")
-    plt.plot(mAbveKnk,cFunc_Uncnst(mAbveKnk), label=r'Upper Bound $ = $ Min $[\overline{\overline{c}}(m),\overline{c}(m)]$',linewidth=2.5, color='black')
-    plt.plot(mBelwKnk,cFunc_TopBnd(mBelwKnk),linewidth=2.5, color='black')
-    plt.plot(mAbveKnk,cFunc_TopBnd(mAbveKnk),linestyle="--", label=r"$\overline{\overline{c}}(m) = κ̅m = (1 - ℘^{1/ρ}Φᵣ)m$")
-    plt.plot(mBelwKnk,cFunc_BotBnd(mBelwKnk)          , color='red',linewidth=2.5)
-    plt.plot(mAbveKnk,cFunc_BotBnd(mAbveKnk)          , color='red', label=cMinLabel,linewidth=2.5)
-    plt.tick_params(labelbottom=False, labelleft=False,left='off',right='off',bottom='off',top='off')
-    plt.xlim(mPlotMin,mPlotMax)
-    plt.ylim(mPlotMin,1.12*cFunc_Uncnst(mPlotMax))
-    plt.text(mPlotMin,1.12*cFunc_Uncnst(mPlotMax)+0.05,"$c$",fontsize = 22)
-    plt.text(mPlotMax+0.1,mPlotMin,"$m$",fontsize = 22)
+    plt.figure(figsize=(12, 8))
+    plt.plot(mFullPts, cFunc(mFullPts), label=r'$c(m)$')
+    plt.plot(mBelwKnk, cFunc_Uncnst(mBelwKnk), label=cPlotMaxLabel, linestyle="--")
+    plt.plot(mAbveKnk, cFunc_Uncnst(mAbveKnk),
+             label=r'Upper Bound $ = $ Min $[\overline{\overline{c}}(m),\overline{c}(m)]$', linewidth=2.5, color='black')
+    plt.plot(mBelwKnk, cFunc_TopBnd(mBelwKnk), linewidth=2.5, color='black')
+    plt.plot(mAbveKnk, cFunc_TopBnd(mAbveKnk), linestyle="--",
+             label=r"$\overline{\overline{c}}(m) = κ̅m = (1 - ℘^{1/ρ}Φᵣ)m$")
+    plt.plot(mBelwKnk, cFunc_BotBnd(mBelwKnk), color='red', linewidth=2.5)
+    plt.plot(mAbveKnk, cFunc_BotBnd(mAbveKnk), color='red', label=cPlotMinLabel, linewidth=2.5)
+    plt.tick_params(labelbottom=False, labelleft=False, left='off',
+                    right='off', bottom='off', top='off')
+    plt.xlim(mPlotMin, mPlotMax)
+    plt.ylim(mPlotMin, 1.12*cFunc_Uncnst(mPlotMax))
+    plt.text(mPlotMin, 1.12*cFunc_Uncnst(mPlotMax)+0.05, "$c$", fontsize=22)
+    plt.text(mPlotMax+0.1, mPlotMin, "$m$", fontsize=22)
     plt.legend(fontsize='x-large')
     plt.show()
     return None
 
-def makeTargetMfig(Rfree, DiscFac, CRRA, PermShkStd, TranShkStd):
-    baseAgent_Inf = IndShockConsumerType(verbose=0, cycles=0, **base_params)
-    baseAgent_Inf.Rfree = Rfree
-    baseAgent_Inf.DiscFac = DiscFac
-    baseAgent_Inf.CRRA = CRRA
-    baseAgent_Inf.PermShkStd = [PermShkStd]
-    baseAgent_Inf.TranShkStd = [TranShkStd]
-    baseAgent_Inf.update_income_process()
-    baseAgent_Inf.check_conditions()
+
+def makeTargetMfig(Rfree, DiscFac, CRRA, permShkStd, TranShkStd):
+    inf_hor = IndShockConsumerType(quietly=True, **base_params)
+    inf_hor.Rfree = Rfree
+    inf_hor.DiscFac = DiscFac
+    inf_hor.CRRA = CRRA
+    inf_hor.permShkStd = [permShkStd]
+    inf_hor.TranShkStd = [TranShkStd]
+    inf_hor.update_income_process()
     mPlotMin = 0
     mPlotMax = 250
-    baseAgent_Inf.aXtraMax = mPlotMax
-    baseAgent_Inf.solve()
-    baseAgent_Inf.unpack('cFunc')
-    cPlotMin = 0
-    cPlotMax = baseAgent_Inf.cFunc[0](mPlotMax)
-    
-    if (baseAgent_Inf.GPFInd >= 1):
-        baseAgent_Inf.checkGICInd(verbose=3)
-        
-    mBelwTrg = np.linspace(mPlotMin,mPlotMax,1000)
-    EPermGroFac = baseAgent_Inf.PermGroFac[0]
-    EmDelEq0 = lambda m:(EPermGroFac/Rfree)+(1.0-EPermGroFac/Rfree)*m
-    cBelwTrg_Best = baseAgent_Inf.cFunc[0](mBelwTrg) # "best" = optimal c
-    cBelwTrg_Sstn = EmDelEq0(mBelwTrg)               # "sustainable" c
-    mNrmTrg    = baseAgent_Inf.solution[0].mNrmSS
+    inf_hor.aXtraMax = mPlotMax
+    inf_hor.solve(quietly=True, messaging_level=logging.CRITICAL)
+    soln = inf_hor.solution[0]
+    Bilt, cFunc = soln.Bilt, soln.cFunc
+    cPlotMin = 0, cFunc(mPlotMax)
+
+    if Bilt.GICNrm:  # tattle
+        soln.check_GICNrm(quietly=False, messaging_level=logging.WARNING)
+
+    mBelwStE = np.linspace(mPlotMin, mPlotMax, 1000)
+    EPermGroFac = inf_hor.PermGroFac[0]
+    def EmDelEq0(mVec): return (EPermGroFac/Rfree)+(1.0-EPermGroFac/Rfree)*mVec
+    cBelwStE_Best = cFunc(mBelwStE)  # "best" = optimal c
+    cBelwStE_Sstn = EmDelEq0(mBelwStE)               # "sustainable" c
+    mNrmStE = Bilt.mNrmStE
 
     plt.figure(figsize=(12, 8))
-    plt.plot(mBelwTrg, cBelwTrg_Best, label="$c(m_{t})$")
-    plt.plot(mBelwTrg, cBelwTrg_Sstn, label="$\mathsf{E}_{t}[\Delta m_{t+1}] = 0$")
+    plt.plot(mBelwStE, cBelwStE_Best, label="$c(m_{t})$")
+    plt.plot(mBelwStE, cBelwStE_Sstn, label="$\mathsf{E}_{t}[\Delta m_{t+1}] = 0$")
     plt.xlim(mPlotMin, mPlotMax)
-    plt.ylim(cPlotMin, cPlotMax)
+    plt.ylim(cPlotMin, cFunc(mPlotMax))
     plt.plot(
-        [mNrmTrg, mNrmTrg],
+        [mNrmStE, mNrmStE],
         [0, 2.5],
         color="black",
         linestyle="--",
     )
     plt.tick_params(
-#        labelbottom=False,
-#        labelleft=False,
-#        left="off",
+        #        labelbottom=False,
+        #        labelleft=False,
+        #        left="off",
         right="off",
-#        bottom="off",
+        #        bottom="off",
         top="off",
     )
     plt.text(0, 1.47, r"$c$", fontsize=26)
     plt.text(3.02, 0, r"$m$", fontsize=26)
-    plt.text(mNrmTrg - 0.05, -0.1, "m̌", fontsize=26)
+    plt.text(mNrmStE - 0.05, -0.1, "m̌", fontsize=26)
     plt.legend(fontsize='x-large')
     plt.show()
     return None
-
-# def makeBoundsfig(UnempPrb, PermShkStd):
-#     base_params_bounds=deepcopy(base_params)
-#     base_params_bounds['UnempPrb'] = UnempPrb
-#     base_params_bounds['PermShkStd'] = [PermShkStd]
-#     base_params_bounds['TranShkStd'] = [TranShkStd]
-    
-#     baseEx_inf = IndShockConsumerType(verbose=0, cycles=0, **base_params_bounds)
-#     if baseEx_inf.PermGroFac[0] >= baseEx_inf.Rfree:
-#         FHWCFails = True
-#     else:
-#         FHWCFails = False
-#     base_params_PF=deepcopy(base_params_bounds)
-#     if FHWCFails: # Then the upper bound is the solution to the constrained PF model
-#         base_params_PF['BoroCnstArt']=0.
-#         base_params_PF['MaxKinks']=10000
-#         conFunc_PF = PerfForesightConsumerType(verbose=0, cycles=0,**base_params_PF)
-#     else:         # Else the upper bound is the solution to the unconstrained PF model
-#         conFunc_PF = PerfForesightConsumerType(verbose=0, cycles=0,**base_params_PF)
-
-#     baseEx_inf.check_conditions(verbose=0)
-#     conFunc_PF.solve()
-#     conFunc_PF.unpack('cFunc')
-#     baseEx_inf.update_income_process()
-#     baseEx_inf.solve()
-#     baseEx_inf.unpack('cFunc')
-
-#     # conFunc_PF = lambda m: (h_inf - 1) * k_lower + k_lower * m
-    
-#     # k_lower = 1.0 - (baseEx_inf.Rfree ** (-1.0)) * (
-#     #     baseEx_inf.Rfree * baseEx_inf.DiscFac
-#     # ) ** (1.0 / baseEx_inf.CRRA)
-
-#     k_lower = 1.0 - (Rfree ** (-1.0)) * (
-#         Rfree * DiscFac
-#     ) ** (1.0 / CRRA)
-
-#     if FHWCFails:
-#         h_inf = np.inf
-#     else:
-# #        h_inf = 1.0 / (1.0 - baseEx_inf.PermGroFac[0] / baseEx_inf.Rfree)
-#         h_inf = 1.0 / (1.0 - PermGroFac / Rfree)
-#     # conFunc_upper = (
-#     #     lambda m: (
-#     #         1
-#     #         - baseEx_inf.UnempPrb ** (1.0 / baseEx_inf.CRRA)
-#     #         * (baseEx_inf.Rfree * baseEx_inf.DiscFac) ** (1.0 / baseEx_inf.CRRA)
-#     #         / baseEx_inf.Rfree
-#     #     )
-#     #     * m
-#     # #    )
-#     conFunc_upper = (
-#         lambda m: (
-#             1
-#             - UnempPrb ** (1.0 / CRRA)
-#             * (Rfree * DiscFac) ** (1.0 / CRRA)
-#             / Rfree
-#         )
-#         * m
-#     )
-    
-#     # conFunc_lower = (
-#     #     lambda m: (
-#     #         1
-#     #         - (baseEx_inf.Rfree * baseEx_inf.DiscFac) ** (1.0 / baseEx_inf.CRRA)
-#     #         / baseEx_inf.Rfree
-#     #     )
-#     #     * m
-#     # )
-#     conFunc_lower = (
-#         lambda m: (
-#             1
-#             - (Rfree * DiscFac) ** (1.0 / CRRA)
-#             / Rfree
-#         )
-#         * m
-#     )
-#     if FHWCFails:
-#         intersect_m = np.inf
-
-#     else:
-# #        intersect_m=(h_inf-1)*(1-baseEx_inf.thorn)/(1-(baseEx_inf.thorn)*(baseEx_inf.UnempPrb)**(1/baseEx_inf.CRRA))
-# #        intersect_m=(h_inf-1)*(1-baseEx_inf.thorn/baseEx_inf.Rfree)/(1-(baseEx_inf.thorn/baseEx_inf.Rfree)*((baseEx_inf.UnempPrb)**(1/baseEx_inf.CRRA)))
-# #        '''
-#     #     intersect_m = ((h_inf - 1) * k_lower) / (
-#     #     (
-#     #         1
-#     #         - baseEx_inf.UnempPrb ** (1.0 / baseEx_inf.CRRA)
-#     #         * (baseEx_inf.Rfree * baseEx_inf.DiscFac) ** (1.0 / baseEx_inf.CRRA)
-#     #         / baseEx_inf.Rfree
-#     #     )
-#     #     - k_lower
-#     # )
-#         intersect_m = ((h_inf - 1) * k_lower) / (
-#         (
-#             1
-#             - UnempPrb ** (1.0 / CRRA)
-#             * (Rfree * DiscFac) ** (1.0 / CRRA)
-#             / Rfree
-#         )
-#         - k_lower
-#     )
-# #        '''
-
-#     cMaxLabel = r"c̅$(m) = (m-1+h)κ̲$"  # Use unicode kludge
-#     cMinLabel = r"c̲$(m)= (1-\Phi_{R})m = κ̲ m$"
-#     mMaxVal = 10
-
-#     x1 = np.linspace(0, mMaxVal, 1000)
-#     x3 = np.linspace(0, intersect_m, 300)
-#     x4 = np.linspace(intersect_m, mMaxVal, 700)
-#     cfunc_m = baseEx_inf.cFunc[0](x1)
-#     cfunc_PF_1    = conFunc_PF.cFunc[0](x3)
-#     cfunc_PF_2    = conFunc_PF.cFunc[0](x4)
-#     cfunc_upper_1 = conFunc_upper(x3)
-#     cfunc_upper_2 = conFunc_upper(x4)
-#     cfunc_lower = conFunc_lower(x1)
-#     plt.figure(figsize=(12, 8))
-#     plt.plot(x1, cfunc_m, label="c(m)")
-#     plt.plot(x1, cfunc_lower, label=cMinLabel, linewidth=2.5)
-#     if not FHWCFails:
-#         plt.plot(x3, cfunc_upper_1, color="black", linewidth=2.5)
-# #        plt.plot(x3, x3, color="yellow", linewidth=2.5)
-#         plt.plot(
-#             x4,
-#             cfunc_PF_2,
-#             color="black",
-#             label=r"Upper Bound $ = $ Min $[\overline{\overline{c}}(m),\overline{c}(m)]$",
-#             linewidth=2.5,
-#         )
-#         plt.plot(x4, cfunc_upper_2, label=r"$\overline{\overline{c}}(m) = κ̅m = (1 - ℘^{1/ρ}Φᵣ)m$", linestyle="--")
-#         plt.plot(x3, cfunc_PF_1, label=cMaxLabel, linestyle="--")
-#     else:
-#         cfunc_PF = conFunc_PF.cFunc[0](x1)
-#         plt.plot(
-#             x1,
-#             cfunc_PF,
-#             color="black",
-#             label=r"Upper Bound: PF Constrained Model",
-#             linewidth=2.5,
-#         )
-#     plt.tick_params(
-#         labelbottom=False,
-#         labelleft=False,
-#         left="off",
-#         right="off",
-#         bottom="off",
-#         top="off",
-#     )
-#     plt.xlim(0, mMaxVal)
-# #     if FHWCFails:
-# # #        plt.ylim(0, conFunc_upper(x1))
-# #         plt.plot(x1, conFunc_PF.cFunc[0](x1))
-# # #        plt.text(0, 1.12 * conFunc_upper(mMaxVal) + 0.05, "$c$", fontsize=22)
-# #     else:
-#     plt.ylim(0, 1.12 * conFunc_PF.cFunc[0](mMaxVal))
-#     plt.text(0, 1.12 * conFunc_PF.cFunc[0](mMaxVal) + 0.05, "$c$", fontsize=22)
-#     plt.xlabel("m", fontsize=22)
-#     plt.legend(fontsize='x-large')

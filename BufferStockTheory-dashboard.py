@@ -2,16 +2,17 @@
 # ---
 # jupyter:
 #   jupytext:
-#     cell_metadata_filter: ExecuteTime,autoscroll,heading_collapsed,hidden,-hide_ouput,-code_folding
+#     cell_metadata_filter: ExecuteTime,autoscroll,heading_collapsed,hidden,pycharm,tags,jupyter,-hide_ouput,-code_folding
+#     cell_metadata_json: true
 #     formats: ipynb,py:percent
 #     notebook_metadata_filter: all
 #     text_representation:
 #       extension: .py
 #       format_name: percent
-#       format_version: '1.2'
-#       jupytext_version: 1.2.1
+#       format_version: '1.3'
+#       jupytext_version: 1.11.4
 #   kernelspec:
-#     display_name: Python 3
+#     display_name: Python 3 (ipykernel)
 #     language: python
 #     name: python3
 #   language_info:
@@ -23,7 +24,7 @@
 #     name: python
 #     nbconvert_exporter: python
 #     pygments_lexer: ipython3
-#     version: 3.6.9
+#     version: 3.9.6
 #   latex_envs:
 #     LaTeX_envs_menu_present: true
 #     autoclose: false
@@ -46,15 +47,20 @@
 # # Theoretical Foundations of Buffer Stock Saving -- Interactive Figures
 #
 # [![econ-ark.org](https://img.shields.io/badge/Powered%20by-Econ--ARK-3e8acc.svg)](https://econ-ark.org/materials/BufferStockTheory)
+#
+# (Execute the cells below one at a time to activate the corresponding interactive tools)
 
 # %%
 # Some setup stuff
-import Dashboard.dashboard_widget as BST
-
-# Get other tools 
+from builtins import breakpoint
+# Get others' tools
 from ipywidgets import interact, interactive, fixed, interact_manual
-import warnings
-warnings.filterwarnings("ignore")
+
+# Get HARK modeling tool
+from HARK.ConsumptionSaving.ConsIndShockModel import IndShockConsumerType
+
+# Get Dashboard tools
+import Dashboard.dashboard_widget as BST
 
 # %% [markdown]
 # ## Convergence of the Consumption Rules
@@ -67,14 +73,14 @@ warnings.filterwarnings("ignore")
 #
 
 # %%
-# Risk aversion ρ and σ have the most interesting effects
+# Risk aversion ρ and σ_ψ have the most interesting effects
 
 cFuncsConverge_widget=interactive(
     BST.makeConvergencePlot,
     DiscFac=BST.DiscFac_widget[0],
     CRRA=BST.CRRA_widget[0],
     Rfree=BST.Rfree_widget[0],
-    PermShkStd=BST.PermShkStd_widget[0],
+    permShkStd=BST.permShkStd_widget[0],
 )
 cFuncsConverge_widget
 
@@ -99,28 +105,44 @@ cFuncsConverge_widget
 #
 
 # %%
-# GICFailsExample Widget
+# Make consumer more patient by doubling uncertainty
+BST.base_params['permShkStd'] = [2 * 0.1]
+
+# Give solution a bit more precision by increasing density of shocks
+BST.base_params['permShkCount'] = BST.permShkCount = 7  #  extra points for accuracy
+
+# Construct an instance, and unquietly describe it
+GICNrmFailsButGICRawHolds = \
+    IndShockConsumerType(**BST.base_params,
+                         quietly=False,
+                         messaging_level=10) # level 10 is all messages
+
+# %%
+# Under starting parameters, this example has a steady state m but not a target m 
+# (the consumption function intersects with the M growth but not the m change locus)
+# If permanent shock std is reduced, it will have both steady state m and target m
+
 GICFailsExample_widget = interactive(
     BST.makeGICFailExample,
     DiscFac=BST.DiscFac_widget[1],
-    PermShkStd=BST.PermShkStd_widget[1],
+    permShkStd=BST.permShkStd_alt_start_widget[1],
     UnempPrb=BST.UnempPrb_widget[1],
 )
 GICFailsExample_widget
 
 
 # %% [markdown]
-# ### [Target $m$, Expected Consumption Growth, and Permanent Income Growth](https://econ.jhu.edu/people/ccarroll/papers/BufferStockTheory/#AnalysisoftheConvergedConsumptionFunction)
+# ### [Balanced Growth "Steady State Equilibrium" $m$, "Target" m, Expected Consumption Growth, and Permanent Income Growth](https://econ.jhu.edu/people/ccarroll/papers/BufferStockTheory/#AnalysisoftheConvergedConsumptionFunction)
 #
-# The next figure is shown in  [Analysis of the Converged Consumption Function](https://econ.jhu.edu/people/ccarroll/papers/BufferStockTheory/#cGroTargetFig), which shows the expected consumption growth factor $\mathrm{\mathbb{E}}_{t}[c_{t+1}/c_{t}]$ for a consumer behaving according to the converged consumption rule.
+# The next figure is shown in  [Analysis of the Converged Consumption Function](https://econ.jhu.edu/people/ccarroll/papers/BufferStockTheory/#cGroTargetFig), which shows the expected consumption growth factor $\mathrm{\mathbb{E}}_{t}[\pmb{\mathrm{c}}_{t+1}/\pmb{\mathrm{c}}_{t}]$ for a consumer behaving according to the converged consumption rule, along with the expected growth factor for market resources $\mathrm{\mathbb{E}}_{t}[\pmb{\mathrm{m}}_{t+1}/\pmb{\mathrm{m}}_{t}]$, and the expected growth factor for the ratio of market resources to permanent income, $\mathrm{\mathbb{E}}_{t}[m_{t+1}/m_{t}]$.
 #
 
-# %%
+# %% {"tags": []}
 # Explore what happens as you make the consumer more patient in two ways: β ↑ and Γ ↓
 cGroTargetFig_widget = interactive(
-    BST.makeGrowthplot,
+    BST.cGroTargetFig_make,
     PermGroFac=BST.PermGroFac_widget[2],
-    DiscFac=BST.DiscFac_widget[2],
+    DiscFac=BST.DiscFac_widget[2]
 )
 cGroTargetFig_widget
 
@@ -129,7 +151,7 @@ cGroTargetFig_widget
 # [The next figure](https://econ.jhu.edu/people/ccarroll/papers/BufferStockTheory/#cFuncBounds)
 # illustrates theoretical bounds for the consumption function.
 #
-# We define two useful variables: lower bound of $\kappa$ (the marginal propensity to consume) and the limit of $h$ (Human wealth), along with some functions such as the limiting perfect foresight consumption function $\bar{c}(m)$, the upper bound function $\bar{\bar c}(m)$, and the lower bound function \underline{_c_}$(m)$.
+# We define two useful variables: lower bound of $\kappa$ (the marginal propensity to consume) and the limit of $h$ (Human wealth), along with some functions such as the limiting perfect foresight consumption function $\bar{c}(m)$, the upper bound function $\bar{\bar c}(m)$, and the lower bound function $\underline{c}(m)$.
 #
 # Recall that the Perfect Forsight Return Impatience Condition is:
 # \begin{eqnarray}
@@ -145,7 +167,7 @@ cGroTargetFig_widget
 cFuncBounds_widget = interactive(
     BST.makeBoundsFigure,
     UnempPrb=BST.UnempPrb_widget[3],
-    PermShkStd=BST.PermShkStd_widget[3],
+    permShkStd=BST.permShkStd_widget[3],
     TranShkStd=BST.TranShkStd_widget[3],
     DiscFac=BST.DiscFac_widget[3],
     CRRA=BST.CRRA_widget[3]
@@ -166,7 +188,7 @@ cRatTargetFig_widget = interactive(
     Rfree=BST.Rfree_widget[4],
     DiscFac=BST.DiscFac_widget[4],
     CRRA=BST.CRRA_widget[4],
-    PermShkStd=BST.PermShkStd_widget[4],
+    permShkStd=BST.permShkStd_widget[4],
     TranShkStd=BST.TranShkStd_widget[4],
 )
 cRatTargetFig_widget
@@ -175,6 +197,6 @@ cRatTargetFig_widget
 # %% [markdown]
 # ### [Upper and Lower Limits of the Marginal Propensity to Consume](https://econ.jhu.edu/people/ccarroll/papers/BufferStockTheory/#MPCLimits)
 #
-# This figure requires a very fine grid in order to capture the smooth variation in the MPC.  
+# This figure from the paper requires a very fine grid in order to capture the smooth variation in the MPC.  
 #
 # As a result, recomputation of the figure is too slow to be usable as a widget in real time (with current technology).
