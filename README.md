@@ -9,7 +9,8 @@ Johns Hopkins University
 Online resources related to this paper:
 
 1. [Full paper and code](https://github.com/llorracc/BufferStockTheory)
-1. [Web version](http://econ.jhu.edu/people/ccarroll/papers/BufferStockTheory)
-1. [Online Appendix](http://econ.jhu.edu/people/ccarroll/papers/BufferStockTheory-Appendix)
-1. [Jupyter Notebook](https://github.com/llorracc/BufferStockTheory/blob/master/Code/Python/BufferStockTheory.ipynb)
-1. [bibtex](https://econ.jhu.edu/people/ccarroll/papers/BufferStockTheory.bib)
+1. [Web version](http://llorracc.github.io/BufferStockTheory)
+1. [Jupyter Notebook](https://econ-ark.org/materials/BufferStockTheory?launch)
+1. [Online Appendix](https://llorracc.github.io/BufferStockTheory/#Appendix)
+1. [cff reference]()
+1. [bibtex reference]()

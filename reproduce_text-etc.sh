@@ -6,7 +6,7 @@
 #    openout_any = a
 #    shell_escape = t
 #
-# Google LaTeX write permissions to determine how to set these on your system
+# Google 'LaTeX write permissions' to determine how to set these on your system
 # Or change the output directory from LaTeX to /tmp here and elsewhere in the documents
 
 scriptDir="$(dirname "$0")"
@@ -17,6 +17,7 @@ for file in BufferStockTheory BufferStockTheory-NoAppendix BufferStockTheory-Sli
     pdflatex -output-directory=LaTeX "$file"
     pdflatex -output-directory=LaTeX "$file"
     bibtex LaTeX/"$file"
+    pdflatex -output-directory=LaTeX "$file"
     pdflatex -output-directory=LaTeX "$file"
 done
 
@@ -47,3 +48,5 @@ while read appendixName; do
     mv "LaTeX/$filename.pdf" Appendices
 done < /tmp/appendices
 rm /tmp/appendices economics.bib # Cleanup
+rm BufferStockTheory.pdf
+cp LaTeX/BufferStockTheory.pdf BufferStockTheory.pdf
