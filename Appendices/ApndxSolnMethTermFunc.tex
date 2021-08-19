@@ -19,9 +19,9 @@ A natural alternative choice for the terminal consumption rule is the solution t
 
 Our solution is simple: The formulae in another appendix
 that identify kink points on
-$\mathring{\cFunc}(\mRat)$ for integer values of $n$ (e.g.,
+$\usual{\cFunc}(\mRat)$ for integer values of $n$ (e.g.,
 $\cRat_{\#}^{n} = \PatPGro^{-n}$) are continuous functions of $n$; the
-conclusion that $\mathring{\cFunc}(\mRat)$ is piecewise linear
+conclusion that $\usual{\cFunc}(\mRat)$ is piecewise linear
 between the kink points does not require that the {\it terminal
   consumption rule} (from which time iteration proceeds) also be
 piecewise linear.  Thus, for values $n \geq 0$ we can construct a
@@ -31,7 +31,7 @@ corresponding to integer periods in the future, but satisfies the
 (continuous, and greater at non-kink points) consumption rule defined from the
 appendix's formulas by noninteger values of $n$ at other
 points.\footnote{In practice, we calculate the first and second
-  derivatives of $\mathring{\cFunc}$ and use piecewise polynomial
+  derivatives of $\usual{\cFunc}$ and use piecewise polynomial
   approximation methods that match the function at these points.}
 
 
@@ -61,7 +61,7 @@ $\hat{\cFunc}(\mRat)$ that satisfies the following criteria:
 where $\underline{n}$ is chosen judgmentally in a way calculated to
 generate a good compromise between smoothness of the limiting
 consumption function $\breve{\cFunc}(\mRat)$ and fidelity of that
-function to the $\mathring{\cFunc}(\mRat)$ (see the actual code for
+function to the $\usual{\cFunc}(\mRat)$ (see the actual code for
 details).
 
 We thus define the terminal function as
@@ -70,13 +70,13 @@ We thus define the terminal function as
 \begin{cases}
  0 < \mRat \leq \mRat_{\#}^{0} & \mRat \\
  \mRat_{\#}^{0} < \mRat < \mRat_{\#}^{\underline{n}}      & \breve{\cFunc}(m) \\
- \mRat_{\#}^{\underline{n}} < \mRat  & \mathring{\cFunc}(m)
+ \mRat_{\#}^{\underline{n}} < \mRat  & \usual{\cFunc}(m)
 \end{cases}
 \end{equation}
 
 Since the precautionary motive implies that in the presence of
 uncertainty the optimal level of consumption is below the level that is
-optimal without uncertainty, and since $\breve{\cFunc}(\mRat) \geq \mathring{\cFunc}(\mRat)$,
+optimal without uncertainty, and since $\breve{\cFunc}(\mRat) \geq \usual{\cFunc}(\mRat)$,
 implicitly defining $\mRat = e^{\mu}$ (so that $\mu = \log m$), we can construct
 \begin{equation}\begin{gathered}\begin{aligned}
  \chi_{t}(\mu)  & = \log (1-\cFunc_{t}(e^{\mu})/\cFunc_{T}(e^{\mu}))  \label{eq:ChiDef}
