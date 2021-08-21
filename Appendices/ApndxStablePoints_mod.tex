@@ -3,9 +3,6 @@
 \input{./econtexRoot}\input{\LaTeXInputs/econtex_onlyinsubfile}
 \onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 
-%\renewcommand{\LtxDir}{}
-\onlyinsubfile{\renewcommand{\LtxDir}{../LaTeX/}}
-
 \begin{document}
 
 \hypertarget{ApndxMTargetIsStable}{}
@@ -207,10 +204,10 @@ which means that $\difFunc^{\prime}(\mRat_{t})$ from \eqref{eq:difFuncDecreases}
 
 But we showed in section~\ref{subsec:UncertaintyModifiedConditions} that the only circumstances under which the problem has a nondegenerate solution while the {\RIC} fails were ones where the {\FHWC} also fails (that is, \eqref{eq:FHWCFails} holds).
 
-\subsection{Proof of Lemma}
-
 \begin{comment}
 \subsection{Comment}
+\subsection{Proof of Lemma}
+
 
 
 Due to the model's nonlinearities the values of $\mRat$ at which the expected growth rate of $\cLevBF$ matches $\PGro$ is very slightly different from the $\mRat$ at which the growth rate at which expected growth of $\mLevBF$ is $\PGro$.  Defining $\grave{\mRat}$ as the $\mRat$ at which $\Ex_{t}[\cRatBF_{t+1}/\cRatBF_{t}]=\PGro$, we can show that to first order $\grave{\mRat} \approx \check{\mRat}.$
@@ -223,6 +220,126 @@ Due to the model's nonlinearities the values of $\mRat$ at which the expected gr
 \end{align*}
 but at $\mRat=\check{\mRat}$, $\Ex_{t}[\mRat_{t+1}]=\check{\mRat}\approx\grave{\mRat}$.
 \end{comment}
+
+\end{document}
+
+\pagebreak
+\section{The `Individual Steady-State'}\label{sec:SteadyStateInd}
+
+\begin{align*}
+ \overbrace{\Ex_{t}[\mLevBF_{t+1}]/\mLevBF_{t}}^{\equiv\nu} & = \Ex_{t}[\mRat_{t+1}\PGro\pShk_{t+1}\pLevBF_{t}]/(\mRat_{t}\pLevBF_{t}) 
+    \\  &= \PGro\Ex_{t}[\mRat_{t+1}\pShk_{t+1}]/\mRat_{t}
+    \\  &= \PGro\Ex_{t}[\left(\mRat_{t}-\cFunc(\mRat_{t}))(\Rfree/\PGro)+\tShk_{t+1}\right)\pShk_{t+1}]/\mRat_{t}
+    \\  &= \PGro\Ex_{t}[\left(\aRat_{t}(\Rfree/\pShk_{t+1}\PGro)+\tShk_{t+1}\right)\pShk_{t+1}]/\mRat_{t}
+  \\  &= \PGro(\aRat_{t}(\Rfree/\PGro)+1)/\mRat_{t}                                         
+%  \\  &= \left((\tilde{\mRat}-\cFunc(\tilde{\mRat}))\Rfree+\PGro\right)/\tilde{\mRat} 
+%   \\  &= \left((\tilde{\mRat}-\cFunc(\tilde{\mRat}))\Rfree+\PGro\right)/\tilde{\mRat} 
+%   \\  &= \left((\tilde{\mRat}-\cFunc(\tilde{\mRat}))\Rfree+\PGro\right)/\tilde{\mRat} 
+  \end{align*}
+
+  Turn off shocks:
+  \begin{align*}
+\cLevBF_{t+1}/\cLevBF_{t} 
+ & = \cRat_{t+1}\PGro\pLevBF_{t}/(\cRat_{t}\pLevBF_{t})
+\\ & = \PGro\cFunc(\mRat_{t+1})/\cRat_{t}
+\\ \left((\tilde{\mRat}-\cFunc(\tilde{\mRat}))\Rfree+\PGro\right)/\tilde{\mRat}   & = \PGro\cFunc((\tilde{\mRat}-\cFunc(\tilde{\mRat}))(\Rfree/\PGro)+1)/\cFunc(\tilde{\mRat})
+\\ \left((\tilde{\mRat}-\cFunc(\tilde{\mRat}))(\Rfree/\PGro)+1\right)/\tilde{\mRat}   & = \cFunc((\tilde{\mRat}-\cFunc(\tilde{\mRat}))(\Rfree/\PGro)+1)/\cFunc(\tilde{\mRat})
+  \end{align*}
+
+  
+\begin{align*}
+\Ex_{t}[\cLevBF_{t+1}]/\cLevBF_{t} 
+ & = \Ex_{t}[\cRat_{t+1}\PGro\pShk_{t+1}\pLevBF_{t}]/(\cRat_{t}\pLevBF_{t})
+\\ & = \PGro\Ex_{t}[\cFunc(\mRat_{t+1})\pShk_{t+1}]/\cRat_{t}
+\\ & = \PGro\Ex_{t}[\pShk_{t+1}\cFunc((\mRat_{t}-\cRat_{t})(\Rfree/\pShk_{t+1}\PGro)+\tShk_{t+1})]/\cRat_{t}
+\\ & \approx \PGro\Ex_{t}[\left(\cFunc(\tilde{\mRat})+(\mRat_{t+1}-\tilde{\mRat})\cFunc^{\prime}+(1/2)(\mRat_{t+1}-\tilde{\mRat})^{2}\cFunc^{\prime\prime}\right)\pShk_{t+1}]/\cRat_{t}
+\\ & = \left(\PGro \cFunc(\tilde{\mRat})+\Ex_{t}[(\PGro \mRat_{t+1}\pShk_{t+1}-\tilde{\mRat}\pShk_{t+1})\cFunc^{\prime}+(1/2)(\mRat_{t+1}-\tilde{\mRat})^{2}\cFunc^{\prime\prime}\right)\pShk_{t+1}]/\cRat_{t}
+  \\ & = \left(\PGro \cFunc(\tilde{\mRat})+\tilde{\mRat}(\nu-1)\cFunc^{\prime}+(1/2)\PGro\Ex_{t}[\left(\mRat_{t+1}^{2}-2\mRat_{t+1}\tilde{\mRat}+\tilde{\mRat}^{2}\cFunc^{\prime\prime}\right)\pShk_{t+1}]\right)/\cRat_{t}
+\\ & = \left(\PGro \cFunc(\tilde{\mRat})+\tilde{\mRat}(\nu-1)\cFunc^{\prime}+(1/2)\PGro\Ex_{t}[\left(\mRat_{t+1}^{2}-2\mRat_{t+1}\tilde{\mRat}+\tilde{\mRat}^{2}\right)\cFunc^{\prime\prime}\pShk_{t+1}]\right)/\cRat_{t}       
+  \end{align*}
+  
+\begin{align*}
+\Ex_{t}[\aLevBF_{t+1}]/\aLevBF_{t} 
+ & = \Ex_{t}[\aRat_{t+1}\PGro\pShk_{t+1}\pLevBF_{t}]/(\aRat_{t}\pLevBF_{t})
+\\ & = \PGro\Ex_{t}[\aFunc(\mRat_{t+1})\pShk_{t+1}]/\aRat_{t}
+\\ & = \PGro\Ex_{t}[\pShk_{t+1}\aFunc((\mRat_{t}-\cRat_{t})(\Rfree/\pShk_{t+1}\PGro)+\tShk_{t+1})]/\aRat_{t}
+\\ & \approx \PGro\Ex_{t}[\left(\aFunc(\tilde{\mRat})+(\mRat_{t+1}-\tilde{\mRat})\aFunc^{\prime}+(1/2)(\mRat_{t+1}-\tilde{\mRat})^{2}\aFunc^{\prime\prime}\right)\pShk_{t+1}]/\aRat_{t}
+\\ & = \left(\PGro \aFunc(\tilde{\mRat})+\Ex_{t}[(\PGro \mRat_{t+1}\pShk_{t+1}-\tilde{\mRat}\pShk_{t+1})\aFunc^{\prime}+(1/2)(\mRat_{t+1}-\tilde{\mRat})^{2}\aFunc^{\prime\prime}\right)\pShk_{t+1}]/\aRat_{t}
+  \\ & = \left(\PGro \aFunc(\tilde{\mRat})+\tilde{\mRat}(\nu-1)\aFunc^{\prime}+(1/2)\PGro\Ex_{t}[\left(\mRat_{t+1}^{2}-2\mRat_{t+1}\tilde{\mRat}+\tilde{\mRat}^{2}\aFunc^{\prime\prime}\right)\pShk_{t+1}]\right)/\aRat_{t}
+\\ & = \left(\PGro \aFunc(\tilde{\mRat})+\tilde{\mRat}(\nu-1)\aFunc^{\prime}+(1/2)\PGro\Ex_{t}[\left(\mRat_{t+1}^{2}-2\mRat_{t+1}\tilde{\mRat}+\tilde{\mRat}^{2}\right)\aFunc^{\prime\prime}\pShk_{t+1}]\right)/\aRat_{t}       
+  \end{align*}
+  
+\begin{align*}
+ \overbrace{\Ex_{t}[\mLevBF_{t+1}]/\mLevBF_{t}}^{\equiv\nu} & =\Ex_{t}[\cLevBF_{t+1}]/\cLevBF_{t} \notag
+    \\  \Ex_{t}[\mRat_{t+1}\PGro\pShk_{t+1}\pLevBF_{t}]/(\mRat_{t}\pLevBF_{t}) & = \Ex_{t}[\cRat_{t+1}\PGro\pShk_{t+1}\pLevBF_{t}]/(\cRat_{t}\pLevBF_{t})
+    \\  \Ex_{t}[\mRat_{t+1}\pShk_{t+1}]/\mRat_{t} & = \Ex_{t}[\cFunc(\mRat_{t+1})\pShk_{t+1}]/\cRat_{t}
+    \\  \Ex_{t}[\left(\mRat_{t}-\cFunc(\mRat_{t}))(\Rfree/\PGro)+\tShk_{t+1}\right)\pShk_{t+1}]/\mRat_{t} & = \Ex_{t}[\cFunc((\mRat_{t}-\cRat_{t})(\Rfree/\pShk_{t+1}\PGro)+\tShk_{t+1})\pShk_{t+1}]/\cRat_{t}
+    \\  \Ex_{t}[\left(\mRat_{t}-\cFunc(\mRat_{t}))(\Rfree/\pShk_{t+1}\PGro)+\tShk_{t+1}\right)\pShk_{t+1}]/\mRat_{t} & \approx \Ex_{t}[\left(\cFunc(\tilde{\mRat})+(\mRat_{t+1}-\tilde{\mRat})\cFunc^{\prime}+(1/2)(\mRat_{t+1}-\tilde{\mRat})^{2}\cFunc^{\prime\prime}\right)\pShk_{t+1}]/\cRat_{t}
+  \\  \Ex_{t}[\left(\mRat_{t}-\cFunc(\mRat_{t}))(\Rfree/\PGro)+\pShk_{t+1}\tShk_{t+1}\right)]/\mRat_{t}                                         & = \left(\cFunc(\tilde{\mRat})+(\mRat_{t+1}-\tilde{\mRat})\cFunc^{\prime}+(1/2)(\mRat_{t+1}-\tilde{\mRat})^{2}\cFunc^{\prime\prime}\right)\pShk_{t+1}]/\cRat_{t}
+  \\  \left((\tilde{\mRat}-\cFunc(\tilde{\mRat}))(\Rfree/\PGro)+1\right)/\tilde{\mRat} & = \Ex_{t}[\left(\cFunc(\tilde{\mRat})+(\mRat_{t+1}-\tilde{\mRat})\cFunc^{\prime}+(1/2)(\mRat_{t+1}-\tilde{\mRat})^{2}\cFunc^{\prime\prime}\right)\pShk_{t+1}]/\cRat_{t}
+\mathsf{}    \\  \left((\tilde{\mRat}-\cFunc(\tilde{\mRat}))(\Rfree/\PGro)+1\right)/\tilde{\mRat} & = \left(\cFunc(\tilde{\mRat})+(\nu/\PGro-\tilde{\mRat})\cFunc^{\prime}+(1/2)(\mRat_{t+1}^{2}-2(\nu/\PGro)\tilde{\mRat}\cFunc^{\prime}+\tilde{\mRat}^{2}\cFunc^{\prime\prime})\right)]/\cRat_{t}                                                                                         
+  \end{align*}
+
+  Define $\mu_{t}=\mRat_{t}/\tilde{\mRat}$, and 
+  \begin{align}
+    \chi(\mu) & =\cFunc(\mRat \mu)
+\\ \chi(\mu)  & \approx \chi(1) + (\mu-1)\chi^{\prime}(1) + (1/2)(\mu-1)^{2}\chi^{\prime\prime}(1)
+  \end{align}
+
+\begin{align*}
+  \left((\tilde{\mRat}-\cFunc(\tilde{\mRat}))(\Rfree/\PGro)+1\right)/\tilde{\mRat} & \approx \left(\chi(1)+\Ex_{t}[(\mu_{t+1}-1)\chi^{\prime}(1)+(1/2)(\mu_{t+1}-1)^{2}\chi^{\prime\prime}(1)\pShk_{t+1}]\right)/\cRat_{t}
+  \\ & = \left(\chi(1)+(\nu/\PGro-1)\chi^{\prime}(1)+\Ex_{t}[(1/2)(\mu_{t+1}^{2}-2 \mu_{t+1}+1)\chi^{\prime\prime}(1)\pShk_{t+1}]\right)/\cRat_{t}
+  \\ & = \left(\chi(1)+(\nu/\PGro-1)\chi^{\prime}(1)+(1/2)(\mu_{t+1}^{2}-2 \nu/\PGro+1)\chi^{\prime\prime}(1)\pShk_{t+1}]\right)/\cRat_{t}
+\end{align*}
+
+  Define $\mu_{t}=\mRat_{t}/\tilde{\mRat}$, and 
+  \begin{align}
+    \chi(\mu) & =\cFunc(\mRat \mu)
+\\ \chi(\mu)  & \approx \chi(1) + (\mu-1)\chi^{\prime}(1) + (1/2)(\mu-1)^{2}\chi^{\prime\prime}(1)
+  \end{align}
+
+
+  
+  
+\hypertarget{balgrostableSolve}{}
+If some value $\mRat_{t}=\hat{\mRat}$ exists for which equation~\eqref{eq:balgrostable} holds, for reasons articulated below we will call that point the `individual pseudo-steady-state' (alternatively the `$\mRatBF$-balanced-growth' point):
+\begin{align}
+  \Ex_{t}\left[(\mStE-\usual{\cFunc}(\mBal))\overbrace{\Rfree/\PGro}^{\Rnorm}+\pShk_{t+1}\tShk_{t+1}\right] & = \mBal \notag
+\\  (\mStE-\usual{\cFunc}(\mBal))\Rnorm+ 1 & = \mBal \label{eq:balgrostableSolve}.  
+% \\  \aFunc(\mStE+\epsilon)(\Rnorm+\nu)+ 1 & = \mBal+\epsilon
+% \\  (\aFunc(\mStE)+\epsilon\aFunc^{\prime})(\Rnorm+\nu)+ 1 & \approx \mBal+\epsilon
+% \\  \epsilon\aFunc^{\prime}(\Rnorm+\nu) + \aFunc(\hat{\mRat})\nu & \approx \epsilon
+% \\   \nu\aFunc(\hat{\mRat}) & \approx \epsilon\left(1-\aFunc^{\prime}(\Rnorm+\nu)\right)
+% \\   \frac{\nu\aFunc(\hat{\mRat})}{\left(1-\aFunc^{\prime}(\Rnorm+\nu)\right)} & \approx \epsilon
+\end{align}
+
+
+
+\begin{align}
+  \Ex_{t}[\mLevBF_{t+1}] & =\mLevBF_{t}
+  \\\Ex_{t}[\mRat_{t+1}\pLev_{t+1}] & =\mRat_{t} \pLev_{t}
+  \\\Ex_{t}[\mRat_{t+1}\pLev_{t}\pShk_{t+1}] & =\mRat_{t} \pLev_{t}
+  \\\Ex_{t}[\mRat_{t+1}\pShk_{t+1}] & =\mRat_{t}
+  \\\Ex_{t}[(\mRat_{t}-\cRat_{t})(\Rfree/\PGro)+\pShk_{t+1}\tShk_{t+1}] & =\mRat_{t}
+  \\(\mRat_{t}-\cFunc(\mRat_{t}))\Rnorm+1 & =\mRat_{t}
+  \\(\tilde{\mRat}-\cFunc(\tilde{\mRat}))\Rnorm+1 & =\tilde{\mRat}
+  \\\cFunc(\tilde{\mRat})\Rnorm & =\left(\frac{1-\tilde{\mRat}(1-\Rnorm)}{1}\right)
+  \\\cFunc(\tilde{\mRat}) & =\left(\frac{1+(\Rnorm-1)\tilde{\mRat}}{\Rnorm}\right)
+\end{align}
+
+
+\hypertarget{balgrostableSolve}{}
+If some value $\mRat_{t}=\hat{\mRat}$ exists for which equation~\eqref{eq:balgrostable} holds, for reasons articulated below we will call that point the `individual pseudo-steady-state' (alternatively the `$\mRatBF$-balanced-growth' point):
+\begin{align}
+  \Ex_{t}\left[(\mStE-\usual{\cFunc}(\mBal))\overbrace{\Rfree/\PGro}^{\Rnorm}+\pShk_{t+1}\tShk_{t+1}\right] & = \mBal \notag
+\\  (\mStE-\usual{\cFunc}(\mBal))\Rnorm+ 1 & = \mBal \label{eq:balgrostableSolve}.  
+% \\  \aFunc(\mStE+\epsilon)(\Rnorm+\nu)+ 1 & = \mBal+\epsilon
+% \\  (\aFunc(\mStE)+\epsilon\aFunc^{\prime})(\Rnorm+\nu)+ 1 & \approx \mBal+\epsilon
+% \\  \epsilon\aFunc^{\prime}(\Rnorm+\nu) + \aFunc(\hat{\mRat})\nu & \approx \epsilon
+% \\   \nu\aFunc(\hat{\mRat}) & \approx \epsilon\left(1-\aFunc^{\prime}(\Rnorm+\nu)\right)
+% \\   \frac{\nu\aFunc(\hat{\mRat})}{\left(1-\aFunc^{\prime}(\Rnorm+\nu)\right)} & \approx \epsilon
+\end{align}
+
 
 \end{document}
 

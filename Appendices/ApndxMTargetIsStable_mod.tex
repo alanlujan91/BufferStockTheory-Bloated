@@ -3,9 +3,6 @@
 \input{./econtexRoot}\input{\LaTeXInputs/econtex_onlyinsubfile}
 \onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 
-%\renewcommand{\LtxDir}{}
-\onlyinsubfile{\renewcommand{\LtxDir}{../LaTeX/}}
-
 \begin{document}
 
 \hypertarget{ApndxMTargetIsStable}{}
@@ -16,9 +13,18 @@
 The two theorems and lemma to be proven in this appendix are:
 \onlyinsubfile{\setcounter{theorem}{1}}
 
-\input{\LtxDir\EqDir/TheoremMTargetIsStable}
+\renewcommand{\LtxDir}{/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest/LaTeX/}
+%\LtxDir\EqDir/TheoremMTargetIsStable
 
-  \input{\LtxDir\EqDir/TheoremMSSBalExists}
+% \input{\LtxDir\EqDir/TheoremMTargetIsStable}
+\input{/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest/LaTeX/Equations/TheoremMTargetIsStable}
+\input{/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest/LaTeX/Equations/TheoremMSSBalExists}
+%  \input{\LtxDir\EqDir/TheoremMSSBalExists}
+%  \input{\LtxDir\EqDir/TheoremMSSBalExists}
+
+
+%\input{\LtxDir\EqDir/TheoremMTargetIsStable}
+
 
   \begin{lemma}
   If both $\check{\mRat}$ and $\hat{\mRat}$ exist, then $\hat{\mRat} < \check{\mRat}$.
@@ -225,6 +231,7 @@ but at $\mRat=\check{\mRat}$, $\Ex_{t}[\mRat_{t+1}]=\check{\mRat}\approx\grave{\
 \end{comment}
 
 \end{document}
+\endinput
 
 % Local Variables:
 % eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))

@@ -1,16 +1,21 @@
-# Theoretical Foundations of Buffer Stock Saving
-Christopher D. Carroll
-Johns Hopkins University
+# texmf-local contains customizations of LaTeX
 
-[![DOI](https://zenodo.org/badge/304124725.svg)](https://zenodo.org/badge/latestdoi/304124725)
+If you use TeXLive on more than one system, or under more than one username,
+it is useful to have a set of customizations that are shared across all your
+identities and machines.
 
-[![econ-ark.org](https://img.shields.io/badge/Powered%20by-Econ--ARK-3e8acc.svg)](https://econ-ark.org/)
+This can be accomplished in a number of ways.
 
-Online resources related to this paper:
+The easiest is probably to install a file sync service like Dropbox that runs
+automatically on all of the machines/users in question, and to have a master
+version of texmf-local that lives in Dropbox.
 
-1. [Full paper and code](https://github.com/llorracc/BufferStockTheory)
-1. [Web version](http://llorracc.github.io/BufferStockTheory)
-1. [Jupyter Notebook](https://econ-ark.org/materials/BufferStockTheory?launch)
-1. [Online Appendix](https://llorracc.github.io/BufferStockTheory/#Appendix)
-1. [cff reference]()
-1. [bibtex reference]()
+Then you have two options:
+
+1. On unix-based machines (Mac or Linux, say), you can replace the texmf-local
+   file on your machine with a symbolic link to the filepath in Dropbox
+1. Windows does not allow symbolic links. So on Windows machines you will need
+   to modify the texmf.cnf configuration file so that it knows to look in the
+   right place (your Dropbox path) for the texmf-local config files
+   
+   

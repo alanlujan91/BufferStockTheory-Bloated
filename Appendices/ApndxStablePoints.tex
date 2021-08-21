@@ -3,6 +3,8 @@
 \input{./econtexRoot}\input{\LaTeXInputs/econtex_onlyinsubfile}
 \onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 
+\onlyinsubfile{\renewcommand{\LtxDir}{}}
+
 \begin{document}
 
 \hypertarget{ApndxMTargetIsStable}{}
@@ -13,9 +15,9 @@
 The two theorems and lemma to be proven in this appendix are:
 \onlyinsubfile{\setcounter{theorem}{1}}
 
-\input{\EqDir/TheoremMTargetIsStable}
+\input{\LtxDir\EqDir/TheoremMTargetIsStable}
 
-  \input{\EqDir/TheoremMSSBalExists}
+  \input{\LtxDir\EqDir/TheoremMSSBalExists}
 
   \begin{lemma}
   If both $\check{\mRat}$ and $\hat{\mRat}$ exist, then $\hat{\mRat} < \check{\mRat}$.

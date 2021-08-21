@@ -9,6 +9,7 @@
 \input{./econtexRoot}\input{\LaTeXInputs/econtex_onlyinsubfile}
 \onlyinsubfile{\externaldocument{\LaTeXInputs/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled; 
 
+\onlyinsubfile{\renewcommand{\EqDir}{\econtexRoot/Equations}} 
 \begin{document}
 
 % Attempted to make all lines used for Web version contain {Web} (or version with only single curly brace at end) so can be removed with sed 
@@ -116,13 +117,16 @@ The infinite horizon solution is the (limiting) first-period solution to a seque
 
 That is, for the value function, fixing a terminal date $T$,  we are interested in the term $\vLevBF_{T-n}$ in the sequence of value functions $\{\vLevBF_{T},\vLevBF_{T-1},...,\vLevBF_{T-n}\}$.  We will say that the problem has a `nondegenerate' infinite horizon solution if, corresponding to that value function, as $n \uparrow \infty$ there is a limiting consumption function $\usual{\cFunc}(\mRat) = \lim_{n \uparrow \infty} \cFunc_{T-n}$ which is neither $\usual{\cFunc}(\mRat)=0$ everywhere (for all $\mRat$) nor $\usual{\cFunc}(\mRat)=\infty$ everywhere.
 
+\end{document}
+
 Concretely, a consumer born $n$ periods before date $T$ solves the problem
 \begin{verbatimwrite}{\EqDir/supfn}
   \begin{align*}%    \label{eq:supfn}
     \vLevBF_{T-n} & = \max~ \Ex_{t}\left[\sum_{i=0}^{n} \DiscFac^{i} \uFunc(\cLevBF_{t+i})\right]
   \end{align*}
 \end{verbatimwrite}
-\input{\LtxDir\EqDir/supfn}
+
+\input{\EqDir/supfn}
 where the Constant Relative Risk Aversion (CRRA) utility function
 \begin{align}
   \uFunc(\bullet)=\bullet^{1-\CRRA}/(1-\CRRA) \label{eq:crrautil}
@@ -155,8 +159,7 @@ disarticulate the steps:\hypertarget{DBCParts}{}
     \mLevBF_{t+1}  & =  \bLevBF_{t+1} +\pLevBF_{t+1}\tShkAll_{t+1},  \notag
   \end{align}
 \end{verbatimwrite}
-\input{\LtxDir\EqDir/DBCparts}
-where $\aLevBF_{t}$ indicates the consumer's assets at the end of period $t$, which grow by a fixed interest factor $\Rfree =(1+\rfree)$ between periods,  so that $\bLevBF_{t+1}$ is the consumer's financial (`bank') balances before next period's consumption choice;\footnote{Allowing a stochastic interest factor is straightforward but adds little insight for our purposes; however, see \cite{benhabibWealth}, \cite{maTodaRich}, and \cite{mstIncFluct} for the implications of capital income risk for the distribution of wealth and other interesting questions not considered here.} $\mLevBF_{t+1}$ (`market resources') is the sum of financial wealth $\bLevBF_{t+1}$ and noncapital income $\pLevBF_{t+1}\tShkAll_{t+1}$ (permanent noncapital income $\pLevBF_{t+1}$ multiplied by a mean-one iid transitory income shock factor $\tShkAll_{t+1}$; transitory shocks are assumed to satisfy $\Ex_{t}[{\tShkAll}_{t+n}]=1~\forall~n\geq 1$). Permanent noncapital income in $t+1$ is equal to its previous value, multiplied by a growth factor $\PGro$, modified by a mean-one iid shock $\pShk_{t+1}$, $\Ex_{t}[{\pShk}_{t+n}]=1~\forall~n \geq 1$ satisfying $\pShk \in [\ushort{\pShk},\bar{\pShk}]$ for $0 < \ushort{\pShk} \leq 1 \leq \bar{\pShk} < \infty$ (and $\ushort{\pShk}=\bar{\pShk}=1$ is the degenerate case with no permanent shocks).
+\input{\EqDir/DBCparts} where $\aLevBF_{t}$ indicates the consumer's assets at the end of period $t$, which grow by a fixed interest factor $\Rfree =(1+\rfree)$ between periods,  so that $\bLevBF_{t+1}$ is the consumer's financial (`bank') balances before next period's consumption choice;\footnote{Allowing a stochastic interest factor is straightforward but adds little insight for our purposes; however, see \cite{benhabibWealth}, \cite{maTodaRich}, and \cite{mstIncFluct} for the implications of capital income risk for the distribution of wealth and other interesting questions not considered here.} $\mLevBF_{t+1}$ (`market resources') is the sum of financial wealth $\bLevBF_{t+1}$ and noncapital income $\pLevBF_{t+1}\tShkAll_{t+1}$ (permanent noncapital income $\pLevBF_{t+1}$ multiplied by a mean-one iid transitory income shock factor $\tShkAll_{t+1}$; transitory shocks are assumed to satisfy $\Ex_{t}[{\tShkAll}_{t+n}]=1~\forall~n\geq 1$). Permanent noncapital income in $t+1$ is equal to its previous value, multiplied by a growth factor $\PGro$, modified by a mean-one iid shock $\pShk_{t+1}$, $\Ex_{t}[{\pShk}_{t+n}]=1~\forall~n \geq 1$ satisfying $\pShk \in [\ushort{\pShk},\bar{\pShk}]$ for $0 < \ushort{\pShk} \leq 1 \leq \bar{\pShk} < \infty$ (and $\ushort{\pShk}=\bar{\pShk}=1$ is the degenerate case with no permanent shocks).
 
 Following~\cite{zeldesStochastic}, in future periods $t+n ~\forall~ n \geq 1$ there is a small probability $\pZero$ that income will be zero (a `zero-income event'),
 \begin{verbatimwrite}{\EqDir/tShkDef}
@@ -168,7 +171,7 @@ Following~\cite{zeldesStochastic}, in future periods $t+n ~\forall~ n \geq 1$ th
     \end{cases} \label{eq:tShkDef}
   \end{equation}
 \end{verbatimwrite}
-\input{\LtxDir\EqDir/tShkDef}
+\input{\EqDir/tShkDef}
 where $\tShkEmp_{t+n}$ is an iid mean-one random variable
 ($\Ex_{t}[{\tShkEmp}_{t+n}]=1~\forall~n>0$)
 whose distribution satisfies $\tShkEmp \in \lbrack \ushort{\tShkEmp},\bar{\tShkEmp}\rbrack$
@@ -452,7 +455,7 @@ and define a `growth impatience condition' (\GICRaw)
   \PatPGro &  < 1   \label{eq:GICRaw}
 \end{align}
 \end{verbatimwrite}
-\input{\LtxDir\EqDir/GICRaw}
+\input{\EqDir/GICRaw}
 which is equivalent to \eqref{eq:LiqConstrBinds} (exponentiate both
 sides by $1/\CRRA$).
 
@@ -524,7 +527,7 @@ which is useful because it allows us to write uncertainty-adjusted versions of e
     \PatPGroAdj  & = \Pat/\PGroAdj = \Ex[\Pat/(\PGro\pShk)]  \label{eq:GPFNrm} 
   \end{align}
 \end{verbatimwrite}
-\input{\LtxDir\EqDir/PatPGroAdj}
+\input{\EqDir/PatPGroAdj}
 \begin{comment}
 and the proof of Theorem~\ref{thm:balance} below yields the conclusion that
 \begin{align*}
@@ -537,7 +540,7 @@ and a normalized version of the Growth Impatience Condition, {\GICNrm}:
   \begin{align}
     \PatPGroAdj  & < 1 \label{eq:GICNrm}
   \end{align}\end{verbatimwrite}
-\input{\LtxDir\EqDir/GICNrm}
+\input{\EqDir/GICNrm}
 which is stronger than the perfect foresight version \eqref{eq:GICRaw} because $\PGroAdj < \PGro$ (cf \eqref{eq:PGroAdj}).
 \begin{comment}
 \begin{align}
@@ -573,7 +576,7 @@ as $T$ approaches $\infty$ if\hypertarget{FVAC}{}
 %    \\ \DiscFac^{1/\CRRA}  & < \PGrouAdj^{1-1/\CRRA}
   \end{align}
 \end{verbatimwrite}
-\input{\LtxDir\EqDir/FVAC}
+\input{\EqDir/FVAC}
 which we call the `finite value of autarky condition' \hypertarget{FVAC}{}
 (\FVAC) because it guarantees that value is finite for a consumer who always consumes their 
 (now stochastic) permanent income (and we will call $\DiscAltuAdj$ the `Value of Autarky Factor,' VAF).\footnote{In a stationary environment -- that is, with $\PGrouAdj=1$ -- this corresponds to an impatience condition imposed by \cite{mstIncFluct}; but their remaining conditions do not correspond to those here, because their problem differs and their method of proof differs.}  For nondegenerate $\pShk$, this 
@@ -1218,7 +1221,7 @@ One definition of a `stable' point is an $\mTrg$ such that if $\mRat_{t}=\mTrg$,
   \end{align}
   \end{theorem}
 \end{verbatimwrite}
-\input{\LtxDir\EqDir/TheoremMTargetIsStable}
+\input{\EqDir/TheoremMTargetIsStable}
 
  \hypertarget{mTargImplicit}{}
  
@@ -1304,7 +1307,7 @@ Theorem~\ref{thm:balance}~formally states the relevant proposition.
   \end{align}
 \end{theorem}
 \end{verbatimwrite}
-\input{\LtxDir\EqDir/TheoremMSSBalExists}
+\input{\EqDir/TheoremMSSBalExists}
 
 %the sense in which $\mStE$ is a `target' is less obvious than that for $\mtarg$; a full justification of this terminology must await the macroeconomic analysis below.  a glimpse of the idea is can be seen by noting that, for an economy whose entire population of consumers in period $t$ all had $\mRat_{t} = \mBal$, the ratio of the aggregate values $\mlevbf_{t+1}= \int \mlevbf_{t+1}$ to $\plevbf_{t+1}= \int \plevbf_{t+1}$ next period would be $\mlevbf_{t+1}/\plevbf_{t+1}=\mbal$ so that, at least between those two periods, the economy would exhibit stability.  indeed, if we turned off the idiosyncratic shocks, 
 
@@ -1599,7 +1602,6 @@ The paper's results are all easily reproducible \href{https://econ-ark.org/_mate
 \onlyinsubfile{\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}}
 
 \end{document}
-\endinput
 
 % Delete up to four existing variants of BibTeX 
 
