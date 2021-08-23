@@ -4,8 +4,7 @@
 \begin{document}
 \hypertarget{ApndxCGrowthDeclines}{}
 \section{When Is Consumption Growth Declining in
-  \texorpdfstring{$m$}{m}?}\label{sec:ApndxCGrowthDeclines}
-\label{subsec:dcgdxneg}
+  \texorpdfstring{$m$}{m}?}\label{sec:ApndxCGrowthDeclines}\label{subsec:dcgdxneg}
 
 Figure~\ref{fig:cGroTargetFig} depicts the expected consumption growth factor as a strictly
 declining function of the cash-on-hand ratio. To investigate this,
@@ -19,12 +18,12 @@ and the proposition in which we are interested is
 \end{align*}
 or differentiating through the expectations operator, what we want is
 \begin{align}
-  \Ex_{t}\left[\PGro_{t+1} \left(\frac{\usual{\cFunc}^{\prime}(\mRat_{t+1})\Rnorm_{t+1}\aFunc^{\prime}(\mRat_{t})\usual{\cFunc}(\mRat_{t})-\usual{\cFunc}(\mRat_{t+1})\usual{\cFunc}^{\prime}(\mRat_{t})}{\usual{\cFunc}(\mRat_{t})^{2}}\right)\right]  & < 0 \label{eq:kappaPrimeLT0}.
+  \Ex_{t}\left[\PGro_{t+1} \left(\frac{\usual{\cFunc}^{\prime}(\mRat_{t+1})\Rnorm_{t+1}\aFunc^{\prime}(\mRat_{t})\usual{\cFunc}(\mRat_{t})-\usual{\cFunc}(\mRat_{t+1})\usual{\cFunc}^{\prime}(\mRat_{t})}{\usual{\cFunc}{(\mRat_{t})}^{2}}\right)\right]  & < 0 \label{eq:kappaPrimeLT0}.
 \end{align}
 
 Henceforth indicating appropriate arguments by the corresponding
 subscript (e.g.\ $\cFunc_{t+1}^{\prime} \equiv \cFunc^{\prime}(\mRat_{t+1})$), since
-$\PGro_{t+1}\Rnorm_{t+1}=\Rfree$, the portion of the LHS of equation \eqref{eq:kappaPrimeLT0} in brackets can be manipulated to yield
+$\PGro_{t+1}\Rnorm_{t+1}=\Rfree$, the portion of the LHS of equation~\eqref{eq:kappaPrimeLT0} in brackets can be manipulated to yield
 \begin{equation}\begin{gathered}\begin{aligned}
   \cFunc_{t} \pmb{\Upsilon}^{\prime}_{t+1}  & = \cFunc^{\prime}_{t+1}\aFunc^{\prime}_{t}\Rfree-\cFunc^{\prime}_{t} \PGro_{t+1} \cFunc_{t+1}/\cFunc_{t} \nonumber
   \\  & = \cFunc^{\prime}_{t+1}\aFunc^{\prime}_{t}\Rfree-\cFunc^{\prime}_{t} \pmb{\Upsilon}_{t+1} \label{eq:cPrimek}
@@ -38,11 +37,11 @@ Now differentiate the Euler equation with respect to $\mRat_{t}$:
   \\  & = \Ex_{t}[\pmb{\Upsilon}_{t+1}^{-\CRRA-1}]\Ex_{t}[\pmb{\Upsilon}_{t+1}^{\prime}]+\mbox{cov}_{t}(\pmb{\Upsilon}_{t+1}^{-\CRRA-1},\pmb{\Upsilon}_{t+1}^{\prime}) \notag
   \\ \Ex_{t}[\pmb{\Upsilon}_{t+1}^{\prime}]  & = -\mbox{cov}_{t}(\pmb{\Upsilon}_{t+1}^{-\CRRA-1},\pmb{\Upsilon}_{t+1}^{\prime})/\Ex_{t}[\pmb{\Upsilon}_{t+1}^{-\CRRA-1}] \label{eq:covgen}
 \end{aligned}\end{gathered}\end{equation}
-but since $\pmb{\Upsilon}_{t+1} > 0$ we can see from \eqref{eq:covgen} that \eqref{eq:kappaPrimeLT0} is equivalent to
+but since $\pmb{\Upsilon}_{t+1} > 0$ we can see from~\eqref{eq:covgen} that~\eqref{eq:kappaPrimeLT0} is equivalent to
 \begin{equation}\begin{gathered}\begin{aligned}
   \mbox{cov}_{t}(\pmb{\Upsilon}_{t+1}^{-\CRRA-1},\pmb{\Upsilon}_{t+1}^{\prime})  & > 0 \nonumber
 \end{aligned}\end{gathered}\end{equation}
-which, using \eqref{eq:cPrimek}, will be true if
+which, using~\eqref{eq:cPrimek}, will be true if
 \begin{equation}\begin{gathered}\begin{aligned}
   \mbox{cov}_{t}(\pmb{\Upsilon}_{t+1}^{-\CRRA-1},\cFunc^{\prime}_{t+1}\aFunc^{\prime}_{t}\Rfree - \cFunc^{\prime}_{t}\pmb{\Upsilon}_{t+1})  & > 0 \notag
 \end{aligned}\end{gathered}\end{equation}
@@ -57,7 +56,7 @@ and
 
 The latter proposition is obviously true under our assumption $\CRRA > 1$.  The former will be true if
 \begin{align*}
-  \mbox{cov}_{t}\left((\PGro \pShk_{t+1} \cFunc(\mRat_{t+1}))^{-\CRRA-1},\cFunc^{\prime}(\mRat_{t+1}) \right)  & > 0 \nonumber.
+  \mbox{cov}_{t}\left({(\PGro \pShk_{t+1} \cFunc(\mRat_{t+1}))}^{-\CRRA-1},\cFunc^{\prime}(\mRat_{t+1}) \right)  & > 0 \nonumber.
 \end{align*}
 
 The two shocks cause two kinds of variation in $\mRat_{t+1}$.

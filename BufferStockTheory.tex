@@ -2,22 +2,17 @@
 \documentclass[titlepage]{\econtex}
 \providecommand{\texname}{BufferStockTheory}% Keyname for the paper
 \usepackage{\LaTeXInputs/BufferStockTheory}% Styling for whole paper (and subfiles)
-%\WarningsOff*
-%#\ErrorsOff*
 
-\renewcommand\LineNumber{\the\inputlineno}
+%\renewcommand\LineNumber{\the\inputlineno}
 \begin{document}
-\linenumbers
-\WarningsOff*
-\ErrorsOff*
-\WarningFilter{ext4}
-\WarningFilter{pdfTeX}
+%{\linenumbers}
 
 % Command to determine whether executing in a subfile or main file
 % Subfiles redefine the commands 
 \renewcommand{\onlyinsubfile}[1]{}\renewcommand{\notinsubfile}[1]{#1}
 
 \subfile{BufferStockTheory-NoAppendix} % First subfile (main body of paper)
+\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}\end{document}
 
 \pagebreak
 \hypertarget{Appendices}{} % Allows link to [url-of-paper]#Appendices
@@ -35,12 +30,12 @@
 \subfile{\ApndxDir/ApndxCGrowthDeclines}
 \subfile{\ApndxDir/ApndxMTargetIsStable}
 
-\clearpage\vfill\eject
+{\clearpage\vfill\eject}
 
 % References 
-\small % Small font 
 \renewcommand{\baselinestretch}{1.0} % Single spaced
 
+\small % Small font 
 \bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}
 \end{document}
 

@@ -6,7 +6,7 @@
 
 \section{Existence of a Concave Consumption Function}\label{sec:ApndxcExists}
 
-To show that \eqref{\localorexternallabel{eq:veqn}} defines a sequence of continuously differentiable strictly increasing concave functions $\{\cFunc_{T},\cFunc_{T-1},...,\cFunc_{T-k}\}$, we start with a definition.  We will say that a function $\nFunc(z)$ is `nice' if it satisfies
+To show that~\eqref{\localorexternallabel{eq:veqn}} defines a sequence of continuously differentiable strictly increasing concave functions $\{\cFunc_{T},\cFunc_{T-1},\ldots,\cFunc_{T-k}\}$, we start with a definition.  We will say that a function $\nFunc(z)$ is `nice' if it satisfies
 \begin{quote}
 \begin{enumerate}\setlength{\itemsep}{0.0ex}
 \item $\nFunc(z)$ is well-defined iff $z>0$
@@ -25,7 +25,7 @@ To show that \eqref{\localorexternallabel{eq:veqn}} defines a sequence of contin
 \end{quote}
 
 
-(Notice that an implication of niceness is that $\lim_{z \downarrow 0} \nFunc^{\prime}(z) = \infty.$)
+(Notice that an implication of niceness is that $\lim_{z \downarrow 0} \nFunc^{\prime}(z) = \infty$.)
 
 Assume that some $\vFunc_{t+1}$ is nice.  Our objective is to show that this
 implies $\vFunc_{t}$ is also nice; this is sufficient to establish that
@@ -50,8 +50,8 @@ Next define $\underline{\vFunc}_{t}(\mRat,\cRat)$ as
 \underline{\vFunc}_{t}(\mRat,\cRat)=\uFunc(c)+\mathfrak{v}_{t}(\mRat-c)
 \end{equation}
 which is $\mathbf{C}^{3}$ since $\mathfrak{v}_{t}$ and $\uFunc$ are both
-$\mathbf{C}^{3},$ and note that our problem's value function defined
-in \eqref{\localorexternallabel{eq:veqn}} can be written as
+$\mathbf{C}^{3}$, and note that our problem's value function defined
+in~\eqref{\localorexternallabel{eq:veqn}} can be written as
 \begin{equation}\begin{gathered}\begin{aligned}
 \vFunc_{t}(\mRat)  & =  \max_{\cRat}~\underline{\vFunc}_{t}(\mRat,\cRat).
 \end{aligned}\end{gathered}\end{equation}
@@ -65,7 +65,7 @@ $\lim_{c \downarrow
 \begin{equation}\begin{gathered}\begin{aligned}
 \cFunc_{t}(\mRat)  & = \underset{0<c<m}{\arg \max }~\underline{\vFunc}_{t}(\mRat,\cRat)
 \end{aligned}\end{gathered}\end{equation}
-exists and is unique, and \eqref{\localorexternallabel{eq:veqn}} has an internal
+exists and is unique, and~\eqref{\localorexternallabel{eq:veqn}} has an internal
 solution that satisfies
 \begin{equation}
 \uFunc^{\prime }(\cFunc_{t}(\mRat))=\mathfrak{v}_{t}^{\prime }(\mRat-\cFunc_{t}(\mRat))  \label{eq:consumptionf}.
@@ -75,7 +75,7 @@ solution that satisfies
 Since both $\uFunc$ and $\mathfrak{v}_{t}$ are strictly concave, both
 $\cFunc_{t}(\mRat)$ and $\aFunc_{t}(\mRat)=\mRat-\cFunc_{t}(\mRat)$
 are strictly increasing. Since both $\uFunc$ and $\mathfrak{v}_{t}$ are
-three times continuously differentiable, using \eqref{\localorexternallabel{eq:consumptionf}} we can conclude that
+three times continuously differentiable, using~\eqref{\localorexternallabel{eq:consumptionf}} we can conclude that
 $\cFunc_{t}(\mRat)$ is continuously differentiable and
 \begin{equation}\begin{gathered}\begin{aligned}
 \cFunc_{t}^{\prime }(\mRat)  & = \frac{\mathfrak{v}_{t}^{\prime \prime }({\aFunc}_{t}(\mRat))  }{\uFunc^{\prime \prime }(\cFunc_{t}(\mRat))+\mathfrak{v}_{t}^{\prime \prime }({\aFunc}_{t}(\mRat))}.
@@ -91,13 +91,10 @@ $\vFunc_{t}(\mRat)=\uFunc(\cFunc_{t}(\mRat))+\mathfrak{v}_{t}({\aFunc}_{t}(\mRat
 \section{
   \texorpdfstring{$\cFunc_{t}(\mRat)$}{c} is Twice Continuously Differentiable}\label{sec:CIsTwiceDifferentiable}
 
-First we show that $\cFunc_{t}(\mRat)$ is $\mathbf{C}^{1}.$ Define $y$ as
-$y\equiv m+dm$.
-  Since $\uFunc^{\prime }\left( \cFunc_{t}(y)\right) -\uFunc^{\prime }\left(
+First we show that $\cFunc_{t}(\mRat)$ is $\mathbf{C}^{1}$.  Define $y$ as $y\equiv m+dm$.  Since $\uFunc^{\prime }\left( \cFunc_{t}(y)\right) -\uFunc^{\prime }\left(
     \cFunc_{t}(\mRat)\right) =\mathfrak{v}_{t}^{\prime
   }({\aFunc}_{t}(y))-\mathfrak{v}_{t}^{\prime }({\aFunc}_{t}(\mRat))$ and $
-  \frac{{\aFunc}_{t}(y)-{\aFunc}_{t}(\mRat)}{dm}=1-\frac{\cFunc_{t}(y)-\cFunc_{t}(\mRat)}{dm},$
-  
+  \frac{{\aFunc}_{t}(y)-{\aFunc}_{t}(\mRat)}{dm}=1-\frac{\cFunc_{t}(y)-\cFunc_{t}(\mRat)}{dm}$,
 \begin{align*}
 %  \lefteqn{
   \frac{\mathfrak{v}_{t}^{\prime }({\aFunc}_{t}(y))-\mathfrak{v}_{t}^{\prime }({\aFunc}_{t}(\mRat))}{{\aFunc}_{t}(y)-{\aFunc}_{t}(\mRat)} %  }
@@ -143,7 +140,7 @@ is $\mathbf{C}^{1}$ and $\uFunc^{\prime \prime
 \prime }({\aRat}_{t})\left[ \uFunc^{\prime \prime }(c_{t})+\mathfrak{v}_{t}^{\prime \prime }({\aRat}_{t})
 \right] -\mathfrak{v}_{t}^{\prime \prime }({\aRat}_{t})\left[ c_{t}^{\prime }\uFunc^{\prime \prime
 \prime }(c_{t})+{\aRat}_{t}^{\prime }\mathfrak{v}_{t}^{\prime \prime \prime }({\aRat}_{t})\right] }{
-\left[ \uFunc^{\prime \prime }(c_{t})+\mathfrak{v}_{t}^{\prime \prime }({\aRat}_{t})\right] ^{2}}.
+{\left[ \uFunc^{\prime \prime }(c_{t})+\mathfrak{v}_{t}^{\prime \prime }({\aRat}_{t})\right]}^{2}}.
 \end{equation}
 Since $\mathfrak{v}_{t}^{\prime \prime }({\aFunc}_{t}(\mRat))$ is continuous,
 $\cFunc_{t}^{\prime \prime }(\mRat)$ is also continuous.
@@ -155,12 +152,7 @@ $\cFunc_{t}^{\prime \prime }(\mRat)$ is also continuous.
 We must show that our operator $\TMap$ satisfies all of Boyd's
 conditions.
 
-Boyd's operator $\BoydT$ maps from
-$\mathcal{C}_{\phiFunc}(\mathscr{A},\mathscr{B})$ to
-$\mathcal{C}(\mathscr{A},\mathscr{B}).$ A preliminary requirement is
-therefore that $\{\TMap{\zFunc}\}$ be continuous for any $\phiFunc-$bounded $\zFunc$,
-$\{\TMap{\zFunc}\}\in~\mathcal{C}(\mathbb{R}_{++},\mathbb{R})$.  This is not
-difficult to show; see Hiraguchi~\citeyearpar{hiraguchiBSProofs}.
+Boyd's operator $\BoydT$ maps from $\mathcal{C}_{\phiFunc}(\mathscr{A},\mathscr{B})$ to $\mathcal{C}(\mathscr{A},\mathscr{B})$. A preliminary requirement is therefore that $\{\TMap{\zFunc}\}$ be continuous for any $\phiFunc-$bounded $\zFunc$, $\{\TMap{\zFunc}\}\in~\mathcal{C}(\mathbb{R}_{++},\mathbb{R})$.  This is not difficult to show; see Hiraguchi~\citeyearpar{hiraguchiBSProofs}.
 
 Consider condition (1). For this problem,
 \begin{align*}
@@ -187,7 +179,7 @@ Condition (2) requires that $\{\TMap\mathbf{0}\}\in \mathcal{C}_{\phiFunc}\left(
 \end{equation*}
 the solution to which is patently
 $\uFunc(\MaxMPC \mRat_{t})$. Thus, condition (2)
-will hold if $(\MaxMPC \mRat_{t})^{1-\CRRA}$ is $\phiFunc$-bounded.  We use
+will hold if ${(\MaxMPC \mRat_{t})}^{1-\CRRA}$ is $\phiFunc$-bounded.  We use
 the bounding function
 \begin{equation}\begin{gathered}\begin{aligned}
   \label{eq:phiFunc}
@@ -201,9 +193,9 @@ $\phiFunc$-bounded.
 
 Finally, we turn to condition (3), $\{\TMap({\zFunc} +\zeta\phiFunc
 )\}(\mRat_{t}) \leq \{\TMap{\zFunc}\}(\mRat_{t}) +\zeta \Shrinker
-\phiFunc(\mRat_{t}).$ The proof will be more compact if we define
+\phiFunc(\mRat_{t})$. The proof will be more compact if we define
 $\breve{\cFunc}$ and $\breve{\aFunc}$ as the consumption and assets
-functions\footnote{Section \ref{sec:cExists} proves existence of a
+functions\footnote{Section~\ref{sec:cExists} proves existence of a
   continuously differentiable consumption function, which implies the
   existence of a corresponding continuously differentiable assets
   function.}  associated with $\TMap{\zFunc}$ and $\hat{\cFunc}$ and
@@ -233,36 +225,36 @@ where the last line follows because $0 < \Shrinker < 1$ by assumption.\footnote{
 Using $\phiFunc(\mRat)= \eta + \mRat^{1-\CRRA}$
 and defining $\hat{\aRat}_{t}=\hat{\aFunc}(\mRat_{t})$, this condition is
 \begin{align*}
-\DiscFac \Ex_{t}[{\PGro}_{t+1}^{1-\CRRA}(\hat{\aRat}_{t}\Rnorm_{t+1}+\tShkAll_{t+1})^{1-\CRRA}]-\mRat_{t}^{1-\CRRA}  & < \eta(1-\underbrace{\DiscFac\Ex_{t}{\PGro}_{t+1}^{1-\CRRA}}_{=\DiscAlt})
+\DiscFac \Ex_{t}[{\PGro}_{t+1}^{1-\CRRA}{(\hat{\aRat}_{t}\Rnorm_{t+1}+\tShkAll_{t+1})}^{1-\CRRA}]-\mRat_{t}^{1-\CRRA}  & < \eta(1-\underbrace{\DiscFac\Ex_{t}{\PGro}_{t+1}^{1-\CRRA}}_{=\DiscAlt})
 \end{align*}
-which by imposing \PFFVAC~(equation \eqref{\localorexternallabel{eq:PFFVAC}}, which says $\DiscAlt<1$) can be rewritten as:
+which by imposing \PFFVAC~(equation~\eqref{\localorexternallabel{eq:PFFVAC}}, which says $\DiscAlt<1$) can be rewritten as:
 \begin{equation}\begin{gathered}\begin{aligned}
- \eta>\frac{\DiscFac \Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}(\hat{\aRat}_{t}\Rnorm_{t+1}+\tShkAll_{t+1})^{1-\CRRA}\right]-\mRat_{t}^{1-\CRRA}}{1-\DiscAlt}\label{eq:KeyCondition}.
+ \eta>\frac{\DiscFac \Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}{(\hat{\aRat}_{t}\Rnorm_{t+1}+\tShkAll_{t+1})}^{1-\CRRA}\right]-\mRat_{t}^{1-\CRRA}}{1-\DiscAlt}\label{eq:KeyCondition}.
 \end{aligned}\end{gathered}\end{equation}
 
-But since $\eta$ is an arbitrary constant that we can pick, the proof thus reduces to showing that the numerator of \eqref{\localorexternallabel{eq:KeyCondition}} is bounded from above:
+But since $\eta$ is an arbitrary constant that we can pick, the proof thus reduces to showing that the numerator of~\eqref{\localorexternallabel{eq:KeyCondition}} is bounded from above:
 \begin{equation}\begin{gathered}\begin{aligned}%
-  \lefteqn{\pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}(\hat{\aRat}_{t}\Rnorm_{t+1}+\tShkEmp_{t+1}/\pNotZero)^{1-\CRRA}\right]
- +\pZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}(\hat{\aRat}_{t}\Rnorm_{t+1})^{1-\CRRA}\right]-\mRat_{t}^{1-\CRRA}\notag~~~}  \\ 
- ~~~\leq & \pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}((1-\MaxMPC)\mRat_{t}\Rnorm_{t+1}+\tShkEmp_{t+1}/\pNotZero)^{1-\CRRA}\right]
- +\pZero\DiscFac\Rfree^{1-\CRRA}((1-\MaxMPC)\mRat_{t})^{1-\CRRA}-\mRat_{t}^{1-\CRRA}\notag\\
- ~~~= & \pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}((1-\MaxMPC)\mRat_{t}\Rnorm_{t+1}+\tShkEmp_{t+1}/\pNotZero)^{1-\CRRA}\right]
- +\mRat_{t}^{1-\CRRA}\left(\pZero\DiscFac\Rfree^{1-\CRRA}\left(\pZero^{1/\CRRA}\frac{(\Rfree\DiscFac)^{1/\CRRA}}{\Rfree}\right)^{1-\CRRA}-1\right)\notag\\
- ~~~ =  & \pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}((1-\MaxMPC)\mRat_{t}\Rnorm_{t+1}+\tShkEmp_{t+1}/\pNotZero)^{1-\CRRA}\right]
- +\mRat_{t}^{1-\CRRA}\left(\underbrace{\pZero^{1/\CRRA}\frac{(\Rfree\DiscFac)^{1/\CRRA}}{\Rfree}}_{<1~\text{by
+  \lefteqn{\pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}{(\hat{\aRat}_{t}\Rnorm_{t+1}+\tShkEmp_{t+1}/\pNotZero)}^{1-\CRRA}\right]
+ +\pZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}{(\hat{\aRat}_{t}\Rnorm_{t+1})}^{1-\CRRA}\right]-\mRat_{t}^{1-\CRRA}\notag~~~}  \\ 
+ ~~~\leq & \pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}{((1-\MaxMPC)\mRat_{t}\Rnorm_{t+1}+\tShkEmp_{t+1}/\pNotZero)}^{1-\CRRA}\right]
+ +\pZero\DiscFac\Rfree^{1-\CRRA}{((1-\MaxMPC)\mRat_{t})}^{1-\CRRA}-\mRat_{t}^{1-\CRRA}\notag\\
+ ~~~= & \pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}{((1-\MaxMPC)\mRat_{t}\Rnorm_{t+1}+\tShkEmp_{t+1}/\pNotZero)}^{1-\CRRA}\right]
+ +\mRat_{t}^{1-\CRRA}\left(\pZero\DiscFac\Rfree^{1-\CRRA}{\left(\pZero^{1/\CRRA}\frac{{(\Rfree\DiscFac)}^{1/\CRRA}}{\Rfree}\right)}^{1-\CRRA}-1\right)\notag\\
+ ~~~ =  & \pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}{((1-\MaxMPC)\mRat_{t}\Rnorm_{t+1}+\tShkEmp_{t+1}/\pNotZero)}^{1-\CRRA}\right]
+ +\mRat_{t}^{1-\CRRA}\left(\underbrace{\pZero^{1/\CRRA}\frac{{(\Rfree\DiscFac)}^{1/\CRRA}}{\Rfree}}_{<1~\text{by
        \WRIC}}-1\right) \label{eq:WRICBites} \\
- ~~~< &\pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}(\underline{\tShkEmp}/\pNotZero)^{1-\CRRA}\right]=\DiscAlt\pNotZero^{\CRRA}\underline{\tShkEmp}^{1-\CRRA} \notag
+ ~~~< &\pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}{(\underline{\tShkEmp}/\pNotZero)}^{1-\CRRA}\right]=\DiscAlt\pNotZero^{\CRRA}\underline{\tShkEmp}^{1-\CRRA} \notag
  .
 \end{aligned}\end{gathered}\end{equation}
 
-We can thus conclude that equation \eqref{\localorexternallabel{eq:KeyCondition}} will certainly hold for any:
+We can thus conclude that equation~\eqref{\localorexternallabel{eq:KeyCondition}} will certainly hold for any:
 \begin{equation}\begin{gathered}\begin{aligned}
  \eta>\underline{\eta}=\frac{\DiscAlt\pNotZero^{\CRRA}\underline{\tShkEmp}^{1-\CRRA}}{1-\DiscAlt}
 \end{aligned}\end{gathered}\end{equation}
 which is a positive finite number under our assumptions.
 
 The proof that $\TMap$ defines a contraction mapping under the
-conditions \eqref{\localorexternallabel{eq:WRIC}} and \eqref{\localorexternallabel{eq:FVAC}} is
+conditions~\eqref{\localorexternallabel{eq:WRIC}} and~\eqref{\localorexternallabel{eq:FVAC}} is
 now complete.
 
 \subsection{
@@ -271,53 +263,35 @@ now complete.
 In defining our operator $\TMap$ we made the restriction
 $\MinMinMPC \mRat_{t} \leq c_{t} \leq \MaxMPC \mRat_{t}$.  However,
 in the discussion of the consumption function bounds, we
-showed only (in \eqref{\localorexternallabel{eq:cBounds}}) that $\MinMinMPC_{t} \mRat_{t} \leq \cFunc_{t}(\mRat_{t})
+showed only (in~\eqref{\localorexternallabel{eq:cBounds}}) that $\MinMinMPC_{t} \mRat_{t} \leq \cFunc_{t}(\mRat_{t})
 \leq \MaxMPC_{t} \mRat_{t}$.  (The difference is in the presence
 or absence of time subscripts on the MPC's.)
   We have therefore
-not proven (yet) that the sequence of value functions \eqref{\localorexternallabel{eq:veqn}} defines a contraction mapping.
+not proven (yet) that the sequence of value functions~\eqref{\localorexternallabel{eq:veqn}} defines a contraction mapping.
 
 Fortunately, the proof of that proposition is identical to the proof above, except that we must replace
 $\MaxMPC$ with $\MaxMPC_{T-1}$ and the \WRIC~must be
 replaced by a slightly stronger (but still quite weak) condition.  The place where these
-conditions have force is in the step at \eqref{\localorexternallabel{eq:WRICBites}}.
+conditions have force is in the step at~\eqref{\localorexternallabel{eq:WRICBites}}.
 Consideration of the prior two equations reveals that
 a sufficient stronger condition is
 \begin{align*}
-    \pZero \DiscFac (\Rfree (1-\MaxMPC_{T-1}))^{1-\CRRA}  & < 1
-\\  (\pZero \DiscFac)^{1/(1-\CRRA)}  (1-\MaxMPC_{T-1})  & > 1
-\\  (\pZero \DiscFac)^{1/(1-\CRRA)}  (1-(1+\MinMPS)^{-1})  & > 1
+    \pZero \DiscFac {(\Rfree (1-\MaxMPC_{T-1}))}^{1-\CRRA}  & < 1
+\\  {(\pZero \DiscFac)}^{1/(1-\CRRA)}  (1-\MaxMPC_{T-1})  & > 1
+\\  {(\pZero \DiscFac)}^{1/(1-\CRRA)}  (1-{(1+\MinMPS)}^{-1})  & > 1
 \end{align*}
-where we have used \eqref{\localorexternallabel{eq:MaxMPCInv}} for $\MaxMPC_{T-1}$ (and in the second step the reversal of the inequality occurs because we have assumed $\CRRA > 1$ so that we are exponentiating both sides by the negative number $1-\CRRA$).  To see that this is a weak condition, note that for small values of
-$\pZero$ this expression can be further simplified using $(1+\MinMPS)^{-1}
+where we have used~\eqref{\localorexternallabel{eq:MaxMPCInv}} for $\MaxMPC_{T-1}$ (and in the second step the reversal of the inequality occurs because we have assumed $\CRRA > 1$ so that we are exponentiating both sides by the negative number $1-\CRRA$).  To see that this is a weak condition, note that for small values of
+$\pZero$ this expression can be further simplified using ${(1+\MinMPS)}^{-1}
 \approx 1-\MinMPS$ so that it becomes
 \begin{align*}
-  (\pZero \DiscFac)^{1/(1-\CRRA)}  \MinMPS  & > 1
+  {(\pZero \DiscFac)}^{1/(1-\CRRA)}  \MinMPS  & > 1
 \\  (\pZero \DiscFac)  \pZero^{(1-\CRRA)/\CRRA} \PatR^{1-\CRRA}  & < 1
 \\  \DiscFac  \pZero^{1/\CRRA} \PatR^{1-\CRRA}  & < 1.
 \end{align*}
 
-Calling the weak return patience factor $\PatR^{\wp}=\wp^{1/\CRRA}\PatR$ and
-recalling that the \WRIC~was $\PatR^{\wp}<1$, the expression on the LHS
-above is $\DiscFac \PatR^{-\CRRA}$ times the WRPF.  Since we usually assume $\DiscFac$ not far below 1 and
-parameter values such that $\PatR \approx 1$, this condition is clearly not very
-different from the \WRIC.
+Calling the weak return patience factor $\PatR^{\wp}=\wp^{1/\CRRA}\PatR$ and recalling that the \WRIC~was $\PatR^{\wp}<1$, the expression on the LHS above is $\DiscFac \PatR^{-\CRRA}$ times the WRPF.\@ Since we usually assume $\DiscFac$ not far below 1 and parameter values such that $\PatR \approx 1$, this condition is clearly not very different from the \WRIC.\@
 
-The upshot is that under these slightly stronger conditions the value
-functions for the original problem define a contraction mapping with a
-unique $\vFunc(\mRat)$.  But since $\lim_{n \rightarrow \infty}
-\MinMinMPC_{T-n} = \MinMinMPC$ and $\lim_{n \rightarrow \infty}
-\MaxMPC_{T-n} = \MaxMPC$, it must be the case that the $\vFunc(\mRat)$
-toward which these $\vFunc_{T-n}$'s are converging is the {\it same}
-$\vFunc(\mRat)$ that was the endpoint of the contraction defined by
-our operator $\TMap$.  Thus, under our slightly stronger (but still
-quite weak) conditions, not only do the value functions defined by
-\eqref{\localorexternallabel{eq:veqn}} converge, they converge to the same unique $\vFunc$
-defined by $\TMap$.\footnote{It seems likely that convergence of the
-  value functions for the original problem could be proven even if
-  only the \WRIC~were imposed; but that proof is not an essential part
-  of the enterprise of this paper and is therefore left for future
-  work.}
+The upshot is that under these slightly stronger conditions the value functions for the original problem define a contraction mapping with a unique $\vFunc(\mRat)$.  But since $\lim_{n \rightarrow \infty} \MinMinMPC_{T-n} = \MinMinMPC$ and $\lim_{n \rightarrow \infty} \MaxMPC_{T-n} = \MaxMPC$, it must be the case that the $\vFunc(\mRat)$ toward which these $\vFunc_{T-n}$'s are converging is the \textit{same} $\vFunc(\mRat)$ that was the endpoint of the contraction defined by our operator $\TMap$.  Thus, under our slightly stronger (but still quite weak) conditions, not only do the value functions defined by~\eqref{\localorexternallabel{eq:veqn}} converge, they converge to the same unique $\vFunc$ defined by $\TMap$.\footnote{It seems likely that convergence of the value functions for the original problem could be proven even if only the \WRIC~were imposed; but that proof is not an essential part of the enterprise of this paper and is therefore left for future work.}
 
 \onlyinsubfile{\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}}
 

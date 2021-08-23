@@ -6,7 +6,7 @@
 \begin{document}
 
 \let\TableWidth\relax
-\newlength\TableWidth
+{\newlength\TableWidth}
 
 \section{Perfect Foresight Liquidity Constrained Solution}\label{sec:ApndxLiqConstr}
 
@@ -21,19 +21,19 @@ consumption function $\constr{\cFunc}(\mRat)$ that arise under various parametri
 A consumer is `growth patient' if the perfect foresight growth
 impatience condition fails (\cncl{\GICRaw}, $1 < \Pat/\PGro$).  Under
 \cncl{\GICRaw} the constraint does not bind at the lowest feasible value of $\mRat_{t}=1$ because
-$1 < (\Rfree\Discount)^{1/\CRRA}/\PGro$ implies that spending
+$1 < {(\Rfree\Discount)}^{1/\CRRA}/\PGro$ implies that spending
 everything today (setting $\cRat_{t}=\mRat_{t}=1$) produces lower
 marginal utility than is obtainable by reallocating a marginal unit of
 resources to the next period at return $\Rfree$:\footnote{The point at
   which the constraint would bind (if that point could be attained) is
   the $\mRat=\cRat$ for which $\uFunc^{\prime}(\cRat_{\#}) = \Rfree
   \Discount \uFunc^{\prime}(\PGro)$ which is $\cRat_{\#} =
-  \PGro/(\Rfree \Discount)^{1/\CRRA}$ and the consumption function
+  \PGro/{(\Rfree \Discount)}^{1/\CRRA}$ and the consumption function
   will be defined by
   $\constr{\cFunc}(\mRat)=\min[\mRat,\cRat_{\#}+(\mRat-\cRat_{\#})\MinMPC
   ]$.}
 \begin{equation}\begin{gathered}\begin{aligned}
-  1  & < (\Rfree \Discount)^{1/\CRRA}\PGro^{-1}    \notag
+  1  & < {(\Rfree \Discount)}^{1/\CRRA}\PGro^{-1}    \notag
   \\ 1  & < \Rfree \Discount \PGro^{-\CRRA} \notag
   \\  \uFunc^{\prime}(1)  & < \Rfree \Discount \uFunc^{\prime}(\PGro)   \label{eq:EulerGICRawFailsEnd}.
 \end{aligned}\end{gathered}\end{equation}
@@ -63,14 +63,14 @@ $\infty$.\footnote{The knife-edge case is where $\Pat = \PGro$, in
   function is $\constr{\cFunc}(\mRat)=\min[\mRat,1]$.}
 
 \let\TableWidth\relax
-\newlength\TableWidth
+{\newlength\TableWidth}
 
 Thus, the requirement that the consumption function be nondegenerate
 implies that for a consumer satisfying \cncl{\GICRaw} we must impose
 the \RIC~(and the \FHWC~can be shown to be a consequence of \cncl{\GICRaw} and \RIC).  In
 this case, the consumer's optimal behavior is easy to describe.  We
 can calculate the point at which the unconstrained consumer would
-choose $\cRat = \mRat$ from equation \eqref{\localorexternallabel{eq:cFuncPFUnc}}:
+choose $\cRat = \mRat$ from Equation~\eqref{\localorexternallabel{eq:cFuncPFUnc}}:
 \begin{equation}\begin{gathered}\begin{aligned}
   \mRat_{\#}  & = (\mRat_{\#}-1+\hRat)\MinMPC
   \\ \mRat_{\#}(1-\MinMPC)  & = (\hRat - 1)\MinMPC
@@ -95,22 +95,10 @@ consumer, $\bar{\cFunc}(\mRat)$.
 
 \subsection{If \GICRaw~Holds}
 
-Imposition of the \GICRaw~reverses the inequality in
-\eqref{\localorexternallabel{eq:EulerGICRawFailsEnd}}, and thus
-reverses the conclusion: A consumer who starts with $\mRat_{t}=1$ will
-desire to consume more than 1.  Such a consumer will be constrained,
-not only in period $t$, but perpetually thereafter.
+Imposition of the \GICRaw~reverses the inequality in~\eqref{\localorexternallabel{eq:EulerGICRawFailsEnd}}, and thus reverses the conclusion: A consumer who starts with $\mRat_{t}=1$ will desire to consume more than 1.  Such a consumer will be constrained, not only in period $t$, but perpetually thereafter.
 
-Now define $\bRat_{\#}^{n}$ as the $\bRat_{t}$ such that
-an unconstrained consumer holding $\bRat_{t}=\bRat_{\#}^{n}$ would behave so as to arrive in period $t+n$ with $\bRat_{t+n}=0$ (with $\bRat_{\#}^{0}$ trivially equal to 0); for example, a consumer with $\bRat_{t-1}=\bRat_{\#}^{1}$ was on the `cusp' of being constrained in period
-$t-1$: Had $b_{t-1}$ been infinitesimally smaller, the constraint
-would have been binding (because the consumer would have desired, but
-been unable, to enter period $t$ with negative, not zero, $b$).  Given
-the \GICRaw, the constraint certainly binds in period $t$ (and
-thereafter) with resources of
-$\mRat_{t}=\mRat_{\#}^{0}=1+\bRat_{\#}^{0}=1$: The consumer cannot
-spend more (because constrained), and will not choose to spend less
-(because impatient), than $c_{t}=\cRat_{\#}^{0}=1$.
+Now define $\bRat_{\#}^{n}$ as the $\bRat_{t}$ such that an unconstrained consumer holding $\bRat_{t}=\bRat_{\#}^{n}$ would behave so as to arrive in period $t+n$ with $\bRat_{t+n}=0$ (with $\bRat_{\#}^{0}$ trivially equal to 0); for example, a consumer with $\bRat_{t-1}=\bRat_{\#}^{1}$ was on the `cusp' of being constrained in period $t-1$: Had $b_{t-1}$ been infinitesimally smaller, the constraint would have been binding (because the consumer would have desired, but been unable, to enter period $t$ with negative, not zero, $b$).  Given
+the \GICRaw, the constraint certainly binds in period $t$ (and thereafter) with resources of $\mRat_{t}=\mRat_{\#}^{0}=1+\bRat_{\#}^{0}=1$: The consumer cannot spend more (because constrained), and will not choose to spend less (because impatient), than $c_{t}=\cRat_{\#}^{0}=1$.
 
 We can construct the entire `prehistory' of this consumer leading up to $t$ as follows.
 Maintaining the assumption that the constraint has never bound in the past,
@@ -121,9 +109,9 @@ $\cRat$ must have been growing according to $\PatPGro$, so consumption $n$ perio
 
 The PDV of consumption from $t-n$ until $t$ can thus be computed as
 \begin{equation}\begin{gathered}\begin{aligned}
-  \mathbb{C}_{t-n}^{t}  & = \cRat_{t-n}(1+\Pat/\Rfree+ ... + (\Pat/\Rfree)^{n}) \notag
-  % \\   \mathbb{C}_{t-n}^{t}  & = \cRat_{t-n}(1+\PatPGro/\Rnorm+ ... + (\PatPGro/\Rnorm)^{n}) \notag
-  \\  & = \cRat_{\#}^{n}(1+\PatR+ ... + \PatR^{n}) \notag
+  \mathbb{C}_{t-n}^{t}  & = \cRat_{t-n}(1+\Pat/\Rfree+ \cdots + {(\Pat/\Rfree)}^{n}) \notag
+  % \\   \mathbb{C}_{t-n}^{t}  & = \cRat_{t-n}(1+\PatPGro/\Rnorm+ \cdots + (\PatPGro/\Rnorm)^{n}) \notag
+  \\  & = \cRat_{\#}^{n}(1+\PatR+ \cdots + \PatR^{n}) \notag
   \\  & = \PatPGro^{-n}\left(\frac{1-\PatR^{n+1}}{1-\PatR}\right) \label{PDVc}
   \\  & = \left(\frac{\PatPGro^{-n}-\PatR}{1-\PatR}\right) 
 \end{aligned}\end{gathered}\end{equation}
@@ -131,7 +119,7 @@ and note that the consumer's human wealth between $t-n$ and $t$ (the relevant
 time horizon, because from $t$ onward the consumer will be constrained
 and unable to access post-$t$ income) is
 \begin{equation}\begin{gathered}\begin{aligned}
-  \hRat_{\#}^{n}  & = 1+...+\Rnorm^{-n}
+  \hRat_{\#}^{n}  & = 1+ \cdots +\Rnorm^{-n}
 \end{aligned}\end{gathered}\end{equation}
 while the intertemporal budget constraint says
 \begin{eqnarray*}
@@ -158,28 +146,19 @@ higher than for a consumer with assets $\mRat=\mRat_{\#}^{n}+\epsilon$
 because the latter consumer will spread a marginal dollar over more
 periods before exhausting it.
 
-In order for a unique consumption function to be defined by this
-sequence \eqref{\localorexternallabel{eq:bPound}} for the entire domain of positive real
-values of $b$, we need $\bRat_{\#}^{n}$ to become arbitrarily large with
-$n$.  That is, we need
+In order for a unique consumption function to be defined by this sequence~\eqref{\localorexternallabel{eq:bPound}} for the entire domain of positive real values of $b$, we need $\bRat_{\#}^{n}$ to become arbitrarily large with $n$.  That is, we need
 \begin{equation}\begin{gathered}\begin{aligned}
   \lim_{n \rightarrow \infty} \bRat_{\#}^{n} = \infty. \label{eq:bToInfty}
 \end{aligned}\end{gathered}\end{equation}
 
 \subsubsection{If \FHWC~Holds}
-The \FHWC~requires $\Rnorm^{-1} < 1$, in which case the second term in \eqref{\localorexternallabel{eq:bPound}} limits to a constant as $n \uparrow \infty$, and \eqref{\localorexternallabel{eq:bToInfty}} reduces to a requirement that
+The \FHWC~requires $\Rnorm^{-1} < 1$, in which case the second term in~\eqref{\localorexternallabel{eq:bPound}} limits to a constant as $n \uparrow \infty$, and~\eqref{\localorexternallabel{eq:bToInfty}} reduces to a requirement that
 \begin{eqnarray*}
-  \lim_{n \rightarrow \infty} \left(\frac{\PatPGro^{-n}-(\PatR/\PatPGro)^{n}\PatR}{1-\PatR}\right)  & = \infty
+  \lim_{n \rightarrow \infty} \left(\frac{\PatPGro^{-n}-{(\PatR/\PatPGro)}^{n}\PatR}{1-\PatR}\right)  & = \infty
   \\  \lim_{n \rightarrow \infty} \left(\frac{\PatPGro^{-n}-\Rnorm^{-n}\PatR}{1-\PatR}\right)  & = \infty
   \\  \lim_{n \rightarrow \infty} \left(\frac{\PatPGro^{-n}}{1-\PatR}\right)  & = \infty.
 \end{eqnarray*}
-Given the \GICRaw~$\PatPGro^{-1}>1$, this will hold iff the \RIC~holds, $\PatR < 1$.  But given that the \FHWC~$\Rfree > \PGro$ holds, the \GICRaw is stronger (harder to satisfy) than the \RIC; thus, the~\FHWC~and the \GICRaw~together imply the \RIC, and so a well-defined
-solution exists.  Furthermore, in the limit as $n$ approaches
-infinity, the difference between the limiting constrained consumption
-function and the unconstrained consumption function becomes
-vanishingly small, because the date at which the constraint binds
-becomes arbitrarily distant, so the effect of that constraint on current
-behavior shrinks to nothing.  That is,
+Given the \GICRaw~$\PatPGro^{-1}>1$, this will hold iff the \RIC~holds, $\PatR < 1$.  But given that the \FHWC~$\Rfree > \PGro$ holds, the {\GICRaw} is stronger (harder to satisfy) than the \RIC;\@ thus, the~\FHWC~and the \GICRaw~together imply the \RIC, and so a well-defined solution exists.  Furthermore, in the limit as $n$ approaches infinity, the difference between the limiting constrained consumption function and the unconstrained consumption function becomes vanishingly small, because the date at which the constraint binds becomes arbitrarily distant, so the effect of that constraint on current behavior shrinks to nothing.  That is,
 \begin{equation}\begin{gathered}\begin{aligned}
   \lim_{m \rightarrow \infty}\constr{\cFunc}(m) - \bar{\cFunc}(m) = 0.
 \end{aligned}\end{gathered}\end{equation}
@@ -201,8 +180,7 @@ If the \FHWC~fails, matters are a bit more complex.
   Thus, the \GICRaw~is an implication of $\cncl{\FHWC}$.
 \end{comment}
 
-Given failure of \FHWC, \eqref{\localorexternallabel{eq:bToInfty}} requires
-
+Given failure of \FHWC,~\eqref{\localorexternallabel{eq:bToInfty}} requires
 \begin{equation}\begin{gathered}\begin{aligned}
   % \lim_{n \rightarrow \infty} \left(\frac{\PatPGro^{-n}-\Rnorm^{-n}\PatR}{1-\PatR}\right) + \left(\frac{1-\Rnorm^{-(n+1)}}{\Rnorm^{-1}-1}\right)  & = \infty \\
   \lim_{n \rightarrow \infty} \left(\frac{\Rnorm^{-n}\PatR-\PatPGro^{-n}}{\PatR-1}\right) + \left(\frac{1-\Rnorm^{-(n+1)}}{\Rnorm^{-1}-1}\right)  & = \infty \notag
@@ -211,7 +189,7 @@ Given failure of \FHWC, \eqref{\localorexternallabel{eq:bToInfty}} requires
 \end{aligned}\end{gathered}\end{equation}
 \hypertarget{PFGICHoldsFHWCFailsRICFailsDiscuss}{}
 
-\noindent {\bf If \RIC~Holds}.  When the \RIC~holds, rearranging \eqref{\localorexternallabel{eq:FHWCfails}} gives
+\noindent {\bf If \RIC~Holds}.  When the \RIC~holds, rearranging~\eqref{\localorexternallabel{eq:FHWCfails}} gives
 \begin{eqnarray*}
   \lim_{n \rightarrow \infty} \left(\frac{\PatPGro^{-n}}{1-\PatR}\right)-\Rnorm^{-n}\left(\frac{\PatR}{1-\PatR}+\frac{\Rnorm^{-1}}{\Rnorm^{-1}-1}\right)  & = \infty
 \end{eqnarray*}
@@ -235,12 +213,12 @@ which with a bit of algebra\footnote{
   \lim_{m \rightarrow \infty} \constr{\pmb{\MPC}}(\mRat)  & = 1-\PatR.
 \end{aligned}\end{gathered}\end{equation}
 
-\noindent {\bf If \RIC~Fails}.  Consider now the \cncl{\RIC} case, $\PatR > 1$.  We can rearrange \eqref{\localorexternallabel{eq:FHWCfails}}as
+\noindent {\bf If \RIC~Fails}.  Consider now the \cncl{\RIC} case, $\PatR > 1$.  We can rearrange~\eqref{\localorexternallabel{eq:FHWCfails}}as
 \begin{eqnarray}
   \lim_{n \rightarrow \infty} \left(\frac{\PatR(\Rnorm^{-1}-1)}{(\Rnorm^{-1}-1)(\PatR-1)}-\frac{\Rnorm^{-1}(\PatR-1)}{(\Rnorm^{-1}-1)(\PatR-1)}\right)\Rnorm^{-n}-\left(\frac{\PatPGro^{-n}}{\PatR-1}\right)  & = \infty.  
 \end{eqnarray}
 which makes clear that with $\cncl{\FHWC} \Rightarrow \Rnorm^{-1} > 1$ and $\cncl{\RIC} \Rightarrow \PatR > 1$ the numerators and denominators of both terms multiplying $\Rnorm^{-n}$ can be seen transparently to be positive.  So, the terms multiplying
-$\Rnorm^{-n}$ in \eqref{\localorexternallabel{eq:FHWCfails}} will be positive if
+$\Rnorm^{-n}$ in~\eqref{\localorexternallabel{eq:FHWCfails}} will be positive if
 \begin{eqnarray*}
   \PatR \Rnorm^{-1} - \PatR  & > & \Rnorm^{-1}\PatR-\Rnorm^{-1}
   \\ \Rnorm^{-1}  & > & \PatR
@@ -261,18 +239,16 @@ What is happening here is that the $\cRat_{\#}^{n}$ term is increasing backward 
 \begin{eqnarray}
   \PGro/\Rfree & > & \PGro/\Pat 
 \end{eqnarray}
-because $\cncl{\RIC} \Rightarrow \Pat > \Rfree.$
+because $\cncl{\RIC} \Rightarrow \Pat > \Rfree$.
 
-Consequently, while $\lim_{n \uparrow \infty} \bRat_{\#}^{n} = \infty$, the limit of the \textit{ratio} $\cRat_{\#}^{n}/\bRat_{\#}^{n}$ in \eqref{eq:MPCConstrLim} is zero.
+Consequently, while $\lim_{n \uparrow \infty} \bRat_{\#}^{n} = \infty$, the limit of the \textit{ratio} $\cRat_{\#}^{n}/\bRat_{\#}^{n}$ in~\eqref{eq:MPCConstrLim} is zero.
 Thus, surprisingly, the problem has a well defined solution with
 infinite human wealth if the \RIC~fails.  It remains true that \cncl{\RIC}
 implies a limiting MPC of zero,
 \begin{equation}\begin{gathered}\begin{aligned}
   \lim_{\mRat \rightarrow \infty} \constr{\pmb{\MPC}}(\mRat)   & = 0,
 \end{aligned}\end{gathered}\end{equation}
-but that limit is approached gradually, starting from a positive
-value, and consequently the consumption function is {\it not} the
-degenerate $\constr{\cFunc}(\mRat)=0$.  (Figure~\ref{fig:PFGICHoldsFHWCFailsRICFails} presents an example for $\CRRA=2$, $\Rfree=0.98$, $\Discount = 1.00$, $\PGro = 0.99$; note that the horizontal axis is bank balances $\bRat = \mRat-1$; the part of the consumption function below the depicted points is uninteresting -- $\cRat = \mRat$ -- so not worth plotting).
+but that limit is approached gradually, starting from a positive value, and consequently the consumption function is \textit{not} the degenerate $\constr{\cFunc}(\mRat)=0$.  (Figure~\ref{fig:PFGICHoldsFHWCFailsRICFails} presents an example for $\CRRA=2$, $\Rfree=0.98$, $\Discount = 1.00$, $\PGro = 0.99$; note that the horizontal axis is bank balances $\bRat = \mRat-1$; the part of the consumption function below the depicted points is uninteresting --- $\cRat = \mRat$ --- so not worth plotting).
 
 
 \input{\FigDir/PFGICHoldsFHWCFailsRICFails}
@@ -353,7 +329,7 @@ greater than zero, because for any $\kappa > 0$ the level of consumption
 in the model with uncertainty would eventually exceed the level of consumption
 in the absence of uncertainty.
 
-\cite{maTodaRich} characterize the limits of the MPC in a more general framework that allows for capital and labor income risks in a Markovian setting with liquidity constraints, and find that in that much more general framework the limiting MPC is also zero.
+\cite{maTodaRich} characterize the limits of the MPC in a more general framework that allows for capital and labor income risks in a Markovian setting with liquidity constraints, and find that in that much more general framework the limiting MPC is also zero.% chktex 2
 
 \onlyinsubfile{\pagebreak\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}}
 \end{document}

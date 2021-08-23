@@ -6,36 +6,14 @@
 %\begin{verbatimwrite}{\LaTeXGenerated/ApndxSolnMethTermFunc.tex}
 \section{The Terminal/Limiting Consumption Function}\label{sec:ApndxSolnMethTermFunc}
 
-  For any set of parameter values that satisfy the conditions required
-  for convergence, the problem can be solved by setting the terminal
-  consumption function to $\cFunc_{T}(\mRat) = \mRat$ and constructing
-  $\{\cFunc_{T-1}, \cFunc_{T-2}, ... \}$ by time iteration (a method
-  that will converge to $\cFunc(m)$ by standard theorems).  But $\cFunc_{T}(\mRat)=\mRat$ is very far from
-  the final converged consumption rule $\cFunc(\mRat)$,\footnote{Unless $\Discount \approx +0.$} and thus many
-  periods of iteration will likely be required to obtain a candidate rule
-  that even remotely resembles the converged function.
+For any set of parameter values that satisfy the conditions required for convergence, the problem can be solved by setting the terminal consumption function to $\cFunc_{T}(\mRat) = \mRat$ and constructing $\{\cFunc_{T-1}, \cFunc_{T-2}, \cdots \}$ by time iteration (a method that will converge to $\cFunc(m)$ by standard theorems).  But $\cFunc_{T}(\mRat)=\mRat$ is very far from the final converged consumption rule $\cFunc(\mRat)$,\footnote{Unless $\Discount \approx +0$.} and thus many periods of iteration will likely be required to obtain a candidate rule that even remotely resembles the converged function.
 
-A natural alternative choice for the terminal consumption rule is the solution to the perfect foresight liquidity constrained problem, to which the model's solution converges (under specified parametric restrictions) as all forms of uncertainty approach zero (as discussed in the main text).  But a difficulty with this idea is that the perfect foresight liquidity constrained solution is `kinked:' The slope of the consumption function changes discretely at the points $\{\mRat^{1}_{\#},\mRat^{2}_{\#},...\}$.  This is a practical problem because it rules out the use of derivatives of the consumption function in the approximate representation of $\cFunc(\mRat)$, thereby preventing the enormous increase in efficiency obtainable from a higher-order approximation.
+A natural alternative choice for the terminal consumption rule is the solution to the perfect foresight liquidity constrained problem, to which the model's solution converges (under specified parametric restrictions) as all forms of uncertainty approach zero (as discussed in the main text).  But a difficulty with this idea is that the perfect foresight liquidity constrained solution is `kinked:' The slope of the consumption function changes discretely at the points $\{\mRat^{1}_{\#},\mRat^{2}_{\#},\cdots\}$.  This is a practical problem because it rules out the use of derivatives of the consumption function in the approximate representation of $\cFunc(\mRat)$, thereby preventing the enormous increase in efficiency obtainable from a higher-order approximation.
 
-Our solution is simple: The formulae in another appendix
-that identify kink points on
-$\usual{\cFunc}(\mRat)$ for integer values of $n$ (e.g.,
-$\cRat_{\#}^{n} = \PatPGro^{-n}$) are continuous functions of $n$; the
-conclusion that $\usual{\cFunc}(\mRat)$ is piecewise linear
-between the kink points does not require that the {\it terminal
-  consumption rule} (from which time iteration proceeds) also be
-piecewise linear.  Thus, for values $n \geq 0$ we can construct a
-smooth function $\breve{\cFunc}(m)$ that matches the true perfect foresight
-liquidity constrained consumption function at the set of points
-corresponding to integer periods in the future, but satisfies the
-(continuous, and greater at non-kink points) consumption rule defined from the
-appendix's formulas by noninteger values of $n$ at other
-points.\footnote{In practice, we calculate the first and second
-  derivatives of $\usual{\cFunc}$ and use piecewise polynomial
-  approximation methods that match the function at these points.}
+Our solution is simple: The formulae in another appendix that identify kink points on $\usual{\cFunc}(\mRat)$ for integer values of $n$ (e.g., $\cRat_{\#}^{n} = \PatPGro^{-n}$) are continuous functions of $n$; the conclusion that $\usual{\cFunc}(\mRat)$ is piecewise linear between the kink points does not require that the \textit{terminal consumption rule} (from which time iteration proceeds) also be piecewise linear.  Thus, for values $n \geq 0$ we can construct a smooth function $\breve{\cFunc}(m)$ that matches the true perfect foresight liquidity constrained consumption function at the set of points corresponding to integer periods in the future, but satisfies the (continuous, and greater at non-kink points) consumption rule defined from the appendix's formulas by noninteger values of $n$ at other points.\footnote{In practice, we calculate the first and second derivatives of $\usual{\cFunc}$ and use piecewise polynomial approximation methods that match the function at these points.}
 
 
-This strategy generates a smooth limiting consumption function --
+This strategy generates a smooth limiting consumption function ---
 except at the remaining kink point defined by
 $\{\mRat_{\#}^{0},\cRat_{\#}^{0}\}$.  Below this point, the solution
 must match $\cFunc(\mRat)=\mRat$ because the constraint is binding.
@@ -55,8 +33,8 @@ $\hat{\cFunc}(\mRat)$ that satisfies the following criteria:
 \begin{enumerate}
 \item $\hat{\cFunc}(\mRat_{\#}^{0})  = \cRat_{\#}^{0}$
 \item $\hat{\cFunc}^{\prime}(\mRat_{\#}^{0}) = 1$
-\item $\hat{\cFunc}^{\prime}(\mRat_{\#}^{\underline{n}}) = (d \cFunc_{\#}^{n}/d n)(d \mFunc_{\#}^{n}/d n)^{-1}|_{n=\underline{n}}$
-\item $\hat{\cFunc}^{\prime\prime}(\mRat_{\#}^{\underline{n}}) = (d^{2} \cFunc_{\#}^{n}/d n^{2})(d^{2} \mFunc_{\#}^{n}/d n^{2})^{-1}|_{n=\underline{n}}$
+\item $\hat{\cFunc}^{\prime}(\mRat_{\#}^{\underline{n}}) = {(d \cFunc_{\#}^{n}/d n)(d \mFunc_{\#}^{n}/d n)}^{-1}|_{n=\underline{n}}$
+\item $\hat{\cFunc}^{\prime\prime}(\mRat_{\#}^{\underline{n}}) = {(d^{2} \cFunc_{\#}^{n}/d n^{2})(d^{2} \mFunc_{\#}^{n}/d n^{2})}^{-1}|_{n=\underline{n}}$
 \end{enumerate}
 where $\underline{n}$ is chosen judgmentally in a way calculated to
 generate a good compromise between smoothness of the limiting
@@ -104,14 +82,13 @@ which can be solved for
 \end{aligned}\end{gathered}\end{equation}
 \end{comment}
 
-Similarly, we can solve \eqref{\localorexternallabel{eq:ChiDef}} for
+Similarly, we can solve~\eqref{\localorexternallabel{eq:ChiDef}} for
 \begin{equation}\begin{gathered}\begin{aligned}
     \cFunc_{t}(\mRat)  & = \left(1-e^{\chi_{t}(\log \mRat)}\right)\cFunc_{T}(\mRat) \label{eq:cFuncFromChi}.
 %\\ \cFunc_{t}^{\prime}(e^{\mu})e^{\mu}  & = -e^{\chi(\mu)}\chi^{\prime}\cFunc_{T}(e^{\mu})+\left(1-e^{\chi(\mu)}\right)\cFunc_{T}(e^{\mu})
 \end{aligned}\end{gathered}\end{equation}
 
-Thus, having approximated $\chi_{t}$, we can recover from it
-the level and derivative(s) of $\cFunc_{t}$.
+Thus, having approximated $\chi_{t}$, we can recover from it the level and derivative(s) of $\cFunc_{t}$.% chktex 36
 
 %\end{verbatimwrite}%\input {\LaTeXGenerated/ApndxSolnMethTermFunc.tex}
 

@@ -4,8 +4,7 @@
 \onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 \begin{document}
 
-  \section{The Perfect Foresight Liquidity Constrained Solution as a Limit}
-\label{sec:LiqConstrAsLimit}
+  \section{The Perfect Foresight Liquidity Constrained Solution as a Limit}\label{sec:LiqConstrAsLimit}
 
 Formally, suppose we change the description of the problem by making
 the following two assumptions:
@@ -31,7 +30,7 @@ proposition we wish to demonstrate is
 We will first examine the problem in period $T-1$, then
 argue that the desired result propagates to earlier periods.
 For simplicity, suppose that the interest, growth, and time-preference
-factors are $\DiscFac = \Rfree = \PGro = 1,$ and there are no permanent
+factors are $\DiscFac = \Rfree = \PGro = 1$, and there are no permanent
 shocks, $\pShk=1$; the results below are easily generalized
 to the full-fledged version of the problem.
 
@@ -49,7 +48,7 @@ value of ending period $T-1$ with assets $\aRat$ can be defined as
 \begin{equation}\begin{gathered}\begin{aligned}
   \constr{\mathfrak{v}}_{T-1}^{\prime}(a)  & \equiv  \int_{\underline{\tShkEmp}}^{\bar{\tShkEmp}} \uP(\cFunc_{T}(a+\tShkEmp)) d\CDF_{\tShkEmp}, \notag
 \end{aligned}\end{gathered}\end{equation}
-and the solution to \eqref{\localorexternallabel{eq:vUnconstr}} will satisfy
+and the solution to~\eqref{\localorexternallabel{eq:vUnconstr}} will satisfy
 \begin{equation}\begin{gathered}\begin{aligned}
   \uP(\mRat-\aRat)  & =  \constr{\mathfrak{v}}_{T-1}^{\prime}(a) \label{eq:uPConstr}.
 %
@@ -68,24 +67,23 @@ reflecting the inability of the restrained consumer to spend more than
 current resources, and note (as pointed out by
 Deaton~\citeyearpar{deatonLiqConstr}) that
  \begin{equation}\begin{gathered}\begin{aligned}
-  \mRat^{1}_{\#}  & = \left( \constr{\mathfrak{v}}_{T-1}^{\prime}(0)\right)^{-1/\CRRA} \notag
+  \mRat^{1}_{\#}  & = {\left( \constr{\mathfrak{v}}_{T-1}^{\prime}(0)\right)}^{-1/\CRRA} \notag
  \end{aligned}\end{gathered}\end{equation}
 is the cusp value of $\mRat$ at which the constraint makes the
 transition between binding and non-binding in period $T-1$.
 
-Analogously to \eqref{\localorexternallabel{eq:uPConstr}}, defining
+Analogously to~\eqref{\localorexternallabel{eq:uPConstr}}, defining
 \begin{equation}\begin{gathered}\begin{aligned}
-  \mathfrak{v}_{T-1}^{\prime}(a;\pZero)  & \equiv  \left[\pZero \aRat^{-\CRRA}+\pNotZero\int_{\underline{\tShkEmp}}^{\bar{\tShkEmp}} \left(\cFunc_{T}(a+\tShkEmp/\pNotZero)\right)^{-\CRRA} d\CDF_{\tShkEmp}\right], \label{eq:vFrakPrime}
+  \mathfrak{v}_{T-1}^{\prime}(a;\pZero)  & \equiv  \left[\pZero \aRat^{-\CRRA}+\pNotZero\int_{\underline{\tShkEmp}}^{\bar{\tShkEmp}} {\left(\cFunc_{T}(a+\tShkEmp/\pNotZero)\right)}^{-\CRRA} d\CDF_{\tShkEmp}\right], \label{eq:vFrakPrime}
 \end{aligned}\end{gathered}\end{equation}
 the Euler equation for the original consumer's problem implies
 \begin{equation}\begin{gathered}\begin{aligned}
- (\mRat-\aRat)^{-\CRRA}  & = \mathfrak{v}_{T-1}^{\prime}(a;\pZero) \label{eq:uPUnconstr}
+ {(\mRat-\aRat)}^{-\CRRA}  & = \mathfrak{v}_{T-1}^{\prime}(a;\pZero) \label{eq:uPUnconstr}
 \end{aligned}\end{gathered}\end{equation}
 with solution $\aFunc_{T-1}^{*}(\mRat;\pZero)$.  Now note that for any
 fixed $\aRat>0$, $\lim_{\pZero \downarrow 0}
 \mathfrak{v}_{T-1}^{\prime}(a;\pZero) =
-\constr{\mathfrak{v}}_{T-1}^{\prime}(a)$.  Since the LHS of
-\eqref{\localorexternallabel{eq:uPConstr}} and \eqref{\localorexternallabel{eq:uPUnconstr}} are identical, this
+\constr{\mathfrak{v}}_{T-1}^{\prime}(a)$.  Since the LHS of~\eqref{\localorexternallabel{eq:uPConstr}} and~\eqref{\localorexternallabel{eq:uPUnconstr}} are identical, this
 means that $\lim_{\pZero \downarrow 0}
 \aFunc_{T-1}^{*}(\mRat;\pZero) =
 \constr{\aFunc}_{T-1}^{*}(\mRat)$.  That is, for any fixed value of
@@ -99,14 +97,14 @@ identical in the limit.
 
 Now consider values $\mRat\leq \mRat^{1}_{\#}$ for which the restrained consumer
 is constrained.  It is obvious that the baseline consumer will never
-choose $\aRat \leq 0$ because the first term in \eqref{\localorexternallabel{eq:vFrakPrime}} is $\lim_{\aRat \downarrow 0} \pZero  \aRat^{-\CRRA} =
-\infty$, while $\lim_{\aRat \downarrow 0} (\mRat-\aRat)^{-\CRRA}$ is finite (the
+choose $\aRat \leq 0$ because the first term in~\eqref{\localorexternallabel{eq:vFrakPrime}} is $\lim_{\aRat \downarrow 0} \pZero  \aRat^{-\CRRA} =
+\infty$, while $\lim_{\aRat \downarrow 0} {(\mRat-\aRat)}^{-\CRRA}$ is finite (the
 marginal value of end-of-period assets approaches infinity as assets approach
 zero, but the marginal utility of consumption has a finite limit for $\mRat>0$).
 The subtler question is whether it is possible to rule out strictly positive
 $\aRat$ for the unrestrained consumer.
 
-The answer is yes.  Suppose, for some $\mRat < \mRat^{1}_{\#},$ that the
+The answer is yes.  Suppose, for some $\mRat < \mRat^{1}_{\#}$, that the
 unrestrained consumer is considering ending the period with any
 positive amount of assets $\aRat=\delta > 0$.  For any such $\delta$ we
 have that $\lim_{\pZero  \downarrow 0} \mathfrak{v}_{T-1}^{\prime}(a;\pZero)=\constr{\mathfrak{v}}_{T-1}^{\prime}(a)$.
@@ -117,13 +115,7 @@ having assumed $\aRat = \delta > 0$, we have proven that the consumer
 would optimally choose $\aRat < 0$, which is a contradiction.  A similar
 argument holds for $\mRat = \mRat^{1}_{\#}$.
 
-These arguments demonstrate that for any $\mRat>0$, $\lim_{\pZero
-  \downarrow 0} \cFunc_{T-1}(\mRat;\pZero) =
-\constr{\cFunc}_{T-1}(\mRat)$ which is the period $T-1$ version of
-\eqref{\localorexternallabel{eq:RestrEqUnrestr}}.  But given equality of the period $T-1$
-consumption functions, backwards recursion of the same arguments
-demonstrates that the limiting consumption functions in previous
-periods are also identical to the constrained function.
+These arguments demonstrate that for any $\mRat>0$, $\lim_{\pZero \downarrow 0} \cFunc_{T-1}(\mRat;\pZero) = \constr{\cFunc}_{T-1}(\mRat)$ which is the period $T-1$ version of~\eqref{\localorexternallabel{eq:RestrEqUnrestr}}.  But given equality of the period $T-1$ consumption functions, backwards recursion of the same arguments demonstrates that the limiting consumption functions in previous periods are also identical to the constrained function.
 
 Note finally that another intuitive confirmation of the equivalence
 between the two problems is that our formula~\eqref{\localorexternallabel{eq:MaxMPCDef}} for the maximal marginal
