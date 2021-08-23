@@ -8,8 +8,14 @@
 
 \input{./econtexRoot}\input{\LaTeXInputs/econtex_onlyinsubfile}
 \onlyinsubfile{\externaldocument{\LaTeXInputs/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled; 
+%\WarningsOff*
+%\ErrorsOff*
 
+%\renewcommand\LineNumber{\the\inputlineno}
 \begin{document}
+%\linenumbers
+%\WarningsOff*
+%\ErrorsOff*
 
 % Attempted to make all lines used for Web version contain {Web} (or version with only single curly brace at end) so can be removed with sed 
 \providecommand{\versn}{pdf} % Version; like, web or pdf or journal submission 
@@ -27,39 +33,41 @@
 
 \keywords{Precautionary saving, buffer stock saving, marginal propensity to consume, permanent income hypothesis, income fluctuation problem}
 
-\jelclass{D81, D91, E21\\
+\jelclass{D81, D91, E21 \par 
   \href{https://econ-ark.org}{\includegraphics{\ResourcesDir/PoweredByEconARK}}
 }
 
-\renewcommand{\forcedate}{August 20, 2021}\date{\forcedate} % Alternative is \date{\today}
+\renewcommand{\forcedate}{August 22, 2021}\date{\forcedate} % Alternative is \date{\today}
 %\renewcommand{\forcedate}{\today}
-
 
 \maketitle 
 \hypertarget{abstract}{}
 \begin{abstract}
-  This paper builds foundations for rigorous and intuitive understanding of `buffer stock' saving models (\cite{bewleyPIH}-like models that exhibit a wealth target), pairing each theoretical result with quantitative illustrations.  After describing conditions under which a consumption function exists, the paper articulates stricter `Growth Impatience' conditions that guarantee alternative forms of stability -- either at the population level, or for individual consumers.  Together, the numerical tools and analytical results constitute a comprehensive toolkit for understanding buffer stock models. 
+This paper builds foundations for rigorous and intuitive understanding of `buffer stock' saving models (\cite{bewleyPIH}-like models that have a wealth target), pairing each theoretical result with quantitative illustrations.  After describing conditions under which a consumption function exists, the paper articulates stricter `Growth Impatience' conditions that guarantee alternative forms of stability -- either at the population level, or for individual consumers.  Together, the numerical tools and analytical results constitute a comprehensive toolkit for understanding buffer stock models. 
 \end{abstract}
+
 
 % Various resources 
 \hypertarget{links}{}
+
 \begin{footnotesize}
-  \parbox{\textwidth}{
+  \parbox{0.9\textwidth}{
     \begin{center}
       \begin{tabbing}
-        \texttt{Dashboard:~} \= \= \texttt{\href{https://econ-ark.org/materials/BufferStockTheory?dashboard}{https://econ-ark.org/materials/BufferStockTheory?dashboard}} \\
-        \texttt{~~~~~~PDF:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory/BufferStockTheory.pdf}{https://\owner.github.io/BufferStockTheory/BufferStockTheory.pdf}} \\ % Owner is defined in Resources/owner.tex
-        \texttt{~~~Slides:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory/BufferStockTheory-Slides.pdf}{https://\owner.github.io/BufferStockTheory/BufferStockTheory-Slides.pdf}} \\
-        \texttt{~~~~~html:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory}{https://\owner.github.io/BufferStockTheory}}    \\
-        \texttt{~Appendix:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory\#Appendices}{https://\owner.github.io/BufferStockTheory\#Appendices}}    \\
-        \texttt{~~~bibtex:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory/LaTeX/BufferStockTheory-Self.bib}{https://\owner.github.io/BufferStockTheory/LaTeX/BufferStockTheory-Self.bib}}  \\
-        \texttt{~~~GitHub:~} \> \> \texttt{\href{https://github.com/\owner/BufferStockTheory}{https://github.com/\owner/BufferStockTheory}} \\
+          \texttt{Dashboard:~} \= \= \texttt{\href{https://econ-ark.org/materials/BufferStockTheory?dashboard}{https://econ-ark.org/materials/BufferStockTheory?dashboard}} \\
+          \texttt{~~~~~~PDF:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory/BufferStockTheory.pdf}{https://\owner.github.io/BufferStockTheory/BufferStockTheory.pdf}} \\ % Owner is defined in Resources/owner.tex
+          \texttt{~~~Slides:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory/BufferStockTheory-Slides.pdf}{https://\owner.github.io/BufferStockTheory/BufferStockTheory-Slides.pdf}} \\
+          \texttt{~~~~~html:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory}{https://\owner.github.io/BufferStockTheory}}    \\
+          \texttt{~Appendix:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory\#Appendices}{https://\owner.github.io/BufferStockTheory\#Appendices}}    \\
+          \texttt{~~~bibtex:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory/LaTeX/BufferStockTheory-Self.bib}{https://\owner.github.io/BufferStockTheory/LaTeX/BufferStockTheory-Self.bib}}  \\
+          \texttt{~~~GitHub:~} \> \> \texttt{\href{https://github.com/\owner/BufferStockTheory}{https://github.com/\owner/BufferStockTheory}} \\
       \end{tabbing}
     \end{center}
     
     A \href{https://econ-ark.org/materials/BufferStockTheory?dashboard}{dashboard} allows users to see the consequences of alternative parametric choices in a live interactive framework; a corresponding \href{https://https://econ-ark.org/materials/BufferStockTheory?launch}{Jupyter Notebook}  uses the \href{https://econ-ark/HARK}{Econ-ARK/HARK} toolkit to produce all of the paper's figures (warning: the notebook may take several minutes to launch).
   } % end parbox{\textwidth}
 \end{footnotesize}
+
 
 \begin{authorsinfo}
   \name{Contact: \href{mailto:ccarroll@jhu.edu}{\texttt{ccarroll@jhu.edu}}, Department of Economics, 590 Wyman Hall, Johns Hopkins University, Baltimore, MD 21218, \url{https://www.econ2.jhu.edu/people/ccarroll}, and National Bureau of Economic Research.}
@@ -69,7 +77,7 @@
   Thanks to Will Du, James Feigenbaum, Joseph Kaboski, Miles Kimball, Qingyin Ma, Misuzu Otsuka, Damiano Sandri, John Stachurski, Adam Szeidl, Alexis Akira Toda, Metin Uyanik, Mateo Vel\'asquez-Giraldo, Weifeng Wu,  Jiaxiong Yao, and Xudong Zheng for comments on earlier versions of this paper, John Boyd for help in applying his weighted contraction mapping theorem, Ryoji  Hiraguchi for extraordinary mathematical insight that improved the  paper greatly, David Zervos for early guidance to the literature, and participants in a seminar at the Johns Hopkins University, a presentation at the 2009 meetings of the Society of Economic Dynamics for their insights, and at a presentation at the Australian National University.}
 
 \ifthenelse{\boolean{Web}}{}{
-  \begin{minipage}{\textwidth}
+  \begin{minipage}{0.9\textwidth}
     \tiny \thankstext
 \end{minipage}
 } % {Web}
@@ -423,7 +431,8 @@ Perhaps more useful than this prose or the table,  the relations of the conditio
 
 \hypertarget{PF-Constrained-Solution}{}
 \hypertarget{Constrained-Solution}{}
-\subsubsection{PF Constrained Solution Exists Under {\RIC} or Under \{\cncl{\RIC},\GICRaw\}}\label{subsec:PFCon}
+\subsubsection{PF Constrained Solution Exists Under \texorpdfstring{{\RIC}}{RIC} or Under\texorpdfstring{\{\cncl{\RIC},\GICRaw\}}{RIC-Fails,GIC}}\label{subsec:PFCon}
+%\subsubsection{PF Constrained Solution Exists Under \texorpdfstring{{\RIC}}{RIC} or Under\texorpdfstring{\{\cncl{\RIC},\GICRaw\}}{\{RIC-Fails,GIC\}}\label{subsec:PFCon}
 
 We next examine the perfect foresight constrained solution because it is a useful benchmark (and limit) for the unconstrained problem with uncertainty (examined next).
 
@@ -496,7 +505,7 @@ where \cncl{\RIC} would suggest a degenerate limit of
 $\constr{\cFunc}(\mRat)=0$ while \cncl{\FHWC} would suggest a
 degenerate limit of $\constr{\cFunc}(\mRat)=\infty$.
 
-\hypertarget{RelatePFGICFHWCRICPFFVACText}{}
+%\hypertarget{RelatePFGICFHWCRICPFFVACText}{}
 Tables~\ref{table:Comparison} and \ref{table:Required} (and appendix table~\ref{table:LiqConstrScenarios}) codify. 
 
 We now examine the case with uncertainty but without constraints, which will turn out to be a close parallel to the model with constraints but without uncertainty.
@@ -574,8 +583,7 @@ as $T$ approaches $\infty$ if\hypertarget{FVAC}{}
   \end{align}
 \end{verbatimwrite}
 \input{\LtxDir\EqDir/FVAC}
-which we call the `finite value of autarky condition' \hypertarget{FVAC}{}
-(\FVAC) because it guarantees that value is finite for a consumer who always consumes their 
+which we call the `finite value of autarky condition' because it guarantees that value is finite for a consumer who always consumes their 
 (now stochastic) permanent income (and we will call $\DiscAltuAdj$ the `Value of Autarky Factor,' VAF).\footnote{In a stationary environment -- that is, with $\PGrouAdj=1$ -- this corresponds to an impatience condition imposed by \cite{mstIncFluct}; but their remaining conditions do not correspond to those here, because their problem differs and their method of proof differs.}  For nondegenerate $\pShk$, this 
 condition is stronger
 (harder to satisfy in the sense of requiring lower $\DiscFac$) than
@@ -607,8 +615,10 @@ resources.)
 
 \input{\TableDir/Calibration}
 
-\providecommand{\figName}{Convergence-of-the-Consumption-Rules} % Allows generic definition of hypertargets based on title of figure
-\providecommand{\figFile}{cFuncsConverge} %  and on filename
+
+\renewcommand{\figName}{Convergence-of-the-Consumption-Rules} % Allows generic definition of hypertargets based on title of figure
+\renewcommand{\figFile}{cFuncsConverge} %  and on filename
+
 \hypertarget{\figFile}{}
 \hypertarget{\figName}{}
 \input{\FigDir/cFuncsConverge} % Read in the tex to generate the figure
@@ -827,12 +837,12 @@ The conditions required for convergence and nondegeneracy are thus strikingly si
 \subsection{Discussion of Parametric Restrictions}\label{sec:discussConvergence}
 
 The full relationship among all the conditions is represented in Figure~\ref{fig:Inequalities}.
-Though the diagram looks complex, it is merely a modified version of \href{fig:RelatePFGICFHWCRICPFFVAC}{the earlier diagram} with further (mostly intermediate) inequalities inserted.  (Arrows with a ``because'' are a new element to label relations that always hold under the model's assumptions.)  Again readers unfamiliar with such diagrams should see Appendix~\ref{sec:ApndxConditionDiagrams}) for a more detailed explanation.
+Though the diagram looks complex, it is merely a modified version of the earlier diagram (Figure~\ref{fig:RelatePFGICFHWCRICPFFVAC}) with further (mostly intermediate) inequalities inserted.  (Arrows with a ``because'' are a new element to label relations that always hold under the model's assumptions.)  Again readers unfamiliar with such diagrams should see Appendix~\ref{sec:ApndxConditionDiagrams}) for a more detailed explanation.
 
 \renewcommand{\figName}{Inequalities} % Allows generic definition of hypertargets based on title of figure
 \renewcommand{\figFile}{\figName} %  and on filename
 \hypertarget{\figFile}{}
-\hypertarget{\figName}{}
+%\hypertarget{\figName}{}
 \input{\FigDir/\figName} % Read in the tex to generate the figure
 
 \subsubsection{The \WRIC}\label{subsubsec:WRICdiscuss}
@@ -1045,7 +1055,7 @@ present.\footnote{Throughout the remaining analysis I make a final
 \input{\FigDir/cGroTargetFig}
 
 \hypertarget{LimitsAsmtToInfty}{}
-\subsection{Limits as $\mRat$ approaches Infinity}
+\subsection{Limits as \texorpdfstring{$\mRat$}{m} approaches Infinity}
 
 \label{subsec:LimitsAsmtToInfty}
 
@@ -1140,7 +1150,7 @@ value $\Pat$ in the perfect foresight model.
 \end{comment}
 
 \hypertarget{LimitsAsmtToZero}{}
-\subsection{Limits as $\mRat$ Approaches Zero}
+\subsection{Limits as \texorpdfstring{$\mRat$}{m} Approaches Zero}
 \label{subsec:LimitsAsmtToZero}
 %\label{subsec:LimitsAsmtToZero} Now consider the limits of behavior as $\mRat_{t}$ gets arbitrarily small.
 
@@ -1295,10 +1305,10 @@ Theorem~\ref{thm:balance}~formally states the relevant proposition.
  For the nondegenerate solution to the problem defined in section~\ref{subsec:Setup} when {\FVAC}, {\WRIC}, and {\GIC} all hold, there exists a unique pseudo-steady-state cash-on-hand-to-income ratio $\mStE>0$ such that
   \begin{equation}  
     \Ex_t [\pShk_{t+1}{\mRat}_{t+1}/\mRat_t] = 1 \mbox{~if~} \mRat_t = \mStE. 
-    \label{eq:mTarget}
+    \label{eq:mStE}
   \end{equation}
   Moreover, $\mStE$ is a point of stability in the sense that
-  \begin{align}\label{eq:stability}
+  \begin{align}\label{eq:stabilityStE}
     \forall {\mRat}_t\in(0,\mStE),      \,\,& \Ex_{t}[\mLevBF_{t+1}]/\mLevBF_{t} > \PGro \\
     \forall {\mRat}_t\in(\mStE,\infty), \,\,& \Ex_{t}[\mLevBF_{t+1}]/\mLevBF_{t} < \PGro. \notag
   \end{align}
@@ -1591,10 +1601,10 @@ The paper's results are all easily reproducible \href{https://econ-ark.org/_mate
 % The Dummy equation below sems to be needed to get the equation numbering in the appendix
 % reliably to start at the next number after the last actual equation number used in the paper 
 
-\clearpage\vfill\eject
-\begin{equation*}
-  \label{eq:Dummy}
-\end{equation*}
+% \clearpage\vfill\eject
+% \begin{equation*}
+%   \label{eq:Dummy}
+% \end{equation*}
 
 \onlyinsubfile{\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}}
 

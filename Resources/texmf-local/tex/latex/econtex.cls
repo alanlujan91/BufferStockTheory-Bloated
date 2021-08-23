@@ -277,21 +277,21 @@
 \newcommand{\aspublished}[1]{\newcommand{\@aspublished}{#1}}
 
 \renewenvironment{abstract}{%
-  \begin{spacing}{0.9}
-    \noindent {\tiny \phantom{.}} \\ % Trick to get proper spacing in html
+%  \begin{spacing}{0.9}
+%    \noindent {\tiny \phantom{.}} \\ % Trick to get proper spacing in html
     \ifdvi
     \else % horizontal rule works well for PDF, not for html
-    \noindent \hrule height 0.4pt depth 0.0pt width \textwidth \relax
+%    \noindent \hrule height 0.4pt depth 0.0pt width \textwidth \relax
     \fi
     \vspace*{4mm}
     \abstractSizeDefault
     \noindent \textbf{Abstract}\\
     \indent 
   }{%
-    \noindent {\tiny \phantom{.}} \\  % Trick to get proper spacing in html
+%    \noindent {\tiny \phantom{.}} \\  % Trick to get proper spacing in html
     \ifdvi
     \else
-    \noindent \hrule height 0.4pt depth 0.0pt width \textwidth \relax
+%    \noindent \hrule height 0.4pt depth 0.0pt width \textwidth \relax
     \fi
     \vspace*{0mm}
     \ifthenelse{ \isundefined\@keywords }{
@@ -299,7 +299,7 @@
         Please use the command \protect\keywords}
     }{
     }
-  \end{spacing}
+%  \end{spacing}
 
   \begin{quote}
     \begin{Description}

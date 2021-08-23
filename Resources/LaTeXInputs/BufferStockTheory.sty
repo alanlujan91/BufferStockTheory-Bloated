@@ -1,7 +1,23 @@
 \input{\ResourcesDir/owner} % Owned by llorracc (draft) or econ-ark (published) ?
+ \usepackage{silence}
+% \WarningsOff*
+% \ErrorsOff*
 \usepackage{datetime2}
 \usepackage{refcount}
 \usepackage{xr-hyper}
+
+% \externaldocument[LiqConstr-]{\ApndxDir/ApndxLiqConstr}
+% \externaldocument[ConcaveCFunc-]{\ApndxDir/ApndxConcaveCFunc}
+% \externaldocument[Euclidian-]{\ApndxDir/ApndxEuclidian}
+% \externaldocument[CGroIsPGro-]{\ApndxDir/ApndxCGroIsPGro}
+% \externaldocument[MPCLimits-]{\ApndxDir/ApndxMPCLimits}
+% \externaldocument[LiqConstrAsLimit-]{\ApndxDir/ApndxLiqConstrAsLimit}
+% \externaldocument[SolnMethEndogGpts-]{\ApndxDir/ApndxSolnMethEndogGpts}
+% \externaldocument[SolnMethTermFunc-]{\ApndxDir/ApndxSolnMethTermFunc}
+% \externaldocument[ConditionDiagrams-]{\ApndxDir/ApndxConditionDiagrams}
+% \externaldocument[CGrowthDeclines-]{\ApndxDir/ApndxCGrowthDeclines}
+% \externaldocument[MTargetIsStable-]{\ApndxDir/ApndxMTargetIsStable}
+
 \usepackage{hhline}
 \newcommand{\onlyinsubfile}[1]{#1}\newcommand{\notinsubfile}[1]{}
 
@@ -22,8 +38,9 @@
 
 % Implement a standard setup and shortcuts, e.g. for the \CRRA
 \usepackage{\econtexSetup}
-\usepackage{\econtexShortcuts}
+\usepackage{econtexShortcuts}
 \usepackage{makecell} 
+\usepackage{lineno}
 
 \usepackage{rotating}\usepackage{subfigure}
 % Embed metadata 

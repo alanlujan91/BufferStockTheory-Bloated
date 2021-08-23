@@ -58,10 +58,12 @@ makePostHandoutsStart.tex
 printvrb.sty
 snapshot.sty
 tex4ht
+tex4htMakeCFG (JHUEconCDC.local's conflicted copy 2021-07-12).sh
 tex4htMakeCFG.sh
 titlesec.sty
 
 ./tex/latex/auto:
+econtex (JHUEconCDC.local's conflicted copy 2021-07-12).el
 econtex.el
 econtexShortcuts.el
 handout.el
@@ -70,19 +72,30 @@ handoutShortcuts.el
 ./tex/latex/tex4ht:
 auto
 pictureenv.4ht
+svg-math-and-subfigures (JHUEconCDC.local's conflicted copy 2021-07-12).cfg
+svg-math-and-subfigures (JHUEconCDC.local's conflicted copy 2021-07-12).cfg~
+svg-math-and-subfigures (JHUEconCDC.local's conflicted copy 2021-07-12).tex
 svg-math-and-subfigures-README.md
 svg-math-and-subfigures-README.md~
 svg-math-and-subfigures.cfg
 svg-math-and-subfigures.cfg~
 svg-math-and-subfigures.tex
 svg-set-size-to-1p0.mk4
+svg-set-size-to-1p1 (JHUEconCDC.local's conflicted copy 2021-07-12).mk4
 svg-set-size-to-1p1.mk4
+svg-set-size-to-1p1x1p0 (JHUEconCDC.local's conflicted copy 2021-07-12).mk4
 svg-set-size-to-1p1x1p0.mk4
+svg-set-size-to-1p2 (JHUEconCDC.local's conflicted copy 2021-07-12).mk4
+svg-set-size-to-1p2 (JHUEconCDC.local's conflicted copy 2021-07-12).mk4~
 svg-set-size-to-1p2.mk4
 svg-set-size-to-1p2.mk4~
+svg-set-size-to-1p2x1p0 (JHUEconCDC.local's conflicted copy 2021-07-12).mk4
+svg-set-size-to-1p2x1p0 (JHUEconCDC.local's conflicted copy 2021-07-12).mk4~
 svg-set-size-to-1p2x1p0.mk4
 svg-set-size-to-1p2x1p0.mk4~
+svg-set-size-to-1p3x1p0 (JHUEconCDC.local's conflicted copy 2021-07-12).mk4
 svg-set-size-to-1p3x1p0.mk4
+svg-set-size-to-1p3x1p01 (JHUEconCDC.local's conflicted copy 2021-07-12).mk4~
 svg-set-size-to-1p3x1p01.mk4~
 
 ./tex/latex/tex4ht/auto:

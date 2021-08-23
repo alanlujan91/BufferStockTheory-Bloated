@@ -6,19 +6,22 @@
 %\renewcommand{\LtxDir}{}
 \onlyinsubfile{\renewcommand{\LtxDir}{../LaTeX/}}
 
+\renewcommand\LineNumber{\the\inputlineno}
+
 \begin{document}
+\linenumbers
 
 \hypertarget{ApndxMTargetIsStable}{}
 \section{Unique And Stable Target and Steady State Points}\label{sec:ApndxMTargetIsStable}
 
 %\subsection{To Prove}
 
-The two theorems and lemma to be proven in this appendix are:
+This appendix proves Theorems~\ref{thm:target} and ~\ref{thm:MSSBalExists} and 
 \onlyinsubfile{\setcounter{theorem}{1}}
 
-\input{\LtxDir\EqDir/TheoremMTargetIsStable}
+%\input{\LtxDir\EqDir/TheoremMTargetIsStable}
 
-  \input{\LtxDir\EqDir/TheoremMSSBalExists}
+%  \input{\LtxDir\EqDir/TheoremMSSBalExists}
 
   \begin{lemma}
   If both $\check{\mRat}$ and $\hat{\mRat}$ exist, then $\hat{\mRat} < \check{\mRat}$.
@@ -34,12 +37,16 @@ The two theorems and lemma to be proven in this appendix are:
 \end{itemize}
 
 
-\subsubsection{Existence and Continuity of $\Ex_t [{\mRat}_{t+1}/\mRat_t]$.}\label{subsubsec:RatExitsCont}
+\subsubsection{Existence and Continuity of
+  \texorpdfstring{$\Ex_t [{\mRat}_{t+1}/\mRat_t]$}{Ex-{t}[mRat-{t+1}/mRat-{t}]}
+  .}\label{subsubsec:RatExitsCont}
 The consumption function exists because we have imposed the sufficient conditions (the $\WRIC$ and $\FVAC$; theorem~\ref{thm:contmap}).  (Indeed, Appendix~\ref{sec:CIsTwiceDifferentiable} shows that $\cFunc(\mRat)$ is not just continuous, but twice continuously differentiable.)
 
 Section~\ref{sec:cExists} shows that for all $t$, $\aRat_{t-1} = {\mRat}_{t-1} -  \cRat_{t-1} > 0$.  Since ${\mRat}_{t}= {\aRat}_{t-1} \Rnorm_{t} + \tShkAll_{t}$, even if $\tShkAll_{t}$ takes on its minimum value of 0, $\aRat_{t-1} \Rnorm_{t} > 0$, since both $\aRat_{t-1}$ and $\Rnorm_{t}$ are strictly positive.  With $\mRat_{t}$ and $\mRat_{t+1}$ both strictly positive, the ratio $\Ex_t [{\mRat}_{t+1}/\mRat_t]$ inherits continuity (and, for that matter, continuous differentiability) from the consumption function.
 
-\subsubsection{Existence of a point where $\Ex_t [{\mRat}_{t+1}/\mRat_t]=1$.}
+\subsubsection{Existence of a point where
+  \texorpdfstring{$\Ex_t [{\mRat}_{t+1}/\mRat_t]=1$}
+  {Ex-t[mRat-{t+1}/mRat-{t}]=1}.}
 
 Existence of a point where $\Ex_t [{\mRat}_{t+1}/\mRat_t] = 1$ follows from:
 \begin{enumerate}
@@ -68,7 +75,7 @@ So we have $\lim_{\mRat \uparrow \infty} \Ex_{t}[\mRat_{t+1}/\mRat_{t}] < 1$ whe
 
 \medskip\medskip
 
-\noindent \textit{Existence of a point where $\Ex_t [{\mRat}_{t+1}/\mRat_t] > 1$}.
+\noindent \textit{Existence of a point where \texorpdfstring{$\Ex_t [{\mRat}_{t+1}/\mRat_t] > 1$}{E[mRat-{t+1}/mRat-{t}] > 1}}.
 
 Paralleling the logic for $\cRat$ in section~\ref{subsec:LimitsAsmtToZero}: the ratio of $\Ex_{t}[\mRat_{t+1}]$ to $\mRat_{t}$ is unbounded above as $\mRat_{t} \downarrow 0$ because $\lim_{\mRat_{t}\downarrow 0} \Ex_{t}[\mRat_{t+1}] > 0$.
 
@@ -76,11 +83,11 @@ Paralleling the logic for $\cRat$ in section~\ref{subsec:LimitsAsmtToZero}: the 
 
 \noindent \textit{Intermediate Value Theorem}.  If $\Ex_t [{\mRat}_{t+1}/\mRat_t]$ is continuous, and takes on values above and below 1, there must be at least one point at which it is equal to one.
 
-\subsubsection{$\Ex_t [{\mRat}_{t+1}] -\mRat_t$ is monotonically decreasing.}
+\subsubsection{\texorpdfstring{$\Ex_t [{\mRat}_{t+1}] -\mRat_t$}{Delta m} is monotonically decreasing.}
 
 Now define \providecommand{\difFunc}{\pmb{\zeta}} $\difFunc(\mRat_t) \equiv 
 \Ex_t[\mRat_{t+1}] - \mRat_t$ and note that
-\begin{align}\label{eq:difRatioEquiv}
+\begin{align}\tag{\ref{eq:difRatioEquiv}}
   \difFunc(\mRat_t) < 0 &\leftrightarrow \Ex_t[{\mRat}_{t+1}/\mRat_t] < 1 
                           \nonumber\\
   \difFunc(\mRat_t) = 0 &\leftrightarrow \Ex_t[{\mRat}_{t+1}/\mRat_t] = 1\\
@@ -93,7 +100,7 @@ decreasing on $(0,\infty)$ using the fact that
   \difFunc^{\prime}(\mRat_{t}) \equiv  \left( \frac{d}{d\mRat_{t}}\right) \difFunc(\mRat_t)  & = \Ex_{t}\left[
                                                                                                \left( \frac{d}{d\mRat_{t}}\right) \left( 
                                                                                                {\Rnorm}_{t+1}(\mRat_{t}-\cFunc(\mRat_{t}))+%
-                                                                                               {\tShkAll}_{t+1} - {\mRat}_t\right) \right] \label{eq:difFuncDecreases} \\
+                                                                                               {\tShkAll}_{t+1} - {\mRat}_t\right) \right] \label{eq:difFuncmRatDecreases} \\
                                                                                              & = \bar{\Rnorm}\left(1-\cFunc^{\prime}({\mRat}_t)\right) - 1.  \notag
 \end{align}
 
@@ -114,7 +121,7 @@ Under \cncl{\RIC}, recall that $\lim_{\mRat \uparrow \infty} \cFunc^{\prime}(\mR
 \begin{align*}
   \bar{\Rnorm}\left(1-\cFunc^{\prime}({\mRat}_t)\right) & < \bar{\Rnorm}
 \end{align*}
-which means that $\difFunc^{\prime}(\mRat_{t})$ from \eqref{eq:difFuncDecreases} is guaranteed to be negative if
+which means that $\difFunc^{\prime}(\mRat_{t})$ from \eqref{eq:difFuncmRatDecreases} is guaranteed to be negative if
 \begin{align}
   \bar{\Rnorm} \equiv \Ex_{t}\left[\frac{\Rfree}{\PGro \pShk}\right] & < 1  \label{eq:RbarBelowOne}.
 \end{align}
@@ -165,11 +172,11 @@ where the last two lines are merely a restatement of the \GICRaw~\eqref{eq:GICRa
 
 The Intermediate Value Theorem says that if $\Ex_{t}[\pShk_{t+1}\mRat_{t+1}/\mRat_t]$ is continuous, and takes on values above and below 1, there must be at least one point at which it is equal to one.
 
-\subsubsection{$\Ex_{t}[\pShk_{t+1}\mRat_{t+1}] -\mRat_t$ is monotonically decreasing.}
+\subsubsection{\texorpdfstring{$\Ex_{t}[\pShk_{t+1}\mRat_{t+1}] -\mRat_t$}{pShk mRat-{t+1} - mRat-{t}} is monotonically decreasing.}
 
 Define \providecommand{\difFunc}{\pmb{\zeta}} $\difFunc(\mRat_t) \equiv 
 \Ex_t[\pShk_{t+1}\mRat_{t+1}] - \mRat_t$ and note that
-\begin{align}\label{eq:difRatioEquiv}
+\begin{align}\label{eq:difLevEquiv}
   \difFunc(\mRat_t) < 0 &\leftrightarrow \Ex_t[\pShk_{t+1}\mRat_{t+1}/\mRat_{t}] < 1 
                           \nonumber\\
   \difFunc(\mRat_t) = 0 &\leftrightarrow \Ex_t[\pShk_{t+1}\mRat_{t+1}/\mRat_{t}] = 1\\

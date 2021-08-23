@@ -27,6 +27,17 @@ Description                                 & \multicolumn{3}{c|}{Symbol and For
 \end{tabular}
 } % End \sbox
 \settowidth\TableWidth{\usebox{\Calibration}}
-\usebox{\Calibration}
+
+\newlength{\CalibrationShrunk}
+\newsavebox{\CalibrationShrunkBox}
+
+\savebox{\CalibrationShrunkBox}{
+  \settowidth{\CalibrationShrunk}{\usebox{\Calibration}}
+  \resizebox{0.9\textwidth}{!}{\begin{minipage}{\CalibrationShrunk}
+      \usebox{\Calibration}
+    \end{minipage}}
+}
+
+\usebox{\CalibrationShrunkBox}
 
 \end{table}

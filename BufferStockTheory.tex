@@ -1,10 +1,17 @@
 \input{./econtexRoot} % Set paths for root and various resources
 \documentclass[titlepage]{\econtex}
-
 \providecommand{\texname}{BufferStockTheory}% Keyname for the paper
 \usepackage{\LaTeXInputs/BufferStockTheory}% Styling for whole paper (and subfiles)
+%\WarningsOff*
+%#\ErrorsOff*
 
+\renewcommand\LineNumber{\the\inputlineno}
 \begin{document}
+\linenumbers
+\WarningsOff*
+\ErrorsOff*
+\WarningFilter{ext4}
+\WarningFilter{pdfTeX}
 
 % Command to determine whether executing in a subfile or main file
 % Subfiles redefine the commands 
@@ -12,6 +19,7 @@
 
 \subfile{BufferStockTheory-NoAppendix} % First subfile (main body of paper)
 
+\pagebreak
 \hypertarget{Appendices}{} % Allows link to [url-of-paper]#Appendices
 \appendix \centerline{\LARGE Appendices}\vspace{0.2in}
 
@@ -34,7 +42,6 @@
 \renewcommand{\baselinestretch}{1.0} % Single spaced
 
 \bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}
-
 \end{document}
 
 % Stuff below configures compilation for AucTeX in Emacs -- last line is specialized to Skim on Mac
