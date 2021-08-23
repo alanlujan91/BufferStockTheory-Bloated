@@ -1,0 +1,140 @@
+\documentclass[BufferStockTheory]{subfiles}
+% WARNING: Different execution depending on whether
+% 0. Being compiled as standalone document
+%    * Compile this file, then main, then this one again
+%    * Keep iterating until neither file changes
+% 0. Being compiled as subfile of main document
+%    * Just compile main document repeatedly
+
+\input{./econtexRoot}\input{\LaTeXInputs/econtex_onlyinsubfile}
+\onlyinsubfile{\externaldocument{\LaTeXInputs/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled; 
+
+\renewcommand\LineNumber{\the\inputlineno}
+
+\begin{document}
+\linenumbers
+
+
+% Attempted to make all lines used for Web version contain {Web} (or version with only single curly brace at end) so can be removed with sed 
+\providecommand{\versn}{pdf} % Version; like, web or pdf or journal submission 
+\ifthenelse{\boolean{Web}}{    % {Web} 
+  \renewcommand{\versn}{Web}     % Too hard to figure out passing -output-directory through make4ht through htlatex, so web version is compiled with junk files in main directory 
+  \renewcommand{\rootFromOut}{.} % {Web} 
+}{}  % {Web} 
+
+% Put tiny info header at top to make it easy track git commit that generates it
+\hfill{\tiny \jobname~\versn~\today~{at} \DTMcurrenttime, \input{\ResourcesDir/.git-source-commit}~~\input{\ResourcesDir/.git-public-commit}}
+
+\title{Theoretical Foundations of \\ Buffer Stock Saving}
+
+\author{Christopher D. Carroll\authNum}
+
+\keywords{Precautionary saving, buffer stock saving, marginal propensity to consume, permanent income hypothesis, income fluctuation problem}
+
+\jelclass{D81, D91, E21\\
+  \href{https://econ-ark.org}{\includegraphics{\ResourcesDir/PoweredByEconARK}}
+}
+
+\renewcommand{\forcedate}{August 22, 2021}\date{\forcedate} % Alternative is \date{\today}
+%\renewcommand{\forcedate}{\today}
+
+\renewenvironment{abstract}{%
+    \abstractSizeDefault
+    \noindent \textbf{Abstract}
+    \indent 
+  }{
+    \ifthenelse{ \isundefined\@keywords }{
+      \ClassWarningNoLine{econtex}{No keywords specified.
+        Please use the command \protect\keywords}
+    }{
+    }
+  \begin{quote}
+    \begin{Description}
+    \item[\textbf{Keywords~}] \@keywords
+      \ifthenelse{ \isundefined\@jelclass }{
+        \ClassWarningNoLine{econtex}{No JEL classification specified.
+          Please use the command \protect\jelclass}
+      }{
+      \item[\textbf{JEL codes~}] \@jelclass
+      }
+    \end{Description}
+    \ifthenelse{ \isundefined\@aspublished }{
+    }{
+      {
+        \vspace{0.1in}\@aspublished}
+    }\end{quote}
+}
+
+
+
+\maketitle 
+\hypertarget{abstract}{}
+\begin{abstract}
+This paper builds foundations for rigorous and intuitive understanding of `buffer stock' saving models (\cite{bewleyPIH}-like models that exhibit a wealth target), pairing each theoretical result with quantitative illustrations.  After describing conditions under which a consumption function exists, the paper articulates stricter `Growth Impatience' conditions that guarantee alternative forms of stability -- either at the population level, or for individual consumers.  Together, the numerical tools and analytical results constitute a comprehensive toolkit for understanding buffer stock models. 
+\end{abstract}
+
+
+% Various resources 
+\hypertarget{links}{}
+\begin{footnotesize}
+  \parbox{\textwidth}{
+    \begin{center}
+      \begin{tabbing}
+        \texttt{Dashboard:~} \= \= \texttt{\href{https://econ-ark.org/materials/BufferStockTheory?dashboard}{https://econ-ark.org/materials/BufferStockTheory?dashboard}} \\
+        \texttt{~~~~~~PDF:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory/BufferStockTheory.pdf}{https://\owner.github.io/BufferStockTheory/BufferStockTheory.pdf}} \\ % Owner is defined in Resources/owner.tex
+        \texttt{~~~Slides:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory/BufferStockTheory-Slides.pdf}{https://\owner.github.io/BufferStockTheory/BufferStockTheory-Slides.pdf}} \\
+        \texttt{~~~~~html:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory}{https://\owner.github.io/BufferStockTheory}}    \\
+        \texttt{~Appendix:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory\#Appendices}{https://\owner.github.io/BufferStockTheory\#Appendices}}    \\
+        \texttt{~~~bibtex:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory/LaTeX/BufferStockTheory-Self.bib}{https://\owner.github.io/BufferStockTheory/LaTeX/BufferStockTheory-Self.bib}}  \\
+        \texttt{~~~GitHub:~} \> \> \texttt{\href{https://github.com/\owner/BufferStockTheory}{https://github.com/\owner/BufferStockTheory}} \\
+      \end{tabbing}
+    \end{center}
+    
+    A \href{https://econ-ark.org/materials/BufferStockTheory?dashboard}{dashboard} allows users to see the consequences of alternative parametric choices in a live interactive framework; a corresponding \href{https://https://econ-ark.org/materials/BufferStockTheory?launch}{Jupyter Notebook}  uses the \href{https://econ-ark/HARK}{Econ-ARK/HARK} toolkit to produce all of the paper's figures (warning: the notebook may take several minutes to launch).
+  } % end parbox{\textwidth}
+\end{footnotesize}
+
+\begin{authorsinfo}
+  \name{Contact: \href{mailto:ccarroll@jhu.edu}{\texttt{ccarroll@jhu.edu}}, Department of Economics, 590 Wyman Hall, Johns Hopkins University, Baltimore, MD 21218, \url{https://www.econ2.jhu.edu/people/ccarroll}, and National Bureau of Economic Research.}
+\end{authorsinfo}
+
+\newcommand{\thankstext}{All figures and numerical results \href{https://econ-ark.github.io/nbreproduce}{can be automatically reproduced} using the \href{https://econ-ark/HARK}{Econ-ARK/HARK} toolkit, which can be cited per our references (\cite{carroll_et_al-proc-scipy-2018}); for reference to the toolkit itself see \href{https://econ-ark.org/acknowledging/}{Acknowleding Econ-ARK}.  Thanks to the \href{https://consumerfinance.gov}{Consumer Financial Protection Bureau} for funding the original creation of the \href{https://econ-ark.org}{Econ-ARK} toolkit; and to the \href{https://sloan.org}{Sloan Foundation} for funding Econ-ARK's \href{https://sloan.org/grant-detail/8071}{extensive further development} that brought it to the point where it could be used for this project.  The toolkit can be cited with its digital object identifier, \href{https://doi.org/10.5281/zenodo.1001067}{10.5281/zenodo.1001067}, as is done in the paper's own references as \cite{carroll_et_al-proc-scipy-2018}.  
+  Thanks to Will Du, James Feigenbaum, Joseph Kaboski, Miles Kimball, Qingyin Ma, Misuzu Otsuka, Damiano Sandri, John Stachurski, Adam Szeidl, Alexis Akira Toda, Metin Uyanik, Mateo Vel\'asquez-Giraldo, Weifeng Wu,  Jiaxiong Yao, and Xudong Zheng for comments on earlier versions of this paper, John Boyd for help in applying his weighted contraction mapping theorem, Ryoji  Hiraguchi for extraordinary mathematical insight that improved the  paper greatly, David Zervos for early guidance to the literature, and participants in a seminar at the Johns Hopkins University, a presentation at the 2009 meetings of the Society of Economic Dynamics for their insights, and at a presentation at the Australian National University.}
+
+\ifthenelse{\boolean{Web}}{}{
+  \begin{minipage}{\textwidth}
+    \tiny \thankstext
+\end{minipage}
+} % {Web}
+
+\titlepagefinish
+
+
+\clearpage\vfill\eject
+\begin{equation*}
+  \label{eq:Dummy}
+\end{equation*}
+
+\onlyinsubfile{\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}}
+
+\end{document}
+\endinput
+
+% Delete up to four existing variants of BibTeX 
+
+% Local Variables:
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "Biber"  TeX-command-list)) TeX-command-list))
+% eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex LaTeX/%s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") t)
+% eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex LaTeX/%s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") t)
+% TeX-PDF-mode: t
+% TeX-file-line-error: t
+% TeX-debug-warnings: t
+% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=LaTeX %S%(PDFout)"))
+% TeX-source-correlate-mode: t
+% TeX-parse-self: t
+% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b -g %n LaTeX/%o %b"))))))
+% TeX-parse-all-errors: t
+% End:
