@@ -1,10 +1,8 @@
-% -*- enable-local-variables: :all; -*-
 \input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
 \input{./econtexRoot}\input{\LaTeXInputs/econtex_onlyinsubfile}
 \onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 
 \begin{document}
-
 \let\TableWidth\relax
 {\newlength\TableWidth}
 
@@ -15,6 +13,7 @@ Under perfect foresight in the presence of a liquidity constraint requiring $\bR
 consumption function $\constr{\cFunc}(\mRat)$ that arise under various parametric conditions.  Results are summarized in table~\ref{table:LiqConstrScenarios}.
 
 \input{\TableDir/LiqConstrScenarios}
+
 
 \subsection{If \GICRaw~Fails}
 
@@ -37,6 +36,9 @@ resources to the next period at return $\Rfree$:\footnote{The point at
   \\ 1  & < \Rfree \Discount \PGro^{-\CRRA} \notag
   \\  \uFunc^{\prime}(1)  & < \Rfree \Discount \uFunc^{\prime}(\PGro)   \label{eq:EulerGICRawFailsEnd}.
 \end{aligned}\end{gathered}\end{equation}
+
+%\onlyinsubfile{\pagebreak\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}}\end{document}\end{document}
+
 
 Similar logic shows that under these circumstances the constraint will
 never bind at $\mRat=1$ for a constrained consumer with a finite horizon of $n$
@@ -331,8 +333,7 @@ in the absence of uncertainty.
 
 \cite{maTodaRich} characterize the limits of the MPC in a more general framework that allows for capital and labor income risks in a Markovian setting with liquidity constraints, and find that in that much more general framework the limiting MPC is also zero.% chktex 2
 
-\onlyinsubfile{\pagebreak\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}}
-\end{document}
+\onlyinsubfile{\pagebreak\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}}\end{document}
 
 % Local Variables:
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
