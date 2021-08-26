@@ -6,9 +6,9 @@
 
 \begin{document}
 
-%\notinsubfile{\renewcommand{\TableDir}{./Tables}} % Not sure why this needs to be redefined here; if not, tries to write to ../../Tables
+\notinsubfile{\renewcommand{\TableDir}{./Tables}} % Not sure why this needs to be redefined here; if not, tries to write to ../../Tables
 
-  \let\TableWidth\relax
+  {\let\TableWidth\relax}
   \newlength\TableWidth
 \begin{verbatimwrite}{\TableDir/LiqConstrScenarios}
 \newsavebox{\LiqConstrScenarios}
