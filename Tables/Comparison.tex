@@ -1,5 +1,6 @@
   \let\TableWidth\relax
   \newlength\TableWidth
+\renewcommand\theadfont{}
   \newsavebox{\ComparisonSub}
   \begin{table}[!th]
     \centering
@@ -56,6 +57,19 @@ equivalently $\Pat  < \Rfree^{1/\CRRA}\PGro^{1-1/\CRRA}$ & \\
 &  \\ \hline
 \end{tabular}
 } % End \sbox
-\settowidth\TableWidth{\usebox{\ComparisonSub}}
-\usebox{\ComparisonSub}
+\settowidth{\TableWidth}{\usebox{\ComparisonSub}}
+
+\newlength{\ComparisonSubShrunk}
+\newsavebox{\ComparisonSubShrunkBox}
+
+\savebox{\ComparisonSubShrunkBox}{
+  \settowidth{\ComparisonSubShrunk}{\usebox{\ComparisonSub}}
+  \resizebox{0.95\textwidth}{!}{\begin{minipage}{\ComparisonSubShrunk}
+      \usebox{\ComparisonSub}
+    \end{minipage}}
+}
+
+%\usebox{\ComparisonSub}
+\usebox{\ComparisonSubShrunkBox}
+
 \end{table}

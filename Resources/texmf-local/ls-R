@@ -104,7 +104,6 @@ svg-set-size-to-1p3x1p01.mk4~
 .gitkeep
 
 ./web2c:
-#texmf.cnf#
 texmf.cnf
 texmf.cnf~
 texmf_orig.cnf
