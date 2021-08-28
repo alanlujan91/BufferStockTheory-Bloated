@@ -3,6 +3,8 @@
 \onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 
 \begin{document}
+\let\TableWidth\relax
+{\newlength\TableWidth}
 
 \section{Perfect Foresight Liquidity Constrained Solution}\label{sec:ApndxLiqConstr}
 
@@ -10,7 +12,7 @@ Under perfect foresight in the presence of a liquidity constraint requiring $\bR
 \geq 0$, this appendix taxonomizes the varieties of the limiting
 consumption function $\constr{\cFunc}(\mRat)$ that arise under various parametric conditions.  Results are summarized in table~\ref{table:LiqConstrScenarios}.
 
-%\input{\TableDir/LiqConstrScenarios}
+\input{\TableDir/LiqConstrScenarios}
 
 
 \subsection{If \GICRaw~Fails}
@@ -35,9 +37,7 @@ resources to the next period at return $\Rfree$:\footnote{The point at
   \\  \uFunc^{\prime}(1)  & < \Rfree \Discount \uFunc^{\prime}(\PGro)   \label{eq:EulerGICRawFailsEnd}.
 \end{aligned}\end{gathered}\end{equation}
 
-Reference to~\eqref{eq:supfn}
-
-\onlyinsubfile{\pagebreak\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}}\end{document}\endinput
+%\onlyinsubfile{\pagebreak\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}}\end{document}\end{document}
 
 
 Similar logic shows that under these circumstances the constraint will
