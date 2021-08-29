@@ -148,6 +148,10 @@
   *{file}   {umsb.fd}     {2013/01/14 v3.01}
   *{file}   {ulasy.fd}    {1998/08/17 v2.2e}
   *{file}   {uwasy.fd}    {2020/01/19 v2.4}
+  *{file}   {../Tables/LiqConstrScenarios.tex}{0000/00/00 v0.0}
+  *{file}   {t1cmtt.fd}   {2019/12/16 v2.5j}
+  *{file}   {../Figures/PFGICHoldsFHWCFailsRICFails.tex}{0000/00/00 v0.0}
+  *{file}   {../Appendices/../Figures/PFGICHoldsFHWCFailsRICFails.pdf}{0000/00/00 v0.0}
   *{file}   {../Appendices/ApndxConcaveCFunc.tex}{0000/00/00 v0.0}
   *{file}   {./econtexRoot.tex}{0000/00/00 v0.0}
   *{file}   {../Resources/econtexPaths.tex}{0000/00/00 v0.0}
@@ -203,5 +207,4 @@
   *{file}   {../Appendices/../Figures/Inequalities.pdf}{0000/00/00 v0.0}
   *{file}   {../Appendices/../Figures/Inequalities-numer.pdf}{0000/00/00 v0.0}
   *{file}   {All-Appendices.bbl}{0000/00/00 v0.0}
-  *{file}   {t1cmtt.fd}   {2019/12/16 v2.5j}
 }
