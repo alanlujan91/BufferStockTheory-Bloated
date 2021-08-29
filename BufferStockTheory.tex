@@ -5,6 +5,26 @@
 
 \begin{document}
 
+\IfFileExists{\EqDir/README.tex}{
+	% Equations are in a subdirectory LaTeX/Equations
+	% which will be found if running with output-directory=LaTeX
+  }{
+    \GenericError{}{\EqDir: Configure to use pdflatex -output-directory=LaTeX 
+    	or build with latexmk
+    	\MessageBreak
+    	see https://mg.readthedocs.io/latexmk.html\MessageBreak}
+  }
+
+
+% If verbatimwrite fails, you are running without output-directory=LaTeX
+% The "Resources" directory has appropriate Texstudio profiles for Mac and Linux
+% (This file is configured to work with AucTeX in Emacs on a Mac)
+%\begin{verbatimwrite}{\EqDir/README.tex}
+	% Equations used in slides and text can have labels
+	% Those used in appendices and text must not
+%\end{verbatimwrite}
+
+
 % Command to determine whether executing in a subfile or main file
 \renewcommand{\onlyinsubfile}[1]{}\renewcommand{\notinsubfile}[1]{#1}
 
@@ -25,13 +45,13 @@
 \subfile{\ApndxDir/ApndxCGrowthDeclines}
 \subfile{\ApndxDir/ApndxMTargetIsStable}
 
-\pagebreak %{\vfill\clearpage\eject}
+\pagebreak
 
 \bibliography{BufferStockTheory,\econtexBib}\end{document}
+
 \endinput
 
-
-
+% Stuff below configures compilation for AucTeX in Emacs
 % Stuff below configures compilation for AucTeX in Emacs -- last line is specialized to Skim on Mac
 
 % Local Variables:
@@ -48,6 +68,6 @@
 % LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=LaTeX %S%(PDFout)"))
 % TeX-source-correlate-mode: t
 % TeX-parse-self: t
-% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n LaTeX/%o %b"))))))
 % TeX-parse-all-errors: t
+% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n LaTeX/%o %b"))))))
 % End:

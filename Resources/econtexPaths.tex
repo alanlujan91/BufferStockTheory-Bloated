@@ -1,10 +1,9 @@
-% The \commands below are required to allow sharing of the same base code via Github between TeXLive on a local machine and Overleaf (which is a proxy for "a standard distribution of LaTeX").  This is an ugly solution to the requirement that custom LaTeX packages be accessible, and that Overleaf seems to ignore symbolic links (even if they are relative links to valid locations)
+% The \commands below are required to allow sharing of the same base code via Github between TeXLive on a local machine and Overleaf (which is a proxy for "a standard distribution of LaTeX").  This is an ugly solution to the requirement that custom LaTeX packages be accessible, and that Overleaf prohibits symbolic links
 \providecommand{\econtex}{\econtexRoot/Resources/texmf-local/tex/latex/econtex}
 \providecommand{\econtexSetup}{\econtexRoot/Resources/texmf-local/tex/latex/econtexSetup}
 \providecommand{\econtexShortcuts}{\econtexRoot/Resources/texmf-local/tex/latex/econtexShortcuts}
 \providecommand{\econtexBibMake}{\econtexRoot/Resources/texmf-local/tex/latex/econtexBibMake}
-%\providecommand{\econtexBibStyle}{\econtexRoot/Resources/texmf-local/bibtex/bst/econtex}
-\providecommand{\econtexBibStyle}{/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest/Resources/texmf-local/bibtex/bst/econtex}
+\providecommand{\econtexBibStyle}{texmf-local/bibtex/bst/econtex}
 \providecommand{\econtexBib}{economics}
 \providecommand{\notes}{\econtexRoot/Resources/texmf-local/tex/latex/handout}
 \providecommand{\handoutSetup}{\econtexRoot/Resources/texmf-local/tex/latex/handoutSetup}
@@ -22,12 +21,7 @@
 \providecommand{\ResourcesDir}{\econtexRoot/Resources}
 \providecommand{\rootFromOut}{..} % Path back to root directory from output-directory
 \providecommand{\LaTeXGenerated}{\econtexRoot/LaTeX} % Put generated files in subdirectory
-%\providecommand{\EqDir}{\rootFromOut/Equations} % Put generated files in subdirectory
 \providecommand{\econtexPaths}{\econtexRoot/Resources/econtexPaths}
 \providecommand{\LaTeXInputs}{\econtexRoot/Resources/LaTeXInputs}
 \providecommand{\LtxDir}{LaTeX/}
-\providecommand{\LtxDir}{}
-%\providecommand{\Ltx}{LaTeX}
-\providecommand{\Ltx}{}
-%\providecommand{\EqDir}{\Ltx/Equations} % Put generated files in subdirectory
 \providecommand{\EqDir}{Equations} % Put generated files in subdirectory
