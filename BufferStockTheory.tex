@@ -19,10 +19,10 @@
 % If verbatimwrite fails, you are running without output-directory=LaTeX
 % The "Resources" directory has appropriate Texstudio profiles for Mac and Linux
 % (This file is configured to work with AucTeX in Emacs on a Mac)
-%\begin{verbatimwrite}{\EqDir/README.tex}
-	% Equations used in slides and text can have labels
-	% Those used in appendices and text must not
-%\end{verbatimwrite}
+\begin{verbatimwrite}{\EqDir/README.tex}
+% Equations used in slides and text can have labels
+% Those used in appendices and text must not
+\end{verbatimwrite}
 
 
 % Command to determine whether executing in a subfile or main file
@@ -45,14 +45,15 @@
 \subfile{\ApndxDir/ApndxCGrowthDeclines}
 \subfile{\ApndxDir/ApndxMTargetIsStable}
 
-\pagebreak
+\pagebreak %{\vfill\clearpage\eject}
 
 \bibliography{BufferStockTheory,\econtexBib}\end{document}
-
 \endinput
 
+
+
 % Stuff below configures compilation for AucTeX in Emacs
-% Stuff below configures compilation for AucTeX in Emacs -- last line is specialized to Skim on Mac
+% Last line specialized to Skim on Mac - change for Win or Linux
 
 % Local Variables:
 % eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
