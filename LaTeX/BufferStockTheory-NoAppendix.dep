@@ -141,36 +141,6 @@
   *{file}   {umsb.fd}     {2013/01/14 v3.01}
   *{file}   {ulasy.fd}    {1998/08/17 v2.2e}
   *{file}   {uwasy.fd}    {2020/01/19 v2.4}
-  *{file}   {./Resources/PoweredByEconARK.pdf}{0000/00/00 v0.0}
-  *{file}   {t1cmtt.fd}   {2019/12/16 v2.5j}
   *{file}   {LaTeX/Equations/supfn.tex}{0000/00/00 v0.0}
-  *{file}   {LaTeX/Equations/DBCparts.tex}{0000/00/00 v0.0}
-  *{file}   {LaTeX/Equations/tShkDef.tex}{0000/00/00 v0.0}
-  *{file}   {./Figures/RelatePFGICFHWCRICPFFVAC.tex}{0000/00/00 v0.0}
-  *{file}   {./Figures/RelatePFGICFHWCRICPFFVAC.pdf}{0000/00/00 v0.0}
-  *{file}   {LaTeX/Equations/GICRaw.tex}{0000/00/00 v0.0}
-  *{file}   {LaTeX/Equations/PGroAdj.tex}{0000/00/00 v0.0}
-  *{file}   {LaTeX/Equations/PatPGroAdj.tex}{0000/00/00 v0.0}
-  *{file}   {LaTeX/Equations/GICNrm.tex}{0000/00/00 v0.0}
-  *{file}   {LaTeX/Equations/FVAC.tex}{0000/00/00 v0.0}
-  *{file}   {./Tables/Parameters.tex}{0000/00/00 v0.0}
-  *{file}   {./Tables/Calibration.tex}{0000/00/00 v0.0}
-  *{file}   {./Figures/cFuncsConverge.tex}{0000/00/00 v0.0}
-  *{file}   {./Figures/cFuncsConverge.pdf}{0000/00/00 v0.0}
-  *{file}   {ueus.fd}     {2013/01/14 v3.01}
-  *{file}   {./Figures/Inequalities.tex}{0000/00/00 v0.0}
-  *{file}   {./Figures/Inequalities.pdf}{0000/00/00 v0.0}
-  *{file}   {./Tables/Comparison.tex}{0000/00/00 v0.0}
-  *{file}   {./Tables/Required.tex}{0000/00/00 v0.0}
-  *{file}   {./Figures/cGroTargetFig.tex}{0000/00/00 v0.0}
-  *{file}   {./Figures/cGroTargetFig.pdf}{0000/00/00 v0.0}
-  *{file}   {./Figures/MPCLimits.tex}{0000/00/00 v0.0}
-  *{file}   {./Figures/MPCLimits.pdf}{0000/00/00 v0.0}
-  *{file}   {./Figures/cFuncBounds.tex}{0000/00/00 v0.0}
-  *{file}   {./Figures/cFuncBounds.pdf}{0000/00/00 v0.0}
-  *{file}   {LaTeX/Equations/TheoremMTargetIsStable.tex}{0000/00/00 v0.0}
-  *{file}   {LaTeX/Equations/TheoremMSSBalExists.tex}{0000/00/00 v0.0}
-  *{file}   {./Figures/GICNrmFailsButGICRawHolds.tex}{0000/00/00 v0.0}
-  *{file}   {./Figures/GICNrmFailsButGICRawHolds.pdf}{0000/00/00 v0.0}
   *{file}   {BufferStockTheory-NoAppendix.bbl}{0000/00/00 v0.0}
 }
