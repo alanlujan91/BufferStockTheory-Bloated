@@ -5,25 +5,15 @@
 
 \begin{document}
 
-\IfFileExists{\EqDir/README.tex}{
-	% Equations are in a subdirectory LaTeX/Equations
-	% which will be found if running with output-directory=LaTeX
+\IfFileExists{\EqDir/Problem.md}{
+  \GenericWarning{}{Reconfigure to use pdflatex -output-directory=LaTeX
+    or build with latexmk
+    \MessageBreak
+    see https://mg.readthedocs.io/latexmk.html\MessageBreak}
   }{
-    \GenericError{}{\EqDir: Configure to use pdflatex -output-directory=LaTeX 
-    	or build with latexmk
-    	\MessageBreak
-    	see https://mg.readthedocs.io/latexmk.html\MessageBreak}
-  }
-
-
-% If verbatimwrite fails, you are running without output-directory=LaTeX
-% The "Resources" directory has appropriate Texstudio profiles for Mac and Linux
-% (This file is configured to work with AucTeX in Emacs on a Mac)
-\begin{verbatimwrite}{\EqDir/README.tex}
-% Equations used in slides and text can have labels
-% Those used in appendices and text must not
-\end{verbatimwrite}
-
+    % If Problem.md does not exist, that's because it's correctly looking
+    % in LaTeX/Equations, where that file is not present 
+}
 
 % Command to determine whether executing in a subfile or main file
 \renewcommand{\onlyinsubfile}[1]{}\renewcommand{\notinsubfile}[1]{#1}
