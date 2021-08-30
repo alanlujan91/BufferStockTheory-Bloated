@@ -263,4 +263,4 @@ economics.bib
 *.fs -text
 *.fsx -text
 *.hs -text
-texmf-local
+
