@@ -191,7 +191,7 @@ _region_.*
 # Custom for CDC papers
 *.bibkey
 *.tmp
-economics.bib
+#economics.bib
 
 # Custom for ShareLaTeX
 latexmkrc
