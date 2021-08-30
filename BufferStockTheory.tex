@@ -5,20 +5,22 @@
 
 \begin{document}
 
-\IfFileExists{\EqDir/Problem.md}{
-  \GenericWarning{}{Reconfigure to use pdflatex -output-directory=LaTeX
-    or build with latexmk
-    \MessageBreak
-    see https://mg.readthedocs.io/latexmk.html\MessageBreak}
-  }{
-    % If Problem.md does not exist, that's because it's correctly looking
-    % in LaTeX/Equations, where that file is not present 
-}
+% \IfFileExists{\EqDir/Problem.md}{
+%   \GenericWarning{}{Reconfigure to use pdflatex -output-directory=LaTeX
+%     or build with latexmk
+%     \MessageBreak
+%     see https://mg.readthedocs.io/latexmk.html\MessageBreak}
+%   }{
+%     % If Problem.md does not exist, that's because it's correctly looking
+%     % in LaTeX/Equations, where that file is not present
+% }
 
 % Command to determine whether executing in a subfile or main file
 \renewcommand{\onlyinsubfile}[1]{}\renewcommand{\notinsubfile}[1]{#1}
 
 \subfile{BufferStockTheory-NoAppendix} % Main body of paper
+
+\pagebreak
 
 \hypertarget{Appendices}{} % Allows link to [url-of-paper]#Appendices
 \appendix \centerline{\LARGE Appendices}\vspace{0.2in}

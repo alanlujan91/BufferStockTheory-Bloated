@@ -2,19 +2,6 @@
 \usepackage{datetime2}
 \usepackage{refcount}
 \usepackage{xr-hyper}
-
-% \externaldocument[LiqConstr-]{\ApndxDir/ApndxLiqConstr}
-% \externaldocument[ConcaveCFunc-]{\ApndxDir/ApndxConcaveCFunc}
-% \externaldocument[Euclidian-]{\ApndxDir/ApndxEuclidian}
-% \externaldocument[CGroIsPGro-]{\ApndxDir/ApndxCGroIsPGro}
-% \externaldocument[MPCLimits-]{\ApndxDir/ApndxMPCLimits}
-% \externaldocument[LiqConstrAsLimit-]{\ApndxDir/ApndxLiqConstrAsLimit}
-% \externaldocument[SolnMethEndogGpts-]{\ApndxDir/ApndxSolnMethEndogGpts}
-% \externaldocument[SolnMethTermFunc-]{\ApndxDir/ApndxSolnMethTermFunc}
-% \externaldocument[ConditionDiagrams-]{\ApndxDir/ApndxConditionDiagrams}
-% \externaldocument[CGrowthDeclines-]{\ApndxDir/ApndxCGrowthDeclines}
-% \externaldocument[MTargetIsStable-]{\ApndxDir/ApndxMTargetIsStable}
-
 \usepackage{hhline}
 \newcommand{\onlyinsubfile}[1]{#1}\newcommand{\notinsubfile}[1]{}
 
@@ -25,10 +12,6 @@
   \labelprefix
   \fi #1%
 }
-
-% Other tools
-\newcommand{\BoydT}{\mathsf{T}} % Contraction mapping operator
-\newcommand{\Shrinker}{\alpha}  % Contraction mapping shrinker
 
 % Appendices and body are subfiles
 \usepackage{subfiles}
@@ -47,17 +30,30 @@
   pdfcreator = {ccarroll@jhu.edu}
 }
 
+\IfFileExists{\EqDir/Problem.md}{
+  \GenericWarning{}{Reconfigure to use pdflatex -output-directory=LaTeX
+    or build with latexmk
+    \MessageBreak
+    see https://mg.readthedocs.io/latexmk.html\MessageBreak}
+  }{
+    % If Problem.md does not exist, that's because it's correctly looking
+    % in LaTeX/Equations, where that file is not present 
+}
+
 \bibliographystyle{\econtexBibStyle}
 
 \newtheorem{defn}{Definition}
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
 
+% Paper-specific macros
+\newcommand{\BoydT}{\mathsf{T}} % Contraction mapping operator
+\newcommand{\Shrinker}{\alpha}  % Contraction mapping shrinker
+
 \newcommand{\GICAbs}{\mbox{GIC}}
 \newcommand{\GICRaw}{\mbox{GIC}}
 \newcommand{\GPFRaw}{\mbox{GPF}}
 \newcommand{\GICNrm}{\mbox{GIC-Nrm}}
-% \newcommand{\GICNrmAgg}{{\mbox{GICNrmAgg}}}
 \newcommand{\PFGPNew}{{\mbox{GPF}}}
 \newcommand{\mBal}{\check{\mRat}}
 \newcommand{\Abve}{\bar}
