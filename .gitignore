@@ -264,3 +264,9 @@ economics.bib
 *.fsx -text
 *.hs -text
 
+.spyproject*
+.spyproject/
+=======
+# Spyder
+.spyderproject
+.spyproject
