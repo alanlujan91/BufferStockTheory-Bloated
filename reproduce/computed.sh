@@ -1,7 +1,9 @@
 #!/bin/bash
 
 scriptDir="$(dirname "$0")"
-cd "$scriptDir/../Code/Python"
+cd "$scriptDir/.."
+pip install -r binder/requirements.txt
 
-ipython BufferStockTheory.ipynb
+cd "Code/Python"
+ipython BufferStockTheory-Problems-and-Solutions-Source.ipynb
 
