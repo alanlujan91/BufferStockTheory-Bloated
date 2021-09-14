@@ -5,5 +5,5 @@ cd "$scriptDir/.."
 pip install -r binder/requirements.txt
 
 cd "Code/Python"
-ipython BufferStockTheory.ipynb
+ipython BufferStockTheory-Problems-and-Solutions-Source.ipynb
 
