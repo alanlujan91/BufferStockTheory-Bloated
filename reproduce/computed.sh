@@ -3,5 +3,5 @@
 scriptDir="$(dirname "$0")"
 cd "$scriptDir/../Code/Python"
 
-ipython BufferStockTheory.ipynb
+ipython BufferStockTheory-Problems-and-Solutions-Source.ipynb
 
