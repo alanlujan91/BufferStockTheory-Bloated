@@ -4,6 +4,8 @@ scriptDir="$(dirname "$0")"
 # Regenerate computed results (figs) needed for compiling paper
 ./reproduce/computed.sh
 
+echo '' ; echo 'Reproduce text of paper' ; echo ''
+
 # Reproduce text of paper
 
 # This script may only run on a system on which LaTeX has the ability to write to
@@ -19,11 +21,13 @@ scriptDir="$(dirname "$0")"
 # Compile LaTeX files in root directory
 
 for file in BufferStockTheory BufferStockTheory-NoAppendix BufferStockTheory-Slides; do
+    echo '' ; echo "Compiling $file" ; echo ''
     pdflatex -halt-on-error -output-directory=LaTeX "$file"
     pdflatex -halt-on-error -output-directory=LaTeX "$file"
     bibtex LaTeX/"$file"
     pdflatex -halt-on-error -output-directory=LaTeX "$file"
     pdflatex -halt-on-error -output-directory=LaTeX "$file"
+    echo '' ; echo "Compiled $file" ; echo ''
 done
 
 # Compile All-Figures and All-Tables
@@ -32,7 +36,7 @@ for type in Figures Tables; do
     echo "$cmd" ; eval "$cmd"
     [[ -e LaTeX/"$type/All-$type" ]] && bibtex LaTeX/"$type/All-$type" && pdflatex -halt-on-error -output-directory=LaTeX "$type/All-$type"
     pdflatex -halt-on-error -output-directory=LaTeX "$type/All-$type"
-    mv "LaTeX/All-$type.pdf" "$type"
+    mv "LaTeX/All-$type.pdf" "$type"  # Move from the LaTeX output directory to the destination
 done
 
 # All the appendices can be compiled as standalone documents (they are "subfiles")
@@ -60,8 +64,8 @@ while read appendixName; do
 done < /tmp/appendices
 
 # Cleanup
-rm /tmp/appendices economics.bib 
+rm -f /tmp/appendices economics.bib 
 [[ -e BufferStockTheory.pdf ]] && rm -f BufferStockTheory.pdf
 
-# Make a copy of the generated PDF 
-cp LaTeX/BufferStockTheory.pdf BufferStockTheory.pdf
+echo '' ; echo 'Paper has been compiled to LaTeX/BufferStockTheory.pdf' ; echo ''
+
