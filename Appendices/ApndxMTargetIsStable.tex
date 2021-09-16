@@ -58,14 +58,14 @@ Existence of a point where $\Ex_t [{\mRat}_{t+1}/\mRat_t] = 1$ follows from:
 \noindent    \textit{Existence of a point where $\Ex_t [{\mRat}_{t+1}/\mRat_t] < 1$}.
     
 \textbf{If {\RIC} holds.}  Logic exactly parallel to that of Section~\ref{subsec:LimitsAsmtToInfty} leading to equation~\eqref{eq:xtp1toinfty}, but dropping the $\PGro_{t+1}$ from the RHS, establishes that
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   \lim_{\mRat_{t} \uparrow \infty} \Ex_{t}[{\mRat}_{t+1}/\mRat_{t}]  & =   
                                                                        \lim_{\mRat_{t} \uparrow \infty} 
                                                                        \Ex_{t}\left[\frac{{\mathcal{\mathcal{R}}}_{t+1}(\mRat_{t}-\cFunc(\mRat_{t}))+{\tShkAll}_{t+1}}{\mRat_{t}}\right] \notag 
   \\  & = \Ex_{t}[(\Rfree/{\PGro}_{t+1})\PatR]  \notag
   \\  & = \Ex_{t}[{\Pat}/{\PGro}_{t+1}]  \label{eq:emgro}
   \\  & < 1 \notag
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 where the inequality reflects imposition of the \GICNrm~\eqref{eq:GICNrm}.
 
 \textbf{If {\RIC} fails.}  When the {\RIC} fails, the fact that $\lim_{\mRat^{\uparrow} \infty} \cFunc^{\prime}(\mRat) = 0$ (see equation~\eqref{eq:MinMPCInv}) means that the limit of the RHS of~\eqref{eq:emgro} as $\mRat \uparrow \infty$ is $\bar{\Rnorm}=\Ex_{t}[\Rnorm_{t+1}]$.  In the next step of this proof, we will prove that the combination {\GICNrm} and \cncl{\RIC} implies $\bar{\Rnorm} < 1$.
@@ -86,22 +86,22 @@ Paralleling the logic for $\cRat$ in Section~\ref{subsec:LimitsAsmtToZero}: the 
 
 Now define \providecommand{\difFunc}{\pmb{\zeta}} $\difFunc(\mRat_t) \equiv 
 \Ex_t[\mRat_{t+1}] - \mRat_t$ and note that
-\begin{align}\label{eq:difRatioEquiv}
+\begin{equation}\begin{gathered}\begin{aligned}\label{eq:difRatioEquiv}
   \difFunc(\mRat_t) < 0 &\leftrightarrow \Ex_t[{\mRat}_{t+1}/\mRat_t] < 1 
                           \nonumber\\
   \difFunc(\mRat_t) = 0 &\leftrightarrow \Ex_t[{\mRat}_{t+1}/\mRat_t] = 1\\
   \difFunc(\mRat_t) > 0 &\leftrightarrow \Ex_t[{\mRat}_{t+1}/\mRat_t] > 
                           1,\nonumber
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 so that $\difFunc(\mTrg)=0$. Our goal is to prove that $\difFunc(\bullet)$ is strictly 
 decreasing on $(0,\infty)$ using the fact that
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   \difFunc^{\prime}(\mRat_{t}) \equiv  \left( \frac{d}{d\mRat_{t}}\right) \difFunc(\mRat_t)  & = \Ex_{t}\left[
                                                                                                \left( \frac{d}{d\mRat_{t}}\right) \left( 
                                                                                                {\Rnorm}_{t+1}(\mRat_{t}-\cFunc(\mRat_{t}))+%
                                                                                                {\tShkAll}_{t+1} - {\mRat}_t\right) \right] \label{eq:difFuncmRatDecreases} \\
                                                                                              & = \bar{\Rnorm}\left(1-\cFunc^{\prime}({\mRat}_t)\right) - 1.  \notag
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 
 % Note that the statement of theorem~\ref{thm:target} did not require the {\RIC} to hold.
 Now, we show that (given our other assumptions) $\difFunc^{\prime}(\mRat)$ is decreasing (but for different reasons) whether the {\RIC} holds or fails.
@@ -121,9 +121,9 @@ Under \cncl{\RIC}, recall that $\lim_{\mRat \uparrow \infty} \cFunc^{\prime}(\mR
   \bar{\Rnorm}\left(1-\cFunc^{\prime}({\mRat}_t)\right) & < \bar{\Rnorm}
 \end{align*}
 which means that $\difFunc^{\prime}(\mRat_{t})$ from~\eqref{eq:difFuncmRatDecreases} is guaranteed to be negative if
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   \bar{\Rnorm} \equiv \Ex_{t}\left[\frac{\Rfree}{\PGro \pShk}\right] & < 1  \label{eq:RbarBelowOne}.
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 But the combination of the {\GICNrm} holding and the {\RIC} failing can be written:
 \begin{align*}
   \overbrace{\Ex_{t}\left[\frac{\Pat}{\PGro \pShk}\right]}^{\PatPGroAdj} & < 1 < \overbrace{\frac{\Pat}{\Rfree}}^{{\PatR}},
@@ -146,14 +146,14 @@ The elements of the proof are:
 
 \subsubsection{Existence and Continuity of The Ratio}% of $\hat{\mRat}_{t+1}/\mRat_{t}$.}
 
-Since by assumption $ 0 < \ushort{\pShk} \leq \pShk_{t+1} \leq \bar{\pShk} < \infty$, our proof in~\ref{subsubsec:RatExitsCont} that demonstrated existence and continuity of $\Ex_{t}[\mRat_{t+1}/\mRat_{t}]$ implies existence and continuity of $\Ex_{t}[\pShk_{t+1}\mRat_{t+1}/\mRat_{t}]$.
+Since by assumption $ 0 < \underline{\pShk} \leq \pShk_{t+1} \leq \bar{\pShk} < \infty$, our proof in~\ref{subsubsec:RatExitsCont} that demonstrated existence and continuity of $\Ex_{t}[\mRat_{t+1}/\mRat_{t}]$ implies existence and continuity of $\Ex_{t}[\pShk_{t+1}\mRat_{t+1}/\mRat_{t}]$.
 
 \subsubsection{Existence of a stable point}
 
-Since by assumption $ 0 < \ushort{\pShk} \leq \pShk_{t+1} \leq \bar{\pShk} < \infty$, our proof in Subsection~\ref{subsubsec:RatExitsCont} that the ratio of $\Ex_{t}[\mRat_{t+1}]$ to $\mRat_{t}$ is unbounded as $\mRat_{t} \downarrow 0$ implies that the ratio $\Ex_{t}[\pShk_{t+1}\mRat_{t+1}]$ to $\mRat_{t}$ is unbounded as $\mRat_{t} \downarrow 0$.
+Since by assumption $ 0 < \underline{\pShk} \leq \pShk_{t+1} \leq \bar{\pShk} < \infty$, our proof in Subsection~\ref{subsubsec:RatExitsCont} that the ratio of $\Ex_{t}[\mRat_{t+1}]$ to $\mRat_{t}$ is unbounded as $\mRat_{t} \downarrow 0$ implies that the ratio $\Ex_{t}[\pShk_{t+1}\mRat_{t+1}]$ to $\mRat_{t}$ is unbounded as $\mRat_{t} \downarrow 0$.
 
 The limit of the expected ratio as $\mRat_{t}$ goes to infinity is most easily calculated by modifying the steps for the prior theorem explicitly:
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   \lim_{\mRat_{t} \uparrow \infty} \Ex_{t}[\pShk_{t+1}\mRat_{t+1}/\mRat_{t}]  & =   
                                                                   \lim_{\mRat_{t} \uparrow \infty} 
                                                                   \Ex_{t}\left[\frac{\PGro_{t+1}\left((\Rfree/\PGro_{t+1})\aFunc(\mRat_{t})+{\tShkAll}_{t+1}\right)/\PGro}{\mRat_{t}}\right] \notag 
@@ -166,7 +166,7 @@ The limit of the expected ratio as $\mRat_{t}$ goes to infinity is most easily c
   \\  & = (\Rfree/\PGro)\PatR \label{eq:emgro2}
   \\  & = \PatPGro \notag
   \\  & < 1 \notag
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 where the last two lines are merely a restatement of the \GICRaw~\eqref{eq:GICRaw}.
 
 The Intermediate Value Theorem says that if $\Ex_{t}[\pShk_{t+1}\mRat_{t+1}/\mRat_t]$ is continuous, and takes on values above and below 1, there must be at least one point at which it is equal to one.
@@ -175,22 +175,22 @@ The Intermediate Value Theorem says that if $\Ex_{t}[\pShk_{t+1}\mRat_{t+1}/\mRa
 
 Define \providecommand{\difFunc}{\pmb{\zeta}} $\difFunc(\mRat_t) \equiv 
 \Ex_t[\pShk_{t+1}\mRat_{t+1}] - \mRat_t$ and note that
-\begin{align}\label{eq:difLevEquiv}
+\begin{equation}\begin{gathered}\begin{aligned}\label{eq:difLevEquiv}
   \difFunc(\mRat_t) < 0 &\leftrightarrow \Ex_t[\pShk_{t+1}\mRat_{t+1}/\mRat_{t}] < 1 
                           \nonumber\\
   \difFunc(\mRat_t) = 0 &\leftrightarrow \Ex_t[\pShk_{t+1}\mRat_{t+1}/\mRat_{t}] = 1\\
   \difFunc(\mRat_t) > 0 &\leftrightarrow \Ex_t[\pShk_{t+1}\mRat_{t+1}/\mRat_{t}] > 
                           1,\nonumber
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 so that $\difFunc(\mTrg)=0$. Our goal is to prove that $\difFunc(\bullet)$ is strictly 
 decreasing on $(0,\infty)$ using the fact that
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   \difFunc^{\prime}(\mRat_{t}) \equiv  \left( \frac{d}{d\mRat_{t}}\right) \difFunc(\mRat_t)  & = \Ex_{t}\left[
                                                                                                \left( \frac{d}{d\mRat_{t}}\right) \left( 
                                                                                                {\Rnorm}(\mRat_{t}-\cFunc(\mRat_{t}))+%
                                                                                                {\pShk}_{t+1}{\tShkAll}_{t+1} - {\mRat}_t\right) \right] \label{eq:difFuncDecreases} \\
                                                                                              & = (\Rfree/\PGro)\left(1-\cFunc^{\prime}({\mRat}_t)\right) - 1.  \notag
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 
 Now, we show that (given our other assumptions) $\difFunc^{\prime}(\mRat)$ is decreasing (but for different reasons) whether the {\RIC} holds or fails (\cncl{\RIC}).
 
@@ -207,9 +207,9 @@ Under \cncl{\RIC}, recall that $\lim_{\mRat \uparrow \infty} \cFunc^{\prime}(\mR
   \Rnorm\left(1-\cFunc^{\prime}({\mRat}_t)\right) & < \Rnorm
 \end{align*}
 which means that $\difFunc^{\prime}(\mRat_{t})$ from~\eqref{eq:difFuncDecreases} is guaranteed to be negative if
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   \Rnorm \equiv (\Rfree/\PGro) & < 1  \label{eq:FHWCFails}.
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 
 But we showed in Section~\ref{subsec:UncertaintyModifiedConditions} that the only circumstances under which the problem has a nondegenerate solution while the {\RIC} fails were ones where the {\FHWC} also fails (that is,~\eqref{eq:FHWCFails} holds).
 
