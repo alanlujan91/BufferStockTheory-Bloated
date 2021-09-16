@@ -4,10 +4,10 @@ scriptDir="$(dirname "$0")"
 cd "$scriptDir/.."
 
 echo '' ; echo 'Installing requirements' ; echo ''
-pip install -r binder/requirements.txt
+pip install -r binder/requirements.txt | tee binder/requirements.out 
 
 echo '' ; echo 'Producing figures' ; echo ''
 
 cd "Code/Python"
-ipython BufferStockTheory.ipynb
+ipython BufferStockTheory-Problems-and-Solutions-Source.ipynb
 

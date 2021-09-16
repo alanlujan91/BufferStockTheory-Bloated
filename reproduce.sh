@@ -36,7 +36,7 @@ for type in Figures Tables; do
     echo "$cmd" ; eval "$cmd"
     [[ -e LaTeX/"$type/All-$type" ]] && bibtex LaTeX/"$type/All-$type" && pdflatex -halt-on-error -output-directory=LaTeX "$type/All-$type"
     pdflatex -halt-on-error -output-directory=LaTeX "$type/All-$type"
-    mv "LaTeX/All-$type.pdf" "$type"  # Move from the LaTeX output directory to the destination
+    mv -f "LaTeX/All-$type.pdf" "$type"  # Move from the LaTeX output directory to the destination
 done
 
 # All the appendices can be compiled as standalone documents (they are "subfiles")
