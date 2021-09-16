@@ -23,7 +23,6 @@ echo '' ; echo 'Reproduce text of paper' ; echo ''
 cd Figures 
 for f in InequalityPFGICFHWCRIC RelatePFGICFHWCRICPFFVAC Inequalities; do
     pdflatex --output-format pdf -output-directory=../LaTeX "$f-tikzMake.tex" >/dev/null
-    cp       "../LaTeX/$f-tikzMake.svg" "$f.svg"
     cp       "../LaTeX/$f-tikzMake.pdf" "$f.pdf"
     ebb -x "$f.pdf"
 done
