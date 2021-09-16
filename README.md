@@ -10,14 +10,18 @@ Figures can be produced either:
 
 #### Live in your browser using [MyBinder](https://mybinder.org): [![Binder](https://mybinder.org/badge_logo.svg)](http://econ-ark.org/materials/bufferstocktheory?launch)
 
-#### In a local interactive [jupyter notebook](https://jupyter.org)
+#### Locally
+
+If you want to reproduce the results locally, you will need python and pip.
+
+##### In a local interactive [jupyter notebook](https://jupyter.org)
    1. Install the jupyter notebook tool per [Installation.md](https://github.com/econ-ark/REMARK)
    2. Download this repository using `git clone https://github.com/econ-ark/BufferStockTheory` or a zip folder [using this link](https://github.com/econ-ark/BufferStockTheory/archive/master.zip).
    3. Type `jupyter lab` at the command line
       - Click on `BufferStockTheory-Dashboard.ipynb`; or 
       - Navigate to `Code/Python/BufferStockTheory.ipynb`
 
-#### Reproduce the figures and compile the paper locally using `nbreproduce`
+##### Reproduce the figures and compile the paper locally using `nbreproduce`
    1. Install [nbreproduce](https://github.com/econ-ark/nbreproduce)
    2. Download this repository using `git clone https://github.com/econ-ark/BufferStockTheory` or a zip folder [using this link](https://github.com/econ-ark/BufferStockTheory/archive/master.zip).
    3. Execute `nbreproduce` from the command line.
