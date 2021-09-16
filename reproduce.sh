@@ -20,14 +20,15 @@ echo '' ; echo 'Reproduce text of paper' ; echo ''
 
 # Make tikz figures
 
+cd Figures 
 for f in InequalityPFGICFHWCRIC RelatePFGICFHWCRICPFFVAC Inequalities; do
-    pdflatex --output-format pdf "$f-tikzMake.tex" >/dev/null
-#    pdflatex --output-format dvi "$f-tikzMake.tex" >/dev/null
-#    (export LIBGS=/usr/local/lib/libgs.so.9 ;   dvisvgm --no-fonts=1 --verbosity=2 "$f-tikzMake.dvi" )
-    cp       "$f-tikzMake.svg" "$f.svg"
-    cp       "$f-tikzMake.pdf" "$f.pdf"
+    pdflatex --output-format pdf -output-directory=../LaTeX "$f-tikzMake.tex" >/dev/null
+    cp       "../LaTeX/$f-tikzMake.svg" "$f.svg"
+    cp       "../LaTeX/$f-tikzMake.pdf" "$f.pdf"
     ebb -x "$f.pdf"
 done
+
+cd ..
 
 # Compile LaTeX files in root directory
 for file in BufferStockTheory BufferStockTheory-NoAppendix BufferStockTheory-Slides; do
