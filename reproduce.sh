@@ -18,8 +18,18 @@ echo '' ; echo 'Reproduce text of paper' ; echo ''
 # Google 'LaTeX write permissions' to determine how to set these on your system
 # Or change the output directory from LaTeX to /tmp here and elsewhere in the documents
 
-# Compile LaTeX files in root directory
+# Make tikz figures
 
+for f in InequalityPFGICFHWCRIC RelatePFGICFHWCRICPFFVAC Inequalities; do
+    pdflatex --output-format pdf "$f-tikzMake.tex" >/dev/null
+#    pdflatex --output-format dvi "$f-tikzMake.tex" >/dev/null
+#    (export LIBGS=/usr/local/lib/libgs.so.9 ;   dvisvgm --no-fonts=1 --verbosity=2 "$f-tikzMake.dvi" )
+    cp       "$f-tikzMake.svg" "$f.svg"
+    cp       "$f-tikzMake.pdf" "$f.pdf"
+    ebb -x "$f.pdf"
+done
+
+# Compile LaTeX files in root directory
 for file in BufferStockTheory BufferStockTheory-NoAppendix BufferStockTheory-Slides; do
     echo '' ; echo "Compiling $file" ; echo ''
     pdflatex -halt-on-error -output-directory=LaTeX "$file"
