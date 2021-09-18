@@ -1,13 +1,12 @@
 \RequireVersions{
   *{application}{TeX}     {1990/03/25 v3.x}
   *{format} {LaTeX2e}     {2020-02-02 v2.e}
-  *{file}   {All-Figures.tex}{0000/00/00 v0.0}
   *{file}   {./econtexRoot.tex}{0000/00/00 v0.0}
-  *{file}   {../Resources/econtexPaths.tex}{0000/00/00 v0.0}
+  *{file}   {./Resources/econtexPaths.tex}{0000/00/00 v0.0}
   *{class}  {subfiles}    {2020/02/14 v1.6}
   *{package}{verbatim}    {2019/11/10 v1.5r}
   *{package}{import}      {2020/01/22 v6.0}
-  *{file}   {../BufferStockTheory.tex}{0000/00/00 v0.0}
+  *{file}   {./BufferStockTheory.tex}{0000/00/00 v0.0}
   *{file}   {./econtexRoot.tex}{0000/00/00 v0.0}
   *{file}   {./Resources/econtexPaths.tex}{0000/00/00 v0.0}
   *{class}  {./Resources/texmf-local/tex/latex/econtex}{0000/00/00 v0.0}
@@ -126,8 +125,8 @@
   *{package}{subfigure}   {2002/03/15 v2.1.5}
   *{file}   {subfigure.cfg}{0000/00/00 v0.0}
   *{file}   {./econtexRoot.tex}{0000/00/00 v0.0}
-  *{file}   {../Resources/econtexPaths.tex}{0000/00/00 v0.0}
-  *{file}   {../Resources/LaTeXInputs/econtex_onlyinsubfile.tex}{0000/00/00 v0.0}
+  *{file}   {./Resources/econtexPaths.tex}{0000/00/00 v0.0}
+  *{file}   {./Resources/LaTeXInputs/econtex_onlyinsubfile.tex}{0000/00/00 v0.0}
   *{file}   {t3cmr.fd}    {2001/12/31 v0.0}
   *{file}   {translations-basic-dictionary-english.trsl}{(english v0.0}
   *{file}   {supp-pdf.mkii}{0000/00/00 v0.0}
@@ -139,24 +138,24 @@
   *{file}   {All-Figures.out}{0000/00/00 v0.0}
   *{package}{bookmark}    {2019/12/03 v1.28}
   *{file}   {bkm-pdftex.def}{2019/12/03 v1.28}
-  *{file}   {../Figures/RelatePFGICFHWCRICPFFVAC.tex}{0000/00/00 v0.0}
-  *{file}   {../Figures/RelatePFGICFHWCRICPFFVAC.pdf}{0000/00/00 v0.0}
+  *{file}   {./Figures/RelatePFGICFHWCRICPFFVAC.tex}{0000/00/00 v0.0}
+  *{file}   {./Figures/RelatePFGICFHWCRICPFFVAC.pdf}{0000/00/00 v0.0}
   *{file}   {umsa.fd}     {2013/01/14 v3.01}
   *{file}   {umsb.fd}     {2013/01/14 v3.01}
   *{file}   {ulasy.fd}    {1998/08/17 v2.2e}
   *{file}   {uwasy.fd}    {2020/01/19 v2.4}
-  *{file}   {../Figures/cFuncsConverge.tex}{0000/00/00 v0.0}
-  *{file}   {../Figures/cFuncsConverge.pdf}{0000/00/00 v0.0}
-  *{file}   {../Figures/Inequalities.tex}{0000/00/00 v0.0}
-  *{file}   {../Figures/Inequalities.pdf}{0000/00/00 v0.0}
-  *{file}   {../Figures/FVACnotGIC.tex}{0000/00/00 v0.0}
-  *{file}   {../Figures/FVACnotGIC.pdf}{0000/00/00 v0.0}
-  *{file}   {../Figures/cGroTargetFig.tex}{0000/00/00 v0.0}
-  *{file}   {../Figures/cGroTargetFig.pdf}{0000/00/00 v0.0}
-  *{file}   {../Figures/MPCLimits.tex}{0000/00/00 v0.0}
-  *{file}   {../Figures/MPCLimits.pdf}{0000/00/00 v0.0}
-  *{file}   {../Figures/cFuncBounds.tex}{0000/00/00 v0.0}
-  *{file}   {../Figures/cFuncBounds.pdf}{0000/00/00 v0.0}
-  *{file}   {../Figures/PFGICHoldsFHWCFailsRICFails.tex}{0000/00/00 v0.0}
-  *{file}   {../Figures/PFGICHoldsFHWCFailsRICFails.pdf}{0000/00/00 v0.0}
+  *{file}   {./Figures/cFuncsConverge.tex}{0000/00/00 v0.0}
+  *{file}   {./Figures/cFuncsConverge.pdf}{0000/00/00 v0.0}
+  *{file}   {./Figures/Inequalities.tex}{0000/00/00 v0.0}
+  *{file}   {./Figures/Inequalities.pdf}{0000/00/00 v0.0}
+  *{file}   {./Figures/FVACnotGIC.tex}{0000/00/00 v0.0}
+  *{file}   {./Figures/FVACnotGIC.pdf}{0000/00/00 v0.0}
+  *{file}   {./Figures/cGroTargetFig.tex}{0000/00/00 v0.0}
+  *{file}   {./Figures/cGroTargetFig.pdf}{0000/00/00 v0.0}
+  *{file}   {./Figures/MPCLimits.tex}{0000/00/00 v0.0}
+  *{file}   {./Figures/MPCLimits.pdf}{0000/00/00 v0.0}
+  *{file}   {./Figures/cFuncBounds.tex}{0000/00/00 v0.0}
+  *{file}   {./Figures/cFuncBounds.pdf}{0000/00/00 v0.0}
+  *{file}   {./Figures/PFGICHoldsFHWCFailsRICFails.tex}{0000/00/00 v0.0}
+  *{file}   {./Figures/PFGICHoldsFHWCFailsRICFails.pdf}{0000/00/00 v0.0}
 }
