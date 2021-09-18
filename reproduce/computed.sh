@@ -8,6 +8,6 @@ echo '' ; echo 'Installing requirements' ; echo ''
 
 echo '' ; echo 'Producing figures' ; echo ''
 
-cd "Code/Python"
-ipython BufferStockTheory-Problems-and-Solutions-Source.ipynb
+cd "."
+ipython BufferStockTheory.ipynb
 
