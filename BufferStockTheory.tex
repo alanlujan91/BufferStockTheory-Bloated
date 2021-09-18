@@ -1,3 +1,4 @@
+% -*- mode: LaTeX; TeX-PDF-mode: t; -*-
 \input{./econtexRoot} % Set paths for root and various resources
 \documentclass[titlepage]{\econtex}
 \providecommand{\texname}{BufferStockTheory}% Keyname for the paper
@@ -5,7 +6,7 @@
 
 \begin{document}
 
-% Command to determine whether executing in a subfile or main file
+% Redefine commands from sty file to signal compilation from master
 \renewcommand{\onlyinsubfile}[1]{}\renewcommand{\notinsubfile}[1]{#1}
 
 \subfile{BufferStockTheory-NoAppendix} % Main body of paper
@@ -29,16 +30,12 @@
 
 \pagebreak
 
-\bibliography{BufferStockTheory,./LaTeX/economics}\end{document}
-\endinput
+\bibliography{\texname,\LaTeXInputs/\texname-Add,\econtexBib}\end{document}
 
 % Stuff below configures compilation for AucTeX in Emacs
-% Last line specialized to Skim on Mac - change for Win or Linux
 
 % Local Variables:
-% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
-% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
-% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% TeX-master-file: t
 % eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
 % eval: (setq TeX-command-list  (assq-delete-all (car (assoc "Biber"  TeX-command-list)) TeX-command-list))
 % eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex LaTeX/%s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") t)

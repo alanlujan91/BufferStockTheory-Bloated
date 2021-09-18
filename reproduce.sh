@@ -58,7 +58,9 @@ find ./Appendices -name '*.tex' ! -name '*econtexRoot*' ! -name '*econtexPath*' 
 # Then rerun pdflatex -halt-on-error to complete the processing and move the resulting pdf file
 
 # economics.bib file should be empty (in public repo)
-touch economics.bib ; touch Appendices/economics.bib ; touch LaTeX/economics.bib
+for dir in . Appendices Figures Tables LaTeX; do
+    touch "$dir/economics.bib"
+done
 
 while read appendixName; do
     filename=$(basename ${appendixName%.*}) # Strip the path and the ".tex"
