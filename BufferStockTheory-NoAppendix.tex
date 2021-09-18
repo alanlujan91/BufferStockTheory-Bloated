@@ -1,3 +1,4 @@
+% -*- mode: LaTeX; TeX-PDF-mode: t; -*-
 \documentclass[BufferStockTheory]{subfiles}
 % WARNING: Different AucTeX execution depending on whether
 % 0. Being compiled as standalone document
@@ -20,7 +21,7 @@
 }{}  % {Web}
 
 % Tiny info header at top to track git commit
-%\hfill{\tiny \jobname~\versn~\today~{at} \DTMcurrenttime, \input{\ResourcesDir/.git-source-commit}~~\input{\ResourcesDir/.git-public-commit}}
+\hfill{\tiny \jobname~\versn~\today~{at} \DTMcurrenttime, \input{\ResourcesDir/.git-source-commit}~~\input{\ResourcesDir/.git-public-commit}}
 
 \title{Theoretical Foundations of \\ Buffer Stock Saving}
 
@@ -115,8 +116,6 @@ Concretely, a consumer born $n$ periods before date $T$ solves the problem
   \end{align*}
 \end{verbatimwrite}
 \input{\LtxDir\EqDir/supfn}
-%\onlyinsubfile{\bibliography{BufferStockTheory,./LaTeX/economics}}\end{document}
-%\endinput
 where the Constant Relative Risk Aversion (CRRA) utility function
 \begin{align}
   \uFunc(\bullet)=\bullet^{1-\CRRA}/(1-\CRRA) \label{eq:crrautil}
@@ -1319,7 +1318,7 @@ The main use of infinite horizon versions of such models is in heterogeneous age
 %   \label{eq:Dummy}
 % \end{equation*}
 
-\onlyinsubfile{\bibliography{BufferStockTheory,\LaTeXInputs/BufferStockTheory-Add,\econtexBib}}
+\onlyinsubfile{\bibliography{\texname,\LaTeXInputs/\texname-Add,\econtexBib}}
 \end{document}
 \endinput
 
