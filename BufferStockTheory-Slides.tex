@@ -1,5 +1,7 @@
 % -*- mode: LaTeX; TeX-PDF-mode: t; -*-
-\input{./econtexRoot}\documentclass[pdflatex]{beamer}\providecommand{\texname}{BufferStockTheory-Slides}% Indicate the keyname for the bibtex entry corresponding to this document
+\input{./econtexRoot}\documentclass[pdflatex]{beamer}
+\providecommand{\texname}{BufferStockTheory-Slides}% Indicate the keyname for the bibtex entry corresponding to this document
+\providecommand{\texnameMaster}{BufferStockTheory}% Indicate the keyname for the bibtex entry corresponding to this document
 \newif\ifdvi\dvifalse
 
 %\usepackage{optional}
@@ -388,12 +390,11 @@ Paper Proves:
 
 \tiny 
 
-% \bibliography{\econtexBib,\LaTeXGenerated/\texname}
-\bibliography{\econtexBib,\texname}
+\bibliography{\texnameMaster,\LaTeXInputs/\texnameMaster-Add,\econtexBib}
 
 \end{frame}
+\end{document}\endinput
 
-\end{document} 
 % Local Variables:
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
 % eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") TeX-command-list))
