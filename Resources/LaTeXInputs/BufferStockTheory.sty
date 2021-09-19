@@ -1,4 +1,11 @@
 \input{\ResourcesDir/owner} % Owned by llorracc (draft) or econ-ark (published) ?
+\newboolean{AddRefsExists}
+\newboolean{economicsExists}
+\newboolean{BothExist}
+\newboolean{NeitherExists}
+\setboolean{BothExist}{true}
+\setboolean{NeitherExists}{true}
+
 \usepackage{datetime2}
 \usepackage{refcount}
 \usepackage{xr-hyper}
