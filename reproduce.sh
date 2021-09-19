@@ -6,78 +6,68 @@ scriptDir="$(dirname "$0")"
 
 echo '' ; echo 'Reproduce text of paper' ; echo ''
 
-# Reproduce text of paper
-
-# This script may only run on a system on which LaTeX has the ability to write to
-# parent directories in the filesystem.
-# This is controlled by parameters in the texmf.cnf file:
-# 
-#    openout_any = a
-#    shell_escape = t
-#
-# Google 'LaTeX write permissions' to determine how to set these on your system
-# Or change the output directory from LaTeX to /tmp here and elsewhere in the documents
+output_directory='LaTeX'
 
 # Make tikz figures
-
 cd Figures 
 for f in InequalityPFGICFHWCRIC RelatePFGICFHWCRICPFFVAC Inequalities; do
-    pdflatex --output-format pdf -output-directory=../LaTeX "$f-tikzMake.tex" >/dev/null
-    cp       "../LaTeX/$f-tikzMake.pdf" "$f.pdf"
-    ebb -x "$f.pdf"
+    pdflatex --output-format pdf -output-directory="../$output_directory" "$f-tikzMake.tex" >/dev/null
+    mv -f                                          "../$output_directory/$f-tikzMake.pdf" "$f.pdf"
 done
-
 cd ..
+
+# Make sure bib resources are available 
+if [[ ! -s "$file.bib" ]]; then  # $file.bib exists and is not empty
+    # economics.bib files should exist if they do not yet 
+    for dir in . Appendices Figures Tables LaTeX Resources/LaTeXInputs; do
+	touch "$dir/economics.bib"
+    done
+fi
 
 # Compile LaTeX files in root directory
 for file in BufferStockTheory BufferStockTheory-NoAppendix BufferStockTheory-Slides; do
     echo '' ; echo "Compiling $file" ; echo ''
-    pdflatex -halt-on-error -output-directory=LaTeX "$file"
-    pdflatex -halt-on-error -output-directory=LaTeX "$file"
-    bibtex LaTeX/"$file"
-    pdflatex -halt-on-error -output-directory=LaTeX "$file"
-    pdflatex -halt-on-error -output-directory=LaTeX "$file"
+    pdflatex -halt-on-error -output-directory=$output_directory "$file"
+    pdflatex -halt-on-error -output-directory=$output_directory "$file" > /dev/null
+    bibtex $output_directory/"$file"
+    pdflatex -halt-on-error -output-directory=$output_directory "$file" > /dev/null
+    pdflatex -halt-on-error -output-directory=$output_directory "$file"
     echo '' ; echo "Compiled $file" ; echo ''
 done
 
 # Compile All-Figures and All-Tables
 for type in Figures Tables; do
-    cmd="pdflatex -halt-on-error -output-directory=LaTeX $type/All-$type"
+    cmd="pdflatex -halt-on-error -output-directory=$output_directory $type/All-$type"
     echo "$cmd" ; eval "$cmd"
-    [[ -e LaTeX/"$type/All-$type" ]] && bibtex LaTeX/"$type/All-$type" && pdflatex -halt-on-error -output-directory=LaTeX "$type/All-$type"
-    pdflatex -halt-on-error -output-directory=LaTeX "$type/All-$type"
-    mv -f "LaTeX/All-$type.pdf" "$type"  # Move from the LaTeX output directory to the destination
+    # If there is a .bib file, make the references
+    [[ -e "../$output_directory/$type/All-$type.aux" ]] && bibtex "$type/All-$type.bib" && eval "$cmd" && eval "$cmd" 
+    mv -f "$output_directory/All-$type.pdf" "$type"  # Move from the LaTeX output directory to the destination
 done
 
 # All the appendices can be compiled as standalone documents (they are "subfiles")
 # Make a list of all the appendices:
 find ./Appendices -name '*.tex' ! -name '*econtexRoot*' ! -name '*econtexPath*' -maxdepth 1 -exec echo {} \; > /tmp/appendices
 
-# For each such file, process it by pdflatex
+# For each appendix process it by pdflatex
 # If it contains a standalone bibliography, process that
-# Then rerun pdflatex -halt-on-error to complete the processing and move the resulting pdf file
-
-# economics.bib file should be empty (in public repo)
-for dir in . Appendices Figures Tables LaTeX; do
-    touch "$dir/economics.bib"
-done
+# Then rerun pdflatex to complete the processing and move the resulting pdf file
 
 while read appendixName; do
     filename=$(basename ${appendixName%.*}) # Strip the path and the ".tex"
-    cmd="pdflatex -halt-on-error --shell-escape --output-directory=LaTeX $appendixName"
-    cmd="pdflatex -halt-on-error --output-directory=LaTeX $appendixName"
+    #    cmd="pdflatex -halt-on-error --shell-escape --output-directory=$output_directory $appendixName"
+    cmd="pdflatex -halt-on-error                 --output-directory=$output_directory $appendixName"
     echo "$cmd" ; eval "$cmd"
-    if [[ -e "LaTeX/$filename.aux" ]] ; then  # bibfile exists
-	bibtex LaTeX/$filename 
-	pdflatex -halt-on-error --output-directory=LaTeX $appendixName
+    if grep -q 'bibliography{' "$appendixName"; then
+	bibtex $output_directory/$filename 
+	eval "$cmd"
     fi
-    pdflatex -halt-on-error --output-directory=LaTeX "$appendixName"
-    mv "LaTeX/$filename.pdf" Appendices
+    eval "$cmd"
+    mv "$output_directory/$filename.pdf" Appendices
 done < /tmp/appendices
 
 # Cleanup
 rm -f /tmp/appendices economics.bib 
 [[ -e BufferStockTheory.pdf ]] && rm -f BufferStockTheory.pdf
 
-echo '' ; echo 'Paper has been compiled to LaTeX/BufferStockTheory.pdf' ; echo ''
+echo '' ; echo "Paper has been compiled to $output_directory/BufferStockTheory.pdf" ; echo ''
 

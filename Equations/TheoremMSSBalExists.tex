@@ -1,0 +1,12 @@
+\begin{theorem}\label{thm:MSSBalExists}
+ For the nondegenerate solution to the problem defined in Section~\ref{subsec:Setup} when {\FVAC}, {\WRIC}, and {\GIC} all hold, there exists a unique pseudo-steady-state cash-on-hand-to-income ratio $\mStE>0$ such that
+  \begin{equation}
+    \Ex_t [\pShk_{t+1}{\mRat}_{t+1}/\mRat_t] = 1 \mbox{~if~} \mRat_t = \mStE.
+    \label{eq:mStE}
+  \end{equation}
+  Moreover, $\mStE$ is a point of stability in the sense that
+  \begin{align}\label{eq:stabilityStE}
+    \forall {\mRat}_t\in(0,\mStE),      \,\,& \Ex_{t}[\mLevBF_{t+1}]/\mLevBF_{t} > \PGro \\
+    \forall {\mRat}_t\in(\mStE,\infty), \,\,& \Ex_{t}[\mLevBF_{t+1}]/\mLevBF_{t} < \PGro. \notag
+  \end{align}
+\end{theorem}

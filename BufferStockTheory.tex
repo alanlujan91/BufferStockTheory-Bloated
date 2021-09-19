@@ -1,3 +1,4 @@
+% -*- mode: LaTeX; TeX-PDF-mode: t; -*-
 \input{./econtexRoot} % Set paths for root and various resources
 \documentclass[titlepage]{\econtex}
 \providecommand{\texname}{BufferStockTheory}% Keyname for the paper
@@ -11,6 +12,8 @@
 \subfile{BufferStockTheory-NoAppendix} % Main body of paper
 
 \pagebreak
+
+%\subfile{\ApndxDir/All-Appendices}
 
 \hypertarget{Appendices}{} % Allows link to [url-of-paper]#Appendices
 \appendix \centerline{\LARGE Appendices}\vspace{0.2in}
@@ -29,7 +32,50 @@
 
 \pagebreak
 
-\bibliography{\texname,\LaTeXInputs/\texname-Add,./LaTeX/economics}\end{document}
+\IfFileExists{Add-Refs.bib}{
+  % then 
+  \typeout{References in Add-Refs.bib will take precedence over those elsewhere}
+  \setboolean{AddRefsExists}{true}
+  \setboolean{NeitherExists}{false}
+}{
+  % else
+  \setboolean{AddRefsExists}{false}
+  \setboolean{BothExist}{false}
+}
+
+\IfFileExists{/usr/local/texlive/texmf-local/bibtex/bib/economics.bib}{
+%\IfFileExists{economics.bib}{
+  % then
+  \typeout{References in economics.bib will be used for items not found elsewhere}
+  \setboolean{economicsExists}{true}
+  \setboolean{NeitherExists}{false}
+}{
+  % else 
+  \typeout{Found no economics.bib global database file}
+  \setboolean{economicsExists}{false}
+  \setboolean{BothExist}{false}
+}
+
+\ifthenelse{\boolean{BothExist}}{
+  % then use both
+  \typeout{bibliography{Add-Refs,\texname,economics}}
+  \bibliography{Add-Refs,\texname,economics}
+  % else both do not exist
+  }{ % maybe neither does?
+    \ifthenelse{\boolean{NeitherExists}}{
+      \typeout{bibliography{\texname}}
+      \bibliography{\texname}}{
+      % no -- at least one exists
+      \ifthenelse{\boolean{AddRefsExists}}{
+        \typeout{bibliography{Add-Refs,\texname}}
+        \bibliography{Add-Refs,\texname}}{
+        \typeout{bibliography{\texname,economics}}
+        \bibliography{         \texname,economics}}
+      } % end of picking the one that exists
+    } % end of testing whether neither exists
+
+\end{document}
+\endinput
 
 % Stuff below configures compilation for AucTeX in Emacs
 
@@ -37,6 +83,8 @@
 % TeX-master-file: t
 % eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
 % eval: (setq TeX-command-list  (assq-delete-all (car (assoc "Biber"  TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) ../LaTeX/%s"    TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "bibtex ../LaTeX/%s"    TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
 % eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex LaTeX/%s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") t)
 % eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex LaTeX/%s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") t)
 % TeX-PDF-mode: t

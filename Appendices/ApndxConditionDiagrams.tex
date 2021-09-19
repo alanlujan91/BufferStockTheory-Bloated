@@ -93,7 +93,8 @@ Finally, the next diagram substitutes the values of the various objects in the d
   \caption{Numerical Relation of All Inequality Conditions}\label{fig:InequalitiesAppNumer}
 \end{figure}
 
-\onlyinsubfile{\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}}
+%\onlyinsubfile{\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}}
+\onlyinsubfile{\pagebreak\bibliography{\econtexRoot/\texname,\econtexBib}}
 
 \end{document}
 
@@ -104,6 +105,8 @@ Finally, the next diagram substitutes the values of the various objects in the d
 % eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
 % eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
 % eval: (setq TeX-command-list  (assq-delete-all (car (assoc "Biber"  TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) LaTeX/%s"    TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "bibtex LaTeX/%s"    TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
 % eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex ../LaTeX/%s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") t)
 % eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex ../LaTeX/%s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") t)
 % TeX-PDF-mode: t

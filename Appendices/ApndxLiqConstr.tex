@@ -334,11 +334,16 @@ in the absence of uncertainty.
 
 \cite{maTodaRich} characterize the limits of the MPC in a more general framework that allows for capital and labor income risks in a Markovian setting with liquidity constraints, and find that in that much more general framework the limiting MPC is also zero.% chktex 2
 
-\onlyinsubfile{\pagebreak\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}}\end{document}
+%\onlyinsubfile{\pagebreak\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}}
+%\onlyinsubfile{\pagebreak\bibliography{\econtexRoot/\texname,\econtexBib}}
+\onlyinsubfile{\pagebreak\bibliography{\econtexRoot/\texname}}\end{document}\endinput
+
 
 % Local Variables:
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  t  :help "Run Biber") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) LaTeX/%s"    TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "bibtex LaTeX/%s"    TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
 % tex-bibtex-command: "bibtex ../LaTeX/*"
 % TeX-PDF-mode: t
 % TeX-file-line-error: t
