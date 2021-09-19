@@ -1,8 +1,0 @@
-$ENV{'BIBINPUTS'}='./LaTeX;'; # Allows .bib file to be in LaTeX subdirectory 
-$clean_ext = "bbl nav out snm dvi tmp xref 4tc";
-$bibtex_use=2;                                      # Make sure bibtex gets run
-$pdf_mode = 1;
-$pdflatex="pdflatex -interaction=nonstopmode %O %S";
-$out_dir = 'LaTeX';
-#@default_files = ('BufferStockTheory.tex','BufferStockTheory-NoAppendix.tex','BufferStockTheory.tex');
-@default_files = ('BufferStockTheory.tex');
