@@ -266,3 +266,5 @@ latexmkrc
 # Spyder
 .spyderproject
 .spyproject
+
+/Old/
