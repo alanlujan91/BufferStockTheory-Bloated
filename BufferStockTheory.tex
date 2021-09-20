@@ -1,3 +1,4 @@
+% -*- mode: LaTeX; TeX-PDF-mode: t; -*-
 \input{./econtexRoot} % Set paths for root and various resources
 \documentclass[titlepage]{\econtex}
 \providecommand{\texname}{BufferStockTheory}% Keyname for the paper
@@ -42,8 +43,8 @@
   \setboolean{BothExist}{false}
 }
 
-%\IfFileExists{/usr/local/texlive/texmf-local/bibtex/bib/economics.bib}{
-\IfFileExists{economics.bib}{
+\IfFileExists{/usr/local/texlive/texmf-local/bibtex/bib/economics.bib}{
+%\IfFileExists{economics.bib}{
   % then
   \typeout{References in economics.bib will be used for items not found elsewhere}
   \setboolean{economicsExists}{true}
