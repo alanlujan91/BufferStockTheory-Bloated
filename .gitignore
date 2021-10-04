@@ -193,7 +193,7 @@ _region_.*
 #economics.bib
 
 # Custom for ShareLaTeX
-latexmkrc
+# latexmkrc
 
 # Things marked _pri or private are kept locally only
 *_pri
