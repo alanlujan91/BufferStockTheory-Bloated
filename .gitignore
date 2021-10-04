@@ -32,7 +32,6 @@
 ## Auxiliary and intermediate files from other packages:
 # algorithms
 *.alg
-*.dep
 *.loa
 
 # achemso
