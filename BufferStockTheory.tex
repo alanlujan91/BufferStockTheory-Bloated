@@ -47,7 +47,7 @@
 
 % Deal with case where system has default economics.bib 
 %\IfFileExists{/usr/local/texlive/texmf-local/bibtex/bib/economics.bib}{
-  % \IfFileExists{economics.bib}{
+  \IfFileExists{economics.bib}{
   % then
   \typeout{References in economics.bib will be used for items not found elsewhere}
   \setboolean{economicsExists}{true}
