@@ -1321,10 +1321,13 @@ The main use of infinite horizon versions of such models is in heterogeneous age
 %   \label{eq:Dummy}
 % \end{equation*}
 
-\onlyinsubfile{\bibliography{
-    \texname, % subfile inherits texname from preamble of parent 
-    \econtexBib % Default bib database is in Resources/LaTeXInputs
-  }}
+% \onlyinsubfile{\bibliography{
+%     \texname, % subfile inherits texname from preamble of parent 
+%     \econtexBib % Default bib database is in Resources/LaTeXInputs
+%   }}
+
+\onlyinsubfile{\input{\LaTeXInputs/bibliography_blend}}
+
 \end{document}
 \endinput
 

@@ -12,8 +12,6 @@
 
 \pagebreak
 
-% \subfile{\ApndxDir/All-Appendices}
-
 \hypertarget{Appendices}{} % Allows link to [url-of-paper]#Appendices
 \appendix \centerline{\LARGE Appendices}\vspace{0.2in}
 
@@ -29,56 +27,11 @@
 \subfile{\ApndxDir/ApndxCGrowthDeclines}
 \subfile{\ApndxDir/ApndxMTargetIsStable}
 
-\pagebreak
+\pagebreak\vfill\eject
 
-% Allows two supplements to hard-wired \texname.bib bibfile:
-% economics.bib is a default bibfile that supplies anything missing elsewhere
-% Add-Refs.bib is an override bibfile that supplants anything in \texfile.bib or economics.bib
-\IfFileExists{Add-Refs.bib}{
-  % then 
-  \typeout{References in Add-Refs.bib will take precedence over those elsewhere}
-  \setboolean{AddRefsExists}{true}
-  \setboolean{NeitherExists}{false} % Default is true
-}{
-  % else
-  \setboolean{AddRefsExists}{false} % No added refs exist so defaults will be used
-  \setboolean{BothExist}{false}     % Default is that Add-Refs and economics.bib both exist
-}
-
-% Deal with case where system has default economics.bib 
-%\IfFileExists{/usr/local/texlive/texmf-local/bibtex/bib/economics.bib}{
-  \IfFileExists{economics.bib}{
-  % then
-  \typeout{References in economics.bib will be used for items not found elsewhere}
-  \setboolean{economicsExists}{true}
-  \setboolean{NeitherExists}{false}
-}{
-  % else 
-  \typeout{Found no global database file}
-  \setboolean{economicsExists}{false}
-  \setboolean{BothExist}{false}
-}
-
-\ifthenelse{\boolean{BothExist}}{
-  % then use both
-  \typeout{bibliography{Add-Refs,\texname,economics}}
-  \bibliography{Add-Refs,\texname,economics}
-  % else both do not exist
-}{ % maybe neither does?
-  \ifthenelse{\boolean{NeitherExists}}{
-    \typeout{bibliography{\texname}}
-    \bibliography{\texname}}{
-    % no -- at least one exists
-    \ifthenelse{\boolean{AddRefsExists}}{
-      \typeout{bibliography{Add-Refs,\texname}}
-      \bibliography{Add-Refs,\texname}}{
-      \typeout{bibliography{\texname,economics}}
-      \bibliography{         \texname,economics}}
-  } % end of picking the one that exists
-} % end of testing whether neither exists
+\input{\LaTeXInputs/bibliography_blend}
 
 \end{document}
-\endinput
 
 % Stuff below configures compilation for AucTeX in Emacs
 
