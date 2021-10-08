@@ -63,42 +63,47 @@
 # - JupyterLab, click on the $\bullet$$\bullet$$\bullet$ patterns to expose the runnable code
 # - in either a Jupyter notebook or JupyterLab, click a double triangle to execute the code and generate the figures
 
-# %% {"tags": []}
+# %% [markdown]
+# `# Setup Python Below`
+
+# %% {"jupyter": {"source_hidden": true}, "tags": []}
 # This cell does some setup
 
-# Make sure requirements have been satisfied
-import os.path
-
-if os.path.isdir('binder'):  # Folder defining requirements exists
-    # File requirements.out should be created first time notebook is run
-    if not os.path.isfile('./binder/requirements.out'):  
-        !(pip install -r ./binder/requirements.txt > ./binder/requirements.out)
-
 # Import required python packages
-from HARK.utilities import plot_funcs
-
 import logging
-from HARK.utilities import (find_gui, make_figs, determine_platform,
-                            test_latex_installation, setup_latex_env_notebook)
-from HARK.ConsumptionSaving.ConsIndShockModel import init_perfect_foresight
-from HARK import __version__ as HARKversion
-from HARK.ConsumptionSaving.ConsIndShockModel \
-    import (PerfForesightConsumerType, IndShockConsumerType)
 import numpy as np
 from copy import deepcopy
+import warnings
 
-from HARK.ConsumptionSaving.ConsIndShockModel \
-    import init_idiosyncratic_shocks as base_params
+# Ignore some harmless but alarming warning messages
+warnings.filterwarnings("ignore")
 
 # Plotting tools
 import matplotlib.pyplot as plt
 
-# Ignore some harmless but alarming warning messages
-import warnings
-warnings.filterwarnings("ignore")
+# Make required tools are installed
+import os.path
+import sys
+import subprocess
+if os.path.isdir('binder'):  # Folder defining requirements exists
+    # File requirements.out should be created first time notebook is run
+    if not os.path.isfile('./binder/requirements.out'):  
+        subprocess.check_call([sys.executable, '-m', 'pip', 'install -r','./binder/requirements.txt > ./binder/requirements.out']) 
+from HARK import __version__ as HARKversion
+
+# %% [markdown]
+# `# Setup HARK Below`
+
+# %% {"jupyter": {"source_hidden": true}, "tags": []}
+# Import required HARK tools
+from HARK.utilities import (
+    plot_funcs, find_gui, make_figs, determine_platform,
+    test_latex_installation, setup_latex_env_notebook)
+from HARK.ConsumptionSaving.ConsIndShockModel import (
+    PerfForesightConsumerType, IndShockConsumerType, init_perfect_foresight, init_idiosyncratic_shocks)
 
 # Code to allow a master "Generator" and derived "Generated" versions
-#   - allows "$nb-Problems-And-Solutions → $nb-Problems → $nb"
+# Generator marking  - allows "$nb-Problems-And-Solutions → $nb-Problems → $nb" 
 Generator = True  # Is this notebook the master or is it generated?
 
 # Whether to save the figures to Figures_dir
@@ -107,24 +112,17 @@ saveFigs = True
 # Whether to draw the figures
 drawFigs = True
 
-if HARKversion < '0.11.0':
-    raise ImportError(
-        'This notebook requires at least econ-ark v0.11.0.\n' +
-        'Please update your installation:\n' +
-        'pip install -U econ-ark or conda install -c conda-forge econ-ark')
-
-pf = determine_platform()
-try:
+pf = determine_platform() # latex checking depends on platform
+try: # test whether latex is installed on command line 
     latexExists = test_latex_installation(pf)
-except ImportError:  # windows and MacOS requires manual install
+except ImportError:  # windows and MacOS requires manual latex install
     latexExists = False
 
 setup_latex_env_notebook(pf, latexExists)
 
 # check if GUI is present; if not then switch drawFigs to False and force saveFigs to be True
 if not find_gui():
-    drawFigs = False
-    saveFigs = True
+    drawFigs, saveFigs = False, True
 
 # Font sizes for figures
 fssml, fsmid, fsbig = 18, 22, 26
@@ -134,6 +132,7 @@ def makeFig(figure_name, target_dir="../../Figures"):
     make_figs(figure_name, saveFigs, drawFigs, target_dir)
     print('')
     
+base_params = deepcopy(init_idiosyncratic_shocks)
 # Uninteresting housekeeping and details
 # Make global variables for the things that were lists above 
 PermGroFac, permShkStd, tranShkStd = base_params['PermGroFac'][0], base_params['permShkStd'][0], base_params['tranShkStd'][0]
@@ -216,7 +215,7 @@ base_params['BoroCnstArt'] = None    # No artificial borrowing constraint
 #
 # The infinite-horizon solution is the limit of the first period solution $\mathrm{c}_{T-n}$ as the horizon $n$ goes to infinity.
 
-# %% [markdown]
+# %% [markdown] {"tags": []}
 # ### Details
 # For a microeconomic consumer who begins period $t$ with __**m**__arket resources boldface $\mLev_{t}$ (=net worth plus current income), the amount that remains after __**c**__onsumption of $\cLev_{t}$ will be end-of-period __**a**__ssets $\aLev_{t}$,
 #
@@ -256,9 +255,7 @@ base_params['BoroCnstArt'] = None    # No artificial borrowing constraint
 # m_{t+1} &=& a_t \Rfree/(\PermGroFac \permShk_{t+1}) + \tranShk_{t+1} \\
 # \end{eqnarray*}
 
-# %% {"tags": []}
-# Import default parameter values (init_idiosyncratic_shock)
-
+# %% {"jupyter": {"source_hidden": true}, "tags": []}
 # Set the parameters for the baseline results in the paper
 base_params['PermGroFac'] = [1.03]  # Permanent income growth factor
 base_params['Rfree'] = Rfree = 1.04  # Interest factor on assets
@@ -274,13 +271,16 @@ base_params['tranShkStd'] = [0.1]   # Standard deviation of log transitory incom
 #
 # Under the given parameter values, [the paper's first figure](https://econ-ark.github.io/BufferStockTheory/#Convergence-of-the-Consumption-Rules) depicts the successive consumption rules that apply in the last period of life $(c_{T}(m))$, the second-to-last period, and earlier periods $(c_{T-n})$.  The consumption function to which these converge is $c(m)$:
 #
-# $
+# \begin{equation}
 # c(m) = \lim_{n \uparrow \infty} c_{T-n}(m) \notag
-# $
+# \end{equation}
 
-# %% {"tags": []}
+# %% [markdown]
+# `# Create a buffer stock consumer instance:`
+
+# %% {"jupyter": {"source_hidden": true}, "tags": []}
 # Create a buffer stock consumer instance by invoking the IndShockConsumerType class
-# with the built-in parameter dictionary "base_params"
+# with the parameter dictionary "base_params"
 
 base_params['cycles'] = 100  # periods to solve from end
 # Construct finite horizon agent with baseline parameters
@@ -294,7 +294,10 @@ baseAgent_Fin.unpack('cFunc')  # Retrieve consumption functions
 cFunc = baseAgent_Fin.cFunc    # Shorthand
 
 
-# %% {"tags": []}
+# %% [markdown]
+# `# Plot the consumption rules:`
+
+# %% {"jupyter": {"source_hidden": true}, "tags": []}
 # Plot the different consumption rules for the different periods
 
 mPlotMin = 0
@@ -503,7 +506,10 @@ makeFig('cFuncsConverge')  # Comment out if you want to run uninterrupted
 #
 # This example was constructed by quadrupling the variance of the permanent shocks from the baseline parameterization.  The extra precautionary saving induced by increased uncertainty is what pushes the agent into the region without a target wealth ratio.
 
-# %% {"tags": []}
+# %% [markdown]
+# `# Create an example consumer instance where the GICNrm fails but the GIC Holds:`
+
+# %% {"jupyter": {"source_hidden": true}, "tags": []}
 # GICNrmFailsButGICRawHolds Example
 
 base_params['cycles'] = 0  # revert to default of infinite horizon
@@ -517,7 +523,10 @@ GICNrmFailsButGICRawHolds = \
     IndShockConsumerType(**GICNrmFailsButGICRawHolds_params,
                          quietly=False,  # If True, output suppressed
                          )
-# %% {"tags": []}
+# %% [markdown]
+# `# Solve that consumer's problem:`
+
+# %% {"jupyter": {"source_hidden": true}, "tags": []}
 # Solve the model for these parameter values
 GICNrmFailsButGICRawHolds.tolerance = 0.01
 
@@ -582,6 +591,9 @@ GICNrmFailsButGICRawHolds.solve(messaging_level=logging.DEBUG, quietly=False)
 distance_now = GICNrmFailsButGICRawHolds.solution[0].distance_last
 print('\ndistance_now < distance_original: ' +
       str(distance_now < distance_original))
+
+# %% [markdown]
+# `# Plot the results:`
 
 # %% {"tags": []}
 # Plot GICNrmFailsButGICRawHolds
@@ -655,7 +667,10 @@ print('Finite mNrmStE but infinite mNrmTrg')
 # %% [markdown]
 # As a foundation for the remaining figures, we define another instance of the class $\texttt{IndShockConsumerType}$, which has the same parameter values as the instance $\texttt{baseAgent}$ defined previously but is solved to convergence (our definition of an infinite horizon agent type) instead of only 100 periods
 
-# %% {"tags": []}
+# %% [markdown]
+# `# Construct infinite horizon solution for consumer with baseline parameters:`
+
+# %% {"jupyter": {"source_hidden": true}, "tags": []}
 # Find the infinite horizon solution
 
 base_params['aXtraCount'] = base_params['aXtraCount'] * 20
@@ -704,7 +719,10 @@ baseAgent_Inf = IndShockConsumerType(
 # \end{eqnarray*}
 #
 
-# %% {"pycharm": {"name": "#%%\n"}, "tags": []}
+# %% [markdown]
+# `# Solve problem of consumer with baseline parameters:`
+
+# %% {"jupyter": {"source_hidden": true}, "pycharm": {"name": "#%%\n"}, "tags": []}
 # Solve baseline parameters agent
 tweaked_params = deepcopy(base_params)
 tweaked_params['DiscFac'] = 0.970  # Tweak to make figure clearer
@@ -713,6 +731,9 @@ baseAgent_Inf = IndShockConsumerType(
 
 baseAgent_Inf.solve(
     quietly=False, messaging_level=logging.INFO)  # Solve it with info
+
+# %% [markdown]
+# `# Plot growth factors for various model elements at steady state:`
 
 # %% {"tags": []}
 # Plot growth rates
@@ -794,7 +815,7 @@ if latexExists:
     cLevGro_lbl = r"$\Ex_{t}[\cLev_{t+1}/\cLev_{t}]$"
     mNrmGro_lbl = r"$\Ex_{t}[\mNrm_{t+1}/\mNrm_{t}] ^{\nearrow}$"
     mLevGro_lbl = r"$\Ex_{t}[\mLev_{t+1}/\mLev_{t}]$"
-    mNrmStE_lbl = r"$_{\swarrow}~\check{\mNrm}$"    
+    mNrmStE_lbl = r"$\check{\mNrm}_{\searrow}~$"    
     cLevAPF_lbl = r'$\pmb{\text{\TH}} = (\Rfree\DiscFac)^{1/\CRRA}$'
 else:
     PermGro_lbl = r"$\PermGroFac$"
@@ -807,14 +828,15 @@ else:
 ax.text(mPlotMax+0.01, G-0.001,PermGro_lbl)
 ax.text(mPlotMax+0.01, Ex_cLevGro[-1]  ,cLevGro_lbl)
 ax.text(mPlotMax+0.01, APF-0.001       ,cLevAPF_lbl)
-ax.text(mNrmStE+0.001, G+0.001,mNrmStE_lbl              ,va='bottom',ha='left')
+ax.text(mNrmStE-0.06, G+0.001,mNrmStE_lbl              ,va='bottom',ha='left')
 ax.text(mTrgGro_lbl_xVal-0.01, mTrgGro_lbl_yVal-0.003,mNrmGro_lbl,va='bottom',ha='right')
 ax.text(mLevGro_lbl_xVal+0.01, mLevGro_lbl_yVal+0.001,mLevGro_lbl,va='top')
 
 # Ticks
 ax.tick_params(labelbottom=False, labelleft=True, left='off', right='on', bottom='on', top='off')
 plt.setp(ax.get_yticklabels(), fontsize=fssml)
-
+plt.axvline(x=mNrmTrg,label='Individual Target', linestyle='dotted')
+plt.legend()
 ax.set_ylabel('Growth Factors')
 makeFig('cGroTargetFig')
 
@@ -825,7 +847,10 @@ makeFig('cGroTargetFig')
 #
 # We define two useful variables: the lower bound of $\tilde{\MPC}$ (marginal propensity to consume) and the limit of $h$ (Human wealth), along with some functions such as the limiting perfect foresight consumption function $\bar{c}(m)$, the upper bound function $\bar{\bar c}(m)$, and the lower bound function $\tilde{c}$(m).
 
-# %% {"tags": []}
+# %% [markdown]
+# `# Define bounds for figure:`
+
+# %% {"jupyter": {"source_hidden": true}, "tags": []}
 # Define mpc_Min, h_inf and PF consumption function, upper and lower bound of c function
 
 baseAgent_Inf = IndShockConsumerType(**base_params, quietly=True)  # construct it silently
@@ -847,7 +872,10 @@ def cFunc_TopBnd(m): return mpc_Max * m
 def cFunc_BotBnd(m): return mpc_Min * m
 
 
-# %% {"tags": []}
+# %% [markdown]
+# `# Plot figure showing bounds`
+
+# %% {"jupyter": {"source_hidden": true}, "tags": []}
 # Plot the consumption function and its bounds
 
 cMaxLabel = r'$\overline{c}(m)= (m-1+h)\tilde{\kappa}$'
@@ -919,7 +947,10 @@ makeFig('cFuncBounds')
 #
 # The paper also derives an analytical limit $\bar{\MPC}$ for the MPC as $m$ approaches 0., its bounding value.  Strict concavity of the consumption function implies that the consumption function will be everywhere below a function $\bar{\MPC}m$, and strictly declining everywhere.  The last figure plots the MPC between these two limits.
 
-# %% {"tags": []}
+# %% [markdown]
+# `# Make and plot figure showing the upper and lower limites of the MPC:`
+
+# %% {"jupyter": {"source_hidden": true}, "tags": []}
 # The last figure shows the upper and lower limits of the MPC
 
 mPlotMax = 8
@@ -987,7 +1018,7 @@ makeFig('MPCLimits')
 # %% [markdown] {"tags": []}
 # ### Appendix: Perfect foresight agent failing both the FHWC and RIC
 
-# %% {"tags": []}
+# %% {"jupyter": {"source_hidden": true}, "tags": []}
 PFGICRawHoldsFHWCFailsRICFails_par = deepcopy(init_perfect_foresight)
 
 # Replace parameters.
