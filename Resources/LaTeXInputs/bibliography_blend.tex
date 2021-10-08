@@ -2,7 +2,7 @@
 % economics.bib is a default bibfile that supplies anything missing elsewhere
 % Add-Refs.bib is an override bibfile that supplants anything in \texfile.bib or economics.bib
 \IfFileExists{\econtexRoot/Add-Refs.bib}{
-  % then 
+  % then
   \typeout{References in Add-Refs.bib will take precedence over those elsewhere}
   \setboolean{AddRefsExists}{true}
   \setboolean{NeitherExists}{false} % Default is true
@@ -12,26 +12,14 @@
   \setboolean{BothExist}{false}     % Default is that Add-Refs and economics.bib both exist
 }
 
-% Deal with case where economics.bib is found by kpsewhich 
+% Deal with case where economics.bib is found by kpsewhich
 \IfFileExists{/usr/local/texlive/texmf-local/bibtex/bib/economics.bib}{
   % then
   \typeout{References in default global economics.bib will be used for items not found elsewhere}
   \setboolean{economicsExists}{true}
   \setboolean{NeitherExists}{false}
 }{
-  % else 
-  \typeout{Found no global database file}
-  \setboolean{economicsExists}{false}
-  \setboolean{BothExist}{false}
-}
-
-\IfFileExists{economics.bib}{
-  % then
-  \typeout{References in economics.bib will be used for items not found elsewhere}
-  \setboolean{economicsExists}{true}
-  \setboolean{NeitherExists}{false}
-}{
-  % else 
+  % else
   \typeout{Found no global database file}
   \setboolean{economicsExists}{false}
   \setboolean{BothExist}{false}
