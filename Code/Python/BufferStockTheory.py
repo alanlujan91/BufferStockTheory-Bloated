@@ -66,7 +66,7 @@
 # %% [markdown]
 # `# Setup Python Below`
 
-# %% {"jupyter": {"source_hidden": true}, "tags": []}
+# %% {"tags": []}
 # This cell does some setup
 
 # Import required python packages
@@ -88,13 +88,13 @@ import subprocess
 if os.path.isdir('binder'):  # Folder defining requirements exists
     # File requirements.out should be created first time notebook is run
     if not os.path.isfile('./binder/requirements.out'):  
-        subprocess.check_call([sys.executable, '-m', 'pip', 'install -r','./binder/requirements.txt > ./binder/requirements.out']) 
+        subprocess.check_call([sys.executable, '-m', 'pip', 'install --user -r ','./binder/requirements.txt > ./binder/requirements.out']) 
 from HARK import __version__ as HARKversion
 
 # %% [markdown]
 # `# Setup HARK Below`
 
-# %% {"jupyter": {"source_hidden": true}, "tags": []}
+# %% {"tags": []}
 # Import required HARK tools
 from HARK.utilities import (
     plot_funcs, find_gui, make_figs, determine_platform,
