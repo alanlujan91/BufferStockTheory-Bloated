@@ -11,3 +11,8 @@ echo '' ; echo 'Producing figures' ; echo ''
 cd "."
 ipython BufferStockTheory.ipynb
 
+cd "Code/Python"
+./test_Harmenbergs_method.sh
+
+
+
