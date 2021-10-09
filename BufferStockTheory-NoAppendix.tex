@@ -1297,12 +1297,12 @@ Consider again a Harmenberg-converged economy that has converged by date $t=0$. 
     \mathbf{A}_t & = \Harm{\Mean}_{t}[a_t\pLevBF_t] = \Harm{\Mean}_{t}[a_t]\Harm{\Mean}_{t}[\pLevBF_t] + \HarmWide{\textup{cov}}_{t}(a_t, \pLevBF_t) 
 % \\   \mathbf{A}_{t+1} & = \Harm{\Mean}_{t+1}[a_{t+1}\pLevBF_{t+1}] = \Harm{\Mean}_{t+1}[a_{t+1}]\Harm{\Mean}_{t+1}[\pLevBF_{t+1}] + \HarmWide{\textup{cov}}_{t+1}(a_{t+1}, \pLevBF_{t+1}).
 \end{align*}
-where $\HarmWide{\textup{cov}_{t}}$ is the covariance calculated according to the Harmenberg measure.
+where $\HarmWide{\textup{cov}}_{t}$ is the covariance calculated according to the Harmenberg measure.
 
 As Harmenberg points out, a convenient feature of his measure is that $\Harm{\Mean}_{t+n}[\pLevBF_{t+n}]=\PGro^{n}$.  Using this, if by date $t=0$ the economy had achieved a Harmenberg-invariant state then it would follow that we could define $\bar{\aRat}=\Harm{\Mean}_{t}[a_{t}]$ and use the fact that thereafter assets grow at the constant rate $\PGro$ to obtain
 \begin{align}
   \mathbf{A}_{t+1} & = \PGro \mathbf{A}_{t}\notag \\ 
-  \bar{\aRat}\PGro +\HarmWide{\textup{cov}}(\aRat_{t+1},\pLevBF_{t+1})   & = \PGro \left( \bar{\aRat}  +  \HarmWide{\textup{cov}}(\aRat_{t},\pLevBF_{t})) \label{eq:covProblem} 
+  \bar{\aRat}\PGro +\HarmWide{\textup{cov}}(\aRat_{t+1},\pLevBF_{t+1})   & = \PGro \left( \bar{\aRat}  +  \HarmWide{\textup{cov}}(\aRat_{t},\pLevBF_{t})\right) \label{eq:covProblem} 
 \\  \HarmWide{\textup{cov}}(\aRat_{t+1},\pLevBF_{t+1})   & = \HarmWide{\textup{cov}}(\aRat_{t},\pLevBF_{t})  \notag
 \end{align}
 
