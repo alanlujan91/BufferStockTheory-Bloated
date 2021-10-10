@@ -2,7 +2,7 @@
         \node (gamma) [right of = thorn, xshift = 5cm] {1.030};
         \node (rfree) [below of = thorn]{1.04};
         \node (pffvacFac) [right of = rfree] 
-        {$\underbrace{\mathsf{\Rfree}^{1/\CRRA}\PGro^{1 - 1/\CRRA}}_{\PFVAF}$};
+        {$\underbrace{1.035}_{\PFVAF}$};
         \node (pThorn) [left of = thorn] {0.072};
         \node (compgamma) [above of = gamma, xshift = -5cm, yshift = -2.5cm]{1.02};
         \node (fvacFac) [right of = thorn, yshift = -2cm]{1.030};
