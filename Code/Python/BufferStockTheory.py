@@ -87,15 +87,22 @@ import sys
 import subprocess
 if os.path.isdir('binder'):  # Folder defining requirements exists
     # File requirements.out should be created first time notebook is run
-    if not os.path.isfile('./binder/requirements.out'):  
-        subprocess.check_call([sys.executable, '-m', 'pip', 'install --user -r ','./binder/requirements.txt > ./binder/requirements.out']) 
-from HARK import __version__ as HARKversion
+    if not os.path.isfile('./binder/requirements.out'):
+        try:
+            output = subprocess.check_output(
+                [sys.executable, '-m', 'pip', 'install','--user','-r','./binder/requirements.txt'],stderr=subprocess.STDOUT) 
+            requirements_out = open("./binder/requirements.out","w")
+            requirements_out.write(output.decode("utf8"))
+        except subprocess.CalledProcessError as e:
+            print(output.decode("utf8"))
+            print(e.output.decode("utf8"),e.returncode)
 
 # %% [markdown]
 # `# Setup HARK Below`
 
 # %% {"tags": []}
 # Import required HARK tools
+from HARK import __version__ as HARKversion
 from HARK.utilities import (
     plot_funcs, find_gui, make_figs, determine_platform,
     test_latex_installation, setup_latex_env_notebook)
@@ -118,6 +125,7 @@ try: # test whether latex is installed on command line
 except ImportError:  # windows and MacOS requires manual latex install
     latexExists = False
 
+latexExists = False    
 setup_latex_env_notebook(pf, latexExists)
 
 # check if GUI is present; if not then switch drawFigs to False and force saveFigs to be True
@@ -255,7 +263,7 @@ base_params['BoroCnstArt'] = None    # No artificial borrowing constraint
 # m_{t+1} &=& a_t \Rfree/(\PermGroFac \permShk_{t+1}) + \tranShk_{t+1} \\
 # \end{eqnarray*}
 
-# %% {"jupyter": {"source_hidden": true}, "tags": []}
+# %% {"tags": []}
 # Set the parameters for the baseline results in the paper
 base_params['PermGroFac'] = [1.03]  # Permanent income growth factor
 base_params['Rfree'] = Rfree = 1.04  # Interest factor on assets
@@ -278,7 +286,7 @@ base_params['tranShkStd'] = [0.1]   # Standard deviation of log transitory incom
 # %% [markdown]
 # `# Create a buffer stock consumer instance:`
 
-# %% {"jupyter": {"source_hidden": true}, "tags": []}
+# %% {"tags": []}
 # Create a buffer stock consumer instance by invoking the IndShockConsumerType class
 # with the parameter dictionary "base_params"
 
@@ -297,7 +305,7 @@ cFunc = baseAgent_Fin.cFunc    # Shorthand
 # %% [markdown]
 # `# Plot the consumption rules:`
 
-# %% {"jupyter": {"source_hidden": true}, "tags": []}
+# %% {"tags": []}
 # Plot the different consumption rules for the different periods
 
 mPlotMin = 0
@@ -332,6 +340,7 @@ plt.plot(mBelwLabels, c_Tm5, color='black')
 plt.plot(mBelwLabels, c_Tm10, color='black')
 plt.plot(m_FullRange, c_Tm0, color='black')
 plt.text(yMax, yMax-1    , r'$c_{T   }(m) = 45$ degree line')
+#plt.text(yMax, yMax-1    , r'$c_{T   }(m) = 45 \mathfrak{Fraktur}\;\mathbf{\mathfrak{Fraktur}}$')
 plt.text(mLocCLabels, 5.3, r'$c_{T-1 }(m)$')
 plt.text(mLocCLabels, 2.6, r'$c_{T-5 }(m)$')
 plt.text(mLocCLabels, 2.1, r'$c_{T-10}(m)$')
@@ -509,7 +518,7 @@ makeFig('cFuncsConverge')  # Comment out if you want to run uninterrupted
 # %% [markdown]
 # `# Create an example consumer instance where the GICNrm fails but the GIC Holds:`
 
-# %% {"jupyter": {"source_hidden": true}, "tags": []}
+# %% {"tags": []}
 # GICNrmFailsButGICRawHolds Example
 
 base_params['cycles'] = 0  # revert to default of infinite horizon
@@ -526,7 +535,7 @@ GICNrmFailsButGICRawHolds = \
 # %% [markdown]
 # `# Solve that consumer's problem:`
 
-# %% {"jupyter": {"source_hidden": true}, "tags": []}
+# %% {"tags": []}
 # Solve the model for these parameter values
 GICNrmFailsButGICRawHolds.tolerance = 0.01
 
@@ -616,7 +625,7 @@ if latexExists:
     c_Stable_Agg_txt = "$\Ex_{t}[{\mathbf{m}}_{t+1}/{\mathbf{m}}_{t}] = \PermGroFac$"
 else:
     c_Stable_Ind_txt = "$\mathsf{E}_{t}[\Delta m_{t+1}] = 0$"
-    c_Stable_Agg_txt = "$\mathsf{E}_{t}[\mathbf{m}_{t+1}/\mathbf{m}_{t}] = \PermGroFac$"
+    c_Stable_Agg_txt = "$\mathsf{E}_{t}[\mathbf{m}_{t+1}/\mathbf{m}_{t}] = \Gamma$"
 
 cVals_Lmting_color = "black"
 c_Stable_Agg_color = "black"  # "blue"
@@ -655,7 +664,7 @@ if latexExists:
     ax.text(mNrmStE+0.25, cNrmStE-0.18, r"$\StE{m}~$", fontsize=fsmid)
 else:
     ax.text(mNrmStE+0.02, cNrmStE-0.10, r"$\nwarrow$", fontsize=fsmid)
-    ax.text(mNrmStE+0.25, cNrmStE-0.18, r"$\StE{m}~$", fontsize=fsmid)
+    ax.text(mNrmStE+0.25, cNrmStE-0.18, r"$\check{m}~$", fontsize=fsmid)
 
 makeFig('GICNrmFailsButGICRawHolds')
 print('Finite mNrmStE but infinite mNrmTrg')
@@ -670,7 +679,7 @@ print('Finite mNrmStE but infinite mNrmTrg')
 # %% [markdown]
 # `# Construct infinite horizon solution for consumer with baseline parameters:`
 
-# %% {"jupyter": {"source_hidden": true}, "tags": []}
+# %% {"tags": []}
 # Find the infinite horizon solution
 
 base_params['aXtraCount'] = base_params['aXtraCount'] * 20
@@ -722,7 +731,7 @@ baseAgent_Inf = IndShockConsumerType(
 # %% [markdown]
 # `# Solve problem of consumer with baseline parameters:`
 
-# %% {"jupyter": {"source_hidden": true}, "pycharm": {"name": "#%%\n"}, "tags": []}
+# %% {"pycharm": {"name": "#%%\n"}, "tags": []}
 # Solve baseline parameters agent
 tweaked_params = deepcopy(base_params)
 tweaked_params['DiscFac'] = 0.970  # Tweak to make figure clearer
@@ -796,9 +805,30 @@ GroFacMin, GroFacMax, xMin = 0.98, 1.06, 1.1
 ax.set_xlim(xMin, mPlotMax * 1.1)
 ax.set_ylim(GroFacMin, GroFacMax)
 
+Thorn = u"\u00DE"
+
+# If latex installed on system, plotting can look better
+if latexExists:
+    mNrmTrg_lbl = r'$1.00 = \Ex_{t}[\mNrm_{t+1}/\mNrm_{t}]:~ \Trg{m} \rightarrow~~$'
+    PermGro_lbl = r"$\PermGroFac$"
+    cLevGro_lbl = r"$\Ex_{t}[\cLev_{t+1}/\cLev_{t}]$"
+    mNrmGro_lbl = r"$\Ex_{t}[\mNrm_{t+1}/\mNrm_{t}] ^{\nearrow}$"
+    mLevGro_lbl = r"$\Ex_{t}[\mLev_{t+1}/\mLev_{t}]$"
+    mNrmStE_lbl = r"$\check{\mNrm}_{\searrow}~$"    
+    cLevAPF_lbl = r'$\pmb{\text{\TH}} = (\Rfree\DiscFac)^{1/\CRRA}$'
+else:
+    mNrmTrg_lbl = r'$\mathsf{E}_{t}[m_{t+1}/m_{t}]:~ \hat{m} \rightarrow~~$'
+    PermGro_lbl = r"$\Gamma$"
+    cLevGro_lbl = r"$\mathsf{E}_{t}[\mathbf{c}_{t+1}/\mathbf{c}_{t}]$"
+    mNrmGro_lbl = r"$\mathsf{E}_{t}[m_{t+1}/m_{t}]^{\nearrow}$"
+    mLevGro_lbl = r"$\mathsf{E}_{t}[\mathbf{m}_{t+1}/\mathbf{m}_{t}]$"
+    mNrmStE_lbl = r"$m\check_{\searrow}$"    
+    cLevAPF_lbl = Thorn + r'$= (\mathsf{R}\beta)^{1/\rho}$'
+
+
 if mNrmTrg:  # Do not try to plot it if it does not exist!
     ax.text(mNrmTrg-0.01, 1.0-0.001, 
-            r'$1.00 = \Ex_{t}[\mNrm_{t+1}/\mNrm_{t}]:~ \Trg{m} \rightarrow~~$', ha='right')
+            mNrmTrg_lbl, ha='right')
 
 ax.plot(mNrmStE, G  , marker=".", markersize=12, color="black")  # Dot at mNrmStE 
 ax.plot(mNrmTrg, 1.0, marker=".", markersize=12, color="black")  # Dot at mNrmTrg 
@@ -808,22 +838,6 @@ mLevGro_lbl_yVal = soln.E_Next_.mLev_tp1_Over_mLev_t(mLevGro_lbl_xVal)
 
 mTrgGro_lbl_xVal = 0.92*mNrmTrg
 mTrgGro_lbl_yVal = soln.E_Next_.m_tp1_Over_m_t(mTrgGro_lbl_xVal)
-
-# If latex installed on system, plotting can look better
-if latexExists:
-    PermGro_lbl = r"$\PermGroFac$"
-    cLevGro_lbl = r"$\Ex_{t}[\cLev_{t+1}/\cLev_{t}]$"
-    mNrmGro_lbl = r"$\Ex_{t}[\mNrm_{t+1}/\mNrm_{t}] ^{\nearrow}$"
-    mLevGro_lbl = r"$\Ex_{t}[\mLev_{t+1}/\mLev_{t}]$"
-    mNrmStE_lbl = r"$\check{\mNrm}_{\searrow}~$"    
-    cLevAPF_lbl = r'$\pmb{\text{\TH}} = (\Rfree\DiscFac)^{1/\CRRA}$'
-else:
-    PermGro_lbl = r"$\PermGroFac$"
-    cLevGro_lbl = r"$\mathsf{E}_{t}[\mathbf{c}_{t+1}/\mathbf{c}_{t}]$"
-    mNrmGro_lbl = r"$\mathsf{E}_{t}[\mNrm_{t+1}/\mNrm_{t}] ^{\nearrow}$"
-    mLevGro_lbl = r"$\mathsf{E}_{t}[\mathbf{m}_{t+1}/\mathbf{m}_{t}]$"
-    mNrmStE_lbl = r"$_{\swarrow}~\check{m}$"    
-    cLevAPF_lbl = r'$\Phi = (\mathsf{\Rfree}\DiscFac)^{1/\CRRA}$'
 
 ax.text(mPlotMax+0.01, G-0.001,PermGro_lbl)
 ax.text(mPlotMax+0.01, Ex_cLevGro[-1]  ,cLevGro_lbl)
@@ -840,17 +854,17 @@ plt.legend()
 ax.set_ylabel('Growth Factors')
 makeFig('cGroTargetFig')
 
-# %% [markdown]
+# %% [markdown] {"tags": []}
 # ### [Consumption Function Bounds](https://econ-ark.github.io/BufferStockTheory/#AnalysisOfTheConvergedConsumptionFunction)
 # [The next figure](https://econ-ark.github.io/BufferStockTheory/#cFuncBounds)
 # illustrates theoretical bounds for the consumption function.
 #
 # We define two useful variables: the lower bound of $\tilde{\MPC}$ (marginal propensity to consume) and the limit of $h$ (Human wealth), along with some functions such as the limiting perfect foresight consumption function $\bar{c}(m)$, the upper bound function $\bar{\bar c}(m)$, and the lower bound function $\tilde{c}$(m).
 
-# %% [markdown]
+# %% [markdown] {"tags": []}
 # `# Define bounds for figure:`
 
-# %% {"jupyter": {"source_hidden": true}, "tags": []}
+# %% {"tags": []}
 # Define mpc_Min, h_inf and PF consumption function, upper and lower bound of c function
 
 baseAgent_Inf = IndShockConsumerType(**base_params, quietly=True)  # construct it silently
@@ -875,14 +889,14 @@ def cFunc_BotBnd(m): return mpc_Min * m
 # %% [markdown]
 # `# Plot figure showing bounds`
 
-# %% {"jupyter": {"source_hidden": true}, "tags": []}
+# %% {"tags": []}
 # Plot the consumption function and its bounds
 
 cMaxLabel = r'$\overline{c}(m)= (m-1+h)\tilde{\kappa}$'
 cMinLabel = r'Lower Bound: $\tilde{c}(m)= (1-\pmb{\text{\TH}}_{R})\tilde{\kappa}m$'
 if not latexExists:
-    cMaxLabel = r'$\overline{c}(m) = (m-1+h)mpc̲'  # Use unicode kludge
-    cMinLabel = r'Lower Bound: c̲$(m)= (1-\Phi_{R})m = mpc̲ m$'
+    cMaxLabel = r'$\bar{c}(m) = (m-1+h)\kappa$'  # Use unicode kludge
+    cMinLabel = r'Lower Bound: c̲$(m)= (1-$'+Thorn+r'$_{R})m = \kappa m$'
 
 mPlotMin = 0.0
 mPlotMax = 25
@@ -915,7 +929,7 @@ if latexExists:
     plt.text(upper_upper_bound_m+0.1, cFunc_TopBnd(upper_upper_bound_m), r'$~\leftarrow \overline{\overline{c}}(m)= \overline{\MPC}m = (1-\UnempPrb^{1/\CRRA}\pmb{\text{\TH}}_{R})m$',
              fontsize=22, fontweight='bold')
 else:
-    plt.text(6, 5, r'$\overline{\overline{c}}(m)= \overline{\MPC}m = (1-\UnempPrb^{1/\CRRA}\Phi_{R})m$',
+    plt.text(6, 5, r'$\overline{\overline{c}}(m)= \overline{\kappa}m = (1-\wp^{1/\rho}$'+Thorn+'$_{R})m$',
              fontsize=22, fontweight='bold')
 upper_bound_m = 12
 plt.text(
@@ -950,7 +964,7 @@ makeFig('cFuncBounds')
 # %% [markdown]
 # `# Make and plot figure showing the upper and lower limites of the MPC:`
 
-# %% {"jupyter": {"source_hidden": true}, "tags": []}
+# %% {"tags": []}
 # The last figure shows the upper and lower limits of the MPC
 
 mPlotMax = 8
@@ -970,19 +984,21 @@ MPC = soln.cFunc.derivative(m)
 
 kappaDef = r'$\tilde{\kappa}\equiv(1-\pmb{\text{\TH}}_{R})$'
 if not latexExists:
-    kappaDef = r'κ̲$\equiv(1-\Phi_{R})$'
+    kappaDef = r'κ̲$\equiv(1-$'+Thorn+'$_{R})$'
 
 plt.plot(m, MPC, color='black')
 plt.plot([mPlotMin, mPlotMax], [mpc_Max, mpc_Max], color='black')
 plt.plot([mPlotMin, mPlotMax], [mpc_Min, mpc_Min], color='black')
 plt.xlim(mPlotMin, mPlotMax)
 plt.ylim(0, 1)  # MPC bounds are between 0 and 1
-plt.text(1.5, 0.6, r'$\MPC(m) \equiv c^{\prime}(m)$', fontsize=26, fontweight='bold')
+
 if latexExists:
+    plt.text(1.5, 0.6, r'$\MPC(m) \equiv c^{\prime}(m)$', fontsize=26, fontweight='bold')
     plt.text(5, 0.87, r'$(1-\UnempPrb^{1/\CRRA}\pmb{\text{\TH}})\equiv \overline{\MPC}$',
              fontsize=26, fontweight='bold')  # Use Thorn character
 else:
-    plt.text(5, 0.87, r'$(1-\UnempPrb^{1/\CRRA}\Phi_{R})\equiv \overline{\MPC}$',
+    plt.text(1.5, 0.6, r'$\kappa(m) \equiv c^{\prime}(m)$', fontsize=26, fontweight='bold')
+    plt.text(5, 0.87, r'$(1-\wp^{1/\rho}$'+Thorn+'${R})\equiv \bar{\kappa}$',
              fontsize=26, fontweight='bold')  # Use Phi instead of Thorn (alas)
 
 plt.text(0.5, 0.07, kappaDef, fontsize=26, fontweight='bold')
@@ -1018,7 +1034,7 @@ makeFig('MPCLimits')
 # %% [markdown] {"tags": []}
 # ### Appendix: Perfect foresight agent failing both the FHWC and RIC
 
-# %% {"jupyter": {"source_hidden": true}, "tags": []}
+# %% {"tags": []}
 PFGICRawHoldsFHWCFailsRICFails_par = deepcopy(init_perfect_foresight)
 
 # Replace parameters.

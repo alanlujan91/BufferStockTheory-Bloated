@@ -125,12 +125,18 @@
   *{package}{rotating}    {2016/08/11 v2.16d}
   *{package}{subfigure}   {2002/03/15 v2.1.5}
   *{file}   {subfigure.cfg}{0000/00/00 v0.0}
+  *{package}{stix2}       {2018/04/02 v2.0.0-latex}
+  *{package}{textcomp}    {2020/02/02 v2.0n}
   *{file}   {./econtexRoot.tex}{0000/00/00 v0.0}
   *{file}   {../Resources/econtexPaths.tex}{0000/00/00 v0.0}
   *{file}   {t3cmr.fd}    {2001/12/31 v0.0}
+  *{file}   {ls1stix2.fd} {2018/04/02 v2.0.0-latex}
+  *{file}   {ls2stix2.fd} {2018/04/02 v2.0.0-latex}
+  *{file}   {t1stix2.fd}  {2018/04/02 v2.0.0-latex}
   *{file}   {translations-basic-dictionary-english.trsl}{(english v0.0}
   *{file}   {supp-pdf.mkii}{0000/00/00 v0.0}
   *{package}{epstopdf-base}{2020-01-24 v2.11}
+  *{package}{grfext}      {2019/12/03 v1.3}
   *{file}   {epstopdf-sys.cfg}{2010/07/13 v1.3}
   *{package}{nameref}     {2019/09/16 v2.46}
   *{package}{gettitlestring}{2019/12/15 v1.6}
@@ -144,10 +150,17 @@
   *{file}   {./econtexRoot.tex}{0000/00/00 v0.0}
   *{file}   {../Resources/econtexPaths.tex}{0000/00/00 v0.0}
   *{file}   {../Resources/LaTeXInputs/econtex_onlyinsubfile.tex}{0000/00/00 v0.0}
+  *{file}   {ls1stix2scr.fd}{2018/04/02 v2.0.0-latex}
+  *{file}   {ls2stix2ex.fd}{2018/04/02 v2.0.0-latex}
   *{file}   {umsa.fd}     {2013/01/14 v3.01}
   *{file}   {umsb.fd}     {2013/01/14 v3.01}
   *{file}   {ulasy.fd}    {1998/08/17 v2.2e}
   *{file}   {uwasy.fd}    {2020/01/19 v2.4}
+  *{file}   {ls1stix2frak.fd}{2018/04/02 v2.0.0-latex}
+  *{file}   {ls1stix2bb.fd}{2018/04/02 v2.0.0-latex}
+  *{file}   {ls2stix2cal.fd}{2018/04/02 v2.0.0-latex}
+  *{file}   {ls1stix2sf.fd}{2018/04/02 v2.0.0-latex}
+  *{file}   {ls2stix2tt.fd}{2018/04/02 v2.0.0-latex}
   *{file}   {../Tables/LiqConstrScenarios.tex}{0000/00/00 v0.0}
   *{file}   {t1cmtt.fd}   {2019/12/16 v2.5j}
   *{file}   {../Figures/PFGICHoldsFHWCFailsRICFails.tex}{0000/00/00 v0.0}
@@ -158,8 +171,6 @@
   *{file}   {./econtexRoot.tex}{0000/00/00 v0.0}
   *{file}   {../Resources/econtexPaths.tex}{0000/00/00 v0.0}
   *{file}   {../Resources/LaTeXInputs/econtex_onlyinsubfile.tex}{0000/00/00 v0.0}
-  *{file}   {ueuf.fd}     {2013/01/14 v3.01}
-  *{file}   {ueus.fd}     {2013/01/14 v3.01}
   *{file}   {../Appendices/ApndxEuclidian.tex}{0000/00/00 v0.0}
   *{file}   {./econtexRoot.tex}{0000/00/00 v0.0}
   *{file}   {../Resources/econtexPaths.tex}{0000/00/00 v0.0}
